@@ -1,10 +1,13 @@
+/* styles.css - MODIFIED */
+
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.45; /* Reduced for compactness */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    padding-top: 110px; /* ADDED: Space for the fixed header. Adjust this value based on your actual header height */
 }
 
 .container {
@@ -13,137 +16,164 @@ body {
     overflow: hidden; /* Be mindful if child elements use shadows that might get clipped */
 }
 
-/* --- MODIFIED HEADER STYLES --- */
+/* --- MODIFIED HEADER STYLES FOR FROZEN HEADER --- */
 header {
     background: #333;
     color: #fff;
-    /* padding-top: 30px; /* Adjusted by header-content-wrapper padding */
     min-height: 70px; /* This can be adjusted or removed if content dictates height */
     border-bottom: #77aaff 3px solid;
+    position: fixed; /* ADDED: Makes header sticky */
+    top: 0;          /* ADDED: Aligns to the top */
+    left: 0;         /* ADDED: Aligns to the left */
+    width: 100%;     /* ADDED: Spans full width */
+    z-index: 1000;   /* ADDED: Keeps header above other content */
+    /* padding-top removed as header-content-wrapper handles it */
 }
 
-/* --- NEW HEADER LAYOUT STYLES --- */
+/* --- HEADER LAYOUT STYLES (from previous update) --- */
 .header-content-wrapper {
-    display: flex;                 /* Enables flexbox layout */
-    justify-content: space-between; /* Pushes text to left, image to right */
-    align-items: flex-start;       /* Aligns items to the top. Use 'center' for vertical centering if preferred. */
-    padding-top: 15px;             /* Added padding within the wrapper */
-    padding-bottom: 15px;          /* Added padding within the wrapper */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* Max-width and centering will be handled by the .container class it's nested in,
+       but if the header itself is full-width, this div needs to be a .container too
+       to keep content aligned with rest of page if header element itself is not a .container */
+    /* To ensure the content within the fixed header aligns with the rest of the page's .container: */
+    width: 80%; /* Same as .container */
+    margin: 0 auto; /* Same as .container */
 }
 
 .header-text {
-    flex-grow: 1; /* Allows the text block to take up available space */
+    flex-grow: 1;
 }
 
-/* --- MODIFIED HEADER TEXT STYLES --- */
-.header-text h1 { /* Changed from 'header h1' for more specificity if needed */
-    /* text-align: center; */ /* Removed to allow left alignment */
+.header-text h1 {
     text-transform: uppercase;
-    margin-top: 0; /* Adjusted for better alignment in flex layout */
-    margin-bottom: 5px; /* Added for spacing */
-    font-size: 2.2em; /* Slightly reduced for balance with image, adjust as needed */
-    line-height: 1.2; /* Added for tighter line height if name wraps */
+    margin-top: 0;
+    margin-bottom: 3px; /* Reduced for compactness */
+    font-size: 2.0em; /* Slightly reduced for fixed header */
+    line-height: 1.2;
 }
 
-.header-text p { /* Changed from 'header p' for more specificity if needed */
-    /* text-align: center; */ /* Removed to allow left alignment */
-    font-size: 1.1em; /* Slightly reduced for balance, adjust as needed */
+.header-text p {
+    font-size: 1.0em; /* Slightly reduced for fixed header */
     margin-top: 0;
-    margin-bottom: 5px; /* Added for spacing */
+    margin-bottom: 3px; /* Reduced for compactness */
     line-height: 1.3;
 }
-/* Last paragraph in header text might not need bottom margin */
 .header-text p:last-child {
     margin-bottom: 0;
 }
 
-
-/* --- NEW HEADER IMAGE STYLES --- */
 .header-image {
-    margin-left: 20px; /* Space between the text block and the image */
-    flex-shrink: 0;    /* Prevents the image container from shrinking if space is tight */
+    margin-left: 15px; /* Reduced space */
+    flex-shrink: 0;
 }
 
 .profile-photo-header {
-    width: 80px;        /* New smaller size */
-    height: 80px;       /* New smaller size */
-    border-radius: 50%; /* Makes it circular */
-    object-fit: cover;  /* Ensures image covers the area without distortion */
-    border: 2px solid #ddd; /* Optional: a light border */
+    width: 70px;    /* Slightly smaller for fixed header */
+    height: 70px;   /* Slightly smaller for fixed header */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
 }
 
-
-/* --- SECTION STYLES (Unchanged but for context) --- */
-.contact, .summary, .experience, .education, .certificates, .skills, .awards, .key-achievements, .core-competencies, .links-portfolios { /* Added new sections here if they use same base style */
-    padding: 20px 0;
+/* --- SECTION STYLES (Padding reduced for compactness) --- */
+.contact, .summary, .experience, .education, .certificates, .skills, .awards, .key-achievements, .core-competencies, .links-portfolios {
+    padding: 15px 0; /* Reduced padding for compactness */
     border-bottom: 1px solid #ddd;
 }
-/* Remove bottom border from the last section before the footer */
-/* You might need to create a more specific rule or add a class to the last section, e.g., .last-section */
-/* For now, if '.links-portfolios' is always last, you could do: */
-.links-portfolios {
+.links-portfolios { /* Assuming this is the last content section */
     border-bottom: none;
 }
-/* Or a more generic approach if you add/remove sections:
-section:last-of-type {
-    border-bottom: none;
+/* If footer is directly after last section, its margin-top might also need adjustment */
+
+
+/* --- STYLES FOR INLINE CONTACT INFO --- */
+.contact { /* Ensure contact section has appropriate text alignment */
+    text-align: center; /* Or text-align: left; if you prefer */
+    padding-top: 10px; /* Less padding for contact as it's now more compact */
+    padding-bottom: 10px;
 }
-But this depends on your HTML structure (if all these are direct children of body or another main container)
-*/
+.contact-inline span {
+    margin-right: 8px;  /* Space between items */
+    margin-left: 8px;   /* Space between items */
+    display: inline-block; /* For proper spacing and line breaks if needed on small screens */
+    line-height: 1.5; /* Adjust line height for the contact line itself */
+}
+.contact-inline span.contact-separator { /* Style for the separator if needed */
+    color: #aaa; /* Lighter color for separator */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.contact-inline span a {
+    color: #333; /* From your original styles */
+    text-decoration: none; /* From your original styles */
+}
+.contact-inline span a:hover {
+    color: #77aaff; /* From your original styles */
+}
+
+/* Remove old list styling for contact if it was specific, otherwise it's covered by general ul/li resets */
+/* .contact ul, .contact ul li { (These are no longer used for contact section) ... } */
 
 
-.contact ul, .experience ul, .certificates ul, .skills ul, .awards ul, .key-achievements ul, .core-competencies ul, .links-portfolios ul { /* Added new sections here */
+.experience ul, .certificates ul, .skills ul, .awards ul, .key-achievements ul, .core-competencies ul, .links-portfolios ul {
     list-style: none;
     padding: 0;
 }
 
-.contact ul li, .experience ul li, .certificates ul li, .skills ul li, .awards ul li, .key-achievements ul li, .core-competencies ul li, .links-portfolios ul li { /* Added new sections here */
-    padding: 5px 0;
+.experience ul li, .certificates ul li, .skills ul li, .awards ul li, .key-achievements ul li, .core-competencies ul li, .links-portfolios ul li {
+    padding: 3px 0; /* Reduced padding for list items */
 }
 
-/* --- MODIFIED LINK STYLES --- */
-/* General link styling (contact, experience) - Certification links will be overridden below */
-.contact ul li a, .experience ul li a {
-    color: #333; /* Default non-link appearance for these sections */
+/* General link styling (experience) - Certification links will be overridden below */
+.experience ul li a {
+    color: #333;
     text-decoration: none;
 }
 
 /* Specific styling for Certification links to make them look like links */
 .certificates ul li a {
-    color: #007bff;             /* Blue color for certification links */
-    text-decoration: underline;  /* Underline for certification links */
+    color: #007bff;
+    text-decoration: underline;
 }
 
-/* Hover effect for contact and experience links */
-.contact ul li a:hover, .experience ul li a:hover {
+/* Hover effect for experience links */
+.experience ul li a:hover {
     color: #77aaff;
 }
 
 /* Hover effect for certification links */
 .certificates ul li a:hover {
-    color: #0056b3;             /* Darker blue on hover for certification links */
-    text-decoration: none;     /* Optional: Remove underline on hover for certification links */
+    color: #0056b3;
+    text-decoration: none;
 }
 
 /* Visited state for certification links */
 .certificates ul li a:visited {
-    color: #551a8b; /* Purple for visited certification links */
+    color: #551a8b;
 }
 
 
-/* --- HEADING STYLES (Unchanged but for context) --- */
+/* --- HEADING STYLES (Margins slightly reduced) --- */
 h2 {
     text-align: center;
     color: #333;
-    padding-bottom: 10px;
+    padding-bottom: 8px; /* Reduced */
+    margin-top: 0; /* Sections have padding, so h2 might not need extra top margin */
+    margin-bottom: 10px; /* Control space below h2 */
 }
 
 h3, h4 {
     color: #333;
-    margin-bottom: 5px;
+    margin-top: 10px; /* Control space above h3/h4 */
+    margin-bottom: 3px; /* Reduced */
 }
 
-h3 span, h4 span { /* This style was in your original CSS, ensure it applies as intended */
+h3 span, h4 span {
     font-weight: normal;
     font-size: 0.8em;
     color: #777;
@@ -154,8 +184,8 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
+    padding: 15px 0; /* Slightly reduced padding */
+    margin-top: 15px; /* Slightly reduced margin */
 }
 
 footer p {

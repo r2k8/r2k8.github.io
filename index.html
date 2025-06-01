@@ -22,7 +22,10 @@
     <header class="main-header">
         <div class="container">
             <div class="logo"><a href="index.html">R2K8.com</a></div>
-            <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="current">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
@@ -93,7 +96,8 @@
             </div>
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
                 <h4 style="font-size: 1.2rem; margin-bottom: 15px;">Verify My Credentials:</h4>
-                <p style="text-align: center;"> <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #00A3E0; color: white; padding: 10px 20px;">View Credly Badges</a>
+                <p style="text-align: center;">
+                    <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #00A3E0; color: white; padding: 10px 20px;">View Credly Badges</a>
                     <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #0078D4; color: white; padding: 10px 20px;">View Microsoft Transcript</a>
                 </p>
             </div>
@@ -141,8 +145,22 @@
             </div>
         </div>
     </footer>
+
     <script>
+        // Copyright Year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        if (navToggle && mainNav) {
+          navToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('nav-open');
+            const isExpanded = mainNav.classList.contains('nav-open');
+            navToggle.setAttribute('aria-expanded', isExpanded);
+          });
+        }
     </script>
 </body>
 </html>

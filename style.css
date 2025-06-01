@@ -72,15 +72,16 @@ header.main-header .container {
     transform: translateY(5px); 
 }
 
-/* Hamburger animation when nav is open */
-header.main-header.nav-open .hamburger { /* Target .hamburger when header has .nav-open */
+/* Hamburger animation when mobile-nav-active is on body */
+/* The .nav-toggle button contains the .hamburger span */
+body.mobile-nav-active .nav-toggle .hamburger {
     background-color: transparent; /* Middle line disappears */
 }
-header.main-header.nav-open .hamburger::before {
-    transform: translateY(0) rotate(45deg);
+body.mobile-nav-active .nav-toggle .hamburger::before {
+    transform: translateY(0px) rotate(45deg); /* Centering the 'X' */
 }
-header.main-header.nav-open .hamburger::after {
-    transform: translateY(-3px) rotate(-45deg); 
+body.mobile-nav-active .nav-toggle .hamburger::after {
+    transform: translateY(0px) rotate(-45deg); /* Centering the 'X' */
 }
 
 
@@ -157,8 +158,8 @@ nav.main-nav ul li a.current {
         z-index: 999; 
     }
 
-    nav.main-nav.nav-open { /* When JS adds .nav-open to nav.main-nav */
-        display: block; 
+    body.mobile-nav-active nav.main-nav { /* Show nav when body has .mobile-nav-active */
+    display: block;
     }
 
     nav.main-nav ul {

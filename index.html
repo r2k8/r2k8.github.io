@@ -152,11 +152,16 @@
 
         // Mobile Navigation Toggle
         const navToggle = document.querySelector('.nav-toggle');
-        const mainNav = document.querySelector('.main-nav');
+        const mainHeader = document.querySelector('.main-header'); // Get the header element
+        const mainNav = document.querySelector('.main-nav');     // Get the nav element
 
-        if (navToggle && mainNav) {
+        if (navToggle && mainHeader && mainNav) {
           navToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('nav-open');
+            // Toggle class on header for hamburger icon animation (if CSS targets header.nav-open for icon)
+            mainHeader.classList.toggle('nav-open'); 
+            // Toggle class on nav itself for showing/hiding the nav items
+            mainNav.classList.toggle('nav-open');    
+            
             const isExpanded = mainNav.classList.contains('nav-open');
             navToggle.setAttribute('aria-expanded', isExpanded);
           });

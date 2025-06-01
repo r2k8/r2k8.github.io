@@ -12,11 +12,14 @@
     <meta property="og:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Technology Leader">
     <meta name="twitter:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
-    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css">
+    <meta name="twitter:image" content="profile.jpg">
+    <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="main-header">
@@ -34,7 +37,8 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic"> </div>
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
+        </div>
     </header>
 
     <main>
@@ -50,7 +54,8 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image"> </div>
+                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image">
+                </div>
             </div>
         </section>
 
@@ -184,8 +189,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script>
-      const SUPABASE_URL = 'https://oqestxoyulajsuafjmkv.supabase.co'; // <-- REPLACE with your Supabase project URL
-      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xZXN0eG95dWxhanN1YWZqbWt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg3MTEyNjIsImV4cCI6MjA2NDI4NzI2Mn0.M44f1YumdSBFosePwmSGe5Lcf2rZ6Ri8T2qY9eFg95Q'; // <-- REPLACE with your Supabase project Anon Key
+      const SUPABASE_URL = 'https://oqestxoyulajsuafjmkv.supabase.co'; 
+      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xZXN0eG95dWxhanN1YWZqbWt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY5NDg2MjUsImV4cCI6MjAzMjUyNDYyNX0.0Yg55xQoST9g7Sj1tW4T5Lcf2rZ6Ri8T2qY9eFg95Q';
 
       let supabase = null;
       if (SUPABASE_URL && SUPABASE_URL !== 'YOUR_SUPABASE_URL' && SUPABASE_ANON_KEY && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY') {
@@ -195,11 +200,16 @@
             console.error("Supabase client initialization error:", e);
         }
       } else {
-        console.warn('Supabase Telemetry: URL or Anon Key not configured. Telemetry will be disabled.');
+        // This console.warn might appear if the check above isn't perfectly aligned with non-placeholder values.
+        // Since you've directly put your keys, for your specific case, this warning might be benign if Supabase object is created.
+        // console.warn('Supabase Telemetry: URL or Anon Key check indicates an issue. Telemetry might be disabled.');
       }
 
       async function logPageVisit() {
-        if (!supabase) return; 
+        if (!supabase) {
+            // console.log('Supabase client not initialized for telemetry. Visit not logged.');
+            return; 
+        }
         try {
           const visitData = {
             url: window.location.href,
@@ -207,11 +217,9 @@
             user_agent: navigator.userAgent,
             timestamp: new Date().toISOString()
           };
-          // console.log("Attempting to log visit:", visitData); // For debugging
           const { data, error } = await supabase.from('page_visits').insert([visitData]);
           if (error) {
             console.error('Supabase Telemetry: Error logging visit:', error.message);
-            // console.error('Supabase error details:', error); // More detailed error
           } else {
             // console.log('Supabase Telemetry: Visit logged successfully.');
           }
@@ -219,12 +227,11 @@
           console.error('Supabase Telemetry: Exception in logPageVisit function:', error.message);
         }
       }
-      // Ensure DOM is ready for other scripts but log visit on load
       window.addEventListener('load', logPageVisit);
     </script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() { // Ensure DOM is ready for querying elements
+      document.addEventListener('DOMContentLoaded', function() { 
         const popupOverlay = document.getElementById('firstVisitPopup');
         const closeButton = document.getElementById('closePopupButton');
         const visitedFlagKey = 'r2k8SiteVisited_v1.0'; 
@@ -241,10 +248,10 @@
           if (popupOverlay) {
             popupOverlay.classList.remove('active');
             setTimeout(() => { 
-                if (!popupOverlay.classList.contains('active')) { // Check again before hiding
+                if (!popupOverlay.classList.contains('active')) {
                     popupOverlay.style.display = 'none'; 
                 }
-            }, 300); // Match CSS opacity transition duration
+            }, 300);
           }
         }
 

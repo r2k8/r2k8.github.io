@@ -28,9 +28,9 @@ header.main-header {
 
 header.main-header .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* For positioning the mobile nav absolutely if needed */
 }
 
 .logo a {
@@ -38,15 +38,57 @@ header.main-header .container {
     font-weight: bold;
     color: #333;
     text-decoration: none;
-    display: inline-block;
-    padding: 5px 0;
+    padding: 5px 0; /* For vertical alignment */
 }
 
-header.main-header nav {
-    /* Flex item, will align with logo and profile pic */
+/* Navigation Toggle (Hamburger) - Mobile Only */
+.nav-toggle {
+    display: none; /* Hidden by default, shown on mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Above nav menu */
+    position: relative; /* For hamburger lines */
 }
 
-nav ul {
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background-color: #333;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(5px); /* Adjusted from 8px to be closer for 3px height */
+}
+
+/* Hamburger animation when nav is open */
+.nav-open .hamburger {
+    background-color: transparent; /* Middle line disappears */
+}
+.nav-open .hamburger::before {
+    transform: translateY(0) rotate(45deg);
+}
+.nav-open .hamburger::after {
+    transform: translateY(-3px) rotate(-45deg); /* Adjusted for 3px height */
+}
+
+
+nav.main-nav {
+    /* Desktop: Visible */
+}
+
+nav.main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -54,15 +96,15 @@ nav ul {
     align-items: center;
 }
 
-nav ul li {
+nav.main-nav ul li {
     margin-left: 20px;
 }
 
-nav ul li:first-child {
+nav.main-nav ul li:first-child {
     margin-left: 0;
 }
 
-nav ul li a {
+nav.main-nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
@@ -70,8 +112,8 @@ nav ul li a {
     padding: 5px 0;
 }
 
-nav ul li a:hover,
-nav ul li a.current {
+nav.main-nav ul li a:hover,
+nav.main-nav ul li a.current {
     color: #007bff;
 }
 
@@ -85,52 +127,53 @@ nav ul li a.current {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* Responsive adjustments for header */
+/* Responsive adjustments for Header - Primarily for Mobile Navigation */
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* Show hamburger */
+        order: 2; /* Position it after the logo, before profile pic if pic is far right */
+    }
+
     .logo {
-        margin-bottom: 0;
-    }
-
-    header.main-header nav {
-        order: 3;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    nav ul li {
-        margin: 5px 10px;
+        order: 1;
     }
 
     .header-profile-pic {
-        order: 2;
+        order: 3; /* Profile pic at the end */
+        margin-left: 10px; /* Adjust if needed */
     }
-}
 
-@media (max-width: 520px) {
-    .logo {
-        width: auto;
-        margin-right: auto;
+    nav.main-nav {
+        display: none; /* Hide nav by default on mobile */
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-top: 1px solid #e0e0e0;
     }
-    .header-profile-pic {
-        order: 2;
-        margin-left: 10px;
+
+    nav.main-nav.nav-open { /* Style for when nav is opened */
+        display: block;
     }
-    header.main-header nav {
-        margin-top: 15px;
-        order: 3;
-    }
-    nav ul {
-        flex-direction: column;
+
+    nav.main-nav ul {
+        flex-direction: column; /* Stack nav items vertically */
         align-items: center;
+        padding: 10px 0;
     }
-    nav ul li {
-        margin: 8px 0;
+
+    nav.main-nav ul li {
+        margin: 10px 0; /* Vertical spacing */
         margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    nav.main-nav ul li a {
+        padding: 10px 0;
+        display: block; /* Make links full width for easier tapping */
+        width: 100%;
     }
 }
 

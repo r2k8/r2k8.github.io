@@ -131,12 +131,12 @@ nav.main-nav ul li a.current {
 @media (max-width: 768px) {
     .logo {
         order: 1;
-        flex-shrink: 0; /* Don't let logo shrink too much */
+        flex-shrink: 0; 
     }
     .header-profile-pic { 
         order: 2; 
-        margin-left: 10px; /* Space from logo */
-        margin-right: auto; /* Pushes hamburger to the far right */
+        margin-left: 10px; 
+        margin-right: auto; 
     }
     .nav-toggle {
         display: block; 
@@ -145,16 +145,16 @@ nav.main-nav ul li a.current {
     
     nav.main-nav {
         display: none; 
-        order: 4; /* Nav below everything else on a new line */
-        width: 100%; /* Take full width */
+        order: 4; 
+        width: 100%; 
         position: absolute; 
-        top: 100%; /* Position it right below the header */
+        top: 100%; 
         left: 0;
         right: 0;
         background-color: #fff;
         box-shadow: 0 3px 5px rgba(0,0,0,0.1);
         border-top: 1px solid #e0e0e0;
-        z-index: 999; /* Ensure it's above other page content but below header if needed */
+        z-index: 999; 
     }
 
     nav.main-nav.nav-open { /* When JS adds .nav-open to nav.main-nav */
@@ -587,11 +587,11 @@ section.hero {
 .contact-form-container .form-row {
     display: flex;
     gap: 20px;
-    margin-bottom: 0;
+    margin-bottom: 0; /* Adjusted from 0 to allow fields to have their own bottom margin */
 }
 .contact-form-container .form-row > div {
     flex: 1;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; /* Removed from here, apply to inputs/textareas directly */
 }
 .contact-form-container textarea {
     min-height: 120px;

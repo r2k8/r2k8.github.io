@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
     <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
+    <meta name="robots" content="noindex, nofollow">
     <title>Rama Krishna Sripathi - Technology Leader | r2k8.com</title>
     <meta name="description" content="Rama Krishna Sripathi: Versatile Technology Leader in Product Management, TPM, Solutions Architecture, and AI Engineering.">
     <meta name="author" content="Rama Krishna Sripathi">
@@ -13,14 +13,11 @@
     <meta property="og:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Technology Leader">
     <meta name="twitter:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
-    <meta name="twitter:image" content="profile.jpg">
-    <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="main-header">
@@ -38,8 +35,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
-        </div>
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic"> </div>
     </header>
 
     <main>
@@ -55,8 +51,7 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image">
-                </div>
+                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image"> </div>
             </div>
         </section>
 
@@ -195,14 +190,13 @@
       let supabase = null; 
 
       function initializeSupabaseAndLogVisit() {
-        // Check if Supabase library is loaded and credentials are valid before initializing
+        // console.log('Attempting to initialize Supabase...'); // For debugging
         if (typeof Supabase !== 'undefined' && SUPABASE_URL && SUPABASE_ANON_KEY) {
-          // Basic sanity check for actual values (not placeholders that might have been missed)
           if (SUPABASE_URL.startsWith('http') && SUPABASE_ANON_KEY.length > 50) { 
               try {
                   supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
                   // console.log('Supabase client initialized for telemetry.'); 
-                  logPageVisit(); // Call logPageVisit AFTER supabase is initialized successfully
+                  logPageVisit(); 
               } catch (e) {
                   console.error("Supabase client initialization error (within try-catch):", e);
               }
@@ -211,19 +205,20 @@
           }
         } else {
           if (typeof Supabase === 'undefined') {
-              console.error('Supabase library (Supabase object) is not defined even on window.load. Ensure CDN script loads successfully and is not blocked.');
+              console.error('Supabase library (Supabase object) is not defined even on window.load. Make sure the Supabase CDN script is included above this script and loads successfully.');
           }
-          if (!SUPABASE_URL || !SUPABASE_ANON_KEY) { // Should not happen if you filled them above
+          if (!SUPABASE_URL || !SUPABASE_ANON_KEY) { 
               console.warn('Supabase Telemetry: URL or Anon Key is missing. Telemetry will be disabled.');
           }
         }
       }
 
       async function logPageVisit() {
-        if (!supabase) { // Check if supabase client was successfully initialized
-            // console.log('Supabase client was not initialized for logPageVisit. Visit not logged.');
+        if (!supabase) {
+            // console.warn('Supabase client was not initialized. Visit not logged.'); // Changed to warn for clarity
             return; 
         }
+        // console.log('Attempting to log page visit with Supabase...'); // For debugging
         try {
           const visitData = {
             url: window.location.href,
@@ -231,20 +226,21 @@
             user_agent: navigator.userAgent,
             timestamp: new Date().toISOString()
           };
-          // console.log("Attempting to log visit:", visitData); // For debugging
+          // console.log("Supabase Telemetry: Visit data to be sent:", visitData); // For debugging
+
           const { data, error } = await supabase.from('page_visits').insert([visitData]);
+          
           if (error) {
             console.error('Supabase Telemetry: Error logging visit:', error.message);
+            console.error('Supabase Telemetry: Full error object:', error); // Log full error object
           } else {
-            // console.log('Supabase Telemetry: Visit logged successfully.');
+            // console.log('Supabase Telemetry: Visit logged successfully. Response:', data); // For debugging
           }
         } catch (error) {
           console.error('Supabase Telemetry: Exception in logPageVisit function:', error.message);
         }
       }
       
-      // Wait for the entire page to load, including external scripts like the Supabase client,
-      // then attempt to initialize Supabase and log the visit.
       window.addEventListener('load', initializeSupabaseAndLogVisit);
     </script>
 

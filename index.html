@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
     <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
     <title>Rama Krishna Sripathi - Technology Leader | r2k8.com</title>
     <meta name="description" content="Rama Krishna Sripathi: Versatile Technology Leader in Product Management, TPM, Solutions Architecture, and AI Engineering.">
     <meta name="author" content="Rama Krishna Sripathi">
@@ -191,35 +191,37 @@
 
     <script>
       const SUPABASE_URL = 'https://oqestxoyulajsuafjmkv.supabase.co'; 
-      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xZXN0eG95dWxhanN1YWZqbWt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg3MTEyNjIsImV4cCI6MjA2NDI4NzI2Mn0.M44f1YumdSBFosePwmSGe5Lcf2rZ6Ri8T2qY9eFg95Q';
-      let supabase = null;
+      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xZXN0eG95dWxhanN1YWZqbWt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY5NDg2MjUsImV4cCI6MjAzMjUyNDYyNX0.0Yg55xQoST9g7Sj1tW4T5Lcf2rZ6Ri8T2qY9eFg95Q';
+      let supabase = null; 
 
-      // Updated check for Supabase library and credentials
-      if (typeof Supabase !== 'undefined' && SUPABASE_URL && SUPABASE_ANON_KEY) {
-        // Basic sanity check for actual values (not placeholders)
-        if (SUPABASE_URL.startsWith('http') && SUPABASE_ANON_KEY.length > 50) { // Anon keys are usually quite long
-            try {
-                supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-                // console.log('Supabase client initialized for telemetry.'); // For debugging
-            } catch (e) {
-                console.error("Supabase client initialization error (within try-catch):", e);
-            }
+      function initializeSupabaseAndLogVisit() {
+        // Check if Supabase library is loaded and credentials are valid before initializing
+        if (typeof Supabase !== 'undefined' && SUPABASE_URL && SUPABASE_ANON_KEY) {
+          // Basic sanity check for actual values (not placeholders that might have been missed)
+          if (SUPABASE_URL.startsWith('http') && SUPABASE_ANON_KEY.length > 50) { 
+              try {
+                  supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+                  // console.log('Supabase client initialized for telemetry.'); 
+                  logPageVisit(); // Call logPageVisit AFTER supabase is initialized successfully
+              } catch (e) {
+                  console.error("Supabase client initialization error (within try-catch):", e);
+              }
+          } else {
+              console.warn('Supabase Telemetry: URL or Anon Key might be invalid. Telemetry will be disabled.');
+          }
         } else {
-            console.warn('Supabase Telemetry: URL or Anon Key might be invalid or placeholders. Telemetry will be disabled.');
-        }
-      } else {
-        if (typeof Supabase === 'undefined') {
-            // This is the error you are seeing:
-            console.error('Supabase library (Supabase object) is not defined. Make sure the Supabase CDN script is included above this script and loads successfully.');
-        }
-        if (!SUPABASE_URL || !SUPABASE_ANON_KEY) { // Should not happen if you filled them above
-            console.warn('Supabase Telemetry: URL or Anon Key is missing. Telemetry will be disabled.');
+          if (typeof Supabase === 'undefined') {
+              console.error('Supabase library (Supabase object) is not defined even on window.load. Ensure CDN script loads successfully and is not blocked.');
+          }
+          if (!SUPABASE_URL || !SUPABASE_ANON_KEY) { // Should not happen if you filled them above
+              console.warn('Supabase Telemetry: URL or Anon Key is missing. Telemetry will be disabled.');
+          }
         }
       }
 
       async function logPageVisit() {
-        if (!supabase) {
-            // console.log('Supabase client was not initialized. Visit not logged.');
+        if (!supabase) { // Check if supabase client was successfully initialized
+            // console.log('Supabase client was not initialized for logPageVisit. Visit not logged.');
             return; 
         }
         try {
@@ -229,6 +231,7 @@
             user_agent: navigator.userAgent,
             timestamp: new Date().toISOString()
           };
+          // console.log("Attempting to log visit:", visitData); // For debugging
           const { data, error } = await supabase.from('page_visits').insert([visitData]);
           if (error) {
             console.error('Supabase Telemetry: Error logging visit:', error.message);
@@ -239,7 +242,10 @@
           console.error('Supabase Telemetry: Exception in logPageVisit function:', error.message);
         }
       }
-      window.addEventListener('load', logPageVisit);
+      
+      // Wait for the entire page to load, including external scripts like the Supabase client,
+      // then attempt to initialize Supabase and log the visit.
+      window.addEventListener('load', initializeSupabaseAndLogVisit);
     </script>
 
     <script>

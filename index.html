@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
     <meta name="robots" content="noindex, nofollow">
     <title>Rama Krishna Sripathi - Technology Leader | r2k8.com</title>
     <meta name="description" content="Rama Krishna Sripathi: Versatile Technology Leader in Product Management, TPM, Solutions Architecture, and AI Engineering.">
@@ -12,11 +13,14 @@
     <meta property="og:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Technology Leader">
     <meta name="twitter:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
-    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css">
+    <meta name="twitter:image" content="profile.jpg">
+    <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="main-header">
@@ -34,7 +38,8 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic"> </div>
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
+        </div>
     </header>
 
     <main>
@@ -50,7 +55,8 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image"> </div>
+                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image">
+                </div>
             </div>
         </section>
 
@@ -185,14 +191,13 @@
 
     <script>
       const SUPABASE_URL = 'https://oqestxoyulajsuafjmkv.supabase.co'; 
-      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xZXN0eG95dWxhanN1YWZqbWt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY5NDg2MjUsImV4cCI6MjAzMjUyNDYyNX0.0Yg55xQoST9g7Sj1tW4T5Lcf2rZ6Ri8T2qY9eFg95Q';
+      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xZXN0eG95dWxhanN1YWZqbWt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg3MTEyNjIsImV4cCI6MjA2NDI4NzI2Mn0.M44f1YumdSBFosePwmSGe5Lcf2rZ6Ri8T2qY9eFg95Q';
       let supabase = null;
 
       // Updated check for Supabase library and credentials
       if (typeof Supabase !== 'undefined' && SUPABASE_URL && SUPABASE_ANON_KEY) {
-        // Avoid comparing actual keys with placeholder strings like 'YOUR_SUPABASE_URL'
-        // A simple check for non-empty strings is usually sufficient here if you've replaced them
-        if (SUPABASE_URL.startsWith('http') && SUPABASE_ANON_KEY.length > 10) { // Basic sanity check
+        // Basic sanity check for actual values (not placeholders)
+        if (SUPABASE_URL.startsWith('http') && SUPABASE_ANON_KEY.length > 50) { // Anon keys are usually quite long
             try {
                 supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
                 // console.log('Supabase client initialized for telemetry.'); // For debugging
@@ -200,13 +205,14 @@
                 console.error("Supabase client initialization error (within try-catch):", e);
             }
         } else {
-            console.warn('Supabase Telemetry: URL or Anon Key might be invalid. Telemetry will be disabled.');
+            console.warn('Supabase Telemetry: URL or Anon Key might be invalid or placeholders. Telemetry will be disabled.');
         }
       } else {
         if (typeof Supabase === 'undefined') {
+            // This is the error you are seeing:
             console.error('Supabase library (Supabase object) is not defined. Make sure the Supabase CDN script is included above this script and loads successfully.');
         }
-        if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+        if (!SUPABASE_URL || !SUPABASE_ANON_KEY) { // Should not happen if you filled them above
             console.warn('Supabase Telemetry: URL or Anon Key is missing. Telemetry will be disabled.');
         }
       }

@@ -15,7 +15,7 @@ body, html {
     overflow: hidden; /* To contain floats or prevent margin collapse issues */
 }
 
-/* Header & Navigation */
+/* Header & Navigation (with Hamburger Menu) */
 header.main-header {
     background-color: #fff;
     color: #333;
@@ -69,23 +69,23 @@ header.main-header .container {
 }
 
 .hamburger::after {
-    transform: translateY(5px); /* Adjusted from 8px to be closer for 3px height */
+    transform: translateY(5px); 
 }
 
 /* Hamburger animation when nav is open */
-.nav-open .hamburger {
+header.main-header.nav-open .hamburger { /* Target .hamburger when header has .nav-open */
     background-color: transparent; /* Middle line disappears */
 }
-.nav-open .hamburger::before {
+header.main-header.nav-open .hamburger::before {
     transform: translateY(0) rotate(45deg);
 }
-.nav-open .hamburger::after {
-    transform: translateY(-3px) rotate(-45deg); /* Adjusted for 3px height */
+header.main-header.nav-open .hamburger::after {
+    transform: translateY(-3px) rotate(-45deg); 
 }
 
 
 nav.main-nav {
-    /* Desktop: Visible */
+    /* Desktop: Visible by default due to flex layout */
 }
 
 nav.main-nav ul {
@@ -130,71 +130,75 @@ nav.main-nav ul li a.current {
 /* Responsive adjustments for Header - Primarily for Mobile Navigation */
 @media (max-width: 768px) {
     .nav-toggle {
-        display: block; /* Show hamburger */
-        order: 2; /* Position it after the logo, before profile pic if pic is far right */
+        display: block; 
+        order: 3; /* Hamburger after nav items if nav is also flex item, or based on overall layout */
     }
 
     .logo {
         order: 1;
     }
-
+    
     .header-profile-pic {
-        order: 3; /* Profile pic at the end */
-        margin-left: 10px; /* Adjust if needed */
+        order: 2; /* Profile pic between logo and hamburger */
+        margin-left: auto; /* Push hamburger to the right if pic is next to logo */
+        margin-right: 10px; /* Space before hamburger */
     }
-
+    
     nav.main-nav {
-        display: none; /* Hide nav by default on mobile */
-        position: absolute;
-        top: 100%; /* Position below the header */
+        display: none; 
+        order: 4; /* Nav below everything else */
+        width: 100%;
+        position: absolute; /* Changed from relative for better overlay behavior */
+        top: 100%; 
         left: 0;
         right: 0;
         background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 3px 5px rgba(0,0,0,0.1);
         border-top: 1px solid #e0e0e0;
     }
 
-    nav.main-nav.nav-open { /* Style for when nav is opened */
-        display: block;
+    nav.main-nav.nav-open { /* When JS adds .nav-open to nav.main-nav */
+        display: block; 
     }
 
     nav.main-nav ul {
-        flex-direction: column; /* Stack nav items vertically */
+        flex-direction: column; 
         align-items: center;
         padding: 10px 0;
     }
 
     nav.main-nav ul li {
-        margin: 10px 0; /* Vertical spacing */
+        margin: 10px 0; 
         margin-left: 0;
         width: 100%;
         text-align: center;
     }
     nav.main-nav ul li a {
         padding: 10px 0;
-        display: block; /* Make links full width for easier tapping */
+        display: block; 
         width: 100%;
     }
 }
 
+
 /* General Section Styling */
 section {
     padding: 40px 0;
-    text-align: center; /* Default for general text in sections, can be overridden */
+    text-align: center;
 }
 section.bg-light {
     background-color: #fff;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
 }
-section h1, section h2, section h3, section h4 { /* Added h4 */
+section h1, section h2, section h3, section h4 {
     margin-bottom: 20px;
     color: #2c3e50;
 }
 section h1 { font-size: 2.8rem; }
 section h2 { font-size: 2.2rem; }
 section h3 { font-size: 1.8rem; }
-section h4 { font-size: 1.2rem; font-weight: bold; color: #333; } /* Style for h4 in cards */
+section h4 { font-size: 1.2rem; font-weight: bold; color: #333; }
 section p {
     font-size: 1.1rem;
     color: #555;
@@ -212,7 +216,7 @@ section.hero {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.hero .container { /* Overrides general .container text-align for this specific case */
+.hero .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -241,14 +245,14 @@ section.hero {
     text-align: left;
 }
 
-.hero-text p { /* Main descriptive paragraph in hero */
+.hero-text p {
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 30px;
     text-align: left;
     margin-left: 0;
     margin-right: 0;
-    max-width: none; /* Allow full width within its flex item */
+    max-width: none;
 }
 
 .hero .btn-group {
@@ -257,7 +261,7 @@ section.hero {
 .hero .btn-group .btn {
     margin-right: 15px;
     margin-left: 0;
-    margin-bottom: 10px; /* For wrapping */
+    margin-bottom: 10px;
 }
 
 .hero-image-container {
@@ -276,7 +280,6 @@ section.hero {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Optional Animations for Hero */
 @keyframes slideInFromLeft {
     0% { transform: translateX(-30px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
@@ -286,7 +289,6 @@ section.hero {
     100% { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive for new hero section */
 @media (max-width: 992px) {
     .hero-profile-image {
         width: 220px;
@@ -304,7 +306,7 @@ section.hero {
     .hero-text {
         padding-right: 0;
         margin-bottom: 40px;
-        order: 2; /* Text after image on mobile */
+        order: 2;
     }
     .hero-text h1,
     .hero-text .subtitle,
@@ -315,13 +317,13 @@ section.hero {
         margin-right: auto;
     }
      .hero .btn-group .btn {
-        margin-left: 5px; /* Adjust for centering */
+        margin-left: 5px;
         margin-right: 5px;
     }
     .hero-image-container {
         margin-left: 0;
         margin-bottom: 30px;
-        order: 1; /* Image first on mobile */
+        order: 1;
     }
     .hero-profile-image {
         width: 200px;
@@ -352,9 +354,8 @@ section.hero {
 .btn-secondary:hover {
     background-color: #545b62;
 }
-/* .btn-group defined within .hero for specific alignment */
 @media (max-width: 768px) {
-    .btn-group:not(.hero .btn-group) { /* Apply general stacking for non-hero btn-groups */
+    .btn-group:not(.hero .btn-group) {
         display: flex;
         flex-direction: column;
     }
@@ -382,7 +383,7 @@ section.hero {
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
-.card h3 { /* Default card heading */
+.card h3 {
     margin-top: 0;
     font-size: 1.4rem;
     color: #007bff;
@@ -390,7 +391,7 @@ section.hero {
 .card p {
     font-size: 1rem;
     margin-bottom: 10px;
-    max-width: none; /* Override general section p for card content */
+    max-width: none;
     margin-left: 0;
     margin-right: 0;
 }
@@ -403,14 +404,14 @@ section.hero {
     margin-bottom: 8px;
     font-size: 0.95rem;
 }
-.card .icon { /* For emoji/text icons in cards */
+.card .icon {
     font-size: 2rem;
     margin-bottom: 15px;
     color: #007bff;
     display: block;
     text-align: center;
 }
-#achievements .card .icon { /* Ensure these icons are styled */
+#achievements .card .icon {
     font-size: 2rem;
     margin-bottom: 15px;
     color: #007bff;
@@ -438,7 +439,7 @@ section.hero {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #e0e0e0; /* Placeholder color */
+    background-color: #e0e0e0;
     margin-bottom: 20px;
     object-fit: cover;
     border: 3px solid #fff;
@@ -449,15 +450,15 @@ section.hero {
 .contact-links-about span, .contact-links-about a {
     text-decoration: none;
     color: #007bff;
-    margin: 0 5px; /* Reduced margin */
+    margin: 0 5px;
     font-size: 0.95rem;
-    display: inline-block; /* For better spacing */
-    margin-bottom: 5px; /* For wrapping */
+    display: inline-block;
+    margin-bottom: 5px;
 }
-.contact-links-about span { color: #555; } /* For the location text */
+.contact-links-about span { color: #555; }
 .contact-links-about a:hover { text-decoration: underline; }
 
-.experience-item, .education-item { /* Removed .certification-item to use specific list style */
+.experience-item, .education-item {
     background-color: #fff;
     padding: 20px;
     margin-bottom: 20px;
@@ -465,7 +466,7 @@ section.hero {
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     text-align: left;
 }
-#certifications-about .certification-item { /* Specific styling for certification list items */
+#certifications-about .certification-item {
     background-color: #e0e6ef;
     padding: 10px 15px;
     margin-bottom: 10px;
@@ -473,6 +474,14 @@ section.hero {
     font-size: 1rem;
     color: #333;
 }
+#certifications-about .certification-item a { /* Style links within certification items */
+    color: #0056b3;
+    text-decoration: none;
+}
+#certifications-about .certification-item a:hover {
+    text-decoration: underline;
+}
+
 
 .experience-item h3, .education-item h3 {
     font-size: 1.5rem;
@@ -524,7 +533,7 @@ section.hero {
     height: 200px;
     object-fit: cover;
     border-radius: 5px 5px 0 0;
-    background-color: #e0e0e0; /* Placeholder */
+    background-color: #e0e0e0;
     margin-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
@@ -539,16 +548,15 @@ section.hero {
     margin-bottom: 5px;
     font-weight: 500;
 }
-#impact-numbers .card h3 { /* Specific for impact numbers */
+#impact-numbers .card h3 {
     font-size: 2.5rem;
-    color: #007bff; /* Default color, can be overridden inline */
+    color: #007bff;
     margin-bottom: 5px;
     text-align: center;
 }
 #impact-numbers .card p {
     text-align: center;
 }
-
 
 /* Contact Page Specifics */
 .contact-form-container {
@@ -569,7 +577,7 @@ section.hero {
 .contact-form-container input[type="text"],
 .contact-form-container input[type="email"],
 .contact-form-container textarea {
-    width: 100%; /* Full width of parent */
+    width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -577,14 +585,14 @@ section.hero {
     font-size: 1rem;
     box-sizing: border-box;
 }
-.contact-form-container .form-row { /* For side-by-side form fields */
+.contact-form-container .form-row {
     display: flex;
     gap: 20px;
-    margin-bottom: 0; /* Remove bottom margin from row itself */
+    margin-bottom: 0;
 }
 .contact-form-container .form-row > div {
     flex: 1;
-    margin-bottom: 20px; /* Add margin to individual field containers */
+    margin-bottom: 20px;
 }
 .contact-form-container textarea {
     min-height: 120px;
@@ -599,7 +607,7 @@ section.hero {
     margin-bottom: 10px;
     color: #007bff;
 }
-.contact-info-card h3 { /* For contact method cards */
+.contact-info-card h3 {
     text-align: center;
     font-size: 1.2rem;
     color: #333;
@@ -623,12 +631,98 @@ section.hero {
 #additional-info .card ul {
     list-style: disc;
     text-align: left;
-    padding-left: 25px; /* Indent list items */
+    padding-left: 25px;
 }
 #additional-info .card ul li {
     font-size: 0.95rem;
 }
 
+/* First Visit Pop-up Styles (as provided previously) */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex; /* Changed from none for direct class manipulation */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Delay visibility transition */
+}
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+.popup-content {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease 0.1s; /* Slight delay on transform */
+}
+.popup-overlay.active .popup-content {
+    transform: scale(1);
+}
+.popup-content h3 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 1.8rem;
+}
+.popup-content p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #444;
+}
+.popup-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #aaa;
+    cursor: pointer;
+    line-height: 1;
+}
+.popup-close-btn:hover {
+    color: #777;
+}
+.popup-contact-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.popup-contact-options .btn {
+    width: 100%;
+    box-sizing: border-box;
+}
+.popup-btn.whatsapp-btn { background-color: #25D366; }
+.popup-btn.whatsapp-btn:hover { background-color: #1DAE50; }
+.popup-btn.sms-btn { background-color: #FFC107; color: #333; }
+.popup-btn.sms-btn:hover { background-color: #E0A800; }
+
+@media (min-width: 500px) {
+    .popup-contact-options {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .popup-contact-options .btn {
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
 
 /* Footer */
 footer.main-footer {

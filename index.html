@@ -13,18 +13,20 @@
     <meta property="og:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Technology Leader">
     <meta name="twitter:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
-    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css">
+    <meta name="twitter:image" content="profile.jpg">
+    <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-PYZR7HK7RW');
     </script>
     </head>
@@ -44,7 +46,8 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic"> </div>
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
+        </div>
     </header>
 
     <main>
@@ -60,7 +63,8 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image"> </div>
+                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image">
+                </div>
             </div>
         </section>
 
@@ -176,17 +180,16 @@
         // Copyright Year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Mobile Navigation Toggle
+        // New Mobile Navigation Toggle (using class on body)
         const navToggle = document.querySelector('.nav-toggle');
-        const mainHeader = document.querySelector('.main-header');
-        const mainNav = document.querySelector('.main-nav');
+        const bodyElement = document.body; 
 
-        if (navToggle && mainHeader && mainNav) {
+        if (navToggle && bodyElement) { // Check bodyElement too
           navToggle.addEventListener('click', () => {
-            mainHeader.classList.toggle('nav-open'); 
-            mainNav.classList.toggle('nav-open');    
-            const isExpanded = mainNav.classList.contains('nav-open');
-            navToggle.setAttribute('aria-expanded', isExpanded);
+            bodyElement.classList.toggle('mobile-nav-active'); 
+            
+            const isExpanded = bodyElement.classList.contains('mobile-nav-active');
+            navToggle.setAttribute('aria-expanded', isExpanded.toString());
           });
         }
     </script>

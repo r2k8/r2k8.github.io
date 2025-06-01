@@ -191,23 +191,28 @@
     <script>
       const SUPABASE_URL = 'https://oqestxoyulajsuafjmkv.supabase.co'; 
       const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xZXN0eG95dWxhanN1YWZqbWt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg3MTEyNjIsImV4cCI6MjA2NDI4NzI2Mn0.M44f1YumdSBFosePwmSGe5Lcf2rZ6Ri8T2qY9eFg95Q';
-
       let supabase = null;
-      if (SUPABASE_URL && SUPABASE_URL !== 'YOUR_SUPABASE_URL' && SUPABASE_ANON_KEY && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY') {
+
+      // Check if Supabase library is loaded and credentials are valid before initializing
+      if (typeof Supabase !== 'undefined' && SUPABASE_URL && SUPABASE_ANON_KEY) {
         try {
             supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            // console.log('Supabase client initialized for telemetry.'); // For debugging
         } catch (e) {
             console.error("Supabase client initialization error:", e);
         }
       } else {
-        // This console.warn might appear if the check above isn't perfectly aligned with non-placeholder values.
-        // Since you've directly put your keys, for your specific case, this warning might be benign if Supabase object is created.
-        // console.warn('Supabase Telemetry: URL or Anon Key check indicates an issue. Telemetry might be disabled.');
+        if (typeof Supabase === 'undefined') {
+            console.error('Supabase library (Supabase) not loaded before attempting to create client. Make sure the Supabase CDN script is included and loads first.');
+        }
+        if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+            console.warn('Supabase Telemetry: URL or Anon Key is missing. Telemetry will be disabled.');
+        }
       }
 
       async function logPageVisit() {
         if (!supabase) {
-            // console.log('Supabase client not initialized for telemetry. Visit not logged.');
+            // console.log('Supabase client not initialized. Visit not logged.');
             return; 
         }
         try {
@@ -217,6 +222,7 @@
             user_agent: navigator.userAgent,
             timestamp: new Date().toISOString()
           };
+          // console.log("Attempting to log visit:", visitData); // For debugging
           const { data, error } = await supabase.from('page_visits').insert([visitData]);
           if (error) {
             console.error('Supabase Telemetry: Error logging visit:', error.message);

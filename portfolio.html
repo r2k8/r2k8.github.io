@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
     <meta name="robots" content="noindex, nofollow">
     <title>Portfolio & Projects - Rama Krishna Sripathi | r2k8.com</title>
     <meta name="description" content="Explore the portfolio of Rama Krishna Sripathi, showcasing enterprise-scale projects in cloud transformation, AI solutions, and more.">
@@ -17,7 +18,16 @@
     <meta name="twitter:description" content="Explore enterprise-scale projects in cloud transformation, AI solutions, and more.">
     <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/portfolio.html">
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css">
-</head>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PYZR7HK7RW');
+    </script>
+    </head>
 <body>
     <header class="main-header">
         <div class="container">
@@ -194,8 +204,8 @@
             <p>© <span id="currentYear">2025</span> Rama Krishna Sripathi. All rights reserved.</p>
             <div class="social-links">
                 <a href="mailto:r2k8@yahoo.com">Email</a> |
-                <a href="https://linkedin.com/in/r2k8" target="_blank">LinkedIn</a> |
-                <a href="https://github.com/r2k8" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/r2k8" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </footer>
@@ -231,48 +241,6 @@
             navToggle.setAttribute('aria-expanded', isExpanded);
           });
         }
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-    <script>
-      const SUPABASE_URL = 'https://oqestxoyulajsuafjmkv.supabase.co'; 
-      const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xZXN0eG95dWxhanN1YWZqbWt2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg3MTEyNjIsImV4cCI6MjA2NDI4NzI2Mn0.M44f1YumdSBFosePwmSGe5Lcf2rZ6Ri8T2qY9eFg95Q';
-
-      let supabase = null;
-      if (SUPABASE_URL && !SUPABASE_URL.includes('YOUR_SUPABASE_URL') && SUPABASE_ANON_KEY && !SUPABASE_ANON_KEY.includes('YOUR_SUPABASE_ANON_KEY')) {
-        try {
-            supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        } catch (e) {
-            console.error("Supabase client initialization error:", e);
-        }
-      } else {
-        // console.warn('Supabase Telemetry: URL or Anon Key might still be a placeholder or invalid. Telemetry will be disabled.');
-      }
-
-      async function logPageVisit() {
-        if (!supabase) {
-            // console.log('Supabase client not initialized for telemetry. Visit not logged.');
-            return; 
-        }
-        try {
-          const visitData = {
-            url: window.location.href,
-            referrer: document.referrer || null,
-            user_agent: navigator.userAgent,
-            timestamp: new Date().toISOString()
-          };
-          const { data, error } = await supabase.from('page_visits').insert([visitData]);
-          if (error) {
-            console.error('Supabase Telemetry: Error logging visit:', error.message);
-          } else {
-            // console.log('Supabase Telemetry: Visit logged successfully.');
-          }
-        } catch (error) {
-          console.error('Supabase Telemetry: Exception in logPageVisit function:', error.message);
-        }
-      }
-      window.addEventListener('load', logPageVisit);
     </script>
 
     <script>

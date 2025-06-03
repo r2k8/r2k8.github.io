@@ -8,178 +8,240 @@ body, html {
     background-color: #f4f7f6; /* Light gray-ish background */
 }
 
+body.mobile-nav-active { /* If menu is open, prevent body scroll */
+    overflow: hidden;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
-    overflow: hidden; /* To contain floats or prevent margin collapse issues */
+    overflow: hidden; 
 }
 
-/* Header & Navigation (with "Rethought" Hamburger Menu) */
-header.main-header {
-    background-color: #fff;
-    color: #333;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
+/* NEW Enhanced Header & Navigation Styling */
+.site-header {
+    position: sticky; /* Changed from fixed to sticky for better flow with page content */
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Default height */
+    background-color: rgba(255,255,255,0.95);
+    backdrop-filter: blur(5px); /* Optional: for frosted glass effect */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000; /* Ensure header is above other content */
+    display: flex; /* Added to help center .header-container if needed */
+    justify-content: center; /* Added to help center .header-container */
 }
 
-header.main-header .container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; 
+    width: 100%; /* Make header-container take full width of site-header padding area */
+    max-width: 1400px; /* Max width for content within header */
+    margin: 0 auto; /* Center container */
+    padding: 0 30px; /* Padding inside the container */
+    height: 100%;
 }
 
-.logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
+/* Enhanced Title Structure */
+.site-title {
+    font-family: 'Roboto', sans-serif; /* Consider alternatives like Montserrat or Open Sans */
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+.site-title a {
     text-decoration: none;
-    padding: 5px 0; 
+    display: flex;
+    align-items: center;
+    height: 100%; /* Ensure link takes full height for clickability */
+}
+.title-tech {
+    color: #2962FF; /* Technical blue */
+}
+.title-pro {
+    color: #3D5AFE; /* Professional indigo */
+}
+.title-separator {
+    margin: 0 2px;
+    color: #546E7A;
+    font-weight: 300;
+}
+.title-domain {
+    font-weight: 400;
+    font-size: 22px; /* Slightly smaller as per your example */
+    color: #455A64;
+    padding-left: 2px; /* Small space after K8 */
 }
 
-/* Navigation Toggle (Hamburger) - Mobile Only */
-.nav-toggle {
-    display: none; 
+/* Enhanced Hamburger Menu Styling */
+nav[role="navigation"] { /* Targeting the nav element directly */
+    display: flex;
+    align-items: center;
+}
+.menu-toggle {
+    display: flex; 
+    align-items: center;
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 1001; 
-    position: relative; 
+    transition: all 0.3s ease;
+    margin-left: 15px; /* Give some space from title if needed */
+}
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This creates the space for a typical hamburger */
+    height: 20px; /* Adjusted height for 3px bars + 5.5px gaps for 24px total feel */
+    width: 24px;  /* Adjusted width */
+    position: relative;
+}
+.bar {
+    background-color: #333; /* Bar color */
+    border-radius: 2px; /* Slightly rounded bars */
+    height: 3px; /* Thickness of bars */
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.menu-text {
+    margin-left: 8px;
+    font-family: 'Open Sans', sans-serif; /* Or your main font */
+    font-size: 16px;
+    font-weight: 500;
+    color: #333; /* Match bar color or site text */
 }
 
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    display: block;
-    background-color: #333;
-    height: 3px;
-    width: 25px;
-    border-radius: 3px;
-    transition: all 0.3s ease-in-out;
+/* Animation for open state (X icon) */
+.menu-toggle[aria-expanded="true"] .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Adjusted for new height */
+}
+.menu-toggle[aria-expanded="true"] .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle[aria-expanded="true"] .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Adjusted for new height */
 }
 
-.hamburger::before {
-    transform: translateY(-8px);
+/* Menu container styling */
+.menu-container {
+    position: absolute; /* Changed to absolute for better control relative to header */
+    top: 70px; /* Default: Below the header height */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transform: translateY(-20px); /* Start off-screen or faded */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s, transform 0.3s ease; /* visibility transition */
+    z-index: 999; /* Below header but above content */
+    padding: 10px 0; /* Add some padding */
 }
-
-.hamburger::after {
-    transform: translateY(5px); 
+.menu-container.open { /* This class will be toggled by JS */
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear 0s, transform 0.3s ease;
 }
-
-/* Hamburger animation when mobile-nav-active is on body */
-body.mobile-nav-active .nav-toggle .hamburger {
-    background-color: transparent; 
-}
-body.mobile-nav-active .nav-toggle .hamburger::before {
-    transform: translateY(0px) rotate(45deg); 
-}
-body.mobile-nav-active .nav-toggle .hamburger::after {
-    transform: translateY(0px) rotate(-45deg);
-}
-
-/* Main Navigation Styles */
-nav.main-nav {
-    /* Desktop: Visible by default due to flex order and no display:none */
-}
-
-nav.main-nav ul {
+.menu-container ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center links */
 }
-
-nav.main-nav ul li {
-    margin-left: 20px;
+.menu-container ul li {
+    width: 100%;
 }
-
-nav.main-nav ul li:first-child {
-    margin-left: 0;
-}
-
-nav.main-nav ul li a {
+.menu-container ul li a {
+    display: block;
+    padding: 12px 20px;
     text-decoration: none;
     color: #333;
+    text-align: center;
     font-weight: 500;
-    transition: color 0.3s ease;
-    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
-
-nav.main-nav ul li a:hover,
-nav.main-nav ul li a.current {
+.menu-container ul li:last-child a {
+    border-bottom: none;
+}
+.menu-container ul li a:hover,
+.menu-container ul li a.current { /* Assuming you might add 'current' class with JS */
+    background-color: #f4f7f6;
     color: #007bff;
 }
 
-.header-profile-pic {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 15px; 
-    border: 2px solid #e9ecef;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
 
-/* Responsive adjustments for Header - Using body.mobile-nav-active */
+/* Mobile Responsiveness for New Header */
 @media (max-width: 768px) {
-    .logo {
-        order: 1;
-        flex-shrink: 0; 
+    .site-header {
+        height: 60px; /* Adjusted mobile header height */
     }
-    .header-profile-pic { 
-        order: 2; 
-        margin-left: 10px; 
-        margin-right: auto; /* Pushes hamburger to the far right */
+    .header-container {
+        padding: 0 15px; /* Reduced padding for mobile */
     }
-    .nav-toggle { /* Hamburger button itself */
-        display: block; 
-        order: 3; 
+    .site-title {
+        font-size: 24px; /* Smaller title on mobile */
     }
-    
-    nav.main-nav { /* The navigation menu */
-        display: none;  /* Hidden by default on mobile */
-        order: 4; 
-        width: 100%; 
-        position: absolute; 
-        top: 100%; /* Position it right below the header */
-        left: 0;
-        right: 0;
-        background-color: #fff;
-        box-shadow: 0 3px 5px rgba(0,0,0,0.1);
-        border-top: 1px solid #e0e0e0;
-        z-index: 999; 
+    .title-domain {
+        font-size: 18px; /* Smaller domain on mobile */
     }
-
-    body.mobile-nav-active nav.main-nav { /* Show nav when body has .mobile-nav-active */
-        display: block; 
+    .menu-text {
+        display: none; /* Hide "Menu" text on smaller screens, icon is enough */
     }
-
-    nav.main-nav ul {
-        flex-direction: column; 
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    nav.main-nav ul li {
-        margin: 10px 0; 
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
-    }
-    nav.main-nav ul li a {
-        padding: 10px 0;
-        display: block; 
-        width: 100%;
+    .menu-container {
+        top: 60px; /* Adjust to new mobile header height */
+        /* width: 100vw; /* Already 100% of parent, which is body if header is sticky/fixed */
+        /* left: 0; Ensure it spans full width if not already */
+        /* right: 0; */
     }
 }
 
+/* Optional Visual Design Variations (Uncomment ONE block if you want to use it) */
+/* Modern Minimalist
+.site-header {
+    background-color: white;
+    box-shadow: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+.site-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.bar {
+    height: 2px;
+    background-color: #000;
+}
+.menu-text { color: #000; }
+*/
+
+/* Bold Technical
+.site-header {
+    background-color: #1A2B34;
+}
+.site-title {
+    font-family: 'Roboto Mono', monospace;
+    color: white; 
+}
+.site-title a { color: white; } 
+.title-tech { color: #64FFDA; }
+.title-pro { color: #FF5252; }
+.title-separator { color: #78909C; } 
+.title-domain { color: #B0BEC5; }
+.bar { background-color: white; }
+.menu-text { color: white; }
+.menu-container { background-color: #263238; } 
+.menu-container ul li a { color: #CFD8DC; border-bottom-color: #37474F;}
+.menu-container ul li a:hover, .menu-container ul li a.current { color: #64FFDA; background-color: #37474F; }
+*/
+
+
+/* --- General Page Styles (from previous versions, ensure they don't conflict badly) --- */
 
 /* General Section Styling */
 section {
@@ -214,7 +276,14 @@ section.hero {
     padding: 40px 0 60px 0;
     text-align: left;
     border-bottom: 1px solid #e0e0e0;
+    margin-top: 70px; /* Account for fixed header height */
 }
+@media (max-width: 768px) {
+    section.hero {
+        margin-top: 60px; /* Account for mobile fixed header height */
+    }
+}
+
 
 .hero .container {
     display: flex;
@@ -411,16 +480,6 @@ section.hero {
     display: block;
     text-align: center;
 }
-
-/* Key Achievements Card Styling Adjustment */
-#achievements .card-container {
-    gap: 15px; 
-    grid-template-columns: 1fr; 
-}
-#achievements .card {
-    padding: 15px; 
-    text-align: center; 
-}
 #achievements .card .icon {
     font-size: 1.5rem; 
     margin-bottom: 8px;
@@ -434,6 +493,20 @@ section.hero {
     line-height: 1.4;
     margin-bottom: 0; 
 }
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Key Achievements Card Layout Adjustment */
+#achievements .card-container {
+    gap: 15px; 
+    grid-template-columns: 1fr; 
+}
+#achievements .card {
+    padding: 15px; 
+    text-align: center; 
+}
 @media (min-width: 576px) { 
     #achievements .card-container {
         grid-template-columns: repeat(2, 1fr);
@@ -445,7 +518,6 @@ section.hero {
     }
 }
 
-
 /* Article Cards Styling */
 .article-container .article-card { 
     display: flex;
@@ -453,48 +525,51 @@ section.hero {
     background-color: #fff; 
     border: 1px solid #eee; 
 }
-.article-image { /* Also used by .project-image so ensure consistency or specificity */
+.article-image {
     width: 100%;
     height: 180px; 
     object-fit: cover;
     border-bottom: 1px solid #eee; 
     background-color: #e9ecef; 
 }
-.article-card .project-image { /* if project-image class is used on img tag */
-    border-radius: 5px 5px 0 0; /* Match portfolio if needed */
-    margin-bottom:0; /* Remove default project image margin if inside article card's structure */
+.article-card .project-image { /* If .project-image class is used within article card */
+    border-radius: 5px 5px 0 0; 
+    margin-bottom:0; 
 }
-.article-card h3 { /* From base .card h3, potentially override */
+.article-card h3 { 
     font-size: 1.2rem; 
-    margin-top: 15px; /* If image is direct child */
+    margin-top: 15px;
     margin-bottom: 10px;
-    /* padding: 0 15px; /* Added to an inner div in HTML for articles */
 }
 .article-card h3 a {
     text-decoration: none;
-    color: var(--primary-color, #007bff);
+    color: #007bff; /* Use variable: var(--primary-color) */
 }
 .article-card h3 a:hover {
     text-decoration: underline;
 }
 .article-meta {
     font-size: 0.8rem;
-    color: #6c757d;
+    color: #6c757d; /* Use variable: var(--secondary-color) */
     margin-bottom: 10px;
-    /* padding: 0 15px; */
 }
 .article-excerpt {
     font-size: 0.9rem;
     flex-grow: 1; 
     margin-bottom: 15px;
-    /* padding: 0 15px; */
     color: #555;
 }
 .article-card .btn-small { 
     padding: 8px 15px;
     font-size: 0.9rem;
     align-self: flex-start; 
-    /* margin: 0 15px 15px 15px; /* Added to an inner div in HTML for articles */
+    margin-top: auto; /* Push to bottom if card content varies */
+}
+.article-card > div:last-child { /* Ensure padding for content div within article card */
+    padding: 0 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 
@@ -601,17 +676,17 @@ section.hero {
 }
 
 /* Portfolio Page Specifics */
-.project-image { /* This is used by article cards too now */
+.project-image { 
     width: 100%;
-    height: 200px; /* Default height */
+    height: 200px; 
     object-fit: cover;
     border-radius: 5px 5px 0 0;
     background-color: #e0e0e0;
     margin-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
-.article-image { /* More specific for articles if needed, otherwise .project-image styles apply */
-    height: 180px; /* Overriding for articles */
+.article-image { 
+    height: 180px; 
 }
 
 .tech-tags .tag {
@@ -721,7 +796,7 @@ section.hero {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
+    display: flex; /* Use flex for initial state to allow transitions if display is toggled by JS */
     justify-content: center;
     align-items: center;
     z-index: 2000;
@@ -822,3 +897,14 @@ footer.main-footer .social-links a {
 footer.main-footer .social-links a:hover {
     color: #00aeff;
 }
+
+/* Body padding for fixed header if needed */
+body {
+    padding-top: 70px; /* Default header height */
+}
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Mobile header height */
+    }
+}
+/* If body has mobile-nav-active, ensure content isn't scrollable (already handled by body.mobile-nav-active { overflow: hidden; }) */

@@ -177,14 +177,14 @@
                     <li class="certification-item"><a href="https://www.credly.com/badges/3f65ef54-4b99-4123-840a-a86b665a1611/public_url" target="_blank" rel="noopener noreferrer">ISC2 CC – Certified in Cybersecurity</a></li>
                     <li class="certification-item"><a href="https://www.credly.com/badges/e623a74e-e674-4800-bb02-53998e94312d/public_url" target="_blank" rel="noopener noreferrer">AWS Partner: Technical Accreditation</a></li>
                     <li class="certification-item"><a href="https://www.credly.com/users/r2k8" target="_blank" rel="noopener noreferrer">ITIL v3 Certified</a></li>
-                    <li class="certification-item"><a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?tab=credentials-tab" target="_blank" rel="noopener noreferrer">MCSA: Windows Server</a></li>
+                    <li class="certification-item"><a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?source=docs" target="_blank" rel="noopener noreferrer">MCSA: Windows Server</a></li>
                     <li class="certification-item"><a href="https://www.coursera.org/learner/r2k8" target="_blank" rel="noopener noreferrer">DeepLearning.AI: Generative AI</a></li>
                     <li class="certification-item"><a href="https://www.credly.com/users/r2k8" target="_blank" rel="noopener noreferrer">Data Landscape for GenAI (PMI)</a></li>
                     <li class="certification-item"><a href="https://www.coursera.org/learner/r2k8" target="_blank" rel="noopener noreferrer">Digital Product Management: Modern Fundamentals</a></li>
                 </ul>
                  <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; text-align:center;">
                     <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #00A3E0; color: white; padding: 10px 20px;">View All Credly Badges</a>
-                    <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #0078D4; color: white; padding: 10px 20px;">View Full Microsoft Transcript</a>
+                    <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?source=docs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #0078D4; color: white; padding: 10px 20px;">View Full Microsoft Transcript</a>
                 </div>
             </div>
         </section>
@@ -227,17 +227,15 @@
         // Copyright Year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Mobile Navigation Toggle
+        // Mobile Navigation Toggle (using class on body)
         const navToggle = document.querySelector('.nav-toggle');
-        const mainHeader = document.querySelector('.main-header');
-        const mainNav = document.querySelector('.main-nav');
+        const bodyElement = document.body; 
 
-        if (navToggle && mainHeader && mainNav) {
+        if (navToggle && bodyElement) {
           navToggle.addEventListener('click', () => {
-            mainHeader.classList.toggle('nav-open'); 
-            mainNav.classList.toggle('nav-open');    
-            const isExpanded = mainNav.classList.contains('nav-open');
-            navToggle.setAttribute('aria-expanded', isExpanded);
+            bodyElement.classList.toggle('mobile-nav-active'); 
+            const isExpanded = bodyElement.classList.contains('mobile-nav-active');
+            navToggle.setAttribute('aria-expanded', isExpanded.toString());
           });
         }
     </script>

@@ -15,7 +15,7 @@ body, html {
     overflow: hidden; /* To contain floats or prevent margin collapse issues */
 }
 
-/* Header & Navigation (with Hamburger Menu) */
+/* Header & Navigation (with "Rethought" Hamburger Menu) */
 header.main-header {
     background-color: #fff;
     color: #333;
@@ -30,7 +30,7 @@ header.main-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* For positioning the mobile nav absolutely if needed */
+    position: relative; 
 }
 
 .logo a {
@@ -38,18 +38,18 @@ header.main-header .container {
     font-weight: bold;
     color: #333;
     text-decoration: none;
-    padding: 5px 0; /* For vertical alignment */
+    padding: 5px 0; 
 }
 
 /* Navigation Toggle (Hamburger) - Mobile Only */
 .nav-toggle {
-    display: none; /* Hidden by default, shown on mobile */
+    display: none; 
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 1001; /* Above nav menu */
-    position: relative; /* For hamburger lines */
+    z-index: 1001; 
+    position: relative; 
 }
 
 .hamburger,
@@ -73,20 +73,19 @@ header.main-header .container {
 }
 
 /* Hamburger animation when mobile-nav-active is on body */
-/* The .nav-toggle button contains the .hamburger span */
 body.mobile-nav-active .nav-toggle .hamburger {
-    background-color: transparent; /* Middle line disappears */
+    background-color: transparent; 
 }
 body.mobile-nav-active .nav-toggle .hamburger::before {
-    transform: translateY(0px) rotate(45deg); /* Centering the 'X' */
+    transform: translateY(0px) rotate(45deg); 
 }
 body.mobile-nav-active .nav-toggle .hamburger::after {
-    transform: translateY(0px) rotate(-45deg); /* Centering the 'X' */
+    transform: translateY(0px) rotate(-45deg);
 }
 
-
+/* Main Navigation Styles */
 nav.main-nav {
-    /* Desktop: Visible by default due to flex layout */
+    /* Desktop: Visible by default due to flex order and no display:none */
 }
 
 nav.main-nav ul {
@@ -123,12 +122,12 @@ nav.main-nav ul li a.current {
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
-    margin-left: 15px; /* Default margin from nav */
+    margin-left: 15px; 
     border: 2px solid #e9ecef;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* Responsive adjustments for Header - Primarily for Mobile Navigation */
+/* Responsive adjustments for Header - Using body.mobile-nav-active */
 @media (max-width: 768px) {
     .logo {
         order: 1;
@@ -137,19 +136,19 @@ nav.main-nav ul li a.current {
     .header-profile-pic { 
         order: 2; 
         margin-left: 10px; 
-        margin-right: auto; 
+        margin-right: auto; /* Pushes hamburger to the far right */
     }
-    .nav-toggle {
+    .nav-toggle { /* Hamburger button itself */
         display: block; 
         order: 3; 
     }
     
-    nav.main-nav {
-        display: none; 
+    nav.main-nav { /* The navigation menu */
+        display: none;  /* Hidden by default on mobile */
         order: 4; 
         width: 100%; 
         position: absolute; 
-        top: 100%; 
+        top: 100%; /* Position it right below the header */
         left: 0;
         right: 0;
         background-color: #fff;
@@ -159,7 +158,7 @@ nav.main-nav ul li a.current {
     }
 
     body.mobile-nav-active nav.main-nav { /* Show nav when body has .mobile-nav-active */
-    display: block;
+        display: block; 
     }
 
     nav.main-nav ul {
@@ -412,18 +411,92 @@ section.hero {
     display: block;
     text-align: center;
 }
-#achievements .card .icon {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #007bff;
-    display: block;
-    text-align: center;
+
+/* Key Achievements Card Styling Adjustment */
+#achievements .card-container {
+    gap: 15px; 
+    grid-template-columns: 1fr; 
 }
-@media (max-width: 768px) {
-    .card-container {
-        grid-template-columns: 1fr;
+#achievements .card {
+    padding: 15px; 
+    text-align: center; 
+}
+#achievements .card .icon {
+    font-size: 1.5rem; 
+    margin-bottom: 8px;
+}
+#achievements .card h3 {
+    font-size: 1.1rem; 
+    margin-bottom: 8px;
+}
+#achievements .card p {
+    font-size: 0.85rem; 
+    line-height: 1.4;
+    margin-bottom: 0; 
+}
+@media (min-width: 576px) { 
+    #achievements .card-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+@media (min-width: 992px) { 
+    #achievements .card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* Article Cards Styling */
+.article-container .article-card { 
+    display: flex;
+    flex-direction: column;
+    background-color: #fff; 
+    border: 1px solid #eee; 
+}
+.article-image { /* Also used by .project-image so ensure consistency or specificity */
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-bottom: 1px solid #eee; 
+    background-color: #e9ecef; 
+}
+.article-card .project-image { /* if project-image class is used on img tag */
+    border-radius: 5px 5px 0 0; /* Match portfolio if needed */
+    margin-bottom:0; /* Remove default project image margin if inside article card's structure */
+}
+.article-card h3 { /* From base .card h3, potentially override */
+    font-size: 1.2rem; 
+    margin-top: 15px; /* If image is direct child */
+    margin-bottom: 10px;
+    /* padding: 0 15px; /* Added to an inner div in HTML for articles */
+}
+.article-card h3 a {
+    text-decoration: none;
+    color: var(--primary-color, #007bff);
+}
+.article-card h3 a:hover {
+    text-decoration: underline;
+}
+.article-meta {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+    /* padding: 0 15px; */
+}
+.article-excerpt {
+    font-size: 0.9rem;
+    flex-grow: 1; 
+    margin-bottom: 15px;
+    /* padding: 0 15px; */
+    color: #555;
+}
+.article-card .btn-small { 
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    align-self: flex-start; 
+    /* margin: 0 15px 15px 15px; /* Added to an inner div in HTML for articles */
+}
+
 
 /* About Page Specifics */
 .about-header-section {
@@ -528,15 +601,19 @@ section.hero {
 }
 
 /* Portfolio Page Specifics */
-.project-image {
+.project-image { /* This is used by article cards too now */
     width: 100%;
-    height: 200px;
+    height: 200px; /* Default height */
     object-fit: cover;
     border-radius: 5px 5px 0 0;
     background-color: #e0e0e0;
     margin-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
+.article-image { /* More specific for articles if needed, otherwise .project-image styles apply */
+    height: 180px; /* Overriding for articles */
+}
+
 .tech-tags .tag {
     display: inline-block;
     background-color: #007bff;
@@ -588,11 +665,10 @@ section.hero {
 .contact-form-container .form-row {
     display: flex;
     gap: 20px;
-    margin-bottom: 0; /* Adjusted from 0 to allow fields to have their own bottom margin */
+    margin-bottom: 0; 
 }
 .contact-form-container .form-row > div {
     flex: 1;
-    /* margin-bottom: 20px; /* Removed from here, apply to inputs/textareas directly */
 }
 .contact-form-container textarea {
     min-height: 120px;

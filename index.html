@@ -13,20 +13,18 @@
     <meta property="og:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Technology Leader">
     <meta name="twitter:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
-    <meta name="twitter:image" content="profile.jpg">
-    <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-PYZR7HK7RW');
     </script>
     </head>
@@ -46,8 +44,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
-        </div>
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic"> </div>
     </header>
 
     <main>
@@ -63,8 +60,7 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image">
-                </div>
+                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image"> </div>
             </div>
         </section>
 
@@ -113,7 +109,7 @@
                     <h4 style="font-size: 1.2rem; margin-bottom: 15px;">Verify My Credentials:</h4>
                     <p style="text-align: center;">
                         <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #00A3E0; color: white; padding: 10px 20px;">View Credly Badges</a>
-                        <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #0078D4; color: white; padding: 10px 20px;">View Microsoft Transcript</a>
+                        <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?source=docs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #0078D4; color: white; padding: 10px 20px;">View Microsoft Transcript</a>
                     </p>
                 </div>
             </div>
@@ -180,15 +176,16 @@
         // Copyright Year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // New Mobile Navigation Toggle (using class on body)
+        // Mobile Navigation Toggle
         const navToggle = document.querySelector('.nav-toggle');
-        const bodyElement = document.body; 
+        const mainHeader = document.querySelector('.main-header');
+        const mainNav = document.querySelector('.main-nav');
 
-        if (navToggle && bodyElement) { // Check bodyElement too
+        if (navToggle && mainHeader && mainNav) {
           navToggle.addEventListener('click', () => {
-            bodyElement.classList.toggle('mobile-nav-active'); 
-            
-            const isExpanded = bodyElement.classList.contains('mobile-nav-active');
+            mainHeader.classList.toggle('nav-open'); 
+            mainNav.classList.toggle('nav-open');    
+            const isExpanded = mainNav.classList.contains('nav-open');
             navToggle.setAttribute('aria-expanded', isExpanded.toString());
           });
         }

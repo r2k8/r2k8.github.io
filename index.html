@@ -13,18 +13,20 @@
     <meta property="og:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg"> 
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Technology Leader">
     <meta name="twitter:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
-    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css">
+    <meta name="twitter:image" content="profile.jpg"> 
+    <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-PYZR7HK7RW');
     </script>
     </head>
@@ -44,7 +46,8 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic"> </div>
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
+        </div>
     </header>
 
     <main>
@@ -60,7 +63,8 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image"> </div>
+                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image">
+                </div>
             </div>
         </section>
 
@@ -93,8 +97,19 @@
             </div>
         </section>
 
-        <section id="certifications" class="bg-light">
+        <section id="latest-articles" class="bg-light">
             <div class="container">
+                <h2>From My Blog on Medium</h2>
+                <p>Exploring ideas in technology, product management, and beyond.</p>
+                <div id="medium-articles-feed" class="card-container article-container">
+                    <p>Loading latest articles...</p> </div>
+                <div style="margin-top: 30px;">
+                    <a href="https://medium.com/@sripathiramki" target="_blank" rel="noopener noreferrer" class="btn">View All Articles on Medium</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="bg-light"> <div class="container">
                 <h2>Professional Certifications</h2>
                 <p>Validated expertise across cloud, AI, and project management.</p>
                 <div class="competencies-grid">
@@ -178,14 +193,12 @@
 
         // Mobile Navigation Toggle
         const navToggle = document.querySelector('.nav-toggle');
-        const mainHeader = document.querySelector('.main-header');
-        const mainNav = document.querySelector('.main-nav');
+        const bodyElement = document.body; // Use body for the toggle class
 
-        if (navToggle && mainHeader && mainNav) {
+        if (navToggle && bodyElement) {
           navToggle.addEventListener('click', () => {
-            mainHeader.classList.toggle('nav-open'); 
-            mainNav.classList.toggle('nav-open');    
-            const isExpanded = mainNav.classList.contains('nav-open');
+            bodyElement.classList.toggle('mobile-nav-active'); 
+            const isExpanded = bodyElement.classList.contains('mobile-nav-active');
             navToggle.setAttribute('aria-expanded', isExpanded.toString());
           });
         }
@@ -227,6 +240,71 @@
           });
         }
       });
+    </script>
+
+    <script>
+      async function fetchMediumPosts() {
+        const mediumUsername = 'sripathiramki';
+        const rssFeedUrl = `https://medium.com/feed/@${mediumUsername}`;
+        const converterUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+        const articlesContainer = document.getElementById('medium-articles-feed');
+
+        if (!articlesContainer) {
+          // console.error('Medium articles container (#medium-articles-feed) not found.');
+          return;
+        }
+
+        try {
+          const response = await fetch(converterUrl);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status} for ${converterUrl}`);
+          }
+          const data = await response.json();
+
+          if (data.status === 'ok' && data.items && data.items.length > 0) {
+            let htmlOutput = ''; 
+            const articlesToShow = data.items.slice(0, 3); // Show latest 3 articles
+
+            articlesToShow.forEach(item => {
+              const title = item.title;
+              const link = item.link;
+              const pubDate = new Date(item.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+              
+              let snippetContent = item.description || '';
+              const tempDiv = document.createElement('div');
+              tempDiv.innerHTML = snippetContent;
+              let textSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim();
+              textSnippet = textSnippet.substring(0, 120) + (textSnippet.length > 120 ? '...' : '');
+              
+              const imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : 'assets/images/article-placeholder-default.jpg';
+              const imageAlt = item.thumbnail ? title : "Default article placeholder image";
+
+              htmlOutput += `
+                <div class="card article-card">
+                  <img src="${imageUrl}" alt="${imageAlt}" class="project-image article-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                  <div class="article-image no-image-placeholder" style="display:none; background-color:#e9ecef; height:180px; width:100%; border-bottom: 1px solid #eee; border-radius: 5px 5px 0 0;"></div>
+                  <div style="padding: 0 15px 15px 15px; display: flex; flex-direction: column; flex-grow: 1;">
+                    <h3><a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
+                    <p class="article-meta">Published on Medium | ${pubDate}</p>
+                    <p class="article-excerpt">${textSnippet}</p>
+                    <a href="${link}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small" style="margin-top: auto;">Read More on Medium</a>
+                  </div>
+                </div>
+              `;
+            });
+            articlesContainer.innerHTML = htmlOutput;
+          } else {
+            articlesContainer.innerHTML = '<p>No articles found or unable to load feed at this time.</p>';
+            if(data.message) console.error('Error from rss2json service:', data.message);
+          }
+        } catch (error) {
+          console.error('Error fetching or parsing Medium feed:', error);
+          articlesContainer.innerHTML = '<p>Error loading articles. Please try again later.</p>';
+        }
+      }
+
+      // Call fetchMediumPosts after the DOM is fully loaded
+      document.addEventListener('DOMContentLoaded', fetchMediumPosts);
     </script>
 
 </body>

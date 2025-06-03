@@ -13,32 +13,27 @@
     <meta property="og:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg"> 
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Technology Leader">
     <meta name="twitter:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
-    <meta name="twitter:image" content="profile.jpg"> 
-    <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
-    <link rel="stylesheet" href="style.css">
+    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-PYZR7HK7RW');
     </script>
     </head>
-<body>
-    <header class="main-header">
-        <div class="container">
+<body> <header class="main-header"> <div class="container">
             <div class="logo"><a href="index.html">R2K8.com</a></div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
-            <nav class="main-nav">
-                <ul>
+            <nav class="main-nav"> <ul>
                     <li><a href="index.html" class="current">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -46,8 +41,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
-        </div>
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic"> </div>
     </header>
 
     <main>
@@ -63,8 +57,7 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image">
-                </div>
+                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image"> </div>
             </div>
         </section>
 
@@ -97,7 +90,19 @@
             </div>
         </section>
 
-        <section id="certifications" class="bg-light">
+        <section id="latest-articles" class="bg-light">
+            <div class="container">
+                <h2>From My Blog on Medium</h2>
+                <p>Exploring ideas in technology, product management, and beyond.</p>
+                <div id="medium-articles-feed" class="card-container article-container">
+                    <p>Loading latest articles...</p> </div>
+                <div style="margin-top: 30px;">
+                    <a href="https://medium.com/@sripathiramki" target="_blank" rel="noopener noreferrer" class="btn">View All Articles on Medium</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="bg-light"> 
             <div class="container">
                 <h2>Professional Certifications</h2>
                 <p>Validated expertise across cloud, AI, and project management.</p>
@@ -115,17 +120,6 @@
                         <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #00A3E0; color: white; padding: 10px 20px;">View Credly Badges</a>
                         <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?source=docs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="margin: 5px 10px; background-color: #0078D4; color: white; padding: 10px 20px;">View Microsoft Transcript</a>
                     </p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="latest-articles" class="bg-light"> <div class="container">
-                <h2>From My Blog on Medium</h2>
-                <p>Exploring ideas in technology, product management, and beyond.</p>
-                <div id="medium-articles-feed" class="card-container article-container">
-                    <p>Loading latest articles...</p> </div>
-                <div style="margin-top: 30px;">
-                    <a href="https://medium.com/@sripathiramki" target="_blank" rel="noopener noreferrer" class="btn">View All Articles on Medium</a>
                 </div>
             </div>
         </section>
@@ -191,13 +185,14 @@
         // Copyright Year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Mobile Navigation Toggle (using class on body)
+        // New Mobile Navigation Toggle (using class on body)
         const navToggle = document.querySelector('.nav-toggle');
         const bodyElement = document.body; 
 
         if (navToggle && bodyElement) {
           navToggle.addEventListener('click', () => {
             bodyElement.classList.toggle('mobile-nav-active'); 
+            
             const isExpanded = bodyElement.classList.contains('mobile-nav-active');
             navToggle.setAttribute('aria-expanded', isExpanded.toString());
           });
@@ -205,7 +200,6 @@
     </script>
 
     <script>
-      // First Visit Pop-up Script 
       document.addEventListener('DOMContentLoaded', function() { 
         const popupOverlay = document.getElementById('firstVisitPopup');
         const closeButton = document.getElementById('closePopupButton');
@@ -242,9 +236,8 @@
         }
       });
     </script>
-
+    
     <script>
-      // Script to Fetch Medium Articles
       async function fetchMediumPosts() {
         const mediumUsername = 'sripathiramki';
         const rssFeedUrl = `https://medium.com/feed/@${mediumUsername}`;
@@ -252,6 +245,7 @@
         const articlesContainer = document.getElementById('medium-articles-feed');
 
         if (!articlesContainer) {
+          // console.error('Medium articles container (#medium-articles-feed) not found.');
           return;
         }
 
@@ -303,7 +297,10 @@
           articlesContainer.innerHTML = '<p>Error loading articles. Please try again later.</p>';
         }
       }
+
+      // Call fetchMediumPosts after the DOM is fully loaded
       document.addEventListener('DOMContentLoaded', fetchMediumPosts);
     </script>
+
 </body>
 </html>

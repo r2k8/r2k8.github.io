@@ -28,12 +28,14 @@
       gtag('config', 'G-PYZR7HK7RW');
     </script>
     </head>
-<body> <header class="main-header"> <div class="container">
+<body> <header class="main-header"> 
+        <div class="container">
             <div class="logo"><a href="index.html">R2K8.com</a></div>
             <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
-            <nav class="main-nav"> <ul>
+            <nav class="main-nav"> 
+                <ul>
                     <li><a href="index.html" class="current">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -41,7 +43,8 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic"> </div>
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic"> 
+        </div>
     </header>
 
     <main>
@@ -57,7 +60,8 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image"> </div>
+                    <img src="profile.jpg" alt="Rama Krishna Sripathi" class="hero-profile-image"> 
+                </div>
             </div>
         </section>
 
@@ -95,7 +99,8 @@
                 <h2>From My Blog on Medium</h2>
                 <p>Exploring ideas in technology, product management, and beyond.</p>
                 <div id="medium-articles-feed" class="card-container article-container">
-                    <p>Loading latest articles...</p> </div>
+                    <p>Loading latest articles...</p> 
+                </div>
                 <div style="margin-top: 30px;">
                     <a href="https://medium.com/@sripathiramki" target="_blank" rel="noopener noreferrer" class="btn">View All Articles on Medium</a>
                 </div>
@@ -185,7 +190,7 @@
         // Copyright Year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // New Mobile Navigation Toggle (using class on body)
+        // Mobile Navigation Toggle (using class on body)
         const navToggle = document.querySelector('.nav-toggle');
         const bodyElement = document.body; 
 
@@ -271,13 +276,21 @@
               let textSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim();
               textSnippet = textSnippet.substring(0, 120) + (textSnippet.length > 120 ? '...' : '');
               
-              const imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : 'assets/images/article-placeholder-default.jpg';
-              const imageAlt = item.thumbnail ? title : "Default article placeholder image";
+              // Try to get thumbnail, then first image from content, then fallback
+              let imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : null;
+              if (!imageUrl) {
+                  const firstImgTag = tempDiv.querySelector('img');
+                  if (firstImgTag && firstImgTag.src) {
+                      imageUrl = firstImgTag.src;
+                  }
+              }
+              const fallbackImageUrl = 'assets/images/article-placeholder-default.jpg';
+              const imageToDisplay = imageUrl || fallbackImageUrl;
+              const imageAlt = title || "Article image";
 
               htmlOutput += `
                 <div class="card article-card">
-                  <img src="${imageUrl}" alt="${imageAlt}" class="project-image article-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                  <div class="article-image no-image-placeholder" style="display:none; background-color:#e9ecef; height:180px; width:100%; border-bottom: 1px solid #eee; border-radius: 5px 5px 0 0;"></div>
+                  <img src="${imageToDisplay}" alt="${imageAlt}" class="project-image article-image" onerror="this.onerror=null; this.src='${fallbackImageUrl}'; this.alt='Placeholder image';">
                   <div style="padding: 0 15px 15px 15px; display: flex; flex-direction: column; flex-grow: 1;">
                     <h3><a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
                     <p class="article-meta">Published on Medium | ${pubDate}</p>

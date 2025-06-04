@@ -2,18 +2,19 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Default font, can be overridden by new header fonts */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Default font, can be overridden */
     line-height: 1.6;
     color: #333;
     background-color: #f4f7f6;
-    padding-top: 70px; /* Default height for new fixed .site-header */
+    /* Padding for the new fixed header */
+    padding-top: 70px; /* Default height for new .site-header */
 }
 
 body.menu-open-prevent-scroll { /* Class to prevent body scroll when menu is open */
     overflow: hidden;
 }
 
-.container { /* General container for page sections, not the header */
+.container { /* General container for page sections, NOT the new header's internal container */
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
@@ -31,8 +32,8 @@ body.menu-open-prevent-scroll { /* Class to prevent body scroll when menu is ope
     backdrop-filter: blur(5px); 
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     z-index: 1000;
-    display: flex; /* Added for centering .header-container */
-    justify-content: center; /* Added for centering .header-container */
+    display: flex;
+    justify-content: center; 
 }
 
 .header-container { /* Wrapper for title and menu button within .site-header */
@@ -59,30 +60,17 @@ body.menu-open-prevent-scroll { /* Class to prevent body scroll when menu is ope
     align-items: center;
     height: 100%;
 }
-.title-tech {
-    color: #2962FF; /* Technical blue */
-}
-.title-pro {
-    color: #3D5AFE; /* Professional indigo */
-}
-.title-separator {
-    margin: 0 2px;
-    color: #546E7A;
-    font-weight: 300;
-}
-.title-domain {
-    font-weight: 400;
-    font-size: 22px;
-    color: #455A64;
-    padding-left: 2px;
-}
+.title-tech { color: #2962FF; /* Technical blue */ }
+.title-pro { color: #3D5AFE; /* Professional indigo */ }
+.title-separator { margin: 0 2px; color: #546E7A; font-weight: 300; }
+.title-domain { font-weight: 400; font-size: 22px; color: #455A64; padding-left: 2px; }
 
 /* New Hamburger Menu Styling (as per your design plan) */
-nav[role="navigation"] { /* Targeting your new nav element */
+nav[role="navigation"].main-menu-nav { /* Targets your new nav element */
     display: flex;
     align-items: center;
 }
-.menu-toggle {
+.menu-toggle { /* Your new button */
     display: flex; 
     align-items: center;
     background: none;
@@ -91,7 +79,7 @@ nav[role="navigation"] { /* Targeting your new nav element */
     padding: 10px;
     transition: all 0.3s ease;
     margin-left: 15px; 
-    z-index: 1002; /* Above menu container */
+    z-index: 1002; 
 }
 .menu-icon {
     display: flex;
@@ -107,11 +95,8 @@ nav[role="navigation"] { /* Targeting your new nav element */
     height: 3px; 
     width: 100%;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center; 
 }
-/* Explicitly position bars if justify-content: space-between on .menu-icon isn't enough */
-.bar:nth-child(1) { transform-origin: center; }
-.bar:nth-child(2) { transform-origin: center; }
-.bar:nth-child(3) { transform-origin: center; }
 
 .menu-text {
     margin-left: 8px;
@@ -121,7 +106,7 @@ nav[role="navigation"] { /* Targeting your new nav element */
     color: #333; 
 }
 
-/* Animation for open state (X icon) based on aria-expanded */
+/* Animation for open state (X icon) based on aria-expanded on the button */
 .menu-toggle[aria-expanded="true"] .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg); 
 }
@@ -133,23 +118,23 @@ nav[role="navigation"] { /* Targeting your new nav element */
 }
 
 /* Menu container styling (the dropdown part) */
-.menu-container {
-    position: fixed; /* Fixed positioning for overlay effect */
-    top: 70px; /* Default: Directly below the header height */
+.menu-container { /* This is your #main-menu-container */
+    position: fixed; 
+    top: 70px; 
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px); /* Take remaining viewport height */
+    height: calc(100vh - 70px); 
     background-color: #fff; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transform: translateY(-100%); /* Start off-screen above */
+    transform: translateY(-100%); 
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0s linear 0.3s, transform 0.3s ease; 
     z-index: 999; 
-    padding: 20px 0; /* Add some padding */
-    overflow-y: auto; /* Allow scrolling if menu items are too many */
+    padding: 20px 0; 
+    overflow-y: auto; 
 }
-.menu-container.open { /* This class will be toggled by JS */
+.menu-container.open { /* This class will be toggled by JS on #main-menu-container */
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
@@ -168,11 +153,11 @@ nav[role="navigation"] { /* Targeting your new nav element */
 }
 .menu-container ul li a {
     display: block;
-    padding: 15px 20px; /* Increased padding for better tap targets */
+    padding: 15px 20px; 
     text-decoration: none;
-    color: #333;
+    color: #333; 
     text-align: center;
-    font-size: 1.1rem; /* Slightly larger font for menu items */
+    font-size: 1.1rem; 
     font-weight: 500;
     border-bottom: 1px solid #f0f0f0;
     transition: background-color 0.2s ease, color 0.2s ease;
@@ -182,8 +167,8 @@ nav[role="navigation"] { /* Targeting your new nav element */
 }
 .menu-container ul li a:hover,
 .menu-container ul li a.current { 
-    background-color: #f4f7f6;
-    color: #007bff;
+    background-color: #f4f7f6; 
+    color: #007bff; 
 }
 
 
@@ -213,15 +198,16 @@ nav[role="navigation"] { /* Targeting your new nav element */
     }
 }
 
-/* --- General Page Styles (Retained from previous versions) --- */
-/* These styles should largely remain the same unless they conflict with new header */
+/* --- Styles for the rest of the page (Hero, Cards, Pop-up, Footer, etc.) --- */
+/* These styles are retained from our previous work and should generally apply correctly */
 
 section { padding: 40px 0; text-align: center; }
 section.bg-light { background-color: #fff; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; }
-/* ... (all other existing styles for hero, cards, buttons, about page, portfolio, contact, pop-up, footer should be here from the previous complete CSS) ... */
-/* It's important that the rest of your styles are present below this line */
+section h1, section h2, section h3, section h4 { margin-bottom: 20px; color: #2c3e50; }
+section h1 { font-size: 2.8rem; } section h2 { font-size: 2.2rem; } section h3 { font-size: 1.8rem; }
+section h4 { font-size: 1.2rem; font-weight: bold; color: #333; }
+section p { font-size: 1.1rem; color: #555; max-width: 800px; margin-left: auto; margin-right: auto; margin-bottom: 20px; }
 
-/* Hero Section Styling (for index.html) */
 section.hero { background-color: #fff; padding: 40px 0 60px 0; text-align: left; border-bottom: 1px solid #e0e0e0; }
 .hero .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 .hero-text { flex: 1; min-width: 300px; padding-right: 40px; animation: slideInFromLeft 0.7s ease-out forwards; }
@@ -237,14 +223,12 @@ section.hero { background-color: #fff; padding: 40px 0 60px 0; text-align: left;
 @media (max-width: 992px) { .hero-profile-image { width: 220px; height: 220px; } .hero-text { padding-right: 20px; } }
 @media (max-width: 768px) { .hero .container { flex-direction: column; text-align: center; } .hero-text { padding-right: 0; margin-bottom: 40px; order: 2; } .hero-text h1, .hero-text .subtitle, .hero-text p, .hero .btn-group { text-align: center; margin-left: auto; margin-right: auto; } .hero .btn-group .btn { margin-left: 5px; margin-right: 5px; } .hero-image-container { margin-left: 0; margin-bottom: 30px; order: 1; } .hero-profile-image { width: 200px; height: 200px; } }
 
-/* Buttons */
 .btn { display: inline-block; padding: 12px 25px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease; font-size: 1rem; font-weight: 500; border: none; cursor: pointer; }
 .btn:hover { background-color: #0056b3; }
 .btn-secondary { background-color: #6c757d; }
 .btn-secondary:hover { background-color: #545b62; }
 @media (max-width: 768px) { .btn-group:not(.hero .btn-group) { display: flex; flex-direction: column; } .btn-group:not(.hero .btn-group) .btn { margin: 5px 0; } }
 
-/* Cards */
 .card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; text-align: left; }
 .card { background-color: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .card:hover { transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); }
@@ -262,10 +246,9 @@ section.hero { background-color: #fff; padding: 40px 0 60px 0; text-align: left;
 @media (min-width: 576px) { #achievements .card-container { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 992px) { #achievements .card-container { grid-template-columns: repeat(4, 1fr); } }
 
-/* Article Cards Styling */
 .article-container .article-card { display: flex; flex-direction: column; background-color: #fff; border: 1px solid #eee; }
 .article-image { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid #eee; background-color: #e9ecef; border-radius: 5px 5px 0 0; }
-.article-card .project-image { margin-bottom:0; }
+.article-card .project-image { margin-bottom:0; } /* Assuming .project-image might be used on the img for articles */
 .article-card h3 { font-size: 1.2rem; margin-top: 15px; margin-bottom: 10px; }
 .article-card h3 a { text-decoration: none; color: #007bff; }
 .article-card h3 a:hover { text-decoration: underline; }
@@ -274,7 +257,6 @@ section.hero { background-color: #fff; padding: 40px 0 60px 0; text-align: left;
 .article-card .btn-small { padding: 8px 15px; font-size: 0.9rem; align-self: flex-start; margin-top: auto; }
 .article-card > div:not(.article-image):not(.no-image-placeholder) { padding: 0 15px 15px 15px; display: flex; flex-direction: column; flex-grow: 1; }
 
-/* About Page Specifics */
 .about-header-section { display: flex; flex-direction: column; align-items: center; margin-bottom: 40px; padding: 30px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
 .profile-pic-main { width: 150px; height: 150px; border-radius: 50%; background-color: #e0e0e0; margin-bottom: 20px; object-fit: cover; border: 3px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 .about-header-section h1 { margin-bottom: 5px; font-size: 2.2rem; }
@@ -292,19 +274,16 @@ section.hero { background-color: #fff; padding: 40px 0 60px 0; text-align: left;
 .experience-item ul { list-style-type: disc; margin-left: 20px; padding-left: 0;}
 .experience-item ul li, .education-item p { font-size: 1rem; color: #444; margin-bottom: 5px; }
 
-/* Core Competencies Grid */
 .competencies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; text-align: center; margin-top: 20px; }
 .competency-tag { background-color: #e9ecef; color: #333; padding: 10px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; transition: background-color 0.3s ease; }
 .competency-tag:hover { background-color: #d1d9e0; }
 
-/* Portfolio Page Specifics */
 .project-image { width: 100%; height: 200px; object-fit: cover; border-radius: 5px 5px 0 0; background-color: #e0e0e0; margin-bottom: 15px; border-bottom: 1px solid #eee; }
-.article-image { height: 180px; } /* Already defined above */
+/* .article-image { height: 180px; } /* This was a duplicate styling, .project-image is used by article cards */
 .tech-tags .tag { display: inline-block; background-color: #007bff; color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; margin-right: 5px; margin-bottom: 5px; font-weight: 500; }
 #impact-numbers .card h3 { font-size: 2.5rem; color: #007bff; margin-bottom: 5px; text-align: center; }
 #impact-numbers .card p { text-align: center; }
 
-/* Contact Page Specifics */
 .contact-form-container { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); max-width: 700px; margin: 30px auto; text-align: left; }
 .contact-form-container label { display: block; margin-bottom: 8px; font-weight: bold; color: #444; }
 .contact-form-container input[type="text"], .contact-form-container input[type="email"], .contact-form-container textarea { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; box-sizing: border-box; }
@@ -320,7 +299,6 @@ section.hero { background-color: #fff; padding: 40px 0 60px 0; text-align: left;
 #additional-info .card ul { list-style: disc; text-align: left; padding-left: 25px; }
 #additional-info .card ul li { font-size: 0.95rem; }
 
-/* First Visit Pop-up Styles */
 .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); display: flex; justify-content: center; align-items: center; z-index: 2000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0s linear 0.3s; }
 .popup-overlay.active { opacity: 1; visibility: visible; transition: opacity 0.3s ease, visibility 0s linear 0s; }
 .popup-content { background-color: #fff; padding: 30px 40px; border-radius: 8px; box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); text-align: center; max-width: 500px; width: 90%; position: relative; transform: scale(0.9); transition: transform 0.3s ease 0.1s; }
@@ -337,18 +315,7 @@ section.hero { background-color: #fff; padding: 40px 0 60px 0; text-align: left;
 .popup-btn.sms-btn:hover { background-color: #E0A800; }
 @media (min-width: 500px) { .popup-contact-options { flex-direction: row; justify-content: center; } .popup-contact-options .btn { width: auto; padding-left: 20px; padding-right: 20px; } }
 
-/* Footer */
 footer.main-footer { background-color: #2c3e50; color: #ecf0f1; text-align: center; padding: 30px 0; margin-top: 40px; }
 footer.main-footer p { margin: 0 0 10px 0; color: #ecf0f1; font-size: 0.9rem; }
 footer.main-footer .social-links a { color: #ecf0f1; margin: 0 10px; text-decoration: none; font-size: 1rem; }
 footer.main-footer .social-links a:hover { color: #00aeff; }
-
-/* Body padding for new fixed header */
-body {
-    padding-top: 70px; /* Matches .site-header height */
-}
-@media (max-width: 768px) {
-    body {
-        padding-top: 60px; /* Matches mobile .site-header height */
-    }
-}

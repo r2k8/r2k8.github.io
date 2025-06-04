@@ -54,8 +54,7 @@ body.menu-open-prevent-scroll {
     height: var(--header-height);
     background-color: rgba(15, 23, 42, 0.85); 
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--header-border); /* Note: --header-border was not defined in :root, using existing rgba */
-    border-bottom: 1px solid rgba(74, 222, 128, 0.1); /* Reverted to your original header border */
+    border-bottom: 1px solid rgba(74, 222, 128, 0.1); 
     z-index: 1000;
     transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -70,20 +69,19 @@ body.menu-open-prevent-scroll {
     height: 100%;
 }
 
-/* UPDATED: Logo Block and Subtext Styling */
+/* Logo Block with Title and Subtext */
 .logo-block {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    line-height: 1.0; /* Tighter line height for the block */
+    line-height: 1.1; /* Tighter line height */
 }
-
-.site-title { /* Existing styles are mostly fine */
+.site-title {
     font-family: 'Roboto', sans-serif; 
     font-size: 28px;
     font-weight: 800;
     letter-spacing: -0.5px;
-    margin-bottom: -2px; /* Adjust to pull subtext closer */
+    margin-bottom: -1px; /* Adjusted for tighter spacing */
 }
 .site-title a {
     text-decoration: none;
@@ -96,28 +94,37 @@ body.menu-open-prevent-scroll {
 .title-domain { color: var(--text-gray); font-weight: 400; font-size: 22px; }
 
 .site-subtext {
-    font-family: 'Open Sans', sans-serif; /* Or inherit */
-    font-size: 0.6rem; /* Made it a bit smaller */
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 0.6rem; /* Slightly smaller for distinction */
     color: var(--text-gray);
     font-weight: 400;
     letter-spacing: 0.1px;
-    margin-top: -4px; /* Increased negative margin to pull closer */
-    padding-left: 2px; /* Slight indent to align with R2 */
+    margin-top: 0px; /* Adjusted for tighter spacing */
+    padding-left: 2px; 
 }
 
-
-/* v2 Desktop Navigation */
+/* Desktop Navigation */
 .desktop-nav { display: none; } 
 @media (min-width: 769px) {
-    .desktop-nav { display: flex; }
-    .desktop-nav ul { display: flex; list-style: none; gap: 30px; margin: 0; padding: 0; }
+    .desktop-nav { display: flex; margin-left: auto; /* Pushes it after logo-block */ }
+    .desktop-nav ul { display: flex; list-style: none; gap: 30px; margin: 0; padding: 0; align-items: center; }
     .desktop-nav a { color: var(--text-white); text-decoration: none; font-weight: 500; transition: color 0.3s ease; font-size: 1rem; }
     .desktop-nav a:hover, .desktop-nav a.current { color: var(--primary-green); }
     .nav-cta { background: var(--primary-green); color: var(--background-darker) !important; padding: 8px 18px; border-radius: 6px; font-weight: 600; }
     .nav-cta:hover { background: #22C55E; transform: translateY(-1px); color: var(--background-darker) !important;}
 }
 
-/* v2 Mobile Hamburger Menu (CSS-Only Checkbox Method) */
+/* Header Profile Picture (Re-added) */
+.header-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px; /* Space from desktop nav or title block */
+    border: 2px solid rgba(74, 222, 128, 0.2); /* Subtle green border */
+}
+
+/* Mobile Hamburger Menu (CSS-Only Checkbox Method) */
 .menu-toggle-checkbox { 
     position: absolute;
     left: -9999px;
@@ -133,12 +140,13 @@ label.hamburger-label {
     padding: 10px; 
     z-index: 1002; 
     align-self: center; 
+    margin-left: 10px; /* Space after profile pic on mobile */
 }
 .hamburger-line {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--primary-green); /* UPDATED: Hamburger line color to green */
+    background-color: var(--primary-green); /* UPDATED: Hamburger lines to green */
     margin: 2px 0; 
     transition: all 0.3s ease-in-out;
     border-radius: 3px;
@@ -169,26 +177,32 @@ nav.mobile-nav a:hover, nav.mobile-nav a.current { color: var(--primary-green); 
 @media (max-width: 768px) {
     body { padding-top: var(--mobile-header-height); }
     .site-header { height: var(--mobile-header-height); }
-    .header-container { padding: 0 20px; }
-    .site-title a { font-size: 24px; } /* Site title font size for mobile */
-    .site-title { font-size: 24px; } /* Ensure this is also set if needed */
-    .title-domain { font-size: 18px; }
-    .site-subtext { font-size: 0.5rem; margin-top: -3px; } /* Adjusted subtext for mobile */
+    .header-container { padding: 0 15px; } /* Adjusted for mobile */
+    .logo-block { order: 1; margin-right: auto; /* Pushes profile pic and hamburger to right */ }
+    .site-title a { font-size: 22px; } /* Slightly smaller for mobile */
+    .title-domain { font-size: 16px; }
+    .site-subtext { font-size: 0.5rem; margin-top: -2px; }
+    
     .desktop-nav { display: none; }
-    label.hamburger-label { display: flex; }
+    .header-profile-pic { order: 2; } /* Profile pic after logo block */
+    label.hamburger-label { display: flex; order: 3; } /* Hamburger after profile pic */
     
     .menu-toggle-checkbox:checked ~ nav.mobile-nav {
         left: 0;
         display: block; 
     }
     .menu-toggle-checkbox:checked ~ .hamburger-label .hamburger-line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px); /* Adjusted for new bar thickness/spacing */
+        transform: rotate(45deg) translate(5px, 5px);
     }
     .menu-toggle-checkbox:checked ~ .hamburger-label .hamburger-line:nth-child(2) {
         opacity: 0;
     }
     .menu-toggle-checkbox:checked ~ .hamburger-label .hamburger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px); /* Adjusted */
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    nav.mobile-nav {
+        top: var(--mobile-header-height); 
+        height: calc(100vh - var(--mobile-header-height));
     }
 }
 
@@ -245,21 +259,21 @@ nav.mobile-nav a:hover, nav.mobile-nav a.current { color: var(--primary-green); 
 @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: rotate(45deg) translateY(0); } 40% { transform: rotate(45deg) translateY(-10px); } 60% { transform: rotate(45deg) translateY(-5px); } }
 
 /* Styles for content sections below hero */
-section:not(.hero) { padding: 60px 20px; /* Use .container for max-width */ background-color: var(--background-dark); }
+section:not(.hero) { padding: 60px 20px; background-color: var(--background-dark); }
 section:not(.hero).bg-light-v2 { background-color: var(--background-darker); border-top: 1px solid var(--card-border-v2); border-bottom: 1px solid var(--card-border-v2); }
 section:not(.hero) h2 { font-size: 2.5rem; color: var(--text-white); margin-bottom: 15px; text-align: center;}
 section:not(.hero) > .container > p:first-of-type { font-size: 1.1rem; color: var(--text-gray); max-width: 700px; margin-bottom: 40px; text-align:center; }
 
-.card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 0; /* Removed default margin-top */ text-align: left; }
+.card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 0; text-align: left; }
 .card { background-color: var(--card-bg-v2); color: var(--text-gray); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; border: 1px solid var(--card-border-v2); }
 .card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.3); border-color: var(--card-border-hover-v2); }
 .card h3 { margin-top: 0; font-size: 1.4rem; color: var(--primary-green); } 
 .card p { font-size: 1rem; margin-bottom: 10px; color: var(--text-gray); }
 .card ul { list-style: disc; padding-left: 20px; margin-bottom: 0; }
 .card ul li { margin-bottom: 8px; font-size: 0.95rem; color: var(--text-gray); }
-.card .icon { /* This style might be from the old design, adapt if needed */ font-size: 2rem; margin-bottom: 15px; color: var(--primary-green); display: block; text-align: center; }
+/* .card .icon - This was from old design. If you need icons in v2 cards, define a new style or adapt */
 
-#achievements .card .icon { font-size: 1.8rem; margin-bottom: 10px; } 
+#achievements .card .icon { font-size: 1.8rem; margin-bottom: 10px; color: var(--primary-green); } 
 #achievements .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text-white); } 
 #achievements .card p { font-size: 0.9rem; line-height: 1.5; margin-bottom: 0; }
 #achievements .card-container { gap: 20px; }
@@ -267,24 +281,25 @@ section:not(.hero) > .container > p:first-of-type { font-size: 1.1rem; color: va
 @media (min-width: 992px) { #achievements .card-container { grid-template-columns: repeat(4, 1fr); } }
 
 /* Article Cards for Medium Feed */
-.article-container { /* This is typically a .card-container */ }
-.article-card { /* Uses .card styles by default */ border-left: 3px solid var(--accent-blue); }
-.article-image { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid var(--card-border-v2); background-color: #2a3139; border-radius: 8px 8px 0 0; /* Adjusted for card radius */ }
+.article-container {} /* This is typically a .card-container */
+.article-card { border-left: 3px solid var(--accent-blue); }
+.article-image { width: 100%; height: 180px; object-fit: cover; border-bottom: 1px solid var(--card-border-v2); background-color: #2a3139; border-radius: 8px 8px 0 0; }
 .article-card h3 { font-size: 1.2rem; margin-top: 15px; margin-bottom: 8px; }
 .article-card h3 a { text-decoration: none; color: var(--primary-green); }
 .article-card h3 a:hover { text-decoration: underline; }
 .article-meta { font-size: 0.75rem; color: var(--text-gray); margin-bottom: 10px; }
 .article-excerpt { font-size: 0.9rem; flex-grow: 1; margin-bottom: 15px; color: var(--text-gray); }
 .article-card .btn-small { padding: 8px 15px; font-size: 0.9rem; align-self: flex-start; margin-top: auto; background-color: var(--accent-blue); color: var(--text-white); border-color: transparent; }
-.article-card .btn-small:hover { background-color: #2962FF; } /* Darken accent blue */
+.article-card .btn-small:hover { background-color: #2962FF; }
 .article-card > div:not(.article-image):not(.no-image-placeholder) { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; }
 
-/* Certifications & Competencies (General styles from v2) */
+/* Certifications & Competencies */
 .competencies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; text-align: center; margin-top: 20px; }
 .competency-tag { background-color: var(--card-bg-v2); color: var(--text-gray); padding: 10px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; border: 1px solid var(--card-border-v2); }
 .competency-tag:hover { background-color: rgba(74, 222, 128, 0.1); color: var(--primary-green); border-color: var(--primary-green); }
-#certifications .btn-secondary { background-color: var(--accent-blue); border-color: var(--accent-blue); color: var(--text-white); margin-top:15px; } /* Made specific button for certs page distinct */
+#certifications .btn-secondary { background-color: var(--accent-blue); border-color: var(--accent-blue); color: var(--text-white); margin-top:15px; } 
 #certifications .btn-secondary:hover { background-color: #2962FF; border-color: #2962FF; }
+
 
 /* Pop-up Styles */
 .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 2000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0s linear 0.3s; }
@@ -315,14 +330,3 @@ footer.main-footer {
 footer.main-footer p { margin: 0 0 10px 0; color: var(--text-gray); font-size: 0.9rem; }
 footer.main-footer .social-links a { color: var(--text-gray); margin: 0 10px; text-decoration: none; font-size: 1rem; }
 footer.main-footer .social-links a:hover { color: var(--primary-green); }
-
-/* Ensure other specific page styles from previous style.css are brought over if not covered by general rules */
-/* Example: Styles for #certifications-about, .experience-item, .education-item, etc. from ABOUT page */
-/* These were adapted above to use v2 variables but ensure they look good with the dark theme */
-#certifications-about .certification-item { background-color: var(--card-bg-v2); color: var(--text-gray); border: 1px solid var(--card-border-v2); }
-#certifications-about .certification-item a { color: var(--primary-green); }
-.experience-item, .education-item { background-color: var(--card-bg-v2); border: 1px solid var(--card-border-v2); }
-.experience-item h3, .education-item h3 { color: var(--text-white); }
-.experience-item .company, .education-item .institution { color: var(--primary-green); }
-.experience-item .date, .education-item .date { color: var(--text-gray); }
-.experience-item ul li, .education-item p { color: var(--text-gray); }

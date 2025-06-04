@@ -27,6 +27,8 @@ header.main-header {
     border-bottom: 1px solid #e0e0e0;
     position: sticky;
     top: 0;
+    left: 0; /* Ensure it spans full width */
+    right: 0; /* Ensure it spans full width */
     z-index: 1000;
 }
 
@@ -162,7 +164,7 @@ nav.main-nav ul li a.current {
     }
 
     body.mobile-nav-active nav.main-nav { 
-        display: block; 
+        display: block !important; /* FORCED DISPLAY FOR DEBUGGING */
     }
 
     nav.main-nav ul {
@@ -218,14 +220,7 @@ section.hero {
     padding: 40px 0 60px 0;
     text-align: left;
     border-bottom: 1px solid #e0e0e0;
-    /* Removed margin-top: 70px; as body now has padding-top */
 }
-/* @media (max-width: 768px) {
-    section.hero {
-        margin-top: 60px; 
-    }
-} */
-
 
 .hero .container {
     display: flex;
@@ -470,10 +465,10 @@ section.hero {
     object-fit: cover;
     border-bottom: 1px solid #eee; 
     background-color: #e9ecef; 
-    border-radius: 5px 5px 0 0; /* Added for consistency if image is direct child */
+    border-radius: 5px 5px 0 0; 
 }
-.article-card .project-image { /* If .project-image class is used on img tag for articles */
-    margin-bottom:0; /* Remove default project image margin if inside article card's structure */
+.article-card .project-image { 
+    margin-bottom:0; 
 }
 .article-card h3 { 
     font-size: 1.2rem; 
@@ -504,7 +499,7 @@ section.hero {
     align-self: flex-start; 
     margin-top: auto; 
 }
-.article-card > div:not(.article-image):not(.no-image-placeholder) { /* Ensure padding for content div within article card */
+.article-card > div:not(.article-image):not(.no-image-placeholder) { 
     padding: 0 15px 15px 15px;
     display: flex;
     flex-direction: column;
@@ -624,7 +619,7 @@ section.hero {
     margin-bottom: 15px;
     border-bottom: 1px solid #eee;
 }
-.article-image { /* Specific height for article images if different */
+.article-image { 
     height: 180px; 
 }
 
@@ -735,7 +730,7 @@ section.hero {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
     z-index: 2000;

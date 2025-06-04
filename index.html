@@ -13,11 +13,16 @@
     <meta property="og:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg"> 
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Technology Leader">
     <meta name="twitter:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, AI Engineering.">
-    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
+    <meta name="twitter:image" content="profile.jpg"> 
+    <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="style.css"> 
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -27,14 +32,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;500&family=Roboto+Mono&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
 </head>
-<body> <header class="site-header">
+<body>
+    <header class="site-header">
         <div class="header-container">
-            <div class="site-title">
-              <a href="index.html"> 
-                <span class="title-tech">R2</span><span class="title-separator">|</span><span class="title-pro">K8</span><span class="title-domain">.com</span>
-              </a>
+            <div class="logo-block">
+                <div class="site-title">
+                  <a href="index.html"> 
+                    <span class="title-tech">R2</span><span class="title-separator">|</span><span class="title-pro">K8</span><span class="title-domain">.com</span>
+                  </a>
+                </div>
+                <div class="site-subtext">Rama Krishna Sripathi</div>
             </div>
             <nav role="navigation" aria-label="Main Menu" class="main-menu-nav">
               <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu-container">
@@ -46,7 +54,7 @@
                 <span class="menu-text">Menu</span>
               </button>
             </nav>
-            </div>
+        </div>
         <div id="main-menu-container" class="menu-container">
             <ul>
                 <li><a href="index.html" class="current">Home</a></li> 
@@ -205,14 +213,14 @@
         document.addEventListener('DOMContentLoaded', function() {
           const menuToggle = document.querySelector('.menu-toggle');
           const menuContainer = document.getElementById('main-menu-container'); 
-          const bodyElement = document.body; // To prevent scroll when menu is open
+          const bodyElement = document.body;
 
-          if (menuToggle && menuContainer) {
+          if (menuToggle && menuContainer && bodyElement) { 
             menuToggle.addEventListener('click', function() {
               const expanded = this.getAttribute('aria-expanded') === 'true' || false;
               this.setAttribute('aria-expanded', !expanded);
               menuContainer.classList.toggle('open');
-              bodyElement.classList.toggle('menu-open-prevent-scroll'); // Toggle scroll prevention
+              bodyElement.classList.toggle('menu-open-prevent-scroll'); 
             });
           } else {
             if (!menuToggle) console.error("New menu toggle button (.menu-toggle) not found.");

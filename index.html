@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
     <meta name="robots" content="noindex, nofollow">
-    <title>Rama Krishna Sripathi - Engineering the Future | r2k8.com (v2)</title>
+    <title>Rama Krishna Sripathi - Technology Leader | r2k8.com (v2)</title>
     <meta name="description" content="Rama Krishna Sripathi: Engineering the future with expertise in Product Management, TPM, Solutions Architecture, and AI.">
     <meta name="author" content="Rama Krishna Sripathi">
     <meta name="keywords" content="Rama Krishna Sripathi, Product Management, TPM, Solutions Architect, AI Engineer, Cloud, Innovation">
@@ -13,11 +13,14 @@
     <meta property="og:description" content="Engineering the future with expertise in Product Management, TPM, Solutions Architecture, and AI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Engineering the Future">
     <meta name="twitter:description" content="Engineering the future with expertise in Product Management, TPM, Solutions Architecture, and AI.">
-    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="twitter:image" content="profile.jpg">
+    <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
@@ -27,7 +30,8 @@
       gtag('config', 'G-PYZR7HK7RW');
     </script>
     </head>
-<body> <header class="site-header">
+<body>
+    <header class="site-header">
         <div class="header-container">
             <div class="logo-block">
                 <div class="site-title">
@@ -38,14 +42,8 @@
                 <div class="site-subtext">Rama Krishna Sripathi</div>
             </div>
             
-            <input class="menu-toggle-checkbox" type="checkbox" id="menu-toggle"/>
-            <label class="hamburger-label" for="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </label>
-            
-            <nav class="desktop-nav"> <ul>
+            <nav class="desktop-nav">
+                <ul>
                     <li><a href="index.html" class="current">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -53,6 +51,15 @@
                     <li><a href="contact.html" class="nav-cta">Contact</a></li>
                 </ul>
             </nav>
+            
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
+            
+            <input class="menu-toggle-checkbox" type="checkbox" id="menu-toggle"/>
+            <label class="hamburger-label" for="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
             
             <nav class="mobile-nav"> <ul>
                     <li><a href="index.html">Home</a></li>
@@ -135,7 +142,7 @@
                 <h2>From My Blog on Medium</h2>
                 <p>Exploring ideas in technology, product management, and beyond.</p>
                 <div id="medium-articles-feed" class="card-container article-container">
-                    <p>Loading latest articles...</p> 
+                    <p style="color: var(--text-gray);">Loading latest articles...</p> 
                 </div>
                 <div style="margin-top: 30px;">
                     <a href="https://medium.com/@sripathiramki" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View All Articles on Medium</a>
@@ -211,10 +218,16 @@
 
         // JavaScript for ARIA attribute on CSS-only checkbox menu (optional but good for accessibility)
         const menuToggleCheckbox = document.getElementById('menu-toggle');
-        const hamburgerLabel = document.querySelector('.hamburger-label'); 
+        const hamburgerLabel = document.querySelector('.hamburger-label'); // Make sure your label has this class
         if (menuToggleCheckbox && hamburgerLabel) {
             menuToggleCheckbox.addEventListener('change', function() {
                 hamburgerLabel.setAttribute('aria-expanded', this.checked);
+                // Optional: Toggle class on body to prevent scroll if menu is open
+                if (this.checked) {
+                    document.body.classList.add('menu-open-prevent-scroll');
+                } else {
+                    document.body.classList.remove('menu-open-prevent-scroll');
+                }
             });
         }
     </script>
@@ -264,16 +277,12 @@
         const converterUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
         const articlesContainer = document.getElementById('medium-articles-feed');
 
-        if (!articlesContainer) {
-          return;
-        }
+        if (!articlesContainer) { return; }
 
         try {
           articlesContainer.innerHTML = '<p style="color: var(--text-gray);">Loading latest articles...</p>';
           const response = await fetch(converterUrl);
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status} for ${converterUrl}`);
-          }
+          if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`); }
           const data = await response.json();
 
           if (data.status === 'ok' && data.items && data.items.length > 0) {
@@ -284,41 +293,35 @@
               const title = item.title;
               const link = item.link;
               const pubDate = new Date(item.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-              
               let snippetContent = item.description || '';
               const tempDiv = document.createElement('div');
               tempDiv.innerHTML = snippetContent;
-              let textSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim();
-              textSnippet = textSnippet.substring(0, 100) + (textSnippet.length > 100 ? '...' : '');
-              
+              let textSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim().substring(0, 100) + '...';
               const imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : 'assets/images/article-placeholder-default.jpg';
               const imageAlt = item.thumbnail ? title : "Default article placeholder image";
 
               htmlOutput += `
                 <div class="card article-card"> 
-                  <img src="${imageUrl}" alt="${imageAlt}" class="article-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                  <div class="article-image no-image-placeholder" style="display:none; background-color:var(--placeholder-bg, #2a3139); height:180px; width:100%; border-bottom: 1px solid var(--card-border-v2, #3b444c); border-radius: 8px 8px 0 0;"></div>
+                  <img src="${imageUrl}" alt="${imageAlt}" class="article-image" onerror="this.onerror=null; this.src='assets/images/article-placeholder-default.jpg'; this.alt='Placeholder image';">
                   <div>
                     <h3><a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
                     <p class="article-meta">Published | ${pubDate}</p>
                     <p class="article-excerpt">${textSnippet}</p>
                     <a href="${link}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Read More</a>
                   </div>
-                </div>
-              `;
+                </div>`;
             });
             articlesContainer.innerHTML = htmlOutput;
-          } else {
-            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">No articles found or unable to load feed.</p>';
+          } else { 
+            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">No articles found or unable to load feed.</p>'; 
             if(data.message) console.error('Error from rss2json service:', data.message);
           }
-        } catch (error) {
-          console.error('Error fetching Medium feed:', error);
-          articlesContainer.innerHTML = '<p style="color: var(--text-gray);">Error loading articles.</p>';
+        } catch (error) { 
+            console.error('Error fetching Medium feed:', error); 
+            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">Error loading articles.</p>';
         }
       }
       document.addEventListener('DOMContentLoaded', fetchMediumPosts);
     </script>
-
 </body>
 </html>

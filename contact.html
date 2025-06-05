@@ -13,11 +13,15 @@
     <meta property="og:description" content="Get in touch to discuss your project, collaboration, or for technical program management expertise.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com/contact.html">
-    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg"> 
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Rama Krishna Sripathi - Technology Leader">
     <meta name="twitter:description" content="Get in touch to discuss your project, collaboration, or for technical program management expertise.">
-    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/contact.html">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="twitter:image" content="profile.jpg"> 
+    <link rel="canonical" href="https://r2k8.com/contact.html">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
@@ -64,7 +68,7 @@
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="current">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -86,8 +90,7 @@
                     <div class="card contact-info-card">
                         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div>
                         <h3>Email</h3>
-                        <a href="mailto:r2k8@yahoo.com">r2k8@yahoo.com</a>
-                        <p class="subtext">Best for detailed project discussions.</p>
+                        <a href="mailto:r2k8@outlook.com">r2k8@outlook.com</a> <p class="subtext">Best for detailed project discussions.</p>
                     </div>
                     <div class="card contact-info-card">
                         <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></div>
@@ -114,30 +117,24 @@
         <section id="contact-form-section" class="bg-light-v2">
             <div class="container">
                 <h2>Send a Message</h2>
-                <div class="contact-form-container" style="background-color: var(--background-dark); border: 1px solid var(--card-border-v2);"> <p style="text-align: center; margin-bottom: 20px; font-style: italic; color: var(--text-gray);">
-                        <strong>Note:</strong> For direct inquiries, please use one of the contact methods above. The form below is for layout demonstration.
-                        To make this form functional on a static site, you'd integrate a service like Formspree or Netlify Forms.
-                    </p>
-                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submission demo!');">
-                        <div class="form-row">
+                <div class="contact-form-container" style="background-color: var(--background-dark); border: 1px solid var(--card-border-v2);">
+                    <form action="https://formspree.io/f/xwpbpqoy" method="POST"> <div class="form-row">
                             <div style="flex: 1;">
                                 <label for="name">Name *</label>
                                 <input type="text" id="name" name="name" placeholder="Your name" required>
                             </div>
                             <div style="flex: 1;">
                                 <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                            </div>
+                                <input type="email" id="email" name="_replyto" placeholder="your@email.com" required> </div>
                         </div>
                         <div>
                             <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
-                        </div>
+                            <input type="text" id="subject" name="_subject" placeholder="What's this about?"> </div>
                         <div>
                             <label for="message">Message *</label>
                             <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or how I can help..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Send Message (Demo)</button>
+                        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:10px;">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -163,8 +160,8 @@
                     </div>
                     <div class="card" style="background-color: var(--accent-blue); border-left: 5px solid var(--primary-green);">
                         <h3 style="color: var(--text-white);">Free Consultation</h3>
-                        <p style="color: var(--background-darker);">For web development and solutions architecture inquiries, I offer a complimentary 30-minute consultation. This allows us to discuss your needs in detail and determine if we're a good fit to work together.</p>
-                        <a href="mailto:r2k8@yahoo.com?subject=Free%20Consultation%20Request" class="btn btn-primary" style="margin-top:15px; background-color: var(--primary-green); color: var(--background-darker);">Schedule Consultation</a>
+                        <p style="color: var(--background-darker); font-weight: 500;">For web development and solutions architecture inquiries, I offer a complimentary 30-minute consultation.</p>
+                        <a href="mailto:r2k8@outlook.com?subject=Free%20Consultation%20Request" class="btn btn-primary" style="margin-top:15px; background-color: var(--primary-green); color: var(--background-darker);">Schedule Consultation</a>
                     </div>
                 </div>
             </div>
@@ -173,9 +170,9 @@
         <section id="cta-contact" style="background-color: var(--primary-green); color: var(--background-darker); padding: 50px 0;">
             <div class="container">
                 <h2 style="color: var(--background-darker);">Looking Forward to Hearing From You</h2>
-                <p style="color: var(--dark-green);">Whether it's a quick question or a detailed project discussion, don't hesitate to reach out.</p>
+                <p style="color: var(--dark-green); font-weight: 500;">Whether it's a quick question or a detailed project discussion, don't hesitate to reach out.</p>
                 <div class="hero-buttons" style="margin-top:20px;">
-                    <a href="mailto:r2k8@yahoo.com" class="btn btn-secondary" style="background-color:var(--background-darker); color: var(--text-white); border-color: var(--text-white);">Email Me Directly</a>
+                    <a href="mailto:r2k8@outlook.com" class="btn btn-secondary" style="background-color:var(--background-darker); color: var(--text-white); border-color: var(--text-white);">Email Me Directly</a>
                     <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Connect on LinkedIn</a>
                 </div>
             </div>
@@ -186,7 +183,7 @@
         <div class="container">
             <p>© <span id="currentYear">2025</span> Rama Krishna Sripathi. All rights reserved.</p>
             <div class="social-links">
-                <a href="mailto:r2k8@yahoo.com">Email</a> |
+                <a href="mailto:r2k8@outlook.com">Email</a> |
                 <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
                 <a href="https://github.com/r2k8" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
@@ -199,7 +196,7 @@
             <h3>Welcome!</h3>
             <p>Thanks for visiting my site. I'd love to connect. Feel free to reach out directly:</p>
             <div class="popup-contact-options">
-                <a href="mailto:r2k8@yahoo.com" class="btn popup-btn">Email Me</a>
+                <a href="mailto:r2k8@outlook.com" class="btn popup-btn">Email Me</a>
                 <a href="https://wa.me/14252433166" target="_blank" rel="noopener noreferrer" class="btn popup-btn whatsapp-btn">WhatsApp Me</a>
                 <a href="sms:+14252433166" class="btn popup-btn sms-btn">Text Me (SMS)</a>
             </div>
@@ -265,5 +262,5 @@
       });
     </script>
     
-    </body>
+</body>
 </html>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
-    <meta name="robots" content="noindex, nofollow"> <title>For Recruiters - Rama Krishna Sripathi | r2k8.com (v2)</title>
+    <meta name="robots" content="noindex, nofollow"> 
+    <title>For Recruiters - Rama Krishna Sripathi | r2k8.com (v2)</title>
     <meta name="description" content="Submit opportunity details for Rama Krishna Sripathi, Technology Leader specializing in Product Management, TPM, Solutions Architecture, and AI.">
     <meta name="author" content="Rama Krishna Sripathi">
     <link rel="canonical" href="https://r2k8.com/recruiters.html">
@@ -30,6 +31,21 @@
             width: 100%;
             min-height: 1200px; /* Adjust based on your form's length, test on different screens */
             border: none; /* Remove default iframe border */
+            background-color: var(--background-dark); /* Match theme if form itself is transparent */
+        }
+        /* Style the section containing the form to match v2 aesthetic */
+        #recruiter-google-form {
+            background-color: var(--background-darker); /* Example: or var(--background-dark) */
+            padding: 40px 0; /* Adjust padding */
+        }
+        #recruiter-google-form h2, 
+        #recruiter-google-form > .container > p {
+            color: var(--text-white);
+            text-align: center;
+        }
+         #recruiter-google-form > .container > p {
+            color: var(--text-gray);
+            margin-bottom: 30px;
         }
     </style>
 </head>
@@ -51,7 +67,8 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <li><a href="recruiters.html" class="current nav-cta">For Recruiters</a></li> 
+                </ul>
             </nav>
             <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
             <input class="menu-toggle-checkbox" type="checkbox" id="menu-toggle"/>
@@ -67,7 +84,8 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <li><a href="recruiters.html" class="current">For Recruiters</a></li> </ul>
+                    <li><a href="recruiters.html" class="current">For Recruiters</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -82,10 +100,10 @@
 
         <section id="recruiter-google-form">
             <div class="container">
-                <p style="text-align: center; color: var(--text-gray); margin-bottom:30px;">The form below is interactive. Please scroll within the form area if needed to see all questions.</p>
+                <p>The form below is interactive. Please scroll within the form area if needed to see all questions.</p>
                 <div class="google-form-embed-container">
-                    <p style="text-align:center; color:var(--text-gray);">Loading opportunity submission form...</p>
-                </div>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTekRqyN4NG1J3KIzKeChAiMf_4NDjm9tKzU31d547_swWPg/viewform?embedded=true" width="760" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
             </div>
         </section>
     </main>
@@ -173,5 +191,5 @@
       });
     </script>
     
-    </body>
+</body>
 </html>

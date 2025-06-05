@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
     <meta name="robots" content="noindex, nofollow"> <title>For Recruiters - Rama Krishna Sripathi | r2k8.com (v2)</title>
-    <meta name="description" content="Information for recruiters interested in connecting with Rama Krishna Sripathi for opportunities.">
+    <meta name="description" content="Submit opportunity details for Rama Krishna Sripathi, Technology Leader specializing in Product Management, TPM, Solutions Architecture, and AI.">
     <meta name="author" content="Rama Krishna Sripathi">
     <link rel="canonical" href="https://r2k8.com/recruiters.html">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -20,28 +20,17 @@
       gtag('config', 'G-PYZR7HK7RW');
     </script>
     <style>
-        /* Additional styles specific to this form, if needed, or add to main style.css */
-        .form-section { margin-bottom: 20px; }
-        .form-section label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-gray); }
-        .form-section input[type="text"],
-        .form-section input[type="email"],
-        .form-section input[type="url"],
-        .form-section select,
-        .form-section textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px; /* Spacing below input field */
-            border: 1px solid var(--card-border-v2);
-            border-radius: 8px;
-            background-color: var(--background-dark);
-            color: var(--text-white);
-            font-size: 1rem;
-            box-sizing: border-box;
+        /* Optional: Styles to help center the iframe and manage its height */
+        .google-form-embed-container {
+            max-width: 800px; /* Or your preferred max-width */
+            margin: 20px auto; /* Center the container */
+            overflow: hidden; /* Helps if iframe is too wide */
         }
-        .form-section input[type="radio"] { margin-right: 5px; }
-        .radio-group label { font-weight: normal; margin-right: 15px; }
-        .conditional-questions { display: none; margin-top: 15px; padding-top:15px; border-top: 1px dashed var(--card-border-v2); }
-        .form-section textarea { min-height: 100px; resize: vertical; }
+        .google-form-embed-container iframe {
+            width: 100%;
+            min-height: 1200px; /* Adjust based on your form's length, test on different screens */
+            border: none; /* Remove default iframe border */
+        }
     </style>
 </head>
 <body>
@@ -78,7 +67,7 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                     </ul>
+                    <li><a href="recruiters.html" class="current">For Recruiters</a></li> </ul>
             </nav>
         </div>
     </header>
@@ -86,97 +75,45 @@
     <main>
         <section class="hero bg-light-v2">
             <div class="container">
-                <h1 style="color: var(--text-white);">Opportunity Details</h1>
-                <p class="hero-subtitle" style="color: var(--text-gray);">Thank you for your interest! Please provide some information about the opportunity.</p>
+                <h1 style="color: var(--text-white);">Opportunity Details Submission</h1>
+                <p class="hero-subtitle" style="color: var(--text-gray);">Thank you for your interest! Please use the form below to provide details about the opportunity.</p>
             </div>
         </section>
 
-        <section id="recruiter-form-section">
+        <section id="recruiter-google-form">
             <div class="container">
-                <form action="https://formsubmit.co/your-r2k8.email@example.com" method="POST" class="contact-form-container" style="background-color:var(--background-dark); margin-top:0;"> <div class="form-section">
-                        <label for="recruiter-name">Your Name *</label>
-                        <input type="text" id="recruiter-name" name="recruiter_name" required>
-                    </div>
-                    <div class="form-section">
-                        <label for="recruiter-email">Your Email *</label>
-                        <input type="email" id="recruiter-email" name="recruiter_email" required>
-                    </div>
-                    <div class="form-section">
-                        <label for="company-name">Company Name</label>
-                        <input type="text" id="company-name" name="company_name">
-                    </div>
-
-                    <div class="form-section">
-                        <label>Is this opportunity based in the U.S.? *</label>
-                        <div class="radio-group">
-                            <input type="radio" id="us-based-yes" name="us_based" value="yes" required onclick="toggleUSQuestions(true)">
-                            <label for="us-based-yes">Yes</label>
-                            <input type="radio" id="us-based-no" name="us_based" value="no" required onclick="toggleUSQuestions(false)">
-                            <label for="us-based-no">No</label>
-                        </div>
-                    </div>
-
-                    <div id="us-specific-questions" class="conditional-questions">
-                        <div class="form-section">
-                            <label for="work-authorization">What is the work authorization you are looking for/can support? *</label>
-                            <select id="work-authorization" name="work_authorization">
-                                <option value="">--Please choose an option--</option>
-                                <option value="citizen_gc">U.S. Citizen / Green Card Holder</option>
-                                <option value="h1b_transfer_needed">Open to H1B (Transfer sponsorship needed)</option>
-                                <option value="h1b_no_transfer">Candidate must already have H1B (No transfer sponsorship)</option>
-                                <option value="opt_cpt">OPT / CPT</option>
-                                <option value="tn_visa">TN Visa</option>
-                                <option value="other_auth">Other (Please specify in notes)</option>
-                                <option value="flexible_auth">Not Sure / Flexible</option>
-                            </select>
-                        </div>
-                        <div class="form-section">
-                            <label for="employment-type">What is the employment type? *</label>
-                            <select id="employment-type" name="employment_type">
-                                <option value="">--Please choose an option--</option>
-                                <option value="w2_fulltime">Full-time (W2 Employee)</option>
-                                <option value="w2_contract">Contract (W2)</option>
-                                <option value="c2c_contract">Contract (Corp-to-Corp / C2C)</option>
-                                <option value="contract_to_hire">Contract-to-Hire</option>
-                                <option value="other_employment">Other (Please specify in notes)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <label for="role-category">Primary Role Category *</label>
-                        <select id="role-category" name="role_category" required>
-                            <option value="">--Please choose an option--</option>
-                            <option value="TPM">Technical Program Manager (TPM)</option>
-                            <option value="PdM">Product Manager (PdM)</option>
-                            <option value="Solutions Architect">Solutions Architect</option>
-                            <option value="AI Engineer">AI Engineer</option>
-                            <option value="Other">Other (Please specify in notes)</option>
-                        </select>
-                    </div>
-                    <div class="form-section">
-                        <label for="job-description-link">Link to Job Description (if available)</label>
-                        <input type="url" id="job-description-link" name="job_description_link" placeholder="https://example.com/job/123">
-                    </div>
-                    <div class="form-section">
-                        <label for="recruiter-message">Brief Message / Additional Notes</label>
-                        <textarea id="recruiter-message" name="recruiter_message" rows="4"></textarea>
-                    </div>
-
-                    <input type="hidden" name="_subject" value="New Opportunity Submission from r2k8.com">
-                    <input type="hidden" name="_next" value="https://r2k8.com/thank-you.html"> <input type="hidden" name="_captcha" value="false"> <div class="form-section">
-                        <button type="submit" class="btn btn-primary" style="width:100%;">Submit Details</button>
-                    </div>
-                </form>
+                <p style="text-align: center; color: var(--text-gray); margin-bottom:30px;">The form below is interactive. Please scroll within the form area if needed to see all questions.</p>
+                <div class="google-form-embed-container">
+                    <p style="text-align:center; color:var(--text-gray);">Loading opportunity submission form...</p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
-        </footer>
+        <div class="container">
+            <p>© <span id="currentYear">2025</span> Rama Krishna Sripathi. All rights reserved.</p>
+            <div class="social-links">
+                <a href="mailto:r2k8@outlook.com">Email</a> |
+                <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/r2k8" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
 
     <div id="firstVisitPopup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <button id="closePopupButton" class="popup-close-btn" aria-label="Close popup">&times;</button>
+            <h3>Welcome!</h3>
+            <p>Thanks for visiting my site. I'd love to connect. Feel free to reach out directly:</p>
+            <div class="popup-contact-options">
+                <a href="mailto:r2k8@outlook.com" class="btn popup-btn">Email Me Directly</a>
+                <a href="contact.html#contact-form-section" class="btn popup-btn" style="background-color: var(--primary-green); color: var(--background-darker);">Send a Detailed Message (Form)</a>
+                <a href="sms:+14252433166" class="btn popup-btn sms-btn">Quick Text (SMS)</a>
+            </div>
+            <p style="font-size: 0.9em; margin-top: 15px; color: var(--text-gray);">Phone: +1 425 243 3166</p>
         </div>
+    </div>
 
     <script>
         // Copyright Year
@@ -201,7 +138,6 @@
       // First Visit Pop-up Script
       document.addEventListener('DOMContentLoaded', function() { 
         const popupOverlay = document.getElementById('firstVisitPopup');
-        // ... (rest of pop-up JS as provided before)
         const closeButton = document.getElementById('closePopupButton');
         const visitedFlagKey = 'r2k8SiteVisited_v2.0'; 
 
@@ -235,37 +171,6 @@
           });
         }
       });
-    </script>
-
-    <script>
-        // JavaScript for Conditional Form Questions
-        function toggleUSQuestions(isUSBased) {
-            const usSpecificQuestionsDiv = document.getElementById('us-specific-questions');
-            const workAuthSelect = document.getElementById('work-authorization');
-            const employmentTypeSelect = document.getElementById('employment-type');
-
-            if (isUSBased) {
-                usSpecificQuestionsDiv.style.display = 'block';
-                workAuthSelect.required = true;
-                employmentTypeSelect.required = true;
-            } else {
-                usSpecificQuestionsDiv.style.display = 'none';
-                workAuthSelect.required = false;
-                employmentTypeSelect.required = false;
-                // Optional: Clear values if hidden
-                workAuthSelect.value = '';
-                employmentTypeSelect.value = '';
-            }
-        }
-        // Initialize state based on any pre-checked radio (e.g., if form is reloaded with errors)
-        document.addEventListener('DOMContentLoaded', function() {
-            const usBasedYesRadio = document.getElementById('us-based-yes');
-            if (usBasedYesRadio && usBasedYesRadio.checked) {
-                toggleUSQuestions(true);
-            } else {
-                 toggleUSQuestions(false); // Ensure it's hidden if 'No' or nothing is checked initially
-            }
-        });
     </script>
     
     </body>

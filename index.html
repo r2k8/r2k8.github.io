@@ -20,7 +20,8 @@
     <meta name="twitter:image" content="profile.jpg">
     <link rel="canonical" href="https://r2k8.com/">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
@@ -278,7 +279,6 @@
     </script>
     
     <script>
-      // Script to Fetch Medium Articles (with robust thumbnail handling)
       async function fetchMediumPosts() {
         const mediumUsername = 'sripathiramki';
         const rssFeedUrl = `https://medium.com/feed/@${mediumUsername}`;
@@ -290,7 +290,9 @@
         try {
           articlesContainer.innerHTML = '<p style="color: var(--text-gray);">Loading latest articles...</p>';
           const response = await fetch(converterUrl);
-          if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`); }
+          if (!response.ok) { 
+            throw new Error(`HTTP error! status: ${response.status} when fetching from ${converterUrl}. Response: ${await response.text()}`);
+          }
           const data = await response.json();
 
           if (data.status === 'ok' && data.items && data.items.length > 0) {
@@ -298,13 +300,16 @@
             const articlesToShow = data.items.slice(0, 3); 
 
             articlesToShow.forEach(item => {
-              const title = item.title;
-              const link = item.link;
-              const pubDate = new Date(item.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+              const title = item.title || "Untitled Article";
+              const link = item.link || "#";
+              const pubDate = item.pubDate ? new Date(item.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : "Date N/A";
+              
               let snippetContent = item.description || '';
               const tempDiv = document.createElement('div');
               tempDiv.innerHTML = snippetContent;
-              let textSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim().substring(0, 100) + (textSnippet.length > 100 ? '...' : '');
+              
+              let rawTextSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim();
+              let textSnippet = rawTextSnippet.substring(0, 100) + (rawTextSnippet.length > 100 ? '...' : '');
               
               let imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : null;
               if (!imageUrl) { 
@@ -330,12 +335,17 @@
             });
             articlesContainer.innerHTML = htmlOutput;
           } else { 
-            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">No articles found or unable to load feed.</p>'; 
-            if(data.message) console.error('Error from rss2json service:', data.message);
+            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">No articles found or unable to load feed from Medium.</p>'; 
+            if(data.message) {
+                console.error('Error from rss2json service:', data.message);
+            } else if (data.status !== 'ok') {
+                console.error('rss2json service did not return status "ok". Response:', data);
+            }
           }
         } catch (error) { 
-            console.error('Error fetching Medium feed:', error); 
-            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">Error loading articles.</p>';
+            console.error('Error fetching or parsing Medium feed (see details below):'); 
+            console.error(error); 
+            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">Error loading articles. Please check the console for details.</p>';
         }
       }
       document.addEventListener('DOMContentLoaded', fetchMediumPosts);

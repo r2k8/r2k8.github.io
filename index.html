@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
     <meta name="robots" content="noindex, nofollow">
-    <title>Rama Krishna Sripathi - Technology Leader | r2k8.com</title>
-    <meta name="description" content="Rama Krishna Sripathi: Versatile Technology Leader in Product Management, TPM, Solutions Architecture, and AI Engineering.">
+    <title>Rama Krishna Sripathi - Technology Leader | r2k8.com (v2)</title>
+    <meta name="description" content="Rama Krishna Sripathi: Engineering the future with expertise in Product Management, TPM, Solutions Architecture, and AI.">
     <meta name="author" content="Rama Krishna Sripathi">
     <meta name="keywords" content="Rama Krishna Sripathi, Product Management, TPM, Solutions Architect, AI Engineer, Cloud, Innovation">
-    <meta property="og:title" content="Rama Krishna Sripathi - Technology Leader | r2k8.com">
-    <meta property="og:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, and AI.">
+    <meta property="og:title" content="Rama Krishna Sripathi - Engineering the Future | r2k8.com">
+    <meta property="og:description" content="Engineering the future with expertise in Product Management, TPM, Solutions Architecture, and AI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
     <meta property="og:image" content="profile.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rama Krishna Sripathi - Technology Leader">
-    <meta name="twitter:description" content="Versatile Technology Leader: Product Management, TPM, Solutions Architecture, and AI.">
+    <meta name="twitter:title" content="Rama Krishna Sripathi - Engineering the Future">
+    <meta name="twitter:description" content="Engineering the future with expertise in Product Management, TPM, Solutions Architecture, and AI.">
     <meta name="twitter:image" content="profile.jpg">
     <link rel="canonical" href="https://r2k8.com/">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
@@ -31,28 +30,48 @@
       gtag('config', 'G-PYZR7HK7RW');
     </script>
     </head>
-<body class=""> <header class="main-header"> <div class="container">
-            <div class="logo-block"> <div class="site-title"> <a href="index.html">
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-block">
+                <div class="site-title">
+                    <a href="index.html">
                         <span class="title-tech">R2</span><span class="title-separator">|</span><span class="title-pro">K8</span><span class="title-domain">.com</span>
                     </a>
                 </div>
                 <div class="site-subtext">Rama Krishna Sripathi</div>
             </div>
             
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="main-nav">
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="index.html" class="current">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="recruiters.html">For Recruiters</a></li>
-                    <li><a href="contact.html" class="nav-cta">Contact</a></li> 
+                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
                 </ul>
             </nav>
+            
             <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
+            
+            <input class="menu-toggle-checkbox" type="checkbox" id="menu-toggle"/>
+            <label class="hamburger-label" for="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </label>
+            
+            <nav class="mobile-nav"> 
+                <ul>
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="recruiters.html">For Recruiters</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -63,6 +82,7 @@
                 <div class="bg-element bg-element-2"></div>
                 <div class="bg-element bg-element-3"></div>
             </div>
+            
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
@@ -76,6 +96,7 @@
                         <a href="about.html" class="btn btn-secondary">Learn About Me</a>
                     </div>
                 </div>
+                
                 <div class="split-preview">
                     <div class="preview-panel technical-preview">
                         <h3>Technology & Innovation</h3>
@@ -87,6 +108,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="scroll-indicator">
                 <span>Scroll to explore</span>
                 <div class="scroll-arrow"></div>
@@ -201,23 +223,18 @@
         // Copyright Year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Mobile Navigation Toggle (using class on body for the "rethought" menu)
-        const navToggle = document.querySelector('.nav-toggle'); // This is for the old header structure
-        const bodyElement = document.body; 
-        // const mainHeader = document.querySelector('.main-header'); // Old reference
-        // const mainNav = document.querySelector('.main-nav'); // Old reference
-
-        if (navToggle && bodyElement) { // Ensure bodyElement is also checked
-          navToggle.addEventListener('click', () => {
-            bodyElement.classList.toggle('mobile-nav-active'); 
-            
-            // The old logic for toggling 'nav-open' on mainHeader and mainNav is removed
-            // as the new CSS (Style.css you uploaded) handles animation and display
-            // based on body.mobile-nav-active.
-            
-            const isExpanded = bodyElement.classList.contains('mobile-nav-active');
-            navToggle.setAttribute('aria-expanded', isExpanded.toString());
-          });
+        // JavaScript for ARIA attribute on CSS-only checkbox menu
+        const menuToggleCheckbox = document.getElementById('menu-toggle');
+        const hamburgerLabel = document.querySelector('.hamburger-label'); 
+        if (menuToggleCheckbox && hamburgerLabel) {
+            menuToggleCheckbox.addEventListener('change', function() {
+                hamburgerLabel.setAttribute('aria-expanded', this.checked.toString());
+                if (this.checked) {
+                    document.body.classList.add('menu-open-prevent-scroll');
+                } else {
+                    document.body.classList.remove('menu-open-prevent-scroll');
+                }
+            });
         }
     </script>
 
@@ -226,7 +243,7 @@
       document.addEventListener('DOMContentLoaded', function() { 
         const popupOverlay = document.getElementById('firstVisitPopup');
         const closeButton = document.getElementById('closePopupButton');
-        const visitedFlagKey = 'r2k8SiteVisited_v2.0'; // Ensure this matches if v2 design implies new pop-up logic
+        const visitedFlagKey = 'r2k8SiteVisited_v2.0'; 
 
         if (popupOverlay && !localStorage.getItem(visitedFlagKey)) {
           setTimeout(() => {

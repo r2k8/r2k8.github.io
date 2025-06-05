@@ -13,11 +13,15 @@
     <meta property="og:description" content="Engineering the future with expertise in Product Management, TPM, Solutions Architecture, and AI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com">
-    <meta property="og:image" content="profile.jpg"> <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="profile.jpg"> 
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rama Krishna Sripathi - Engineering the Future">
     <meta name="twitter:description" content="Engineering the future with expertise in Product Management, TPM, Solutions Architecture, and AI.">
-    <meta name="twitter:image" content="profile.jpg"> <link rel="canonical" href="https://r2k8.com/">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <meta name="twitter:image" content="profile.jpg"> 
+    <link rel="canonical" href="https://r2k8.com/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
@@ -45,6 +49,7 @@
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="recruiters.html">For Recruiters</a></li> {/* */}
                     <li><a href="contact.html" class="nav-cta">Contact</a></li>
                 </ul>
             </nav>
@@ -58,11 +63,13 @@
                 <span class="hamburger-line"></span>
             </label>
             
-            <nav class="mobile-nav"> <ul>
+            <nav class="mobile-nav"> 
+                <ul>
                     <li><a href="index.html" class="current">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="recruiters.html">For Recruiters</a></li> {/* */}
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -70,7 +77,8 @@
     </header>
 
     <main>
-        <section class="hero"> <div class="hero-background">
+        <section class="hero hero-homepage"> 
+            <div class="hero-background">
                 <div class="bg-element bg-element-1"></div>
                 <div class="bg-element bg-element-2"></div>
                 <div class="bg-element bg-element-3"></div>
@@ -217,7 +225,7 @@
         const hamburgerLabel = document.querySelector('.hamburger-label'); 
         if (menuToggleCheckbox && hamburgerLabel) {
             menuToggleCheckbox.addEventListener('change', function() {
-                hamburgerLabel.setAttribute('aria-expanded', this.checked);
+                hamburgerLabel.setAttribute('aria-expanded', this.checked.toString());
                 if (this.checked) {
                     document.body.classList.add('menu-open-prevent-scroll');
                 } else {
@@ -293,13 +301,22 @@
               let snippetContent = item.description || '';
               const tempDiv = document.createElement('div');
               tempDiv.innerHTML = snippetContent;
-              let textSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim().substring(0, 100) + '...';
-              const imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : 'assets/images/article-placeholder-default.jpg';
-              const imageAlt = item.thumbnail ? title : "Default article placeholder image";
+              let textSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim().substring(0, 100) + (textSnippet.length > 100 ? '...' : '');
+              
+              let imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : null;
+              if (!imageUrl) { 
+                  const firstImgTag = tempDiv.querySelector('img');
+                  if (firstImgTag && firstImgTag.src) {
+                      imageUrl = firstImgTag.src;
+                  }
+              }
+              const fallbackImageUrl = 'assets/images/article-placeholder-default.jpg';
+              const imageToDisplay = imageUrl || fallbackImageUrl;
+              const imageAlt = title || "Article image";
 
               htmlOutput += `
                 <div class="card article-card"> 
-                  <img src="${imageUrl}" alt="${imageAlt}" class="article-image" onerror="this.onerror=null; this.src='assets/images/article-placeholder-default.jpg'; this.alt='Placeholder image';">
+                  <img src="${imageToDisplay}" alt="${imageAlt}" class="article-image" onerror="this.onerror=null; this.src='${fallbackImageUrl}'; this.alt='Placeholder image';">
                   <div>
                     <h3><a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
                     <p class="article-meta">Published | ${pubDate}</p>

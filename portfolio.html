@@ -213,108 +213,19 @@
             </div>
         </section>
 
-        <section id="global-launches">
+        <section id="global-launches" class="bg-light-v2">
             <div class="container">
                 <h2>Global Product Launches</h2>
                 <p>An interactive map showcasing the 23 countries where I helped launch Microsoft Teams.</p>
                 
-                <style>
-                  /* Scoped styles for the map container */
-                  #map-container {
-                    position: relative;
-                    width: 100%;
-                    margin: 2rem 0;
-                    background-color: #f8f9fa; /* A light background for the map area */
-                    border-radius: 8px;
-                    overflow: hidden;
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-                  }
-                
-                  #map-container svg {
-                    width: 100%;
-                    height: auto;
-                    display: block;
-                  }
-                
-                  /* Country styles */
-                  .country {
-                    fill: #e0e0e0; /* Default country color */
-                    stroke: #ffffff; /* Country borders */
-                    stroke-width: 0.5px;
-                    transition: fill 0.3s ease;
-                  }
-                
-                  .launched-country {
-                    fill: #0078d4; /* Microsoft's blue for launched countries */
-                  }
-                
-                  .country:hover, .launched-country:hover {
-                    fill: #ff8c00; /* A bright hover color */
-                    cursor: pointer;
-                  }
-                
-                  /* Tooltip styles */
-                  #map-tooltip {
-                    position: absolute;
-                    background-color: rgba(0, 0, 0, 0.85);
-                    color: #fff;
-                    padding: 10px 15px;
-                    border-radius: 5px;
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-                    font-size: 14px;
-                    line-height: 1.4;
-                    pointer-events: none; /* Prevents tooltip from blocking mouse events */
-                    opacity: 0;
-                    transform: translate(-50%, -120%);
-                    transition: opacity 0.2s ease, transform 0.2s ease;
-                    white-space: nowrap;
-                  }
-                
-                  #map-tooltip strong {
-                    font-size: 16px;
-                    display: block;
-                    margin-bottom: 4px;
-                    color: #4db8ff;
-                  }
-                  
-                  /* Legend styles */
-                  #map-legend {
-                    position: absolute;
-                    bottom: 20px;
-                    left: 20px;
-                    background: rgba(255, 255, 255, 0.9);
-                    padding: 10px;
-                    border-radius: 5px;
-                    font-family: sans-serif;
-                    font-size: 12px;
-                  }
-                
-                  .legend-item {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 5px;
-                  }
-                  
-                  .legend-item:last-child {
-                    margin-bottom: 0;
-                  }
-                
-                  .legend-color {
-                    width: 15px;
-                    height: 15px;
-                    margin-right: 8px;
-                    border: 1px solid #ccc;
-                  }
-                </style>
-                
                 <div id="map-container">
                   <div id="map-legend">
                     <div class="legend-item">
-                      <div class="legend-color" style="background-color: #0078d4;"></div>
+                      <div class="legend-color" style="background-color: var(--accent-blue);"></div>
                       <span>Launched Country</span>
                     </div>
                     <div class="legend-item">
-                      <div class="legend-color" style="background-color: #e0e0e0;"></div>
+                      <div class="legend-color" style="background-color: #334155;"></div>
                       <span>Other</span>
                     </div>
                   </div>
@@ -322,7 +233,7 @@
                 </div>
             </div>
         </section>
-        <section id="references" class="bg-light-v2">
+        <section id="references">
             <div class="container">
                 <h2>Professional References & Detailed Case Studies</h2>
                 <p style="max-width: 700px; margin: 20px auto 30px auto;">Due to the nature of enterprise projects and confidentiality agreements, detailed case studies and specific client references are available upon request.</p>
@@ -430,9 +341,8 @@
             .enter().append("path")
             .attr("d", path)
             .attr("class", d => {
-              const launchInfo = launchData.get(d.id); // The world-atlas uses ISO 3166-1 numeric codes in 'id'
-              // Fallback to name if ID fails, though ID is more reliable
-              return launchInfo || launchData.get(d.properties.name) ? "country launched-country" : "country";
+              const launchInfo = launchData.get(d.id) || launchData.get(d.properties.name);
+              return launchInfo ? "country launched-country" : "country";
             })
             .attr("aria-label", d => d.properties.name)
             .on("mouseover", function(event, d) {

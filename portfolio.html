@@ -13,14 +13,14 @@
     <meta property="og:description" content="Explore enterprise-scale projects in cloud transformation, AI solutions, and more.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://r2k8.com/portfolio.html">
-    <meta property="og:image" content="profile.jpg"> 
+    <meta property="og:image" content="profile.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Portfolio & Projects - Rama Krishna Sripathi">
     <meta name="twitter:description" content="Explore enterprise-scale projects in cloud transformation, AI solutions, and more.">
-    <meta name="twitter:image" content="profile.jpg"> 
+    <meta name="twitter:image" content="profile.jpg">
     <link rel="canonical" href="https://r2k8.com/portfolio.html">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
@@ -59,7 +59,7 @@
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
             </label>
-            <nav class="mobile-nav"> 
+            <nav class="mobile-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Me</a></li>
@@ -73,7 +73,7 @@
     </header>
 
     <main>
-        <section class="hero-banner"> 
+        <section class="hero-banner">
             <div class="container">
                 <h1>Portfolio & Projects</h1>
                 <p class="hero-subtitle">A showcase of enterprise-scale projects and innovative solutions I've led and delivered.</p>
@@ -85,8 +85,8 @@
                 <h2>Featured Projects</h2>
                 <p>Major initiatives I've led as a Technical Program Manager.</p>
                 <div class="card-container">
-                    <div class="card project-card"> 
-                        <img src="assets/images/portfolio-project-1.jpg" alt="Enterprise Cloud Migration Platform" class="project-image"> 
+                    <div class="card project-card">
+                        <img src="assets/images/portfolio-project-1.jpg" alt="Enterprise Cloud Migration Platform" class="project-image">
                         <div class="project-content-wrapper">
                             <h3>Enterprise Cloud Migration Platform</h3>
                             <p class="project-tag"><em>Category: Enterprise Project</em></p>
@@ -168,7 +168,7 @@
             <div class="container">
                 <h2>Technology Expertise</h2>
                 <p>A selection of technologies and platforms I work with regularly.</p>
-                <div class="competencies-grid"> 
+                <div class="competencies-grid">
                     <span class="competency-tag">React</span>
                     <span class="competency-tag">TypeScript</span>
                     <span class="competency-tag">Node.js</span>
@@ -217,7 +217,7 @@
             <div class="container">
                 <h2>Global Product Launches</h2>
                 <p>An interactive map showcasing the 24 countries where I helped launch Microsoft Teams & Sovereign Cloud solutions.</p>
-        
+
                 <style>
                     #map-container-interactive {
                         position: relative;
@@ -241,31 +241,33 @@
                         transition: fill 0.3s ease;
                     }
                     #map-container-interactive .launched-country {
+                        /* Initial launched color - will be overridden by unique colors */
                         fill: var(--accent-blue);
-                    }
-                    #map-container-interactive .country:hover, 
-                    #map-container-interactive .launched-country:hover {
-                        fill: var(--primary-green);
                         cursor: pointer;
+                        transition: fill 0.2s ease;
                     }
-                    #map-tooltip-interactive {
+                    #map-container-interactive .country:hover {
+                        fill: #525252; /* Darker grey for unlaunched hover */
+                        cursor: default;
+                    }
+                    #map-popup-container {
                         position: absolute;
-                        background-color: rgba(2, 6, 23, 0.9);
+                        pointer-events: none;
+                        z-index: 10;
+                    }
+                    .map-popup {
+                        background-color: rgba(2, 6, 23, 0.95);
                         color: var(--text-white);
                         padding: 10px 15px;
                         border-radius: 5px;
                         font-family: 'Inter', sans-serif;
                         font-size: 14px;
-                        pointer-events: none;
-                        opacity: 0;
-                        transform: translate(-50%, -120%);
-                        transition: opacity 0.2s ease, transform 0.2s ease;
                         white-space: nowrap;
                         border: 1px solid var(--card-border-v2);
-                        backdrop-filter: blur(4px);
-                        z-index: 10;
+                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+                        backdrop-filter: blur(5px);
                     }
-                    #map-tooltip-interactive strong {
+                    .map-popup strong {
                         font-size: 16px;
                         display: block;
                         margin-bottom: 4px;
@@ -282,100 +284,107 @@
                         font-size: 12px;
                         border: 1px solid var(--card-border-v2);
                     }
-                    #map-legend-interactive .legend-item { display: flex; align-items: center; }
-                    #map-legend-interactive .legend-item:first-child { margin-bottom: 5px; }
+                    #map-legend-interactive .legend-item { display: flex; align-items: center; margin-bottom: 5px; }
+                    #map-legend-interactive .legend-item:last-child { margin-bottom: 0; }
                     #map-legend-interactive .legend-color { width: 15px; height: 15px; margin-right: 8px; border: 1px solid #475569; }
                 </style>
-        
+
                 <div id="map-container-interactive">
                     <div id="map-legend-interactive">
                         <div class="legend-item">
-                            <div class="legend-color" style="background-color: var(--accent-blue);"></div>
-                            <span>Launched Region</span>
+                            <div class="legend-color" style="background-color: var(--accent-blue); border: none;"></div>
+                            <span>Launched Region (Hover for Info)</span>
                         </div>
                         <div class="legend-item">
                             <div class="legend-color" style="background-color: #334155;"></div>
                             <span>Other</span>
                         </div>
                     </div>
-                    <div id="map-tooltip-interactive"></div>
+                    <div id="map-popup-container"></div>
                 </div>
-        
+
                 <script src="https://d3js.org/d3.v7.min.js"></script>
                 <script src="https://d3js.org/topojson.v3.min.js"></script>
-                
+
                 <script>
                   document.addEventListener('DOMContentLoaded', function() {
-                    // Set of country names for fast lookup to check IF a country is launched
-                    const launchedCountriesSet = new Set([
-                      'United Kingdom', 'India', 'Canada', 'Australia', 'Japan', 'France',
-                      'South Korea', 'South Africa', 'United Arab Emirates', 'Switzerland',
-                      'Germany', 'Norway', 'Singapore', 'Brazil', 'Sweden', 'Qatar',
-                      'Poland', 'Italy', 'Israel', 'Mexico', 'Spain', 'Taiwan',
-                      'New Zealand', 'China'
-                    ]);
+                    const launchedCountries = [
+                      { name: 'United Kingdom', detail: 'Launched Q4 2017', color: '#a8dadc' },
+                      { name: 'India', detail: 'Launched Q1 2018', color: '#457b9d' },
+                      { name: 'Canada', detail: 'Launched Q3 2018', color: '#1d3557' },
+                      { name: 'Australia', detail: 'Launched Q3 2018', color: '#e63946' },
+                      { name: 'Japan', detail: 'Launched Q3 2018', color: '#f1faee' },
+                      { name: 'France', detail: 'GDPR-compliant rollout Q1 2019', color: '#a8dadc' },
+                      { name: 'South Korea', detail: 'Launched Q3 2019', color: '#457b9d' },
+                      { name: 'South Africa', detail: 'Launched Q3 2019', color: '#1d3557' },
+                      { name: 'United Arab Emirates', detail: 'Launched Q4 2019', color: '#e63946' },
+                      { name: 'Switzerland', detail: 'Launched Q4 2019', color: '#f1faee' },
+                      { name: 'Germany', detail: 'Launched Q4 2019', color: '#a8dadc' },
+                      { name: 'Norway', detail: 'Launched Q2 2020', color: '#457b9d' },
+                      { name: 'Singapore', detail: 'Launched Q2 2020', color: '#1d3557' },
+                      { name: 'Brazil', detail: 'Launched Q4 2020', color: '#e63946' },
+                      { name: 'Sweden', detail: 'Launched Q4 2021', color: '#f1faee' },
+                      { name: 'Qatar', detail: 'Launched Q3 2022', color: '#a8dadc' },
+                      { name: 'Poland', detail: 'Launched Q2 2023', color: '#457b9d' },
+                      { name: 'Italy', detail: 'Launched Q3 2023', color: '#1d3557' },
+                      { name: 'Israel', detail: 'Launched Q4 2023', color: '#e63946' },
+                      { name: 'Mexico', detail: 'Launched Q2 2024', color: '#f1faee' },
+                      { name: 'Spain', detail: 'Launched Q2 2024', color: '#a8dadc' },
+                      { name: 'Taiwan', detail: 'Launched Q4 2024', color: '#457b9d' },
+                      { name: 'New Zealand', detail: 'Launched Q4 2024', color: '#1d3557' },
+                      { name: 'China', detail: 'Gallatin Sovereign Cloud', color: '#e63946' }
+                    ];
+                    const launchedCountriesSet = new Set(launchedCountries.map(c => c.name));
+                    const launchDetailsMap = new Map(launchedCountries.map(c => [c.name, { detail: c.detail, color: c.color }]));
 
-                    // Map of country names to their specific launch details for the tooltip
-                    const launchDetails = new Map([
-                      ['United Kingdom', { detail: 'Launched Q4 2017' }],
-                      ['India', { detail: 'Launched Q1 2018' }],
-                      ['Canada', { detail: 'Launched Q3 2018' }],
-                      ['Australia', { detail: 'Launched Q3 2018' }],
-                      ['Japan', { detail: 'Launched Q3 2018' }],
-                      ['France', { detail: 'GDPR-compliant rollout Q1 2019' }],
-                      ['South Korea', { detail: 'Launched Q3 2019' }],
-                      ['South Africa', { detail: 'Launched Q3 2019' }],
-                      ['United Arab Emirates', { detail: 'Launched Q4 2019' }],
-                      ['Switzerland', { detail: 'Launched Q4 2019' }],
-                      ['Germany', { detail: 'Launched Q4 2019' }],
-                      ['Norway', { detail: 'Launched Q2 2020' }],
-                      ['Singapore', { detail: 'Launched Q2 2020' }],
-                      ['Brazil', { detail: 'Launched Q4 2020' }],
-                      ['Sweden', { detail: 'Launched Q4 2021' }],
-                      ['Qatar', { detail: 'Launched Q3 2022' }],
-                      ['Poland', { detail: 'Launched Q2 2023' }],
-                      ['Italy', { detail: 'Launched Q3 2023' }],
-                      ['Israel', { detail: 'Launched Q4 2023' }],
-                      ['Mexico', { detail: 'Launched Q2 2024' }],
-                      ['Spain', { detail: 'Launched Q2 2024' }],
-                      ['Taiwan', { detail: 'Launched Q4 2024' }],
-                      ['New Zealand', { detail: 'Launched Q4 2024' }],
-                      ['China', { detail: 'Gallatin Sovereign Cloud' }]
-                    ]);
-        
                     const container = d3.select("#map-container-interactive");
-                    const tooltip = d3.select("#map-tooltip-interactive");
+                    const popupContainer = d3.select("#map-popup-container");
                     const svg = container.append("svg").attr("viewBox", "0 0 960 500");
                     const path = d3.geoPath(d3.geoMercator().scale(130).translate([450, 290]));
                     const g = svg.append("g");
-        
+
                     const zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", (event) => {
                       g.attr("transform", event.transform);
                     });
                     svg.call(zoom);
-        
+
                     d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
                       const countries = topojson.feature(world, world.objects.countries);
-                      
+
                       g.selectAll(".country")
                         .data(countries.features)
                         .enter().append("path")
                         .attr("d", path)
                         .attr("class", d => launchedCountriesSet.has(d.properties.name) ? "country launched-country" : "country")
+                        .style("fill", d => {
+                          const details = launchDetailsMap.get(d.properties.name);
+                          return details ? details.color : null;
+                        })
                         .on("mouseover", function(event, d) {
                           if (launchedCountriesSet.has(d.properties.name)) {
-                            const launchInfo = launchDetails.get(d.properties.name);
+                            const launchInfo = launchDetailsMap.get(d.properties.name);
                             d3.select(this).raise();
-                            tooltip.transition().duration(200).style("opacity", 1);
-                            tooltip.html(`<strong>${d.properties.name}</strong>${launchInfo.detail}`);
+                            const [x, y] = d3.pointer(event, container.node());
+                            const popup = popupContainer.append("div")
+                              .attr("class", "map-popup")
+                              .style("left", `${x + 10}px`)
+                              .style("top", `${y + 10}px`)
+                              .html(`<strong>${d.properties.name}</strong>${launchInfo.detail}`);
                           }
                         })
                         .on("mousemove", function(event) {
-                          const [x, y] = d3.pointer(event, container.node());
-                          tooltip.style("left", `${x}px`).style("top", `${y}px`);
+                          const popup = popupContainer.select(".map-popup");
+                          if (!popup.empty()) {
+                            const [x, y] = d3.pointer(event, container.node());
+                            popup.style("left", `${x + 10}px`).style("top", `${y + 10}px`);
+                          }
                         })
-                        .on("mouseout", function() {
-                          tooltip.transition().duration(500).style("opacity", 0);
+                        .on("mouseout", function(event, d) {
+                          popupContainer.selectAll(".map-popup").remove();
+                          d3.select(this).style("fill", d => {
+                            const details = launchDetailsMap.get(d.properties.name);
+                            return details ? details.color : "#334155"; // Revert to unique color
+                          });
                         });
                     });
                   });
@@ -386,7 +395,7 @@
             <div class="container">
                 <h2>Professional References & Detailed Case Studies</h2>
                 <p style="max-width: 700px; margin: 20px auto 30px auto;">Due to the nature of enterprise projects and confidentiality agreements, detailed case studies and specific client references are available upon request.</p>
-                <div class="hero-buttons"> 
+                <div class="hero-buttons">
                     <a href="contact.html" class="btn btn-primary">Request Information</a>
                     <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View LinkedIn Profile</a>
                 </div>
@@ -433,7 +442,7 @@
 
         // JavaScript for ARIA attribute on CSS-only checkbox menu
         const menuToggleCheckbox = document.getElementById('menu-toggle');
-        const hamburgerLabel = document.querySelector('.hamburger-label'); 
+        const hamburgerLabel = document.querySelector('.hamburger-label');
         if (menuToggleCheckbox && hamburgerLabel) {
             menuToggleCheckbox.addEventListener('change', function() {
                 hamburgerLabel.setAttribute('aria-expanded', this.checked.toString());
@@ -448,15 +457,15 @@
 
     <script>
       // First Visit Pop-up Script
-      document.addEventListener('DOMContentLoaded', function() { 
+      document.addEventListener('DOMContentLoaded', function() {
         const popupOverlay = document.getElementById('firstVisitPopup');
         const closeButton = document.getElementById('closePopupButton');
-        const visitedFlagKey = 'r2k8SiteVisited_v2.0'; 
+        const visitedFlagKey = 'r2k8SiteVisited_v2.0';
 
         if (popupOverlay && !localStorage.getItem(visitedFlagKey)) {
           setTimeout(() => {
-            popupOverlay.style.display = 'flex'; 
-            setTimeout(() => { popupOverlay.classList.add('active'); }, 10); 
+            popupOverlay.style.display = 'flex';
+            setTimeout(() => { popupOverlay.classList.add('active'); }, 10);
           }, 1500);
           localStorage.setItem(visitedFlagKey, 'true');
         }
@@ -464,9 +473,9 @@
         function closePopup() {
           if (popupOverlay) {
             popupOverlay.classList.remove('active');
-            setTimeout(() => { 
+            setTimeout(() => {
                 if (!popupOverlay.classList.contains('active')) {
-                    popupOverlay.style.display = 'none'; 
+                    popupOverlay.style.display = 'none';
                 }
             }, 300);
           }
@@ -484,6 +493,6 @@
         }
       });
     </script>
-     
+
 </body>
 </html>

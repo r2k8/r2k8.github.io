@@ -103,6 +103,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="card project-card">
                         <img src="assets/images/portfolio-project-2.jpg" alt="AI-Powered Analytics Dashboard" class="project-image">
                         <div class="project-content-wrapper">
@@ -121,6 +122,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="card project-card">
                         <img src="assets/images/portfolio-project-3.jpg" alt="Secure Financial Services Platform" class="project-image">
                         <div class="project-content-wrapper">
@@ -139,6 +141,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="card project-card">
                         <img src="assets/images/portfolio-project-4.jpg" alt="Mobile-First E-Commerce Solution" class="project-image">
                         <div class="project-content-wrapper">
@@ -209,33 +212,167 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="global-launches" class="bg-light-v2">
             <div class="container">
                 <h2>Global Product Launches</h2>
-                <p>A map showcasing the 24 countries where I helped launch Microsoft Teams & Sovereign Cloud solutions.</p>
-                <div id="static-map-container">
-                    <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100%" height="100%" fill="transparent"/>
-                        <g id="map-paths">
-                            <path class="country-path country-path-default" d="M..."/>
-                            
-                            <path class="country-path country-path-launched" d="M425.6,101.9l-2.4-1.2..."/>
-                            <text x="430" y="108" class="country-label country-label-small">Q4 '17</text>
-                            
-                            <path class="country-path country-path-launched" d="M634.5,183.1l-1.3-1.6..."/>
-                            <text x="645" y="195" class="country-label">Gallatin</text>
-                            
-                            <path class="country-path country-path-launched" d="M281.3,313.3l0.6-2.5..."/>
-                            <text x="290" y="325" class="country-label">Q4 '20</text>
-                             
-                            <text x="400" y="20" fill="var(--text-gray)" font-size="8">NOTE: This is a static, illustrative map. Full SVG code would be generated.</text>
-                        </g>
-                    </svg>
+                <p>An interactive map showcasing the 24 countries where I helped launch Microsoft Teams & Sovereign Cloud solutions.</p>
+        
+                <style>
+                    #map-container-interactive {
+                        position: relative;
+                        width: 100%;
+                        margin: 2rem 0;
+                        background-color: #020617;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        border: 1px solid var(--card-border-v2);
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                    }
+                    #map-container-interactive svg {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                    }
+                    #map-container-interactive .country {
+                        fill: #334155;
+                        stroke: #0F172A;
+                        stroke-width: 0.5px;
+                        transition: fill 0.3s ease;
+                    }
+                    #map-container-interactive .launched-country {
+                        fill: var(--accent-blue);
+                    }
+                    #map-container-interactive .country:hover, 
+                    #map-container-interactive .launched-country:hover {
+                        fill: var(--primary-green);
+                        cursor: pointer;
+                    }
+                    #map-tooltip-interactive {
+                        position: absolute;
+                        background-color: rgba(2, 6, 23, 0.9);
+                        color: var(--text-white);
+                        padding: 10px 15px;
+                        border-radius: 5px;
+                        font-family: 'Inter', sans-serif;
+                        font-size: 14px;
+                        pointer-events: none;
+                        opacity: 0;
+                        transform: translate(-50%, -120%);
+                        transition: opacity 0.2s ease, transform 0.2s ease;
+                        white-space: nowrap;
+                        border: 1px solid var(--card-border-v2);
+                        backdrop-filter: blur(4px);
+                        z-index: 10;
+                    }
+                    #map-tooltip-interactive strong {
+                        font-size: 16px;
+                        display: block;
+                        margin-bottom: 4px;
+                        color: var(--primary-green);
+                    }
+                    #map-legend-interactive {
+                        position: absolute;
+                        bottom: 20px;
+                        left: 20px;
+                        background: rgba(15, 23, 42, 0.8);
+                        padding: 10px 15px;
+                        border-radius: 5px;
+                        font-family: 'Inter', sans-serif;
+                        font-size: 12px;
+                        border: 1px solid var(--card-border-v2);
+                    }
+                    #map-legend-interactive .legend-item { display: flex; align-items: center; }
+                    #map-legend-interactive .legend-item:first-child { margin-bottom: 5px; }
+                    #map-legend-interactive .legend-color { width: 15px; height: 15px; margin-right: 8px; border: 1px solid #475569; }
+                </style>
+        
+                <div id="map-container-interactive">
+                    <div id="map-legend-interactive">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: var(--accent-blue);"></div>
+                            <span>Launched Region</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #334155;"></div>
+                            <span>Other</span>
+                        </div>
+                    </div>
+                    <div id="map-tooltip-interactive"></div>
                 </div>
+        
+                <script src="https://d3js.org/d3.v7.min.js"></script>
+                <script src="https://d3js.org/topojson.v3.min.js"></script>
+                
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                    const launchData = new Map([
+                      ['GBR', { name: 'United Kingdom', detail: 'Launched Q4 2017' }],
+                      ['IND', { name: 'India', detail: 'Launched Q1 2018' }],
+                      ['CAN', { name: 'Canada', detail: 'Launched Q3 2018' }],
+                      ['AUS', { name: 'Australia', detail: 'Launched Q3 2018' }],
+                      ['JPN', { name: 'Japan', detail: 'Launched Q3 2018' }],
+                      ['FRA', { name: 'France', detail: 'GDPR-compliant rollout Q1 2019' }],
+                      ['KOR', { name: 'South Korea', detail: 'Launched Q3 2019' }],
+                      ['ZAF', { name: 'South Africa', detail: 'Launched Q3 2019' }],
+                      ['ARE', { name: 'United Arab Emirates', detail: 'Launched Q4 2019' }],
+                      ['CHE', { name: 'Switzerland', detail: 'Launched Q4 2019' }],
+                      ['DEU', { name: 'Germany', detail: 'Launched Q4 2019' }],
+                      ['NOR', { name: 'Norway', detail: 'Launched Q2 2020' }],
+                      ['SGP', { name: 'Singapore', detail: 'Launched Q2 2020' }],
+                      ['BRA', { name: 'Brazil', detail: 'Launched Q4 2020' }],
+                      ['SWE', { name: 'Sweden', detail: 'Launched Q4 2021' }],
+                      ['QAT', { name: 'Qatar', detail: 'Launched Q3 2022' }],
+                      ['POL', { name: 'Poland', detail: 'Launched Q2 2023' }],
+                      ['ITA', { name: 'Italy', detail: 'Launched Q3 2023' }],
+                      ['ISR', { name: 'Israel', detail: 'Launched Q4 2023' }],
+                      ['MEX', { name: 'Mexico', detail: 'Launched Q2 2024' }],
+                      ['ESP', { name: 'Spain', detail: 'Launched Q2 2024' }],
+                      ['TWN', { name: 'Taiwan', detail: 'Launched Q4 2024' }],
+                      ['NZL', { name: 'New Zealand', detail: 'Launched Q4 2024' }],
+                      ['CHN', { name: 'China', detail: 'Gallatin Sovereign Cloud' }]
+                    ]);
+        
+                    const container = d3.select("#map-container-interactive");
+                    const tooltip = d3.select("#map-tooltip-interactive");
+                    const svg = container.append("svg").attr("viewBox", "0 0 960 500");
+                    const path = d3.geoPath(d3.geoMercator().scale(130).translate([450, 290]));
+                    const g = svg.append("g");
+        
+                    const zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", (event) => {
+                      g.attr("transform", event.transform);
+                    });
+                    svg.call(zoom);
+        
+                    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
+                      const countries = topojson.feature(world, world.objects.countries);
+                      
+                      g.selectAll(".country")
+                        .data(countries.features)
+                        .enter().append("path")
+                        .attr("d", path)
+                        .attr("class", d => launchData.has(d.id) ? "country launched-country" : "country")
+                        .on("mouseover", function(event, d) {
+                          const launchInfo = launchData.get(d.id);
+                          if (launchInfo) {
+                            d3.select(this).raise();
+                            tooltip.transition().duration(200).style("opacity", 1);
+                            tooltip.html(`<strong>${launchInfo.name}</strong>${launchInfo.detail}`);
+                          }
+                        })
+                        .on("mousemove", function(event) {
+                          const [x, y] = d3.pointer(event, container.node());
+                          tooltip.style("left", `${x}px`).style("top", `${y}px`);
+                        })
+                        .on("mouseout", function() {
+                          tooltip.transition().duration(500).style("opacity", 0);
+                        });
+                    });
+                  });
+                </script>
             </div>
         </section>
-        <section id="references">
+        <section id="references" class="bg-light-v2">
             <div class="container">
                 <h2>Professional References & Detailed Case Studies</h2>
                 <p style="max-width: 700px; margin: 20px auto 30px auto;">Due to the nature of enterprise projects and confidentiality agreements, detailed case studies and specific client references are available upon request.</p>
@@ -279,7 +416,7 @@
             <p style="font-size: 0.9em; margin-top: 15px; color: var(--text-gray);">Phone: +1 425 243 3166</p>
         </div>
     </div>
-    
+
     <script>
         // Copyright Year
         document.getElementById('currentYear').textContent = new Date().getFullYear();

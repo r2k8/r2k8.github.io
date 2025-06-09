@@ -164,14 +164,12 @@ section.hero-homepage {
 /* === START: Updated Hero Text Styles === */
 .hero-homepage .hero-text {
     margin-bottom: 40px;
-    text-align: left; /* Aligns text to the left within the block */
+    text-align: center; /* Set to center to align all content */
     position: relative;
-    padding-right: 45px;
-    border-right: 1.5px solid rgba(169, 143, 120, 0.6);
 }
 
 .hero-homepage .hero-title {
-    font-size: clamp(2.8rem, 7vw, 4.5rem); /* Slightly reduced max size for new layout */
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
     font-weight: 500;
     line-height: 1.1;
     margin-bottom: 25px;
@@ -181,7 +179,6 @@ section.hero-homepage {
 
 .hero-homepage .highlight {
     color: var(--primary-green);
-    /* display: block; removed to keep title on one line */
 }
 
 .hero-intro-block {
@@ -198,7 +195,7 @@ section.hero-homepage {
     color: #fdfaf7;
     padding: 9px 22px;
     border-radius: 25px;
-    font-size: 0.95rem; /* Increased size slightly */
+    font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -208,7 +205,8 @@ section.hero-homepage {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px 15px; /* Vertical and horizontal gap */
+    justify-content: center; /* Ensure icons/links are centered */
+    gap: 8px 15px;
     font-family: 'Open Sans', sans-serif;
     color: var(--primary-green);
 }
@@ -248,16 +246,14 @@ section.hero-homepage {
     font-size: clamp(1rem, 2.2vw, 1.25rem);
     color: var(--text-gray);
     max-width: 650px;
-    /* margin: 0 auto 35px; Changed to non-centered */
-    margin: 0 0 35px 0;
+    margin: 0 auto 35px; /* Centered with margin auto */
     line-height: 1.7;
 }
 
 .hero-homepage .hero-buttons {
     display: flex;
     gap: 20px;
-    /* justify-content: center; Changed to non-centered */
-    justify-content: flex-start;
+    justify-content: center; /* Centered buttons */
     margin-bottom: 60px;
 }
 /* === END: Updated Hero Text Styles === */
@@ -275,25 +271,9 @@ section.hero-homepage {
 @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: rotate(45deg) translateY(0); } 40% { transform: rotate(45deg) translateY(-10px); } 60% { transform: rotate(45deg) translateY(-5px); } }
 
 @media (max-width: 768px) {
-    .hero-homepage .hero-text {
-        border-right: none;
-        padding-right: 0;
-        text-align: center; /* Center all text on mobile */
-    }
-    .hero-homepage .hero-subtitle {
-        margin-left: auto;
-        margin-right: auto;
-    }
     .hero-homepage .hero-buttons {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-    }
-    .icon-contact {
-        justify-content: center;
-        font-size: 0.85rem;
-        line-height: 1.6;
-        gap: 12px;
     }
     .icon-contact .contact-separator {
         display: none;

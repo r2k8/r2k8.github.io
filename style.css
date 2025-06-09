@@ -259,8 +259,6 @@ section:not(.hero-homepage):not(.hero-banner) > .container > p:first-of-type { f
 }
 
 /* ... (Rest of styles: Achievements, Articles, Certs, About, Contact, Pop-up, Footer...) ... */
-/* NOTE: The styles below are from the previous complete CSS I provided and should be included. */
-
 #achievements .card .icon { font-size: 1.8rem; margin-bottom: 10px; color: var(--primary-green); display:block; text-align: center;} 
 #achievements .card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--text-white); } 
 #achievements .card p { font-size: 0.9rem; line-height: 1.5; margin-bottom: 0; }
@@ -373,93 +371,43 @@ footer.main-footer p { margin: 0 0 10px 0; color: var(--text-gray); font-size: 0
 footer.main-footer .social-links a { color: var(--text-gray); margin: 0 10px; text-decoration: none; font-size: 1rem; }
 footer.main-footer .social-links a:hover { color: var(--primary-green); }
 
-/* --- NEW: Interactive Map Styles --- */
-#map-container {
-  position: relative;
+/* --- Styles for Static Annotated Map --- */
+#static-map-container {
   width: 100%;
   margin: 2rem 0;
-  background-color: #020617; /* Match dark background */
+  padding: 20px;
+  background-color: var(--background-darker);
   border-radius: 8px;
-  overflow: hidden;
   border: 1px solid var(--card-border-v2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-#map-container svg {
+#static-map-container svg {
   width: 100%;
   height: auto;
-  display: block;
 }
 
-/* Country styles */
-.country {
-  fill: #334155; /* Darker grey for other countries */
-  stroke: #0F172A; /* Match main background for borders */
-  stroke-width: 0.5px;
-  transition: fill 0.3s ease;
+#static-map-container .country-path {
+  stroke: var(--background-dark);
+  stroke-width: 0.5;
 }
 
-.launched-country {
-  fill: var(--accent-blue); /* Use theme's accent blue */
+#static-map-container .country-path-default {
+  fill: #334155; /* Dark grey for non-launched countries */
 }
 
-.country:hover, .launched-country:hover {
-  fill: var(--primary-green); /* Use theme's primary green for hover */
-  cursor: pointer;
+#static-map-container .country-path-launched {
+  fill: var(--accent-blue); /* Highlight color for launched countries */
 }
 
-/* Tooltip styles */
-#map-tooltip {
-  position: absolute;
-  background-color: rgba(2, 6, 23, 0.9); /* --background-darker */
-  color: var(--text-white);
-  padding: 10px 15px;
-  border-radius: 5px;
+#static-map-container .country-label {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 6px; /* Adjust size as needed */
+  fill: var(--text-white);
+  text-anchor: middle;
   pointer-events: none;
-  opacity: 0;
-  transform: translate(-50%, -120%);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  white-space: nowrap;
-  border: 1px solid var(--card-border-v2);
-  backdrop-filter: blur(4px);
+  font-weight: 500;
 }
-
-#map-tooltip strong {
-  font-size: 16px;
-  display: block;
-  margin-bottom: 4px;
-  color: var(--primary-green); /* Use theme's green for emphasis */
-}
-
-/* Legend styles */
-#map-legend {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(15, 23, 42, 0.8); /* --background-dark */
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  border: 1px solid var(--card-border-v2);
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.legend-item:last-child {
-  margin-bottom: 0;
-}
-
-.legend-color {
-  width: 15px;
-  height: 15px;
-  margin-right: 8px;
-  border: 1px solid #475569; /* A slightly lighter border */
+#static-map-container .country-label-small {
+  font-size: 5px; /* Even smaller for tiny countries */
 }

@@ -103,7 +103,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card project-card">
                         <img src="assets/images/portfolio-project-2.jpg" alt="AI-Powered Analytics Dashboard" class="project-image">
                         <div class="project-content-wrapper">
@@ -122,7 +121,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card project-card">
                         <img src="assets/images/portfolio-project-3.jpg" alt="Secure Financial Services Platform" class="project-image">
                         <div class="project-content-wrapper">
@@ -141,7 +139,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card project-card">
                         <img src="assets/images/portfolio-project-4.jpg" alt="Mobile-First E-Commerce Solution" class="project-image">
                         <div class="project-content-wrapper">
@@ -216,9 +213,15 @@
         <section id="global-launches" class="bg-light-v2">
             <div class="container">
                 <h2>Global Product Launches</h2>
-                <p>An interactive map showcasing the 24 countries where I helped launch Microsoft Teams & Sovereign Cloud solutions.</p>
+                <p class="map-subtitle">An interactive map showcasing the 24 countries where I helped launch Microsoft Teams & Sovereign Cloud solutions.</p>
 
                 <style>
+                    .map-subtitle {
+                        text-align: center;
+                        max-width: 600px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
                     #map-container-interactive {
                         position: relative;
                         width: 100%;
@@ -251,11 +254,11 @@
                         font-family: 'Inter', sans-serif;
                         fill: white;
                         text-anchor: middle;
-                        font-size: 7px;
+                        font-size: 9px;
                         font-weight: 600;
                         paint-order: stroke;
                         stroke: #000;
-                        stroke-width: 2px;
+                        stroke-width: 2.5px;
                         stroke-linecap: butt;
                         stroke-linejoin: miter;
                         pointer-events: none;
@@ -309,29 +312,29 @@
                 <script>
                   document.addEventListener('DOMContentLoaded', function() {
                     const launchedCountries = [
-                      { name: 'United Kingdom', label: "Q4 '17", detail: 'Launched Q4 2017', color: '#5fad56' },
-                      { name: 'India', label: "Q1 '18", detail: 'Launched Q1 2018', color: '#f2c14e' },
+                      { name: 'United Kingdom', label: "Q4 '17", detail: 'Launched Q4 2017', color: '#6a994e' },
+                      { name: 'India', label: "Q1 '18", detail: 'Launched Q1 2018', color: '#a3bf4a' },
                       { name: 'Canada', label: "Q3 '18", detail: 'Launched Q3 2018', color: '#f78154' },
-                      { name: 'Australia', label: "Q3 '18", detail: 'Launched Q3 2018', color: '#4d9078' },
-                      { name: 'Japan', label: "Q3 '18", detail: 'Launched Q3 2018', color: '#b4436c' },
-                      { name: 'France', label: "Q1 '19", detail: 'GDPR-compliant rollout Q1 2019', color: '#2a9d8f' },
-                      { name: 'South Korea', label: "Q3 '19", detail: 'Launched Q3 2019', color: '#e9c46a' },
-                      { name: 'South Africa', label: "Q3 '19", detail: 'Launched Q3 2019', color: '#f4a261' },
-                      { name: 'United Arab Emirates', label: "Q4 '19", detail: 'Launched Q4 2019', color: '#e76f51' },
-                      { name: 'Switzerland', label: "", detail: 'Launched Q4 2019', color: '#a01a58' },
-                      { name: 'Germany', label: "Q4 '19", detail: 'Launched Q4 2019', color: '#588157' },
-                      { name: 'Norway', label: "Q2 '20", detail: 'Launched Q2 2020', color: '#3a5a40' },
-                      { name: 'Singapore', label: "", detail: 'Launched Q2 2020', color: '#344e41' },
-                      { name: 'Brazil', label: "Q4 '20", detail: 'Launched Q4 2020', color: '#f7b267' },
-                      { name: 'Sweden', label: "Q4 '21", detail: 'Launched Q4 2021', color: '#f79d65' },
-                      { name: 'Qatar', label: "", detail: 'Launched Q3 2022', color: '#f4845f' },
-                      { name: 'Poland', label: "Q2 '23", detail: 'Launched Q2 2023', color: '#f27052' },
-                      { name: 'Italy', label: "Q3 '23", detail: 'Launched Q3 2023', color: '#7f5539' },
-                      { name: 'Israel', label: "", detail: 'Launched Q4 2023', color: '#9c6644' },
-                      { name: 'Mexico', label: "Q2 '24", detail: 'Launched Q2 2024', color: '#b07d62' },
-                      { name: 'Spain', label: "Q2 '24", detail: 'Launched Q2 2024', color: '#ddb892' },
-                      { name: 'Taiwan', label: "", detail: 'Launched Q4 2024', color: '#7f5539' },
-                      { name: 'New Zealand', label: "Q4 '24", detail: 'Launched Q4 2024', color: '#c2c5aa' },
+                      { name: 'Australia', label: "Q3 '18", detail: 'Launched Q3 2018', color: '#bc4749' },
+                      { name: 'Japan', label: "Q3 '18", detail: 'Launched Q3 2018', color: '#d88c9a' },
+                      { name: 'France', label: "Q1 '19", detail: 'GDPR-compliant rollout Q1 2019', color: '#669bbc' },
+                      { name: 'South Korea', label: "Q3 '19", detail: 'Launched Q3 2019', color: '#0077b6' },
+                      { name: 'South Africa', label: "Q3 '19", detail: 'Launched Q3 2019', color: '#f7b267' },
+                      { name: 'United Arab Emirates', label: "Q4 '19", detail: 'Launched Q4 2019', color: '#f4a261' },
+                      { name: 'Switzerland', label: "", detail: 'Launched Q4 2019', color: '#90e0ef' },
+                      { name: 'Germany', label: "Q4 '19", detail: 'Launched Q4 2019', color: '#4895ef' },
+                      { name: 'Norway', label: "Q2 '20", detail: 'Launched Q2 2020', color: '#4361ee' },
+                      { name: 'Singapore', label: "", detail: 'Launched Q2 2020', color: '#7b2cbf' },
+                      { name: 'Brazil', label: "Q4 '20", detail: 'Launched Q4 2020', color: '#f72585' },
+                      { name: 'Sweden', label: "Q4 '21", detail: 'Launched Q4 2021', color: '#00b4d8' },
+                      { name: 'Qatar', label: "", detail: 'Launched Q3 2022', color: '#f27052' },
+                      { name: 'Poland', label: "Q2 '23", detail: 'Launched Q2 2023', color: '#4cc9f0' },
+                      { name: 'Italy', label: "Q3 '23", detail: 'Launched Q3 2023', color: '#3f37c9' },
+                      { name: 'Israel', label: "", detail: 'Launched Q4 2023', color: '#480ca8' },
+                      { name: 'Mexico', label: "Q2 '24", detail: 'Launched Q2 2024', color: '#c1121f' },
+                      { name: 'Spain', label: "Q2 '24", detail: 'Launched Q2 2024', color: '#780000' },
+                      { name: 'Taiwan', label: "", detail: 'Launched Q4 2024', color: '#5e6472' },
+                      { name: 'New Zealand', label: "Q4 '24", detail: 'Launched Q4 2024', color: '#6da34d' },
                       { name: 'China', label: 'Gallatin', detail: 'Gallatin Sovereign Cloud', color: '#e63946' }
                     ];
 
@@ -367,7 +370,7 @@
                               .attr("class", "map-popup")
                               .style("left", `${x}px`)
                               .style("top", `${y}px`)
-                              .html(`<strong>${d.properties.name}</strong>${launchInfo.detail}`);
+                              .html(`<strong>${d.properties.name}</strong><br>${launchInfo.detail}`);
                           }
                         })
                         .on("mousemove", function(event) {

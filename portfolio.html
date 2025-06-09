@@ -103,7 +103,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card project-card">
                         <img src="assets/images/portfolio-project-2.jpg" alt="AI-Powered Analytics Dashboard" class="project-image">
                         <div class="project-content-wrapper">
@@ -122,7 +121,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card project-card">
                         <img src="assets/images/portfolio-project-3.jpg" alt="Secure Financial Services Platform" class="project-image">
                         <div class="project-content-wrapper">
@@ -141,7 +139,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="card project-card">
                         <img src="assets/images/portfolio-project-4.jpg" alt="Mobile-First E-Commerce Solution" class="project-image">
                         <div class="project-content-wrapper">
@@ -212,24 +209,29 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="global-launches" class="bg-light-v2">
             <div class="container">
                 <h2>Global Product Launches</h2>
-                <p>An interactive map showcasing the 23 countries where I helped launch Microsoft Teams.</p>
-                
-                <div id="map-container">
-                  <div id="map-legend">
-                    <div class="legend-item">
-                      <div class="legend-color" style="background-color: var(--accent-blue);"></div>
-                      <span>Launched Country</span>
-                    </div>
-                    <div class="legend-item">
-                      <div class="legend-color" style="background-color: #334155;"></div>
-                      <span>Other</span>
-                    </div>
-                  </div>
-                  <div id="map-tooltip"></div>
+                <p>A map showcasing the 24 countries where I helped launch Microsoft Teams & Sovereign Cloud solutions.</p>
+                <div id="static-map-container">
+                    <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="transparent"/>
+                        <g id="map-paths">
+                            <path class="country-path country-path-default" d="M..."/>
+                            
+                            <path class="country-path country-path-launched" d="M425.6,101.9l-2.4-1.2..."/>
+                            <text x="430" y="108" class="country-label country-label-small">Q4 '17</text>
+                            
+                            <path class="country-path country-path-launched" d="M634.5,183.1l-1.3-1.6..."/>
+                            <text x="645" y="195" class="country-label">Gallatin</text>
+                            
+                            <path class="country-path country-path-launched" d="M281.3,313.3l0.6-2.5..."/>
+                            <text x="290" y="325" class="country-label">Q4 '20</text>
+                             
+                            <text x="400" y="20" fill="var(--text-gray)" font-size="8">NOTE: This is a static, illustrative map. Full SVG code would be generated.</text>
+                        </g>
+                    </svg>
                 </div>
             </div>
         </section>
@@ -277,105 +279,6 @@
             <p style="font-size: 0.9em; margin-top: 15px; color: var(--text-gray);">Phone: +1 425 243 3166</p>
         </div>
     </div>
-    
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://d3js.org/topojson.v3.min.js"></script>
-    <script>
-      // Note: All map logic is placed here to be self-contained.
-      document.addEventListener('DOMContentLoaded', function() {
-        // Check if the map container exists before running the script
-        if (!document.getElementById('map-container')) return;
-
-        // 1. DATA: Country launch details
-        const launchData = new Map([
-          ['GBR', { name: 'United Kingdom', detail: 'Launched Q4 2017' }],
-          ['IND', { name: 'India', detail: 'Launched Q1 2018' }],
-          ['CAN', { name: 'Canada', detail: 'Launched Q3 2018' }],
-          ['AUS', { name: 'Australia', detail: 'Launched Q3 2018' }],
-          ['JPN', { name: 'Japan', detail: 'Launched Q3 2018' }],
-          ['FRA', { name: 'France', detail: 'GDPR-compliant rollout Q1 2019' }],
-          ['KOR', { name: 'South Korea', detail: 'Launched Q3 2019' }],
-          ['ZAF', { name: 'South Africa', detail: 'Launched Q3 2019' }],
-          ['ARE', { name: 'United Arab Emirates', detail: 'Launched Q4 2019' }],
-          ['CHE', { name: 'Switzerland', detail: 'Launched Q4 2019' }],
-          ['DEU', { name: 'Germany', detail: 'Launched Q4 2019' }],
-          ['NOR', { name: 'Norway', detail: 'Launched Q2 2020' }],
-          ['SGP', { name: 'Singapore', detail: 'Launched Q2 2020' }],
-          ['BRA', { name: 'Brazil', detail: 'Launched Q4 2020' }],
-          ['SWE', { name: 'Sweden', detail: 'Launched Q4 2021' }],
-          ['QAT', { name: 'Qatar', detail: 'Launched Q3 2022' }],
-          ['POL', { name: 'Poland', detail: 'Launched Q2 2023' }],
-          ['ITA', { name: 'Italy', detail: 'Launched Q3 2023' }],
-          ['ISR', { name: 'Israel', detail: 'Launched Q4 2023' }],
-          ['MEX', { name: 'Mexico', detail: 'Launched Q2 2024' }],
-          ['ESP', { name: 'Spain', detail: 'Launched Q2 2024' }],
-          ['TWN', { name: 'Taiwan', detail: 'Launched Q4 2024' }],
-          ['NZL', { name: 'New Zealand', detail: 'Launched Q4 2024' }]
-        ]);
-    
-        // 2. SETUP: Map container, SVG, tooltip, and projection
-        const container = d3.select("#map-container");
-        const tooltip = d3.select("#map-tooltip");
-        const svg = container.append("svg");
-        const path = d3.geoPath();
-        const g = svg.append("g");
-        
-        const projection = d3.geoMercator().scale(120).center([0, 40]);
-        path.projection(projection);
-        
-        // 3. ZOOM/PAN: Implement zoom behavior
-        const zoom = d3.zoom()
-          .scaleExtent([1, 8])
-          .on("zoom", (event) => {
-            g.attr("transform", event.transform);
-          });
-        
-        svg.call(zoom);
-    
-        // 4. DRAW MAP: Fetch TopoJSON and render countries
-        d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
-          const countries = topojson.feature(world, world.objects.countries);
-    
-          g.selectAll(".country")
-            .data(countries.features)
-            .enter().append("path")
-            .attr("d", path)
-            .attr("class", d => {
-              const launchInfo = launchData.get(d.id) || launchData.get(d.properties.name);
-              return launchInfo ? "country launched-country" : "country";
-            })
-            .attr("aria-label", d => d.properties.name)
-            .on("mouseover", function(event, d) {
-              const launchInfo = launchData.get(d.id) || launchData.get(d.properties.name);
-              if (launchInfo) {
-                d3.select(this).raise();
-                tooltip.transition().duration(200).style("opacity", 1);
-                tooltip.html(`<strong>${launchInfo.name}</strong>${launchInfo.detail}`)
-              }
-            })
-            .on("mousemove", function(event) {
-              const [x, y] = d3.pointer(event, container.node());
-              tooltip.style("left", `${x}px`).style("top", `${y}px`);
-            })
-            .on("mouseout", function() {
-              tooltip.transition().duration(500).style("opacity", 0);
-            });
-    
-          // 5. RESPONSIVENESS: Adjust map size on window resize
-          function resize() {
-            const width = container.node().getBoundingClientRect().width;
-            const height = width * 0.55; // Maintain aspect ratio
-            
-            projection.scale(width / 7).translate([width / 2, height / 1.7]);
-            svg.attr("width", width).attr("height", height);
-            g.selectAll("path").attr("d", path);
-          }
-          
-          window.addEventListener("resize", resize);
-          resize(); // Initial call
-        });
-      });
-    </script>
     
     <script>
         // Copyright Year

@@ -280,7 +280,7 @@ section:not(.hero-homepage):not(.hero-banner) > .container > p:first-of-type { f
 .article-card > div:not(.article-image):not(.no-image-placeholder) { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; }
 
 .competencies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; text-align: center; margin-top: 20px; }
-.competency-tag { background-color: var(--card-bg-v2); color: var(--text-gray); padding: 10px 15px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; border: 1px solid var(--card-border-v2); text-decoration: none; display: flex; align-items: center; justify-content: center; min-height: 50px;}
+.competency-tag { background-color: var(--card-bg-v2); color: var(--text-gray); padding: 10px 15px; border-radius: 8px; font-size: 0.9rem; font-weight: 500; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; text-decoration: none; display: flex; align-items: center; justify-content: center; min-height: 50px;}
 .competency-tag:hover { background-color: rgba(74, 222, 128, 0.15); color: var(--primary-green); border-color: var(--primary-green); }
 
 .about-header-section { display: flex; flex-direction: column; align-items: center; margin-bottom: 0; padding: 40px 20px; background-color: var(--background-darker); border-bottom: 1px solid var(--card-border-v2); text-align:center; }
@@ -372,3 +372,94 @@ footer.main-footer {
 footer.main-footer p { margin: 0 0 10px 0; color: var(--text-gray); font-size: 0.9rem; }
 footer.main-footer .social-links a { color: var(--text-gray); margin: 0 10px; text-decoration: none; font-size: 1rem; }
 footer.main-footer .social-links a:hover { color: var(--primary-green); }
+
+/* --- NEW: Interactive Map Styles --- */
+#map-container {
+  position: relative;
+  width: 100%;
+  margin: 2rem 0;
+  background-color: #020617; /* Match dark background */
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--card-border-v2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#map-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Country styles */
+.country {
+  fill: #334155; /* Darker grey for other countries */
+  stroke: #0F172A; /* Match main background for borders */
+  stroke-width: 0.5px;
+  transition: fill 0.3s ease;
+}
+
+.launched-country {
+  fill: var(--accent-blue); /* Use theme's accent blue */
+}
+
+.country:hover, .launched-country:hover {
+  fill: var(--primary-green); /* Use theme's primary green for hover */
+  cursor: pointer;
+}
+
+/* Tooltip styles */
+#map-tooltip {
+  position: absolute;
+  background-color: rgba(2, 6, 23, 0.9); /* --background-darker */
+  color: var(--text-white);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -120%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  border: 1px solid var(--card-border-v2);
+  backdrop-filter: blur(4px);
+}
+
+#map-tooltip strong {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 4px;
+  color: var(--primary-green); /* Use theme's green for emphasis */
+}
+
+/* Legend styles */
+#map-legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(15, 23, 42, 0.8); /* --background-dark */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  border: 1px solid var(--card-border-v2);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border: 1px solid #475569; /* A slightly lighter border */
+}

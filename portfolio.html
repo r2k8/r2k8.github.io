@@ -230,7 +230,6 @@
                         border-radius: 8px;
                         overflow: hidden;
                         border: 1px solid var(--card-border-v2);
-                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
                     }
                     #map-container-interactive svg {
                         width: 100%;
@@ -241,14 +240,13 @@
                         fill: #334155;
                         stroke: #0F172A;
                         stroke-width: 0.5px;
-                        transition: fill 0.3s ease;
                     }
                     #map-container-interactive .launched-country {
                         cursor: pointer;
                         transition: filter 0.2s ease;
                     }
                     #map-container-interactive .launched-country:hover {
-                        filter: brightness(1.5);
+                        filter: brightness(1.75);
                     }
                     #map-container-interactive .country-label {
                         font-family: 'Inter', sans-serif;
@@ -263,26 +261,24 @@
                         stroke-linejoin: miter;
                         pointer-events: none;
                     }
-                    #map-popup-container {
+                    #map-tooltip {
                         position: absolute;
+                        opacity: 0;
                         pointer-events: none;
-                        z-index: 10;
-                    }
-                    .map-popup {
-                        position: absolute;
                         background-color: rgba(2, 6, 23, 0.95);
                         color: var(--text-white);
                         padding: 10px 15px;
                         border-radius: 5px;
                         font-family: 'Inter', sans-serif;
                         font-size: 14px;
-                        white-space: nowrap;
                         border: 1px solid var(--card-border-v2);
                         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
                         backdrop-filter: blur(5px);
                         transform: translate(-50%, -120%);
+                        transition: opacity 0.2s ease;
+                        z-index: 10;
                     }
-                    .map-popup::after {
+                    #map-tooltip::after {
                         content: '';
                         position: absolute;
                         bottom: -8px;
@@ -294,7 +290,7 @@
                         border-right: 8px solid transparent;
                         border-top: 8px solid rgba(2, 6, 23, 0.95);
                     }
-                    .map-popup strong {
+                    #map-tooltip strong {
                         font-size: 16px;
                         display: block;
                         margin-bottom: 4px;
@@ -303,7 +299,7 @@
                 </style>
 
                 <div id="map-container-interactive">
-                    <div id="map-popup-container"></div>
+                    <div id="map-tooltip"></div>
                 </div>
 
                 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -338,53 +334,50 @@
                       { name: 'China', label: 'Gallatin', detail: 'Gallatin Sovereign Cloud', color: '#e63946' }
                     ];
 
-                    const launchedCountriesSet = new Set(launchedCountries.map(c => c.name));
                     const launchDetailsMap = new Map(launchedCountries.map(c => [c.name, c]));
 
                     const container = d3.select("#map-container-interactive");
-                    const popupContainer = d3.select("#map-popup-container");
+                    const tooltip = d3.select("#map-tooltip");
                     const svg = container.append("svg").attr("viewBox", "0 0 960 500");
                     const pathGenerator = d3.geoPath(d3.geoMercator().scale(130).translate([450, 290]));
                     const g = svg.append("g");
-
+                    
                     const zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", (event) => g.attr("transform", event.transform));
                     svg.call(zoom);
 
                     d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
-                      const countries = topojson.feature(world, world.objects.countries);
+                      const countries = topojson.feature(world, world.objects.countries).features;
+                      
+                      // Filter out territories and keep only main country shapes for labeling and interaction
+                      const mainCountries = countries.filter(d => launchDetailsMap.has(d.properties.name));
 
                       g.selectAll(".country")
-                        .data(countries.features)
+                        .data(countries)
                         .enter().append("path")
                         .attr("d", pathGenerator)
-                        .attr("class", d => launchedCountriesSet.has(d.properties.name) ? "country launched-country" : "country")
+                        .attr("class", d => launchDetailsMap.has(d.properties.name) ? "country launched-country" : "country")
                         .style("fill", d => {
                           const details = launchDetailsMap.get(d.properties.name);
                           return details ? details.color : null;
                         })
                         .on("mouseover", function(event, d) {
-                          if (launchedCountriesSet.has(d.properties.name)) {
-                            const launchInfo = launchDetailsMap.get(d.properties.name);
-                            const [x, y] = d3.pointer(event, container.node());
-                            popupContainer.append("div")
-                              .attr("class", "map-popup")
-                              .style("left", `${x}px`)
-                              .style("top", `${y}px`)
-                              .html(`<strong>${d.properties.name}</strong><br>${launchInfo.detail}`);
-                          }
+                           if (launchDetailsMap.has(d.properties.name)) {
+                               const launchInfo = launchDetailsMap.get(d.properties.name);
+                               tooltip.html(`<strong>${d.properties.name}</strong><br>${launchInfo.detail}`)
+                                      .style("opacity", 1);
+                           }
                         })
                         .on("mousemove", function(event) {
-                          popupContainer.select(".map-popup")
-                            .style("left", `${d3.pointer(event, container.node())[0]}px`)
-                            .style("top", `${d3.pointer(event, container.node())[1]}px`);
+                           const [x, y] = d3.pointer(event, container.node());
+                           tooltip.style("left", `${x}px`).style("top", `${y}px`);
                         })
-                        .on("mouseout", () => {
-                          popupContainer.selectAll(".map-popup").remove();
+                        .on("mouseout", function() {
+                           tooltip.style("opacity", 0);
                         });
 
-                      // Add text labels for launched countries
+                      // Add text labels only to the main shape of a country
                       g.selectAll(".country-label")
-                        .data(countries.features.filter(d => launchedCountriesSet.has(d.properties.name)))
+                        .data(mainCountries)
                         .enter().append("text")
                         .attr("class", "country-label")
                         .attr("transform", d => `translate(${pathGenerator.centroid(d)})`)

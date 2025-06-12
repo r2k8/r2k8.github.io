@@ -517,18 +517,18 @@ footer.main-footer .social-links a:hover { color: var(--primary-green); }
   font-size: 5px; /* Even smaller for tiny countries */
 }
 
-/* START: Background Certification Badges */
-@media (min-width: 1700px) {
+/* START: Background Certification Badges (Updated) */
+@media (min-width: 1440px) {
     body {
         background-image: url('assets/badges/pmp.png'), 
                           url('assets/badges/Google Cloud Digital Leader.png'), 
                           url('assets/badges/ISC2 CC.png');
-        background-position: calc(50% - 750px) 20vh, 
-                             calc(50% + 750px) 25vh, 
-                             calc(50% - 780px) 70vh;
+        background-position: calc(50% - 650px) 20vh, 
+                             calc(50% + 650px) 25vh, 
+                             calc(50% - 670px) 70vh;
         background-repeat: no-repeat;
-        background-size: 140px, 140px, 140px;
+        background-size: 90px, 90px, 90px;
         background-attachment: fixed;
     }
 }
-/* END: Background Certification Badges */
+/* END: Background Certification Badges (Updated) */

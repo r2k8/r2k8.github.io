@@ -51,6 +51,15 @@ main {
     background-color: transparent;
 }
 
+main a {
+    color: var(--primary-green);
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -96,7 +105,7 @@ main {
     letter-spacing: -0.5px;
     margin-bottom: 1px;
 }
-.site-title a { text-decoration: none; display: flex; align-items: center; }
+.site-title a { text-decoration: none; display: flex; align-items: center; color: var(--text-white); }
 .title-tech { color: var(--primary-green); }
 .title-separator { margin: 0 3px; color: var(--text-gray); font-weight: 300; }
 .title-pro { color: var(--accent-blue); }
@@ -135,7 +144,19 @@ main {
 
 /* v2 Mobile Hamburger Menu (CSS-Only Checkbox Method) */
 .menu-toggle-checkbox { position: absolute; left: -9999px; opacity: 0; }
-label.hamburger-label { display: none; flex-direction: column; justify-content: space-around; width: 28px; height: 22px; cursor: pointer; padding: 10px; z-index: 1002; align-self: center; margin-left: 10px; }
+label.hamburger-label { 
+    position: relative; /* This is the key fix for z-index to work */
+    display: none; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    width: 28px; 
+    height: 22px; 
+    cursor: pointer; 
+    padding: 10px; 
+    z-index: 1002; 
+    align-self: center; 
+    margin-left: 10px; 
+}
 .hamburger-line {
     display: block;
     width: 100%;
@@ -184,14 +205,13 @@ section.hero-homepage {
     margin-top: calc(-1 * var(--header-height)); 
     padding-top: var(--header-height); 
     box-sizing: border-box;
-    /* overflow: hidden; */ /* This was the culprit, removing it */
 }
 
 .hero-homepage .hero-content { position: relative; z-index: 2; text-align: center; max-width: 1200px; padding: 0 30px; }
 
 /* === START: Refined Hero Text Styles === */
 .hero-homepage .hero-text {
-    margin-bottom: 30px; /* Reduced space */
+    margin-bottom: 30px;
     text-align: center;
     position: relative;
 }
@@ -200,7 +220,7 @@ section.hero-homepage {
     font-size: clamp(2.8rem, 7vw, 4.5rem);
     font-weight: 500;
     line-height: 1.1;
-    margin-bottom: 20px; /* Reduced space */
+    margin-bottom: 20px;
     letter-spacing: 3px;
     color: var(--text-white);
     text-shadow: 0 0 15px rgba(0,0,0,0.3);
@@ -211,12 +231,12 @@ section.hero-homepage {
 }
 
 .hero-intro-block {
-    margin: 20px 0; /* Reduced space */
+    margin: 20px 0;
 }
 
 .job-title-container {
     display: inline-block;
-    margin-bottom: 15px; /* Reduced space */
+    margin-bottom: 15px;
 }
 
 .job-title {
@@ -275,7 +295,7 @@ section.hero-homepage {
     font-size: clamp(1rem, 2.2vw, 1.25rem);
     color: var(--text-gray);
     max-width: 650px;
-    margin: 0 auto 30px; /* Reduced space */
+    margin: 0 auto 30px;
     line-height: 1.7;
 }
 
@@ -283,7 +303,7 @@ section.hero-homepage {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-bottom: 40px; /* Reduced space */
+    margin-bottom: 40px;
 }
 /* === END: Refined Hero Text Styles === */
 
@@ -342,7 +362,8 @@ section.hero-banner p.hero-subtitle { font-size: clamp(0.9rem, 1.8vw, 1.1rem); c
 /* General Section Styling */
 section:not(.hero-homepage):not(.hero-banner) { 
     padding: 50px 20px; 
-    background-color: transparent; 
+    background-color: transparent;
+    text-align: center;
 } 
 section:not(.hero-homepage):not(.hero-banner).bg-light-v2 { 
     background-color: rgba(2, 6, 23, 0.5); /* A slightly different transparent bg */
@@ -436,8 +457,8 @@ footer.main-footer {
     border-top: 1px solid var(--glass-border);
 }
 footer.main-footer p { margin: 0 0 10px 0; color: var(--text-gray); font-size: 0.9rem; }
-footer.main-footer .social-links a { color: var(--text-gray); margin: 0 10px; text-decoration: none; font-size: 1rem; }
-footer.main-footer .social-links a:hover { color: var(--primary-green); }
+footer.main-footer .social-links a { color: var(--primary-green); margin: 0 10px; text-decoration: none; font-size: 1rem; }
+footer.main-footer .social-links a:hover { text-decoration: underline; }
 
 /* START: Dynamic & Responsive Hero Area Badges */
 .hero-homepage {

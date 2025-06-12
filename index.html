@@ -78,17 +78,8 @@
 
     <main>
         <section class="hero hero-homepage"> 
-            <div class="hero-background">
-                <div class="bg-element bg-element-1"></div>
-                <div class="bg-element bg-element-2"></div>
-                <div class="bg-element bg-element-3"></div>
-            </div>
-
             <div class="hero-badges-container">
-                <div class="hero-badge hero-badge-pmp"></div>
-                <div class="hero-badge hero-badge-gcp"></div>
-                <div class="hero-badge hero-badge-isc2"></div>
-            </div>
+                </div>
             
             <div class="hero-content">
                 <div class="hero-text">
@@ -267,7 +258,7 @@
             });
         }
     </script>
-
+    
     <script>
       // First Visit Pop-up Script
       document.addEventListener('DOMContentLoaded', function() { 
@@ -306,7 +297,7 @@
         }
       });
     </script>
-    
+
     <script>
       async function fetchMediumPosts() {
         const mediumUsername = 'sripathiramki';
@@ -338,7 +329,7 @@
               tempDiv.innerHTML = snippetContent;
               
               let rawTextSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim();
-              let textSnippet = rawTextSnippet.substring(0, 100) + (rawTextSnippet.length > 100 ? '...' : '');
+              let textSnippet = raw-text-snippet.substring(0, 100) + (rawTextSnippet.length > 100 ? '...' : '');
               
               let imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : null;
               if (!imageUrl) { 
@@ -378,6 +369,30 @@
         }
       }
       document.addEventListener('DOMContentLoaded', fetchMediumPosts);
+    </script>
+
+    <script>
+    // --- DYNAMIC BADGE LOADER ---
+    document.addEventListener('DOMContentLoaded', function() {
+      // --- IMPORTANT ---
+      // To add or remove badges, just add or remove filenames from this list.
+      const badgeFilenames = [
+        'pmp.png',
+        'Google Cloud Digital Leader.png',
+        'ISC2 CC.png'
+        // 'your-new-badge.png', <--- Add more like this
+      ];
+
+      const container = document.querySelector('.hero-badges-container');
+      if (container) {
+        badgeFilenames.forEach(filename => {
+          const badgeDiv = document.createElement('div');
+          badgeDiv.className = 'hero-badge';
+          badgeDiv.style.backgroundImage = `url('assets/badges/${filename}')`;
+          container.appendChild(badgeDiv);
+        });
+      }
+    });
     </script>
 </body>
 </html>

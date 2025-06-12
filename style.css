@@ -517,18 +517,33 @@ footer.main-footer .social-links a:hover { color: var(--primary-green); }
   font-size: 5px; /* Even smaller for tiny countries */
 }
 
-/* START: Background Certification Badges (Updated) */
+/* START: Background Certification Badges (Corrected) */
+.background-badges {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* Sits above the body background but below the content */
+    background-image: url('assets/badges/pmp.png'), 
+                      url('assets/badges/Google Cloud Digital Leader.png'), 
+                      url('assets/badges/ISC2 CC.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    position: relative;
+    z-index: 1; /* Ensures main content sits on top of the badges */
+}
+
+/* Positions the badges and makes them visible only on wider screens */
 @media (min-width: 1440px) {
-    body {
-        background-image: url('assets/badges/pmp.png'), 
-                          url('assets/badges/Google Cloud Digital Leader.png'), 
-                          url('assets/badges/ISC2 CC.png');
+    .background-badges {
         background-position: calc(50% - 650px) 20vh, 
                              calc(50% + 650px) 25vh, 
                              calc(50% - 670px) 70vh;
-        background-repeat: no-repeat;
         background-size: 90px, 90px, 90px;
-        background-attachment: fixed;
     }
 }
-/* END: Background Certification Badges (Updated) */
+/* END: Background Certification Badges (Corrected) */

@@ -446,6 +446,21 @@ section:not(.hero-homepage):not(.hero-banner) > .container > p:first-of-type { f
 .article-card .btn-small:hover { background-color: #2962FF; }
 .article-card > div:not(.article-image):not(.no-image-placeholder) { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; }
 
+.competencies-grid.certification-badge-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Add a separator after each certification link */
+.certification-badge-grid .competency-tag:not(:last-child)::after {
+    content: '|';
+    color: var(--text-gray);
+    opacity: 0.5;
+    margin-left: 20px;
+    font-weight: 300;
+}
+
 
 footer.main-footer { 
     background-color: rgba(2, 6, 23, 0.7);

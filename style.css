@@ -390,8 +390,24 @@ section:not(.hero-homepage):not(.hero-banner) > .container > p:first-of-type { f
 .card ul { list-style-type: disc; padding-left: 20px; margin-bottom: 0; color: var(--text-gray); }
 .card ul li { margin-bottom: 8px; font-size: 0.9rem; line-height: 1.5; }
 
-/* ... Other styles remain largely the same, but will inherit the new card/section looks ... */
-/* ... I'm omitting the rest for brevity, but they would be here ... */
+/* Article Card Thumbnail Fix */
+.article-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid var(--glass-border);
+    background-color: #2a3139;
+    border-radius: 8px 8px 0 0;
+}
+.article-card h3 { font-size: 1.1rem; margin-top: 15px; margin-bottom: 8px; } 
+.article-card h3 a { text-decoration: none; color: var(--primary-green); }
+.article-card h3 a:hover { text-decoration: underline; }
+.article-meta { font-size: 0.75rem; color: var(--text-gray); margin-bottom: 10px; }
+.article-excerpt { font-size: 0.85rem; flex-grow: 1; margin-bottom: 15px; color: var(--text-gray); }
+.article-card .btn-small { padding: 8px 15px; font-size: 0.85rem; align-self: flex-start; margin-top: auto; background-color: var(--accent-blue); color: var(--text-white); border-color: transparent; }
+.article-card .btn-small:hover { background-color: #2962FF; }
+.article-card > div:not(.article-image):not(.no-image-placeholder) { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; }
 
 
 footer.main-footer { 

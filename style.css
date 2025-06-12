@@ -517,33 +517,80 @@ footer.main-footer .social-links a:hover { color: var(--primary-green); }
   font-size: 5px; /* Even smaller for tiny countries */
 }
 
-/* START: Background Certification Badges (Corrected) */
-.background-badges {
-    position: fixed;
+/* START: Hero Area Certification Badges */
+.hero-homepage {
+    position: relative; /* Ensure this is here for absolute positioning of children */
+}
+
+.hero-badges-container {
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0; /* Sits above the body background but below the content */
-    background-image: url('assets/badges/pmp.png'), 
-                      url('assets/badges/Google Cloud Digital Leader.png'), 
-                      url('assets/badges/ISC2 CC.png');
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through to the hero content */
+    z-index: 1; /* Place it above the background elements but below the main text */
+}
+
+.hero-badge {
+    position: absolute;
+    width: 70px;
+    height: 70px;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: contain;
+    opacity: 0.7; /* Subtle appearance */
 }
 
-main {
-    position: relative;
-    z-index: 1; /* Ensures main content sits on top of the badges */
-}
-
-/* Positions the badges and makes them visible only on wider screens */
 @media (min-width: 1440px) {
-    .background-badges {
-        background-position: calc(50% - 650px) 20vh, 
-                             calc(50% + 650px) 25vh, 
-                             calc(50% - 670px) 70vh;
-        background-size: 90px, 90px, 90px;
+    .hero-badge-pmp {
+        background-image: url('assets/badges/pmp.png');
+        top: 15%;
+        left: 5%;
+    }
+
+    .hero-badge-gcp {
+        background-image: url('assets/badges/Google Cloud Digital Leader.png');
+        top: 20%;
+        right: 7%;
+    }
+
+    .hero-badge-isc2 {
+        background-image: url('assets/badges/ISC2 CC.png');
+        bottom: 15%;
+        left: 8%;
     }
 }
-/* END: Background Certification Badges (Corrected) */
+
+@media (max-width: 1439px) and (min-width: 769px) {
+    .hero-badge-pmp {
+        background-image: url('assets/badges/pmp.png');
+        top: 10%;
+        left: 2%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-badge-gcp {
+        background-image: url('assets/badges/Google Cloud Digital Leader.png');
+        top: 15%;
+        right: 3%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-badge-isc2 {
+        background-image: url('assets/badges/ISC2 CC.png');
+        bottom: 10%;
+        left: 3%;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Hide badges on smaller screens */
+@media (max-width: 768px) {
+    .hero-badges-container {
+        display: none;
+    }
+}
+/* END: Hero Area Certification Badges */

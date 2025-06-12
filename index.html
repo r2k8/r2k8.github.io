@@ -190,7 +190,7 @@
                     <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">ISC2 CC – Certified in Cybersecurity</a>
                     <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">ITIL v3 Certified</a>
                 </div>
-                <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--card-border-v2); text-align:center;">
+                <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--glass-border); text-align:center;">
                     <h4 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--text-white);">Verify All Credentials:</h4>
                     <div class="hero-buttons"> 
                         <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--primary-green); color: var(--background-darker);">View All Credly Badges</a>
@@ -329,7 +329,7 @@
               tempDiv.innerHTML = snippetContent;
               
               let rawTextSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim();
-              let textSnippet = raw-text-snippet.substring(0, 100) + (rawTextSnippet.length > 100 ? '...' : '');
+              let textSnippet = rawTextSnippet.substring(0, 100) + (rawTextSnippet.length > 100 ? '...' : '');
               
               let imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : null;
               if (!imageUrl) { 
@@ -370,7 +370,7 @@
       }
       document.addEventListener('DOMContentLoaded', fetchMediumPosts);
     </script>
-
+    
     <script>
     // --- DYNAMIC BADGE LOADER ---
     document.addEventListener('DOMContentLoaded', function() {
@@ -381,7 +381,7 @@
         'Google Cloud Digital Leader.png',
         'ISC2 CC.png',
         'Azure Admin Associate.png'
-        // 'your-new-badge.png', <--- Add more like this
+        // 'your-new-badge.png', 
       ];
 
       const container = document.querySelector('.hero-badges-container');

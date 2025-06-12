@@ -517,80 +517,70 @@ footer.main-footer .social-links a:hover { color: var(--primary-green); }
   font-size: 5px; /* Even smaller for tiny countries */
 }
 
-/* START: Hero Area Certification Badges */
+/* START: Responsive Hero Area Badges */
 .hero-homepage {
-    position: relative; /* Ensure this is here for absolute positioning of children */
+    position: relative;
 }
 
 .hero-badges-container {
     position: absolute;
-    top: 0;
+    top: 15vh; /* Position the row from the top */
     left: 0;
+    right: 0;
     width: 100%;
-    height: 100%;
-    pointer-events: none; /* Allows clicks to pass through to the hero content */
-    z-index: 1; /* Place it above the background elements but below the main text */
+    z-index: 1;
+    pointer-events: none;
+
+    /* Flexbox for the responsive row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between badges */
 }
 
 .hero-badge {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    background-repeat: no-repeat;
+    width: 80px; /* Base size */
+    height: 80px;
     background-size: contain;
-    opacity: 0.7; /* Subtle appearance */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    pointer-events: auto; /* Allow interaction if needed in future */
 }
 
-@media (min-width: 1440px) {
-    .hero-badge-pmp {
-        background-image: url('assets/badges/pmp.png');
-        top: 15%;
-        left: 5%;
-    }
+/* Define badge images */
+.hero-badge-pmp { background-image: url('assets/badges/pmp.png'); }
+.hero-badge-gcp { background-image: url('assets/badges/Google Cloud Digital Leader.png'); }
+.hero-badge-isc2 { background-image: url('assets/badges/ISC2 CC.png'); }
 
-    .hero-badge-gcp {
-        background-image: url('assets/badges/Google Cloud Digital Leader.png');
-        top: 20%;
-        right: 7%;
-    }
+/* --- Responsive Badge Visibility --- */
 
+/* Medium Laptops & Smaller Desktops (Show 2 badges) */
+@media (max-width: 1439px) and (min-width: 1024px) {
     .hero-badge-isc2 {
-        background-image: url('assets/badges/ISC2 CC.png');
-        bottom: 15%;
-        left: 8%;
+        display: none; /* Hide the third badge */
+    }
+    .hero-badge {
+        width: 70px;
+        height: 70px;
     }
 }
 
-@media (max-width: 1439px) and (min-width: 769px) {
-    .hero-badge-pmp {
-        background-image: url('assets/badges/pmp.png');
-        top: 10%;
-        left: 2%;
-        width: 50px;
-        height: 50px;
+/* Tablets (Show 1 badge) */
+@media (max-width: 1023px) and (min-width: 769px) {
+    .hero-badge-gcp, .hero-badge-isc2 {
+        display: none; /* Hide second and third badges */
     }
-
-    .hero-badge-gcp {
-        background-image: url('assets/badges/Google Cloud Digital Leader.png');
-        top: 15%;
-        right: 3%;
-        width: 50px;
-        height: 50px;
-    }
-
-    .hero-badge-isc2 {
-        background-image: url('assets/badges/ISC2 CC.png');
-        bottom: 10%;
-        left: 3%;
-        width: 50px;
-        height: 50px;
+     .hero-badge {
+        width: 60px;
+        height: 60px;
     }
 }
 
-/* Hide badges on smaller screens */
+/* Mobile (Hide all badges) */
 @media (max-width: 768px) {
     .hero-badges-container {
         display: none;
     }
 }
-/* END: Hero Area Certification Badges */
+/* END: Responsive Hero Area Badges */

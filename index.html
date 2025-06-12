@@ -32,6 +32,7 @@
     </script>
     </head>
 <body>
+    <div class="background-badges"></div>
     <header class="site-header">
         <div class="header-container">
             <div class="logo-block">
@@ -362,7 +363,7 @@
             if(data.message) {
                 console.error('Error from rss2json service:', data.message);
             } else if (data.status !== 'ok') {
-                console.error('rss2json service did not return status "ok". Response:', data);
+                console.error('rss2json service did not return status \"ok\". Response:', data);
             }
           }
         } catch (error) { 

@@ -136,7 +136,16 @@ main {
 /* v2 Mobile Hamburger Menu (CSS-Only Checkbox Method) */
 .menu-toggle-checkbox { position: absolute; left: -9999px; opacity: 0; }
 label.hamburger-label { display: none; flex-direction: column; justify-content: space-around; width: 28px; height: 22px; cursor: pointer; padding: 10px; z-index: 1002; align-self: center; margin-left: 10px; }
-.hamburger-line { display: block; width: 100%; height: 3px; background-color: var(--primary-green); margin: 2px 0; transition: all 0.3s ease-in-out; border-radius: 3px; transform-origin: center; }
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #4ADE80; /* Explicitly set to green to ensure visibility */
+    margin: 2px 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+    transform-origin: center;
+}
 
 nav.mobile-nav { display: none; position: fixed; top: var(--mobile-header-height); left: -100%; width: 100%; max-width: 320px; height: calc(100vh - var(--mobile-header-height)); background: var(--glass-bg); backdrop-filter: blur(var(--glass-blur)); transition: left 0.35s ease-in-out; padding: 30px; z-index: 999; box-sizing: border-box; overflow-y: auto; border-right: 1px solid var(--glass-border); }
 nav.mobile-nav ul { list-style: none; padding: 0; margin: 0; }

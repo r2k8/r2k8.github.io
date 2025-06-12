@@ -174,9 +174,49 @@ nav.mobile-nav li { margin-bottom: 20px; text-align: left; }
 nav.mobile-nav a { color: var(--text-white); text-decoration: none; font-size: 1.2rem; font-weight: 500; display: block; padding: 8px 0; }
 nav.mobile-nav a:hover, nav.mobile-nav a.current { color: var(--primary-green); }
 
+
+/*
+ * START: FIX for Header Overlap on Medium Screens
+ * --------------------------------------------------
+ * At screen widths below ~1080px, the header content wraps to two lines.
+ * These rules increase the header height and body padding for this "tablet"
+ * view to prevent the header from overlapping the hero content. This is
+ * then overridden by the mobile styles at the 768px breakpoint.
+ */
+@media (max-width: 1080px) {
+    .site-header {
+        /* Allow header to grow and add padding for wrapped content */
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    body {
+        /* Increased padding to push all content down */
+        padding-top: 115px; /* New, taller height for the wrapped header */
+    }
+
+    section.hero-homepage {
+        /* Adjust hero to account for the new body padding */
+        margin-top: -115px;
+        padding-top: 115px;
+    }
+}
+/* END: FIX for Header Overlap */
+
+
 @media (max-width: 768px) {
-    body { padding-top: var(--mobile-header-height); }
-    .site-header { height: var(--mobile-header-height); }
+    /* Revert header changes for true mobile view */
+    .site-header {
+        height: var(--mobile-header-height);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    body { 
+        padding-top: var(--mobile-header-height); /* Revert to the mobile variable */
+    }
+
     .header-container { padding: 0 15px; }
     .site-title a { font-size: 22px; }
     .site-title { font-size: 22px; }
@@ -191,6 +231,12 @@ nav.mobile-nav a:hover, nav.mobile-nav a.current { color: var(--primary-green); 
     .menu-toggle-checkbox:checked ~ .hamburger-label .hamburger-line:nth-child(2) { opacity: 0; }
     .menu-toggle-checkbox:checked ~ .hamburger-label .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
     nav.mobile-nav { top: var(--mobile-header-height); height: calc(100vh - var(--mobile-header-height)); }
+
+    /* Revert hero adjustments for mobile */
+    section.hero-homepage {
+       margin-top: calc(-1 * var(--mobile-header-height));
+       padding-top: var(--mobile-header-height);
+    }
 }
 
 /* Differentiated Hero/Banner Styles */

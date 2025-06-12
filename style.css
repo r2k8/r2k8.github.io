@@ -175,9 +175,16 @@ nav.mobile-nav a:hover, nav.mobile-nav a.current { color: var(--primary-green); 
 /* Differentiated Hero/Banner Styles */
 /* Homepage Full-Height Hero Styling */
 section.hero-homepage {
-    position: relative; height: 100vh; display: flex; align-items: center; justify-content: center;
+    position: relative; 
+    height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
     background: transparent;
-    overflow: hidden; margin-top: calc(-1 * var(--header-height)); padding-top: var(--header-height); box-sizing: border-box;
+    margin-top: calc(-1 * var(--header-height)); 
+    padding-top: var(--header-height); 
+    box-sizing: border-box;
+    /* overflow: hidden; */ /* This was the culprit, removing it */
 }
 
 .hero-homepage .hero-content { position: relative; z-index: 2; text-align: center; max-width: 1200px; padding: 0 30px; }

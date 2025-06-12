@@ -516,3 +516,19 @@ footer.main-footer .social-links a:hover { color: var(--primary-green); }
 #static-map-container .country-label-small {
   font-size: 5px; /* Even smaller for tiny countries */
 }
+
+/* START: Background Certification Badges */
+@media (min-width: 1700px) {
+    body {
+        background-image: url('assets/badges/pmp.png'), 
+                          url('assets/badges/Google Cloud Digital Leader.png'), 
+                          url('assets/badges/ISC2 CC.png');
+        background-position: calc(50% - 750px) 20vh, 
+                             calc(50% + 750px) 25vh, 
+                             calc(50% - 780px) 70vh;
+        background-repeat: no-repeat;
+        background-size: 140px, 140px, 140px;
+        background-attachment: fixed;
+    }
+}
+/* END: Background Certification Badges */

@@ -37,7 +37,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 50px; /* Space between text block and card */
+        gap: 40px; /* Space between elements */
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
@@ -49,12 +49,44 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        margin-top: 20px;
     }
     
-    /* Ensure contact links are centered on larger screens */
     .hero-intro-block .icon-contact {
         justify-content: center;
     }
+
+    /* --- NEW: Styles for Structured Badge Container --- */
+    .badges-title {
+        color: var(--text-white);
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        border-bottom: 1px solid var(--glass-border);
+        padding-bottom: 15px;
+        width: 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-badges-container {
+        /* Override any problematic absolute positioning from external CSS */
+        position: relative !important; 
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        
+        /* Layout styles */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* Space between badges */
+        max-width: 700px; /* Control the max width of the badge area */
+        margin: 0 auto; /* Center the container */
+    }
+
 
     /* --- Styles for Interactive Profile Card --- */
     :root {
@@ -316,7 +348,6 @@
 
     <main>
         <section class="hero hero-homepage"> 
-            <div class="hero-badges-container"></div>
             
             <div class="hero-content">
                 <div class="hero-text-container">
@@ -348,6 +379,12 @@
                         <a href="portfolio.html" class="btn btn-primary">View Projects</a>
                         <a href="about.html" class="btn btn-secondary">Learn About Me</a>
                     </div>
+                </div>
+
+                <div class="badges-section-container">
+                    <h3 class="badges-title">Digital Badges & Certifications</h3>
+                    <div class="hero-badges-container">
+                        </div>
                 </div>
                 
                 <div class="pc-card-wrapper">
@@ -625,6 +662,8 @@
     <script>
     // --- DYNAMIC BADGE LOADER ---
     document.addEventListener('DOMContentLoaded', function() {
+      // --- IMPORTANT ---
+      // To add or remove badges, just add or remove filenames from this list.
       const badgeFilenames = [
         'pmp.png',
         'Google Cloud Digital Leader.png',

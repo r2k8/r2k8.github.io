@@ -32,6 +32,12 @@
     </script>
     
     <style>
+    /* --- NEW: Fix for content hiding under header --- */
+    .hero-homepage {
+        /* This pushes all content in the hero section down to clear the fixed header */
+        padding-top: 120px; 
+    }
+
     /* --- Styles for Centered Hero Layout --- */
     .hero-content {
         display: flex;
@@ -56,7 +62,7 @@
         justify-content: center;
     }
 
-    /* --- NEW: Styles for Structured Badge Container --- */
+    /* --- Styles for Structured Badge Container --- */
     .badges-title {
         color: var(--text-white);
         font-weight: 500;
@@ -71,20 +77,17 @@
     }
 
     .hero-badges-container {
-        /* Override any problematic absolute positioning from external CSS */
         position: relative !important; 
         top: auto !important;
         left: auto !important;
         transform: none !important;
-        
-        /* Layout styles */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 15px; /* Space between badges */
-        max-width: 700px; /* Control the max width of the badge area */
-        margin: 0 auto; /* Center the container */
+        gap: 15px;
+        max-width: 700px;
+        margin: 0 auto;
     }
 
 

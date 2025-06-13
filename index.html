@@ -31,7 +31,7 @@
       gtag('config', 'G-PYZR7HK7RW');
     </script>
     <style>
-    /* --- General Hero Layout --- */
+    /* --- Styles for Two-Row Hero Layout --- */
     .hero-homepage {
         padding-bottom: 0; 
     }
@@ -98,7 +98,6 @@
       --background-x: 50%;
       --background-y: 50%;
       --card-radius: 30px;
-      /* UPDATED SVG ICON */
       --icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M10 9.5L6 12l4 2.5'/%3e%3cpath d='M14 14.5l4-2.5-4-2.5'/%3e%3cpath d='M12 5l-2 14'/%3e%3c/svg%3e");
     }
 
@@ -174,12 +173,10 @@
     }
 
     .pc-shine {
-      /* HOLOGRAM CONFINED TO TOP WITH A GRADIENT MASK */
       mask-image: linear-gradient(to bottom, black 45%, transparent 65%), var(--icon);
       mask-size: 100% 100%, 30px;
       mask-repeat: no-repeat, repeat;
-      mask-composite: intersect; /* Use 'intersect' to combine masks */
-
+      mask-composite: intersect; 
       mask-mode: luminance;
       mask-position: top calc(200% - (var(--background-y) * 5)) left calc(100% - var(--background-x));
       transition: filter 0.6s ease;
@@ -454,6 +451,20 @@
     </script>
     <script>
         // All other page scripts would go here
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const badgeFilenames = ['pmp.png', 'Google Cloud Digital Leader.png', 'ISC2 CC.png', 'Azure AI Associate.png', 'Azure Admin Associate.png', 'aws-partner-technical.png', 'GCP Cloud for azure-pros.png'];
+      const container = document.querySelector('.hero-badges-container');
+      if (container) {
+        badgeFilenames.forEach(filename => {
+          const badgeDiv = document.createElement('div');
+          badgeDiv.className = 'hero-badge';
+          badgeDiv.style.backgroundImage = `url('assets/badges/${filename}')`;
+          container.appendChild(badgeDiv);
+        });
+      }
+    });
     </script>
     <script>
     // --- JavaScript for Interactive Profile Card ---

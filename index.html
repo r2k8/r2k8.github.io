@@ -37,7 +37,62 @@
             padding-top: 100px !important;
         }
 
-        /* --- Styles for Interactive Profile Card --- */
+        /* --- NEW LAYOUT FOR CARD & BADGES --- */
+        .card-and-badges-wrapper {
+            display: flex;
+            flex-wrap: wrap; /* Stacks on mobile */
+            justify-content: center;
+            align-items: center;
+            gap: 50px; /* Space between card and badges column */
+            width: 100%;
+        }
+
+        /* Re-style the badge container to be a vertical column */
+        .hero-badges-container {
+            position: relative !important;
+            display: flex;
+            flex-direction: column; /* Stack badges vertically */
+            justify-content: center;
+            gap: 15px;
+            margin-top: 0;
+            width: 220px; /* Give the column a fixed width */
+        }
+
+        /* Style the individual badges for the new column layout */
+        .hero-badge {
+            width: 100%;
+            height: 65px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 8px;
+            background-color: rgba(30, 35, 48, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hero-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 199, 255, 0.3);
+        }
+        
+        /* General hero layout */
+        .hero-homepage .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            text-align: center;
+        }
+
+        .hero-intro-block .icon-contact {
+            justify-content: center;
+        }
+
+        /* --- Styles for Interactive Profile Card (condensed) --- */
         :root {
             --pointer-x: 50%; --pointer-y: 50%; --pointer-from-center: 0; --pointer-from-top: 0.5; --pointer-from-left: 0.5; --card-opacity: 0; --rotate-x: 0deg; --rotate-y: 0deg; --background-x: 50%; --background-y: 50%; --card-radius: 30px;
             --icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M10 9.5L6 12l4 2.5'/%3e%3cpath d='M14 14.5l4-2.5-4-2.5'/%3e%3cpath d='M12 5l-2 14'/%3e%3c/svg%3e");
@@ -119,8 +174,6 @@
 
     <main>
         <section class="hero hero-homepage"> 
-            <div class="hero-badges-container">
-                </div>
             
             <div class="hero-content">
                 <div class="hero-text">
@@ -159,34 +212,38 @@
                     </div>
                 </div>
                 
-                <div class="pc-card-wrapper">
-                    <div class="pc-card">
-                        <div class="pc-inside">
-                            <div class="pc-shine"></div>
-                            <div class="pc-glare"></div>
-                            <div class="pc-avatar-content">
-                                <img src="assets/images/profile-transparent.png" alt="A photo of Rama Krishna Sripathi" class="avatar"/>
-                                <div class="pc-user-info">
-                                    <div class="pc-user-details">
-                                        <div class="pc-mini-avatar">
-                                            <img src="profile.jpg" alt="Mini avatar of Rama Krishna Sripathi"/>
+                <div class="card-and-badges-wrapper">
+                    <div class="pc-card-wrapper">
+                        <div class="pc-card">
+                            <div class="pc-inside">
+                                <div class="pc-shine"></div>
+                                <div class="pc-glare"></div>
+                                <div class="pc-avatar-content">
+                                    <img src="assets/images/profile-transparent.png" alt="A photo of Rama Krishna Sripathi" class="avatar"/>
+                                    <div class="pc-user-info">
+                                        <div class="pc-user-details">
+                                            <div class="pc-mini-avatar">
+                                                <img src="profile.jpg" alt="Mini avatar of Rama Krishna Sripathi"/>
+                                            </div>
+                                            <div class="pc-user-text">
+                                                <span class="pc-handle">@r2k8</span>
+                                                <span class="pc-status">Available for opportunities</span>
+                                            </div>
                                         </div>
-                                        <div class="pc-user-text">
-                                            <span class="pc-handle">@r2k8</span>
-                                            <span class="pc-status">Available for opportunities</span>
-                                        </div>
+                                        <a href="contact.html" class="pc-contact-btn">Contact Me</a>
                                     </div>
-                                    <a href="contact.html" class="pc-contact-btn">Contact Me</a>
                                 </div>
-                            </div>
-                            <div class="pc-content">
-                                <div class="pc-details">
-                                    <h3>Rama Krishna Sripathi</h3>
-                                    <p>TPM | PMT | Cloud Architect</p>
+                                <div class="pc-content">
+                                    <div class="pc-details">
+                                        <h3>Rama Krishna Sripathi</h3>
+                                        <p>TPM | PMT | Cloud Architect</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="hero-badges-container">
+                        </div>
                 </div>
 
             </div>

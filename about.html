@@ -40,6 +40,67 @@
                  margin: 2px 5px; /* Adjust spacing for stacked items */
             }
         }
+
+        /* --- New Styles for Liquid Glass & Content Alignment --- */
+        .liquid-glass {
+            background: rgba(28, 37, 54, 0.6);
+            backdrop-filter: blur(15px) saturate(180%);
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            padding: 40px;
+            margin-top: 30px;
+        }
+        
+        main .container {
+            text-align: center;
+        }
+
+        main .container p {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        main .container a:not(.btn) {
+            color: var(--primary-green) !important;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        main .container a:not(.btn):hover {
+            text-decoration: underline;
+        }
+
+        .experience-card {
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--card-border-v2);
+        }
+        .experience-card:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .experience-card ul {
+            list-style-position: inside;
+            padding-left: 0;
+            display: inline-block; /* Allows margin auto to center the block */
+            text-align: left; /* Aligns text left within the centered block */
+            max-width: 700px;
+            margin-top: 15px;
+        }
+
+        .experience-card ul li {
+            margin-bottom: 12px;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        #certifications-about .competencies-grid a {
+            color: var(--text-white) !important; /* Override for certification tags */
+        }
     </style>
 </head>
 <body>
@@ -84,7 +145,7 @@
     </header>
 
     <main>
-        <section class="about-header-section" style="background-color: var(--background-darker); border-bottom: 1px solid var(--card-border-v2); text-align:center;">
+        <section class="about-header-section" style="background-color: var(--background-darker); border-bottom: 1px solid var(--card-border-v2); text-align:center; padding: 40px 0;">
             <div class="container">
                 <img src="profile.jpg" alt="Rama Krishna Sripathi" class="profile-pic-main" style="width: 120px; height: 120px;">
                 <h1 style="color: var(--text-white);">Rama Krishna Sripathi, M.S., PMP®</h1>
@@ -94,31 +155,31 @@
                 <div class="contact-links-about" style="margin-top:15px; line-height: 1.8;">
                     <span style="color: var(--text-gray);">📍 Redmond, WA</span>
                     <span class="contact-separator-pipe"> | </span>
-                    <a href="mailto:r2k8@outlook.com" style="color: var(--primary-green);">r2k8@outlook.com</a>
+                    <a href="mailto:r2k8@outlook.com">r2k8@outlook.com</a>
                     <span class="contact-separator-pipe"> | </span> <br class="mobile-only-br" style="display:none;">
-                    <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer" style="color: var(--primary-green);">LinkedIn</a>
+                    <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <span class="contact-separator-pipe"> | </span>
-                    <a href="https://github.com/r2k8" target="_blank" rel="noopener noreferrer" style="color: var(--primary-green);">GitHub</a>
+                    <a href="https://github.com/r2k8" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </section>
 
         <section id="summary"> 
-            <div class="container">
+            <div class="container liquid-glass">
                 <h2>Professional Summary</h2>
-                <p style="text-align: left; max-width: 800px; margin: 0 auto;">
+                <p style="color: var(--text-gray);">
                     Passionate about software products and technology, I bring over 16 years of diverse experience in the IT industry. My career spans roles in Technical Program Management, Product Management engineering, operations, and support. As a seasoned Technical Program Manager and Product Owner, I excel at delivering enterprise software products, driving data engineering initiatives, and leading end-to-end product rollouts in new markets. In my recent role as a Technical Program Manager, I spearheaded a transformative, multi-year M365 Microsoft Teams Go-Local expansion program. I led the synchronized launch of M365 products with Azure GA, ensuring seamless integration and interoperability. This initiative successfully deployed Microsoft Teams as part of the M365 SaaS offering across 23 Microsoft Advanced Data Residency and Multi-Geo Cloud instances, benefiting countries such as the UK, IN, CA, AU, JP, and more. Owned capacity management for M365 GoLocals.
                 </p>
             </div>
         </section>
 
-        <section id="experience" class="bg-light-v2">
-            <div class="container">
+        <section id="experience" class="bg-light-v2" style="padding: 50px 0;">
+            <div class="container liquid-glass">
                 <h2>Work Experience</h2>
                 <div class="experience-card">
-                    <h3 style="color:var(--primary-green);">TPM</h3>
+                    <h3>TPM</h3>
                     <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Cisco, Redmond, Washington, United States</p>
-                    <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Jan 2025 – Present <span style="color: var(--text-gray); font-size: 0.8em;">(Assumed based on "6 months" from profile)</span></p>
+                    <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Jan 2025 – Present</p>
                     <ul>
                         <li>Directed security reporting strategy for Meraki integration within Cisco's NDSO.</li>
                         <li>Delivered executive-level reports and implemented roadmap alignment for device security risk mitigation.</li>
@@ -126,7 +187,7 @@
                     </ul>
                 </div>
                 <div class="experience-card">
-                    <h3 style="color:var(--primary-green);">Sr Technical Program Manager/Technical Product Manager at M365</h3>
+                    <h3>Sr Technical Program Manager/Technical Product Manager at M365</h3>
                     <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Microsoft (via LTIMindTree), Redmond, WA, USA</p>
                     <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Jul 2016 – Dec 2024 (8 years 6 months)</p>
                     <ul>
@@ -136,7 +197,7 @@
                     </ul>
                 </div>
                 <div class="experience-card">
-                    <h3 style="color:var(--primary-green);">Technical Program Manager | Technical Product Manager (via LTIMindTree)</h3>
+                    <h3>Technical Program Manager | Technical Product Manager (via LTIMindTree)</h3>
                     <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Microsoft China, Chaoyang District, Beijing, China</p>
                     <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Apr 2013 – Jun 2016 (3 years 3 months)</p>
                     <ul>
@@ -144,7 +205,7 @@
                     </ul>
                 </div>
                  <div class="experience-card">
-                    <h3 style="color:var(--primary-green);">Software Engineer at TCS</h3>
+                    <h3>Software Engineer at TCS</h3>
                     <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Tata Consultancy Services, Bengaluru, Kamataka, India</p>
                     <p class="date" style="color: var(--text-gray); font-size: 0.9em;">May 2011 – Apr 2013 (2 years)</p>
                     <ul>
@@ -152,16 +213,16 @@
                     </ul>
                 </div>
                 <div class="experience-card">
-                    <h3 style="color:var(--primary-green);">Founder | Rural E-Commerce Initiative</h3>
+                    <h3>Founder | Rural E-Commerce Initiative</h3>
                      <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">AARII Dot Com</p>
                     <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Mar 2011 – Jun 2011 (4 months)</p>
                     <ul>
                         <li>Piloted a lean initiative to bridge rural-urban access gaps with a tech-driven delivery of essential goods.</li>
-                         <li>Key Achievements: Lean Launch MVP in 6 weeks; Agile Validation achieving 85% satisfaction; Team-Driven Pivot based on unit economics.</li>
+                        <li>Key Achievements: Lean Launch MVP in 6 weeks; Agile Validation achieving 85% satisfaction; Team-Driven Pivot based on unit economics.</li>
                     </ul>
                 </div>
                 <div class="experience-card">
-                    <h3 style="color:var(--primary-green);">Software Engineer - Operations Executive</h3>
+                    <h3>Software Engineer - Operations Executive</h3>
                     <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Infosys, Bengaluru, Karnataka, India</p>
                     <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Jul 2008 – May 2011 (2 years 11 months)</p>
                     <ul>
@@ -174,7 +235,7 @@
         </section>
 
         <section id="core-competencies">
-            <div class="container">
+            <div class="container liquid-glass">
                 <h2>Core Competencies</h2>
                 <div class="competencies-grid">
                     <div class="competency-tag">Launch Strategies</div>
@@ -193,22 +254,22 @@
             </div>
         </section>
 
-        <section id="education" class="bg-light-v2">
-            <div class="container">
+        <section id="education" class="bg-light-v2" style="padding: 50px 0;">
+            <div class="container liquid-glass">
                 <h2>Education</h2>
                 <div class="experience-card"> 
-                    <h3 style="color:var(--primary-green);">Executive Masters in IT, Information Technology</h3>
+                    <h3>Executive Masters in IT, Information Technology</h3>
                     <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">University of the Cumberlands, KY, USA</p>
                 </div>
                 <div class="experience-card">
-                    <h3 style="color:var(--primary-green);">Bachelor of Science - BS, Computer Science</h3>
+                    <h3>Bachelor of Science - BS, Computer Science</h3>
                      <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Osmania University, Hyderabad, India</p>
                 </div>
             </div>
         </section>
 
         <section id="certifications-about">
-            <div class="container">
+            <div class="container liquid-glass">
                 <h2>Professional Certifications</h2>
                  <div class="competencies-grid certification-badge-grid">
                     <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Project Management Professional (PMP)®</a>
@@ -225,7 +286,7 @@
                     <a href="https://www.coursera.org/learner/r2k8" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Digital Product Management (Coursera)</a>
                     <a href="https://www.coursera.org/account/accomplishments/professional-cert/NLE947G3XAJQ" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Getting Started with Cloud for the Enterprise (Coursera)</a>
                 </div>
-                 <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--card-border-v2); text-align:center;">
+                 <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--card-border-v2);">
                     <h4 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--text-white);">Verify All Credentials:</h4>
                     <div class="hero-buttons"> 
                         <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--primary-green); color: var(--background-darker);">View All Credly Badges</a>
@@ -235,8 +296,8 @@
             </div>
         </section>
 
-        <section id="cta-about" style="background-color: var(--accent-blue); color: var(--text-white); padding: 50px 0;">
-            <div class="container">
+        <section id="cta-about" style="padding: 20px 0;">
+            <div class="container liquid-glass" style="background-color: var(--accent-blue); border-color: rgba(255,255,255,0.2);">
                 <h2 style="color: var(--text-white);">Let's Innovate Together</h2>
                 <p style="color: var(--text-gray);">If you're looking for a versatile technology leader to drive your next initiative, I'd love to connect.</p>
                 <a href="contact.html" class="btn btn-primary" style="background-color: var(--primary-green); color: var(--background-darker);">Contact Me</a>
@@ -289,43 +350,43 @@
     </script>
 
     <script>
-      // First Visit Pop-up Script
-      document.addEventListener('DOMContentLoaded', function() { 
-        const popupOverlay = document.getElementById('firstVisitPopup');
-        const closeButton = document.getElementById('closePopupButton');
-        const visitedFlagKey = 'r2k8SiteVisited_v2.0';
+     // First Visit Pop-up Script
+     document.addEventListener('DOMContentLoaded', function() { 
+       const popupOverlay = document.getElementById('firstVisitPopup');
+       const closeButton = document.getElementById('closePopupButton');
+       const visitedFlagKey = 'r2k8SiteVisited_v2.0';
 
-        if (popupOverlay && !localStorage.getItem(visitedFlagKey)) {
-          setTimeout(() => {
-            popupOverlay.style.display = 'flex'; 
-            setTimeout(() => { popupOverlay.classList.add('active'); }, 10); 
-          }, 1500);
-          localStorage.setItem(visitedFlagKey, 'true');
-        }
+       if (popupOverlay && !localStorage.getItem(visitedFlagKey)) {
+         setTimeout(() => {
+           popupOverlay.style.display = 'flex'; 
+           setTimeout(() => { popupOverlay.classList.add('active'); }, 10); 
+         }, 1500);
+         localStorage.setItem(visitedFlagKey, 'true');
+       }
 
-        function closePopup() {
-          if (popupOverlay) {
-            popupOverlay.classList.remove('active');
-            setTimeout(() => { 
-                if (!popupOverlay.classList.contains('active')) {
-                    popupOverlay.style.display = 'none'; 
-                }
-            }, 300);
-          }
-        }
+       function closePopup() {
+         if (popupOverlay) {
+           popupOverlay.classList.remove('active');
+           setTimeout(() => { 
+             if (!popupOverlay.classList.contains('active')) {
+                 popupOverlay.style.display = 'none'; 
+             }
+           }, 300);
+         }
+       }
 
-        if (closeButton) {
-          closeButton.addEventListener('click', closePopup);
-        }
-        if (popupOverlay) {
-          popupOverlay.addEventListener('click', function(event) {
-            if (event.target === popupOverlay) {
-              closePopup();
-            }
-          });
-        }
-      });
+       if (closeButton) {
+         closeButton.addEventListener('click', closePopup);
+       }
+       if (popupOverlay) {
+         popupOverlay.addEventListener('click', function(event) {
+           if (event.target === popupOverlay) {
+             closePopup();
+           }
+         });
+       }
+     });
     </script>
-    
+   
 </body>
 </html>

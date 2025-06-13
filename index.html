@@ -92,6 +92,8 @@
       --background-x: 50%;
       --background-y: 50%;
       --card-radius: 30px;
+      /* Hologram Code Icon */
+      --icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='16 18 22 12 16 6'%3e%3c/polyline%3e%3cpolyline points='8 6 2 12 8 18'%3e%3c/polyline%3e%3c/svg%3e");
     }
 
     .pc-card-wrapper {
@@ -166,6 +168,8 @@
     }
 
     .pc-shine {
+      mask-image: var(--icon);
+      mask-mode: luminance;
       mask-repeat: repeat;
       mask-size: 150%;
       mask-position: top calc(200% - (var(--background-y) * 5)) left calc(100% - var(--background-x));
@@ -323,7 +327,7 @@
                 </ul>
             </nav>
             
-            <img src="assets/images/profile-transparent.png" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
+            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
             
             <input class="menu-toggle-checkbox" type="checkbox" id="menu-toggle"/>
             <label class="hamburger-label" for="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -357,24 +361,24 @@
                             <div class="pc-glare"></div>
                             <div class="pc-avatar-content">
                                 <img src="assets/images/profile-transparent.png" alt="A photo of Rama Krishna Sripathi" class="avatar"/>
+                                <div class="pc-user-info">
+                                    <div class="pc-user-details">
+                                        <div class="pc-mini-avatar">
+                                            <img src="profile.jpg" alt="Mini avatar of Rama Krishna Sripathi"/>
+                                        </div>
+                                        <div class="pc-user-text">
+                                            <span class="pc-handle">@r2k8</span>
+                                            <span class="pc-status">Available for opportunities</span>
+                                        </div>
+                                    </div>
+                                    <a href="contact.html" class="pc-contact-btn">Contact Me</a>
+                                </div>
                             </div>
                             <div class="pc-content">
                                 <div class="pc-details">
                                     <h3>Rama Krishna Sripathi</h3>
                                     <p>TPM | PMT | Cloud Architect</p>
                                 </div>
-                            </div>
-                            <div class="pc-user-info">
-                                <div class="pc-user-details">
-                                    <div class="pc-mini-avatar">
-                                        <img src="assets/images/profile-transparent.png" alt="Mini avatar of Rama Krishna Sripathi"/>
-                                    </div>
-                                    <div class="pc-user-text">
-                                        <span class="pc-handle">@r2k8</span>
-                                        <span class="pc-status">Available for opportunities</span>
-                                    </div>
-                                </div>
-                                <a href="contact.html" class="pc-contact-btn">Contact Me</a>
                             </div>
                         </div>
                     </div>

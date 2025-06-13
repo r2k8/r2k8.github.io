@@ -32,10 +32,18 @@
     </script>
     
     <style>
-    /* --- NEW: Fix for content hiding under header --- */
+    /* --- NEW: Fix for section layering and header overlap --- */
     .hero-homepage {
-        /* This pushes all content in the hero section down to clear the fixed header */
-        padding-top: 120px; 
+        padding-top: 120px;
+        /* Establishes a stacking context and lifts the entire section layer up */
+        position: relative; 
+        z-index: 2; 
+    }
+
+    /* Set a lower z-index for subsequent sections to ensure they go underneath the hero */
+    #achievements, #certifications, #latest-articles, #core-competencies {
+        position: relative;
+        z-index: 1;
     }
 
     /* --- Styles for Centered Hero Layout --- */
@@ -43,7 +51,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px; /* Space between elements */
+        gap: 40px; 
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
@@ -55,7 +63,6 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        margin-top: 20px;
     }
     
     .hero-intro-block .icon-contact {

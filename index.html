@@ -30,8 +30,39 @@
       gtag('js', new Date());
       gtag('config', 'G-PYZR7HK7RW');
     </script>
-    
     <style>
+    /* --- Styles for Two-Column Hero Layout --- */
+    .hero-content {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping for responsiveness */
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        width: 100%;
+        max-width: 1100px; /* Adjust as needed */
+        margin: 0 auto; /* Center the content */
+    }
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align text left on desktop */
+        max-width: 500px; /* Give text block a max width */
+        flex-grow: 1; /* Allow text to take available space */
+    }
+
+    /* Responsive stacking for hero */
+    @media (max-width: 992px) {
+        .hero-content {
+            flex-direction: column; /* Stack card and text */
+            gap: 40px;
+        }
+        .hero-text {
+            align-items: center; /* Center-align text block when stacked */
+            text-align: center;
+        }
+    }
+
     /* --- Styles for New Interactive Profile Card --- */
     :root {
       --pointer-x: 50%;
@@ -44,33 +75,7 @@
       --rotate-y: 0deg;
       --background-x: 50%;
       --background-y: 50%;
-      --grain: none;
-      --icon: none;
-      --behind-gradient: none;
-      --inner-gradient: none;
-      --sunpillar-1: hsl(2, 100%, 73%);
-      --sunpillar-2: hsl(53, 100%, 69%);
-      --sunpillar-3: hsl(93, 100%, 69%);
-      --sunpillar-4: hsl(176, 100%, 76%);
-      --sunpillar-5: hsl(228, 100%, 74%);
-      --sunpillar-6: hsl(283, 100%, 73%);
-      --sunpillar-clr-1: var(--sunpillar-1);
-      --sunpillar-clr-2: var(--sunpillar-2);
-      --sunpillar-clr-3: var(--sunpillar-3);
-      --sunpillar-clr-4: var(--sunpillar-4);
-      --sunpillar-clr-5: var(--sunpillar-5);
-      --sunpillar-clr-6: var(--sunpillar-6);
       --card-radius: 30px;
-    }
-
-    /* Hero section adjustments for the card */
-    .hero-homepage {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding: 60px 20px;
-        overflow: hidden; /* Prevent glow from creating scrollbars */
     }
 
     .pc-card-wrapper {
@@ -78,6 +83,7 @@
       transform: translate3d(0, 0, 0.1px);
       position: relative;
       touch-action: none;
+      flex-shrink: 0; /* Prevent card from shrinking */
     }
 
     .pc-card-wrapper::before {
@@ -90,8 +96,6 @@
       transition: all 0.5s ease;
       filter: contrast(2) saturate(2) blur(36px);
       transform: scale(0.8) translate3d(0, 0, 0.1px);
-      background-size: 100% 100%;
-      background-image: var(--behind-gradient);
     }
 
     .pc-card-wrapper:hover,
@@ -106,16 +110,15 @@
     }
 
     .pc-card {
-      height: 80svh;
-      max-height: 540px;
+      height: 75svh;
+      max-height: 500px;
       width: 100%;
-      max-width: 380px;
+      max-width: 350px;
       display: grid;
       aspect-ratio: 0.718;
       border-radius: var(--card-radius);
       position: relative;
       background-blend-mode: color-dodge, normal, normal, normal;
-      animation: glow-bg 12s linear infinite;
       box-shadow: rgba(0, 0, 0, 0.8) calc((var(--pointer-from-left) * 10px) - 3px) calc((var(--pointer-from-top) * 20px) - 6px) 20px -5px;
       transition: transform 1s ease;
       transform: translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg);
@@ -142,20 +145,16 @@
     .pc-inside {
       inset: 1px;
       position: absolute;
-      background-image: var(--inner-gradient);
       background-color: rgba(0, 0, 0, 0.9);
       transform: translate3d(0, 0, 0.01px);
     }
 
     .pc-shine {
-      mask-image: var(--icon);
-      mask-mode: luminance;
       mask-repeat: repeat;
       mask-size: 150%;
       mask-position: top calc(200% - (var(--background-y) * 5)) left calc(100% - var(--background-x));
       transition: filter 0.6s ease;
       filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
-      animation: holo-bg 18s linear infinite;
       mix-blend-mode: color-dodge;
     }
 
@@ -169,7 +168,7 @@
       background: transparent;
       background-size: cover;
       background-position: center;
-      background-image: repeating-linear-gradient(0deg, var(--sunpillar-clr-1) calc(var(--space) * 1), var(--sunpillar-clr-2) calc(var(--space) * 2), var(--sunpillar-clr-3) calc(var(--space) * 3), var(--sunpillar-clr-4) calc(var(--space) * 4), var(--sunpillar-clr-5) calc(var(--space) * 5), var(--sunpillar-clr-6) calc(var(--space) * 6), var(--sunpillar-clr-1) calc(var(--space) * 7)), repeating-linear-gradient(var(--angle), #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%), radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(0, 0%, 0%, 0.1) 12%, hsla(0, 0%, 0%, 0.15) 20%, hsla(0, 0%, 0%, 0.25) 120%);
+      background-image: repeating-linear-gradient(0deg, hsl(2, 100%, 73%) calc(var(--space) * 1), hsl(53, 100%, 69%) calc(var(--space) * 2), hsl(93, 100%, 69%) calc(var(--space) * 3), hsl(176, 100%, 76%) calc(var(--space) * 4), hsl(228, 100%, 74%) calc(var(--space) * 5), hsl(283, 100%, 73%) calc(var(--space) * 6), hsl(2, 100%, 73%) calc(var(--space) * 7)), repeating-linear-gradient(var(--angle), #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%), radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(0, 0%, 0%, 0.1) 12%, hsla(0, 0%, 0%, 0.15) 20%, hsla(0, 0%, 0%, 0.25) 120%);
       background-position: 0 var(--background-y), var(--background-x) var(--background-y), center;
       background-blend-mode: color, hard-light;
       background-size: 500% 500%, 300% 300%, 200% 200%;
@@ -188,7 +187,6 @@
     .pc-card:hover .pc-shine,
     .pc-card.active .pc-shine {
       filter: brightness(0.85) contrast(1.5) saturate(0.5);
-      animation: none;
     }
 
     .pc-card:hover .pc-shine::before,
@@ -199,9 +197,9 @@
     }
 
     .pc-shine::before {
-      background-image: linear-gradient(45deg, var(--sunpillar-4), var(--sunpillar-5), var(--sunpillar-6), var(--sunpillar-1), var(--sunpillar-2), var(--sunpillar-3)), radial-gradient(circle at var(--pointer-x) var(--pointer-y), hsl(0, 0%, 70%) 0%, hsla(0, 0%, 30%, 0.2) 90%), var(--grain);
-      background-size: 250% 250%, 100% 100%, 220px 220px;
-      background-position: var(--pointer-x) var(--pointer-y), center, calc(var(--pointer-x) * 0.01) calc(var(--pointer-y) * 0.01);
+      background-image: linear-gradient(45deg, hsl(176, 100%, 76%), hsl(228, 100%, 74%), hsl(283, 100%, 73%), hsl(2, 100%, 73%), hsl(53, 100%, 69%), hsl(93, 100%, 69%)), radial-gradient(circle at var(--pointer-x) var(--pointer-y), hsl(0, 0%, 70%) 0%, hsla(0, 0%, 30%, 0.2) 90%);
+      background-size: 250% 250%, 100% 100%;
+      background-position: var(--pointer-x) var(--pointer-y), center;
       background-blend-mode: color-dodge;
       filter: brightness(calc(2 - var(--pointer-from-center))) contrast(calc(var(--pointer-from-center) + 2)) saturate(calc(0.5 + var(--pointer-from-center)));
       mix-blend-mode: luminosity;
@@ -243,11 +241,7 @@
       inset: 0;
       z-index: 1;
       backdrop-filter: blur(30px);
-      mask: linear-gradient(to bottom,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0) 60%,
-          rgba(0, 0, 0, 1) 90%,
-          rgba(0, 0, 0, 1) 100%);
+      mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 1) 100%);
       pointer-events: none;
     }
 
@@ -256,7 +250,7 @@
       bottom: 20px;
       left: 20px;
       right: 20px;
-      z-index: 5; /* Increased z-index */
+      z-index: 5;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -265,141 +259,24 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 15px;
       padding: 12px 14px;
-      pointer-events: auto; /* Allow clicks on this element */
+      pointer-events: auto;
     }
 
-    .pc-user-details {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .pc-mini-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      flex-shrink: 0;
-    }
-
-    .pc-mini-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .pc-user-text {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .pc-handle {
-      font-size: 14px;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.9);
-      line-height: 1;
-    }
-
-    .pc-status {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1;
-    }
-
-    .pc-contact-btn {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      padding: 8px 16px;
-      font-size: 14px;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.9);
-      cursor: pointer;
-      transition: all 0.2s ease;
-      backdrop-filter: blur(10px);
-      text-decoration: none; /* remove underline from link */
-    }
-
-    .pc-contact-btn:hover {
-      border-color: rgba(255, 255, 255, 0.4);
-      transform: translateY(-1px);
-      transition: all 0.2s ease;
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .pc-content {
-      max-height: 100%;
-      overflow: hidden;
-      text-align: center;
-      position: relative;
-      transform: translate3d(calc(var(--pointer-from-left) * -6px + 3px), calc(var(--pointer-from-top) * -6px + 3px), 0.1px) !important;
-      z-index: 5;
-      mix-blend-mode: luminosity;
-    }
-
-    .pc-details {
-      width: 100%;
-      position: absolute;
-      top: 3em;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .pc-details h3 {
-      font-weight: 600;
-      margin: 0;
-      font-size: min(5svh, 2.5em); /* Adjusted size */
-      background-image: linear-gradient(to bottom, #fff, #b8b8f3);
-      background-size: 1em 1.5em;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-
-    .pc-details p {
-      font-weight: 600;
-      position: relative;
-      top: -12px;
-      white-space: nowrap;
-      font-size: 16px;
-      margin: 0 auto;
-      width: min-content;
-      background-image: linear-gradient(to bottom, #fff, #8787f0);
-      background-size: 1em 1.5em;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-
-    @keyframes glow-bg {
-      0% { --bgrotate: 0deg; }
-      100% { --bgrotate: 360deg; }
-    }
-
-    @keyframes holo-bg {
-      0% { background-position: 0 var(--background-y), 0 0, center; }
-      100% { background-position: 0 var(--background-y), 90% 90%, center; }
-    }
-
-    @media (max-width: 768px) {
-      .pc-card { height: 70svh; max-height: 480px; }
-      .pc-details { top: 2em; }
-      .pc-details h3 { font-size: min(4svh, 2.2em); }
-      .pc-details p { font-size: 14px; }
-      .pc-user-info { bottom: 15px; left: 15px; right: 15px; padding: 10px 12px; }
-      .pc-mini-avatar { width: 38px; height: 38px; }
-      .pc-user-details { gap: 10px; }
-      .pc-handle { font-size: 13px; }
-      .pc-status { font-size: 12px; }
-      .pc-contact-btn { padding: 6px 12px; font-size: 12px; }
-    }
-
+    .pc-user-details { display: flex; align-items: center; gap: 12px; }
+    .pc-mini-avatar { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); flex-shrink: 0; }
+    .pc-mini-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .pc-user-text { display: flex; align-items: flex-start; flex-direction: column; gap: 6px; }
+    .pc-handle { font-size: 14px; font-weight: 500; color: rgba(255, 255, 255, 0.9); line-height: 1; }
+    .pc-status { font-size: 14px; color: rgba(255, 255, 255, 0.7); line-height: 1; }
+    .pc-contact-btn { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 8px 16px; font-size: 14px; font-weight: 600; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: all 0.2s ease; backdrop-filter: blur(10px); text-decoration: none; }
+    .pc-contact-btn:hover { border-color: rgba(255, 255, 255, 0.4); transform: translateY(-1px); background-color: rgba(255, 255, 255, 0.1); }
+    .pc-content { max-height: 100%; overflow: hidden; text-align: center; position: relative; transform: translate3d(calc(var(--pointer-from-left) * -6px + 3px), calc(var(--pointer-from-top) * -6px + 3px), 0.1px) !important; z-index: 5; mix-blend-mode: luminosity; }
+    .pc-details { width: 100%; position: absolute; top: 3em; display: flex; flex-direction: column; }
+    .pc-details h3 { font-weight: 600; margin: 0; font-size: min(5svh, 2.5em); background-image: linear-gradient(to bottom, #fff, #b8b8f3); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
+    .pc-details p { font-weight: 600; position: relative; top: -12px; white-space: nowrap; font-size: 16px; margin: 0 auto; width: min-content; background-image: linear-gradient(to bottom, #fff, #8787f0); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
+    
     @media (max-width: 480px) {
-      .pc-card { height: 65svh; max-height: 420px; }
-      .pc-details { top: 1.5em; }
+      .pc-card { max-height: 420px; }
       .pc-details h3 { font-size: min(3.5svh, 2em); }
       .pc-details p { font-size: 12px; top: -8px; }
       .pc-user-info { border-radius: 50px; }
@@ -454,34 +331,85 @@
 
     <main>
         <section class="hero hero-homepage"> 
-            <div class="pc-card-wrapper">
-                <div class="pc-card">
-                    <div class="pc-inside">
-                        <div class="pc-shine"></div>
-                        <div class="pc-glare"></div>
-                        <div class="pc-avatar-content">
-                            <img src="profile.jpg" alt="A photo of Rama Krishna Sripathi" class="avatar"/>
-                        </div>
-                        <div class="pc-content">
-                            <div class="pc-details">
-                                <h3>Rama Krishna Sripathi</h3>
-                                <p>TPM | PMT | Cloud Architect</p>
+            <div class="hero-badges-container"></div>
+            
+            <div class="hero-content">
+                <div class="pc-card-wrapper">
+                    <div class="pc-card">
+                        <div class="pc-inside">
+                            <div class="pc-shine"></div>
+                            <div class="pc-glare"></div>
+                            <div class="pc-avatar-content">
+                                <img src="profile.jpg" alt="A photo of Rama Krishna Sripathi" class="avatar"/>
                             </div>
-                        </div>
-                        <div class="pc-user-info">
-                            <div class="pc-user-details">
-                                <div class="pc-mini-avatar">
-                                    <img src="profile.jpg" alt="Mini avatar of Rama Krishna Sripathi"/>
-                                </div>
-                                <div class="pc-user-text">
-                                    <span class="pc-handle">@r2k8</span>
-                                    <span class="pc-status">Available for opportunities</span>
+                            <div class="pc-content">
+                                <div class="pc-details">
+                                    <h3>Rama Krishna Sripathi</h3>
+                                    <p>TPM | PMT | Cloud Architect</p>
                                 </div>
                             </div>
-                            <a href="contact.html" class="pc-contact-btn">Contact Me</a>
+                            <div class="pc-user-info">
+                                <div class="pc-user-details">
+                                    <div class="pc-mini-avatar">
+                                        <img src="profile.jpg" alt="Mini avatar of Rama Krishna Sripathi"/>
+                                    </div>
+                                    <div class="pc-user-text">
+                                        <span class="pc-handle">@r2k8</span>
+                                        <span class="pc-status">Available for opportunities</span>
+                                    </div>
+                                </div>
+                                <a href="contact.html" class="pc-contact-btn">Contact Me</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        RAMA KRISHNA <span class="highlight">SRIPATHI</span>
+                    </h1>
+                    
+                    <div class="hero-intro-block">
+                        <div class="job-title-container">
+                            <span class="job-title">Product Manager / TPM / Solutions Architect</span>
+                        </div>
+                        <div class="contact-details icon-contact">
+                            <a href="tel:+14252433166" title="Call me">
+                                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span>+1 425-243-3166</span>
+                            </a>
+                            <span class="contact-separator">|</span>
+                            <a href="mailto:r2k8@outlook.com" title="Email me">
+                                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <span>r2k8@outlook.com</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p class="hero-subtitle">
+                        Versatile Technology Leader: Engineering the Future with Expertise in Product Management, Technical Program Management, Solutions Architecture & AI.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="portfolio.html" class="btn btn-primary">View Projects</a>
+                        <a href="about.html" class="btn btn-secondary">Learn About Me</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="split-preview">
+                <div class="preview-panel technical-preview">
+                    <h3>Technology & Innovation</h3>
+                    <p>Cloud Architecture • AI Engineering • Full-Stack Development</p> 
+                </div>
+                <div class="preview-panel professional-preview">
+                    <h3>Strategic Leadership</h3>
+                    <p>Product Management • TPM • Solutions Architecture</p>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow"></div>
             </div>
         </section>
 
@@ -590,31 +518,22 @@
     </div>
 
     <script>
-        // Copyright Year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // JavaScript for ARIA attribute on CSS-only checkbox menu
         const menuToggleCheckbox = document.getElementById('menu-toggle');
         const hamburgerLabel = document.querySelector('.hamburger-label'); 
         if (menuToggleCheckbox && hamburgerLabel) {
             menuToggleCheckbox.addEventListener('change', function() {
                 hamburgerLabel.setAttribute('aria-expanded', this.checked.toString());
-                if (this.checked) {
-                    document.body.classList.add('menu-open-prevent-scroll');
-                } else {
-                    document.body.classList.remove('menu-open-prevent-scroll');
-                }
+                document.body.classList.toggle('menu-open-prevent-scroll', this.checked);
             });
         }
     </script>
     
     <script>
-     // First Visit Pop-up Script
      document.addEventListener('DOMContentLoaded', function() { 
        const popupOverlay = document.getElementById('firstVisitPopup');
        const closeButton = document.getElementById('closePopupButton');
        const visitedFlagKey = 'r2k8SiteVisited_v2.0'; 
-
        if (popupOverlay && !localStorage.getItem(visitedFlagKey)) {
          setTimeout(() => {
            popupOverlay.style.display = 'flex'; 
@@ -622,107 +541,68 @@
          }, 1500);
          localStorage.setItem(visitedFlagKey, 'true');
        }
-
        function closePopup() {
-         if (popupOverlay) {
-           popupOverlay.classList.remove('active');
-           setTimeout(() => { 
-             if (!popupOverlay.classList.contains('active')) {
-                 popupOverlay.style.display = 'none'; 
-             }
-           }, 300);
-         }
+         if (!popupOverlay) return;
+         popupOverlay.classList.remove('active');
+         setTimeout(() => { if (!popupOverlay.classList.contains('active')) { popupOverlay.style.display = 'none'; } }, 300);
        }
-
-       if (closeButton) {
-         closeButton.addEventListener('click', closePopup);
-       }
-       if (popupOverlay) {
-         popupOverlay.addEventListener('click', function(event) {
-           if (event.target === popupOverlay) {
-             closePopup();
-           }
-         });
-       }
+       if (closeButton) closeButton.addEventListener('click', closePopup);
+       if (popupOverlay) popupOverlay.addEventListener('click', (e) => { if (e.target === popupOverlay) closePopup(); });
      });
     </script>
 
     <script>
       async function fetchMediumPosts() {
         const mediumUsername = 'sripathiramki';
-        const rssFeedUrl = `https://medium.com/feed/@${mediumUsername}`;
-        const converterUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+        const converterUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(`https://medium.com/feed/@${mediumUsername}`)}`;
         const articlesContainer = document.getElementById('medium-articles-feed');
-
-        if (!articlesContainer) { return; }
-
+        if (!articlesContainer) return;
         try {
           articlesContainer.innerHTML = '<p style="color: var(--text-gray);">Loading latest articles...</p>';
           const response = await fetch(converterUrl);
-          if (!response.ok) { 
-            throw new Error(`HTTP error! status: ${response.status} when fetching from ${converterUrl}. Response: ${await response.text()}`);
-          }
+          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
           const data = await response.json();
-
           if (data.status === 'ok' && data.items && data.items.length > 0) {
-            let htmlOutput = ''; 
-            const articlesToShow = data.items.slice(0, 3); 
-
-            articlesToShow.forEach(item => {
-              const title = item.title || "Untitled Article";
-              const link = item.link || "#";
-              const pubDate = item.pubDate ? new Date(item.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : "Date N/A";
-              
-              let snippetContent = item.description || '';
-              const tempDiv = document.createElement('div');
-              tempDiv.innerHTML = snippetContent;
-              
-              let rawTextSnippet = (tempDiv.textContent || tempDiv.innerText || "").trim();
-              let textSnippet = rawTextSnippet.substring(0, 100) + (rawTextSnippet.length > 100 ? '...' : '');
-              
-              let imageUrl = item.thumbnail && item.thumbnail !== "" ? item.thumbnail : null;
-              if (!imageUrl) { 
-                const firstImgTag = tempDiv.querySelector('img');
-                if (firstImgTag && firstImgTag.src) {
-                    imageUrl = firstImgTag.src;
-                }
-              }
-              const fallbackImageUrl = 'assets/images/article-placeholder-default.jpg';
-              const imageToDisplay = imageUrl || fallbackImageUrl;
-              const imageAlt = title || "Article image";
-
-              htmlOutput += `
+            const articlesToShow = data.items.slice(0, 3).map(item => {
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = item.description || '';
+                const rawText = (tempDiv.textContent || tempDiv.innerText || "").trim();
+                const snippet = rawText.substring(0, 100) + (rawText.length > 100 ? '...' : '');
+                const image = item.thumbnail || (tempDiv.querySelector('img') ? tempDiv.querySelector('img').src : 'assets/images/article-placeholder-default.jpg');
+                return `
                 <div class="card article-card"> 
-                  <img src="${imageToDisplay}" alt="${imageAlt}" class="article-image" onerror="this.onerror=null; this.src='${fallbackImageUrl}'; this.alt='Placeholder image';">
+                  <img src="${image}" alt="${item.title || 'Article image'}" class="article-image" onerror="this.onerror=null; this.src='assets/images/article-placeholder-default.jpg';">
                   <div>
-                    <h3><a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a></h3>
-                    <p class="article-meta">Published | ${pubDate}</p>
-                    <p class="article-excerpt">${textSnippet}</p>
-                    <a href="${link}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Read More</a>
+                    <h3><a href="${item.link || '#'}" target="_blank" rel="noopener noreferrer">${item.title || "Untitled Article"}</a></h3>
+                    <p class="article-meta">Published | ${new Date(item.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                    <p class="article-excerpt">${snippet}</p>
+                    <a href="${item.link || '#'}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">Read More</a>
                   </div>
                 </div>`;
-            });
-            articlesContainer.innerHTML = htmlOutput;
-          } else { 
-            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">No articles found or unable to load feed from Medium.</p>'; 
-            if(data.message) {
-                console.error('Error from rss2json service:', data.message);
-            } else if (data.status !== 'ok') {
-                console.error('rss2json service did not return status \"ok\". Response:', data);
-            }
-          }
+            }).join('');
+            articlesContainer.innerHTML = articlesToShow;
+          } else { throw new Error('No articles found or invalid feed.'); }
         } catch (error) { 
-            console.error('Error fetching or parsing Medium feed (see details below):'); 
-            console.error(error); 
-            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">Error loading articles. Please check the console for details.</p>';
+            console.error('Error fetching Medium feed:', error); 
+            articlesContainer.innerHTML = '<p style="color: var(--text-gray);">Error loading articles.</p>';
         }
       }
       document.addEventListener('DOMContentLoaded', fetchMediumPosts);
     </script>
     
     <script>
-    // This script is intentionally left blank because the badge loader functionality
-    // was part of the old hero section which has been replaced.
+    document.addEventListener('DOMContentLoaded', function() {
+      const badgeFilenames = ['pmp.png', 'Google Cloud Digital Leader.png', 'ISC2 CC.png', 'Azure AI Associate.png', 'Azure Admin Associate.png', 'aws-partner-technical.png', 'GCP Cloud for azure-pros.png'];
+      const container = document.querySelector('.hero-badges-container');
+      if (container) {
+        badgeFilenames.forEach(filename => {
+          const badgeDiv = document.createElement('div');
+          badgeDiv.className = 'hero-badge';
+          badgeDiv.style.backgroundImage = `url('assets/badges/${filename}')`;
+          container.appendChild(badgeDiv);
+        });
+      }
+    });
     </script>
 
     <script>
@@ -732,45 +612,33 @@
         if (!cardWrapper) return;
 
         const card = cardWrapper.querySelector('.pc-card');
-        const MAX_ROTATION = 15; // Max rotation in degrees
+        const MAX_ROTATION = 15;
 
         const handleMove = (e) => {
             const rect = cardWrapper.getBoundingClientRect();
-            
-            const clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
-            const clientY = e.type === 'touchmove' ? e.touches[0].clientY : e.clientY;
-
+            const clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+            const clientY = e.type.startsWith('touch') ? e.touches[0].clientY : e.clientY;
             const x = clientX - rect.left;
             const y = clientY - rect.top;
-
             const x_from_center = x - rect.width / 2;
             const y_from_center = y - rect.height / 2;
-
             const rotateY = (x_from_center / (rect.width / 2)) * MAX_ROTATION;
             const rotateX = -1 * (y_from_center / (rect.height / 2)) * MAX_ROTATION;
             
-            const pointer_x = (x / rect.width) * 100;
-            const pointer_y = (y / rect.height) * 100;
-            const pointer_from_left = x / rect.width;
-            const pointer_from_top = y / rect.height;
-
-            const pointer_from_center = Math.sqrt(
-                ((pointer_from_left - 0.5) ** 2) + ((pointer_from_top - 0.5) ** 2)
-            );
-
             card.style.setProperty('--rotate-x', `${rotateY}deg`);
             card.style.setProperty('--rotate-y', `${rotateX}deg`);
-            card.style.setProperty('--pointer-x', `${pointer_x}%`);
-            card.style.setProperty('--pointer-y', `${pointer_y}%`);
+            card.style.setProperty('--pointer-x', `${(x / rect.width) * 100}%`);
+            card.style.setProperty('--pointer-y', `${(y / rect.height) * 100}%`);
             card.style.setProperty('--background-x', `${50 + rotateY / 2}%`);
             card.style.setProperty('--background-y', `${50 + rotateX / 2}%`);
-            card.style.setProperty('--pointer-from-left', pointer_from_left);
-            card.style.setProperty('--pointer-from-top', pointer_from_top);
-            card.style.setProperty('--pointer-from-center', pointer_from_center);
+            card.style.setProperty('--pointer-from-left', x / rect.width);
+            card.style.setProperty('--pointer-from-top', y / rect.height);
+            card.style.setProperty('--pointer-from-center', Math.sqrt(((x / rect.width - 0.5) ** 2) + ((y / rect.height - 0.5) ** 2)));
         };
 
-        const handleEnter = () => {
+        const handleEnter = (e) => {
             cardWrapper.classList.add('active');
+            if (e.type.startsWith('touch')) handleMove(e);
         };
 
         const handleLeave = () => {
@@ -779,17 +647,11 @@
             card.style.setProperty('--rotate-y', '0deg');
         };
 
-        // Add mouse events
         cardWrapper.addEventListener('mousemove', handleMove);
         cardWrapper.addEventListener('mouseenter', handleEnter);
         cardWrapper.addEventListener('mouseleave', handleLeave);
-
-        // Add touch events
-        cardWrapper.addEventListener('touchstart', (e) => {
-            handleEnter();
-            handleMove(e);
-        });
-        cardWrapper.addEventListener('touchmove', handleMove);
+        cardWrapper.addEventListener('touchstart', handleEnter, { passive: true });
+        cardWrapper.addEventListener('touchmove', handleMove, { passive: true });
         cardWrapper.addEventListener('touchend', handleLeave);
     });
     </script>

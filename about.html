@@ -101,6 +101,14 @@
         #certifications-about .competencies-grid a {
             color: var(--text-white) !important; /* Override for certification tags */
         }
+        
+        /* --- Circular Profile Picture --- */
+        .header-profile-pic, .profile-pic-main {
+            border-radius: 50%; /* Makes the image a circle */
+            border: 3px solid var(--primary-green);
+            object-fit: cover; /* Prevents image distortion */
+            box-shadow: 0 0 15px rgba(4, 255, 128, 0.3); /* Adds a subtle glow */
+        }
     </style>
 </head>
 <body>

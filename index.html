@@ -57,7 +57,6 @@
     /* New section for the preview panels */
     .focus-areas-section {
         padding: 50px 20px;
-        /* Matches the dark background of the page */
         background-color: var(--background-dark); 
     }
     .focus-areas-section .split-preview {
@@ -101,7 +100,7 @@
       transform: translate3d(0, 0, 0.1px);
       position: relative;
       touch-action: none;
-      flex-shrink: 0; /* Prevent card from shrinking */
+      flex-shrink: 0; 
     }
 
     .pc-card-wrapper::before {
@@ -129,9 +128,9 @@
 
     .pc-card {
       height: 75svh;
-      max-height: 500px;
+      max-height: 460px; /* MADE SMALLER */
       width: 100%;
-      max-width: 350px;
+      max-width: 320px; /* MADE SMALLER */
       display: grid;
       aspect-ratio: 0.718;
       border-radius: var(--card-radius);
@@ -171,7 +170,7 @@
       mask-image: var(--icon);
       mask-mode: luminance;
       mask-repeat: repeat;
-      mask-size: 150%;
+      mask-size: 40px; /* MADE SMALLER */
       mask-position: top calc(200% - (var(--background-y) * 5)) left calc(100% - var(--background-x));
       transition: filter 0.6s ease;
       filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
@@ -251,7 +250,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%) scale(1);
-      bottom: 2px;
+      bottom: -40px; /* MOVED DOWN */
       opacity: calc(1.75 - var(--pointer-from-center));
     }
 
@@ -291,7 +290,7 @@
     .pc-contact-btn { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 8px 16px; font-size: 14px; font-weight: 600; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: all 0.2s ease; backdrop-filter: blur(10px); text-decoration: none; }
     .pc-contact-btn:hover { border-color: rgba(255, 255, 255, 0.4); transform: translateY(-1px); background-color: rgba(255, 255, 255, 0.1); }
     .pc-content { max-height: 100%; overflow: hidden; text-align: center; position: relative; transform: translate3d(calc(var(--pointer-from-left) * -6px + 3px), calc(var(--pointer-from-top) * -6px + 3px), 0.1px) !important; z-index: 5; mix-blend-mode: luminosity; }
-    .pc-details { width: 100%; position: absolute; top: 3em; display: flex; flex-direction: column; }
+    .pc-details { width: 100%; position: absolute; top: 2.5em; /* MOVED UP */ display: flex; flex-direction: column; }
     .pc-details h3 { font-weight: 600; margin: 0; font-size: min(5svh, 2.5em); background-image: linear-gradient(to bottom, #fff, #b8b8f3); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
     .pc-details p { font-weight: 600; position: relative; top: -12px; white-space: nowrap; font-size: 16px; margin: 0 auto; width: min-content; background-image: linear-gradient(to bottom, #fff, #8787f0); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
     

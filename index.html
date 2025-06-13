@@ -32,57 +32,28 @@
     </script>
     
     <style>
-    /* --- Styles for Two-Row Hero Layout --- */
-    .hero-homepage {
-        padding-bottom: 0; 
-    }
+    /* --- Styles for Centered Hero Layout --- */
     .hero-content {
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        gap: 40px; 
-        width: 100%;
-        max-width: 1300px;
-        margin: 0 auto;
-    }
-
-    .hero-second-row {
-        display: flex;
-        flex-wrap: wrap; 
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        gap: 50px;
+        gap: 50px; /* Space between text block and card */
         width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
     }
 
-    .hero-text {
+    .hero-text-container {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; 
-        max-width: 500px; 
-        flex-grow: 1; 
+        align-items: center;
+        gap: 20px;
     }
     
-    .focus-areas-section {
-        padding: 50px 20px;
-        background-color: var(--background-dark); 
-    }
-    .focus-areas-section .split-preview {
-        padding-top: 0;
-        border-top: 1px solid var(--card-border-v2);
-        padding-top: 50px;
-    }
-
-    @media (max-width: 992px) {
-        .hero-second-row {
-            flex-direction: column; 
-            justify-content: center;
-            gap: 40px;
-        }
-        .hero-text {
-            align-items: center; 
-            text-align: center;
-        }
+    /* Ensure contact links are centered on larger screens */
+    .hero-intro-block .icon-contact {
+        justify-content: center;
     }
 
     /* --- Styles for Interactive Profile Card --- */
@@ -348,65 +319,63 @@
             <div class="hero-badges-container"></div>
             
             <div class="hero-content">
-                <h1 class="hero-title">
-                    RAMA KRISHNA <span class="highlight">SRIPATHI</span>
-                </h1>
-
-                <div class="hero-second-row">
-                    <div class="pc-card-wrapper">
-                        <div class="pc-card">
-                            <div class="pc-inside">
-                                <div class="pc-shine"></div>
-                                <div class="pc-glare"></div>
-                                <div class="pc-avatar-content">
-                                    <img src="assets/images/profile-transparent.png" alt="A photo of Rama Krishna Sripathi" class="avatar"/>
-                                    <div class="pc-user-info">
-                                        <div class="pc-user-details">
-                                            <div class="pc-mini-avatar">
-                                                <img src="profile.jpg" alt="Mini avatar of Rama Krishna Sripathi"/>
-                                            </div>
-                                            <div class="pc-user-text">
-                                                <span class="pc-handle">@r2k8</span>
-                                                <span class="pc-status">Available for opportunities</span>
-                                            </div>
-                                        </div>
-                                        <a href="contact.html" class="pc-contact-btn">Contact Me</a>
-                                    </div>
-                                </div>
-                                <div class="pc-content">
-                                    <div class="pc-details">
-                                        <h3>Rama Krishna Sripathi</h3>
-                                        <p>TPM | PMT | Cloud Architect</p>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="hero-text-container">
+                    <h1 class="hero-title">
+                        RAMA KRISHNA <span class="highlight">SRIPATHI</span>
+                    </h1>
+                    
+                    <div class="hero-intro-block">
+                        <div class="job-title-container">
+                            <span class="job-title">Product Manager / TPM / Solutions Architect</span>
+                        </div>
+                        <div class="contact-details icon-contact">
+                            <a href="tel:+14252433166" title="Call me">
+                                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span>+1 425-243-3166</span>
+                            </a>
+                            <span class="contact-separator">|</span>
+                            <a href="mailto:r2k8@outlook.com" title="Email me">
+                                <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <span>r2k8@outlook.com</span>
+                            </a>
                         </div>
                     </div>
-                    
-                    <div class="hero-text">
-                        <div class="hero-intro-block">
-                            <div class="job-title-container">
-                                <span class="job-title">Product Manager / TPM / Solutions Architect</span>
-                            </div>
-                            <div class="contact-details icon-contact">
-                                <a href="tel:+14252433166" title="Call me">
-                                    <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                    <span>+1 425-243-3166</span>
-                                </a>
-                                <span class="contact-separator">|</span>
-                                <a href="mailto:r2k8@outlook.com" title="Email me">
-                                    <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                    <span>r2k8@outlook.com</span>
-                                </a>
-                            </div>
-                        </div>
 
-                        <p class="hero-subtitle">
-                            Versatile Technology Leader: Engineering the Future with Expertise in Product Management, Technical Program Management, Solutions Architecture & AI.
-                        </p>
-                        <div class="hero-buttons">
-                            <a href="portfolio.html" class="btn btn-primary">View Projects</a>
-                            <a href="about.html" class="btn btn-secondary">Learn About Me</a>
+                    <p class="hero-subtitle">
+                        Versatile Technology Leader: Engineering the Future with Expertise in Product Management, Technical Program Management, Solutions Architecture & AI.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="portfolio.html" class="btn btn-primary">View Projects</a>
+                        <a href="about.html" class="btn btn-secondary">Learn About Me</a>
+                    </div>
+                </div>
+                
+                <div class="pc-card-wrapper">
+                    <div class="pc-card">
+                        <div class="pc-inside">
+                            <div class="pc-shine"></div>
+                            <div class="pc-glare"></div>
+                            <div class="pc-avatar-content">
+                                <img src="assets/images/profile-transparent.png" alt="A photo of Rama Krishna Sripathi" class="avatar"/>
+                                <div class="pc-user-info">
+                                    <div class="pc-user-details">
+                                        <div class="pc-mini-avatar">
+                                            <img src="profile.jpg" alt="Mini avatar of Rama Krishna Sripathi"/>
+                                        </div>
+                                        <div class="pc-user-text">
+                                            <span class="pc-handle">@r2k8</span>
+                                            <span class="pc-status">Available for opportunities</span>
+                                        </div>
+                                    </div>
+                                    <a href="contact.html" class="pc-contact-btn">Contact Me</a>
+                                </div>
+                            </div>
+                            <div class="pc-content">
+                                <div class="pc-details">
+                                    <h3>Rama Krishna Sripathi</h3>
+                                    <p>TPM | PMT | Cloud Architect</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -656,8 +625,6 @@
     <script>
     // --- DYNAMIC BADGE LOADER ---
     document.addEventListener('DOMContentLoaded', function() {
-      // --- IMPORTANT ---
-      // To add or remove badges, just add or remove filenames from this list.
       const badgeFilenames = [
         'pmp.png',
         'Google Cloud Digital Leader.png',

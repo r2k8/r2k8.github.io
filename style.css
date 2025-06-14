@@ -245,7 +245,6 @@ section.hero-homepage {
   --background-x: 50%;
   --background-y: 50%;
   --card-radius: 30px;
-  /* CHANGE 2: Restored the hologram icon SVG */
   --icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M10 9.5L6 12l4 2.5'/%3e%3cpath d='M14 14.5l4-2.5-4-2.5'/%3e%3cpath d='M12 5l-2 14'/%3e%3c/svg%3e");
 }
 
@@ -321,7 +320,6 @@ section.hero-homepage {
 }
 
 .pc-shine {
-  /* CHANGE 2: Restored mask properties for hologram icon */
   mask-image: linear-gradient(to bottom, black 55%, transparent 75%), var(--icon);
   mask-size: 100%, 40px;
   mask-mode: luminance;
@@ -381,8 +379,8 @@ section.hero-homepage {
 
 .pc-user-info {
   position: absolute;
-  /* CHANGE 1: Raised the user info bar higher */
-  bottom: 35px;
+  /* FINAL CHANGE: Moved the bar up significantly */
+  bottom: 90px;
   left: 20px;
   right: 20px;
   z-index: 5;

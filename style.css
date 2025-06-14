@@ -141,7 +141,7 @@ main a:hover {
 
 /* --- HERO SECTION --- */
 section.hero-homepage {
-    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height)); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,7 +151,6 @@ section.hero-homepage {
 
 .hero-content {
     display: grid;
-    /* CHANGE 2: Giving more space to the left text column */
     grid-template-columns: 1.5fr 1fr; 
     align-items: center;
     gap: 50px;
@@ -240,8 +239,6 @@ section.hero-homepage {
   --pointer-x: 50%;
   --pointer-y: 50%;
   --pointer-from-center: 0;
-  --pointer-from-top: 0.5;
-  --pointer-from-left: 0.5;
   --card-opacity: 0;
   --rotate-x: 0deg;
   --rotate-y: 0deg;
@@ -281,7 +278,6 @@ section.hero-homepage {
 }
 
 .pc-card {
-  /* CHANGE 2: Decreased overall card size */
   max-height: 480px;
   max-width: 340px;
   display: grid;
@@ -313,12 +309,48 @@ section.hero-homepage {
   pointer-events: none;
 }
 
+/* CHANGE 1: START - Refactored card internals to fix overlap */
 .pc-inside {
   inset: 1px;
-  position: absolute;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.9);
   transform: translate3d(0, 0, 0.01px);
+  display: flex; /* Use flexbox for vertical stacking */
+  flex-direction: column;
 }
+
+.pc-content {
+  position: relative;
+  transform: none !important;
+  z-index: 1;
+  mix-blend-mode: normal;
+  text-align: center;
+  padding: 1.5em;
+  flex-shrink: 0; /* Prevents this from shrinking */
+}
+
+.pc-details { 
+  position: relative;
+  top: auto;
+}
+
+.pc-avatar-content {
+  mix-blend-mode: screen;
+  overflow: hidden;
+  flex-grow: 1; /* Allows this container to fill remaining space */
+  display: flex;
+  align-items: flex-end; /* Aligns the image to the bottom */
+}
+
+.pc-avatar-content .avatar {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  transform: none;
+  object-fit: contain;
+  max-height: 100%;
+}
+/* CHANGE 1: END */
 
 .pc-shine {
   mask-image: var(--icon);
@@ -330,23 +362,9 @@ section.hero-homepage {
   filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
   animation: holo-bg 18s linear infinite;
   mix-blend-mode: color-dodge;
-}
-
-.pc-shine,
-.pc-shine::after {
-  --space: 5%;
-  --angle: -45deg;
-  transform: translate3d(0, 0, 1px);
-  overflow: hidden;
-  z-index: 3;
-  background: transparent;
-  background-size: cover;
-  background-position: center;
-  background-image: repeating-linear-gradient(0deg, hsl(2, 100%, 73%) calc(var(--space) * 1), hsl(53, 100%, 69%) calc(var(--space) * 2), hsl(93, 100%, 69%) calc(var(--space) * 3), hsl(176, 100%, 76%) calc(var(--space) * 4), hsl(228, 100%, 74%) calc(var(--space) * 5), hsl(283, 100%, 73%) calc(var(--space) * 6), hsl(2, 100%, 73%) calc(var(--space) * 7)), repeating-linear-gradient(var(--angle), #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%), radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(0, 0%, 0%, 0.1) 12%, hsla(0, 0%, 0%, 0.15) 20%, hsla(0, 0%, 0%, 0.25) 120%);
-  background-position: 0 var(--background-y), var(--background-x) var(--background-y), center;
-  background-blend-mode: color, hard-light;
-  background-size: 500% 500%, 300% 300%, 200% 200%;
-  background-repeat: repeat;
+  position: absolute; /* Keep shine/glare as overlays */
+  inset: 0;
+  z-index: 2;
 }
 
 .pc-glare {
@@ -355,22 +373,9 @@ section.hero-homepage {
   background-image: radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsl(248, 25%, 80%) 12%, hsla(207, 40%, 30%, 0.8) 90%);
   mix-blend-mode: overlay;
   filter: brightness(0.8) contrast(1.2);
-  z-index: 4;
-}
-
-.pc-avatar-content {
-  mix-blend-mode: screen;
-  overflow: hidden;
-}
-
-.pc-avatar-content .avatar {
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) scale(1);
-  /* CHANGE 1: Moved picture down to prevent overlap */
-  bottom: -50px;
-  opacity: calc(1.75 - var(--pointer-from-center));
+  position: absolute; /* Keep shine/glare as overlays */
+  inset: 0;
+  z-index: 3;
 }
 
 .pc-user-info {
@@ -398,26 +403,8 @@ section.hero-homepage {
 .pc-contact-btn { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 8px 16px; font-size: 14px; font-weight: 600; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: all 0.2s ease; backdrop-filter: blur(10px); text-decoration: none; }
 .pc-contact-btn:hover { border-color: rgba(255, 255, 255, 0.4); transform: translateY(-1px); }
 
-.pc-content {
-  max-height: 100%;
-  overflow: hidden;
-  text-align: center;
-  position: relative;
-  transform: translate3d(calc(var(--pointer-from-left) * -6px + 3px), calc(var(--pointer-from-top) * -6px + 3px), 0.1px) !important;
-  z-index: 5;
-  mix-blend-mode: luminosity;
-}
-
-.pc-details {
-  width: 100%;
-  position: absolute;
-  /* CHANGE 1: Moved text up to prevent overlap */
-  top: 2em;
-  display: flex;
-  flex-direction: column;
-}
 .pc-details h3 { font-weight: 600; margin: 0; font-size: min(5svh, 2.5em); background-image: linear-gradient(to bottom, #fff, #6f6fbe); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
-.pc-details p { font-weight: 600; position: relative; top: -12px; white-space: nowrap; font-size: 16px; margin: 0 auto; width: min-content; background-image: linear-gradient(to bottom, #fff, #4a4ac0); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
+.pc-details p { font-weight: 600; position: relative; top: -8px; white-space: nowrap; font-size: 16px; margin: 0 auto; width: min-content; background-image: linear-gradient(to bottom, #fff, #4a4ac0); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
 
 @keyframes glow-bg { 0% { --bgrotate: 0deg; } 100% { --bgrotate: 360deg; } }
 @keyframes holo-bg { 0% { background-position: 0 var(--background-y), 0 0, center; } 100% { background-position: 0 var(--background-y), 90% 90%, center; } }

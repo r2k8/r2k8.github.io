@@ -245,6 +245,8 @@ section.hero-homepage {
   --background-x: 50%;
   --background-y: 50%;
   --card-radius: 30px;
+  /* CHANGE 2: Restored the hologram icon SVG */
+  --icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M10 9.5L6 12l4 2.5'/%3e%3cpath d='M14 14.5l4-2.5-4-2.5'/%3e%3cpath d='M12 5l-2 14'/%3e%3c/svg%3e");
 }
 
 .pc-card-wrapper {
@@ -319,11 +321,12 @@ section.hero-homepage {
 }
 
 .pc-shine {
-  mask-image: var(--icon);
+  /* CHANGE 2: Restored mask properties for hologram icon */
+  mask-image: linear-gradient(to bottom, black 55%, transparent 75%), var(--icon);
+  mask-size: 100%, 40px;
   mask-mode: luminance;
-  mask-repeat: repeat;
-  mask-size: 150%;
-  mask-position: top calc(200% - (var(--background-y) * 5)) left calc(100% - var(--background-x));
+  mask-repeat: no-repeat, repeat;
+  mask-position: top, center;
   transition: filter 0.6s ease;
   filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
   animation: holo-bg 18s linear infinite;
@@ -378,7 +381,8 @@ section.hero-homepage {
 
 .pc-user-info {
   position: absolute;
-  bottom: 20px;
+  /* CHANGE 1: Raised the user info bar higher */
+  bottom: 35px;
   left: 20px;
   right: 20px;
   z-index: 5;
@@ -395,10 +399,8 @@ section.hero-homepage {
 .pc-user-details { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .pc-mini-avatar { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); flex-shrink: 0; }
 .pc-mini-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-/* REVERTED: Restored the original stacking layout for the user text */
 .pc-user-text { display: flex; align-items: flex-start; flex-direction: column; gap: 6px; }
 .pc-handle { font-size: 14px; font-weight: 500; color: rgba(255, 255, 255, 0.9); line-height: 1; }
-/* REVERTED: Restored the status line style */
 .pc-status { font-size: 13px; color: rgba(255, 255, 255, 0.7); line-height: 1; }
 .pc-contact-btn { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 8px 16px; font-size: 14px; font-weight: 600; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: all 0.2s ease; backdrop-filter: blur(10px); text-decoration: none; }
 .pc-contact-btn:hover { border-color: rgba(255, 255, 255, 0.4); transform: translateY(-1px); }

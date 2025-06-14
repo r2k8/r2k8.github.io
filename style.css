@@ -309,48 +309,14 @@ section.hero-homepage {
   pointer-events: none;
 }
 
-/* CHANGE 1: START - Refactored card internals to fix overlap */
 .pc-inside {
   inset: 1px;
   position: relative;
   background-color: rgba(0, 0, 0, 0.9);
   transform: translate3d(0, 0, 0.01px);
-  display: flex; /* Use flexbox for vertical stacking */
+  display: flex;
   flex-direction: column;
 }
-
-.pc-content {
-  position: relative;
-  transform: none !important;
-  z-index: 1;
-  mix-blend-mode: normal;
-  text-align: center;
-  padding: 1.5em;
-  flex-shrink: 0; /* Prevents this from shrinking */
-}
-
-.pc-details { 
-  position: relative;
-  top: auto;
-}
-
-.pc-avatar-content {
-  mix-blend-mode: screen;
-  overflow: hidden;
-  flex-grow: 1; /* Allows this container to fill remaining space */
-  display: flex;
-  align-items: flex-end; /* Aligns the image to the bottom */
-}
-
-.pc-avatar-content .avatar {
-  position: relative;
-  width: 100%;
-  opacity: 1;
-  transform: none;
-  object-fit: contain;
-  max-height: 100%;
-}
-/* CHANGE 1: END */
 
 .pc-shine {
   mask-image: var(--icon);
@@ -362,7 +328,7 @@ section.hero-homepage {
   filter: brightness(0.66) contrast(1.33) saturate(0.33) opacity(0.5);
   animation: holo-bg 18s linear infinite;
   mix-blend-mode: color-dodge;
-  position: absolute; /* Keep shine/glare as overlays */
+  position: absolute; 
   inset: 0;
   z-index: 2;
 }
@@ -373,9 +339,41 @@ section.hero-homepage {
   background-image: radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsl(248, 25%, 80%) 12%, hsla(207, 40%, 30%, 0.8) 90%);
   mix-blend-mode: overlay;
   filter: brightness(0.8) contrast(1.2);
-  position: absolute; /* Keep shine/glare as overlays */
+  position: absolute;
   inset: 0;
   z-index: 3;
+}
+
+.pc-content {
+  position: relative;
+  transform: none !important;
+  z-index: 1;
+  mix-blend-mode: normal;
+  text-align: center;
+  padding: 1.5em;
+  flex-shrink: 0;
+}
+
+.pc-details { 
+  position: relative;
+  top: auto;
+}
+
+.pc-avatar-content {
+  mix-blend-mode: screen;
+  overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.pc-avatar-content .avatar {
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  transform: none;
+  object-fit: contain;
+  max-height: 100%;
 }
 
 .pc-user-info {
@@ -394,17 +392,19 @@ section.hero-homepage {
   padding: 12px 14px;
   pointer-events: auto;
 }
-.pc-user-details { display: flex; align-items: center; gap: 12px; }
+.pc-user-details { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .pc-mini-avatar { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); flex-shrink: 0; }
 .pc-mini-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-.pc-user-text { display: flex; align-items: flex-start; flex-direction: column; gap: 6px; }
+.pc-user-text { display: flex; align-items: flex-start; flex-direction: column; gap: 6px; flex-grow: 1; min-width: 0; }
 .pc-handle { font-size: 14px; font-weight: 500; color: rgba(255, 255, 255, 0.9); line-height: 1; }
-.pc-status { font-size: 14px; color: rgba(255, 255, 255, 0.7); line-height: 1; }
+/* CHANGE 2: Fix for "Available for opportunities" text cutoff */
+.pc-status { font-size: 13px; color: rgba(255, 255, 255, 0.7); line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pc-contact-btn { border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 8px 16px; font-size: 14px; font-weight: 600; color: rgba(255, 255, 255, 0.9); cursor: pointer; transition: all 0.2s ease; backdrop-filter: blur(10px); text-decoration: none; }
 .pc-contact-btn:hover { border-color: rgba(255, 255, 255, 0.4); transform: translateY(-1px); }
 
-.pc-details h3 { font-weight: 600; margin: 0; font-size: min(5svh, 2.5em); background-image: linear-gradient(to bottom, #fff, #6f6fbe); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
-.pc-details p { font-weight: 600; position: relative; top: -8px; white-space: nowrap; font-size: 16px; margin: 0 auto; width: min-content; background-image: linear-gradient(to bottom, #fff, #4a4ac0); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
+.pc-details h3 { font-weight: 600; margin: 0; font-size: min(5svh, 2.5em); line-height: 1.2; background-image: linear-gradient(to bottom, #fff, #6f6fbe); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
+/* REMOVED: No longer need special style for the P tag since it's gone */
+.pc-details p { display: none; }
 
 @keyframes glow-bg { 0% { --bgrotate: 0deg; } 100% { --bgrotate: 360deg; } }
 @keyframes holo-bg { 0% { background-position: 0 var(--background-y), 0 0, center; } 100% { background-position: 0 var(--background-y), 90% 90%, center; } }

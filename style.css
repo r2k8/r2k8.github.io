@@ -35,7 +35,6 @@ body {
     background-image: linear-gradient(125deg, var(--background-darker) 0%, #1E40AF 25%, var(--dark-green) 50%, #1E40AF 75%, var(--background-darker) 100%);
     background-size: 200% 200%;
     animation: aurora-bg 20s ease infinite;
-    /* BEST PRACTICE: This is the single, reliable way to handle the fixed header. */
     padding-top: var(--header-height);
 }
 
@@ -142,7 +141,7 @@ main a:hover {
 
 /* --- HERO SECTION --- */
 section.hero-homepage {
-    min-height: calc(100vh - var(--header-height)); 
+    min-height: calc(100vh - var(--header-height));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,7 +151,8 @@ section.hero-homepage {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    /* CHANGE 2: Giving more space to the left text column */
+    grid-template-columns: 1.5fr 1fr; 
     align-items: center;
     gap: 50px;
     width: 100%;
@@ -281,9 +281,9 @@ section.hero-homepage {
 }
 
 .pc-card {
-  height: 80svh;
-  max-height: 540px;
-  max-width: 380px;
+  /* CHANGE 2: Decreased overall card size */
+  max-height: 480px;
+  max-width: 340px;
   display: grid;
   aspect-ratio: 0.718;
   border-radius: var(--card-radius);
@@ -368,7 +368,8 @@ section.hero-homepage {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) scale(1);
-  bottom: 2px;
+  /* CHANGE 1: Moved picture down to prevent overlap */
+  bottom: -50px;
   opacity: calc(1.75 - var(--pointer-from-center));
 }
 
@@ -407,8 +408,15 @@ section.hero-homepage {
   mix-blend-mode: luminosity;
 }
 
-.pc-details { width: 100%; position: absolute; top: 3em; display: flex; flex-direction: column; }
-.pc-details h3 { font-weight: 600; margin: 0; font-size: min(5svh, 3em); background-image: linear-gradient(to bottom, #fff, #6f6fbe); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
+.pc-details {
+  width: 100%;
+  position: absolute;
+  /* CHANGE 1: Moved text up to prevent overlap */
+  top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.pc-details h3 { font-weight: 600; margin: 0; font-size: min(5svh, 2.5em); background-image: linear-gradient(to bottom, #fff, #6f6fbe); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
 .pc-details p { font-weight: 600; position: relative; top: -12px; white-space: nowrap; font-size: 16px; margin: 0 auto; width: min-content; background-image: linear-gradient(to bottom, #fff, #4a4ac0); -webkit-text-fill-color: transparent; background-clip: text; -webkit-background-clip: text; }
 
 @keyframes glow-bg { 0% { --bgrotate: 0deg; } 100% { --bgrotate: 360deg; } }

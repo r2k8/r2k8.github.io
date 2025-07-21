@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; text-align: center; background-color: #f9f9f9; color: #333; padding: 2rem; }
+    .container { max-width: 600px; margin: auto; }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    p { font-size: 1.1rem; }
+    a { color: #007aff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .loader { border: 4px solid #f3f3f3; border-top: 4px solid #007aff; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 2rem auto; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+  <div id="redirect-message" class="container">
+    <h1>Finding your link...</h1>
+    <div class="loader"></div>
+    <p>Please wait while we redirect you.</p>
+  </div>
+
+  <div id="not-found-message" class="container" style="display:none;">
+    <h1>404 - Link Not Found</h1>
+    <p>Sorry, we couldn't find a destination for this short link.</p>
+    <p>Return to <a href="/">r2k8.com</a>.</p>
+  </div>
+
+  <script>
+    (async function() {
+      // The path to your links database
+      const linksURL = '/links.json';
+      
+      // Get the path the user tried to access, e.g., "/linkedin"
+      const path = window.location.pathname.toLowerCase();
+      
+      // Clean the path to get the key, e.g., "linkedin"
+      const key = path.startsWith('/') ? path.substring(1) : path;
+
+      // Handle the root path or empty key
+      if (!key) {
+        // If someone lands on 404.html directly, redirect to home
+        window.location.replace('/');
+        return;
+      }
+      
+      try {
+        const response = await fetch(linksURL);
+        if (!response.ok) throw new Error('Could not load links file.');
+        
+        const links = await response.json();
+        
+        if (links && links[key]) {
+          // If a link is found, redirect
+          window.location.replace(links[key]);
+        } else {
+          // If no link is found, show the 404 message
+          document.getElementById('redirect-message').style.display = 'none';
+          document.getElementById('not-found-message').style.display = 'block';
+          document.title = '404 - Link Not Found';
+        }
+      } catch (error) {
+        console.error('URL Shortener Error:', error);
+        // On error, show the 404 message
+        document.getElementById('redirect-message').style.display = 'none';
+        document.getElementById('not-found-message').style.display = 'block';
+        document.title = '404 - Link Not Found';
+      }
+    })();
+  </script>
+
+</body>
+</html>

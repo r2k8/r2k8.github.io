@@ -215,6 +215,7 @@
                 <h2>Global Product Launches</h2>
                 <p class="map-subtitle">An interactive map showcasing the 24 countries where I helped launch Microsoft Teams & Sovereign Cloud solutions for Microsoft from 2013 to 2024.</p>
 
+                <!-- ======= Improved map styles and container (drop-in) ======= -->
                 <style>
                     .map-subtitle {
                         text-align: center;
@@ -222,6 +223,7 @@
                         margin-left: auto;
                         margin-right: auto;
                     }
+
                     #map-container-interactive {
                         position: relative;
                         width: 100%;
@@ -230,24 +232,31 @@
                         border-radius: 8px;
                         overflow: hidden;
                         border: 1px solid var(--card-border-v2);
+                        min-height: 420px;
                     }
+
                     #map-container-interactive svg {
                         width: 100%;
                         height: auto;
                         display: block;
                     }
+
                     #map-container-interactive .country {
                         fill: #334155;
                         stroke: #0F172A;
                         stroke-width: 0.5px;
                     }
+
                     #map-container-interactive .launched-country {
                         cursor: pointer;
                         transition: filter 0.2s ease;
                     }
+
                     #map-container-interactive .launched-country:hover {
                         filter: brightness(1.75);
                     }
+
+                    /* labels under icons */
                     #map-container-interactive .country-label {
                         font-family: 'Inter', sans-serif;
                         fill: white;
@@ -261,6 +270,7 @@
                         stroke-linejoin: miter;
                         pointer-events: none;
                     }
+
                     #map-tooltip {
                         position: absolute;
                         opacity: 0;
@@ -278,6 +288,7 @@
                         transition: opacity 0.2s ease;
                         z-index: 10;
                     }
+
                     #map-tooltip::after {
                         content: '';
                         position: absolute;
@@ -290,11 +301,29 @@
                         border-right: 8px solid transparent;
                         border-top: 8px solid rgba(2, 6, 23, 0.95);
                     }
+
                     #map-tooltip strong {
                         font-size: 16px;
                         display: block;
                         margin-bottom: 4px;
                         color: var(--primary-green);
+                    }
+
+                    /* Icon styling */
+                    .map-team-icon {
+                      pointer-events: auto;
+                      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.35));
+                      transition: transform 0.15s ease, opacity 0.15s ease;
+                    }
+
+                    .map-team-icon:hover {
+                      transform: scale(1.25);
+                      opacity: 1;
+                      z-index: 20;
+                    }
+
+                    @media (max-width: 700px) {
+                        #map-container-interactive { min-height: 320px; }
                     }
                 </style>
 
@@ -302,6 +331,7 @@
                     <div id="map-tooltip"></div>
                 </div>
 
+                <!-- D3 and topojson -->
                 <script src="https://d3js.org/d3.v7.min.js"></script>
                 <script src="https://d3js.org/topojson.v3.min.js"></script>
 
@@ -338,51 +368,147 @@
 
                     const container = d3.select("#map-container-interactive");
                     const tooltip = d3.select("#map-tooltip");
-                    const svg = container.append("svg").attr("viewBox", "0 0 960 500");
+                    const svg = container.append("svg").attr("viewBox", "0 0 960 500").attr("preserveAspectRatio", "xMidYMid meet");
                     const pathGenerator = d3.geoPath(d3.geoMercator().scale(130).translate([450, 290]));
-                    const g = svg.append("g");
-                    
-                    const zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", (event) => g.attr("transform", event.transform));
+                    const mapG = svg.append("g").attr("class", "map-layer");
+                    const iconsG = svg.append("g").attr("class", "icons-layer");
+
+                    // Zoom behavior - keep icons readable with inverse scaling
+                    const zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", (event) => {
+                      mapG.attr("transform", event.transform);
+                      iconsG.attr("transform", event.transform);
+                      // adjust icon group scaling inversely to zoom for readability
+                      const k = event.transform.k;
+                      const invScale = Math.max(0.6, Math.min(1.6, 1 / (k * 0.9)));
+                      iconsG.selectAll('g.team-icon').attr('transform', `scale(${invScale})`);
+                    });
                     svg.call(zoom);
+
+                    // Local path - please ensure this SVG exists
+                    const imageHref = 'assets/images/teams-icon.svg';
+                    const baseIconSize = 28; // px
 
                     d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
                       const countries = topojson.feature(world, world.objects.countries).features;
-                      
-                      // Filter out territories and keep only main country shapes for labeling and interaction
-                      const mainCountries = countries.filter(d => launchDetailsMap.has(d.properties.name));
 
-                      g.selectAll(".country")
+                      // draw countries
+                      mapG.selectAll(".country")
                         .data(countries)
                         .enter().append("path")
                         .attr("d", pathGenerator)
                         .attr("class", d => launchDetailsMap.has(d.properties.name) ? "country launched-country" : "country")
                         .style("fill", d => {
                           const details = launchDetailsMap.get(d.properties.name);
-                          return details ? details.color : null;
+                          return details ? details.color : '#334155';
                         })
-                        .on("mouseover", function(event, d) {
-                           if (launchDetailsMap.has(d.properties.name)) {
-                               const launchInfo = launchDetailsMap.get(d.properties.name);
-                               tooltip.html(`<strong>${d.properties.name}</strong><br>${launchInfo.detail}`)
-                                      .style("opacity", 1);
-                           }
+                        .on("mouseover", function(event,d) {
+                          const nm = d.properties.name;
+                          if (launchDetailsMap.has(nm)) {
+                            const info = launchDetailsMap.get(nm);
+                            tooltip.html(`<strong>${nm}</strong><br>${info.detail}`).style("opacity",1);
+                          }
                         })
                         .on("mousemove", function(event) {
-                           const [x, y] = d3.pointer(event, container.node());
-                           tooltip.style("left", `${x}px`).style("top", `${y}px`);
+                          const [x,y] = d3.pointer(event, container.node());
+                          tooltip.style("left", `${x}px`).style("top", `${y}px`);
                         })
                         .on("mouseout", function() {
-                           tooltip.style("opacity", 0);
+                          tooltip.style("opacity",0);
                         });
 
-                      // Add text labels only to the main shape of a country
-                      g.selectAll(".country-label")
-                        .data(mainCountries)
-                        .enter().append("text")
-                        .attr("class", "country-label")
-                        .attr("transform", d => `translate(${pathGenerator.centroid(d)})`)
-                        .text(d => launchDetailsMap.get(d.properties.name).label);
+                      // helper to compute centroid or fallback bounds midpoint
+                      function getIconPoint(feature) {
+                        const c = pathGenerator.centroid(feature);
+                        if (!isFinite(c[0]) || !isFinite(c[1])) {
+                          const b = pathGenerator.bounds(feature);
+                          return [(b[0][0]+b[1][0])/2, (b[0][1]+b[1][1])/2];
+                        }
+                        return c;
+                      }
+
+                      // pick features to add icons
+                      const mainCountries = countries.filter(d => launchDetailsMap.has(d.properties.name));
+
+                      mainCountries.forEach(feature => {
+                        const details = launchDetailsMap.get(feature.properties.name);
+                        const [cx, cy] = getIconPoint(feature);
+
+                        const iconGroup = iconsG.append('g')
+                          .attr('class', 'team-icon')
+                          .attr('transform', `translate(${cx},${cy})`)
+                          .style('cursor','pointer');
+
+                        iconGroup.append('image')
+                          .attr('href', imageHref)
+                          .attr('width', baseIconSize)
+                          .attr('height', baseIconSize)
+                          .attr('x', -baseIconSize/2)
+                          .attr('y', -baseIconSize/2)
+                          .attr('class', 'map-team-icon')
+                          .on('mouseover', function(event) {
+                            tooltip.html(`<strong>${feature.properties.name}</strong><br>${details.detail}`).style("opacity",1);
+                          })
+                          .on('mousemove', function(event) {
+                            const [x,y] = d3.pointer(event, container.node());
+                            tooltip.style("left", `${x}px`).style("top", `${y}px`);
+                          })
+                          .on('mouseout', function() {
+                            tooltip.style("opacity",0);
+                          })
+                          .on('click', function() {
+                            // optional click handler - link to case study if you have pages
+                            // window.open('https://r2k8.com/case-study-' + feature.properties.name.toLowerCase().replace(/\s+/g,'-'));
+                          });
+
+                        // small label below icon
+                        iconGroup.append('text')
+                          .attr('class','country-label')
+                          .attr('dy', baseIconSize * 0.95)
+                          .attr('text-anchor','middle')
+                          .style('font-size','9px')
+                          .text(details.label);
+                      });
+
+                    }).catch(err => {
+                      console.error('Failed to load world topology:', err);
                     });
+
+                    // --- Export helper for PNG raster (call from console or button)
+                    window.downloadPNG = function(scale = 3, filename = 'r2k8-map.png') {
+                      const svgEl = container.select('svg').node();
+                      if (!svgEl) { alert('SVG not ready'); return; }
+
+                      const serializer = new XMLSerializer();
+                      const svgString = serializer.serializeToString(svgEl);
+                      const blob = new Blob([svgString], {type: 'image/svg+xml;charset=utf-8'});
+                      const url = URL.createObjectURL(blob);
+                      const img = new Image();
+                      img.onload = function() {
+                        const vb = svgEl.viewBox.baseVal;
+                        const w = vb.width * scale;
+                        const h = vb.height * scale;
+                        const canvas = document.createElement('canvas');
+                        canvas.width = w;
+                        canvas.height = h;
+                        const ctx = canvas.getContext('2d');
+
+                        // fill background to match map bg
+                        ctx.fillStyle = '#020617';
+                        ctx.fillRect(0,0,w,h);
+
+                        ctx.drawImage(img, 0, 0, w, h);
+                        const png = canvas.toDataURL('image/png');
+                        const link = document.createElement('a');
+                        link.href = png;
+                        link.download = filename;
+                        document.body.appendChild(link);
+                        link.click();
+                        link.remove();
+                        URL.revokeObjectURL(url);
+                      };
+                      img.onerror = function(e){ console.error('Image load error', e); URL.revokeObjectURL(url); };
+                      img.src = url;
+                    };
                   });
                 </script>
             </div>

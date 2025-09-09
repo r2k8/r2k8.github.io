@@ -1,3 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>R2K8 - Global Teams Launch Map (Poster)</title>
+
+  <!-- Google fonts used by your CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+/* --- BEGIN: Your full provided CSS (kept intact) --- */
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -456,3 +468,339 @@ footer.main-footer .social-links a:hover { text-decoration: underline; }
 section#certifications .hero-buttons {
     justify-content: center;
 }
+
+/* --- END: Your full provided CSS --- */
+
+
+/* -------------------------
+   Map icons (Microsoft Teams)
+   ------------------------- */
+
+/* container holding the SVG icons (placed above map paths) */
+#map-container-interactive .icons-group { pointer-events: none; }
+
+/* icon image styling */
+.map-team-icon {
+  pointer-events: auto;               /* allow tooltip hover on the icon */
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.45));
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  opacity: 0.95;
+  will-change: transform, opacity;
+  display: block;
+}
+
+/* hover / active state for icon */
+.map-team-icon:hover {
+  transform: scale(1.25);
+  opacity: 1;
+  z-index: 20;
+}
+
+/* small label style for icons */
+.team-icon-group text.country-label {
+  fill: var(--text-white);
+  stroke: #000;
+  stroke-width: 2.0px;
+  paint-order: stroke;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+  pointer-events: none;
+  opacity: 0.98;
+}
+
+/* ensure tooltip floats above everything */
+#map-tooltip {
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* contrast variants in case you want white/dark icon variants */
+.map-team-icon--light { filter: drop-shadow(0 6px 10px rgba(0,0,0,0.5)) saturate(0.95); }
+.map-team-icon--dark  { filter: drop-shadow(0 6px 10px rgba(0,0,0,0.5)) invert(1) saturate(0.9); }
+
+/* per-size helper classes (apply via JS if needed) */
+.map-team-icon--small  { width: 20px; height: 20px; }
+.map-team-icon--default{ width: 28px; height: 28px; }
+.map-team-icon--large  { width: 36px; height: 36px; }
+
+/* responsive: keep icons crisp and centered */
+@media (min-width: 1200px) {
+  .map-team-icon { transform-origin: center; }
+}
+
+/* subtle map container styling to help exported poster read well */
+#map-container-interactive {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background-color: rgba(2,6,23,0.85); /* helps SVG pop on dark background and on export */
+}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-block">
+        <div class="site-title"><a href="#"><span class="title-tech">R2</span><span class="title-separator">|</span><span class="title-pro">K8</span><span class="title-domain">.com</span></a></div>
+        <div class="site-subtext">Rama Krishna Sripathi</div>
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#" class="current">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <img src="profile.jpg" alt="Profile" class="header-profile-pic">
+    </div>
+  </header>
+
+  <main>
+    <section id="global-launches" class="bg-light-v2" style="padding: 40px 20px;">
+      <div class="container">
+        <h2 style="margin-bottom:8px;">Global Product Launches</h2>
+        <p class="map-subtitle" style="margin-bottom:18px;">Interactive map showing countries where Microsoft Teams / M365 Sovereign Cloud launches were led.</p>
+
+        <div id="map-container-interactive" style="height: 420px;">
+          <div id="map-tooltip"></div>
+        </div>
+
+        <div style="display:flex;gap:12px;justify-content:center;margin-top:16px;">
+          <button id="downloadBtn" class="btn btn-primary" style="padding:10px 16px;">Download PNG (3×)</button>
+          <a href="#" id="openSvgBtn" class="btn btn-secondary" style="padding:9px 16px;">Open SVG (save manually)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>© <span id="currentYear">2025</span> Rama Krishna Sripathi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- D3 + topojson -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/topojson.v3.min.js"></script>
+
+  <script>
+  // -----------------------------
+  // NOTE: Put a Teams icon at: assets/images/teams-icon.svg
+  // -----------------------------
+
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Country list and launch details
+    const launchedCountries = [
+      { name: 'United Kingdom', label: "Q4 2017", detail: 'Launched Q4 2017', color: '#6a994e' },
+      { name: 'India', label: "Q1 2018", detail: 'Launched Q1 2018', color: '#a3bf4a' },
+      { name: 'Canada', label: "Q3 2018", detail: 'Launched Q3 2018', color: '#f78154' },
+      { name: 'Australia', label: "Q3 2018", detail: 'Launched Q3 2018', color: '#bc4749' },
+      { name: 'Japan', label: "Q3 2018", detail: 'Launched Q3 2018', color: '#d88c9a' },
+      { name: 'France', label: "Q1 2019", detail: 'GDPR-compliant rollout Q1 2019', color: '#669bbc' },
+      { name: 'South Korea', label: "Q3 2019", detail: 'Launched Q3 2019', color: '#0077b6' },
+      { name: 'South Africa', label: "Q3 2019", detail: 'Launched Q3 2019', color: '#f7b267' },
+      { name: 'United Arab Emirates', label: "Q4 2019", detail: 'Launched Q4 2019', color: '#f4a261' },
+      { name: 'Switzerland', label: "Q4 2019", detail: 'GDPR-compliant rollout Q4 2019', color: '#90e0ef' },
+      { name: 'Germany', label: "Q4 2019", detail: 'GDPR-compliant rollout Q4 2019', color: '#4895ef' },
+      { name: 'Norway', label: "Q2 2020", detail: 'GDPR-compliant rollout Q2 2020', color: '#4361ee' },
+      { name: 'Singapore', label: "Q2 2020", detail: 'Launched Q2 2020', color: '#7b2cbf' },
+      { name: 'Brazil', label: "Q4 2020", detail: 'Launched Q4 2020', color: '#f72585' },
+      { name: 'Sweden', label: "Q4 2021", detail: 'GDPR-compliant rollout Q4 2021', color: '#00b4d8' },
+      { name: 'Qatar', label: "Q3 2022", detail: 'Launched Q3 2022', color: '#f27052' },
+      { name: 'Poland', label: "Q2 2023", detail: 'GDPR-compliant rollout Q2 2023', color: '#4cc9f0' },
+      { name: 'Italy', label: "Q3 2023", detail: 'GDPR-compliant rollout Q3 2023', color: '#3f37c9' },
+      { name: 'Israel', label: "Q3 2023", detail: 'Launched Q4 2023', color: '#480ca8' },
+      { name: 'Mexico', label: "Q2 2024", detail: 'Launched Q2 2024', color: '#c1121f' },
+      { name: 'Spain', label: "Q2 2024", detail: 'GDPR-compliant rollout Q2 2024', color: '#780000' },
+      { name: 'Taiwan', label: "Q3 2024", detail: 'Launched Q4 2024', color: '#5e6472' },
+      { name: 'New Zealand', label: "Q4 2024", detail: 'Launched Q4 2024', color: '#6da34d' },
+      { name: 'China', label: "Gallatin 2015", detail: 'Gallatin Sovereign Cloud 2015', color: '#e63946' }
+    ];
+
+    const launchDetailsMap = new Map(launchedCountries.map(c => [c.name, c]));
+
+    const container = d3.select("#map-container-interactive");
+    const tooltip = d3.select("#map-tooltip");
+    // SVG sized for LinkedIn cover proportionally (you can change viewBox if you want different export size)
+    const svg = container.append("svg")
+      .attr("viewBox", "0 0 1584 396")      // Recommended LinkedIn cover: 1584 x 396
+      .attr("preserveAspectRatio", "xMidYMid meet")
+      .style("width", "100%")
+      .style("height", "100%");
+
+    // Adjust projection to match the viewBox
+    const pathGenerator = d3.geoPath(d3.geoMercator().scale(160).translate([1584/2, 396/2]));
+    const g = svg.append("g");
+    const iconsG = svg.append("g").attr("class", "icons-group"); // separate layer for icons
+
+    // zoom behavior
+    const zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", (event) => {
+      g.attr("transform", event.transform);
+      iconsG.attr("transform", event.transform);
+      // scale icons inversely so they remain visually balanced
+      iconsG.selectAll('image')
+        .attr('transform', function() {
+          const k = event.transform.k;
+          const scale = Math.min(Math.max(k, 0.7), 4);
+          return `scale(${1/scale})`;
+        });
+    });
+    svg.call(zoom);
+
+    // Load world topojson
+    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
+      const countries = topojson.feature(world, world.objects.countries).features;
+
+      // draw map
+      g.selectAll(".country")
+        .data(countries)
+        .enter().append("path")
+        .attr("d", pathGenerator)
+        .attr("class", d => launchDetailsMap.has(d.properties.name) ? "country launched-country" : "country")
+        .style("fill", d => {
+          const details = launchDetailsMap.get(d.properties.name);
+          return details ? details.color : '#334155';
+        })
+        .style("stroke", "#0F172A")
+        .style("stroke-width", 0.5)
+        .on("mouseover", function(event, d) {
+          if (launchDetailsMap.has(d.properties.name)) {
+            const launchInfo = launchDetailsMap.get(d.properties.name);
+            tooltip.html(`<strong>${d.properties.name}</strong><br>${launchInfo.detail}`).style("opacity", 1);
+          }
+        })
+        .on("mousemove", function(event) {
+          const [x, y] = d3.pointer(event, container.node());
+          tooltip.style("left", `${x}px`).style("top", `${y}px`);
+        })
+        .on("mouseout", function() {
+          tooltip.style("opacity", 0);
+        });
+
+      // filter for main countries to label/icons
+      const mainCountries = countries.filter(d => launchDetailsMap.has(d.properties.name));
+
+      // helper for centroid; fallback to bounds center
+      function getIconPoint(feature) {
+        const centroid = pathGenerator.centroid(feature);
+        if (!isFinite(centroid[0]) || !isFinite(centroid[1])) {
+          const bounds = pathGenerator.bounds(feature);
+          return [(bounds[0][0] + bounds[1][0]) / 2, (bounds[0][1] + bounds[1][1]) / 2];
+        }
+        return centroid;
+      }
+
+      // path to your local Teams icon (SVG recommended)
+      const imageHref = 'assets/images/teams-icon.svg';
+      const baseIconSize = 34; // px at k=1. Tweak if needed.
+
+      mainCountries.forEach(feature => {
+        const details = launchDetailsMap.get(feature.properties.name);
+        const [cx, cy] = getIconPoint(feature);
+
+        const icon = iconsG.append('g')
+          .attr('class', 'team-icon-group')
+          .attr('transform', `translate(${cx},${cy})`);
+
+        icon.append('image')
+          .attr('href', imageHref)
+          .attr('class', 'map-team-icon map-team-icon--default')
+          .attr('width', baseIconSize)
+          .attr('height', baseIconSize)
+          .attr('preserveAspectRatio', 'xMidYMid meet')
+          .attr('x', -baseIconSize/2)
+          .attr('y', -baseIconSize/2)
+          .style('cursor', 'pointer')
+          .on('mouseover', function(event) {
+            tooltip.html(`<strong>${feature.properties.name}</strong><br>${details.detail}`).style('opacity', 1);
+          })
+          .on('mousemove', function(event) {
+            const [x, y] = d3.pointer(event, container.node());
+            tooltip.style("left", `${x}px`).style("top", `${y}px`);
+          })
+          .on('mouseout', function() {
+            tooltip.style("opacity", 0);
+          });
+
+        // add a small quarter label below icon
+        icon.append('text')
+          .attr('class', 'country-label')
+          .attr('dy', baseIconSize * 0.95)
+          .attr('text-anchor', 'middle')
+          .style('font-size', '10px')
+          .style('fill', '#ffffff')
+          .style('stroke', '#000')
+          .style('stroke-width', '2px')
+          .text(details.label);
+      });
+
+      // ensure icons scale appropriately initially
+      iconsG.selectAll('image').attr('transform', 'scale(1)');
+
+    }); // end d3.json
+
+    // Download helper - export PNG of the current SVG at a given scale
+    function downloadPNG(scale = 3, filename = 'r2k8-map.png') {
+      const svgNode = document.querySelector('#map-container-interactive svg');
+      if (!svgNode) {
+        alert('SVG not ready yet.');
+        return;
+      }
+      const serializer = new XMLSerializer();
+      const svgString = serializer.serializeToString(svgNode);
+      const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const img = new Image();
+      img.onload = function() {
+        // create canvas
+        const canvas = document.createElement('canvas');
+        const vb = svgNode.viewBox.baseVal;
+        canvas.width = Math.round(vb.width * scale);
+        canvas.height = Math.round(vb.height * scale);
+        const ctx = canvas.getContext('2d');
+        // black/dark background fill (match design)
+        ctx.fillStyle = '#020617';
+        ctx.fillRect(0,0,canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        // create link and download
+        const png = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.download = filename;
+        link.href = png;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      };
+      img.onerror = function(e) {
+        console.error('Image load error', e);
+        alert('Failed to render image for download.');
+      };
+      img.src = url;
+    }
+
+    // Wire up buttons
+    document.getElementById('downloadBtn').addEventListener('click', function(){
+      // 3× scale produces a high-res image (you can increase to 4 or 5)
+      downloadPNG(3, 'r2k8-map-3x.png');
+    });
+
+    document.getElementById('openSvgBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const svgNode = document.querySelector('#map-container-interactive svg');
+      if (!svgNode) { alert('SVG not ready.'); return; }
+      const serializer = new XMLSerializer();
+      const svgString = serializer.serializeToString(svgNode);
+      const blob = new Blob([svgString], {type: 'image/svg+xml;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      window.open(url, '_blank');
+    });
+
+  }); // DOMContentLoaded
+  </script>
+</body>
+</html>

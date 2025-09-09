@@ -476,8 +476,8 @@ section#certifications .hero-buttons {
    Map icons (Microsoft Teams)
    ------------------------- */
 
-/* container holding the SVG icons (placed above map paths) */
-#map-container-interactive .icons-group { pointer-events: none; }
+/* allow pointer events on the icons layer so hover/tooltip works */
+#map-container-interactive .icons-group { pointer-events: auto; }
 
 /* icon image styling */
 .map-team-icon {
@@ -706,14 +706,16 @@ section#certifications .hero-buttons {
           .attr('class', 'team-icon-group')
           .attr('transform', `translate(${cx},${cy})`);
 
-        icon.append('image')
-          .attr('href', imageHref)
+          icon.append('image')
           .attr('class', 'map-team-icon map-team-icon--default')
           .attr('width', baseIconSize)
           .attr('height', baseIconSize)
           .attr('preserveAspectRatio', 'xMidYMid meet')
           .attr('x', -baseIconSize/2)
           .attr('y', -baseIconSize/2)
+          // set both href and xlink:href for maximum compatibility
+          .attr('href', imageHref)
+          .attr('xlink:href', imageHref)
           .style('cursor', 'pointer')
           .on('mouseover', function(event) {
             tooltip.html(`<strong>${feature.properties.name}</strong><br>${details.detail}`).style('opacity', 1);

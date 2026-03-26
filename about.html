@@ -37,11 +37,15 @@
             text-shadow: 0 0 5px rgba(4, 255, 128, 0.5), 0 0 15px rgba(4, 255, 128, 0.4), 0 0 30px rgba(4, 255, 128, 0.3);
         }
 
-        /* Subtle glows for timeline cards */
         .glow-border-blue:hover { border-color: #3b82f6; box-shadow: 0 0 20px rgba(59,130,246,0.15); }
         .glow-border-purple:hover { border-color: #a855f7; box-shadow: 0 0 20px rgba(168,85,247,0.15); }
         .glow-border-emerald:hover { border-color: #10b981; box-shadow: 0 0 20px rgba(16,185,129,0.15); }
         .glow-border-orange:hover { border-color: #f97316; box-shadow: 0 0 20px rgba(249,115,22,0.15); }
+        
+        .glow-blue { text-shadow: 0 0 12px rgba(59, 130, 246, 0.6); }
+        .glow-purple { text-shadow: 0 0 12px rgba(168, 85, 247, 0.6); }
+        .glow-emerald { text-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
+        .glow-orange { text-shadow: 0 0 12px rgba(249, 115, 22, 0.6); }
     </style>
 </head>
 <body class="bg-background text-white font-inter min-h-screen selection:bg-brand selection:text-black">
@@ -78,7 +82,6 @@
     </div>
 
     <main class="max-w-4xl mx-auto px-6 mb-24">
-        
         <div class="relative border-l border-bordercolor ml-4 md:ml-0 space-y-12 pb-12">
             
             <div class="relative pl-8 md:pl-12 group">
@@ -86,14 +89,14 @@
                 <div class="bg-card border border-bordercolor p-8 rounded-2xl glow-border-orange transition duration-300 relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-1 h-full bg-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
                     <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-orange-400 transition">Senior TPM & Solutions Architect</h3>
+                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-orange-400 group-hover:glow-orange transition duration-300">Senior Technical Product Manager & Architect</h3>
                         <span class="text-orange-400 font-medium text-sm mt-2 md:mt-0 bg-orange-500/10 px-3 py-1 rounded-full">Jan 2025 – Present</span>
                     </div>
                     <h4 class="text-lg text-gray-400 font-medium mb-6">Cisco</h4>
                     <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
-                        <li><strong>AI & Automation:</strong> Leveraging AI-assisted coding tools (Cursor, Codex) and Python to rapidly prototype automated security review workflows, accelerating engineering delivery.</li>
-                        <li><strong>Product Strategy:</strong> Pioneering a next-generation security platform vision by integrating Large Language Models (LLMs) to create a predictive and proactive security posture.</li>
-                        <li><strong>Security & Compliance:</strong> Leading the compliance-as-code strategy for the Network Device Security (NDSO) portfolio, integrating AI-assisted threat modeling.</li>
+                        <li><strong>Product Vision & AI Strategy:</strong> Defining the product roadmap for a next-generation security platform, integrating Large Language Models (LLMs) to transition enterprise users to a predictive security posture.</li>
+                        <li><strong>Roadmap & Executive Alignment:</strong> Owning the security reporting product strategy for Meraki integration, presenting quarterly readouts to align cross-functional teams and inform multi-million-dollar budget allocations.</li>
+                        <li><strong>Rapid Prototyping & MVPs:</strong> Accelerating time-to-market and bridging the gap between product requirements and engineering execution by building AI-assisted MVP prototypes (Cursor, Python) for automated workflows.</li>
                     </ul>
                 </div>
             </div>
@@ -103,31 +106,14 @@
                 <div class="bg-card border border-bordercolor p-8 rounded-2xl glow-border-blue transition duration-300 relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
                     <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-blue-400 transition">Senior TPM & Senior Solutions Architect</h3>
+                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-blue-400 group-hover:glow-blue transition duration-300">Senior TPM & Senior Solutions Architect</h3>
                         <span class="text-blue-400 font-medium text-sm mt-2 md:mt-0 bg-blue-500/10 px-3 py-1 rounded-full">Jul 2016 – Dec 2024</span>
                     </div>
                     <h4 class="text-lg text-gray-400 font-medium mb-6">Microsoft / LTIMindTree</h4>
                     <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
-                        <li><strong>Cloud Scale:</strong> Architected the globally scalable cloud solution for M365 Teams Go-Local, launching in 23 regions and driving an 80M+ increase in Monthly Active Users (MAU).</li>
+                        <li><strong>Global Cloud Scale:</strong> Architected the globally scalable cloud solution for M365 Teams Go-Local, launching in 23 regions and driving an 80M+ increase in Monthly Active Users (MAU).</li>
                         <li><strong>AI Integration:</strong> Designed the secure, compliant integration of Copilot (LLM-based AI) into Microsoft Teams across 23 global instances, delivering premium features to 35M+ paid users.</li>
-                        <li><strong>Architecture & FinOps:</strong> Engineered a scalable microservices architecture that reduced infrastructure spend by 40%, improved system performance by 15%, and scaled to support 2X user load.</li>
-                        <li><strong>Security & Sovereignty:</strong> Directed a 15-engineer vulnerability management team, migrating platforms to BeyondTrust for ITAR, GCC, and DOD environments, improving scan coverage by 60%.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="relative pl-8 md:pl-12 group">
-                <div class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[8.5px] top-1.5 shadow-[0_0_10px_#10b981]"></div>
-                <div class="bg-card border border-bordercolor p-8 rounded-2xl glow-border-emerald transition duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-emerald-400 transition">Technical Program Manager</h3>
-                        <span class="text-emerald-400 font-medium text-sm mt-2 md:mt-0 bg-emerald-500/10 px-3 py-1 rounded-full">Apr 2013 – Jun 2016</span>
-                    </div>
-                    <h4 class="text-lg text-gray-400 font-medium mb-6">Microsoft China (Beijing)</h4>
-                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
-                        <li>Led the architectural launch and deployment of O365 Exchange Online in the highly regulated China sovereign cloud (Gallatin).</li>
-                        <li>Managed the end-to-end planning, engineering, and deployment of complex O365 services compliant with strict local government regulations.</li>
+                        <li><strong>Architecture & FinOps:</strong> Engineered a scalable microservices architecture that reduced infrastructure spend by 40% and improved system performance by 15%.</li>
                     </ul>
                 </div>
             </div>
@@ -137,26 +123,22 @@
                 <div class="bg-card border border-bordercolor p-8 rounded-2xl glow-border-purple transition duration-300 relative overflow-hidden">
                     <div class="absolute top-0 left-0 w-1 h-full bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
                     <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-purple-400 transition">Software Automation Engineer</h3>
-                        <span class="text-purple-400 font-medium text-sm mt-2 md:mt-0 bg-purple-500/10 px-3 py-1 rounded-full">Prior Experience</span>
+                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-purple-400 group-hover:glow-purple transition duration-300">Software Automation Engineer</h3>
+                        <span class="text-purple-400 font-medium text-sm mt-2 md:mt-0 bg-purple-500/10 px-3 py-1 rounded-full">Foundational Experience</span>
                     </div>
                     <h4 class="text-lg text-gray-400 font-medium mb-6">TCS, Infosys & Founder of AARII</h4>
                     <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
                         <li><strong>Infrastructure Automation:</strong> Developed comprehensive Python and PowerShell scripts to automate enterprise server management, establishing early frameworks for infrastructure-as-code.</li>
-                        <li><strong>Systems Architecture:</strong> Administered complex IT environments for global clients (PwC, Hitachi), managing ~1500 Windows Servers and ~1000 VMware vSphere hosts with 99.9% uptime.</li>
-                        <li><strong>Entrepreneurship:</strong> Piloted a lean E-Commerce initiative (AARII), achieving an 85% satisfaction rate through an agile MVP validation.</li>
+                        <li><strong>Systems Architecture:</strong> Administered complex IT environments for global clients (PwC, Hitachi), managing ~1500 Windows Servers and ~1000 VMware hosts.</li>
                     </ul>
                 </div>
             </div>
-
         </div>
-
     </main>
 
     <section class="bg-card/50 border-t border-bordercolor py-20">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-syne font-bold text-center mb-12">Education & Certifications</h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
                     <h3 class="text-xl font-semibold mb-6 text-brand border-b border-bordercolor pb-2">Academic Background</h3>
@@ -172,31 +154,19 @@
                         </div>
                     </div>
                 </div>
-
                 <div>
                     <h3 class="text-xl font-semibold mb-6 text-brand border-b border-bordercolor pb-2">Active Credentials</h3>
-                    
                     <div class="flex flex-wrap gap-3 mb-8">
                         <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">PMP®</span>
                         <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">Azure AI Engineer Associate</span>
-                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">Azure Administrator Associate</span>
-                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">Google Cloud Digital Leader</span>
                         <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">ISC2 CC – Cybersecurity</span>
-                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">ITIL v3</span>
-                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">AWS Technical</span>
                     </div>
-
                     <div class="flex flex-col gap-3">
                         <a href="https://www.credly.com/users/r2k8" target="_blank" class="flex items-center justify-between bg-card border border-bordercolor px-5 py-3 rounded-xl hover:border-brand hover:text-brand transition group">
-                            <span class="text-sm font-medium text-gray-300 group-hover:text-brand">Verify Credly Badges (PMP, Google, ISC2)</span>
-                            <svg class="w-4 h-4 text-gray-500 group-hover:text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        </a>
-                        <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?tab=credentials-tab" target="_blank" class="flex items-center justify-between bg-card border border-bordercolor px-5 py-3 rounded-xl hover:border-blue-400 hover:text-blue-400 transition group">
-                            <span class="text-sm font-medium text-gray-300 group-hover:text-blue-400">Verify Microsoft Transcript</span>
-                            <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            <span class="text-sm font-medium text-gray-300 group-hover:text-brand">Verify Credly Badges</span>
+                            <svg class="w-4 h-4 text-gray-500 group-hover:text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -207,7 +177,6 @@
             <p>© 2026 Rama S. M.S., PMP®</p>
             <div class="flex space-x-6 mt-4 md:mt-0">
                 <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
-                <a href="https://github.com/r2k8" target="_blank" class="hover:text-white transition">GitHub</a>
                 <a href="mailto:r2k8@outlook.com" class="hover:text-white transition">Contact</a>
             </div>
         </div>
@@ -215,12 +184,11 @@
 
     <script>
         window.addEventListener('scroll', () => {
-            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollTop = document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollPercentage = (scrollTop / scrollHeight) * 100;
             document.getElementById('scroll-progress').style.width = scrollPercentage + '%';
         });
     </script>
-
 </body>
 </html>

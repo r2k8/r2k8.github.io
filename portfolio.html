@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
     <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
     <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
     
@@ -28,114 +29,72 @@
         
         .neon-glow { color: #04FF80; text-shadow: 0 0 10px rgba(4, 255, 128, 0.6), 0 0 20px rgba(4, 255, 128, 0.4); }
         
-        /* Command Center Map Grid Background */
+        /* Cyber Nav Button Styles */
+        .cyber-nav {
+            position: relative; padding: 8px 16px; border: 1px solid #1f1f1f; color: #9ca3af;
+            font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+            transition: all 0.3s ease; background: transparent;
+        }
+        .cyber-nav:hover { border-color: #04FF80; color: #04FF80; background-color: rgba(4, 255, 128, 0.05); }
+        .cyber-nav::after {
+            content: ''; position: absolute; bottom: -5px; left: -1px; right: -1px; height: 2px;
+            background-color: transparent; transition: all 0.3s ease;
+        }
+        .cyber-nav:hover::after { background-color: #04FF80; box-shadow: 0 0 8px rgba(4, 255, 128, 0.6); }
+        .cyber-nav-active { border-color: #04FF80; color: #04FF80; background-color: rgba(4, 255, 128, 0.05); }
+        .cyber-nav-active::after { background-color: #04FF80; box-shadow: 0 0 8px rgba(4, 255, 128, 0.6); }
+
+        /* Command Center Grid */
         .tech-grid {
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            background-position: center center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px; background-position: center center;
         }
 
         /* Holographic Vertical Light Beam */
         .holo-beam {
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1px;
-            height: 40px;
-            background: linear-gradient(to bottom, transparent, rgba(4, 255, 128, 0.5));
-            opacity: 0.3;
-            transition: all 0.4s ease;
+            position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); width: 1px; height: 35px;
+            background: linear-gradient(to bottom, transparent, rgba(4, 255, 128, 0.6)); opacity: 0.4; transition: all 0.4s ease;
         }
 
         /* Product Icons (Teams & Exchange) */
-        .holo-icon {
-            position: relative;
-            width: 14px;
-            height: 14px;
-            border-radius: 4px;
-            transition: all 0.4s ease;
-            z-index: 2;
-            filter: drop-shadow(0 0 4px rgba(255,255,255,0.3));
-        }
+        .holo-icon { position: relative; width: 12px; height: 12px; border-radius: 4px; transition: all 0.4s ease; z-index: 2; filter: drop-shadow(0 0 4px rgba(255,255,255,0.4)); }
+        .beam-china { background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.8)); opacity: 0.6; }
 
-        /* China Specific Beam */
-        .beam-china { background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.8)); opacity: 0.5; }
-
-        /* Radar Pulse Animation under the icon */
+        /* Radar Pulse Animation */
         .holo-icon::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 20px;
-            height: 20px;
-            background-color: rgba(4, 255, 128, 0.2);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-            z-index: -1;
+            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 16px; height: 16px; background-color: rgba(4, 255, 128, 0.3); border-radius: 50%;
+            animation: pulse 2s infinite; z-index: -1;
         }
-
-        .pulse-blue::after { background-color: rgba(59, 130, 246, 0.3); }
+        .pulse-blue::after { background-color: rgba(59, 130, 246, 0.4); }
 
         @keyframes pulse {
-            0% { width: 14px; height: 14px; opacity: 1; }
-            100% { width: 35px; height: 35px; opacity: 0; }
+            0% { width: 12px; height: 12px; opacity: 1; }
+            100% { width: 30px; height: 30px; opacity: 0; }
         }
 
         /* Interactive Pin Container */
-        .pin-container {
-            position: absolute;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-            z-index: 10;
-        }
-
+        .pin-container { position: absolute; transform: translate(-50%, -50%); cursor: pointer; z-index: 10; }
         .pin-container:hover { z-index: 50; }
-        .pin-container:hover .holo-beam { height: 80px; opacity: 1; background: linear-gradient(to bottom, transparent, #04FF80); }
+        .pin-container:hover .holo-beam { height: 60px; opacity: 1; background: linear-gradient(to bottom, transparent, #04FF80); }
         .pin-container:hover .beam-china { background: linear-gradient(to bottom, transparent, #3b82f6); }
-        .pin-container:hover .holo-icon { transform: scale(1.8); filter: drop-shadow(0 0 10px rgba(255,255,255,0.8)); }
+        .pin-container:hover .holo-icon { transform: scale(1.8); filter: drop-shadow(0 0 10px rgba(255,255,255,0.9)); }
         .pin-container:hover .tooltip { opacity: 1; transform: translate(-50%, -20px) scale(1); pointer-events: auto; }
 
         /* Tech Tooltip */
         .tooltip {
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translate(-50%, 0px) scale(0.95);
-            background: rgba(5, 5, 5, 0.95);
-            border: 1px solid #04FF80;
-            padding: 10px 14px;
-            border-radius: 8px;
-            min-width: 160px;
-            text-align: center;
-            opacity: 0;
-            pointer-events: none;
+            position: absolute; bottom: 100%; left: 50%; transform: translate(-50%, 0px) scale(0.95);
+            background: rgba(5, 5, 5, 0.95); border: 1px solid #04FF80; padding: 10px 14px;
+            border-radius: 8px; min-width: 140px; text-align: center; opacity: 0; pointer-events: none;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(4,255,128,0.2);
-            backdrop-filter: blur(4px);
-            white-space: nowrap;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(4,255,128,0.2); backdrop-filter: blur(4px); white-space: nowrap;
         }
-        
         .tooltip-blue { border-color: #3b82f6; box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(59,130,246,0.3); }
-
         .tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border-width: 5px;
-            border-style: solid;
-            border-color: #04FF80 transparent transparent transparent;
+            content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+            border-width: 5px; border-style: solid; border-color: #04FF80 transparent transparent transparent;
         }
-        
         .tooltip-blue::after { border-color: #3b82f6 transparent transparent transparent; }
-
-        /* Country Pill Hover */
         .country-pill:hover { border-color: #04FF80; color: #04FF80; box-shadow: 0 0 10px rgba(4, 255, 128, 0.2); }
     </style>
 </head>
@@ -146,12 +105,15 @@
     <nav class="border-b border-bordercolor bg-background/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="index.html" class="text-2xl font-syne font-bold neon-glow">r2<span class="text-white/40" style="text-shadow: none;">|</span>k8</a>
-            <div class="hidden md:flex space-x-8 text-sm text-gray-400 font-medium">
-                <a href="about.html" class="hover:text-white transition">Experience</a>
-                <a href="portfolio.html" class="text-white">Portfolio</a>
-                <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
+            
+            <div class="hidden md:flex space-x-3 items-center">
+                <a href="services.html" class="cyber-nav">Services</a>
+                <a href="about.html" class="cyber-nav">Experience</a>
+                <a href="portfolio.html" class="cyber-nav cyber-nav-active">Portfolio</a>
+                <a href="https://linkedin.com/in/r2k8" target="_blank" class="cyber-nav">LinkedIn</a>
             </div>
-            <a href="mailto:r2k8@outlook.com" class="bg-white text-black font-semibold text-sm px-5 py-2 rounded-full hover:bg-gray-200 transition">Get in Touch</a>
+
+            <a href="mailto:r2k8@outlook.com" class="bg-white text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-gray-200 transition">Get in Touch</a>
         </div>
     </nav>
 
@@ -160,54 +122,57 @@
         <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">Hyperscale Cloud Architecture and Product Strategy deployed across 25 global regions.</p>
     </header>
 
-    <section class="max-w-7xl mx-auto mt-16 px-6 relative">
+    <section class="max-w-6xl mx-auto mt-16 px-6 relative">
         <div class="tech-grid bg-card border border-bordercolor rounded-[2rem] relative overflow-hidden shadow-2xl flex flex-col">
             
-            <div class="relative w-full aspect-[1.5/1] md:aspect-[2.5/1] flex items-center justify-center pt-8 overflow-hidden">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="w-[100%] md:w-[90%] h-auto invert opacity-20 pointer-events-none mix-blend-screen" alt="World Map">
+            <div class="w-full flex justify-center pt-10 pb-6 px-4">
+                <div class="relative w-full max-w-4xl">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="w-full h-auto invert opacity-20 pointer-events-none mix-blend-screen block" alt="World Map">
 
-                <div class="pin-container" style="top: 35%; left: 17%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Canada</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 42%; left: 19%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">United States</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 50%; left: 17%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Mexico</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 68%; left: 30%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Brazil</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                    <div class="absolute inset-0">
+                        <div class="pin-container" style="top: 22%; left: 22%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Canada</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 32%; left: 20%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">United States</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 43%; left: 18%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Mexico</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 65%; left: 32%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Brazil</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
 
-                <div class="pin-container" style="top: 30%; left: 47%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">United Kingdom</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 33%; left: 48%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">France</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 36%; left: 47%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Spain</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 32%; left: 50%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Germany</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 34%; left: 49%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Switzerland</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 36%; left: 51%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Italy</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 31%; left: 52%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Poland</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 24%; left: 50%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Norway</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 24%; left: 52%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Sweden</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 23%; left: 47%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">United Kingdom</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 27%; left: 48%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">France</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 32%; left: 46%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Spain</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 25%; left: 50%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Germany</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 28%; left: 50%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Switzerland</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 31%; left: 51%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Italy</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 24%; left: 53%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Poland</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 16%; left: 49%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Norway</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 16%; left: 51%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Sweden</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
 
-                <div class="pin-container" style="top: 41%; left: 56%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Israel</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 45%; left: 60%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">UAE</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 47%; left: 59%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Qatar</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 72%; left: 53%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">South Africa</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 37%; left: 58%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Israel</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 45%; left: 63%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">UAE</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 44%; left: 62%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Qatar</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 75%; left: 54%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">South Africa</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
 
-                <div class="pin-container" style="top: 49%; left: 68%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">India</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 57%; left: 76%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Singapore</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 36%; left: 81%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">South Korea</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 37%; left: 84%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Japan</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 44%; left: 81%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Taiwan</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 75%; left: 84%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Australia</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
-                <div class="pin-container" style="top: 80%; left: 91%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">New Zealand</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 46%; left: 71%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">India</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 60%; left: 79%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Singapore</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 34%; left: 84%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">South Korea</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 33%; left: 87%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Japan</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 44%; left: 83%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Taiwan</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 78%; left: 86%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Australia</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
+                        <div class="pin-container" style="top: 86%; left: 95%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">New Zealand</strong></div><div class="holo-beam"></div><img src="assets/images/teams-icon.svg" class="holo-icon" alt="Teams"></div>
 
-                <div class="pin-container" style="top: 39%; left: 74%;">
-                    <div class="tooltip tooltip-blue">
-                        <strong class="font-syne text-blue-500 text-xs block uppercase tracking-widest">China (Gallatin)</strong>
-                        <span class="text-gray-400 text-xs block mt-1">Sovereign Exchange Launch</span>
+                        <div class="pin-container" style="top: 35%; left: 77%;">
+                            <div class="tooltip tooltip-blue">
+                                <strong class="font-syne text-blue-500 text-xs block uppercase tracking-widest">China (Gallatin)</strong>
+                                <span class="text-gray-400 text-xs block mt-1">Sovereign Exchange Launch</span>
+                            </div>
+                            <div class="holo-beam beam-china"></div>
+                            <svg class="holo-icon pulse-blue" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 5px rgba(59,130,246,0.8));">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="holo-beam beam-china"></div>
-                    <svg class="holo-icon pulse-blue" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 5px rgba(59,130,246,0.6));">
-                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                        <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                        <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                    </svg>
                 </div>
-
             </div>
 
             <div class="w-full bg-[#030303] border-t border-bordercolor p-6 md:p-8 z-20">
@@ -262,7 +227,6 @@
                     <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Copilot Users</p>
                 </div>
             </div>
-
         </div>
     </section>
 

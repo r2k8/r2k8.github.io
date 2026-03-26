@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rama S. | Technology Leader</title>
+    <meta name="description" content="Rama S: Engineering the future with expertise in Product Management, TPM, Solutions Architecture, and AI.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { syne: ['Syne', 'sans-serif'], inter: ['Inter', 'sans-serif'] },
+                    colors: {
+                        background: '#050505',
+                        card: '#0f0f0f',
+                        bordercolor: '#1f1f1f',
+                        brand: '#04FF80' 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #050505; color: #fff; position: relative; overflow-x: hidden; }
+        
+        /* PRIVACY-SAFE CYBER STENCIL
+           This takes your B&W stencil, makes the black transparent, 
+           and tints the remaining lines glowing neon green.
+        */
+        .cyber-stencil {
+            position: absolute;
+            top: 5%;
+            right: -5%;
+            width: 100%;
+            height: 90vh;
+            
+            /* Uses your safe, abstracted image */
+            background-image: url('assets/images/rama_stencil.png'); 
+            background-size: contain;
+            background-position: right center;
+            background-repeat: no-repeat;
+            
+            /* Tints the stencil neon green and adds a subtle glow */
+            filter: drop-shadow(0 0 10px rgba(4, 255, 128, 0.5)) sepia(100%) hue-rotate(85deg) saturate(500%) brightness(1.2);
+            opacity: 0.15; /* Keeps it as a subtle background element */
+            mix-blend-mode: screen; 
+            pointer-events: none;
+            z-index: -2;
+            
+            /* Fades the bottom edge into the background */
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+
+        /* Digital Scanlines overlay */
+        .scanlines {
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0),
+                rgba(0, 0, 0, 0) 2px,
+                rgba(0, 0, 0, 0.5) 2px,
+                rgba(0, 0, 0, 0.5) 4px
+            );
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Custom Swing Animation for the Logo */
+        @keyframes swing {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .neon-glow {
+            color: #04FF80;
+            text-shadow: 0 0 10px rgba(4, 255, 128, 0.6), 0 0 20px rgba(4, 255, 128, 0.4);
+        }
+        
+        .logo-swing {
+            display: inline-block;
+            animation: swing 3s ease-in-out infinite;
+            transform-origin: top center;
+        }
+
+        /* Cyber Nav Button Styles */
+        .cyber-nav {
+            position: relative; padding: 8px 16px; border: 1px solid #1f1f1f; color: #9ca3af;
+            font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+            transition: all 0.3s ease; background: transparent;
+        }
+        .cyber-nav:hover { border-color: #04FF80; color: #04FF80; background-color: rgba(4, 255, 128, 0.05); }
+        .cyber-nav::after {
+            content: ''; position: absolute; bottom: -5px; left: -1px; right: -1px; height: 2px;
+            background-color: transparent; transition: all 0.3s ease;
+        }
+        .cyber-nav:hover::after { background-color: #04FF80; box-shadow: 0 0 8px rgba(4, 255, 128, 0.6); }
+
+        .glow-blue { text-shadow: 0 0 12px rgba(59, 130, 246, 0.6); }
+        .glow-purple { text-shadow: 0 0 12px rgba(168, 85, 247, 0.6); }
+        .glow-emerald { text-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
+        .glow-orange { text-shadow: 0 0 12px rgba(249, 115, 22, 0.6); }
+    </style>
+</head>
+<body class="font-inter selection:bg-brand selection:text-black">
+
+    <div class="cyber-stencil"></div>
+    <div class="scanlines"></div>
+
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-brand shadow-[0_0_15px_#04FF80] z-[100] transition-all duration-150 ease-out" style="width: 0%;"></div>
+
+    <nav class="border-b border-bordercolor bg-background/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-syne font-bold tracking-tight logo-swing neon-glow">
+                r2<span class="text-white/40" style="text-shadow: none;">|</span>k8
+            </a>
+            
+            <div class="hidden md:flex space-x-3 items-center">
+                <a href="services.html" class="cyber-nav">Services</a>
+                <a href="about.html" class="cyber-nav">Experience</a>
+                <a href="portfolio.html" class="cyber-nav">Portfolio</a>
+                <a href="contact.html" class="cyber-nav">Contact</a>
+                <a href="https://linkedin.com/in/r2k8" target="_blank" class="cyber-nav">LinkedIn</a>
+            </div>
+
+            <a href="contact.html" class="bg-white text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-gray-200 transition">
+                Get in Touch
+            </a>
+        </div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center mt-20 px-6 relative">
+        <h1 class="text-5xl md:text-7xl font-syne font-extrabold tracking-tight mb-6 leading-tight uppercase">
+            Engineering the future of <br> <span class="neon-glow">Cloud & AI.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 mb-10 font-light max-w-2xl mx-auto">
+            Hi, I'm Rama S. I build, scale, and secure enterprise technology globally.
+        </p>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-6 my-16">
+        <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-60 shadow-[0_0_15px_#04FF80]"></div>
+    </div>
+
+    <section class="max-w-7xl mx-auto mt-4 px-6 mb-24">
+        <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-bordercolor/30 border border-bordercolor text-xs font-bold tracking-widest uppercase text-gray-400 mb-4">
+                Core Domains of Expertise
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <a href="#product" class="bg-card border border-bordercolor p-8 rounded-2xl hover:border-blue-500 transition duration-300 group cursor-pointer block text-left">
+                <div class="h-12 w-12 bg-blue-500/10 text-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                </div>
+                <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-blue-400 group-hover:glow-blue transition duration-300">Product & AI Strategy</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Driving product vision, integrating GenAI, and delivering user-centric enterprise solutions.</p>
+                <span class="text-blue-500 text-sm font-semibold flex items-center gap-1 group-hover:glow-blue transition">View Impact <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+            </a>
+
+            <a href="#delivery" class="bg-card border border-bordercolor p-8 rounded-2xl hover:border-purple-500 transition duration-300 group cursor-pointer block text-left">
+                <div class="h-12 w-12 bg-purple-500/10 text-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                </div>
+                <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-purple-400 group-hover:glow-purple transition duration-300">Global Program Delivery</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Leading complex, cross-functional initiatives and executing cloud-scale expansions.</p>
+                <span class="text-purple-500 text-sm font-semibold flex items-center gap-1 group-hover:glow-purple transition">View Delivery <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+            </a>
+
+            <a href="#architecture" class="bg-card border border-bordercolor p-8 rounded-2xl hover:border-emerald-500 transition duration-300 group cursor-pointer block text-left">
+                <div class="h-12 w-12 bg-emerald-500/10 text-emerald-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                </div>
+                <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-emerald-400 group-hover:glow-emerald transition duration-300">Enterprise Architecture</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Designing highly available, secure, and compliant infrastructures on M365 and Azure.</p>
+                <span class="text-emerald-500 text-sm font-semibold flex items-center gap-1 group-hover:glow-emerald transition">View Architecture <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+            </a>
+
+            <a href="#security" class="bg-card border border-bordercolor p-8 rounded-2xl hover:border-orange-500 transition duration-300 group cursor-pointer block text-left">
+                <div class="h-12 w-12 bg-orange-500/10 text-orange-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:shadow-[0_0_20px_rgba(249,115,22,0.4)]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h3 class="font-syne font-bold text-xl mb-2 text-white group-hover:text-orange-400 group-hover:glow-orange transition duration-300">Security & Compliance</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-4">Ensuring robust data-residency, framework compliance, and leading enterprise security strategy.</p>
+                <span class="text-orange-500 text-sm font-semibold flex items-center gap-1 group-hover:glow-orange transition">View Security <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></span>
+            </a>
+
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 mb-24 border-t border-bordercolor pt-16">
+        <h2 class="text-3xl font-syne font-bold mb-10 text-center uppercase italic">Featured Career Milestones</h2>
+
+        <div class="space-y-6 max-w-4xl mx-auto">
+            
+            <div id="product" class="p-8 border border-bordercolor rounded-[2rem] bg-card scroll-mt-24 relative overflow-hidden group hover:border-blue-500/50 transition-colors duration-300">
+                <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.8)]"></div>
+                <h3 class="text-blue-400 font-syne font-bold text-2xl mb-2 glow-blue">Product Strategy & AI Highlights</h3>
+                <p class="text-gray-400 mb-4">Driving product vision from ideation to delivery.</p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
+                    <li>Delivered Copilot AI integration, enhancing user workflows and service intelligence.</li>
+                    <li>Acted as Product Owner to deliver enterprise software products and data engineering initiatives.</li>
+                    <li>Piloted lean initiatives bridging access gaps with tech-driven delivery, achieving 85% satisfaction validation.</li>
+                </ul>
+            </div>
+
+            <div id="delivery" class="p-8 border border-bordercolor rounded-[2rem] bg-card scroll-mt-24 relative overflow-hidden group hover:border-purple-500/50 transition-colors duration-300">
+                <div class="absolute top-0 left-0 w-1 h-full bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)]"></div>
+                <h3 class="text-purple-400 font-syne font-bold text-2xl mb-2 glow-purple">Global Program Delivery Highlights</h3>
+                <p class="text-gray-400 mb-4">Leading complex, multi-year initiatives across global matrixed teams.</p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
+                    <li>Spearheaded a transformative, multi-year M365 Microsoft Teams Go-Local expansion program.</li>
+                    <li>Shipped Microsoft Teams into 25 new Geos, unblocking 80 million MAU globally.</li>
+                    <li>Led the synchronized launch of M365 products with Azure GA for seamless interoperability.</li>
+                </ul>
+            </div>
+
+            <div id="architecture" class="p-8 border border-bordercolor rounded-[2rem] bg-card scroll-mt-24 relative overflow-hidden group hover:border-emerald-500/50 transition-colors duration-300">
+                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)]"></div>
+                <h3 class="text-emerald-400 font-syne font-bold text-2xl mb-2 glow-emerald">Enterprise Architecture Highlights</h3>
+                <p class="text-gray-400 mb-4">Designing highly available, secure, and compliant cloud infrastructures.</p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
+                    <li>Led the launch of O365 Exchange Online in China sovereign cloud (Gallatin).</li>
+                    <li>Owned and optimized capacity management for M365 GoLocals, reducing OpEx by 40%.</li>
+                    <li>Managed comprehensive Windows Server administration, VMWare vSphere, and Citrix virtual infrastructures.</li>
+                </ul>
+            </div>
+
+            <div id="security" class="p-8 border border-bordercolor rounded-[2rem] bg-card scroll-mt-24 relative overflow-hidden group hover:border-orange-500/50 transition-colors duration-300">
+                <div class="absolute top-0 left-0 w-1 h-full bg-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.8)]"></div>
+                <h3 class="text-orange-400 font-syne font-bold text-2xl mb-2 glow-orange">Security & Compliance Highlights</h3>
+                <p class="text-gray-400 mb-4">Mitigating risk and ensuring regulatory adherence across global networks.</p>
+                <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
+                    <li>Directed security reporting strategy and roadmap alignment for Meraki integration within Cisco's NDSO.</li>
+                    <li>Ensured strict GDPR and CCPA compliance through rigorous data-residency design across global M365 deployments.</li>
+                    <li>Certified in Cybersecurity (ISC2 CC) with deep expertise in executive-level risk mitigation and service maturity.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <section class="max-w-7xl mx-auto px-6 mb-32 border-t border-bordercolor pt-16">
+        <div class="flex items-center gap-4 mb-8">
+            <h2 class="text-xl font-syne font-bold uppercase text-gray-400 tracking-widest">Creator & Builder Labs</h2>
+            <div class="h-[1px] flex-grow bg-bordercolor"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-card border border-bordercolor border-dashed p-8 rounded-3xl hover:border-white transition-all group">
+                <h3 class="text-xl font-syne font-bold mb-3 group-hover:text-white transition">Digital Storytelling</h3>
+                <p class="text-gray-400 text-sm mb-6">Passionate about narrative and visual pacing. Advanced video editor utilizing Final Cut Pro (FCP) and CapCut for content creation and visual communication.</p>
+                <div class="flex gap-2">
+                    <span class="bg-background border border-bordercolor px-2 py-1 rounded text-[10px] text-gray-400 font-mono">Final Cut Pro</span>
+                    <span class="bg-background border border-bordercolor px-2 py-1 rounded text-[10px] text-gray-400 font-mono">CapCut</span>
+                </div>
+            </div>
+
+            <div class="bg-card border border-bordercolor border-dashed p-8 rounded-3xl hover:border-brand transition-all group">
+                <h3 class="text-xl font-syne font-bold mb-3 group-hover:text-brand transition">Automation Sandbox</h3>
+                <p class="text-gray-400 text-sm mb-6">Tinkering with self-hosted automations and open-source software. Building complex workflows and experimenting with side projects to push technical boundaries.</p>
+                <div class="flex gap-2">
+                    <span class="bg-background border border-bordercolor px-2 py-1 rounded text-[10px] text-gray-400 font-mono">n8n</span>
+                    <span class="bg-background border border-bordercolor px-2 py-1 rounded text-[10px] text-gray-400 font-mono">OpenClaw</span>
+                </div>
+            </div>
+
+            <a href="https://sripathi.one" target="_blank" class="bg-card border border-bordercolor border-dashed p-8 rounded-3xl hover:border-blue-500 transition-all group block">
+                <h3 class="text-xl font-syne font-bold mb-3 group-hover:text-blue-500 transition">sripathi.one</h3>
+                <p class="text-gray-400 text-sm mb-6">Architecting my personal digital real estate. A dedicated family web portal, blog space, and personal hub on the internet.</p>
+                <div class="flex items-center gap-2 text-blue-500 text-xs font-bold uppercase tracking-widest mt-auto">
+                    Visit Portal 
+                    <svg class="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <div class="max-w-5xl mx-auto px-6 mt-10 mb-8">
+        <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-60"></div>
+    </div>
+
+    <footer class="py-8 bg-background">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+            <p>© 2026 Rama S. | Technology Leader</p>
+            <div class="flex space-x-6 mt-4 md:mt-0 font-medium">
+                <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
+                <a href="https://github.com/r2k8" target="_blank" class="hover:text-white transition">GitHub</a>
+                <a href="mailto:r2k8@outlook.com" class="hover:text-white transition">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scroll-progress').style.width = scrollPercentage + '%';
+        });
+    </script>
+
+</body>
+</html>

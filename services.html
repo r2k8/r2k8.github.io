@@ -3,311 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Services - Web Development & Career Coaching | Rama Krishna Sripathi (v2)</title>
-    <meta name="description" content="Offering custom web development, PWA, AI solutions, and job seeker assistance including resume reviews, industry insights, and mock interviews.">
-    <meta name="author" content="Rama Krishna Sripathi">
-    <meta name="keywords" content="Web Development Services, Career Coaching, Resume Review, Mock Interviews, App Development, PWA, AI Solutions, Rama Krishna Sripathi">
-    <meta property="og:title" content="Services - Web Development & Career Coaching | Rama Krishna Sripathi">
-    <meta property="og:description" content="Custom web development, AI solutions, and job seeker assistance including resume reviews and mock interviews.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://r2k8.com/services.html">
-    <meta property="og:image" content="profile.jpg"> 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Services - Web Development & Career Coaching | Rama Krishna Sripathi">
-    <meta name="twitter:description" content="Custom web development, AI solutions, and job seeker assistance.">
-    <meta name="twitter:image" content="profile.jpg"> 
-    <link rel="canonical" href="https://r2k8.com/services.html">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
-    <link rel="stylesheet" href="style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <title>Services | r2|k8 - Technology Consulting</title>
+    <meta name="description" content="Enterprise technology consulting, AI product strategy, and cloud architecture services by Rama S.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PYZR7HK7RW');
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { syne: ['Syne', 'sans-serif'], inter: ['Inter', 'sans-serif'] },
+                    colors: {
+                        background: '#050505',
+                        card: '#0f0f0f',
+                        bordercolor: '#1f1f1f',
+                        brand: '#04FF80' 
+                    }
+                }
+            }
+        }
     </script>
-    </head>
-<body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="logo-block">
-                <div class="site-title">
-                    <a href="index.html">
-                        <span class="title-tech">R2</span><span class="title-separator">|</span><span class="title-pro">K8</span><span class="title-domain">.com</span>
-                    </a>
-                </div>
-                <div class="site-subtext">Rama Krishna Sripathi</div>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #050505; color: #fff; }
+        
+        .neon-glow {
+            color: #04FF80;
+            text-shadow: 0 0 10px rgba(4, 255, 128, 0.6), 0 0 20px rgba(4, 255, 128, 0.4);
+        }
+
+        /* Cyber Nav Button Styles */
+        .cyber-nav {
+            position: relative;
+            padding: 8px 16px;
+            border: 1px solid #1f1f1f;
+            color: #9ca3af;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+        .cyber-nav:hover {
+            border-color: #04FF80;
+            color: #04FF80;
+            background-color: rgba(4, 255, 128, 0.05);
+        }
+        .cyber-nav::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: -1px;
+            right: -1px;
+            height: 2px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+        .cyber-nav:hover::after {
+            background-color: #04FF80;
+            box-shadow: 0 0 8px rgba(4, 255, 128, 0.6);
+        }
+        
+        /* Active State for Services Page */
+        .cyber-nav-active {
+            border-color: #04FF80;
+            color: #04FF80;
+            background-color: rgba(4, 255, 128, 0.05);
+        }
+        .cyber-nav-active::after {
+            background-color: #04FF80;
+            box-shadow: 0 0 8px rgba(4, 255, 128, 0.6);
+        }
+
+        /* Color-Specific Text Glows for Hover Effects */
+        .glow-blue { text-shadow: 0 0 12px rgba(59, 130, 246, 0.6); }
+        .glow-purple { text-shadow: 0 0 12px rgba(168, 85, 247, 0.6); }
+        .glow-emerald { text-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
+        .glow-orange { text-shadow: 0 0 12px rgba(249, 115, 22, 0.6); }
+    </style>
+</head>
+<body class="font-inter selection:bg-brand selection:text-black">
+
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-brand shadow-[0_0_15px_#04FF80] z-[100] transition-all duration-150 ease-out" style="width: 0%;"></div>
+
+    <nav class="border-b border-bordercolor bg-background/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-syne font-bold neon-glow">r2<span class="text-white/40" style="text-shadow: none;">|</span>k8</a>
+            
+            <div class="hidden md:flex space-x-3 items-center">
+                <a href="services.html" class="cyber-nav cyber-nav-active">Services</a>
+                <a href="about.html" class="cyber-nav">Experience</a>
+                <a href="portfolio.html" class="cyber-nav">Portfolio</a>
+                <a href="https://linkedin.com/in/r2k8" target="_blank" class="cyber-nav">LinkedIn</a>
             </div>
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="services.html" class="current">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="recruiters.html">For Recruiters</a></li>
-                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-                </ul>
-            </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
-            <input class="menu-toggle-checkbox" type="checkbox" id="menu-toggle"/>
-            <label class="hamburger-label" for="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </label>
-            <nav class="mobile-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="services.html" class="current">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="recruiters.html">For Recruiters</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+
+            <a href="mailto:r2k8@outlook.com" class="bg-white text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-gray-200 transition">Get in Touch</a>
         </div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center mt-20 px-6">
+        <h1 class="text-5xl md:text-7xl font-syne font-extrabold mb-6 tracking-tighter uppercase">
+            Consulting <span class="neon-glow">& Advisory.</span>
+        </h1>
+        <p class="text-lg text-gray-400 mb-10 font-light max-w-3xl mx-auto leading-relaxed">
+            Partnering with enterprise teams to architect scalable cloud solutions, drive AI product strategy, and navigate complex global compliance.
+        </p>
     </header>
 
-    <main>
-        <section class="hero-banner"> 
-            <div class="container">
-                <h1>My Services</h1>
-                <p class="hero-subtitle">Tailored solutions for your digital projects and career aspirations.</p>
-            </div>
-        </section>
+    <div class="max-w-5xl mx-auto px-6 my-10">
+        <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-60 shadow-[0_0_15px_#04FF80]"></div>
+    </div>
 
-        <section id="what-i-offer">
-            <div class="container">
-                <h2>Web & Application Development</h2>
-                <p>Comprehensive development services designed for impact.</p>
-                <div class="card-container">
-                    <div class="card">
-                        <h3>Custom Website Development</h3>
-                        <p>Professional, responsive websites tailored to your brand and business needs.</p>
-                        <ul>
-                            <li>Modern, mobile-first design</li>
-                            <li>SEO-optimized structure</li>
-                            <li>Fast loading performance</li>
-                            <li>Content management systems (if needed)</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>Web Application Development</h3>
-                        <p>Interactive web applications that solve real business problems.</p>
-                        <ul>
-                            <li>Custom functionality based on your requirements</li>
-                            <li>Database integration and management</li>
-                            <li>User authentication and management</li>
-                            <li>API development and integration</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>Progressive Web Apps (PWAs)</h3>
-                        <p>App-like experiences that work seamlessly across all devices.</p>
-                        <ul>
-                            <li>Offline functionality & Push notifications</li>
-                            <li>Installable on home screens</li>
-                            <li>Cross-platform compatibility</li>
-                            <li>Enhanced user experience</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>AI-Powered Solutions</h3>
-                        <p>Integrate cutting-edge AI capabilities into your applications.</p>
-                        <ul>
-                            <li>Chatbot integration</li>
-                            <li>AI-driven content generation</li>
-                            <li>Data analysis and insights tools</li>
-                            <li>Automation of workflows</li>
-                        </ul>
-                    </div>
+    <main class="max-w-7xl mx-auto px-6 mb-24">
+        <h2 class="text-3xl font-syne font-bold text-center mb-12 uppercase italic text-gray-200">Core Expertise & Offerings</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="bg-card border border-bordercolor p-10 rounded-[2.5rem] hover:border-blue-500/50 transition-colors duration-500 group relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.8)] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="h-12 w-12 bg-blue-500/10 text-blue-500 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-syne font-bold text-white mb-4 group-hover:glow-blue transition">AI Product Strategy & Prototyping</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Bridge the gap between emerging GenAI capabilities and tangible enterprise value. I help organizations define roadmaps for LLM integration (like Copilot), establish RAG architectures, and build rapid Python/Cursor MVPs to prove technical feasibility.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500 uppercase tracking-widest">LLM Integration</span>
+                    <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500 uppercase tracking-widest">Rapid MVPs</span>
                 </div>
             </div>
-        </section>
 
-        <section id="job-seeker-assistance" class="bg-light-v2">
-            <div class="container">
-                <h2>Job Seeker Launchpad</h2>
-                <p>Leveraging my industry experience to help you navigate your tech career.</p>
-                <div class="card-container">
-                    <div class="card">
-                        <h3>Resume & LinkedIn Optimization</h3>
-                        <p>Craft a standout resume and LinkedIn profile. Get expert feedback to highlight your skills, tailor your application for specific roles (TPM, PdM, etc.), and optimize your online presence to attract recruiters.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Industry Insights & Career Strategy</h3>
-                        <p>Gain actionable insights into current market trends, desired skills for tech roles, and effective strategies for your job search or career transition.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Mock Interviews & Feedback</h3>
-                        <p>Participate in realistic mock interviews for Technical Program Manager, Product Manager, and related roles. Receive constructive feedback on your answers, communication, and STAR method application.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Strategic Job Search Guidance</h3>
-                        <p>Get practical tips on networking, identifying the right opportunities, and preparing for both technical and behavioral aspects of the interview process.</p>
-                    </div>
+            <div class="bg-card border border-bordercolor p-10 rounded-[2.5rem] hover:border-emerald-500/50 transition-colors duration-500 group relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="h-12 w-12 bg-emerald-500/10 text-emerald-500 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
                 </div>
-                <div style="margin-top: 30px;">
-                    <a href="contact.html#contact-form-section" class="btn btn-primary">Inquire About Career Services</a>
+                <h3 class="text-2xl font-syne font-bold text-white mb-4 group-hover:glow-emerald transition">Cloud Architecture & FinOps</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Scale your infrastructure without scaling your budget. I provide architectural reviews, microservices consolidation strategies, and Azure/AWS optimization plans. Proven track record of reducing enterprise infrastructure spend by up to 40%.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500 uppercase tracking-widest">Cost Optimization</span>
+                    <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500 uppercase tracking-widest">Microservices</span>
                 </div>
             </div>
-        </section>
-        <section id="toolkit">
-            <div class="container">
-                <h2>My Toolkit & Approach</h2>
-                <p>Leveraging modern tools and best practices for exceptional results.</p>
-                <div class="card-container">
-                    <div class="card">
-                        <h3>GitHub</h3>
-                        <p>For version control, collaboration, and transparent project management.</p>
-                    </div>
-                    <div class="card">
-                        <h3>AI-Assisted Coding</h3>
-                        <p>Utilizing tools like Cursor AI to accelerate development and improve code quality.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Rapid Prototyping</h3>
-                        <p>Using environments like Replit for quick iterations and deployment.</p>
-                    </div>
-                    <div class="card">
-                        <h3>AI Agents & Tools</h3>
-                        <p>Streamlining tasks and enhancing creative solutions with various AI platforms.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Modern Frameworks</h3>
-                        <p>Proficiency in relevant JavaScript frameworks and static site generators.</p>
-                    </div>
-                    <div class="card">
-                        <h3>User-Centric Design</h3>
-                        <p>Focus on creating intuitive, accessible, and "lovable" interfaces.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="development-process" class="bg-light-v2">
-            <div class="container">
-                <h2>My Development Process</h2>
-                <p>A structured approach to deliver your project effectively.</p>
-                <div class="card-container" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px;">
-                    <div class="card">
-                        <h4 style="color:var(--primary-green);"><span style="font-size:1.3rem; display:block; margin-bottom:5px;">1.</span> Discovery & Planning</h4>
-                        <p style="font-size:0.9rem;">Discussing goals, audience, requirements, and overall project vision.</p>
-                    </div>
-                    <div class="card">
-                        <h4 style="color:var(--primary-green);"><span style="font-size:1.3rem; display:block; margin-bottom:5px;">2.</span> Design & Prototyping</h4>
-                        <p style="font-size:0.9rem;">Creating wireframes and visual designs for a great user experience.</p>
-                    </div>
-                    <div class="card">
-                        <h4 style="color:var(--primary-green);"><span style="font-size:1.3rem; display:block; margin-bottom:5px;">3.</span> Development & Testing</h4>
-                        <p style="font-size:0.9rem;">Building your solution with modern tools and agile practices.</p>
-                    </div>
-                    <div class="card">
-                        <h4 style="color:var(--primary-green);"><span style="font-size:1.3rem; display:block; margin-bottom:5px;">4.</span> Launch & Support</h4>
-                        <p style="font-size:0.9rem;">Deploying your project and providing ongoing support as needed.</p>
-                    </div>
+            <div class="bg-card border border-bordercolor p-10 rounded-[2.5rem] hover:border-orange-500/50 transition-colors duration-500 group relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.8)] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="h-12 w-12 bg-orange-500/10 text-orange-500 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-syne font-bold text-white mb-4 group-hover:glow-orange transition">Enterprise Security & Compliance</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Navigate complex, overlapping global regulations with confidence. I design compliance-as-code strategies and security reporting frameworks covering CRA, GDPR, ITAR, and GCC, ensuring your platforms are secure by default.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500 uppercase tracking-widest">CRA / GDPR</span>
+                    <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500 uppercase tracking-widest">Threat Modeling</span>
                 </div>
             </div>
-        </section>
 
-        <section id="cta-services" style="background-color: var(--accent-blue); color: var(--text-white); padding: 50px 0;">
-            <div class="container">
-                <h2 style="color: var(--text-white);">Ready to Build Your Solution or Advance Your Career?</h2>
-                <p style="color: var(--text-gray);">Let's discuss your ideas and create something impactful together.</p>
-                <div class="hero-buttons" style="margin-top: 20px;"> 
-                    <a href="contact.html" class="btn btn-primary" style="background-color: var(--primary-green); color: var(--background-darker);">Get in Touch</a>
-                    <a href="portfolio.html" class="btn btn-secondary">View My Work</a>
+            <div class="bg-card border border-bordercolor p-10 rounded-[2.5rem] hover:border-purple-500/50 transition-colors duration-500 group relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="h-12 w-12 bg-purple-500/10 text-purple-500 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                </div>
+                <h3 class="text-2xl font-syne font-bold text-white mb-4 group-hover:glow-purple transition">Global Program Execution</h3>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    Turn strategic roadmaps into shipped products. I lead multi-year, cross-functional programs—from Go-Local cloud expansions to massive vulnerability management migrations—managing executive stakeholders and unblocking matrixed engineering teams.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500 uppercase tracking-widest">PMP® Certified</span>
+                    <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500 uppercase tracking-widest">Cross-Functional Delivery</span>
                 </div>
             </div>
-        </section>
+
+        </div>
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>© <span id="currentYear">2025</span> Rama Krishna Sripathi. All rights reserved.</p>
-            <div class="social-links">
-                <a href="mailto:r2k8@outlook.com">Email</a> |
-                <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                <a href="https://github.com/r2k8" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <section class="bg-[#030303] border-t border-b border-bordercolor py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-syne font-bold text-center mb-12 uppercase italic text-gray-200">Engagement Models</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-background border border-bordercolor p-8 rounded-[2rem] hover:border-brand transition-colors duration-300">
+                    <h4 class="text-white font-syne font-bold text-xl mb-3">Fractional Product Leadership</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Need senior oversight without a full-time hire? I embed with your team to define AI roadmaps, prioritize backlogs, and bridge the gap between business objectives and engineering execution.
+                    </p>
+                </div>
+                <div class="bg-background border border-bordercolor p-8 rounded-[2rem] hover:border-brand transition-colors duration-300">
+                    <h4 class="text-white font-syne font-bold text-xl mb-3">Architectural Review</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        A focused, short-term engagement to analyze your current cloud footprint. I identify FinOps cost-saving opportunities, scalability bottlenecks, and data residency compliance gaps.
+                    </p>
+                </div>
+                <div class="bg-background border border-bordercolor p-8 rounded-[2rem] hover:border-brand transition-colors duration-300">
+                    <h4 class="text-white font-syne font-bold text-xl mb-3">Advisory & Consulting</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        High-level strategic guidance for founders and executive teams. Providing insight into navigating M365 ecosystems, sovereign cloud launches, and enterprise security transformations.
+                    </p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-24 text-center">
+        <h2 class="text-4xl font-syne font-extrabold mb-6">Ready to scale your next initiative?</h2>
+        <p class="text-gray-400 mb-10 text-lg">Whether you are exploring AI integration or looking to optimize your cloud architecture, let's connect and discuss your roadmap.</p>
+        <a href="mailto:r2k8@outlook.com" class="inline-block bg-brand text-black font-syne font-bold uppercase tracking-widest text-sm px-8 py-4 rounded-full shadow-[0_0_20px_rgba(4,255,128,0.4)] hover:bg-white hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] transition-all duration-300">
+            Start a Conversation
+        </a>
+    </section>
+
+    <footer class="border-t border-bordercolor py-12 bg-background text-center text-sm text-gray-500">
+        <p class="mb-4">© 2026 Rama S. | Technology Leader</p>
+        <div class="flex justify-center space-x-6">
+            <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
+            <a href="https://github.com/r2k8" target="_blank" class="hover:text-white transition">GitHub</a>
+            <a href="mailto:r2k8@outlook.com" class="hover:text-white transition">Contact</a>
         </div>
     </footer>
 
-    <div id="firstVisitPopup" class="popup-overlay" style="display: none;">
-        <div class="popup-content">
-            <button id="closePopupButton" class="popup-close-btn" aria-label="Close popup">&times;</button>
-            <h3>Welcome!</h3>
-            <p>Thanks for visiting my site. I'd love to connect. Feel free to reach out directly:</p>
-            <div class="popup-contact-options">
-                <a href="mailto:r2k8@outlook.com" class="btn popup-btn">Email Me Directly</a>
-                <a href="contact.html#contact-form-section" class="btn popup-btn" style="background-color: var(--primary-green); color: var(--background-darker);">Send a Detailed Message (Form)</a>
-                <a href="sms:+14252433166" class="btn popup-btn sms-btn">Quick Text (SMS)</a>
-            </div>
-            <p style="font-size: 0.9em; margin-top: 15px; color: var(--text-gray);">Phone: +1 425 243 3166</p>
-        </div>
-    </div>
-
     <script>
-        // Copyright Year
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // JavaScript for ARIA attribute on CSS-only checkbox menu
-        const menuToggleCheckbox = document.getElementById('menu-toggle');
-        const hamburgerLabel = document.querySelector('.hamburger-label'); 
-        if (menuToggleCheckbox && hamburgerLabel) {
-            menuToggleCheckbox.addEventListener('change', function() {
-                hamburgerLabel.setAttribute('aria-expanded', this.checked.toString());
-                if (this.checked) {
-                    document.body.classList.add('menu-open-prevent-scroll');
-                } else {
-                    document.body.classList.remove('menu-open-prevent-scroll');
-                }
-            });
-        }
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scroll-progress').style.width = scrollPercentage + '%';
+        });
     </script>
 
-    <script>
-      // First Visit Pop-up Script
-      document.addEventListener('DOMContentLoaded', function() { 
-        const popupOverlay = document.getElementById('firstVisitPopup');
-        const closeButton = document.getElementById('closePopupButton');
-        const visitedFlagKey = 'r2k8SiteVisited_v2.0'; 
-
-        if (popupOverlay && !localStorage.getItem(visitedFlagKey)) {
-          setTimeout(() => {
-            popupOverlay.style.display = 'flex'; 
-            setTimeout(() => { popupOverlay.classList.add('active'); }, 10); 
-          }, 1500);
-          localStorage.setItem(visitedFlagKey, 'true');
-        }
-
-        function closePopup() {
-          if (popupOverlay) {
-            popupOverlay.classList.remove('active');
-            setTimeout(() => { 
-                if (!popupOverlay.classList.contains('active')) {
-                    popupOverlay.style.display = 'none'; 
-                }
-            }, 300);
-          }
-        }
-
-        if (closeButton) {
-          closeButton.addEventListener('click', closePopup);
-        }
-        if (popupOverlay) {
-          popupOverlay.addEventListener('click', function(event) {
-            if (event.target === popupOverlay) {
-              closePopup();
-            }
-          });
-        }
-      });
-    </script>
-    
 </body>
 </html>

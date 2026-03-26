@@ -121,6 +121,9 @@
             border-style: solid;
             border-color: #04FF80 transparent transparent transparent;
         }
+
+        /* Country Pill Hover */
+        .country-pill:hover { border-color: #04FF80; color: #04FF80; box-shadow: 0 0 10px rgba(4, 255, 128, 0.2); }
     </style>
 </head>
 <body class="font-inter selection:bg-brand selection:text-black">
@@ -141,95 +144,95 @@
 
     <header class="max-w-4xl mx-auto text-center mt-20 px-6">
         <h1 class="text-5xl md:text-7xl font-syne font-extrabold mb-6 tracking-tighter uppercase">Global <span class="neon-glow">Impact.</span></h1>
-        <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">Hyperscale Cloud Architecture and Product Strategy deployed across 23 global regions.</p>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">Hyperscale Cloud Architecture and Product Strategy deployed across 25 global regions.</p>
     </header>
 
     <section class="max-w-7xl mx-auto mt-16 px-6 relative">
-        <div class="tech-grid bg-card border border-bordercolor rounded-[2rem] relative overflow-hidden shadow-2xl">
+        <div class="tech-grid bg-card border border-bordercolor rounded-[2rem] relative overflow-hidden shadow-2xl flex flex-col">
             
-            <div class="relative w-full aspect-[2/1] md:aspect-[2.5/1] opacity-40 mix-blend-screen pointer-events-none flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="w-[90%] h-auto invert opacity-30" alt="World Map">
-            </div>
+            <div class="relative w-full aspect-[2/1] md:aspect-[2.5/1] flex items-center justify-center pt-8">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="w-[90%] h-auto invert opacity-20 pointer-events-none mix-blend-screen" alt="World Map">
 
-            <div class="pin-container" style="top: 35%; left: 22%;">
-                <div class="tooltip">
-                    <strong class="font-syne text-brand text-sm block tracking-widest uppercase">North America</strong>
-                    <span class="text-gray-400 text-xs block mt-1">M365 Core Expansion</span>
+                <div class="pin-container" style="top: 35%; left: 22%;">
+                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">North America</strong><span class="text-gray-400 text-xs block mt-1">M365 Core Expansion</span></div>
+                    <div class="holo-beam"></div><div class="holo-dot"></div>
                 </div>
-                <div class="holo-beam"></div>
-                <div class="holo-dot"></div>
-            </div>
-
-            <div class="pin-container" style="top: 25%; left: 47%;">
-                <div class="tooltip">
-                    <strong class="font-syne text-brand text-sm block tracking-widest uppercase">UK & Europe</strong>
-                    <span class="text-gray-400 text-xs block mt-1">GDPR Sovereign Compliant</span>
+                <div class="pin-container" style="top: 25%; left: 47%;">
+                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">UK & Europe</strong><span class="text-gray-400 text-xs block mt-1">GDPR Sovereign Compliant</span></div>
+                    <div class="holo-beam"></div><div class="holo-dot"></div>
                 </div>
-                <div class="holo-beam"></div>
-                <div class="holo-dot"></div>
-            </div>
-
-            <div class="pin-container" style="top: 45%; left: 58%;">
-                <div class="tooltip">
-                    <strong class="font-syne text-brand text-sm block tracking-widest uppercase">Middle East</strong>
-                    <span class="text-gray-400 text-xs block mt-1">Go-Local Regional Launch</span>
+                <div class="pin-container" style="top: 45%; left: 58%;">
+                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">Middle East</strong><span class="text-gray-400 text-xs block mt-1">Go-Local Regional Launch</span></div>
+                    <div class="holo-beam" style="height: 50px;"></div><div class="holo-dot"></div>
                 </div>
-                <div class="holo-beam" style="height: 50px;"></div>
-                <div class="holo-dot"></div>
-            </div>
-
-            <div class="pin-container" style="top: 50%; left: 68%;">
-                <div class="tooltip">
-                    <strong class="font-syne text-brand text-sm block tracking-widest uppercase">India</strong>
-                    <span class="text-gray-400 text-xs block mt-1">Global Delivery Hub</span>
+                <div class="pin-container" style="top: 50%; left: 68%;">
+                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">India</strong><span class="text-gray-400 text-xs block mt-1">Global Delivery Hub</span></div>
+                    <div class="holo-beam" style="height: 100px;"></div><div class="holo-dot"></div>
                 </div>
-                <div class="holo-beam" style="height: 100px;"></div>
-                <div class="holo-dot"></div>
-            </div>
-
-            <div class="pin-container" style="top: 38%; left: 74%;">
-                <div class="tooltip">
-                    <strong class="font-syne text-brand text-sm block tracking-widest uppercase">China (Gallatin)</strong>
-                    <span class="text-gray-400 text-xs block mt-1">Sovereign Cloud Launch 2015</span>
+                <div class="pin-container" style="top: 38%; left: 74%;">
+                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">China (Gallatin)</strong><span class="text-gray-400 text-xs block mt-1">Sovereign Cloud Launch 2015</span></div>
+                    <div class="holo-beam" style="height: 60px;"></div><div class="holo-dot"></div>
                 </div>
-                <div class="holo-beam" style="height: 60px;"></div>
-                <div class="holo-dot"></div>
-            </div>
-
-            <div class="pin-container" style="top: 35%; left: 83%;">
-                <div class="tooltip">
-                    <strong class="font-syne text-brand text-sm block tracking-widest uppercase">Japan</strong>
-                    <span class="text-gray-400 text-xs block mt-1">M365 Go-Local Shipment</span>
+                <div class="pin-container" style="top: 35%; left: 83%;">
+                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">Japan</strong><span class="text-gray-400 text-xs block mt-1">M365 Go-Local Shipment</span></div>
+                    <div class="holo-beam" style="height: 90px;"></div><div class="holo-dot"></div>
                 </div>
-                <div class="holo-beam" style="height: 90px;"></div>
-                <div class="holo-dot"></div>
-            </div>
-
-            <div class="pin-container" style="top: 75%; left: 85%;">
-                <div class="tooltip">
-                    <strong class="font-syne text-brand text-sm block tracking-widest uppercase">Australia / NZ</strong>
-                    <span class="text-gray-400 text-xs block mt-1">Azure Sim-Shipping</span>
+                <div class="pin-container" style="top: 75%; left: 85%;">
+                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">Australia / NZ</strong><span class="text-gray-400 text-xs block mt-1">Azure Sim-Shipping</span></div>
+                    <div class="holo-beam" style="height: 40px;"></div><div class="holo-dot"></div>
                 </div>
-                <div class="holo-beam" style="height: 40px;"></div>
-                <div class="holo-dot"></div>
             </div>
 
-            <div class="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-lg border-t border-bordercolor p-4 md:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="w-full bg-black/60 backdrop-blur-lg border-t border-bordercolor p-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center z-20">
                 <div>
-                    <p class="text-2xl md:text-3xl font-syne font-extrabold text-brand">23</p>
-                    <p class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest mt-1">Global Markets Shipped</p>
+                    <p class="text-3xl font-syne font-extrabold text-brand">25</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Global Markets Shipped</p>
                 </div>
                 <div>
-                    <p class="text-2xl md:text-3xl font-syne font-extrabold text-white">80M+</p>
-                    <p class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest mt-1">MAU Unblocked</p>
+                    <p class="text-3xl font-syne font-extrabold text-white">80M+</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">MAU Unblocked</p>
                 </div>
                 <div>
-                    <p class="text-2xl md:text-3xl font-syne font-extrabold text-white">40%</p>
-                    <p class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest mt-1">Infra Spend Reduced</p>
+                    <p class="text-3xl font-syne font-extrabold text-white">40%</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Infra Spend Reduced</p>
                 </div>
                 <div>
-                    <p class="text-2xl md:text-3xl font-syne font-extrabold text-white">35M+</p>
-                    <p class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest mt-1">Copilot Integrations</p>
+                    <p class="text-3xl font-syne font-extrabold text-white">35M+</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Copilot Integrations</p>
+                </div>
+            </div>
+
+            <div class="w-full bg-[#030303] border-t border-bordercolor p-6 z-20">
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+                    <h3 class="text-[10px] text-brand uppercase tracking-widest font-mono">[ Active Deployment Regions ]</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">United States</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">United Kingdom</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">India</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Canada</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Australia</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Japan</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">France</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">South Korea</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">South Africa</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">United Arab Emirates</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Switzerland</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Germany</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Norway</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Singapore</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Brazil</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Sweden</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Qatar</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Poland</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Italy</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Israel</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Mexico</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Spain</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Taiwan</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">New Zealand</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">China (Gallatin)</span>
                 </div>
             </div>
         </div>
@@ -239,7 +242,6 @@
         <h2 class="text-3xl font-syne font-bold text-center mb-12 uppercase italic">Enterprise Case Studies</h2>
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
             <div class="bg-card border border-bordercolor p-10 rounded-[2rem] hover:border-brand transition-all duration-500 group relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-1 h-full bg-brand shadow-[0_0_15px_#04FF80] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div class="flex items-center justify-between mb-8">
@@ -247,7 +249,7 @@
                     <span class="text-[10px] font-bold text-brand bg-brand/10 px-3 py-1 rounded-full uppercase tracking-widest">Global TPM</span>
                 </div>
                 <p class="text-gray-400 text-sm leading-relaxed mb-8">
-                    Spearheaded the technical roadmap and architectural launch of Microsoft Teams into 23 countries. Navigated complex data residency laws to ensure 100% compliance with local government frameworks while sim-shipping with Azure global regions.
+                    Spearheaded the technical roadmap and architectural launch of Microsoft Teams into 25 countries. Navigated complex data residency laws to ensure 100% compliance with local government frameworks while sim-shipping with Azure global regions.
                 </p>
                 <div class="flex flex-wrap gap-2 pt-6 border-t border-bordercolor">
                     <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500">Data Residency</span>
@@ -299,7 +301,6 @@
                     <span class="bg-background border border-bordercolor px-3 py-1 rounded-full text-[10px] text-gray-500">Risk Mitigation</span>
                 </div>
             </div>
-
         </div>
     </main>
 

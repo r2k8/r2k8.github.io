@@ -3,398 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="Browse-topics=(), run-ad-auction=(), join-ad-interest-group=(), private-state-token-redemption=(), private-state-token-issuance=(), private-aggregation=(), attribution-reporting=()">
-    <meta name="robots" content="noindex, nofollow">
-    <title>About Rama Krishna Sripathi - Technology Leader | r2k8.com (v2)</title>
-    <meta name="description" content="Learn more about Rama Krishna Sripathi, a Versatile Technology Leader specializing in Product Management, TPM, Solutions Architecture, and AI Engineering.">
-    <meta name="author" content="Rama Krishna Sripathi">
-    <meta name="keywords" content="About Rama Krishna Sripathi, Technical Program Manager, TPM, Cloud, AI, Security, PMP, Resume, Experience">
-    <meta property="og:title" content="About Rama Krishna Sripathi - Technology Leader | r2k8.com">
-    <meta property="og:description" content="Learn more about Rama Krishna Sripathi, a Versatile Technology Leader.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://r2k8.com/about.html">
-    <meta property="og:image" content="profile.jpg"> 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Rama Krishna Sripathi - Technology Leader">
-    <meta name="twitter:description" content="Learn more about Rama Krishna Sripathi.">
-    <meta name="twitter:image" content="profile.jpg"> 
-    <link rel="canonical" href="https://r2k8.com/about.html">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
-    <link rel="stylesheet" href="style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <title>Experience | Rama S. - Technology Leader</title>
+    <meta name="description" content="Professional background and career timeline of Rama S., specializing in Cloud Architecture, Security TPM, and AI Product Strategy.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYZR7HK7RW"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PYZR7HK7RW');
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { syne: ['Syne', 'sans-serif'], inter: ['Inter', 'sans-serif'] },
+                    colors: {
+                        background: '#0a0a0a',
+                        card: '#141414',
+                        bordercolor: '#262626',
+                        brand: '#04FF80' 
+                    }
+                }
+            }
+        }
     </script>
     <style>
-        /* Minor style for mobile line breaks in contact links */
-        @media (max-width: 500px) { /* Adjust breakpoint if needed */
-            .contact-links-about .mobile-only-br {
-                display: block; /* Show <br> on mobile */
-            }
-            .contact-links-about span, .contact-links-about a {
-                 margin: 2px 5px; /* Adjust spacing for stacked items */
-            }
-        }
-
-        /* --- New Styles for Liquid Glass & Content Alignment --- */
-        .liquid-glass {
-            background: rgba(28, 37, 54, 0.6);
-            backdrop-filter: blur(15px) saturate(180%);
-            -webkit-backdrop-filter: blur(15px) saturate(180%);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.125);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            padding: 40px;
-            margin-top: 30px;
-        }
+        html { scroll-behavior: smooth; }
         
-        main .container {
-            text-align: center;
+        .neon-glow {
+            color: #04FF80;
+            text-shadow: 0 0 5px rgba(4, 255, 128, 0.5), 0 0 15px rgba(4, 255, 128, 0.4), 0 0 30px rgba(4, 255, 128, 0.3);
         }
 
-        main .container p {
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        main .container a:not(.btn) {
-            color: var(--primary-green) !important;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        main .container a:not(.btn):hover {
-            text-decoration: underline;
-        }
-
-        .experience-card {
-            padding-bottom: 25px;
-            margin-bottom: 25px;
-            border-bottom: 1px solid var(--card-border-v2);
-        }
-        .experience-card:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .experience-card ul {
-            list-style-position: inside;
-            padding-left: 0;
-            display: inline-block; /* Allows margin auto to center the block */
-            text-align: left; /* Aligns text left within the centered block */
-            max-width: 700px;
-            margin-top: 15px;
-        }
-
-        .experience-card ul li {
-            margin-bottom: 12px;
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
-
-        #certifications-about .competencies-grid a {
-            color: var(--text-white) !important; /* Override for certification tags */
-        }
-        
-        /* --- Circular Profile Picture --- */
-        .header-profile-pic, .profile-pic-main {
-            border-radius: 50%; /* Makes the image a circle */
-            border: 3px solid var(--primary-green);
-            object-fit: cover; /* Prevents image distortion */
-            box-shadow: 0 0 15px rgba(4, 255, 128, 0.3); /* Adds a subtle glow */
-        }
+        /* Subtle glows for timeline cards */
+        .glow-border-blue:hover { border-color: #3b82f6; box-shadow: 0 0 20px rgba(59,130,246,0.15); }
+        .glow-border-purple:hover { border-color: #a855f7; box-shadow: 0 0 20px rgba(168,85,247,0.15); }
+        .glow-border-emerald:hover { border-color: #10b981; box-shadow: 0 0 20px rgba(16,185,129,0.15); }
+        .glow-border-orange:hover { border-color: #f97316; box-shadow: 0 0 20px rgba(249,115,22,0.15); }
     </style>
 </head>
-<body>
-    <header class="site-header">
-        <div class="header-container">
-            <div class="logo-block">
-                <div class="site-title">
-                    <a href="index.html">
-                        <span class="title-tech">R2</span><span class="title-separator">|</span><span class="title-pro">K8</span><span class="title-domain">.com</span>
-                    </a>
-                </div>
-                <div class="site-subtext">Rama Krishna Sripathi</div>
+<body class="bg-background text-white font-inter min-h-screen selection:bg-brand selection:text-black">
+
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-brand shadow-[0_0_15px_#04FF80] z-[100] transition-all duration-150 ease-out" style="width: 0%;"></div>
+
+    <nav class="border-b border-bordercolor bg-background/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-syne font-bold tracking-tight neon-glow hover:opacity-80 transition">
+                r2<span class="text-white/40" style="text-shadow: none;">|</span>k8
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+                <a href="about.html" class="text-white transition">Experience</a>
+                <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
+                <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
             </div>
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="current">About Me</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="recruiters.html">For Recruiters</a></li>
-                    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-                </ul>
-            </nav>
-            <img src="profile.jpg" alt="Profile Picture of Rama Krishna Sripathi" class="header-profile-pic">
-            <input class="menu-toggle-checkbox" type="checkbox" id="menu-toggle"/>
-            <label class="hamburger-label" for="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </label>
-            <nav class="mobile-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="current">About Me</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="recruiters.html">For Recruiters</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <a href="mailto:r2k8@outlook.com" class="bg-white text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-gray-200 transition">
+                Get in Touch
+            </a>
         </div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto text-center mt-20 px-6">
+        <h1 class="text-5xl md:text-6xl font-syne font-extrabold tracking-tight mb-6">
+            Professional <span class="neon-glow">Journey.</span>
+        </h1>
+        <p class="text-lg text-gray-400 mb-10 font-light max-w-3xl mx-auto leading-relaxed">
+            16+ years architecting cloud scale, driving AI product strategy, and leading global engineering programs for Fortune 500 enterprises.
+        </p>
     </header>
 
-    <main>
-        <section class="about-header-section" style="background-color: var(--background-darker); border-bottom: 1px solid var(--card-border-v2); text-align:center; padding: 40px 0;">
-            <div class="container">
-                <img src="profile.jpg" alt="Rama Krishna Sripathi" class="profile-pic-main" style="width: 120px; height: 120px;">
-                <h1 style="color: var(--text-white);">Rama Krishna Sripathi, M.S., PMP®</h1>
-                <p class="title" style="color: var(--text-gray); max-width: 600px; margin-left:auto; margin-right:auto;">
-                    TPM | PMT | Cloud Architect | M365 Cloud Expansion, Capacity, Compliance & Security Expert
-                </p>
-                <div class="contact-links-about" style="margin-top:15px; line-height: 1.8;">
-                    <span style="color: var(--text-gray);">📍 Redmond, WA</span>
-                    <span class="contact-separator-pipe"> | </span>
-                    <a href="mailto:r2k8@outlook.com">r2k8@outlook.com</a>
-                    <span class="contact-separator-pipe"> | </span> <br class="mobile-only-br" style="display:none;">
-                    <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <span class="contact-separator-pipe"> | </span>
-                    <a href="https://github.com/r2k8" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
-        </section>
+    <div class="max-w-5xl mx-auto px-6 my-10">
+        <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-60 shadow-[0_0_15px_#04FF80]"></div>
+    </div>
 
-        <section id="summary"> 
-            <div class="container liquid-glass">
-                <h2>Professional Summary</h2>
-                <p style="color: var(--text-gray);">
-                    Passionate about software products and technology, I bring over 16 years of diverse experience in the IT industry. My career spans roles in Technical Program Management, Product Management engineering, operations, and support. As a seasoned Technical Program Manager and Product Owner, I excel at delivering enterprise software products, driving data engineering initiatives, and leading end-to-end product rollouts in new markets. In my recent role as a Technical Program Manager, I spearheaded a transformative, multi-year M365 Microsoft Teams Go-Local expansion program. I led the synchronized launch of M365 products with Azure GA, ensuring seamless integration and interoperability. This initiative successfully deployed Microsoft Teams as part of the M365 SaaS offering across 23 Microsoft Advanced Data Residency and Multi-Geo Cloud instances, benefiting countries such as the UK, IN, CA, AU, JP, and more. Owned capacity management for M365 GoLocals.
-                </p>
-            </div>
-        </section>
-
-        <section id="experience" class="bg-light-v2" style="padding: 50px 0;">
-            <div class="container liquid-glass">
-                <h2>Work Experience</h2>
-                <div class="experience-card">
-                    <h3>TPM</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Cisco, Redmond, Washington, United States</p>
-                    <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Jan 2025 – Present</p>
-                    <ul>
-                        <li>Directed security reporting strategy for Meraki integration within Cisco's NDSO.</li>
-                        <li>Delivered executive-level reports and implemented roadmap alignment for device security risk mitigation.</li>
-                        <li>Conducted quarterly quality readouts (QQRs) and aligned risk themes with service maturity benchmarks.</li>
-                    </ul>
-                </div>
-                <div class="experience-card">
-                    <h3>Sr Technical Program Manager/Technical Product Manager at M365</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Microsoft (via LTIMindTree), Redmond, WA, USA</p>
-                    <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Jul 2016 – Dec 2024 (8 years 6 months)</p>
-                    <ul>
-                        <li>Shipped Microsoft Teams into 23 new Geos (including UK, Australia, Canada, and Japan), unblocking 80 million MAU.</li>
-                        <li>Technical Program Manager with a proven history of successfully delivering Microsoft Teams and integrating Teams with M365 products into Advanced Data Residency Clouds alongside sim-shipping with Azure cloud region.</li>
-                        <li>Possess profound knowledge and in-depth, hands-on experience in Product Management, Program Management, Software Development Life Cycle, Cloud Computing, and Gen AI, and a demonstrated ability to collaborate with cross-functional teams to drive results and meet customer needs.</li>
-                    </ul>
-                </div>
-                <div class="experience-card">
-                    <h3>Technical Program Manager | Technical Product Manager (via LTIMindTree)</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Microsoft China, Chaoyang District, Beijing, China</p>
-                    <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Apr 2013 – Jun 2016 (3 years 3 months)</p>
-                    <ul>
-                        <li>Led the launch of O365 Exchange Online in China sovereign cloud (Gallatin Microsoft's first special cloud).</li>
-                    </ul>
-                </div>
-                 <div class="experience-card">
-                    <h3>Software Engineer at TCS</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Tata Consultancy Services, Bengaluru, Kamataka, India</p>
-                    <p class="date" style="color: var(--text-gray); font-size: 0.9em;">May 2011 – Apr 2013 (2 years)</p>
-                    <ul>
-                        <li>Designed and implemented enterprise-level systems focusing on infrastructure, including Windows Server and VMWare administration.</li>
-                    </ul>
-                </div>
-                <div class="experience-card">
-                    <h3>Founder | Rural E-Commerce Initiative</h3>
-                     <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">AARII Dot Com</p>
-                    <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Mar 2011 – Jun 2011 (4 months)</p>
-                    <ul>
-                        <li>Piloted a lean initiative to bridge rural-urban access gaps with a tech-driven delivery of essential goods.</li>
-                        <li>Key Achievements: Lean Launch MVP in 6 weeks; Agile Validation achieving 85% satisfaction; Team-Driven Pivot based on unit economics.</li>
-                    </ul>
-                </div>
-                <div class="experience-card">
-                    <h3>Software Engineer - Operations Executive</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Infosys, Bengaluru, Karnataka, India</p>
-                    <p class="date" style="color: var(--text-gray); font-size: 0.9em;">Jul 2008 – May 2011 (2 years 11 months)</p>
-                    <ul>
-                        <li>Managed Windows Server administration, AD Migration, VMware vSphere, Citrix virtual infrastructure.</li>
-                        <li>Streamlined operations processes; Implemented innovative solutions to optimize system performance.</li>
-                        <li>Ensured a smooth transition for Albertson's users during and after domain migration to SuperValu.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="core-competencies">
-            <div class="container liquid-glass">
-                <h2>Core Competencies</h2>
-                <div class="competencies-grid">
-                    <div class="competency-tag">Launch Strategies</div>
-                    <div class="competency-tag">Technical Specs</div>
-                    <div class="competency-tag">Usability</div>
-                    <div class="competency-tag">Cloud Technologies (Azure, AWS, GCP)</div>
-                    <div class="competency-tag">Programming (PowerShell, Python, SQL)</div>
-                    <div class="competency-tag">Strategic Planning</div>
-                    <div class="competency-tag">Capacity Management</div>
-                    <div class="competency-tag">Product Management</div>
-                    <div class="competency-tag">Data Compliance</div>
-                    <div class="competency-tag">SaaS Expansion</div>
-                    <div class="competency-tag">Agile/Scrum</div>
-                    <div class="competency-tag">GenAI</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="bg-light-v2" style="padding: 50px 0;">
-            <div class="container liquid-glass">
-                <h2>Education</h2>
-                <div class="experience-card"> 
-                    <h3>Executive Masters in IT, Information Technology</h3>
-                    <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">University of the Cumberlands, KY, USA</p>
-                </div>
-                <div class="experience-card">
-                    <h3>Bachelor of Science - BS, Computer Science</h3>
-                     <p style="font-size: 1.1rem; color: var(--text-white); margin-bottom: 5px;">Osmania University, Hyderabad, India</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="certifications-about">
-            <div class="container liquid-glass">
-                <h2>Professional Certifications</h2>
-                 <div class="competencies-grid certification-badge-grid">
-                    <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Project Management Professional (PMP)®</a>
-                    <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Azure AI Engineer Associate</a>
-                    <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Azure Administrator Associate</a>
-                    <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Google Cloud Digital Leader Certification</a>
-                    <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Build Google Cloud Infrastructure</a>
-                    <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">ISC2 CC – Certified in Cybersecurity</a>
-                    <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">AWS Partner: Technical Accreditation</a>
-                    <a href="https://www.credly.com/users/r2k8" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">ITIL v3 Certified</a>
-                    <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?source=docs" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">MCSA: Cloud Platform and Infrastructure</a>
-                    <a href="https://www.coursera.org/learner/r2k8" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Generative AI for Everyone (DeepLearning.AI)</a>
-                    <a href="https://www.credly.com/users/r2k8" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Data Landscape for GenAI (PMI)</a>
-                    <a href="https://www.coursera.org/learner/r2k8" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Digital Product Management (Coursera)</a>
-                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/NLE947G3XAJQ" target="_blank" rel="noopener noreferrer" class="competency-tag certification-item-v2">Getting Started with Cloud for the Enterprise (Coursera)</a>
-                </div>
-                 <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--card-border-v2);">
-                    <h4 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--text-white);">Verify All Credentials:</h4>
-                    <div class="hero-buttons"> 
-                        <a href="https://www.credly.com/users/r2k8/badges" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--primary-green); color: var(--background-darker);">View All Credly Badges</a>
-                        <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?source=docs" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: var(--accent-blue); color: var(--text-white);">View Microsoft Transcript</a>
+    <main class="max-w-4xl mx-auto px-6 mb-24">
+        
+        <div class="relative border-l border-bordercolor ml-4 md:ml-0 space-y-12 pb-12">
+            
+            <div class="relative pl-8 md:pl-12 group">
+                <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-[8.5px] top-1.5 shadow-[0_0_10px_#f97316]"></div>
+                <div class="bg-card border border-bordercolor p-8 rounded-2xl glow-border-orange transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-orange-400 transition">Technical Program Manager</h3>
+                        <span class="text-orange-400 font-medium text-sm mt-2 md:mt-0 bg-orange-500/10 px-3 py-1 rounded-full">Jan 2025 – Present</span>
                     </div>
+                    <h4 class="text-lg text-gray-400 font-medium mb-6">Cisco</h4>
+                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
+                        <li>Directed security reporting strategy for Meraki integration within Cisco's Network Detection and Security Operations (NDSO).</li>
+                        <li>Delivered executive-level reports and implemented roadmap alignment specifically targeted at device security risk mitigation.</li>
+                        <li>Conducted Quarterly Quality Readouts (QQRs) and aligned risk themes with global service maturity benchmarks.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <section id="cta-about" style="padding: 20px 0;">
-            <div class="container liquid-glass" style="background-color: var(--accent-blue); border-color: rgba(255,255,255,0.2);">
-                <h2 style="color: var(--text-white);">Let's Innovate Together</h2>
-                <p style="color: var(--text-gray);">If you're looking for a versatile technology leader to drive your next initiative, I'd love to connect.</p>
-                <a href="contact.html" class="btn btn-primary" style="background-color: var(--primary-green); color: var(--background-darker);">Contact Me</a>
+            <div class="relative pl-8 md:pl-12 group">
+                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[8.5px] top-1.5 shadow-[0_0_10px_#3b82f6]"></div>
+                <div class="bg-card border border-bordercolor p-8 rounded-2xl glow-border-blue transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-blue-400 transition">Sr. Technical Program Manager / PMT</h3>
+                        <span class="text-blue-400 font-medium text-sm mt-2 md:mt-0 bg-blue-500/10 px-3 py-1 rounded-full">Jul 2016 – Dec 2024</span>
+                    </div>
+                    <h4 class="text-lg text-gray-400 font-medium mb-6">Microsoft / LTIMindTree (M365 Cloud Expansion)</h4>
+                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
+                        <li><strong>Global Cloud Scale:</strong> Led the M365 Microsoft Teams Go-Local expansion, successfully shipping into 23 new Geos (UK, AU, CA, JP) and unblocking +80 million MAUs.</li>
+                        <li><strong>FinOps & Capacity:</strong> Owned capacity management for M365 GoLocals, optimizing architecture to cut infrastructure spend by 40%.</li>
+                        <li><strong>AI & Product Strategy:</strong> Drove Copilot AI integration roadmaps, enhancing user workflows and underlying service intelligence.</li>
+                        <li><strong>Compliance:</strong> Ensured strict GDPR and CCPA compliance through rigorous data-residency network design alongside Azure sim-shipping.</li>
+                    </ul>
+                </div>
             </div>
-        </section>
+
+            <div class="relative pl-8 md:pl-12 group">
+                <div class="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[8.5px] top-1.5 shadow-[0_0_10px_#10b981]"></div>
+                <div class="bg-card border border-bordercolor p-8 rounded-2xl glow-border-emerald transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-emerald-400 transition">Technical Program Manager</h3>
+                        <span class="text-emerald-400 font-medium text-sm mt-2 md:mt-0 bg-emerald-500/10 px-3 py-1 rounded-full">Apr 2013 – Jun 2016</span>
+                    </div>
+                    <h4 class="text-lg text-gray-400 font-medium mb-6">Microsoft China (Beijing)</h4>
+                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
+                        <li>Led the architectural launch and deployment of O365 Exchange Online in the highly regulated China sovereign cloud (Gallatin).</li>
+                        <li>Navigated complex international infrastructure dependencies to deliver Microsoft's first special cloud region.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="relative pl-8 md:pl-12 group">
+                <div class="absolute w-4 h-4 bg-purple-500 rounded-full -left-[8.5px] top-1.5 shadow-[0_0_10px_#a855f7]"></div>
+                <div class="bg-card border border-bordercolor p-8 rounded-2xl glow-border-purple transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-purple-400 transition">Engineering & Infrastructure Foundation</h3>
+                        <span class="text-purple-400 font-medium text-sm mt-2 md:mt-0 bg-purple-500/10 px-3 py-1 rounded-full">2008 – 2013</span>
+                    </div>
+                    <h4 class="text-lg text-gray-400 font-medium mb-6">TCS, Infosys & Founder of AARII</h4>
+                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
+                        <li><strong>Entrepreneurship:</strong> Piloted a lean E-Commerce initiative (AARII), achieving an 85% satisfaction rate through an agile MVP validation.</li>
+                        <li><strong>Infrastructure:</strong> Designed and administered enterprise systems including Windows Server, VMWare vSphere, and Citrix virtual infrastructure.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
     </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>© <span id="currentYear">2025</span> Rama Krishna Sripathi. All rights reserved.</p>
-            <div class="social-links">
-                <a href="mailto:r2k8@outlook.com">Email</a> |
-                <a href="https://linkedin.com/in/r2k8" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                <a href="https://github.com/r2k8" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <section class="bg-card/50 border-t border-bordercolor py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-syne font-bold text-center mb-12">Education & Certifications</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-brand border-b border-bordercolor pb-2">Academic Background</h3>
+                    <div class="space-y-6">
+                        <div class="bg-background border border-bordercolor p-6 rounded-xl hover:border-gray-500 transition">
+                            <h4 class="text-white font-medium text-lg">Executive M.S., Information Technology</h4>
+                            <p class="text-gray-400 text-sm mt-1">University of the Cumberlands, KY, USA</p>
+                            <p class="text-gray-500 text-xs mt-2 font-mono">Major: Cloud Computing | Minor: HCI & Usability</p>
+                        </div>
+                        <div class="bg-background border border-bordercolor p-6 rounded-xl hover:border-gray-500 transition">
+                            <h4 class="text-white font-medium text-lg">Bachelor of Science, Computer Science</h4>
+                            <p class="text-gray-400 text-sm mt-1">Osmania University, Hyderabad, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-6 text-brand border-b border-bordercolor pb-2">Active Credentials</h3>
+                    
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">PMP®</span>
+                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">Azure AI Engineer Associate</span>
+                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">Azure Administrator Associate</span>
+                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">Google Cloud Digital Leader</span>
+                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">ISC2 CC – Cybersecurity</span>
+                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">ITIL v3</span>
+                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-sm">AWS Technical</span>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="https://www.credly.com/users/r2k8" target="_blank" class="flex items-center justify-between bg-card border border-bordercolor px-5 py-3 rounded-xl hover:border-brand hover:text-brand transition group">
+                            <span class="text-sm font-medium text-gray-300 group-hover:text-brand">Verify Credly Badges (PMP, Google, ISC2)</span>
+                            <svg class="w-4 h-4 text-gray-500 group-hover:text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                        <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?tab=credentials-tab" target="_blank" class="flex items-center justify-between bg-card border border-bordercolor px-5 py-3 rounded-xl hover:border-blue-400 hover:text-blue-400 transition group">
+                            <span class="text-sm font-medium text-gray-300 group-hover:text-blue-400">Verify Microsoft Transcript</span>
+                            <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-bordercolor py-8 bg-background">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+            <p>© 2026 Rama S. M.S., PMP®</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
+                <a href="https://github.com/r2k8" target="_blank" class="hover:text-white transition">GitHub</a>
+                <a href="mailto:r2k8@outlook.com" class="hover:text-white transition">Contact</a>
             </div>
         </div>
     </footer>
 
-    <div id="firstVisitPopup" class="popup-overlay" style="display: none;">
-        <div class="popup-content">
-            <button id="closePopupButton" class="popup-close-btn" aria-label="Close popup">&times;</button>
-            <h3>Welcome!</h3>
-            <p>Thanks for visiting my site. I'd love to connect. Feel free to reach out directly:</p>
-            <div class="popup-contact-options">
-                <a href="mailto:r2k8@outlook.com" class="btn popup-btn">Email Me Directly</a>
-                <a href="contact.html#contact-form-section" class="btn popup-btn" style="background-color: var(--primary-green); color: var(--background-darker);">Send a Detailed Message (Form)</a>
-                <a href="sms:+14252433166" class="btn popup-btn sms-btn">Quick Text (SMS)</a>
-            </div>
-            <p style="font-size: 0.9em; margin-top: 15px; color: var(--text-gray);">Phone: +1 425 243 3166</p>
-        </div>
-    </div>
-
     <script>
-        // Copyright Year
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // JavaScript for ARIA attribute on CSS-only checkbox menu
-        const menuToggleCheckbox = document.getElementById('menu-toggle');
-        const hamburgerLabel = document.querySelector('.hamburger-label'); 
-        if (menuToggleCheckbox && hamburgerLabel) {
-            menuToggleCheckbox.addEventListener('change', function() {
-                hamburgerLabel.setAttribute('aria-expanded', this.checked.toString());
-                if (this.checked) {
-                    document.body.classList.add('menu-open-prevent-scroll');
-                } else {
-                    document.body.classList.remove('menu-open-prevent-scroll');
-                }
-            });
-        }
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scroll-progress').style.width = scrollPercentage + '%';
+        });
     </script>
 
-    <script>
-     // First Visit Pop-up Script
-     document.addEventListener('DOMContentLoaded', function() { 
-       const popupOverlay = document.getElementById('firstVisitPopup');
-       const closeButton = document.getElementById('closePopupButton');
-       const visitedFlagKey = 'r2k8SiteVisited_v2.0';
-
-       if (popupOverlay && !localStorage.getItem(visitedFlagKey)) {
-         setTimeout(() => {
-           popupOverlay.style.display = 'flex'; 
-           setTimeout(() => { popupOverlay.classList.add('active'); }, 10); 
-         }, 1500);
-         localStorage.setItem(visitedFlagKey, 'true');
-       }
-
-       function closePopup() {
-         if (popupOverlay) {
-           popupOverlay.classList.remove('active');
-           setTimeout(() => { 
-             if (!popupOverlay.classList.contains('active')) {
-                 popupOverlay.style.display = 'none'; 
-             }
-           }, 300);
-         }
-       }
-
-       if (closeButton) {
-         closeButton.addEventListener('click', closePopup);
-       }
-       if (popupOverlay) {
-         popupOverlay.addEventListener('click', function(event) {
-           if (event.target === popupOverlay) {
-             closePopup();
-           }
-         });
-       }
-     });
-    </script>
-   
 </body>
 </html>

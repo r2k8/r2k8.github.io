@@ -42,26 +42,29 @@
             bottom: 100%;
             left: 50%;
             transform: translateX(-50%);
-            width: 2px;
-            height: 80px;
-            background: linear-gradient(to bottom, transparent, rgba(4, 255, 128, 0.8));
-            opacity: 0.5;
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, rgba(4, 255, 128, 0.5));
+            opacity: 0.3;
             transition: all 0.4s ease;
         }
 
-        /* Glowing Location Dot */
-        .holo-dot {
+        /* Product Icons (Teams & Exchange) */
+        .holo-icon {
             position: relative;
-            width: 8px;
-            height: 8px;
-            background-color: #04FF80;
-            border-radius: 50%;
-            box-shadow: 0 0 15px #04FF80, 0 0 30px #04FF80;
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
             transition: all 0.4s ease;
+            z-index: 2;
+            filter: drop-shadow(0 0 4px rgba(255,255,255,0.3));
         }
 
-        /* Radar Pulse Animation under the dot */
-        .holo-dot::after {
+        /* China Specific Beam */
+        .beam-china { background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.8)); opacity: 0.5; }
+
+        /* Radar Pulse Animation under the icon */
+        .holo-icon::after {
             content: '';
             position: absolute;
             top: 50%;
@@ -69,15 +72,17 @@
             transform: translate(-50%, -50%);
             width: 20px;
             height: 20px;
-            background-color: rgba(4, 255, 128, 0.3);
+            background-color: rgba(4, 255, 128, 0.2);
             border-radius: 50%;
             animation: pulse 2s infinite;
             z-index: -1;
         }
 
+        .pulse-blue::after { background-color: rgba(59, 130, 246, 0.3); }
+
         @keyframes pulse {
-            0% { width: 8px; height: 8px; opacity: 1; }
-            100% { width: 40px; height: 40px; opacity: 0; }
+            0% { width: 14px; height: 14px; opacity: 1; }
+            100% { width: 35px; height: 35px; opacity: 0; }
         }
 
         /* Interactive Pin Container */
@@ -88,39 +93,46 @@
             z-index: 10;
         }
 
-        .pin-container:hover .holo-beam { height: 120px; opacity: 1; background: linear-gradient(to bottom, transparent, #04FF80); }
-        .pin-container:hover .holo-dot { transform: scale(1.5); background-color: #fff; }
-        .pin-container:hover .tooltip { opacity: 1; transform: translate(-50%, -10px) scale(1); pointer-events: auto; }
+        .pin-container:hover { z-index: 50; }
+        .pin-container:hover .holo-beam { height: 80px; opacity: 1; background: linear-gradient(to bottom, transparent, #04FF80); }
+        .pin-container:hover .beam-china { background: linear-gradient(to bottom, transparent, #3b82f6); }
+        .pin-container:hover .holo-icon { transform: scale(1.8); filter: drop-shadow(0 0 10px rgba(255,255,255,0.8)); }
+        .pin-container:hover .tooltip { opacity: 1; transform: translate(-50%, -20px) scale(1); pointer-events: auto; }
 
         /* Tech Tooltip */
         .tooltip {
             position: absolute;
             bottom: 100%;
             left: 50%;
-            transform: translate(-50%, 10px) scale(0.95);
+            transform: translate(-50%, 0px) scale(0.95);
             background: rgba(5, 5, 5, 0.95);
             border: 1px solid #04FF80;
-            padding: 12px 16px;
+            padding: 10px 14px;
             border-radius: 8px;
-            min-width: 180px;
+            min-width: 160px;
             text-align: center;
             opacity: 0;
             pointer-events: none;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(4,255,128,0.2);
             backdrop-filter: blur(4px);
+            white-space: nowrap;
         }
         
+        .tooltip-blue { border-color: #3b82f6; box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 15px rgba(59,130,246,0.3); }
+
         .tooltip::after {
             content: '';
             position: absolute;
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
-            border-width: 6px;
+            border-width: 5px;
             border-style: solid;
             border-color: #04FF80 transparent transparent transparent;
         }
+        
+        .tooltip-blue::after { border-color: #3b82f6 transparent transparent transparent; }
 
         /* Country Pill Hover */
         .country-pill:hover { border-color: #04FF80; color: #04FF80; box-shadow: 0 0 10px rgba(4, 255, 128, 0.2); }
@@ -150,43 +162,86 @@
     <section class="max-w-7xl mx-auto mt-16 px-6 relative">
         <div class="tech-grid bg-card border border-bordercolor rounded-[2rem] relative overflow-hidden shadow-2xl flex flex-col">
             
-            <div class="relative w-full aspect-[2/1] md:aspect-[2.5/1] flex items-center justify-center pt-8">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="w-[90%] h-auto invert opacity-20 pointer-events-none mix-blend-screen" alt="World Map">
+            <div class="relative w-full aspect-[1.5/1] md:aspect-[2.5/1] flex items-center justify-center pt-8 overflow-hidden">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" class="w-[100%] md:w-[90%] h-auto invert opacity-20 pointer-events-none mix-blend-screen" alt="World Map">
 
-                <div class="pin-container" style="top: 35%; left: 22%;">
-                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">North America</strong><span class="text-gray-400 text-xs block mt-1">M365 Core Expansion</span></div>
-                    <div class="holo-beam"></div><div class="holo-dot"></div>
+                <div class="pin-container" style="top: 35%; left: 17%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Canada</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 42%; left: 19%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">United States</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 50%; left: 17%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Mexico</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 68%; left: 30%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Brazil</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+
+                <div class="pin-container" style="top: 30%; left: 47%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">United Kingdom</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 33%; left: 48%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">France</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 36%; left: 47%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Spain</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 32%; left: 50%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Germany</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 34%; left: 49%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Switzerland</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 36%; left: 51%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Italy</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 31%; left: 52%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Poland</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 24%; left: 50%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Norway</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 24%; left: 52%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Sweden</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+
+                <div class="pin-container" style="top: 41%; left: 56%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Israel</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 45%; left: 60%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">UAE</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 47%; left: 59%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Qatar</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 72%; left: 53%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">South Africa</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+
+                <div class="pin-container" style="top: 49%; left: 68%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">India</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 57%; left: 76%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Singapore</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 36%; left: 81%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">South Korea</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 37%; left: 84%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Japan</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 44%; left: 81%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Taiwan</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 75%; left: 84%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">Australia</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+                <div class="pin-container" style="top: 80%; left: 91%;"><div class="tooltip"><strong class="font-syne text-brand text-xs block uppercase tracking-widest">New Zealand</strong></div><div class="holo-beam"></div><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" class="holo-icon" alt="Teams"></div>
+
+                <div class="pin-container" style="top: 39%; left: 74%;">
+                    <div class="tooltip tooltip-blue">
+                        <strong class="font-syne text-blue-500 text-xs block uppercase tracking-widest">China (Gallatin)</strong>
+                        <span class="text-gray-400 text-xs block mt-1">Sovereign Exchange Launch</span>
+                    </div>
+                    <div class="holo-beam beam-china"></div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Microsoft_Exchange_Server_icon.svg" class="holo-icon pulse-blue" style="filter: drop-shadow(0 0 5px rgba(59,130,246,0.6));" alt="Exchange">
                 </div>
-                <div class="pin-container" style="top: 25%; left: 47%;">
-                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">UK & Europe</strong><span class="text-gray-400 text-xs block mt-1">GDPR Sovereign Compliant</span></div>
-                    <div class="holo-beam"></div><div class="holo-dot"></div>
-                </div>
-                <div class="pin-container" style="top: 45%; left: 58%;">
-                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">Middle East</strong><span class="text-gray-400 text-xs block mt-1">Go-Local Regional Launch</span></div>
-                    <div class="holo-beam" style="height: 50px;"></div><div class="holo-dot"></div>
-                </div>
-                <div class="pin-container" style="top: 50%; left: 68%;">
-                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">India</strong><span class="text-gray-400 text-xs block mt-1">Global Delivery Hub</span></div>
-                    <div class="holo-beam" style="height: 100px;"></div><div class="holo-dot"></div>
-                </div>
-                <div class="pin-container" style="top: 38%; left: 74%;">
-                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">China (Gallatin)</strong><span class="text-gray-400 text-xs block mt-1">Sovereign Cloud Launch 2015</span></div>
-                    <div class="holo-beam" style="height: 60px;"></div><div class="holo-dot"></div>
-                </div>
-                <div class="pin-container" style="top: 35%; left: 83%;">
-                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">Japan</strong><span class="text-gray-400 text-xs block mt-1">M365 Go-Local Shipment</span></div>
-                    <div class="holo-beam" style="height: 90px;"></div><div class="holo-dot"></div>
-                </div>
-                <div class="pin-container" style="top: 75%; left: 85%;">
-                    <div class="tooltip"><strong class="font-syne text-brand text-sm block tracking-widest uppercase">Australia / NZ</strong><span class="text-gray-400 text-xs block mt-1">Azure Sim-Shipping</span></div>
-                    <div class="holo-beam" style="height: 40px;"></div><div class="holo-dot"></div>
-                </div>
+
             </div>
 
-            <div class="w-full bg-black/60 backdrop-blur-lg border-t border-bordercolor p-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center z-20">
+            <div class="w-full bg-[#030303] border-t border-bordercolor p-6 md:p-8 z-20">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+                    <h3 class="text-xs text-white uppercase tracking-widest font-syne font-bold">[ Successfully Delivered In 25 Global Markets ]</h3>
+                </div>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">United States</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">United Kingdom</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">India</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Canada</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Australia</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Japan</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">France</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">South Korea</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">South Africa</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">United Arab Emirates</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Switzerland</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Germany</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Norway</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Singapore</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Brazil</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Sweden</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Qatar</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Poland</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Italy</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Israel</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Mexico</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Spain</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">Taiwan</span>
+                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] md:text-xs text-gray-400 font-mono transition cursor-default hover:bg-brand/5">New Zealand</span>
+                    <span class="country-pill px-3 py-1.5 border border-blue-500/50 rounded-md text-[10px] md:text-xs text-blue-400 font-mono transition cursor-default hover:bg-blue-500/10">China (Gallatin)</span>
+                </div>
+            </div>
+            
+            <div class="w-full bg-[#0a0a0a] border-t border-bordercolor p-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center z-20">
                 <div>
                     <p class="text-3xl font-syne font-extrabold text-brand">25</p>
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Global Markets Shipped</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Markets Shipped</p>
                 </div>
                 <div>
                     <p class="text-3xl font-syne font-extrabold text-white">80M+</p>
@@ -198,43 +253,10 @@
                 </div>
                 <div>
                     <p class="text-3xl font-syne font-extrabold text-white">35M+</p>
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Copilot Integrations</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Copilot Users</p>
                 </div>
             </div>
 
-            <div class="w-full bg-[#030303] border-t border-bordercolor p-6 z-20">
-                <div class="flex items-center gap-2 mb-4">
-                    <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
-                    <h3 class="text-[10px] text-brand uppercase tracking-widest font-mono">[ Active Deployment Regions ]</h3>
-                </div>
-                <div class="flex flex-wrap gap-2">
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">United States</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">United Kingdom</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">India</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Canada</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Australia</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Japan</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">France</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">South Korea</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">South Africa</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">United Arab Emirates</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Switzerland</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Germany</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Norway</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Singapore</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Brazil</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Sweden</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Qatar</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Poland</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Italy</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Israel</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Mexico</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Spain</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">Taiwan</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">New Zealand</span>
-                    <span class="country-pill px-3 py-1.5 border border-bordercolor rounded-md text-[10px] text-gray-400 font-mono transition cursor-default">China (Gallatin)</span>
-                </div>
-            </div>
         </div>
     </section>
 

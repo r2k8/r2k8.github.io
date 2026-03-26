@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience | r2|k8 - Technology Leader</title>
-    <meta name="description" content="Professional background and career timeline of Rama S., specializing in Cloud Architecture, Security, and AI Product Strategy.">
+    <title>Contact | r2|k8 - Technology Leadership</title>
+    <meta name="description" content="Get in touch with Rama S. for enterprise consulting, AI product strategy, and technical program management.">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -71,28 +71,37 @@
             background-color: #04FF80;
             box-shadow: 0 0 8px rgba(4, 255, 128, 0.6);
         }
-        
-        /* Active State (Experience Page) */
-        .cyber-nav-active {
-            border-color: #04FF80;
-            color: #04FF80;
-            background-color: rgba(4, 255, 128, 0.05);
+
+        /* Form Input Styling */
+        .cyber-input {
+            width: 100%;
+            background-color: #0a0a0a;
+            border: 1px solid #1f1f1f;
+            border-radius: 12px;
+            padding: 16px 20px;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
         }
-        .cyber-nav-active::after {
-            background-color: #04FF80;
-            box-shadow: 0 0 8px rgba(4, 255, 128, 0.6);
+        .cyber-input:focus {
+            outline: none;
+            border-color: #04FF80;
+            box-shadow: 0 0 15px rgba(4, 255, 128, 0.2);
+            background-color: #0d0d0d;
+        }
+        .cyber-input::placeholder {
+            color: #4b5563;
         }
 
-        /* Subtle glows for timeline cards */
-        .glow-border-blue:hover { border-color: #3b82f6; box-shadow: 0 0 20px rgba(59,130,246,0.15); }
-        .glow-border-purple:hover { border-color: #a855f7; box-shadow: 0 0 20px rgba(168,85,247,0.15); }
-        .glow-border-emerald:hover { border-color: #10b981; box-shadow: 0 0 20px rgba(16,185,129,0.15); }
-        .glow-border-orange:hover { border-color: #f97316; box-shadow: 0 0 20px rgba(249,115,22,0.15); }
-        
-        .glow-blue { text-shadow: 0 0 12px rgba(59, 130, 246, 0.6); }
-        .glow-purple { text-shadow: 0 0 12px rgba(168, 85, 247, 0.6); }
-        .glow-emerald { text-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
-        .glow-orange { text-shadow: 0 0 12px rgba(249, 115, 22, 0.6); }
+        /* Tech Grid Background */
+        .tech-grid {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center center;
+        }
     </style>
 </head>
 <body class="font-inter selection:bg-brand selection:text-black">
@@ -105,143 +114,125 @@
             
             <div class="hidden md:flex space-x-3 items-center">
                 <a href="services.html" class="cyber-nav">Services</a>
-                <a href="about.html" class="cyber-nav cyber-nav-active">Experience</a>
+                <a href="about.html" class="cyber-nav">Experience</a>
                 <a href="portfolio.html" class="cyber-nav">Portfolio</a>
                 <a href="https://linkedin.com/in/r2k8" target="_blank" class="cyber-nav">LinkedIn</a>
             </div>
 
-            <a href="mailto:r2k8@outlook.com" class="bg-white text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-gray-200 transition">Get in Touch</a>
+            <a href="contact.html" class="bg-brand shadow-[0_0_15px_rgba(4,255,128,0.4)] text-black font-bold uppercase tracking-widest text-[10px] px-6 py-3 rounded-full cursor-default">
+                Secure Channel Open
+            </a>
         </div>
     </nav>
 
     <header class="max-w-4xl mx-auto text-center mt-20 px-6">
         <h1 class="text-5xl md:text-7xl font-syne font-extrabold mb-6 tracking-tighter uppercase">
-            Professional <span class="neon-glow">Journey.</span>
+            Initiate <span class="neon-glow">Contact.</span>
         </h1>
-        <p class="text-lg text-gray-400 mb-10 font-light max-w-3xl mx-auto leading-relaxed">
-            Proven expertise architecting cloud scale, driving AI product strategy, and leading global engineering programs for Fortune 500 enterprises.
+        <p class="text-lg text-gray-400 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+            Available for executive consulting, fractional leadership, and enterprise architecture engagements.
         </p>
     </header>
 
-    <div class="max-w-5xl mx-auto px-6 my-10">
-        <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-60 shadow-[0_0_15px_#04FF80]"></div>
-    </div>
-
-    <main class="max-w-4xl mx-auto px-6 mb-24">
-        <div class="relative border-l border-bordercolor ml-4 md:ml-0 space-y-12 pb-12">
+    <main class="max-w-6xl mx-auto px-6 mb-32">
+        <div class="tech-grid bg-card border border-bordercolor rounded-[2.5rem] overflow-hidden shadow-2xl relative">
             
-            <div class="relative pl-8 md:pl-12 group">
-                <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-[8.5px] top-1.5 shadow-[0_0_10px_#f97316]"></div>
-                <div class="bg-card border border-bordercolor p-8 rounded-3xl glow-border-orange transition duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-orange-400 group-hover:glow-orange transition duration-300">Senior Technical Product Manager & Architect</h3>
-                        <span class="text-orange-400 font-medium text-xs tracking-widest uppercase mt-2 md:mt-0 bg-orange-500/10 px-3 py-1 rounded-full border border-orange-500/20">Jan 2025 – Present</span>
+            <div class="grid grid-cols-1 lg:grid-cols-5 relative z-10">
+                
+                <div class="lg:col-span-2 p-10 md:p-12 border-b lg:border-b-0 lg:border-r border-bordercolor bg-black/40 backdrop-blur-sm flex flex-col h-full">
+                    
+                    <div class="inline-flex items-center gap-3 px-4 py-2 bg-brand/10 border border-brand/20 rounded-full mb-10 w-max">
+                        <span class="relative flex h-3 w-3">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-brand shadow-[0_0_8px_#04FF80]"></span>
+                        </span>
+                        <span class="text-brand text-[10px] font-bold uppercase tracking-widest">Accepting New Engagements</span>
                     </div>
-                    <h4 class="text-lg text-gray-400 font-medium mb-6">Cisco</h4>
-                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
-                        <li><strong>Product Vision & AI Strategy:</strong> Defining the product roadmap for a next-generation security platform, integrating Large Language Models (LLMs) to transition enterprise users to a predictive security posture.</li>
-                        <li><strong>Roadmap & Executive Alignment:</strong> Owning the security reporting product strategy for Meraki integration, presenting quarterly readouts to align cross-functional teams and inform multi-million-dollar budget allocations.</li>
-                        <li><strong>Rapid Prototyping & MVPs:</strong> Accelerating time-to-market and bridging the gap between product requirements and engineering execution by building AI-assisted MVP prototypes (Cursor, Python) for automated workflows.</li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="relative pl-8 md:pl-12 group">
-                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[8.5px] top-1.5 shadow-[0_0_10px_#3b82f6]"></div>
-                <div class="bg-card border border-bordercolor p-8 rounded-3xl glow-border-blue transition duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-blue-400 group-hover:glow-blue transition duration-300">Senior TPM & Senior Solutions Architect</h3>
-                        <span class="text-blue-400 font-medium text-xs tracking-widest uppercase mt-2 md:mt-0 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">Jul 2016 – Dec 2024</span>
-                    </div>
-                    <h4 class="text-lg text-gray-400 font-medium mb-6">Microsoft / LTIMindTree</h4>
-                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
-                        <li><strong>Global Cloud Scale:</strong> Architected the globally scalable cloud solution for M365 Teams Go-Local, launching in 25 regions and driving an 80M+ increase in Monthly Active Users (MAU).</li>
-                        <li><strong>AI Integration:</strong> Designed the secure, compliant integration of Copilot (LLM-based AI) into Microsoft Teams across global instances, delivering premium features to 35M+ paid users.</li>
-                        <li><strong>Architecture & FinOps:</strong> Engineered a scalable microservices architecture that reduced infrastructure spend by 40% and improved system performance by 15%.</li>
-                    </ul>
-                </div>
-            </div>
+                    <h2 class="text-3xl font-syne font-bold mb-8 text-white">Direct Comms.</h2>
+                    
+                    <div class="space-y-8 flex-grow">
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-mono mb-1">Base of Operations</p>
+                            <p class="text-gray-300 font-medium">Greater Seattle Area, WA</p>
+                        </div>
+                        
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-mono mb-1">Direct Email</p>
+                            <a href="mailto:r2k8@outlook.com" class="text-white font-medium hover:text-brand hover:underline underline-offset-4 transition">r2k8@outlook.com</a>
+                        </div>
 
-            <div class="relative pl-8 md:pl-12 group">
-                <div class="absolute w-4 h-4 bg-purple-500 rounded-full -left-[8.5px] top-1.5 shadow-[0_0_10px_#a855f7]"></div>
-                <div class="bg-card border border-bordercolor p-8 rounded-3xl glow-border-purple transition duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)] opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <h3 class="text-2xl font-syne font-bold text-white group-hover:text-purple-400 group-hover:glow-purple transition duration-300">Software Automation Engineer</h3>
-                        <span class="text-purple-400 font-medium text-xs tracking-widest uppercase mt-2 md:mt-0 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">Foundational Experience</span>
+                        <div>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-mono mb-1">Professional Network</p>
+                            <a href="https://linkedin.com/in/r2k8" target="_blank" class="text-white font-medium hover:text-brand hover:underline underline-offset-4 transition">linkedin.com/in/r2k8</a>
+                        </div>
                     </div>
-                    <h4 class="text-lg text-gray-400 font-medium mb-6">TCS, Infosys & Founder of AARII</h4>
-                    <ul class="list-disc list-inside text-gray-300 space-y-3 text-sm leading-relaxed">
-                        <li><strong>Infrastructure Automation:</strong> Developed comprehensive Python and PowerShell scripts to automate enterprise server management, establishing early frameworks for infrastructure-as-code.</li>
-                        <li><strong>Systems Architecture:</strong> Administered complex IT environments for global clients (PwC, Hitachi), managing ~1500 Windows Servers and ~1000 VMware hosts.</li>
-                    </ul>
+
+                    <div class="mt-12 pt-8 border-t border-bordercolor">
+                        <p class="text-gray-500 text-xs italic">Certified PMP® | ISC2 CC | Microsoft Certified Architect</p>
+                    </div>
                 </div>
+
+                <div class="lg:col-span-3 p-10 md:p-12 bg-black/80 backdrop-blur-sm">
+                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="name" class="text-[10px] text-gray-400 uppercase tracking-widest font-mono ml-1">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Jane Doe" required class="cyber-input">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="email" class="text-[10px] text-gray-400 uppercase tracking-widest font-mono ml-1">Corporate Email</label>
+                                <input type="email" id="email" name="email" placeholder="jane@company.com" required class="cyber-input">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="subject" class="text-[10px] text-gray-400 uppercase tracking-widest font-mono ml-1">Engagement Type</label>
+                            <div class="relative">
+                                <select id="subject" name="subject" class="cyber-input appearance-none cursor-pointer">
+                                    <option value="Fractional Leadership">Fractional Leadership / PMT</option>
+                                    <option value="Cloud Architecture">Cloud Architecture & FinOps</option>
+                                    <option value="Security Compliance">Security & Compliance (CRA/GDPR)</option>
+                                    <option value="General Inquiry">General Inquiry / Networking</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-brand">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="text-[10px] text-gray-400 uppercase tracking-widest font-mono ml-1">Transmission Details</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Provide context regarding your technical challenges, scale, or roadmap goals..." required class="cyber-input resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand text-black font-syne font-bold uppercase tracking-widest text-sm px-8 py-5 rounded-xl shadow-[0_0_20px_rgba(4,255,128,0.3)] hover:bg-white hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] transition-all duration-300 mt-4">
+                            Transmit Message
+                        </button>
+                    </form>
+                </div>
+
             </div>
         </div>
     </main>
-
-    <section class="bg-card border-t border-bordercolor py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-syne font-bold text-center mb-12 uppercase italic">Education & Certifications</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-xl font-semibold mb-6 text-brand border-b border-bordercolor pb-2">Academic Background</h3>
-                    <div class="space-y-6">
-                        <div class="bg-background border border-bordercolor p-6 rounded-2xl hover:border-gray-500 transition">
-                            <h4 class="text-white font-medium text-lg">Executive M.S., Information Technology</h4>
-                            <p class="text-gray-400 text-sm mt-1">University of the Cumberlands, KY, USA</p>
-                            <p class="text-gray-500 text-xs mt-2 font-mono">Major: Cloud Computing | Minor: HCI & Usability</p>
-                        </div>
-                        <div class="bg-background border border-bordercolor p-6 rounded-2xl hover:border-gray-500 transition">
-                            <h4 class="text-white font-medium text-lg">Bachelor of Science, Computer Science</h4>
-                            <p class="text-gray-400 text-sm mt-1">Osmania University, Hyderabad, India</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-xl font-semibold mb-6 text-brand border-b border-bordercolor pb-2">Active Credentials</h3>
-                    
-                    <div class="flex flex-wrap gap-3 mb-8">
-                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-xs tracking-widest uppercase">PMP®</span>
-                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-xs tracking-widest uppercase">Azure AI Engineer Associate</span>
-                        <span class="bg-background border border-bordercolor text-gray-300 px-4 py-2 rounded-lg text-xs tracking-widest uppercase">ISC2 CC – Cybersecurity</span>
-                    </div>
-
-                    <div class="flex flex-col gap-3">
-                        <a href="https://www.credly.com/users/r2k8" target="_blank" class="flex items-center justify-between bg-background border border-bordercolor px-5 py-4 rounded-2xl hover:border-brand hover:text-brand transition group">
-                            <span class="text-sm font-medium text-gray-300 group-hover:text-brand">Verify Credly Badges</span>
-                            <svg class="w-4 h-4 text-gray-500 group-hover:text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        </a>
-                        <a href="https://learn.microsoft.com/en-us/users/r2k8/transcript/d8eqjs0w59p9l6z?tab=credentials-tab" target="_blank" class="flex items-center justify-between bg-background border border-bordercolor px-5 py-4 rounded-2xl hover:border-blue-400 hover:text-blue-400 transition group">
-                            <span class="text-sm font-medium text-gray-300 group-hover:text-blue-400">Verify Microsoft Transcript</span>
-                            <svg class="w-4 h-4 text-gray-500 group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <footer class="border-t border-bordercolor py-12 bg-background text-center text-sm text-gray-500">
         <p class="mb-4">© 2026 Rama S. | Technology Leader</p>
         <div class="flex justify-center space-x-6">
             <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
             <a href="https://github.com/r2k8" target="_blank" class="hover:text-white transition">GitHub</a>
-            <a href="mailto:r2k8@outlook.com" class="hover:text-white transition">Contact</a>
+            <a href="mailto:r2k8@outlook.com" class="hover:text-white transition">Email</a>
         </div>
     </footer>
 
     <script>
         window.addEventListener('scroll', () => {
-            const scrollTop = document.documentElement.scrollTop;
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollPercentage = (scrollTop / scrollHeight) * 100;
             document.getElementById('scroll-progress').style.width = scrollPercentage + '%';
         });
     </script>
+
 </body>
 </html>

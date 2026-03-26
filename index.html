@@ -12,15 +12,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     
+    <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { syne: ['Syne', 'sans-serif'], inter: ['Inter', 'sans-serif'] },
                     colors: {
-                        background: '#0a0a0a',
-                        card: '#141414',
-                        bordercolor: '#262626',
+                        background: '#050505', /* Deepened to match portfolio */
+                        card: '#0f0f0f',
+                        bordercolor: '#1f1f1f',
                         brand: '#04FF80' 
                     }
                 }
@@ -29,37 +32,71 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
+        body { background-color: #050505; color: #fff; }
         
         /* Main Brand Neon Glow (Green) */
         .neon-glow {
             color: #04FF80;
-            text-shadow: 
-                0 0 5px rgba(4, 255, 128, 0.5), 
-                0 0 15px rgba(4, 255, 128, 0.4), 
-                0 0 30px rgba(4, 255, 128, 0.3);
+            text-shadow: 0 0 10px rgba(4, 255, 128, 0.6), 0 0 20px rgba(4, 255, 128, 0.4);
         }
 
-        /* Color-Specific Text Glows for Hover Effects & Headers */
+        /* Cyber Nav Button Styles */
+        .cyber-nav {
+            position: relative;
+            padding: 8px 16px;
+            border: 1px solid #1f1f1f;
+            color: #9ca3af;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+        .cyber-nav:hover {
+            border-color: #04FF80;
+            color: #04FF80;
+            background-color: rgba(4, 255, 128, 0.05);
+        }
+        .cyber-nav::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: -1px;
+            right: -1px;
+            height: 2px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+        .cyber-nav:hover::after {
+            background-color: #04FF80;
+            box-shadow: 0 0 8px rgba(4, 255, 128, 0.6);
+        }
+
+        /* Color-Specific Text Glows for Hover Effects */
         .glow-blue { text-shadow: 0 0 12px rgba(59, 130, 246, 0.6); }
         .glow-purple { text-shadow: 0 0 12px rgba(168, 85, 247, 0.6); }
         .glow-emerald { text-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
         .glow-orange { text-shadow: 0 0 12px rgba(249, 115, 22, 0.6); }
     </style>
 </head>
-<body class="bg-background text-white font-inter min-h-screen selection:bg-brand selection:text-black">
+<body class="font-inter selection:bg-brand selection:text-black">
 
     <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-brand shadow-[0_0_15px_#04FF80] z-[100] transition-all duration-150 ease-out" style="width: 0%;"></div>
 
     <nav class="border-b border-bordercolor bg-background/80 backdrop-blur-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-syne font-bold tracking-tight neon-glow">
-                R2<span class="text-white/40" style="text-shadow: none;">|</span>K8
+            <a href="index.html" class="text-2xl font-syne font-bold tracking-tight neon-glow">
+                r2<span class="text-white/40" style="text-shadow: none;">|</span>k8
+            </a>
+            
+            <div class="hidden md:flex space-x-3 items-center">
+                <a href="services.html" class="cyber-nav">Services</a>
+                <a href="about.html" class="cyber-nav">Experience</a>
+                <a href="portfolio.html" class="cyber-nav">Portfolio</a>
+                <a href="https://linkedin.com/in/r2k8" target="_blank" class="cyber-nav">LinkedIn</a>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
-                <a href="about.html" class="hover:text-white transition">Experience</a>
-                <a href="portfolio.html" class="hover:text-white transition">Portfolio</a>
-                <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
-            </div>
+
             <a href="mailto:r2k8@outlook.com" class="bg-white text-black font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-gray-200 transition">
                 Get in Touch
             </a>
@@ -67,7 +104,7 @@
     </nav>
 
     <header class="max-w-4xl mx-auto text-center mt-20 px-6 relative">
-        <h1 class="text-5xl md:text-7xl font-syne font-extrabold tracking-tight mb-6 leading-tight">
+        <h1 class="text-5xl md:text-7xl font-syne font-extrabold tracking-tight mb-6 leading-tight uppercase">
             Engineering the future of <br> <span class="neon-glow">Cloud & AI.</span>
         </h1>
         <p class="text-lg md:text-xl text-gray-400 mb-10 font-light max-w-2xl mx-auto">
@@ -81,7 +118,7 @@
 
     <section class="max-w-7xl mx-auto mt-4 px-6 mb-24">
         <div class="text-center mb-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-bordercolor/30 border border-bordercolor text-sm font-medium text-gray-300 mb-4">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-bordercolor/30 border border-bordercolor text-xs font-bold tracking-widest uppercase text-gray-400 mb-4">
                 Core Domains of Expertise
             </div>
         </div>
@@ -128,11 +165,11 @@
     </section>
 
     <main class="max-w-7xl mx-auto px-6 mb-24 border-t border-bordercolor pt-16">
-        <h2 class="text-3xl font-syne font-bold mb-10 text-center">Featured Career Milestones</h2>
+        <h2 class="text-3xl font-syne font-bold mb-10 text-center uppercase italic">Featured Career Milestones</h2>
 
         <div class="space-y-6 max-w-4xl mx-auto">
             
-            <div id="product" class="p-8 border border-bordercolor rounded-2xl bg-card scroll-mt-24 relative overflow-hidden">
+            <div id="product" class="p-8 border border-bordercolor rounded-[2rem] bg-card scroll-mt-24 relative overflow-hidden group hover:border-blue-500/50 transition-colors duration-300">
                 <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.8)]"></div>
                 <h3 class="text-blue-400 font-syne font-bold text-2xl mb-2 glow-blue">Product Strategy & AI Highlights</h3>
                 <p class="text-gray-400 mb-4">Driving product vision from ideation to delivery.</p>
@@ -143,29 +180,29 @@
                 </ul>
             </div>
 
-            <div id="delivery" class="p-8 border border-bordercolor rounded-2xl bg-card scroll-mt-24 relative overflow-hidden">
+            <div id="delivery" class="p-8 border border-bordercolor rounded-[2rem] bg-card scroll-mt-24 relative overflow-hidden group hover:border-purple-500/50 transition-colors duration-300">
                 <div class="absolute top-0 left-0 w-1 h-full bg-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.8)]"></div>
                 <h3 class="text-purple-400 font-syne font-bold text-2xl mb-2 glow-purple">Global Program Delivery Highlights</h3>
                 <p class="text-gray-400 mb-4">Leading complex, multi-year initiatives across global matrixed teams.</p>
                 <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
                     <li>Spearheaded a transformative, multi-year M365 Microsoft Teams Go-Local expansion program.</li>
-                    <li>Shipped Microsoft Teams into 23 new Geos, unblocking 80 million MAU globally.</li>
+                    <li>Shipped Microsoft Teams into 25 new Geos, unblocking 80 million MAU globally.</li>
                     <li>Led the synchronized launch of M365 products with Azure GA for seamless interoperability.</li>
                 </ul>
             </div>
 
-            <div id="architecture" class="p-8 border border-bordercolor rounded-2xl bg-card scroll-mt-24 relative overflow-hidden">
+            <div id="architecture" class="p-8 border border-bordercolor rounded-[2rem] bg-card scroll-mt-24 relative overflow-hidden group hover:border-emerald-500/50 transition-colors duration-300">
                 <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.8)]"></div>
                 <h3 class="text-emerald-400 font-syne font-bold text-2xl mb-2 glow-emerald">Enterprise Architecture Highlights</h3>
                 <p class="text-gray-400 mb-4">Designing highly available, secure, and compliant cloud infrastructures.</p>
                 <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
                     <li>Led the launch of O365 Exchange Online in China sovereign cloud (Gallatin).</li>
-                    <li>Owned and optimized capacity management for M365 GoLocals.</li>
+                    <li>Owned and optimized capacity management for M365 GoLocals, reducing OpEx by 40%.</li>
                     <li>Managed comprehensive Windows Server administration, VMWare vSphere, and Citrix virtual infrastructures.</li>
                 </ul>
             </div>
 
-            <div id="security" class="p-8 border border-bordercolor rounded-2xl bg-card scroll-mt-24 relative overflow-hidden">
+            <div id="security" class="p-8 border border-bordercolor rounded-[2rem] bg-card scroll-mt-24 relative overflow-hidden group hover:border-orange-500/50 transition-colors duration-300">
                 <div class="absolute top-0 left-0 w-1 h-full bg-orange-500 shadow-[0_0_15px_rgba(249,115,22,0.8)]"></div>
                 <h3 class="text-orange-400 font-syne font-bold text-2xl mb-2 glow-orange">Security & Compliance Highlights</h3>
                 <p class="text-gray-400 mb-4">Mitigating risk and ensuring regulatory adherence across global networks.</p>
@@ -179,16 +216,16 @@
     </main>
 
     <div class="max-w-5xl mx-auto px-6 mt-10 mb-8">
-        <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-60 shadow-[0_0_15px_#04FF80]"></div>
+        <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-brand to-transparent opacity-60"></div>
     </div>
 
-    <footer class="py-8">
+    <footer class="py-8 bg-background">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
-            <p>© 2026 Rama S. M.S., PMP®</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
+            <p>© 2026 Rama S. | Technology Leader</p>
+            <div class="flex space-x-6 mt-4 md:mt-0 font-medium">
                 <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
                 <a href="https://github.com/r2k8" target="_blank" class="hover:text-white transition">GitHub</a>
-                <a href="mailto:r2k8@outlook.com" class="hover:text-white transition">Contact</a>
+                <a href="mailto:r2k8@outlook.com" class="hover:text-white transition">Email</a>
             </div>
         </div>
     </footer>

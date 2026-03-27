@@ -10,7 +10,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     
     <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
     <link rel="icon" href="favicon.ico?v=2" type="image/x-icon">
@@ -19,137 +19,142 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { syne: ['Syne', 'sans-serif'], inter: ['Inter', 'sans-serif'] },
-                    colors: {
-                        background: '#050505',
-                        card: '#0f0f0f',
-                        bordercolor: '#1f1f1f',
-                        brand: '#04FF80' 
-                    }
+                    fontFamily: { syne: ['Syne', 'sans-serif'], inter: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+                    colors: { background: '#050505', card: '#0f0f0f', bordercolor: '#1f1f1f', brand: '#04FF80' }
                 }
             }
         }
     </script>
     <style>
         html { scroll-behavior: smooth; }
-        body { background-color: #050505; color: #fff; }
+        body { background-color: #050505; color: #fff; position: relative; overflow-x: hidden; }
         
-        .neon-glow {
-            color: #04FF80;
-            text-shadow: 0 0 10px rgba(4, 255, 128, 0.6), 0 0 20px rgba(4, 255, 128, 0.4);
+        /* THE HOLOGRAPHIC PROJECTION */
+        .cyber-stencil {
+            position: absolute; top: 5%; right: 0%; width: 100%; height: 90vh;
+            background-image: url('assets/images/rama_stencil.jpg'); 
+            background-size: contain; background-position: center right; background-repeat: no-repeat;
+            mix-blend-mode: screen; 
+            filter: sepia(100%) hue-rotate(85deg) saturate(1000%) brightness(1.2) contrast(1.5);
+            opacity: 0.4; pointer-events: none; z-index: 0; 
+            animation: holo-float 6s ease-in-out infinite;
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+        @media (min-width: 768px) { .cyber-stencil { right: -10%; width: 80%; } }
+        @keyframes holo-float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
+
+        .scanlines {
+            position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 2px, rgba(0,0,0,0.4) 2px, rgba(0,0,0,0.4) 4px);
+            pointer-events: none; z-index: 1; 
         }
 
-        /* Cyber Nav Button Styles */
-        .cyber-nav {
-            position: relative;
-            padding: 8px 16px;
-            border: 1px solid #1f1f1f;
-            color: #9ca3af;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            transition: all 0.3s ease;
-            background: transparent;
-        }
-        .cyber-nav:hover {
-            border-color: #04FF80;
-            color: #04FF80;
-            background-color: rgba(4, 255, 128, 0.05);
-        }
-        .cyber-nav::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: -1px;
-            right: -1px;
-            height: 2px;
-            background-color: transparent;
-            transition: all 0.3s ease;
-        }
-        .cyber-nav:hover::after {
-            background-color: #04FF80;
-            box-shadow: 0 0 8px rgba(4, 255, 128, 0.6);
-        }
+        /* Animations */
+        @keyframes flicker { 0%, 18%, 22%, 25%, 53%, 57%, 100% { text-shadow: 0 0 10px rgba(4,255,128,0.6), 0 0 20px rgba(4,255,128,0.4); opacity: 1; } 20%, 24%, 55% { text-shadow: none; opacity: 0.8; } }
+        .neon-glow { color: #04FF80; animation: flicker 4s infinite alternate; }
+        @keyframes swing { 0% { transform: rotate(0deg); } 25% { transform: rotate(4deg); } 75% { transform: rotate(-4deg); } 100% { transform: rotate(0deg); } }
+        .logo-swing { display: inline-block; animation: swing 4s ease-in-out infinite; transform-origin: top center; }
+
+        /* Nav Styles */
+        .cyber-nav { position: relative; padding: 8px 16px; border: 1px solid #1f1f1f; color: #9ca3af; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease; background: transparent; }
+        .cyber-nav:hover, .cyber-nav-active { border-color: #04FF80; color: #04FF80; background-color: rgba(4, 255, 128, 0.05); }
+        .cyber-nav::after { content: ''; position: absolute; bottom: -5px; left: -1px; right: -1px; height: 2px; background-color: transparent; transition: all 0.3s ease; }
+        .cyber-nav:hover::after, .cyber-nav-active::after { background-color: #04FF80; box-shadow: 0 0 8px rgba(4, 255, 128, 0.6); }
+        .no-scroll { overflow: hidden; }
 
         /* Form Input Styling */
         .cyber-input {
-            width: 100%;
-            background-color: #0a0a0a;
-            border: 1px solid #1f1f1f;
-            border-radius: 12px;
-            padding: 16px 20px;
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            transition: all 0.3s ease;
+            width: 100%; background-color: #0a0a0a; border: 1px solid #1f1f1f; border-radius: 12px;
+            padding: 16px 20px; color: #fff; font-family: 'Inter', sans-serif; font-size: 14px; transition: all 0.3s ease;
         }
-        .cyber-input:focus {
-            outline: none;
-            border-color: #04FF80;
-            box-shadow: 0 0 15px rgba(4, 255, 128, 0.2);
-            background-color: #0d0d0d;
-        }
-        .cyber-input::placeholder {
-            color: #4b5563;
-        }
+        .cyber-input:focus { outline: none; border-color: #04FF80; box-shadow: 0 0 15px rgba(4, 255, 128, 0.2); background-color: #0d0d0d; }
+        .cyber-input::placeholder { color: #4b5563; }
 
-        /* Tech Grid Background */
         .tech-grid {
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-            background-size: 40px 40px;
-            background-position: center center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px; background-position: center center;
         }
     </style>
 </head>
 <body class="font-inter selection:bg-brand selection:text-black">
 
+    <div class="cyber-stencil"></div>
+    <div class="scanlines"></div>
+
     <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-brand shadow-[0_0_15px_#04FF80] z-[100] transition-all duration-150 ease-out" style="width: 0%;"></div>
 
-    <nav class="border-b border-bordercolor bg-background/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4">
+    <nav class="border-b border-bordercolor bg-background/80 backdrop-blur-md sticky top-0 z-50 px-4 md:px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-syne font-bold neon-glow">r2<span class="text-white/40" style="text-shadow: none;">|</span>k8</a>
+            <a href="index.html" class="text-2xl font-syne font-bold tracking-tight logo-swing neon-glow z-50">
+                r2<span class="text-white/40" style="text-shadow: none; animation: none;">|</span>k8
+            </a>
             
             <div class="hidden md:flex space-x-3 items-center">
                 <a href="services.html" class="cyber-nav">Services</a>
                 <a href="about.html" class="cyber-nav">Experience</a>
                 <a href="portfolio.html" class="cyber-nav">Portfolio</a>
+                <a href="contact.html" class="cyber-nav cyber-nav-active">Contact</a>
                 <a href="https://linkedin.com/in/r2k8" target="_blank" class="cyber-nav">LinkedIn</a>
             </div>
 
-            <a href="contact.html" class="bg-brand shadow-[0_0_15px_rgba(4,255,128,0.4)] text-black font-bold uppercase tracking-widest text-[10px] px-6 py-3 rounded-full cursor-default">
-                Secure Channel Open
-            </a>
+            <div class="hidden md:block">
+                <a href="contact.html" class="bg-brand shadow-[0_0_15px_rgba(4,255,128,0.4)] text-black font-bold uppercase tracking-widest text-[10px] px-6 py-3 rounded-full cursor-default">
+                    Secure Channel Open
+                </a>
+            </div>
+
+            <button id="menu-open-btn" class="md:hidden text-brand hover:text-white transition z-50 p-2">
+                <svg class="w-8 h-8 drop-shadow-[0_0_5px_rgba(4,255,128,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
         </div>
     </nav>
 
-    <header class="max-w-4xl mx-auto text-center mt-20 px-6">
-        <h1 class="text-5xl md:text-7xl font-syne font-extrabold mb-6 tracking-tighter uppercase">
-            Initiate <span class="neon-glow">Contact.</span>
+    <div id="mobile-menu" class="fixed inset-0 bg-[#050505] z-[60] flex flex-col opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="flex justify-between items-center px-4 py-4 border-b border-brand/40">
+            <span class="text-xl font-syne font-bold text-brand neon-glow italic">*Navigation</span>
+            <button id="menu-close-btn" class="text-brand border border-brand/50 hover:bg-brand hover:text-black transition p-1.5 rounded-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <div class="flex flex-col items-center justify-center flex-grow space-y-10 font-mono text-lg tracking-widest">
+            <a href="index.html" class="text-white hover:text-brand transition">Home</a>
+            <a href="services.html" class="text-white hover:text-brand transition">Services</a>
+            <a href="about.html" class="text-white hover:text-brand transition">Experience</a>
+            <a href="portfolio.html" class="text-white hover:text-brand transition">Portfolio</a>
+            <a href="contact.html" class="text-white hover:text-brand transition">Contact</a>
+        </div>
+        <div class="p-6 border-t border-bordercolor text-center">
+            <a href="contact.html" class="block w-full border border-brand text-brand hover:bg-brand hover:text-black font-syne font-bold uppercase tracking-widest py-4 rounded-xl transition shadow-[0_0_15px_rgba(4,255,128,0.2)]">
+                Initiate Secure Comm
+            </a>
+        </div>
+    </div>
+
+    <header class="max-w-4xl mx-auto text-center mt-12 md:mt-20 px-4 md:px-6 relative z-10">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-syne font-extrabold mb-6 tracking-tighter uppercase break-words sm:break-normal">
+            Initiate <span class="neon-glow" style="animation: none;">Contact.</span>
         </h1>
-        <p class="text-lg text-gray-400 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+        <p class="text-base md:text-xl text-gray-400 mb-10 font-light max-w-2xl mx-auto leading-relaxed px-2">
             Available for executive consulting, fractional leadership, and enterprise architecture engagements.
         </p>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 mb-32">
+    <main class="max-w-6xl mx-auto px-4 md:px-6 mb-32 relative z-10">
         <div class="tech-grid bg-card border border-bordercolor rounded-[2.5rem] overflow-hidden shadow-2xl relative">
             
             <div class="grid grid-cols-1 lg:grid-cols-5 relative z-10">
                 
-                <div class="lg:col-span-2 p-10 md:p-12 border-b lg:border-b-0 lg:border-r border-bordercolor bg-black/40 backdrop-blur-sm flex flex-col h-full">
+                <div class="lg:col-span-2 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-bordercolor bg-black/60 backdrop-blur-md flex flex-col h-full">
                     
                     <div class="inline-flex items-center gap-3 px-4 py-2 bg-brand/10 border border-brand/20 rounded-full mb-10 w-max">
                         <span class="relative flex h-3 w-3">
                           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
                           <span class="relative inline-flex rounded-full h-3 w-3 bg-brand shadow-[0_0_8px_#04FF80]"></span>
                         </span>
-                        <span class="text-brand text-[10px] font-bold uppercase tracking-widest">Accepting New Engagements</span>
+                        <span class="text-brand text-[10px] font-bold uppercase tracking-widest">Accepting Engagements</span>
                     </div>
 
-                    <h2 class="text-3xl font-syne font-bold mb-8 text-white">Direct Comms.</h2>
+                    <h2 class="text-2xl md:text-3xl font-syne font-bold mb-8 text-white">Direct Comms.</h2>
                     
                     <div class="space-y-8 flex-grow">
                         <div>
@@ -169,12 +174,13 @@
                     </div>
 
                     <div class="mt-12 pt-8 border-t border-bordercolor">
-                        <p class="text-gray-500 text-xs italic">Certified PMP® | ISC2 CC | Microsoft Certified Architect</p>
+                        <p class="text-gray-500 text-xs italic leading-relaxed">Certified PMP® | ISC2 CC <br class="hidden md:block"> Microsoft Certified Architect</p>
                     </div>
                 </div>
 
-                <div class="lg:col-span-3 p-10 md:p-12 bg-black/80 backdrop-blur-sm">
+                <div class="lg:col-span-3 p-8 md:p-12 bg-black/80 backdrop-blur-md">
                     <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-6">
+                        
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label for="name" class="text-[10px] text-gray-400 uppercase tracking-widest font-mono ml-1">Full Name</label>
@@ -216,9 +222,9 @@
         </div>
     </main>
 
-    <footer class="border-t border-bordercolor py-12 bg-background text-center text-sm text-gray-500">
+    <footer class="border-t border-bordercolor py-12 bg-background text-center text-sm text-gray-500 relative z-10">
         <p class="mb-4">© 2026 Rama S. | Technology Leader</p>
-        <div class="flex justify-center space-x-6">
+        <div class="flex justify-center space-x-6 font-medium">
             <a href="https://linkedin.com/in/r2k8" target="_blank" class="hover:text-white transition">LinkedIn</a>
             <a href="https://github.com/r2k8" target="_blank" class="hover:text-white transition">GitHub</a>
             <a href="mailto:r2k8@outlook.com" class="hover:text-white transition">Email</a>
@@ -226,11 +232,33 @@
     </footer>
 
     <script>
+        // Scroll Progress
         window.addEventListener('scroll', () => {
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollPercentage = (scrollTop / scrollHeight) * 100;
             document.getElementById('scroll-progress').style.width = scrollPercentage + '%';
+        });
+
+        // Mobile Menu Logic
+        const menuOpenBtn = document.getElementById('menu-open-btn');
+        const menuCloseBtn = document.getElementById('menu-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+
+        menuOpenBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('pointer-events-none', 'opacity-0');
+            mobileMenu.classList.add('opacity-100');
+            body.classList.add('no-scroll');
+        });
+
+        menuCloseBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('opacity-100');
+            mobileMenu.classList.add('opacity-0');
+            setTimeout(() => {
+                mobileMenu.classList.add('pointer-events-none');
+                body.classList.remove('no-scroll');
+            }, 300);
         });
     </script>
 

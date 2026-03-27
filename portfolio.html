@@ -87,20 +87,17 @@
             position: relative;
         }
 
-        /* Base Country Style */
         .country {
             fill: #111111;
             stroke: #222222;
             stroke-width: 0.5px;
             transition: fill 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease;
         }
-        /* Launched Country Style */
         .country.launched {
-            fill: #0a1711; /* Very dark green tint */
+            fill: #0a1711; 
             stroke: rgba(4, 255, 128, 0.3);
             stroke-width: 1px;
         }
-        /* Hover State */
         .country.launched:hover {
             fill: #0e291e;
             stroke: #04FF80;
@@ -108,7 +105,6 @@
             cursor: pointer;
         }
 
-        /* Pulse Animation for Nodes */
         @keyframes radar-pulse {
             0% { transform: scale(1); opacity: 0.8; }
             50% { transform: scale(1.5); opacity: 0; }
@@ -120,7 +116,6 @@
             transform-box: fill-box;
         }
 
-        /* Sleek Cyberpunk Tooltip */
         #map-tooltip {
             position: absolute;
             background: rgba(10, 10, 10, 0.95);
@@ -142,9 +137,9 @@
             content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
             border-width: 6px; border-style: solid; border-color: #1f1f1f transparent transparent transparent;
         }
-        .tooltip-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 2px; display: block; text-transform: uppercase; letter-spacing: 1px;}
-        .tooltip-quarter { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #04FF80; display: block; margin-bottom: 4px;}
-        .tooltip-detail { font-family: 'Inter', sans-serif; font-size: 11px; color: #9ca3af;}
+        .tooltip-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; color: #fff; margin-bottom: 6px; display: block; text-transform: uppercase; letter-spacing: 1px;}
+        .tooltip-data-row { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #9ca3af; display: block; margin-bottom: 3px;}
+        .tooltip-mau { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: #04FF80; display: block; margin-top: 6px;}
 
     </style>
 </head>
@@ -200,7 +195,7 @@
             Command Center <br> <span class="neon-glow" style="animation: none;">Telemetry.</span>
         </h1>
         <p class="text-lg text-gray-400 mb-10 font-light max-w-2xl mx-auto">
-            Clean, interactive visualization of global cloud deployments and active regions.
+            Interactive visualization of global cloud deployments, product rollouts, and MAU impact.
         </p>
     </header>
 
@@ -229,7 +224,6 @@
     <script src="https://d3js.org/topojson.v3.min.js"></script>
 
     <script>
-        // UI Scripts
         window.addEventListener('scroll', () => {
             const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -242,34 +236,34 @@
         menuOpenBtn.addEventListener('click', () => { mobileMenu.classList.remove('pointer-events-none', 'opacity-0'); mobileMenu.classList.add('opacity-100'); document.body.classList.add('no-scroll'); });
         menuCloseBtn.addEventListener('click', () => { mobileMenu.classList.remove('opacity-100'); mobileMenu.classList.add('opacity-0'); setTimeout(() => { mobileMenu.classList.add('pointer-events-none'); document.body.classList.remove('no-scroll'); }, 300); });
 
-        // D3 MAP LOGIC (Minimalist Radar Design)
         document.addEventListener('DOMContentLoaded', function() {
             
+            // Adjusted data: China is Exchange Online, rest are Teams. MAU placeholders added.
             const launchedCountries = [
-                { name: 'United Kingdom', label: "Q4 2017", detail: 'Teams Go-Local Launch' },
-                { name: 'India', label: "Q1 2018", detail: 'Teams Go-Local Launch' },
-                { name: 'Canada', label: "Q3 2018", detail: 'Teams Go-Local Launch' },
-                { name: 'Australia', label: "Q3 2018", detail: 'Teams Go-Local Launch' },
-                { name: 'Japan', label: "Q3 2018", detail: 'Teams Go-Local Launch' },
-                { name: 'France', label: "Q1 2019", detail: 'GDPR-Compliant Rollout' },
-                { name: 'South Korea', label: "Q3 2019", detail: 'Teams Go-Local Launch' },
-                { name: 'South Africa', label: "Q3 2019", detail: 'Teams Go-Local Launch' },
-                { name: 'United Arab Emirates', label: "Q4 2019", detail: 'Teams Go-Local Launch' },
-                { name: 'Switzerland', label: "Q4 2019", detail: 'GDPR-Compliant Rollout' },
-                { name: 'Germany', label: "Q4 2019", detail: 'GDPR-Compliant Rollout' },
-                { name: 'Norway', label: "Q2 2020", detail: 'GDPR-Compliant Rollout' },
-                { name: 'Singapore', label: "Q2 2020", detail: 'Teams Go-Local Launch' },
-                { name: 'Brazil', label: "Q4 2020", detail: 'Teams Go-Local Launch' },
-                { name: 'Sweden', label: "Q4 2021", detail: 'GDPR-Compliant Rollout' },
-                { name: 'Qatar', label: "Q3 2022", detail: 'Teams Go-Local Launch' },
-                { name: 'Poland', label: "Q2 2023", detail: 'GDPR-Compliant Rollout' },
-                { name: 'Italy', label: "Q3 2023", detail: 'GDPR-Compliant Rollout' },
-                { name: 'Israel', label: "Q3 2023", detail: 'Teams Go-Local Launch' },
-                { name: 'Mexico', label: "Q2 2024", detail: 'Teams Go-Local Launch' },
-                { name: 'Spain', label: "Q2 2024", detail: 'GDPR-Compliant Rollout' },
-                { name: 'Taiwan', label: "Q3 2024", detail: 'Teams Go-Local Launch' },
-                { name: 'New Zealand', label: "Q4 2024", detail: 'Teams Go-Local Launch' },
-                { name: 'China', label: "2015", detail: 'Gallatin Sovereign Cloud' }
+                { name: 'United Kingdom', label: "Q4 2017", product: 'Microsoft Teams', mau: '8.5M+' },
+                { name: 'India', label: "Q1 2018", product: 'Microsoft Teams', mau: '15.0M+' },
+                { name: 'Canada', label: "Q3 2018", product: 'Microsoft Teams', mau: '4.2M+' },
+                { name: 'Australia', label: "Q3 2018", product: 'Microsoft Teams', mau: '3.8M+' },
+                { name: 'Japan', label: "Q3 2018", product: 'Microsoft Teams', mau: '6.1M+' },
+                { name: 'France', label: "Q1 2019", product: 'Microsoft Teams (GDPR)', mau: '4.5M+' },
+                { name: 'South Korea', label: "Q3 2019", product: 'Microsoft Teams', mau: '3.2M+' },
+                { name: 'South Africa', label: "Q3 2019", product: 'Microsoft Teams', mau: '1.8M+' },
+                { name: 'United Arab Emirates', label: "Q4 2019", product: 'Microsoft Teams', mau: '1.5M+' },
+                { name: 'Switzerland', label: "Q4 2019", product: 'Microsoft Teams (GDPR)', mau: '1.2M+' },
+                { name: 'Germany', label: "Q4 2019", product: 'Microsoft Teams (GDPR)', mau: '7.4M+' },
+                { name: 'Norway', label: "Q2 2020", product: 'Microsoft Teams (GDPR)', mau: '1.1M+' },
+                { name: 'Singapore', label: "Q2 2020", product: 'Microsoft Teams', mau: '2.0M+' },
+                { name: 'Brazil', label: "Q4 2020", product: 'Microsoft Teams', mau: '5.5M+' },
+                { name: 'Sweden', label: "Q4 2021", product: 'Microsoft Teams (GDPR)', mau: '1.7M+' },
+                { name: 'Qatar', label: "Q3 2022", product: 'Microsoft Teams', mau: '600K+' },
+                { name: 'Poland', label: "Q2 2023", product: 'Microsoft Teams (GDPR)', mau: '2.4M+' },
+                { name: 'Italy', label: "Q3 2023", product: 'Microsoft Teams (GDPR)', mau: '3.6M+' },
+                { name: 'Israel', label: "Q3 2023", product: 'Microsoft Teams', mau: '1.2M+' },
+                { name: 'Mexico', label: "Q2 2024", product: 'Microsoft Teams', mau: '4.0M+' },
+                { name: 'Spain', label: "Q2 2024", product: 'Microsoft Teams (GDPR)', mau: '3.1M+' },
+                { name: 'Taiwan', label: "Q3 2024", product: 'Microsoft Teams', mau: '1.9M+' },
+                { name: 'New Zealand', label: "Q4 2024", product: 'Microsoft Teams', mau: '1.0M+' },
+                { name: 'China', label: "2015", product: 'Exchange Online (Gallatin)', mau: '12.0M+' }
             ];
 
             const launchDetailsMap = new Map(launchedCountries.map(c => [c.name, c]));
@@ -285,13 +279,11 @@
 
             const pathGenerator = d3.geoPath(d3.geoMercator().scale(160).translate([1584/2, 500/1.5]));
             const g = svg.append("g");
-            const nodesG = svg.append("g").attr("class", "nodes-group"); // For the telemetry dots
+            const nodesG = svg.append("g").attr("class", "nodes-group"); 
 
-            // Zoom behavior
             const zoom = d3.zoom().scaleExtent([1, 8]).on("zoom", (event) => {
                 g.attr("transform", event.transform);
                 nodesG.attr("transform", event.transform);
-                // Keep node dots consistently sized regardless of zoom
                 nodesG.selectAll('circle').attr('transform', function() {
                     const scale = Math.min(Math.max(event.transform.k, 1), 4);
                     return `scale(${1/scale})`;
@@ -299,11 +291,9 @@
             });
             svg.call(zoom);
 
-            // Load Map Data
             d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
                 const countries = topojson.feature(world, world.objects.countries).features;
 
-                // Draw Base Countries
                 g.selectAll(".country")
                     .data(countries)
                     .enter().append("path")
@@ -314,8 +304,9 @@
                             const info = launchDetailsMap.get(d.properties.name);
                             tooltip.html(`
                                 <span class="tooltip-title">${d.properties.name}</span>
-                                <span class="tooltip-quarter">Deployment: ${info.label}</span>
-                                <span class="tooltip-detail">${info.detail}</span>
+                                <span class="tooltip-data-row">Product: <span style="color:#fff;">${info.product}</span></span>
+                                <span class="tooltip-data-row">Launch: <span style="color:#fff;">${info.label}</span></span>
+                                <span class="tooltip-mau">MAU Unlocked: ${info.mau}</span>
                             `).style("opacity", 1);
                         }
                     })
@@ -327,7 +318,6 @@
                         tooltip.style("opacity", 0);
                     });
 
-                // Telemetry Nodes (Glowing Dots) instead of messy icons/text
                 const mainCountries = countries.filter(d => launchDetailsMap.has(d.properties.name));
 
                 function getCentroid(feature) {
@@ -343,7 +333,6 @@
                     const [cx, cy] = getCentroid(feature);
                     const group = nodesG.append('g').attr('transform', `translate(${cx},${cy})`);
                     
-                    // Outer Pulse Circle (for visual radar effect)
                     group.append('circle')
                         .attr('r', 8)
                         .attr('fill', '#04FF80')
@@ -351,16 +340,14 @@
                         .attr('class', 'node-pulse')
                         .style('pointer-events', 'none');
 
-                    // Inner Solid Dot
                     group.append('circle')
                         .attr('r', 2.5)
                         .attr('fill', '#04FF80')
                         .style('pointer-events', 'none');
                 });
 
-            }); // end d3.json
+            }); 
 
-            // High-Res PNG Download Logic
             function downloadPNG(scale = 3, filename = 'r2k8-clean-map.png') {
                 const svgNode = document.querySelector('#map-container-interactive svg');
                 if (!svgNode) return;
@@ -376,7 +363,6 @@
                     canvas.height = Math.round(vb.height * scale);
                     const ctx = canvas.getContext('2d');
                     
-                    // Fill dark background
                     ctx.fillStyle = '#050505';
                     ctx.fillRect(0,0,canvas.width, canvas.height);
                     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);

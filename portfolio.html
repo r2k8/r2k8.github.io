@@ -75,6 +75,11 @@
         .cyber-nav::after { content: ''; position: absolute; bottom: -5px; left: -1px; right: -1px; height: 2px; background-color: transparent; transition: all 0.3s ease; }
         .cyber-nav:hover::after, .cyber-nav-active::after { background-color: #04FF80; box-shadow: 0 0 8px rgba(4, 255, 128, 0.6); }
 
+        .glow-blue { text-shadow: 0 0 12px rgba(59, 130, 246, 0.6); }
+        .glow-purple { text-shadow: 0 0 12px rgba(168, 85, 247, 0.6); }
+        .glow-emerald { text-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
+        .glow-orange { text-shadow: 0 0 12px rgba(249, 115, 22, 0.6); }
+
         /* -------------------------
            D3 Map Custom Styling 
            ------------------------- */
@@ -195,20 +200,39 @@
             Command Center <br> <span class="neon-glow" style="animation: none;">Telemetry.</span>
         </h1>
         <p class="text-lg text-gray-400 mb-10 font-light max-w-2xl mx-auto">
-            Interactive visualization of global cloud deployments, product rollouts, and MAU impact.
+            Interactive visualization of global cloud deployments and product rollouts.
         </p>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 md:px-6 mb-32 relative z-10">
-        <div id="map-container-interactive" class="tech-grid w-full h-[500px] md:h-[650px]">
+        
+        <div id="map-container-interactive" class="tech-grid w-full h-[450px] md:h-[600px]">
             <div id="map-tooltip"></div>
         </div>
 
-        <div class="flex flex-col md:flex-row gap-4 justify-center mt-8">
-            <button id="downloadBtn" class="bg-brand text-black font-syne font-bold uppercase tracking-widest text-xs px-8 py-4 rounded-xl shadow-[0_0_15px_rgba(4,255,128,0.4)] hover:bg-white hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all duration-300">
-                Download Clean Map
-            </button>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div class="bg-card border border-bordercolor p-6 md:p-8 rounded-[2rem] relative overflow-hidden group hover:border-brand transition-colors duration-300">
+                <div class="absolute top-0 left-0 w-full h-1 bg-brand shadow-[0_0_15px_#04FF80] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <p class="text-xs text-gray-500 uppercase tracking-widest font-mono mb-2">Total MAU Gained (2023)</p>
+                <h3 class="text-4xl md:text-5xl font-syne font-bold text-white neon-glow mb-2">80M+</h3>
+                <p class="text-sm text-gray-400">Monthly Active Users unlocked via scale.</p>
+            </div>
+            
+            <div class="bg-card border border-bordercolor p-6 md:p-8 rounded-[2rem] relative overflow-hidden group hover:border-blue-500 transition-colors duration-300">
+                <div class="absolute top-0 left-0 w-full h-1 bg-blue-500 shadow-[0_0_15px_#3B82F6] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <p class="text-xs text-gray-500 uppercase tracking-widest font-mono mb-2">Global Regions</p>
+                <h3 class="text-4xl md:text-5xl font-syne font-bold text-white glow-blue mb-2">25</h3>
+                <p class="text-sm text-gray-400">Sovereign and Go-Local cloud deployments.</p>
+            </div>
+
+            <div class="bg-card border border-bordercolor p-6 md:p-8 rounded-[2rem] relative overflow-hidden group hover:border-purple-500 transition-colors duration-300">
+                <div class="absolute top-0 left-0 w-full h-1 bg-purple-500 shadow-[0_0_15px_#A855F7] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <p class="text-xs text-gray-500 uppercase tracking-widest font-mono mb-2">Products Shipped</p>
+                <h3 class="text-xl md:text-2xl font-syne font-bold text-white glow-purple mb-2 mt-2 leading-tight">Teams, M365 & <br>Gallatin</h3>
+                <p class="text-sm text-gray-400">Including Copilot AI integrations.</p>
+            </div>
         </div>
+
     </main>
 
     <footer class="border-t border-bordercolor py-12 bg-background text-center text-sm text-gray-500 relative z-10">
@@ -238,7 +262,6 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             
-            // Adjusted data: China is Exchange Online, rest are Teams. MAU placeholders added.
             const launchedCountries = [
                 { name: 'United Kingdom', label: "Q4 2017", product: 'Microsoft Teams', mau: '8.5M+' },
                 { name: 'India', label: "Q1 2018", product: 'Microsoft Teams', mau: '15.0M+' },
@@ -347,42 +370,6 @@
                 });
 
             }); 
-
-            function downloadPNG(scale = 3, filename = 'r2k8-clean-map.png') {
-                const svgNode = document.querySelector('#map-container-interactive svg');
-                if (!svgNode) return;
-                const serializer = new XMLSerializer();
-                const svgString = serializer.serializeToString(svgNode);
-                const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
-                const url = URL.createObjectURL(blob);
-                const img = new Image();
-                img.onload = function() {
-                    const canvas = document.createElement('canvas');
-                    const vb = svgNode.viewBox.baseVal;
-                    canvas.width = Math.round(vb.width * scale);
-                    canvas.height = Math.round(vb.height * scale);
-                    const ctx = canvas.getContext('2d');
-                    
-                    ctx.fillStyle = '#050505';
-                    ctx.fillRect(0,0,canvas.width, canvas.height);
-                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    
-                    const png = canvas.toDataURL('image/png');
-                    const link = document.createElement('a');
-                    link.download = filename;
-                    link.href = png;
-                    document.body.appendChild(link);
-                    link.click();
-                    link.remove();
-                    URL.revokeObjectURL(url);
-                };
-                img.src = url;
-            }
-
-            document.getElementById('downloadBtn').addEventListener('click', function(){
-                downloadPNG(3, 'r2k8-telemetry-map.png');
-            });
-
         });
     </script>
 </body>

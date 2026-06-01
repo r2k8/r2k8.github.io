@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agentic Trading Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="background-glow"></div>
+    <div class="background-grid"></div>
     <div class="container">
         <header>
             <div class="logo">
-                <span class="logo-icon">🤖</span>
+                <div class="logo-icon-wrapper">
+                    <span class="logo-icon">🤖</span>
+                </div>
                 <h1>AI Trading <span>Hub</span></h1>
             </div>
             <div class="status-indicator">
@@ -22,32 +25,75 @@
         </header>
 
         <main>
-            <section class="top-row">
-                <div class="card glass">
-                    <h2>Market Regime</h2>
-                    <div id="regime-display" class="metric-value">Loading...</div>
-                    <div class="metric-label">Layer 1 Macro Analysis</div>
-                </div>
-                <div class="card glass">
-                    <h2>Bull/Bear Score</h2>
-                    <div class="score-bar">
-                        <div id="bull-fill" class="fill bull"></div>
-                        <div id="bear-fill" class="fill bear"></div>
-                    </div>
-                    <div class="metric-label" id="score-text">Calculating...</div>
-                </div>
-            </section>
+            <div class="section-title">
+                <h2>Decision Pipeline</h2>
+                <p>Real-time transparency from raw data to execution.</p>
+            </div>
 
-            <section class="main-row">
-                <div class="card glass primary-action">
-                    <h2>Today's Trade Target</h2>
-                    <div class="target-container" id="target-container">
-                        <div class="loader"></div>
+            <div class="pipeline-container">
+                <!-- Layer 1 -->
+                <div class="pipeline-step">
+                    <div class="step-node">L1</div>
+                    <div class="card glass step-card">
+                        <h3>Data & Macro</h3>
+                        <p class="step-desc">Ingests news, market data, and sentiment to evaluate the global regime.</p>
+                        <div class="step-content" id="layer1-content">
+                            <div class="loader-small"></div>
+                        </div>
                     </div>
                 </div>
 
+                <div class="connector"></div>
+
+                <!-- Layer 2 -->
+                <div class="pipeline-step">
+                    <div class="step-node">L2</div>
+                    <div class="card glass step-card">
+                        <h3>Strategy Signals</h3>
+                        <p class="step-desc">Analyzes universe ETFs to generate raw directional conviction scores.</p>
+                        <div class="step-content" id="layer2-content">
+                            <div class="loader-small"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="connector"></div>
+
+                <!-- Layer 3 -->
+                <div class="pipeline-step">
+                    <div class="step-node">L3</div>
+                    <div class="card glass step-card">
+                        <h3>Risk Management</h3>
+                        <p class="step-desc">Applies position sizing, stop-loss limits, and portfolio concentration rules.</p>
+                        <div class="step-content" id="layer3-content">
+                            <div class="loader-small"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="connector"></div>
+
+                <!-- Layer 4 -->
+                <div class="pipeline-step">
+                    <div class="step-node exec-node">L4</div>
+                    <div class="card glass step-card exec-card">
+                        <h3>Execution</h3>
+                        <p class="step-desc">Final broker routing and order submission.</p>
+                        <div class="step-content" id="layer4-content">
+                            <div class="loader-small"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="logs-section">
                 <div class="card glass log-terminal">
-                    <h2>System Logs</h2>
+                    <div class="terminal-header">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                        <span class="terminal-title">System Logs</span>
+                    </div>
                     <pre id="cron-logs">Loading logs...</pre>
                 </div>
             </section>

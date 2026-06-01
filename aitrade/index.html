@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Trading Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,19 +34,12 @@
                         <div class="card-header">Macro & Capital Flows</div>
                         <div class="card-body">
                             <!-- Regime -->
-                            <div class="metric-large" id="regime-text">Loading...</div>
-                            <div class="progress-container">
-                                <div class="progress-bar bull" id="bull-bar" style="width: 50%;"></div>
-                                <div class="progress-bar bear" id="bear-bar" style="width: 50%;"></div>
-                            </div>
-                            <div class="metric-sub" id="score-text">Analyzing market sentiment...</div>
+                            <div class="metric-large" id="regime-text" style="margin-bottom: 2rem;">Loading Regime...</div>
                             
-                            <hr class="divider">
-                            
-                            <!-- Capital Flow Visual (Sankey-lite) -->
+                            <!-- Capital Flow Sankey -->
                             <div class="flow-section">
-                                <div class="flow-header">Live Capital Rotation</div>
-                                <div id="capital-flow-container" class="flow-container">
+                                <div class="flow-header">Global Capital Flow Sankey</div>
+                                <div id="capital-flow-container" style="width: 100%; height: 400px; margin-top: 1rem;">
                                     <div class="loader"></div>
                                 </div>
                             </div>

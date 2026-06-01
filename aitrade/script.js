@@ -1,9 +1,13 @@
 const GIST_ID = "64ba99affebb937a1534d8cb4b1c60ce";
 
-document.addEventListener('DOMContentLoaded', () => {
+// Load Google Charts Sankey module
+google.charts.load('current', {'packages':['sankey']});
+google.charts.setOnLoadCallback(initDashboard);
+
+function initDashboard() {
     fetchData();
     setInterval(fetchData, 30000);
-});
+}
 
 async function fetchData() {
     try {
@@ -33,52 +37,62 @@ async function fetchData() {
 function updateLayer1(data) {
     const regimeMap = { 'risk_on': 'Risk On', 'neutral': 'Neutral', 'defensive': 'Defensive', 'crash_watch': 'Crash Watch' };
     document.getElementById('regime-text').textContent = regimeMap[data.regime_hint] || data.regime_hint;
-    
-    const bullPct = (data.overall_bullish_score * 100).toFixed(0);
-    const bearPct = (data.overall_fear_score * 100).toFixed(0);
-    
-    document.getElementById('bull-bar').style.width = `${bullPct}%`;
-    document.getElementById('bear-bar').style.width = `${bearPct}%`;
-    document.getElementById('score-text').textContent = `Bullish: ${bullPct}%  •  Bearish: ${bearPct}%`;
 
-    // Process Capital Flows
-    if (data.capital_flows) {
-        renderCapitalFlows(data.capital_flows);
+    // Process Capital Flows into Sankey
+    if (data.capital_flows && data.capital_flows.length > 0) {
+        renderSankey(data.capital_flows);
     }
 }
 
-function renderCapitalFlows(flows) {
-    const container = document.getElementById('capital-flow-container');
-    container.innerHTML = '';
+function renderSankey(flows) {
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Capital Flow ($ Billions)');
 
-    // Separate and sort inflows/outflows by absolute dollar volume
-    let inflows = flows.filter(f => f.direction === 'inflow').sort((a,b) => b.dollar_volume - a.dollar_volume);
-    let outflows = flows.filter(f => f.direction === 'outflow').sort((a,b) => b.dollar_volume - a.dollar_volume);
-
-    // Take top 3 of each
-    inflows = inflows.slice(0, 3);
-    outflows = outflows.slice(0, 3);
-
-    const maxVolume = Math.max(...[...inflows, ...outflows].map(f => f.dollar_volume));
-
-    const createRow = (flow) => {
-        const pct = (flow.dollar_volume / maxVolume) * 100;
-        const bVol = (flow.dollar_volume / 1000000000).toFixed(1);
-        const sign = flow.direction === 'inflow' ? '+' : '-';
+    const rows = [];
+    flows.forEach(f => {
+        // Convert to billions for readability
+        const bVol = parseFloat((f.dollar_volume / 1000000000).toFixed(2));
         
-        return `
-            <div class="flow-row">
-                <div class="flow-label">${flow.symbol}</div>
-                <div class="flow-bar-wrapper">
-                    <div class="flow-bar ${flow.direction}" style="width: ${Math.max(2, pct)}%;"></div>
-                </div>
-                <div class="flow-val ${flow.direction}">${sign}$${bVol}B</div>
-            </div>
-        `;
+        // A Sankey flows from Source -> Target
+        if (f.direction === 'inflow') {
+            rows.push(['Global Liquidity', f.symbol, bVol]);
+        } else {
+            rows.push([f.symbol, 'Global Liquidity', bVol]);
+        }
+    });
+
+    data.addRows(rows);
+
+    const colors = ['#3b82f6', '#10b981', '#ef4444', '#8b5cf6', '#f59e0b', '#0ea5e9', '#ec4899', '#14b8a6'];
+
+    const options = {
+        width: '100%',
+        height: 400,
+        sankey: {
+            node: {
+                colors: colors,
+                nodePadding: 15,
+                width: 10,
+                label: { 
+                    fontName: 'Outfit',
+                    fontSize: 14,
+                    color: '#f8fafc',
+                    bold: true
+                }
+            },
+            link: {
+                colorMode: 'gradient',
+                colors: colors
+            }
+        },
+        backgroundColor: 'transparent'
     };
 
-    inflows.forEach(f => container.innerHTML += createRow(f));
-    outflows.forEach(f => container.innerHTML += createRow(f));
+    const container = document.getElementById('capital-flow-container');
+    const chart = new google.visualization.Sankey(container);
+    chart.draw(data, options);
 }
 
 function updateLayer3(data) {

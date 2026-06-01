@@ -70,8 +70,9 @@ function renderCurrentLevel() {
     const rows = [];
     if (currentNode.children) {
         currentNode.children.forEach(child => {
-            const flowVal = Math.abs(child.flow);
-            if (child.flow > 0) rows.push([currentNode.name, child.name, flowVal]);
+            let flowVal = Math.abs(child.flow);
+            if (flowVal === 0) flowVal = 0.01; // Prevent fatal crash in Google Charts
+            if (child.flow >= 0) rows.push([currentNode.name, child.name, flowVal]);
             else rows.push([child.name, currentNode.name, flowVal]);
         });
     }
@@ -83,8 +84,13 @@ function renderCurrentLevel() {
 
     data.addRows(rows);
     const colors = ['#3b82f6', '#10b981', '#ef4444', '#8b5cf6', '#f59e0b', '#0ea5e9', '#ec4899', '#14b8a6'];
-    chart.draw(data, {
+    const options = {
         width: '100%', height: 500, backgroundColor: 'transparent',
         sankey: { node: { colors: colors, nodePadding: 20, width: 15, label: { fontName: 'Outfit', fontSize: 15, color: '#f8fafc', bold: true } }, link: { colorMode: 'gradient', colors: colors } }
-    });
+    };
+    try {
+        chart.draw(data, options);
+    } catch(err) {
+        document.getElementById('sankey-prototype').innerHTML = `<div style="color:red; text-align:center; padding: 2rem;">Chart Render Error: ${err.message}</div>`;
+    }
 }

@@ -31,9 +31,12 @@ async function fetchData() {
             } else {
                 document.getElementById('sankey-prototype').innerHTML = '<div style="color:red; text-align:center;">Invalid Tree Data format.</div>';
             }
+        } else {
+            document.getElementById('sankey-prototype').innerHTML = `<div style="color:red; text-align:center;">HTTP Error: ${res.status}</div>`;
         }
     } catch (e) {
         console.error("Fetch Error:", e);
+        document.getElementById('sankey-prototype').innerHTML = `<div style="color:red; text-align:center;">Fetch Error: ${e.message}</div>`;
     }
 }
 

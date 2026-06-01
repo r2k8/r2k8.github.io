@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Trading Hub | Premium Edition</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Cache busters added to force browsers to fetch the new CSS and JS -->
+    <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
     <div class="ambient-background">
@@ -21,7 +21,7 @@
         <header class="glass-panel main-header">
             <div class="header-left">
                 <div class="logo-box">
-                    <i data-lucide="cpu" class="logo-icon"></i>
+                    <span style="font-size: 32px;">⚡</span>
                 </div>
                 <div class="brand">
                     <h1>AI Trading <span>Hub</span></h1>
@@ -42,7 +42,7 @@
             <!-- Left Column: Pipeline Stages -->
             <div class="pipeline-column">
                 <div class="section-heading">
-                    <i data-lucide="git-merge"></i>
+                    <span style="font-size:24px; color:var(--accent); margin-right: 8px;">🔄</span>
                     <h2>Decision Pipeline</h2>
                 </div>
 
@@ -99,7 +99,7 @@
                 <!-- Layer 4: Execution -->
                 <div class="glass-card execution-master">
                     <div class="exec-header">
-                        <i data-lucide="zap" class="accent-icon"></i>
+                        <span class="accent-icon" style="font-size:32px; filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.5));">🚀</span>
                         <h2>Live Execution</h2>
                         <span class="layer-badge">Layer 4</span>
                     </div>
@@ -123,6 +123,7 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Cache buster for JS -->
+    <script src="script.js?v=3"></script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-const GIST_ID = "64ba99affebb937a1534d8cb4b1c60ce";
-
 google.charts.load('current', {'packages':['sankey']});
 google.charts.setOnLoadCallback(initPrototype);
 
@@ -13,8 +11,7 @@ function initPrototype() {
     google.visualization.events.addListener(chart, 'select', () => {
         const selection = chart.getSelection();
         if (selection.length > 0 && selection[0].name) {
-            const clickedNodeName = selection[0].name;
-            handleNodeClick(clickedNodeName);
+            handleNodeClick(selection[0].name);
         }
     });
 
@@ -24,7 +21,7 @@ function initPrototype() {
 async function fetchData() {
     try {
         const timestamp = new Date().getTime();
-        const res = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/aitrade2_tree.json?t=${timestamp}`);
+        const res = await fetch(`data.json?t=${timestamp}`);
         if (res.ok) {
             const data = await res.json();
             if (data && data.name) {
@@ -32,7 +29,7 @@ async function fetchData() {
                 currentPath = [rawTree];
                 renderCurrentLevel();
             } else {
-                document.getElementById('sankey-prototype').innerHTML = '<div style="color:red; text-align:center;">Invalid Tree Data in Gist.</div>';
+                document.getElementById('sankey-prototype').innerHTML = '<div style="color:red; text-align:center;">Invalid Tree Data format.</div>';
             }
         }
     } catch (e) {
@@ -57,8 +54,7 @@ function navigateToPathIndex(index) {
 
 function renderCurrentLevel() {
     const currentNode = currentPath[currentPath.length - 1];
-    const bcContainer = document.getElementById('breadcrumbs');
-    bcContainer.innerHTML = currentPath.map((node, index) => {
+    document.getElementById('breadcrumbs').innerHTML = currentPath.map((node, index) => {
         if (index === currentPath.length - 1) return `<span>${node.name}</span>`;
         return `<span class="crumb-link" onclick="navigateToPathIndex(${index})">${node.name}</span><span>&gt;</span>`;
     }).join('');
@@ -84,9 +80,8 @@ function renderCurrentLevel() {
 
     data.addRows(rows);
     const colors = ['#3b82f6', '#10b981', '#ef4444', '#8b5cf6', '#f59e0b', '#0ea5e9', '#ec4899', '#14b8a6'];
-    const options = {
+    chart.draw(data, {
         width: '100%', height: 500, backgroundColor: 'transparent',
         sankey: { node: { colors: colors, nodePadding: 20, width: 15, label: { fontName: 'Outfit', fontSize: 15, color: '#f8fafc', bold: true } }, link: { colorMode: 'gradient', colors: colors } }
-    };
-    chart.draw(data, options);
+    });
 }

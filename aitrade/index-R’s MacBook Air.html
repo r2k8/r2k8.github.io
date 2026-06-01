@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Trading Hub</title>
+    <title>AI Trading Pipeline</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -29,26 +29,15 @@
                 <!-- Layer 1 -->
                 <div class="stage">
                     <div class="stage-icon">L1</div>
-                    <div class="glass-card layer-card">
-                        <div class="card-header">Macro & Capital Flows</div>
+                    <div class="glass-card">
+                        <div class="card-header">Macro Regime</div>
                         <div class="card-body">
-                            <!-- Regime -->
                             <div class="metric-large" id="regime-text">Loading...</div>
                             <div class="progress-container">
                                 <div class="progress-bar bull" id="bull-bar" style="width: 50%;"></div>
                                 <div class="progress-bar bear" id="bear-bar" style="width: 50%;"></div>
                             </div>
                             <div class="metric-sub" id="score-text">Analyzing market sentiment...</div>
-                            
-                            <hr class="divider">
-                            
-                            <!-- Capital Flow Visual (Sankey-lite) -->
-                            <div class="flow-section">
-                                <div class="flow-header">Live Capital Rotation</div>
-                                <div id="capital-flow-container" class="flow-container">
-                                    <div class="loader"></div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

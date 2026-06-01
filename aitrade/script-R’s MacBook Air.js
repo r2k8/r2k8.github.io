@@ -25,13 +25,20 @@ async function fetchData() {
             logEl.textContent = text;
             logEl.scrollTop = logEl.scrollHeight;
         }
+
     } catch (e) {
         console.error("Dashboard Fetch Error:", e);
     }
 }
 
 function updateLayer1(data) {
-    const regimeMap = { 'risk_on': 'Risk On', 'neutral': 'Neutral', 'defensive': 'Defensive', 'crash_watch': 'Crash Watch' };
+    const regimeMap = {
+        'risk_on': 'Risk On',
+        'neutral': 'Neutral',
+        'defensive': 'Defensive',
+        'crash_watch': 'Crash Watch'
+    };
+    
     document.getElementById('regime-text').textContent = regimeMap[data.regime_hint] || data.regime_hint;
     
     const bullPct = (data.overall_bullish_score * 100).toFixed(0);
@@ -39,46 +46,8 @@ function updateLayer1(data) {
     
     document.getElementById('bull-bar').style.width = `${bullPct}%`;
     document.getElementById('bear-bar').style.width = `${bearPct}%`;
+    
     document.getElementById('score-text').textContent = `Bullish: ${bullPct}%  •  Bearish: ${bearPct}%`;
-
-    // Process Capital Flows
-    if (data.capital_flows) {
-        renderCapitalFlows(data.capital_flows);
-    }
-}
-
-function renderCapitalFlows(flows) {
-    const container = document.getElementById('capital-flow-container');
-    container.innerHTML = '';
-
-    // Separate and sort inflows/outflows by absolute dollar volume
-    let inflows = flows.filter(f => f.direction === 'inflow').sort((a,b) => b.dollar_volume - a.dollar_volume);
-    let outflows = flows.filter(f => f.direction === 'outflow').sort((a,b) => b.dollar_volume - a.dollar_volume);
-
-    // Take top 3 of each
-    inflows = inflows.slice(0, 3);
-    outflows = outflows.slice(0, 3);
-
-    const maxVolume = Math.max(...[...inflows, ...outflows].map(f => f.dollar_volume));
-
-    const createRow = (flow) => {
-        const pct = (flow.dollar_volume / maxVolume) * 100;
-        const bVol = (flow.dollar_volume / 1000000000).toFixed(1);
-        
-        return `
-            <div class="flow-row">
-                <div class="flow-label">${flow.symbol}</div>
-                <div class="flow-bar-wrapper">
-                    <div class="flow-bar ${flow.direction}" style="width: ${Math.max(10, pct)}%;">
-                        <span class="flow-val">${flow.direction === 'inflow' ? '+' : '-'}$${bVol}B</span>
-                    </div>
-                </div>
-            </div>
-        `;
-    };
-
-    inflows.forEach(f => container.innerHTML += createRow(f));
-    outflows.forEach(f => container.innerHTML += createRow(f));
 }
 
 function updateLayer3(data) {

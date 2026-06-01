@@ -50,11 +50,13 @@ h1 span { background: var(--accent-gradient); -webkit-background-clip: text; -we
 .flow-container { display: flex; flex-direction: column; gap: 0.8rem; }
 .flow-row { display: flex; align-items: center; gap: 1rem; }
 .flow-label { width: 100px; font-size: 0.85rem; font-weight: 500; color: var(--text-muted); text-align: right; }
-.flow-bar-wrapper { flex: 1; height: 12px; background: rgba(255,255,255,0.05); border-radius: 6px; overflow: hidden; display: flex; align-items: center; }
-.flow-bar { height: 100%; border-radius: 6px; }
+.flow-bar-wrapper { flex: 1; height: 8px; background: rgba(255,255,255,0.05); border-radius: 4px; overflow: hidden; display: flex; align-items: center; }
+.flow-bar { height: 100%; border-radius: 4px; transition: width 1s ease-out; }
 .flow-bar.inflow { background: linear-gradient(90deg, rgba(16,185,129,0.2), var(--bull)); box-shadow: 0 0 10px rgba(16,185,129,0.3); }
 .flow-bar.outflow { background: linear-gradient(90deg, var(--bear), rgba(239,68,68,0.2)); box-shadow: 0 0 10px rgba(239,68,68,0.3); margin-left: auto; }
-.flow-val { font-size: 0.8rem; font-weight: 600; color: #fff; padding: 0 8px; }
+.flow-val { width: 70px; font-size: 0.85rem; font-weight: 600; text-align: left; }
+.flow-val.inflow { color: var(--bull); }
+.flow-val.outflow { color: var(--bear); }
 
 .connector { width: 2px; height: 40px; background: linear-gradient(to bottom, var(--glass-border), rgba(255,255,255,0.2)); margin-left: -760px; }
 

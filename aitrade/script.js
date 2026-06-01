@@ -64,15 +64,15 @@ function renderCapitalFlows(flows) {
     const createRow = (flow) => {
         const pct = (flow.dollar_volume / maxVolume) * 100;
         const bVol = (flow.dollar_volume / 1000000000).toFixed(1);
+        const sign = flow.direction === 'inflow' ? '+' : '-';
         
         return `
             <div class="flow-row">
                 <div class="flow-label">${flow.symbol}</div>
                 <div class="flow-bar-wrapper">
-                    <div class="flow-bar ${flow.direction}" style="width: ${Math.max(10, pct)}%;">
-                        <span class="flow-val">${flow.direction === 'inflow' ? '+' : '-'}$${bVol}B</span>
-                    </div>
+                    <div class="flow-bar ${flow.direction}" style="width: ${Math.max(2, pct)}%;"></div>
                 </div>
+                <div class="flow-val ${flow.direction}">${sign}$${bVol}B</div>
             </div>
         `;
     };

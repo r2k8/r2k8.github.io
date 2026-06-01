@@ -1,77 +1,11 @@
+const GIST_ID = "64ba99affebb937a1534d8cb4b1c60ce";
+
 google.charts.load('current', {'packages':['sankey']});
 google.charts.setOnLoadCallback(initPrototype);
 
-// Our mocked global liquidity tree
-const mockDataTree = {
-    id: "global",
-    name: "Global Macro Flow",
-    children: [
-        {
-            id: "us_equities",
-            name: "US Equities",
-            flow: 120, // Billions
-            children: [
-                {
-                    id: "tech",
-                    name: "Tech Sector (XLK)",
-                    flow: 65,
-                    children: [
-                        { id: "aapl", name: "Apple (AAPL)", flow: 25 },
-                        { id: "msft", name: "Microsoft (MSFT)", flow: 20 },
-                        { id: "nvda", name: "Nvidia (NVDA)", flow: 20 }
-                    ]
-                },
-                {
-                    id: "financials",
-                    name: "Financials (XLF)",
-                    flow: 35,
-                    children: [
-                        { id: "jpm", name: "JPMorgan (JPM)", flow: 15 },
-                        { id: "v", name: "Visa (V)", flow: 10 },
-                        { id: "ma", name: "Mastercard (MA)", flow: 10 }
-                    ]
-                },
-                {
-                    id: "energy",
-                    name: "Energy (XLE)",
-                    flow: 20,
-                    children: [
-                        { id: "xom", name: "Exxon (XOM)", flow: 12 },
-                        { id: "cvx", name: "Chevron (CVX)", flow: 8 }
-                    ]
-                }
-            ]
-        },
-        {
-            id: "crypto",
-            name: "Cryptocurrency",
-            flow: 45,
-            children: [
-                { id: "btc", name: "Bitcoin (IBIT)", flow: 35 },
-                { id: "eth", name: "Ethereum (ETHE)", flow: 10 }
-            ]
-        },
-        {
-            id: "eu_equities",
-            name: "EU Equities (VGK)",
-            flow: 30,
-            children: [
-                { id: "uk", name: "United Kingdom", flow: 15 },
-                { id: "france", name: "France", flow: 10 },
-                { id: "germany", name: "Germany", flow: 5 }
-            ]
-        },
-        {
-            id: "bonds",
-            name: "US Bonds (TLT)",
-            flow: -50, // Outflow (Money leaving bonds, entering global liquidity)
-            children: [] 
-        }
-    ]
-};
-
-let currentPath = [mockDataTree]; // Breadcrumb stack
+let currentPath = []; 
 let chart;
+let rawTree = null;
 
 function initPrototype() {
     chart = new google.visualization.Sankey(document.getElementById('sankey-prototype'));
@@ -85,7 +19,26 @@ function initPrototype() {
         }
     });
 
-    renderCurrentLevel();
+    fetchData();
+}
+
+async function fetchData() {
+    try {
+        const timestamp = new Date().getTime();
+        const l1Res = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/layer1_snapshot.json?t=${timestamp}`);
+        if (l1Res.ok) {
+            const data = await l1Res.json();
+            if (data.capital_flows_tree) {
+                rawTree = data.capital_flows_tree;
+                currentPath = [rawTree];
+                renderCurrentLevel();
+            } else {
+                document.getElementById('sankey-prototype').innerHTML = '<div style="color:red; text-align:center;">Tree data not found in Gist. Run backend first.</div>';
+            }
+        }
+    } catch (e) {
+        console.error("Fetch Error:", e);
+    }
 }
 
 function handleNodeClick(nodeName) {

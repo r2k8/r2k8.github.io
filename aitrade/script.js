@@ -13,9 +13,9 @@ async function fetchData() {
     try {
         const timestamp = new Date().getTime();
         
-        // Fetch Layer 1 Snapshot
-        const l1Res = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/layer1_snapshot.json?t=${timestamp}`);
-        if (l1Res.ok) updateLayer1(await l1Res.json());
+        // Fetch Site Data (Layer 1 + Visuals)
+        const siteDataRes = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/site_data.json?t=${timestamp}`);
+        if (siteDataRes.ok) updateLayer1(await siteDataRes.json());
 
         // Fetch Layer 3 Orders
         const l3Res = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/layer3_orders.json?t=${timestamp}`);
@@ -36,36 +36,41 @@ async function fetchData() {
 
 function updateLayer1(data) {
     const regimeMap = { 'risk_on': 'Risk On', 'neutral': 'Neutral', 'defensive': 'Defensive', 'crash_watch': 'Crash Watch' };
-    document.getElementById('regime-text').textContent = regimeMap[data.regime_hint] || data.regime_hint;
+    document.getElementById('regime-title').textContent = regimeMap[data.regime] || data.regime;
 
-    // Process Capital Flows into Sankey
-    if (data.capital_flows && data.capital_flows.length > 0) {
-        renderSankey(data.capital_flows);
+    // Populate Top Inflows and Outflows
+    const topIn = data.top_inflows.map(f => f.symbol).join(' / ') || 'None';
+    const topOut = data.top_outflows.map(f => f.symbol).join(' / ') || 'None';
+    
+    document.getElementById('gl-status').textContent = data.top_inflows.length >= data.top_outflows.length ? 'Positive' : 'Negative';
+    document.getElementById('gl-inflow').textContent = topIn;
+    document.getElementById('gl-outflow').textContent = topOut;
+    
+    if (data.warnings && data.warnings.length > 0) {
+        document.getElementById('gl-health').textContent = "Data Health: " + data.warnings[0];
+    } else {
+        document.getElementById('gl-health').textContent = "Data Health: Optimal";
+    }
+
+    if (data.sankey && data.sankey.links) {
+        renderSankey(data.sankey.links);
+    }
+    
+    if (data.earnings_radar) {
+        renderEarningsRadar(data.earnings_radar);
     }
 }
 
-function renderSankey(flows) {
+function renderSankey(links) {
     const data = new google.visualization.DataTable();
     data.addColumn('string', 'From');
     data.addColumn('string', 'To');
     data.addColumn('number', 'Capital Flow ($ Billions)');
 
-    const rows = [];
-    flows.forEach(f => {
-        // Convert to billions for readability
-        const bVol = parseFloat((f.dollar_volume / 1000000000).toFixed(2));
-        
-        // A Sankey flows from Source -> Target
-        if (f.direction === 'inflow') {
-            rows.push(['Global Liquidity', f.symbol, bVol]);
-        } else {
-            rows.push([f.symbol, 'Global Liquidity', bVol]);
-        }
-    });
-
+    const rows = links.map(l => [l.source, l.target, l.value]);
     data.addRows(rows);
 
-    const colors = ['#3b82f6', '#10b981', '#ef4444', '#8b5cf6', '#f59e0b', '#0ea5e9', '#ec4899', '#14b8a6'];
+    const colors = ['#3b82f6', '#10b981', '#ef4444', '#8b5cf6', '#f59e0b', '#0ea5e9', '#ec4899', '#14b8a6', '#64748b'];
 
     const options = {
         width: '100%',
@@ -93,6 +98,36 @@ function renderSankey(flows) {
     const container = document.getElementById('capital-flow-container');
     const chart = new google.visualization.Sankey(container);
     chart.draw(data, options);
+}
+
+function renderEarningsRadar(earningsData) {
+    const tbody = document.getElementById('earnings-body');
+    if (!earningsData || earningsData.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" style="padding: 1rem; text-align: center;">No earnings data available</td></tr>';
+        return;
+    }
+    
+    tbody.innerHTML = '';
+    earningsData.forEach(row => {
+        let labelColor = 'var(--text-muted)';
+        if (row.Label === 'High-priority review') labelColor = '#10b981'; // Green
+        else if (row.Label === 'Watchlist') labelColor = '#f59e0b'; // Orange
+        else if (row.Label === 'Avoid') labelColor = '#ef4444'; // Red
+        
+        const tr = document.createElement('tr');
+        tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
+        tr.innerHTML = `
+            <td style="padding: 0.8rem 0.5rem;">${row.Date || '-'}</td>
+            <td style="padding: 0.8rem 0.5rem; font-weight: bold;">${row.Symbol || '-'}</td>
+            <td style="padding: 0.8rem 0.5rem;">${row.Company || '-'}</td>
+            <td style="padding: 0.8rem 0.5rem;">${row['Sector ETF'] || '-'}</td>
+            <td style="padding: 0.8rem 0.5rem;">${row['Sector Flow'] || '-'}</td>
+            <td style="padding: 0.8rem 0.5rem;">${row['Company Sentiment'] || '-'}</td>
+            <td style="padding: 0.8rem 0.5rem;">${row.Trend || '-'}</td>
+            <td style="padding: 0.8rem 0.5rem;"><span style="color: ${labelColor}; font-weight: 500;">${row.Label || '-'}</span></td>
+        `;
+        tbody.appendChild(tr);
+    });
 }
 
 function updateLayer3(data) {

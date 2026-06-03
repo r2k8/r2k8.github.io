@@ -33,14 +33,46 @@
                     <div class="glass-card layer-card">
                         <div class="card-header">Macro & Capital Flows</div>
                         <div class="card-body">
-                            <!-- Regime -->
-                            <div class="metric-large" id="regime-text" style="margin-bottom: 2rem;">Loading Regime...</div>
+                            <!-- Regime Summary -->
+                            <div id="regime-summary" style="margin-bottom: 2rem;">
+                                <div class="metric-large" id="regime-title">Loading Regime...</div>
+                                <div class="regime-details" style="font-size: 1.1rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.6;">
+                                    <div>Global Liquidity: <span id="gl-status" class="text-white">-</span></div>
+                                    <div>Inflow Leadership: <span id="gl-inflow" class="text-white">-</span></div>
+                                    <div>Outflow Pressure: <span id="gl-outflow" class="text-white">-</span></div>
+                                    <div style="font-size: 0.9rem; margin-top: 0.5rem; color: #f59e0b;" id="gl-health"></div>
+                                </div>
+                            </div>
                             
                             <!-- Capital Flow Sankey -->
                             <div class="flow-section">
                                 <div class="flow-header">Global Capital Flow Sankey</div>
                                 <div id="capital-flow-container" style="width: 100%; height: 400px; margin-top: 1rem;">
                                     <div class="loader"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Earnings Radar -->
+                            <div class="flow-section" style="margin-top: 2rem;">
+                                <div class="flow-header">Earnings Radar</div>
+                                <div class="table-container" style="margin-top: 1rem; overflow-x: auto;">
+                                    <table id="earnings-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+                                        <thead>
+                                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">
+                                                <th style="padding: 0.5rem;">Date</th>
+                                                <th style="padding: 0.5rem;">Symbol</th>
+                                                <th style="padding: 0.5rem;">Company</th>
+                                                <th style="padding: 0.5rem;">Sector ETF</th>
+                                                <th style="padding: 0.5rem;">Sector Flow</th>
+                                                <th style="padding: 0.5rem;">Sentiment</th>
+                                                <th style="padding: 0.5rem;">Trend</th>
+                                                <th style="padding: 0.5rem;">Label</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="earnings-body">
+                                            <tr><td colspan="8" style="padding: 1rem; text-align: center;">Loading...</td></tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

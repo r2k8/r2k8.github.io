@@ -118,16 +118,17 @@ function renderEChartsSankey(sankeyData) {
                 layout: 'none',
                 layoutIterations: 0,
                 nodeAlign: 'justify',
+                roam: true, // ENABLES PAN AND ZOOM!
                 data: sankeyData.nodes,
                 links: sankeyData.links,
                 emphasis: { focus: 'adjacency' },
-                nodeWidth: 10,
-                nodeGap: 6,
+                nodeWidth: 4,
+                nodeGap: 2,
                 label: {
                     position: 'right',
                     color: '#f8fafc',
                     fontFamily: 'Outfit',
-                    fontSize: 10,
+                    fontSize: 9,
                     fontWeight: 500
                 },
                 lineStyle: { curveness: 0.5 }

@@ -122,7 +122,7 @@ function renderEChartsSankey(sankeyData) {
                 links: sankeyData.links,
                 emphasis: { focus: 'adjacency' },
                 nodeWidth: 4,
-                nodeGap: 2,
+                nodeGap: 1.5,
                 label: {
                     position: 'right',
                     color: '#f8fafc',

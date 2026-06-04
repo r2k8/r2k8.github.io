@@ -73,9 +73,16 @@ function updateLayer1(data) {
 
 function renderEChartsSankey(sankeyData) {
     const container = document.getElementById('capital-flow-container');
-    container.innerHTML = ''; // clear loader
     
-    const myChart = echarts.init(container);
+    let myChart = echarts.getInstanceByDom(container);
+    if (!myChart) {
+        container.innerHTML = ''; // clear loader
+        myChart = echarts.init(container);
+        
+        window.addEventListener('resize', () => {
+            if (myChart) myChart.resize();
+        });
+    }
     
     const option = {
         tooltip: {
@@ -118,10 +125,6 @@ function renderEChartsSankey(sankeyData) {
     };
     
     myChart.setOption(option);
-    
-    window.addEventListener('resize', () => {
-        myChart.resize();
-    });
 }
 
 function renderEarningsRadar(earningsData) {

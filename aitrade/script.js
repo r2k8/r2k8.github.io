@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', initDashboard);
 
 function initDashboard() {
     fetchData();
-    // Refresh data every 5 minutes
-    setInterval(fetchData, 300000); 
+    // Refresh data every 30 seconds
+    setInterval(fetchData, 30000); 
 }
 
 async function fetchData() {
@@ -17,6 +17,9 @@ async function fetchData() {
         if (sankeyRes.ok) {
             const sankeyData = await sankeyRes.json();
             renderEChartsSankey(sankeyData);
+            if (sankeyData.last_updated) {
+                document.getElementById('sankey-timestamp').innerHTML = `Live Engine Data &bull; Last Updated: ${sankeyData.last_updated}`;
+            }
         } else {
             document.getElementById('capital-flow-container').innerHTML = '<div style="text-align:center; padding: 2rem; color: var(--text-muted);">Awaiting GitHub Actions Data Pipeline...</div>';
         }

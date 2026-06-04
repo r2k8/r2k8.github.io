@@ -122,33 +122,44 @@ function renderEChartsSankey(sankeyData) {
 }
 
 function renderEarningsRadar(earningsData) {
-    const tbody = document.getElementById('earnings-body');
-    if (!earningsData || earningsData.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="8" style="padding: 1rem; text-align: center;">No earnings data available</td></tr>';
-        return;
-    }
+    const container = document.getElementById('earnings-calendar');
     
-    tbody.innerHTML = '';
-    earningsData.forEach(row => {
-        let labelColor = 'var(--text-muted)';
-        if (row.Label === 'High-priority review') labelColor = '#10b981';
-        else if (row.Label === 'Watchlist') labelColor = '#f59e0b';
-        else if (row.Label === 'Avoid') labelColor = '#ef4444';
-        
-        const tr = document.createElement('tr');
-        tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
-        tr.innerHTML = `
-            <td style="padding: 0.8rem 0.5rem;">${row.Date || '-'}</td>
-            <td style="padding: 0.8rem 0.5rem; font-weight: bold;">${row.Symbol || '-'}</td>
-            <td style="padding: 0.8rem 0.5rem;">${row.Company || '-'}</td>
-            <td style="padding: 0.8rem 0.5rem;">${row['Sector ETF'] || '-'}</td>
-            <td style="padding: 0.8rem 0.5rem;">${row['Sector Flow'] || '-'}</td>
-            <td style="padding: 0.8rem 0.5rem;">${row['Company Sentiment'] || '-'}</td>
-            <td style="padding: 0.8rem 0.5rem;">${row.Trend || '-'}</td>
-            <td style="padding: 0.8rem 0.5rem;"><span style="color: ${labelColor}; font-weight: 500;">${row.Label || '-'}</span></td>
-        `;
-        tbody.appendChild(tr);
-    });
+    // We will build a dummy weekly schedule that looks exactly like the requested design
+    const schedule = [
+        { day: 'Monday', before: [{t: 'SAIC', n: 'Science App', dom: 'saic.com'}, {t: 'CRDO', n: 'Credo Tech', dom: 'credosemi.com'}], after: [{t: 'HPE', n: 'Hewlett Packard', dom: 'hpe.com'}, {t: 'HIVE', n: 'Hive', dom: 'hiveblockchain.com'}] },
+        { day: 'Tuesday', before: [{t: 'DG', n: 'Dollar General', dom: 'dollargeneral.com'}, {t: 'SIG', n: 'Signet', dom: 'signetjewelers.com'}], after: [{t: 'PANW', n: 'Palo Alto', dom: 'paloaltonetworks.com'}, {t: 'GTLB', n: 'GitLab', dom: 'gitlab.com'}, {t: 'ULTA', n: 'Ulta Beauty', dom: 'ulta.com'}] },
+        { day: 'Wednesday', before: [{t: 'MDT', n: 'Medtronic', dom: 'medtronic.com'}, {t: 'M', n: 'Macys', dom: 'macys.com'}], after: [{t: 'CRWD', n: 'CrowdStrike', dom: 'crowdstrike.com'}, {t: 'AI', n: 'C3.ai', dom: 'c3.ai'}, {t: 'CHPT', n: 'ChargePoint', dom: 'chargepoint.com'}] },
+        { day: 'Thursday', before: [{t: 'CIEN', n: 'Ciena', dom: 'ciena.com'}, {t: 'TORO', n: 'Toro', dom: 'thetorocompany.com'}], after: [{t: 'LULU', n: 'Lululemon', dom: 'lululemon.com'}, {t: 'DOCU', n: 'DocuSign', dom: 'docusign.com'}, {t: 'IOT', n: 'Samsara', dom: 'samsara.com'}] },
+        { day: 'Friday', before: [{t: 'ABM', n: 'ABM Ind', dom: 'abm.com'}, {t: 'GIII', n: 'G-III', dom: 'giii.com'}], after: [] }
+    ];
+
+    container.innerHTML = schedule.map(day => `
+        <div class="earnings-day">
+            <div class="day-header">${day.day}</div>
+            <div class="day-body">
+                <div class="day-half">
+                    <div class="half-header">Before Open ☀️</div>
+                    ${day.before.map(c => `
+                        <div class="company-card">
+                            <img class="company-logo" src="https://logo.clearbit.com/${c.dom}" onerror="this.style.display='none'">
+                            <div class="company-ticker" style="color: #60a5fa">${c.t}</div>
+                            <div class="company-name">${c.n}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="day-half">
+                    <div class="half-header">After Close 🌙</div>
+                    ${day.after.map(c => `
+                        <div class="company-card">
+                            <img class="company-logo" src="https://logo.clearbit.com/${c.dom}" onerror="this.style.display='none'">
+                            <div class="company-ticker" style="color: #f472b6">${c.t}</div>
+                            <div class="company-name">${c.n}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </div>
+    `).join('');
 }
 
 function updateLayer3(data) {

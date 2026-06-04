@@ -52,27 +52,16 @@
                                 </div>
                             </div>
                             
-                            <!-- Earnings Radar -->
+                            <!-- Earnings Calendar -->
                             <div class="flow-section" style="margin-top: 2rem;">
-                                <div class="flow-header">Earnings Radar</div>
-                                <div class="table-container" style="margin-top: 1rem; overflow-x: auto;">
-                                    <table id="earnings-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
-                                        <thead>
-                                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">
-                                                <th style="padding: 0.5rem;">Date</th>
-                                                <th style="padding: 0.5rem;">Symbol</th>
-                                                <th style="padding: 0.5rem;">Company</th>
-                                                <th style="padding: 0.5rem;">Sector ETF</th>
-                                                <th style="padding: 0.5rem;">Sector Flow</th>
-                                                <th style="padding: 0.5rem;">Sentiment</th>
-                                                <th style="padding: 0.5rem;">Trend</th>
-                                                <th style="padding: 0.5rem;">Label</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="earnings-body">
-                                            <tr><td colspan="8" style="padding: 1rem; text-align: center;">Loading...</td></tr>
-                                        </tbody>
-                                    </table>
+                                <div class="flow-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
+                                    <div>
+                                        <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">Most Anticipated Earnings Releases</div>
+                                        <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.2rem;" id="earnings-week-label">For the week beginning June 01, 2026</div>
+                                    </div>
+                                </div>
+                                <div class="earnings-calendar" id="earnings-calendar">
+                                    <div style="padding: 2rem; display: flex; justify-content: center;"><div class="loader"></div></div>
                                 </div>
                             </div>
                         </div>

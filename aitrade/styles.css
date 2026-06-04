@@ -32,7 +32,7 @@ h1 span { background: var(--accent-gradient); -webkit-background-clip: text; -we
 .stage { display: flex; align-items: center; gap: 2rem; width: 100%; }
 .stage-icon { width: 60px; height: 60px; border-radius: 50%; background: var(--glass-bg); border: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; color: var(--text-muted); flex-shrink: 0; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
 
-.glass-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; width: 100%; transition: transform 0.3s ease; }
+.glass-card { background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 20px; padding: 2rem; flex: 1; min-width: 0; transition: transform 0.3s ease; }
 .glass-card:hover { transform: translateY(-3px); }
 .highlight-card { background: rgba(59, 130, 246, 0.05); border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 10px 40px rgba(59, 130, 246, 0.1); }
 

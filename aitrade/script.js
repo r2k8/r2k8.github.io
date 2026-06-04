@@ -1,27 +1,38 @@
 const GIST_ID = "64ba99affebb937a1534d8cb4b1c60ce";
 
-// Load Google Charts Sankey module
-google.charts.load('current', {'packages':['sankey']});
-google.charts.setOnLoadCallback(initDashboard);
+document.addEventListener('DOMContentLoaded', initDashboard);
 
 function initDashboard() {
     fetchData();
-    setInterval(fetchData, 30000);
+    // Refresh data every 5 minutes
+    setInterval(fetchData, 300000); 
 }
 
 async function fetchData() {
     try {
         const timestamp = new Date().getTime();
         
-        // Fetch Site Data (Layer 1 + Visuals)
-        const siteDataRes = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/site_data.json?t=${timestamp}`);
-        if (siteDataRes.ok) updateLayer1(await siteDataRes.json());
+        // 1. Fetch our newly generated Static Pre-compute data from the engine repo!
+        const sankeyRes = await fetch(`https://raw.githubusercontent.com/r2k8/spinvest/main/data/sankey_data.json?t=${timestamp}`);
+        if (sankeyRes.ok) {
+            const sankeyData = await sankeyRes.json();
+            renderEChartsSankey(sankeyData);
+        } else {
+            document.getElementById('capital-flow-container').innerHTML = '<div style="text-align:center; padding: 2rem; color: var(--text-muted);">Awaiting GitHub Actions Data Pipeline...</div>';
+        }
 
-        // Fetch Layer 3 Orders
+        // 2. Fetch legacy Site Data for Earnings Radar (until we move it to the python pipeline)
+        const siteDataRes = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/site_data.json?t=${timestamp}`);
+        if (siteDataRes.ok) {
+            const data = await siteDataRes.json();
+            updateLayer1(data);
+        }
+
+        // 3. Fetch Layer 3 Orders
         const l3Res = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/layer3_orders.json?t=${timestamp}`);
         if (l3Res.ok) updateLayer3(await l3Res.json());
 
-        // Fetch Cron Logs
+        // 4. Fetch Cron Logs
         const logRes = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/cron_output.log?t=${timestamp}`);
         if (logRes.ok) {
             const text = await logRes.text();
@@ -51,53 +62,63 @@ function updateLayer1(data) {
     } else {
         document.getElementById('gl-health').textContent = "Data Health: Optimal";
     }
-
-    if (data.sankey && data.sankey.links) {
-        renderSankey(data.sankey.links);
-    }
     
     if (data.earnings_radar) {
         renderEarningsRadar(data.earnings_radar);
     }
 }
 
-function renderSankey(links) {
-    const data = new google.visualization.DataTable();
-    data.addColumn('string', 'From');
-    data.addColumn('string', 'To');
-    data.addColumn('number', 'Capital Flow ($ Billions)');
-
-    const rows = links.map(l => [l.source, l.target, l.value]);
-    data.addRows(rows);
-
-    const colors = ['#3b82f6', '#10b981', '#ef4444', '#8b5cf6', '#f59e0b', '#0ea5e9', '#ec4899', '#14b8a6', '#64748b'];
-
-    const options = {
-        width: '100%',
-        height: 400,
-        sankey: {
-            node: {
-                colors: colors,
-                nodePadding: 15,
-                width: 10,
-                label: { 
-                    fontName: 'Outfit',
-                    fontSize: 14,
-                    color: '#f8fafc',
-                    bold: true
+function renderEChartsSankey(sankeyData) {
+    const container = document.getElementById('capital-flow-container');
+    container.innerHTML = ''; // clear loader
+    
+    const myChart = echarts.init(container);
+    
+    const option = {
+        tooltip: {
+            trigger: 'item',
+            triggerOn: 'mousemove',
+            backgroundColor: 'rgba(20, 25, 40, 0.9)',
+            borderColor: 'rgba(255, 255, 255, 0.1)',
+            textStyle: { color: '#f8fafc' },
+            formatter: function (params) {
+                if (params.dataType === 'node') {
+                    return `<div style="font-weight:600;margin-bottom:4px;">${params.data.name}</div>`;
+                } else {
+                    return `<div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">Flow Proxy</div>
+                            <div style="font-weight:600;">${params.data.source} → ${params.data.target}</div>
+                            <span style="color:#10b981">Weight:</span> ${params.value}`;
                 }
-            },
-            link: {
-                colorMode: 'gradient',
-                colors: colors
             }
         },
-        backgroundColor: 'transparent'
+        series: [
+            {
+                type: 'sankey',
+                layout: 'none',
+                layoutIterations: 0,
+                nodeAlign: 'justify',
+                data: sankeyData.nodes,
+                links: sankeyData.links,
+                emphasis: { focus: 'adjacency' },
+                nodeWidth: 20,
+                nodeGap: 15,
+                label: {
+                    position: 'right',
+                    color: '#f8fafc',
+                    fontFamily: 'Outfit',
+                    fontSize: 13,
+                    fontWeight: 500
+                },
+                lineStyle: { curveness: 0.5 }
+            }
+        ]
     };
-
-    const container = document.getElementById('capital-flow-container');
-    const chart = new google.visualization.Sankey(container);
-    chart.draw(data, options);
+    
+    myChart.setOption(option);
+    
+    window.addEventListener('resize', () => {
+        myChart.resize();
+    });
 }
 
 function renderEarningsRadar(earningsData) {
@@ -110,9 +131,9 @@ function renderEarningsRadar(earningsData) {
     tbody.innerHTML = '';
     earningsData.forEach(row => {
         let labelColor = 'var(--text-muted)';
-        if (row.Label === 'High-priority review') labelColor = '#10b981'; // Green
-        else if (row.Label === 'Watchlist') labelColor = '#f59e0b'; // Orange
-        else if (row.Label === 'Avoid') labelColor = '#ef4444'; // Red
+        if (row.Label === 'High-priority review') labelColor = '#10b981';
+        else if (row.Label === 'Watchlist') labelColor = '#f59e0b';
+        else if (row.Label === 'Avoid') labelColor = '#ef4444';
         
         const tr = document.createElement('tr');
         tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';

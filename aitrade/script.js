@@ -118,7 +118,6 @@ function renderEChartsSankey(sankeyData) {
                 layout: 'none',
                 layoutIterations: 0,
                 nodeAlign: 'justify',
-                roam: true, // ENABLES PAN AND ZOOM!
                 data: sankeyData.nodes,
                 links: sankeyData.links,
                 emphasis: { focus: 'adjacency' },

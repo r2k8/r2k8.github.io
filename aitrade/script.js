@@ -110,13 +110,13 @@ function renderEChartsSankey(sankeyData) {
                 data: sankeyData.nodes,
                 links: sankeyData.links,
                 emphasis: { focus: 'adjacency' },
-                nodeWidth: 20,
-                nodeGap: 15,
+                nodeWidth: 10,
+                nodeGap: 6,
                 label: {
                     position: 'right',
                     color: '#f8fafc',
                     fontFamily: 'Outfit',
-                    fontSize: 13,
+                    fontSize: 10,
                     fontWeight: 500
                 },
                 lineStyle: { curveness: 0.5 }

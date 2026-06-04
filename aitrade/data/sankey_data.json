@@ -10,56 +10,14 @@
     {
       "name": "Equities",
       "itemStyle": {
-        "color": "#3b82f6"
-      },
-      "depth": 1
-    },
-    {
-      "name": "Fixed Income",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 1
-    },
-    {
-      "name": "Commodities",
-      "itemStyle": {
-        "color": "#f59e0b"
-      },
-      "depth": 1
-    },
-    {
-      "name": "Real Estate",
-      "itemStyle": {
-        "color": "#8b5cf6"
-      },
-      "depth": 1
-    },
-    {
-      "name": "North America",
-      "itemStyle": {
         "color": "#10b981"
       },
-      "depth": 2
+      "depth": 1
     },
     {
-      "name": "Europe",
+      "name": "USA",
       "itemStyle": {
-        "color": "#f43f5e"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Asia-Pacific",
-      "itemStyle": {
-        "color": "#0ea5e9"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Emerging Markets",
-      "itemStyle": {
-        "color": "#f59e0b"
+        "color": "#10b981"
       },
       "depth": 2
     },
@@ -67,27 +25,6 @@
       "name": "Technology",
       "itemStyle": {
         "color": "#10b981"
-      },
-      "depth": 3
-    },
-    {
-      "name": "Financials",
-      "itemStyle": {
-        "color": "#14b8a6"
-      },
-      "depth": 3
-    },
-    {
-      "name": "Healthcare",
-      "itemStyle": {
-        "color": "#3b82f6"
-      },
-      "depth": 3
-    },
-    {
-      "name": "Consumer",
-      "itemStyle": {
-        "color": "#f59e0b"
       },
       "depth": 3
     },
@@ -101,217 +38,409 @@
     {
       "name": "MSFT",
       "itemStyle": {
-        "color": "#10b981"
+        "color": "#ef4444"
       },
       "depth": 4
     },
     {
       "name": "AAPL",
       "itemStyle": {
-        "color": "#0ea5e9"
+        "color": "#ef4444"
       },
       "depth": 4
     },
     {
-      "name": "JPM",
+      "name": "GOOGL",
       "itemStyle": {
-        "color": "#14b8a6"
+        "color": "#ef4444"
       },
       "depth": 4
     },
     {
-      "name": "GS",
+      "name": "Healthcare",
       "itemStyle": {
-        "color": "#14b8a6"
+        "color": "#10b981"
       },
-      "depth": 4
+      "depth": 3
     },
     {
       "name": "LLY",
       "itemStyle": {
-        "color": "#3b82f6"
+        "color": "#10b981"
       },
       "depth": 4
     },
     {
-      "name": "AMZN",
+      "name": "UNH",
       "itemStyle": {
-        "color": "#f59e0b"
+        "color": "#10b981"
       },
       "depth": 4
+    },
+    {
+      "name": "JNJ",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Financials",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 3
+    },
+    {
+      "name": "JPM",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "V",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "MA",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "BAC",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Consumer",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 3
+    },
+    {
+      "name": "AMZN",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "TSLA",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "HD",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "Europe",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Asia-Pacific",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Emerging Markets",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Fixed Income",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 1
+    },
+    {
+      "name": "Commodities",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 1
+    },
+    {
+      "name": "Crypto",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 1
+    },
+    {
+      "name": "Real Estate",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 1
     }
   ],
   "links": [
     {
       "source": "Global Liquidity",
       "target": "Equities",
-      "value": 100,
-      "lineStyle": {
-        "color": "#3b82f6",
-        "opacity": 0.4
-      }
-    },
-    {
-      "source": "Global Liquidity",
-      "target": "Fixed Income",
-      "value": 40,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.4
-      }
-    },
-    {
-      "source": "Global Liquidity",
-      "target": "Commodities",
-      "value": 25,
-      "lineStyle": {
-        "color": "#f59e0b",
-        "opacity": 0.4
-      }
-    },
-    {
-      "source": "Global Liquidity",
-      "target": "Real Estate",
-      "value": 15,
-      "lineStyle": {
-        "color": "#8b5cf6",
-        "opacity": 0.4
-      }
-    },
-    {
-      "source": "Equities",
-      "target": "North America",
-      "value": 60,
+      "value": 32.95,
       "lineStyle": {
         "color": "#10b981",
-        "opacity": 0.4
+        "opacity": 0.35
       }
     },
     {
       "source": "Equities",
-      "target": "Europe",
-      "value": 20,
+      "target": "USA",
+      "value": 32.95,
       "lineStyle": {
-        "color": "#f43f5e",
-        "opacity": 0.4
+        "color": "#10b981",
+        "opacity": 0.35
       }
     },
     {
-      "source": "Equities",
-      "target": "Asia-Pacific",
-      "value": 15,
-      "lineStyle": {
-        "color": "#0ea5e9",
-        "opacity": 0.4
-      }
-    },
-    {
-      "source": "Equities",
-      "target": "Emerging Markets",
-      "value": 5,
-      "lineStyle": {
-        "color": "#f59e0b",
-        "opacity": 0.4
-      }
-    },
-    {
-      "source": "North America",
+      "source": "USA",
       "target": "Technology",
-      "value": 25,
+      "value": 21.03,
       "lineStyle": {
         "color": "#10b981",
-        "opacity": 0.4
-      }
-    },
-    {
-      "source": "North America",
-      "target": "Financials",
-      "value": 15,
-      "lineStyle": {
-        "color": "#14b8a6",
-        "opacity": 0.4
-      }
-    },
-    {
-      "source": "North America",
-      "target": "Healthcare",
-      "value": 10,
-      "lineStyle": {
-        "color": "#3b82f6",
-        "opacity": 0.4
-      }
-    },
-    {
-      "source": "North America",
-      "target": "Consumer",
-      "value": 10,
-      "lineStyle": {
-        "color": "#f59e0b",
-        "opacity": 0.4
+        "opacity": 0.35
       }
     },
     {
       "source": "Technology",
       "target": "NVDA",
-      "value": 12,
+      "value": 892.18,
       "lineStyle": {
         "color": "#10b981",
-        "opacity": 0.4
+        "opacity": 0.35
       }
     },
     {
       "source": "Technology",
       "target": "MSFT",
-      "value": 8,
+      "value": 514.94,
       "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.4
+        "color": "#ef4444",
+        "opacity": 0.35
       }
     },
     {
       "source": "Technology",
       "target": "AAPL",
-      "value": 5,
+      "value": 15.17,
       "lineStyle": {
-        "color": "#0ea5e9",
-        "opacity": 0.4
+        "color": "#ef4444",
+        "opacity": 0.35
       }
     },
     {
-      "source": "Financials",
-      "target": "JPM",
-      "value": 9,
+      "source": "Technology",
+      "target": "GOOGL",
+      "value": 164.85,
       "lineStyle": {
-        "color": "#14b8a6",
-        "opacity": 0.4
+        "color": "#ef4444",
+        "opacity": 0.35
       }
     },
     {
-      "source": "Financials",
-      "target": "GS",
-      "value": 6,
+      "source": "USA",
+      "target": "Healthcare",
+      "value": 14.91,
       "lineStyle": {
-        "color": "#14b8a6",
-        "opacity": 0.4
+        "color": "#10b981",
+        "opacity": 0.35
       }
     },
     {
       "source": "Healthcare",
       "target": "LLY",
-      "value": 10,
+      "value": 31.03,
       "lineStyle": {
-        "color": "#3b82f6",
-        "opacity": 0.4
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Healthcare",
+      "target": "UNH",
+      "value": 61.12,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Healthcare",
+      "target": "JNJ",
+      "value": 11.06,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "USA",
+      "target": "Financials",
+      "value": 11.48,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Financials",
+      "target": "JPM",
+      "value": 52.25,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Financials",
+      "target": "V",
+      "value": 27.19,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Financials",
+      "target": "MA",
+      "value": 28.34,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Financials",
+      "target": "BAC",
+      "value": 50.77,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "USA",
+      "target": "Consumer",
+      "value": 12.89,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
       }
     },
     {
       "source": "Consumer",
       "target": "AMZN",
-      "value": 10,
+      "value": 373.11,
       "lineStyle": {
-        "color": "#f59e0b",
-        "opacity": 0.4
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Consumer",
+      "target": "TSLA",
+      "value": 308.3,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Consumer",
+      "target": "HD",
+      "value": 14.53,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Equities",
+      "target": "Europe",
+      "value": 1,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Equities",
+      "target": "Asia-Pacific",
+      "value": 1,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Equities",
+      "target": "Emerging Markets",
+      "value": 1.7,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Global Liquidity",
+      "target": "Fixed Income",
+      "value": 2.68,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Global Liquidity",
+      "target": "Commodities",
+      "value": 16.0,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Global Liquidity",
+      "target": "Crypto",
+      "value": 148.24,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Global Liquidity",
+      "target": "Real Estate",
+      "value": 1,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
       }
     }
-  ]
+  ],
+  "last_updated": "2026-06-04 19:41:17 UTC"
 }

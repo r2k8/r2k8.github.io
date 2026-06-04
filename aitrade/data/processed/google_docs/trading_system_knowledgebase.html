@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Trading System Knowledgebase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #111;
+      line-height: 1.45;
+      max-width: 760px;
+      margin: 40px auto;
+    }
+    h1 { font-size: 28px; margin: 28px 0 8px; }
+    h2 { font-size: 20px; margin: 24px 0 8px; }
+    h3 { font-size: 16px; margin: 18px 0 6px; }
+    p { margin: 8px 0; }
+    code { font-family: Menlo, Consolas, monospace; background: #f3f4f6; padding: 1px 4px; }
+    pre { background: #f6f8fa; padding: 12px; white-space: pre-wrap; border: 1px solid #ddd; }
+    blockquote { border-left: 4px solid #ccc; margin: 12px 0; padding-left: 12px; color: #333; }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 24px 0; }
+  </style>
+</head>
+<body>
+  <h1>Trading System Knowledgebase</h1>
+  <p><strong>Generated:</strong> 2026-05-30 05:55 UTC</p>
+  <p><strong>Source:</strong> /Users/r2k8/Library/CloudStorage/OneDrive-Personal/wiki/trading-system</p>
+  <hr>
+  <h1>Trading System</h1>
+<h1>project #trading #automation</h1>
+<blockquote>A small, portable trading automation system. Data first. Risk always. Execution last.</blockquote>
+<p><strong>Status:</strong> Active</p>
+<p><strong>Code:</strong> <code>/Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system</code></p>
+<p><strong>Broker scope:</strong> Robinhood agent account <code>••••3699</code> only</p>
+<p>---</p>
+<h2>Shape</h2>
+<p>The system is a pipeline, not a dashboard.</p>
+<pre><code>flowchart LR
+    A[&quot;Layer 1: observe&quot;] --&gt; B[&quot;Layer 2: decide&quot;]
+    B --&gt; C[&quot;Layer 3: risk&quot;]
+    C --&gt; D[&quot;Layer 4: execution&quot;]
+    D --&gt; E[&quot;Layer 5: logs&quot;]</code></pre>
+<p>Each layer writes artifacts. Artifacts are the memory. Code can change; artifacts keep the contract honest.</p>
+<h2>Current Layer</h2>
+<p>Layer 1 is live.</p>
+<p>It runs with:</p>
+<pre><code>/Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/scripts/run_layer1.sh</code></pre>
+<p>It writes:</p>
+<ul>
+<li><code>/Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/data/processed/layer1_snapshot.json</code></li>
+<li><code>/Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/data/processed/sector_sentiment.csv</code></li>
+<li><code>/Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/data/processed/capital_flows.csv</code></li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li>[[trading-system/00-principles]]</li>
+<li>[[trading-system/01-architecture]]</li>
+<li>[[trading-system/02-layer1-data]]</li>
+<li>[[trading-system/03-capital-flow]]</li>
+<li>[[trading-system/04-runbook-mac]]</li>
+<li>[[trading-system/05-decision-log]]</li>
+<li>[[trading-system/glossary]]</li>
+</ul><hr><h1>Trading System Principles</h1>
+<h1>trading #principles</h1>
+<blockquote>The goal is not to make the machine clever. The goal is to make the machine hard to fool.</blockquote>
+<h2>First Principles</h2>
+<p>Markets are noisy. Most signals are weak. Execution mistakes are expensive. So the system must be boring.</p>
+<p>Good automation has three properties:</p>
+<ol>
+<li>It can explain what it saw.</li>
+<li>It can explain what it decided.</li>
+<li>It can refuse to act.</li>
+</ol>
+<h2>Invariants</h2>
+<ul>
+<li>Broker execution is not the source of truth for strategy data.</li>
+<li>Layer 1 never trades.</li>
+<li>Every run writes local artifacts.</li>
+<li>Every external provider can fail without killing the whole system.</li>
+<li>Real-money orders require explicit confirmation unless a future written policy says otherwise.</li>
+<li>The agent account is the only account in scope.</li>
+</ul>
+<h2>Bias</h2>
+<p>Prefer:</p>
+<ul>
+<li>tables over charts</li>
+<li>JSON over screenshots</li>
+<li>one command over many clicks</li>
+<li>small modules over one giant script</li>
+<li>local artifacts before cloud dashboards</li>
+<li>simple signals before machine learning</li>
+</ul>
+<p>Avoid:</p>
+<ul>
+<li>fancy visuals that do not feed a decision</li>
+<li>hidden state</li>
+<li>broker-dependent strategy logic</li>
+<li>inverse or leveraged ETFs as a first version</li>
+<li>strategies that cannot be explained in one paragraph</li>
+</ul>
+<h2>Mental Model</h2>
+<pre><code>sentiment = why
+trend = when
+capital flow = where pressure is already visible
+risk = how much
+execution = hands
+logs = memory</code></pre>
+<p>The strategy is allowed to be simple. The safety layer is not.</p><hr><h1>Architecture</h1>
+<h1>trading #architecture</h1>
+<blockquote>Build the system like a compiler. Each stage transforms one explicit artifact into the next.</blockquote>
+<h2>Pipeline</h2>
+<pre><code>flowchart TD
+    C[&quot;config/layer1.example.yaml&quot;] --&gt; L1[&quot;Layer 1 data run&quot;]
+    N[&quot;News/events&quot;] --&gt; L1
+    M[&quot;Market data&quot;] --&gt; L1
+    F[&quot;Capital-flow proxy&quot;] --&gt; L1
+    L1 --&gt; S1[&quot;layer1_snapshot.json&quot;]
+    L1 --&gt; CSV1[&quot;sector_sentiment.csv&quot;]
+    L1 --&gt; CSV2[&quot;capital_flows.csv&quot;]
+    S1 --&gt; L2[&quot;Layer 2 strategy&quot;]
+    CSV1 --&gt; L2
+    CSV2 --&gt; L2
+    L2 --&gt; SIG[&quot;signal.json&quot;]
+    SIG --&gt; RISK[&quot;Risk review&quot;]
+    RISK --&gt; EXEC[&quot;Broker order review&quot;]</code></pre>
+<h2>Folder Contract</h2>
+<pre><code>trading-system/
+  config/
+    layer1.example.yaml
+  data/
+    raw/
+    processed/
+      layer1_snapshot.json
+      sector_sentiment.csv
+      capital_flows.csv
+  docs/
+  scripts/
+    run_layer1.sh
+  src/trading_system/
+    cli.py
+    config.py
+    models.py
+    data/
+    sentiment/
+  tests/</code></pre>
+<h2>Layer Boundaries</h2>
+<p>Layer 1 observes:</p>
+<ul>
+<li>news/event headlines</li>
+<li>market bars</li>
+<li>sector sentiment</li>
+<li>capital-flow pressure</li>
+</ul>
+<p>Layer 2 decides:</p>
+<ul>
+<li>buy candidate</li>
+<li>exit candidate</li>
+<li>avoid candidate</li>
+<li>cash-only state</li>
+</ul>
+<p>Layer 3 sizes:</p>
+<ul>
+<li>account equity</li>
+<li>buying power</li>
+<li>risk per trade</li>
+<li>total portfolio risk</li>
+</ul>
+<p>Layer 4 executes:</p>
+<ul>
+<li>broker quote refresh</li>
+<li>order review</li>
+<li>user confirmation</li>
+<li>order placement</li>
+</ul>
+<p>Layer 5 remembers:</p>
+<ul>
+<li>artifacts</li>
+<li>logs</li>
+<li>fills</li>
+<li>decisions</li>
+<li>errors</li>
+</ul>
+<h2>Why This Shape</h2>
+<p>If a signal is wrong, we inspect Layer 1 and Layer 2.</p>
+<p>If a size is wrong, we inspect Layer 3.</p>
+<p>If a broker action is wrong, we inspect Layer 4.</p>
+<p>No mystery soup.</p><hr><h1>Layer 1 Data</h1>
+<h1>trading #layer1 #data</h1>
+<blockquote>Layer 1 does not predict. It observes and compresses the world into stable artifacts.</blockquote>
+<h2>Execution</h2>
+<p>Run:</p>
+<pre><code>/Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/scripts/run_layer1.sh</code></pre>
+<p>Equivalent internal command:</p>
+<pre><code>cd /Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system
+.venv/bin/trading-data --config config/layer1.example.yaml</code></pre>
+<p>Entry point:</p>
+<pre><code>src/trading_system/cli.py</code></pre>
+<p>Orchestration:</p>
+<pre><code>src/trading_system/data/layer1.py</code></pre>
+<h2>Outputs</h2>
+<h3>Snapshot</h3>
+<pre><code>data/processed/layer1_snapshot.json</code></pre>
+<p>One JSON object containing:</p>
+<ul>
+<li>generated timestamp</li>
+<li>regime hint</li>
+<li>event flags</li>
+<li>sector sentiment</li>
+<li>market bars</li>
+<li>capital flows</li>
+<li>provider warnings</li>
+</ul>
+<h3>Sector Sentiment</h3>
+<pre><code>data/processed/sector_sentiment.csv</code></pre>
+<p>One row per sector:</p>
+<pre><code>symbol,name,score,confidence,articles</code></pre>
+<h3>Capital Flows</h3>
+<pre><code>data/processed/capital_flows.csv</code></pre>
+<p>One row per ETF:</p>
+<pre><code>rank,symbol,name,as_of,direction,price_change_pct,dollar_volume,relative_flow_score</code></pre>
+<h2>Provider Rule</h2>
+<p>Providers are unreliable.</p>
+<p>Therefore provider errors become warnings, not fatal crashes. A partial snapshot is better than no snapshot, as long as the warning is explicit.</p>
+<p>Example:</p>
+<pre><code>{
+  &quot;warnings&quot;: [
+    &quot;GDELT fetch failed: rate limit&quot;
+  ]
+}</code></pre>
+<h2>What Layer 1 Is Not</h2>
+<p>Layer 1 is not:</p>
+<ul>
+<li>a dashboard</li>
+<li>a trading signal</li>
+<li>a broker connector</li>
+<li>a prediction engine</li>
+</ul>
+<p>Layer 1 is the sensor array.</p><hr><h1>Capital Flow Proxy</h1>
+<h1>trading #capital-flow</h1>
+<blockquote>We do not have true institutional fund-flow data. So we build a humble proxy and label it honestly.</blockquote>
+<h2>Old Version</h2>
+<p>The old project made Sankey charts. Useful for exploration. Too visual for automation.</p>
+<p>The automation needs a table.</p>
+<h2>Current Proxy</h2>
+<pre><code>relative_flow_score = price_change_pct * average_dollar_volume</code></pre>
+<p>Interpretation:</p>
+<ul>
+<li>positive score: liquid ETF moved up over the window</li>
+<li>negative score: liquid ETF moved down over the window</li>
+<li>larger absolute score: stronger visible pressure</li>
+</ul>
+<p>This is not true net flow. It is pressure.</p>
+<h2>Artifact</h2>
+<pre><code>/Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/data/processed/capital_flows.csv</code></pre>
+<p>Columns:</p>
+<pre><code>rank
+symbol
+name
+as_of
+direction
+price_change_pct
+dollar_volume
+relative_flow_score</code></pre>
+<h2>How Strategy Should Use It</h2>
+<p>Capital flow is a filter, not a standalone trade.</p>
+<p>Good:</p>
+<pre><code>positive sentiment + positive flow + EMA20 &gt; EMA50 = stronger long candidate</code></pre>
+<p>Also good:</p>
+<pre><code>negative sentiment + negative flow = avoid or exit candidate</code></pre>
+<p>Bad:</p>
+<pre><code>positive flow alone = buy</code></pre>
+<h2>Why Keep It</h2>
+<p>Sentiment can be early but noisy.</p>
+<p>Trend can be late but stable.</p>
+<p>Capital-flow pressure tells us whether the market is already voting with money-like behavior.</p>
+<p>The signal gets interesting when all three agree.</p><hr><h1>Mac Runbook</h1>
+<h1>trading #runbook #mac</h1>
+<blockquote>One executable. Then schedule that executable.</blockquote>
+<h2>Manual Run</h2>
+<pre><code>/Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/scripts/run_layer1.sh</code></pre>
+<p>Expected output:</p>
+<pre><code>Layer 1 complete: regime=..., news=..., sectors=..., capital_flows=...
+Wrote .../layer1_snapshot.json
+Wrote .../sector_sentiment.csv
+Wrote .../capital_flows.csv</code></pre>
+<h2>Verify Artifacts</h2>
+<pre><code>ls -lh /Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/data/processed</code></pre>
+<p>Inspect capital flows:</p>
+<pre><code>sed -n &#x27;1,20p&#x27; /Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/data/processed/capital_flows.csv</code></pre>
+<p>Pretty-print snapshot:</p>
+<pre><code>python3 -m json.tool /Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/data/processed/layer1_snapshot.json</code></pre>
+<h2>Schedule Later</h2>
+<p>Use macOS <code>launchd</code>.</p>
+<p>Daily after market close is the clean first schedule:</p>
+<pre><code>4:10 PM Eastern, weekdays</code></pre>
+<p>The scheduled command should be the wrapper script, not the Python internals:</p>
+<pre><code>/Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system/scripts/run_layer1.sh</code></pre>
+<h2>Debug Order</h2>
+<p>If the run fails:</p>
+<ol>
+<li>Run the wrapper manually.</li>
+<li>Check whether <code>.venv/bin/trading-data</code> exists.</li>
+<li>Check provider warnings in <code>layer1_snapshot.json</code>.</li>
+<li>Run tests:</li>
+</ol>
+<pre><code>cd /Users/r2k8/Library/CloudStorage/OneDrive-Personal/CODE/trading-system
+.venv/bin/pytest</code></pre>
+<p>The system should degrade gracefully when a provider fails.</p><hr><h1>Decision Log</h1>
+<h1>trading #decision-log</h1>
+<blockquote>Write down why, while the context is still warm.</blockquote>
+<h2>2026-05-30: Start With Layer 1</h2>
+<p>Decision:</p>
+<p>Build the sustainable system from Layer 1 upward.</p>
+<p>Reason:</p>
+<p>Execution is dangerous if observation is messy. Get the data contract right first.</p>
+<h2>2026-05-30: Local Artifacts First</h2>
+<p>Decision:</p>
+<p>Use local JSON/CSV artifacts as the source of truth.</p>
+<p>Reason:</p>
+<p>Google Sheets and GitHub Pages are useful, but they should be adapters. The core system should run on a Mac, a server, or offline test data.</p>
+<h2>2026-05-30: Capital Flow Becomes A Table</h2>
+<p>Decision:</p>
+<p>Move capital-flow thinking out of the Sankey dashboard and into <code>capital_flows.csv</code>.</p>
+<p>Reason:</p>
+<p>Layer 1 benefits from ranked ETF pressure. It does not need fancy visuals.</p>
+<h2>2026-05-30: Provider Failures Are Warnings</h2>
+<p>Decision:</p>
+<p>External data provider errors should not crash the entire Layer 1 run.</p>
+<p>Reason:</p>
+<p>A partial snapshot with warnings is more useful than no artifact.</p>
+<h2>2026-05-30: No Autonomous Real-Money Execution Yet</h2>
+<p>Decision:</p>
+<p>Codex can review and prepare broker actions, but real-money orders require explicit confirmation.</p>
+<p>Reason:</p>
+<p>The account is real. Safety beats cleverness.</p><hr><h1>Glossary</h1>
+<h1>trading #glossary</h1>
+<h2>Artifact</h2>
+<p>A file written by a layer. Usually JSON or CSV. It is inspectable and can be consumed by the next layer.</p>
+<h2>Capital-Flow Proxy</h2>
+<p>A simple pressure score:</p>
+<pre><code>price_change_pct * average_dollar_volume</code></pre>
+<p>Not true fund flow. Useful as a ranking feature.</p>
+<h2>Confidence</h2>
+<p>How much the system trusts the score. Confidence should combine model confidence and sample size.</p>
+<h2>Layer 1</h2>
+<p>Observation layer. Fetches data, scores it, writes artifacts. Does not trade.</p>
+<h2>Regime</h2>
+<p>The market environment:</p>
+<ul>
+<li>risk-on</li>
+<li>neutral</li>
+<li>defensive</li>
+<li>crash-watch</li>
+</ul>
+<h2>Signal</h2>
+<p>A proposed action. Signals are not orders.</p>
+<h2>Order</h2>
+<p>A broker instruction. Orders are real money and require stricter rules.</p>
+</body>
+</html>

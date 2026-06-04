@@ -1,0 +1,291 @@
+{
+  "regime": "risk_on",
+  "updated_at": "2026-06-03T04:31:52.291158+00:00",
+  "top_inflows": [
+    {
+      "symbol": "SPY",
+      "name": "U.S. Large Cap",
+      "as_of": "2026-06-02",
+      "price_change_pct": 0.057882198010247646,
+      "dollar_volume": 34363391346.580505,
+      "relative_flow_score": 1989028622.2264032,
+      "direction": "inflow",
+      "rank": 2
+    },
+    {
+      "symbol": "QQQ",
+      "name": "Nasdaq Growth",
+      "as_of": "2026-06-02",
+      "price_change_pct": 0.10890495739204058,
+      "dollar_volume": 27777392097.11609,
+      "relative_flow_score": 3025095702.7984324,
+      "direction": "inflow",
+      "rank": 1
+    },
+    {
+      "symbol": "IWM",
+      "name": "U.S. Small Cap",
+      "as_of": "2026-06-02",
+      "price_change_pct": 0.049589745707353694,
+      "dollar_volume": 7190714731.941223,
+      "relative_flow_score": 356585715.01108724,
+      "direction": "inflow",
+      "rank": 5
+    },
+    {
+      "symbol": "SMH",
+      "name": "Semiconductors",
+      "as_of": "2026-06-02",
+      "price_change_pct": 0.24747925435198698,
+      "dollar_volume": 5897553690.338135,
+      "relative_flow_score": 1459522189.7856908,
+      "direction": "inflow",
+      "rank": 3
+    },
+    {
+      "symbol": "TLT",
+      "name": "Long Treasury Bonds",
+      "as_of": "2026-06-02",
+      "price_change_pct": 0.008121497750020048,
+      "dollar_volume": 2335481438.9830017,
+      "relative_flow_score": 18967607.25191403,
+      "direction": "inflow",
+      "rank": 10
+    }
+  ],
+  "top_outflows": [
+    {
+      "symbol": "GLD",
+      "name": "Gold",
+      "as_of": "2026-06-02",
+      "price_change_pct": -0.006655203165863052,
+      "dollar_volume": 2461915583.0960083,
+      "relative_flow_score": -16384548.382708136,
+      "direction": "outflow",
+      "rank": 12
+    },
+    {
+      "symbol": "XLE",
+      "name": "Energy",
+      "as_of": "2026-06-02",
+      "price_change_pct": -0.02407813301686997,
+      "dollar_volume": 2279646766.638565,
+      "relative_flow_score": -54889638.078600906,
+      "direction": "outflow",
+      "rank": 6
+    },
+    {
+      "symbol": "XLF",
+      "name": "Financials",
+      "as_of": "2026-06-02",
+      "price_change_pct": -0.0023265362993799155,
+      "dollar_volume": 1765732289.4274902,
+      "relative_flow_score": -4108040.266340259,
+      "direction": "outflow",
+      "rank": 13
+    },
+    {
+      "symbol": "XLP",
+      "name": "Consumer Staples",
+      "as_of": "2026-06-02",
+      "price_change_pct": -0.02046922511051617,
+      "dollar_volume": 990234924.1695786,
+      "relative_flow_score": -20269341.575122014,
+      "direction": "outflow",
+      "rank": 9
+    },
+    {
+      "symbol": "XLU",
+      "name": "Utilities",
+      "as_of": "2026-06-02",
+      "price_change_pct": -0.053267143905570566,
+      "dollar_volume": 985198903.5223198,
+      "relative_flow_score": -52478731.76953374,
+      "direction": "outflow",
+      "rank": 7
+    }
+  ],
+  "sankey": {
+    "links": [
+      {
+        "source": "Global Liquidity",
+        "target": "US Equities",
+        "value": 77521.20162470214
+      },
+      {
+        "source": "US Equities",
+        "target": "Growth",
+        "value": 30069.541855842283
+      },
+      {
+        "source": "Growth",
+        "target": "QQQ (+0.1%)",
+        "value": 27777.392097116088
+      },
+      {
+        "source": "US Equities",
+        "target": "Broad Market",
+        "value": 34363.39134658051
+      },
+      {
+        "source": "Broad Market",
+        "target": "SPY (+0.1%)",
+        "value": 34363.39134658051
+      },
+      {
+        "source": "US Equities",
+        "target": "Semiconductors",
+        "value": 5897.553690338134
+      },
+      {
+        "source": "Semiconductors",
+        "target": "SMH (+0.2%)",
+        "value": 5897.553690338134
+      },
+      {
+        "source": "Growth",
+        "target": "XLK (+0.2%)",
+        "value": 2292.149758726196
+      },
+      {
+        "source": "US Equities",
+        "target": "Small Caps",
+        "value": 7190.714731941223
+      },
+      {
+        "source": "Small Caps",
+        "target": "IWM (+0.0%)",
+        "value": 7190.714731941223
+      },
+      {
+        "source": "Global Liquidity",
+        "target": "Cyclicals",
+        "value": 6395.180776471977
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Energy",
+        "value": 2279.646766638565
+      },
+      {
+        "source": "Energy",
+        "target": "XLE (-0.0%)",
+        "value": 2279.646766638565
+      },
+      {
+        "source": "Global Liquidity",
+        "target": "Defensives",
+        "value": 7244.87289618887
+      },
+      {
+        "source": "Defensives",
+        "target": "Utilities",
+        "value": 985.1989035223198
+      },
+      {
+        "source": "Utilities",
+        "target": "XLU (-0.1%)",
+        "value": 985.1989035223198
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Industrials",
+        "value": 1359.5667962363434
+      },
+      {
+        "source": "Industrials",
+        "target": "XLI (+0.0%)",
+        "value": 1359.5667962363434
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Consumer Staples",
+        "value": 990.2349241695786
+      },
+      {
+        "source": "Consumer Staples",
+        "target": "XLP (-0.0%)",
+        "value": 990.2349241695786
+      },
+      {
+        "source": "Defensives",
+        "target": "Treasuries",
+        "value": 2335.4814389830017
+      },
+      {
+        "source": "Treasuries",
+        "target": "TLT (+0.0%)",
+        "value": 2335.4814389830017
+      },
+      {
+        "source": "Defensives",
+        "target": "Healthcare",
+        "value": 1462.2769705875396
+      },
+      {
+        "source": "Healthcare",
+        "target": "XLV (+0.0%)",
+        "value": 1462.2769705875396
+      },
+      {
+        "source": "Defensives",
+        "target": "Precious Metals",
+        "value": 2461.9155830960085
+      },
+      {
+        "source": "Precious Metals",
+        "target": "GLD (-0.0%)",
+        "value": 2461.9155830960085
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Financials",
+        "value": 1765.7322894274903
+      },
+      {
+        "source": "Financials",
+        "target": "XLF (-0.0%)",
+        "value": 1765.7322894274903
+      }
+    ]
+  },
+  "earnings_radar": [
+    {
+      "Date": "2026-06-03",
+      "Symbol": "NVDA",
+      "Company": "Nvidia",
+      "Sector ETF": "SMH",
+      "Sector Flow": "Inflow",
+      "Company Sentiment": "Bullish",
+      "Trend": "Up",
+      "Risk Score": "3",
+      "Opportunity Score": "9",
+      "Label": "High-priority review"
+    },
+    {
+      "Date": "2026-06-04",
+      "Symbol": "JPM",
+      "Company": "JPMorgan",
+      "Sector ETF": "XLF",
+      "Sector Flow": "Outflow",
+      "Company Sentiment": "Neutral",
+      "Trend": "Flat",
+      "Risk Score": "5",
+      "Opportunity Score": "5",
+      "Label": "Watchlist"
+    },
+    {
+      "Date": "2026-06-05",
+      "Symbol": "DUK",
+      "Company": "Duke Energy",
+      "Sector ETF": "XLU",
+      "Sector Flow": "Outflow",
+      "Company Sentiment": "Bearish",
+      "Trend": "Down",
+      "Risk Score": "7",
+      "Opportunity Score": "3",
+      "Label": "Avoid"
+    }
+  ],
+  "warnings": []
+}

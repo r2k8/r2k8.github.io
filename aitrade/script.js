@@ -12,8 +12,8 @@ async function fetchData() {
     try {
         const timestamp = new Date().getTime();
         
-        // 1. Fetch our newly generated Static Pre-compute data from the engine repo!
-        const sankeyRes = await fetch(`https://raw.githubusercontent.com/r2k8/spinvest/main/data/sankey_data.json?t=${timestamp}`);
+        // 1. Fetch our newly generated Static Pre-compute data!
+        const sankeyRes = await fetch(`data/sankey_data.json?t=${timestamp}`);
         if (sankeyRes.ok) {
             const sankeyData = await sankeyRes.json();
             renderEChartsSankey(sankeyData);

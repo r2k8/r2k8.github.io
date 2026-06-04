@@ -86,7 +86,12 @@ pre { padding: 1.5rem; font-family: 'Menlo', 'Monaco', monospace; font-size: 0.8
 .company-card { display: flex; flex-direction: column; align-items: center; padding: 0.5rem; border-radius: 8px; transition: background 0.2s; cursor: pointer; }
 .company-card:hover { background: rgba(255, 255, 255, 0.08); }
 .company-ticker { font-weight: 700; font-size: 1rem; letter-spacing: 0.5px; margin-bottom: 0.2rem; }
-.company-name { font-size: 0.75rem; color: var(--text-muted); text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; }
+.company-name { font-size: 0.8rem; color: var(--text-muted); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 100%; display: block; }
+
+.timeframe-toggles { display: flex; gap: 4px; background: rgba(0,0,0,0.3); padding: 4px; border-radius: 8px; border: 1px solid var(--glass-border); }
+.tf-btn { background: transparent; border: none; color: var(--text-muted); padding: 4px 12px; font-size: 0.85rem; border-radius: 4px; cursor: pointer; transition: all 0.2s ease; font-family: 'Outfit'; }
+.tf-btn:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+.tf-btn.active { background: rgba(255,255,255,0.1); color: var(--text-primary); font-weight: 500; }
 .company-logo { width: 32px; height: 32px; border-radius: 6px; object-fit: contain; margin-bottom: 0.4rem; background: rgba(255,255,255,0.1); padding: 2px; }
 
 @media (max-width: 1024px) {

@@ -1,4 +1,5 @@
 const GIST_ID = "64ba99affebb937a1534d8cb4b1c60ce";
+let currentTimeframe = '5d';
 
 document.addEventListener('DOMContentLoaded', initDashboard);
 
@@ -6,6 +7,16 @@ function initDashboard() {
     fetchData();
     // Refresh data every 30 seconds
     setInterval(fetchData, 30000); 
+    
+    // Setup timeframe toggles
+    document.querySelectorAll('.tf-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            currentTimeframe = e.target.dataset.tf;
+            fetchData();
+        });
+    });
 }
 
 async function fetchData() {
@@ -13,7 +24,7 @@ async function fetchData() {
         const timestamp = new Date().getTime();
         
         // 1. Fetch our newly generated Static Pre-compute data!
-        const sankeyRes = await fetch(`data/sankey_data.json?t=${timestamp}`);
+        const sankeyRes = await fetch(`data/sankey_data_${currentTimeframe}.json?t=${timestamp}`);
         if (sankeyRes.ok) {
             const sankeyData = await sankeyRes.json();
             renderEChartsSankey(sankeyData);

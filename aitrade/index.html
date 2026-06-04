@@ -50,7 +50,14 @@
                             <!-- Capital Flow Sankey -->
                             <div class="flow-section">
                                 <div class="flow-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
-                                    <div>Global Capital Flow Sankey</div>
+                                    <div style="display: flex; align-items: center; gap: 1rem;">
+                                        <div>Global Capital Flow Sankey</div>
+                                        <div class="timeframe-toggles" id="timeframe-toggles">
+                                            <button class="tf-btn" data-tf="1d">Today</button>
+                                            <button class="tf-btn active" data-tf="5d">This Week</button>
+                                            <button class="tf-btn" data-tf="1mo">This Month</button>
+                                        </div>
+                                    </div>
                                     <div id="sankey-timestamp" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">Data Refreshing...</div>
                                 </div>
                                 <div id="capital-flow-container" style="width: 100%; height: 900px; margin-top: 1rem;">

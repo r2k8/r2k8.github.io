@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "name": "Equities",
+      "itemStyle": {
+        "color": "#10b981",
+        "opacity": 0.9
+      },
+      "depth": 0
+    },
+    {
+      "name": "Crypto",
+      "itemStyle": {
+        "color": "#10b981",
+        "opacity": 0.9
+      },
+      "depth": 0
+    },
+    {
+      "name": "Fixed Income",
+      "itemStyle": {
+        "color": "#ef4444",
+        "opacity": 0.9
+      },
+      "depth": 0
+    },
+    {
+      "name": "Commodities",
+      "itemStyle": {
+        "color": "#ef4444",
+        "opacity": 0.9
+      },
+      "depth": 0
+    },
+    {
+      "name": "North America",
+      "itemStyle": {
+        "color": "#10b981",
+        "opacity": 0.9
+      },
+      "depth": 1
+    },
+    {
+      "name": "Asia-Pacific",
+      "itemStyle": {
+        "color": "#10b981",
+        "opacity": 0.9
+      },
+      "depth": 1
+    },
+    {
+      "name": "Europe",
+      "itemStyle": {
+        "color": "#ef4444",
+        "opacity": 0.9
+      },
+      "depth": 1
+    },
+    {
+      "name": "Emerging Markets",
+      "itemStyle": {
+        "color": "#ef4444",
+        "opacity": 0.9
+      },
+      "depth": 1
+    },
+    {
+      "name": "Technology",
+      "itemStyle": {
+        "color": "#10b981",
+        "opacity": 0.9
+      },
+      "depth": 2
+    },
+    {
+      "name": "Healthcare",
+      "itemStyle": {
+        "color": "#10b981",
+        "opacity": 0.9
+      },
+      "depth": 2
+    },
+    {
+      "name": "Financials",
+      "itemStyle": {
+        "color": "#ef4444",
+        "opacity": 0.9
+      },
+      "depth": 2
+    },
+    {
+      "name": "Energy",
+      "itemStyle": {
+        "color": "#ef4444",
+        "opacity": 0.9
+      },
+      "depth": 2
+    },
+    {
+      "name": "Real Estate",
+      "itemStyle": {
+        "color": "#ef4444",
+        "opacity": 0.9
+      },
+      "depth": 2
+    }
+  ],
+  "links": [
+    {
+      "source": "Equities",
+      "target": "North America",
+      "value": 2.5,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Crypto",
+      "target": "North America",
+      "value": 1.2,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Fixed Income",
+      "target": "Europe",
+      "value": 1.8,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Commodities",
+      "target": "Emerging Markets",
+      "value": 0.9,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "North America",
+      "target": "Technology",
+      "value": 3.0,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Europe",
+      "target": "Energy",
+      "value": 1.5,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    }
+  ]
+}

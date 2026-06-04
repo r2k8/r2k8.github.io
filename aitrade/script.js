@@ -31,6 +31,23 @@ async function fetchData() {
             if (sankeyData.last_updated) {
                 document.getElementById('sankey-timestamp').innerHTML = `Live Engine Data &bull; Last Updated: ${sankeyData.last_updated}`;
             }
+            
+            // Hydrate dynamic regime
+            if (sankeyData.regime_summary) {
+                const rs = sankeyData.regime_summary;
+                const titleEl = document.getElementById('regime-title');
+                titleEl.textContent = rs.title;
+                titleEl.className = `metric-large ${rs.title === 'Risk On' ? 'text-bull' : 'text-bear'}`;
+                titleEl.style.color = rs.title === 'Risk On' ? '#10b981' : '#ef4444';
+                
+                const liqEl = document.getElementById('gl-status');
+                liqEl.textContent = rs.liquidity;
+                liqEl.style.color = rs.liquidity === 'Positive' ? '#10b981' : '#ef4444';
+                
+                document.getElementById('gl-inflow').textContent = rs.inflow;
+                document.getElementById('gl-outflow').textContent = rs.outflow;
+                document.getElementById('gl-health').textContent = `Data Health: ${rs.health}`;
+            }
         } else {
             document.getElementById('capital-flow-container').innerHTML = '<div style="text-align:center; padding: 2rem; color: var(--text-muted);">Awaiting GitHub Actions Data Pipeline...</div>';
         }
@@ -60,23 +77,6 @@ async function fetchData() {
 }
 
 function updateLayer1(data) {
-    const regimeMap = { 'risk_on': 'Risk On', 'neutral': 'Neutral', 'defensive': 'Defensive', 'crash_watch': 'Crash Watch' };
-    document.getElementById('regime-title').textContent = regimeMap[data.regime] || data.regime;
-
-    // Populate Top Inflows and Outflows
-    const topIn = data.top_inflows.map(f => f.symbol).join(' / ') || 'None';
-    const topOut = data.top_outflows.map(f => f.symbol).join(' / ') || 'None';
-    
-    document.getElementById('gl-status').textContent = data.top_inflows.length >= data.top_outflows.length ? 'Positive' : 'Negative';
-    document.getElementById('gl-inflow').textContent = topIn;
-    document.getElementById('gl-outflow').textContent = topOut;
-    
-    if (data.warnings && data.warnings.length > 0) {
-        document.getElementById('gl-health').textContent = "Data Health: " + data.warnings[0];
-    } else {
-        document.getElementById('gl-health').textContent = "Data Health: Optimal";
-    }
-    
     if (data.earnings_radar) {
         renderEarningsRadar(data.earnings_radar);
     }

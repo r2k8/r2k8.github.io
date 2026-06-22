@@ -145,6 +145,14 @@ function renderEChartsSankey(sankeyData) {
 function renderEarningsRadar(earningsData) {
     const container = document.getElementById('earnings-calendar');
     
+    const label = document.getElementById('earnings-week-label');
+    if (label) {
+        const today = new Date();
+        const day = today.getDay() || 7; 
+        if(day !== 1) today.setHours(-24 * (day - 1)); 
+        label.innerHTML = `For the week beginning ${today.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' })}`;
+    }
+    
     // Group by day of the week
     const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
     const scheduleMap = {

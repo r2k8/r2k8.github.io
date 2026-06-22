@@ -147,10 +147,10 @@ function renderEarningsRadar(earningsData) {
     
     const label = document.getElementById('earnings-week-label');
     if (label) {
-        const today = new Date();
-        const day = today.getDay() || 7; 
-        if(day !== 1) today.setHours(-24 * (day - 1)); 
-        label.innerHTML = `For the week beginning ${today.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' })}`;
+        const d = new Date();
+        const diff = d.getDate() - d.getDay() + (d.getDay() === 0 ? -6 : 1);
+        const monday = new Date(d.setDate(diff));
+        label.innerHTML = `For the week beginning ${monday.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' })}`;
     }
     
     // Group by day of the week

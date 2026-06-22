@@ -1,108 +1,88 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-03T04:31:52.291158+00:00",
+  "updated_at": "2026-06-21T20:53:16.071963+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
       "name": "U.S. Large Cap",
-      "as_of": "2026-06-02",
-      "price_change_pct": 0.057882198010247646,
-      "dollar_volume": 34363391346.580505,
-      "relative_flow_score": 1989028622.2264032,
+      "as_of": "2026-06-18",
+      "price_change_pct": 0.017731331841331383,
+      "dollar_volume": 43625971882.09412,
+      "relative_flow_score": 773546584.342003,
       "direction": "inflow",
-      "rank": 2
+      "rank": 3
     },
     {
       "symbol": "QQQ",
       "name": "Nasdaq Growth",
-      "as_of": "2026-06-02",
-      "price_change_pct": 0.10890495739204058,
-      "dollar_volume": 27777392097.11609,
-      "relative_flow_score": 3025095702.7984324,
+      "as_of": "2026-06-18",
+      "price_change_pct": 0.05572101576249179,
+      "dollar_volume": 35269878516.21155,
+      "relative_flow_score": 1965273456.7429943,
       "direction": "inflow",
       "rank": 1
     },
     {
       "symbol": "IWM",
       "name": "U.S. Small Cap",
-      "as_of": "2026-06-02",
-      "price_change_pct": 0.049589745707353694,
-      "dollar_volume": 7190714731.941223,
-      "relative_flow_score": 356585715.01108724,
+      "as_of": "2026-06-18",
+      "price_change_pct": 0.0827472393329327,
+      "dollar_volume": 8528985223.663025,
+      "relative_flow_score": 705749981.5694908,
       "direction": "inflow",
-      "rank": 5
+      "rank": 4
     },
     {
       "symbol": "SMH",
       "name": "Semiconductors",
-      "as_of": "2026-06-02",
-      "price_change_pct": 0.24747925435198698,
-      "dollar_volume": 5897553690.338135,
-      "relative_flow_score": 1459522189.7856908,
+      "as_of": "2026-06-18",
+      "price_change_pct": 0.2131038646733184,
+      "dollar_volume": 6720867172.796631,
+      "relative_flow_score": 1432242768.4790013,
       "direction": "inflow",
-      "rank": 3
+      "rank": 2
     },
     {
-      "symbol": "TLT",
-      "name": "Long Treasury Bonds",
-      "as_of": "2026-06-02",
-      "price_change_pct": 0.008121497750020048,
-      "dollar_volume": 2335481438.9830017,
-      "relative_flow_score": 18967607.25191403,
+      "symbol": "XLK",
+      "name": "Technology",
+      "as_of": "2026-06-18",
+      "price_change_pct": 0.10505654797477103,
+      "dollar_volume": 2797238423.8692474,
+      "relative_flow_score": 293868212.6740925,
       "direction": "inflow",
-      "rank": 10
+      "rank": 5
     }
   ],
   "top_outflows": [
     {
       "symbol": "GLD",
       "name": "Gold",
-      "as_of": "2026-06-02",
-      "price_change_pct": -0.006655203165863052,
-      "dollar_volume": 2461915583.0960083,
-      "relative_flow_score": -16384548.382708136,
+      "as_of": "2026-06-18",
+      "price_change_pct": -0.05924667043210814,
+      "dollar_volume": 3124559558.375244,
+      "relative_flow_score": -185119750.40055144,
       "direction": "outflow",
-      "rank": 12
+      "rank": 7
     },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "as_of": "2026-06-02",
-      "price_change_pct": -0.02407813301686997,
-      "dollar_volume": 2279646766.638565,
-      "relative_flow_score": -54889638.078600906,
+      "as_of": "2026-06-18",
+      "price_change_pct": -0.12269538824331358,
+      "dollar_volume": 2225698533.353634,
+      "relative_flow_score": -273082945.66239774,
       "direction": "outflow",
       "rank": 6
     },
     {
-      "symbol": "XLF",
-      "name": "Financials",
-      "as_of": "2026-06-02",
-      "price_change_pct": -0.0023265362993799155,
-      "dollar_volume": 1765732289.4274902,
-      "relative_flow_score": -4108040.266340259,
-      "direction": "outflow",
-      "rank": 13
-    },
-    {
       "symbol": "XLP",
       "name": "Consumer Staples",
-      "as_of": "2026-06-02",
-      "price_change_pct": -0.02046922511051617,
-      "dollar_volume": 990234924.1695786,
-      "relative_flow_score": -20269341.575122014,
+      "as_of": "2026-06-18",
+      "price_change_pct": -0.03240786856561705,
+      "dollar_volume": 1061528792.1897888,
+      "relative_flow_score": -34401885.57590489,
       "direction": "outflow",
-      "rank": 9
-    },
-    {
-      "symbol": "XLU",
-      "name": "Utilities",
-      "as_of": "2026-06-02",
-      "price_change_pct": -0.053267143905570566,
-      "dollar_volume": 985198903.5223198,
-      "relative_flow_score": -52478731.76953374,
-      "direction": "outflow",
-      "rank": 7
+      "rank": 11
     }
   ],
   "sankey": {
@@ -110,142 +90,142 @@
       {
         "source": "Global Liquidity",
         "target": "US Equities",
-        "value": 77521.20162470214
+        "value": 96942.94121863456
       },
       {
         "source": "US Equities",
         "target": "Growth",
-        "value": 30069.541855842283
+        "value": 38067.11694008079
       },
       {
         "source": "Growth",
         "target": "QQQ (+0.1%)",
-        "value": 27777.392097116088
-      },
-      {
-        "source": "US Equities",
-        "target": "Broad Market",
-        "value": 34363.39134658051
-      },
-      {
-        "source": "Broad Market",
-        "target": "SPY (+0.1%)",
-        "value": 34363.39134658051
+        "value": 35269.878516211546
       },
       {
         "source": "US Equities",
         "target": "Semiconductors",
-        "value": 5897.553690338134
+        "value": 6720.867172796631
       },
       {
         "source": "Semiconductors",
         "target": "SMH (+0.2%)",
-        "value": 5897.553690338134
+        "value": 6720.867172796631
       },
       {
-        "source": "Growth",
-        "target": "XLK (+0.2%)",
-        "value": 2292.149758726196
+        "source": "US Equities",
+        "target": "Broad Market",
+        "value": 43625.97188209412
+      },
+      {
+        "source": "Broad Market",
+        "target": "SPY (+0.0%)",
+        "value": 43625.97188209412
       },
       {
         "source": "US Equities",
         "target": "Small Caps",
-        "value": 7190.714731941223
+        "value": 8528.985223663025
       },
       {
         "source": "Small Caps",
-        "target": "IWM (+0.0%)",
-        "value": 7190.714731941223
+        "target": "IWM (+0.1%)",
+        "value": 8528.985223663025
+      },
+      {
+        "source": "Growth",
+        "target": "XLK (+0.1%)",
+        "value": 2797.2384238692475
       },
       {
         "source": "Global Liquidity",
         "target": "Cyclicals",
-        "value": 6395.180776471977
+        "value": 6783.607505719185
       },
       {
         "source": "Cyclicals",
         "target": "Energy",
-        "value": 2279.646766638565
+        "value": 2225.698533353634
       },
       {
         "source": "Energy",
-        "target": "XLE (-0.0%)",
-        "value": 2279.646766638565
+        "target": "XLE (-0.1%)",
+        "value": 2225.698533353634
       },
       {
         "source": "Global Liquidity",
         "target": "Defensives",
-        "value": 7244.87289618887
-      },
-      {
-        "source": "Defensives",
-        "target": "Utilities",
-        "value": 985.1989035223198
-      },
-      {
-        "source": "Utilities",
-        "target": "XLU (-0.1%)",
-        "value": 985.1989035223198
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Industrials",
-        "value": 1359.5667962363434
-      },
-      {
-        "source": "Industrials",
-        "target": "XLI (+0.0%)",
-        "value": 1359.5667962363434
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Consumer Staples",
-        "value": 990.2349241695786
-      },
-      {
-        "source": "Consumer Staples",
-        "target": "XLP (-0.0%)",
-        "value": 990.2349241695786
-      },
-      {
-        "source": "Defensives",
-        "target": "Treasuries",
-        "value": 2335.4814389830017
-      },
-      {
-        "source": "Treasuries",
-        "target": "TLT (+0.0%)",
-        "value": 2335.4814389830017
-      },
-      {
-        "source": "Defensives",
-        "target": "Healthcare",
-        "value": 1462.2769705875396
-      },
-      {
-        "source": "Healthcare",
-        "target": "XLV (+0.0%)",
-        "value": 1462.2769705875396
+        "value": 7829.04468544384
       },
       {
         "source": "Defensives",
         "target": "Precious Metals",
-        "value": 2461.9155830960085
+        "value": 3124.5595583752443
       },
       {
         "source": "Precious Metals",
-        "target": "GLD (-0.0%)",
-        "value": 2461.9155830960085
+        "target": "GLD (-0.1%)",
+        "value": 3124.5595583752443
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Industrials",
+        "value": 1460.4119431785584
+      },
+      {
+        "source": "Industrials",
+        "target": "XLI (+0.1%)",
+        "value": 1460.4119431785584
       },
       {
         "source": "Cyclicals",
         "target": "Financials",
-        "value": 1765.7322894274903
+        "value": 2035.9682369972038
       },
       {
         "source": "Financials",
-        "target": "XLF (-0.0%)",
-        "value": 1765.7322894274903
+        "target": "XLF (+0.0%)",
+        "value": 2035.9682369972038
+      },
+      {
+        "source": "Defensives",
+        "target": "Treasuries",
+        "value": 2128.912765381546
+      },
+      {
+        "source": "Treasuries",
+        "target": "TLT (+0.0%)",
+        "value": 2128.912765381546
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Consumer Staples",
+        "value": 1061.5287921897889
+      },
+      {
+        "source": "Consumer Staples",
+        "target": "XLP (-0.0%)",
+        "value": 1061.5287921897889
+      },
+      {
+        "source": "Defensives",
+        "target": "Healthcare",
+        "value": 1651.0842820054627
+      },
+      {
+        "source": "Healthcare",
+        "target": "XLV (+0.0%)",
+        "value": 1651.0842820054627
+      },
+      {
+        "source": "Defensives",
+        "target": "Utilities",
+        "value": 924.4880796815872
+      },
+      {
+        "source": "Utilities",
+        "target": "XLU (+0.0%)",
+        "value": 924.4880796815872
       }
     ]
   },

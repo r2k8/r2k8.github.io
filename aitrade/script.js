@@ -23,8 +23,8 @@ async function fetchData() {
     try {
         const timestamp = new Date().getTime();
         
-        // 1. Fetch our newly generated Static Pre-compute data!
-        const sankeyRes = await fetch(`data/sankey_data_${currentTimeframe}.json?t=${timestamp}`);
+        // 1. Fetch our newly generated Static Pre-compute data from Gist!
+        const sankeyRes = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/sankey_data_${currentTimeframe}.json?t=${timestamp}`);
         if (sankeyRes.ok) {
             const sankeyData = await sankeyRes.json();
             renderEChartsSankey(sankeyData);

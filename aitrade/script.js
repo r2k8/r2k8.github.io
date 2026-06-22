@@ -145,14 +145,35 @@ function renderEChartsSankey(sankeyData) {
 function renderEarningsRadar(earningsData) {
     const container = document.getElementById('earnings-calendar');
     
-    // We will build a dummy weekly schedule that looks exactly like the requested design
-    const schedule = [
-        { day: 'Monday', before: [{t: 'SAIC', n: 'Science App', dom: 'saic.com'}, {t: 'CRDO', n: 'Credo Tech', dom: 'credosemi.com'}], after: [{t: 'HPE', n: 'Hewlett Packard', dom: 'hpe.com'}, {t: 'HIVE', n: 'Hive', dom: 'hiveblockchain.com'}] },
-        { day: 'Tuesday', before: [{t: 'DG', n: 'Dollar General', dom: 'dollargeneral.com'}, {t: 'SIG', n: 'Signet', dom: 'signetjewelers.com'}], after: [{t: 'PANW', n: 'Palo Alto', dom: 'paloaltonetworks.com'}, {t: 'GTLB', n: 'GitLab', dom: 'gitlab.com'}, {t: 'ULTA', n: 'Ulta Beauty', dom: 'ulta.com'}] },
-        { day: 'Wednesday', before: [{t: 'MDT', n: 'Medtronic', dom: 'medtronic.com'}, {t: 'M', n: 'Macys', dom: 'macys.com'}], after: [{t: 'CRWD', n: 'CrowdStrike', dom: 'crowdstrike.com'}, {t: 'AI', n: 'C3.ai', dom: 'c3.ai'}, {t: 'CHPT', n: 'ChargePoint', dom: 'chargepoint.com'}] },
-        { day: 'Thursday', before: [{t: 'CIEN', n: 'Ciena', dom: 'ciena.com'}, {t: 'TORO', n: 'Toro', dom: 'thetorocompany.com'}], after: [{t: 'LULU', n: 'Lululemon', dom: 'lululemon.com'}, {t: 'DOCU', n: 'DocuSign', dom: 'docusign.com'}, {t: 'IOT', n: 'Samsara', dom: 'samsara.com'}] },
-        { day: 'Friday', before: [{t: 'ABM', n: 'ABM Ind', dom: 'abm.com'}, {t: 'GIII', n: 'G-III', dom: 'giii.com'}], after: [] }
-    ];
+    // Group by day of the week
+    const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+    const scheduleMap = {
+        'Monday': {before: [], after: []},
+        'Tuesday': {before: [], after: []},
+        'Wednesday': {before: [], after: []},
+        'Thursday': {before: [], after: []},
+        'Friday': {before: [], after: []}
+    };
+    
+    earningsData.forEach(item => {
+        if (!item.Date) return;
+        const dateObj = new Date(item.Date);
+        const dayIndex = dateObj.getUTCDay() - 1; // 0=Sunday, 1=Monday
+        if (dayIndex >= 0 && dayIndex < 5) {
+            const dayName = days[dayIndex];
+            scheduleMap[dayName].before.push({
+                t: item.Symbol,
+                n: item.Company || item.Symbol,
+                dom: item.Domain || (item.Symbol.toLowerCase() + '.com')
+            });
+        }
+    });
+
+    const schedule = days.map(day => ({
+        day: day,
+        before: scheduleMap[day].before,
+        after: scheduleMap[day].after
+    }));
 
     container.innerHTML = schedule.map(day => `
         <div class="earnings-day">

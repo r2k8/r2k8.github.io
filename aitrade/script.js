@@ -59,9 +59,13 @@ async function fetchData() {
             updateLayer1(data);
         }
 
-        // 3. Fetch Layer 3 Orders
+        // 3. Fetch Layer 3 Orders (which contain Layer 2 signals)
         const l3Res = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/layer3_orders.json?t=${timestamp}`);
-        if (l3Res.ok) updateLayer3(await l3Res.json());
+        if (l3Res.ok) {
+            const data = await l3Res.json();
+            renderLayer2(data);
+            updateLayer3(data);
+        }
 
         // 4. Fetch Cron Logs
         const logRes = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/cron_output.log?t=${timestamp}`);
@@ -255,4 +259,40 @@ function updateLayer3(data) {
             </div>
         `;
     }
+}
+
+function renderLayer2(data) {
+    const container = document.getElementById('layer2-body');
+    if (!data || data.length === 0) {
+        container.innerHTML = `<div style="color:var(--text-muted);">No signals generated.</div>`;
+        return;
+    }
+    
+    // Render top 3 signals or avoid signals
+    let html = '<div style="display:flex; flex-direction:column; gap:1rem;">';
+    
+    // Sort by confidence
+    const sorted = data.sort((a, b) => (b.signal.confidence || 0) - (a.signal.confidence || 0)).slice(0, 5);
+    
+    sorted.forEach(item => {
+        const sig = item.signal;
+        let badgeClass = 'tag-stop';
+        if (sig.signal_type === 'buy') badgeClass = 'tag-buy';
+        else if (sig.signal_type === 'hold') badgeClass = '';
+        
+        let reasonsHtml = sig.reasons ? sig.reasons.map(r => `<li style="font-size:0.85rem; color:#94a3b8; margin-top:0.25rem;">${r}</li>`).join('') : '';
+        
+        html += `
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 6px; padding: 1rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.5rem;">
+                    <strong style="font-size:1.1rem; color:#f8fafc;">${sig.symbol}</strong>
+                    <span class="tag ${badgeClass}">${sig.signal_type.toUpperCase()} (Conf: ${(sig.confidence * 100).toFixed(0)}%)</span>
+                </div>
+                <ul style="margin:0; padding-left:1.2rem;">${reasonsHtml}</ul>
+            </div>
+        `;
+    });
+    
+    html += '</div>';
+    container.innerHTML = html;
 }

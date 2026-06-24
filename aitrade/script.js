@@ -106,9 +106,13 @@ function renderEChartsSankey(sankeyData) {
                 if (params.dataType === 'node') {
                     return `<div style="font-weight:600;margin-bottom:4px;">${params.data.name}</div>`;
                 } else {
-                    return `<div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">Flow Proxy</div>
-                            <div style="font-weight:600;">${params.data.source} → ${params.data.target}</div>
-                            <span style="color:#10b981">Weight:</span> ${params.value}`;
+                    const dollars = params.data.net_flow_dollars ? 
+                        new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(params.data.net_flow_dollars) 
+                        : 'N/A';
+                        
+                    return `<div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">Net Money Flow</div>
+                            <div style="font-weight:600;margin-bottom:4px;">${params.data.source} → ${params.data.target}</div>
+                            <span style="color:#10b981;font-size:14px;font-weight:700">${dollars}</span>`;
                 }
             }
         },

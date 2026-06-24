@@ -34,7 +34,9 @@
                 <div class="stage">
                     <div class="stage-icon">L1</div>
                     <div class="glass-card layer-card">
-                        <div class="card-header">Macro & Capital Flows</div>
+                        <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
+                            Macro & Capital Flows <span style="font-size:0.8rem; color:#94a3b8">▼</span>
+                        </div>
                         <div class="card-body">
                             <!-- Regime Summary -->
                             <div id="regime-summary" style="margin-bottom: 2rem;">
@@ -87,7 +89,9 @@
                 <div class="stage">
                     <div class="stage-icon">L3</div>
                     <div class="glass-card highlight-card">
-                        <div class="card-header">Actionable Target</div>
+                        <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
+                            Actionable Target <span style="font-size:0.8rem; color:#94a3b8">▼</span>
+                        </div>
                         <div class="card-body" id="target-body">
                             <div class="loader"></div>
                         </div>
@@ -111,6 +115,6 @@
         </main>
     </div>
     
-    <script src="script.js?v=13"></script>
+    <script src="script.js?v=14"></script>
 </body>
 </html>

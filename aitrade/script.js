@@ -107,7 +107,13 @@ function renderEChartsSankey(sankeyData) {
                     return `<div style="font-weight:600;margin-bottom:4px;">${params.data.name}</div>`;
                 } else {
                     const dollars = params.data.net_flow_dollars ? 
-                        new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(params.data.net_flow_dollars) 
+                        new Intl.NumberFormat('en-US', { 
+                            style: 'currency', 
+                            currency: 'USD', 
+                            notation: 'compact',
+                            compactDisplay: 'short',
+                            maximumFractionDigits: 2 
+                        }).format(params.data.net_flow_dollars) 
                         : 'N/A';
                         
                     return `<div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">Net Money Flow</div>

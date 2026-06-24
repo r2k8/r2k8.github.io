@@ -115,26 +115,36 @@ function renderEChartsSankey(sankeyData) {
         series: [
             {
                 type: 'sankey',
-                layout: 'none',
-                layoutIterations: 0,
-                nodeAlign: 'justify',
+                nodeAlign: 'left', // Packs the funnel naturally instead of stretching it to the edges
+                layoutIterations: 32, // Allows ECharts to automatically untangle overlapping lines
                 data: sankeyData.nodes,
                 links: sankeyData.links,
                 emphasis: { focus: 'adjacency' },
-                nodeWidth: 4,
-                nodeGap: 1,
-                top: '2%',
-                bottom: '2%',
+                nodeWidth: 16, // Thicker, premium-looking nodes
+                nodeGap: 12, // Increases vertical spacing so labels don't overlap
+                top: '5%',
+                bottom: '5%',
                 left: '2%',
-                right: '8%',
+                right: '15%', // Leave more room on the right for the final leaf labels
+                itemStyle: {
+                    borderWidth: 0,
+                    borderRadius: 3,
+                    shadowBlur: 10,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                },
                 label: {
                     position: 'right',
                     color: '#f8fafc',
                     fontFamily: 'Outfit',
-                    fontSize: 9,
-                    fontWeight: 500
+                    fontSize: 10,
+                    fontWeight: 500,
+                    padding: [0, 0, 0, 5]
                 },
-                lineStyle: { curveness: 0.5 }
+                lineStyle: { 
+                    color: 'gradient', // Creates a beautiful smooth color fade from source node to target node
+                    curveness: 0.6,
+                    opacity: 0.45
+                }
             }
         ]
     };

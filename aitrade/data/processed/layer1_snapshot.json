@@ -122,13 +122,33 @@
     },
     {
       "as_of": "2026-06-24",
+      "direction": "inflow",
+      "dollar_volume": 2819175433.8412232,
+      "name": "Investment Grade Corporate",
+      "price_change_pct": 0.005791550743539843,
+      "rank": 13,
+      "relative_flow_score": 16327397.580032395,
+      "symbol": "LQD"
+    },
+    {
+      "as_of": "2026-06-24",
       "direction": "outflow",
       "dollar_volume": 185648556.70580673,
       "name": "China",
       "price_change_pct": -0.08324417639867818,
-      "rank": 13,
+      "rank": 14,
       "relative_flow_score": -15454161.202578183,
       "symbol": "MCHI"
+    },
+    {
+      "as_of": "2026-06-24",
+      "direction": "outflow",
+      "dollar_volume": 2649837181.988446,
+      "name": "High Yield Bonds",
+      "price_change_pct": -0.004115762407067305,
+      "rank": 15,
+      "relative_flow_score": -10906100.258477211,
+      "symbol": "HYG"
     },
     {
       "as_of": "2026-06-24",
@@ -136,9 +156,19 @@
       "dollar_volume": 1087731189.9131317,
       "name": "Consumer Staples",
       "price_change_pct": 0.009685581903509823,
-      "rank": 14,
+      "rank": 16,
       "relative_flow_score": 10535309.528905835,
       "symbol": "XLP"
+    },
+    {
+      "as_of": "2026-06-24",
+      "direction": "outflow",
+      "dollar_volume": 262746453.2449112,
+      "name": "Europe",
+      "price_change_pct": -0.02827454530370625,
+      "rank": 17,
+      "relative_flow_score": -7429036.495661377,
+      "symbol": "VGK"
     },
     {
       "as_of": "2026-06-24",
@@ -146,9 +176,19 @@
       "dollar_volume": 958230249.8611095,
       "name": "Utilities",
       "price_change_pct": 0.0046326731963374865,
-      "rank": 15,
+      "rank": 18,
       "relative_flow_score": 4439167.594451334,
       "symbol": "XLU"
+    },
+    {
+      "as_of": "2026-06-24",
+      "direction": "inflow",
+      "dollar_volume": 67155892.9126397,
+      "name": "US Dollar",
+      "price_change_pct": 0.02810813285209037,
+      "rank": 19,
+      "relative_flow_score": 1887626.759789231,
+      "symbol": "UUP"
     },
     {
       "as_of": "2026-06-24",
@@ -156,19 +196,29 @@
       "dollar_volume": 603560694.4417801,
       "name": "Japan",
       "price_change_pct": -0.0031216459716263724,
-      "rank": 16,
+      "rank": 20,
       "relative_flow_score": -1884102.8104361987,
       "symbol": "EWJ"
+    },
+    {
+      "as_of": "2026-06-24",
+      "direction": "flat",
+      "dollar_volume": 0.0,
+      "name": "Volatility Index",
+      "price_change_pct": 0.12296558103771262,
+      "rank": 21,
+      "relative_flow_score": 0.0,
+      "symbol": "^VIX"
     }
   ],
   "capital_flows_tree": {},
   "event_flags": {
     "banking_stress": false,
     "oil_shock": false,
-    "policy_shock": false,
-    "war": false
+    "policy_shock": true,
+    "war": true
   },
-  "generated_at": "2026-06-24T22:04:45.289543Z",
+  "generated_at": "2026-06-24T22:19:19.550805Z",
   "lookback_hours": 24,
   "market_bars": {
     "EWJ": {
@@ -198,6 +248,15 @@
       "latest_volume": 12566894.0,
       "symbol": "GLD"
     },
+    "HYG": {
+      "as_of": "2026-06-24",
+      "avg20_volume": 33180475.4,
+      "close": 79.8499984741211,
+      "ema20": 79.8694065893703,
+      "ema50": 79.86513416690845,
+      "latest_volume": 38786408.0,
+      "symbol": "HYG"
+    },
     "IWM": {
       "as_of": "2026-06-24",
       "avg20_volume": 29436974.1,
@@ -206,6 +265,15 @@
       "ema50": 282.35339487827014,
       "latest_volume": 28157782.0,
       "symbol": "IWM"
+    },
+    "LQD": {
+      "as_of": "2026-06-24",
+      "avg20_volume": 25900137.35,
+      "close": 109.41000366210938,
+      "ema20": 108.83359294337748,
+      "ema50": 108.80145792737758,
+      "latest_volume": 31462147.0,
+      "symbol": "LQD"
     },
     "MCHI": {
       "as_of": "2026-06-24",
@@ -261,6 +329,24 @@
       "latest_volume": 41707159.0,
       "symbol": "TLT"
     },
+    "UUP": {
+      "as_of": "2026-06-24",
+      "avg20_volume": 2399354.65,
+      "close": 28.530000686645508,
+      "ema20": 28.05992162905294,
+      "ema50": 27.8467600043621,
+      "latest_volume": 2009993.0,
+      "symbol": "UUP"
+    },
+    "VGK": {
+      "as_of": "2026-06-24",
+      "avg20_volume": 2969460.7,
+      "close": 86.94999694824219,
+      "ema20": 88.23545391046088,
+      "ema50": 87.3565862484972,
+      "latest_volume": 2097614.0,
+      "symbol": "VGK"
+    },
     "XLE": {
       "as_of": "2026-06-24",
       "avg20_volume": 38165352.65,
@@ -278,11 +364,461 @@
       "ema50": 52.023427529977276,
       "latest_volume": 30033184.0,
       "symbol": "XLF"
+    },
+    "^VIX": {
+      "as_of": "2026-06-24",
+      "avg20_volume": 0.0,
+      "close": 18.6299991607666,
+      "ema20": 17.932525773621496,
+      "ema50": 18.79563252889215,
+      "latest_volume": 0.0,
+      "symbol": "^VIX"
     }
   },
-  "news_items": [],
-  "overall_bullish_score": 0.0,
-  "overall_fear_score": 0.0,
+  "news_items": [
+    {
+      "language": "Russian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "\u041a\u0438\u0435\u0432 : \u0412 \u0411\u0435\u043b\u0430\u0440\u0443\u0441\u0438 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u043b\u0438 \u0440\u0435\u0442\u0440\u0430\u043d\u0441\u043b\u044f\u0442\u043e\u0440\u044b \u0434\u043b\u044f \u0440\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0445 \u0411\u041f\u041b\u0410",
+      "url": "https://www.dw.com/ru/kiev-v-belarusi-otklucili-retranslatory-dla-rossijskih-bpla/a-77698635"
+    },
+    {
+      "language": "Turkish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Trump  \u0131n , NATO zirvesi \u00f6ncesinde jet motorlar\u0131n\u0131n T\u00fcrkiyeye sat\u0131\u015f\u0131na izin verdi\u011fi iddia edildi : 700 milyon dolar\u0131 a\u015f\u0131yor",
+      "url": "https://www.birgun.net/haber/trump-in-nato-zirvesi-oncesinde-jet-motorlarinin-turkiye-ye-satisina-izin-verdigi-iddia-edildi-700-milyon-dolari-asiyor-720356%20target=_blank"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Liberal Party : Why its  retriever  struggles with complex ideas | Narromine News",
+      "url": "https://www.narrominenewsonline.com.au/story/9298272/liberal-party-why-its-retriever-struggles-with-complex-ideas/"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Maine gas prices drop back below $4 with Iran talks ongoing",
+      "url": "https://www.pressherald.com/2026/06/24/maine-gas-prices-drop-back-below-4-with-iran-talks-ongoing/"
+    },
+    {
+      "language": "Korean",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "  \uc774\ub780 \ud30c\uc6cc \ud0a4\uc6cc\uc8fc\ub098  \uac78\ud504\uad6d  MOU \ubd88\ub9cc  \uc5d0 \uae09\uac70 \ud22c\uc785\ub41c \u7f8e\uad6d\ubb34",
+      "url": "https://www.fnnews.com/news/202606250410187850"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Trump asegura que Ir\u00e1n accede a  todo  lo que \u00e9l quiere | Noticias Diario de Burgos",
+      "url": "https://www.diariodeburgos.es/noticia/zdaad4b41-5e5c-4de4-b0437f0e2030aefc/202606/trump-asegura-que-iran-accede-a-todo-lo-que-el-quiere"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Rubio Says US  Completely Aligned  With Gulf Allies In Iran Talks",
+      "url": "http://www.sandiegosun.com/news/279145480/rubio-says-us-completely-aligned-with-gulf-allies-in-iran-talks"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "The Illusions of Western Virtue : Ursula von der Leyen and Europe Moral Bankruptcy \u2013 Middle East Monitor",
+      "url": "https://www.middleeastmonitor.com/20260624-the-illusions-of-western-virtue-ursula-von-der-leyen-and-europes-moral-bankruptcy/"
+    },
+    {
+      "language": "Romanian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Doar o treime din laptele crud produs \u00een Rom\u00e2nia ajunge \u00een procesare industrial\u0103",
+      "url": "https://crisana.ro/stiri/economie-3/doar-o-treime-din-laptele-crud-produs-in-romania-ajunge-in-procesare-industriala-lapte-dus-pe-apa-sambetei-214280.html"
+    },
+    {
+      "language": "Russian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "\u041c\u0418\u0414 \u0420\u0424 : \u0434\u043e\u0433\u043e\u0432\u043e\u0440 \u043e \u043d\u0435\u043d\u0430\u043f\u0430\u0434\u0435\u043d\u0438\u0438 \u0420\u043e\u0441\u0441\u0438\u044f \u041d\u0410\u0422\u041e 2025 \u043d\u0435 \u043e\u0431\u0441\u0443\u0436\u0434\u0430\u0435\u0442\u0441\u044f \u0432 \u0415\u0421",
+      "url": "https://iz.ru/2121370/daniil-sechkin-semen-boikov/briussel-otkazyvaetsia-obsuzhdat-s-rf-garantii-nenapadeniia"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Is Xbox CEO Asha Sharma right that  gaming is unaffordable  for many ? We asked you and you had a scathing message for Microsoft in your answers",
+      "url": "https://www.windowscentral.com/gaming/xbox/is-xbox-ceo-asha-sharma-right-that-gaming-is-unaffordable-for-many-we-asked-you"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "En medio de la derrota los paname\u00f1os celebraron a su  aguerrida  selecci\u00f3n de f\u00fatbol",
+      "url": "https://www.infobae.com/panama/2026/06/24/en-medio-de-la-derrota-los-panamenos-celebraron-a-su-aguerrida-seleccion-de-futbol/"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Cedric Mullins Is Elevating And \u2026 Oh No . Oh No , No , No , No , No . ",
+      "url": "https://blogs.fangraphs.com/cedric-mullins-is-elevating-and-oh-no-oh-no-no-no-no-no/"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "US stocks end mixed , weighed down by more losses for tech giants",
+      "url": "https://www.2news.com/news/national/us-stocks-end-mixed-weighed-down-by-more-losses-for-tech-giants/article_f5425d1b-5106-5eac-8b46-6a3cea4b5f6d.html"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Tarek Masoud Wins Honor For Exploring Disagreements",
+      "url": "https://www.harvardmagazine.com/faculty/tarek-masoud-qa"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Adam Triggs | Pauline Hanson will be her own downfall if she keeps talking | Southern Highland News",
+      "url": "https://www.southernhighlandnews.com.au/story/9297681/adam-triggs-pauline-hanson-will-be-her-own-downfall-if-she-keeps-talking/"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Trump asegura que Ir\u00e1n accede a  todo  lo que \u00e9l quiere",
+      "url": "https://www.notimerica.com/politica/noticia-iran-amp-trump-asegura-iran-accede-todo-quiere-20260624223618.html"
+    },
+    {
+      "language": "Swedish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Direkt \u2013 Kriget i Ukraina \u2013 Ukraina : Tiotusentals ton rysk ammunition f\u00f6rst\u00f6rt",
+      "url": "https://www.dn.se/direkt/ukraina/2026-06-24/ukraina-tiotusentals-ton-rysk-ammunition-forstort/"
+    },
+    {
+      "language": "Serbian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "\u0421\u0443\u0434\u0438\u0458\u0435 \u041c\u0435\u0452\u0443\u043d\u0430\u0440\u043e\u0434\u043d\u043e\u0433 \u043a\u0440\u0438\u0432\u0438\u0447\u043d\u043e\u0433 \u0441\u0443\u0434\u0430 \u0442\u0443\u0436\u0438\u043b\u0435 \u0422\u0440\u0430\u043c\u043f\u043e\u0432\u0443 \u0430\u0434\u043c\u0438\u043d\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0458\u0443 \u0437\u0431\u043e\u0433 \u0441\u0430\u043d\u043a\u0446\u0438\u0458\u0430",
+      "url": "https://www.politika.rs/scc/clanak/765826/sudije-medunarodnog-krivicnog-suda-tuzile-trampovu-administraciju-zbog-sankcija"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "war",
+      "source": "gdelt",
+      "title": "Relato :  No gir\u00e9 a la izquierda  ",
+      "url": "https://timesofsandiego.com/arts/2026/06/24/el-tiempo-nos-cambia-amistad-nostalgia/"
+    },
+    {
+      "language": "Russian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "\u0417\u0430\u043a\u043e\u043d\u043e\u043f\u0440\u043e\u0435\u043a\u0442 \u043e\u0431\u044f\u0436\u0435\u0442 \u0432\u043b\u0430\u0434\u0435\u043b\u044c\u0446\u0435\u0432 \u0445\u043e\u0441\u0442\u0435\u043b\u043e\u0432 \u0441\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0442\u044c \u0441\u043e\u0433\u043b\u0430\u0441\u0438\u0435 \u0436\u0438\u043b\u044c\u0446\u043e\u0432",
+      "url": "https://iz.ru/2121269/natalia-bashlykova/razmeshchenie-hostelov-i-kvestov-v-domah-potrebuet-soglasiya-zhilcov"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Estalla conflicto en Atlangatepec ; se enfrentan pobladores y polic\u00edas por bloqueo contra recicladora",
+      "url": "https://e-tlaxcala.mx/nota/2026-06-24/atlangatepec/estalla-conflicto-en-atlangatepec-se-enfrentan-pobladores-y-policias"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "  C\u00f3mo han cuidado a Fran Maira , eso nunca se hab\u00eda visto en un programa : fustigan a estelar por ignorar el abandono del joven que choc\u00f3 la cantante",
+      "url": "https://www.lacuarta.com/glamorama/noticia/como-han-cuidado-a-fran-maira-eso-nunca-se-habia-visto-en-un-programa-fustigan-a-estelar-por-ignorar-el-abandono-del-joven-que-choco-la-cantante/"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Los cinco grandes de Europa se comprometen a ganar peso en la OTAN ante las cr\u00edticas de Trump",
+      "url": "https://www.larazon.es/internacional/cinco-grandes-europa-comprometen-ganar-peso-otan-criticas-trump_202606246a3c3e57abcaef0cd124852f.html"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Una importante multinacional de Campana despidi\u00f3 a casi la mitad de sus trabajadores en medio de la crisis de Mieli",
+      "url": "https://www.eldestapeweb.com/sociedad/importante-multinacional-despidio-casi-mitad-trabajadores-202662418435"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Polk County District Court Rules Fosston and Essentia Health Must Return to Arbitration",
+      "url": "https://knoxradio.com/2026/06/24/1350062/"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Hubo reuni\u00f3n entre Trabajo y polic\u00edas autoconvocados : qu\u00e9 suceder\u00e1 con la permanencia en casa de Gobierno de Santa Cruz",
+      "url": "https://www.eldiarionuevodia.com.ar/locales/hubo-reunion-entre-trabajo-y-policias-autoconvocados-que-sucedera-con-la-permanencia-en-casa-de-gobierno-de-santa-cruz/"
+    },
+    {
+      "language": "Russian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "\u041d\u043e\u0432\u044b\u0439 \u0440\u043e\u0441\u0441\u0438\u0439\u0441\u043a\u0438\u0439 \u0430\u0432\u0438\u0430\u0446\u0438\u043e\u043d\u043d\u044b\u0439 \u0431\u043e\u0435\u043f\u0440\u0438\u043f\u0430\u0441 \u0438 \u0435\u0433\u043e \u043c\u0435\u0441\u0442\u043e \u0432 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 \u0442\u0430\u043a\u0442\u0438\u043a\u0435",
+      "url": "https://pronedra.ru/banderol-v-dele-novyj-rossijskij-aviaczionnyj-boepripas-i-ego-mesto-v-sovremennoj-taktike-822000.html"
+    },
+    {
+      "language": "Ukrainian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "\u0412\u0456\u0439\u0441\u044c\u043a\u043e\u0432\u0438\u0439 \u044e\u0440\u0438\u0441\u0442 \u043a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0456\u044f : \u0433\u0430\u0439\u0434 2026",
+      "url": "https://vv.com.ua/20260618/viyskovyy-yuryst-konsultatsiya/"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "La orden de arresto de la CPI contra Putin bloquea cualquier negociaci\u00f3n de paz en suelo europeo",
+      "url": "https://www.infobae.com/america/mundo/2026/06/24/la-orden-de-arresto-de-la-cpi-contra-putin-bloquea-cualquier-negociacion-de-paz-en-suelo-europeo/"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Abelardo de la Espriella gana elecciones en Colombia : Iv\u00e1n Cepeda reconoce su derrota y llama a la paz",
+      "url": "https://www.ejecentral.com.mx/nuestro-eje/abelardo-de-la-espriella-gana-elecciones-en-colombia-ivan-cepeda-reconoce-su-derrota-y-llama-a-la-paz"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Suspect arrested in fatal downtown shooting",
+      "url": "https://www.valleynewslive.com/2026/06/24/suspect-arrested-fatal-downtown-shooting/"
+    },
+    {
+      "language": "Russian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "\u041a\u0440\u0438\u0437\u0438\u0441 \u041d\u0410\u0422\u041e \u0438\u0437 - \u0437\u0430 \u0432\u043e\u0439\u043d\u044b \u0432 \u0418\u0440\u0430\u043d\u0435 2026 \u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u044f \u0414\u043e\u043d\u0430\u043b\u044c\u0434\u0430 \u0422\u0440\u0430\u043c\u043f\u0430",
+      "url": "https://iz.ru/2121237/anastasiia-kostina/ryutte-v-vashingtone-pytaetsya-spasti-nato-ot-raskola"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Did Germanys corrupt aid agency fund the Houthis",
+      "url": "http://www.russiaherald.com/news/279145711/did-germanys-corrupt-aid-agency-fund-the-houthis"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Shipping Surges In Strait Of Hormuz",
+      "url": "http://www.japanherald.com/news/279145697/shipping-surges-in-strait-of-hormuz"
+    },
+    {
+      "language": "Croatian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "conflict",
+      "source": "gdelt",
+      "title": "Biv\u0161i \u0161ef NATO - a poziva na stvaranje europske vojne koalicije , koja bi uklju\u010divala i Ukrajinu",
+      "url": "https://www.tportal.hr/vijesti/clanak/bivsi-sef-nato-a-poziva-na-stvaranje-europske-vojne-koalicije-koja-bi-ukljucivala-i-ukrajinu-20260624"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "India sees progress in US trade talks",
+      "url": "https://dailytimes.com.pk/1513093/india-sees-progress-in-us-trade-talks/"
+    },
+    {
+      "language": "Russian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "\u041a\u0430\u043a \u043d\u043e\u0432\u0430\u044f \u0440\u0435\u0444\u043e\u0440\u043c\u0430 \u041c\u0438\u043d\u0446\u0438\u0444\u0440\u044b \u043c\u043e\u0436\u0435\u0442 \u043b\u0438\u0448\u0438\u0442\u044c \u0440\u0435\u0433\u0438\u043e\u043d\u044b \u0441\u0432\u044f\u0437\u0438 \u0438 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0430",
+      "url": "https://iz.ru/2121136/dmitrii-alekseev/soedinenie-poteriano-kak-reforma-litcenzirovaniia-skazhetsia-na-dostupnosti-sviazi-v-malykh"
+    },
+    {
+      "language": "Ukrainian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "\u042f\u043a \u043f\u0440\u0430\u0446\u044e\u0454 \u0442\u0435\u043f\u043b\u043e\u0432\u0438\u0439 \u043d\u0430\u0441\u043e\u0441 : \u043f\u043e\u044f\u0441\u043d\u0435\u043d\u043d\u044f \u043f\u0440\u043e\u0441\u0442\u0438\u043c\u0438 \u0441\u043b\u043e\u0432\u0430\u043c\u0438",
+      "url": "https://vv.com.ua/20260624/chy-vyhidnyy-teplovyy-nasos-v-ukrayini/"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "Lanzan un curso sobre inteligencia artificial aplicada a la docencia , la gesti\u00f3n y la salud en la UNSE",
+      "url": "https://www.nuevodiarioweb.com.ar/provinciales/info-santiago-estero-lanzan-un-curso-sobre-inteligencia-artificial-aplicada-a-la-docencia-la-gestion-y-la-salud-en-la-unse.htm"
+    },
+    {
+      "language": "Spanish",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "Guanajuato anota en el mercado europeo : exportaciones a Chequia crecen 7 . 1 % ",
+      "url": "https://periodicocorreo.com.mx/vida-publica/2026/jun/24/guanajuato-anota-en-el-mercado-europeo-exportaciones-a-chequia-crecen-71-160209.html"
+    },
+    {
+      "language": "Portuguese",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "STF decide ampliar alcance da perda da funo p\u00fablica , em derrota parcial do Congresso , e avan\u00e7a na revis\u00e3o da Lei de Improbidade",
+      "url": "https://oglobo.globo.com/politica/noticia/2026/06/24/stf-decide-ampliar-alcance-da-perda-da-funcao-publica-em-derrota-parcial-do-congresso-e-avanca-na-revisao-da-lei-de-improbidade.ghtml"
+    },
+    {
+      "language": "Portuguese",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "Comunicador com defiic\u00eancia fala sobre cobertura do S\u00e3o Jo\u00e3o de CG",
+      "url": "https://g1.globo.com/pb/paraiba/sao-joao/noticia/2026/06/24/comunicador-cadeirante-relata-experiencia-na-cobertura-do-sao-joao-de-campina-grande.ghtml"
+    },
+    {
+      "language": "Russian",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "\u0411\u043e\u043b\u0435\u0435 4 , 5 \u043c\u043b\u043d \u043b\u044c\u0433\u043e\u0442\u043d\u044b\u0445 \u043f\u043e\u0435\u0437\u0434\u043e\u043a \u0441\u043e\u0432\u0435\u0440\u0448\u0438\u043b\u0438 \u043f\u0435\u0440\u0435\u0441\u0435\u043b\u0435\u043d\u0446\u044b \u0432 \u041a\u0443\u0440\u0441\u043a\u043e\u0439 \u043e\u0431\u043b\u0430\u0441\u0442\u0438 \u0441 \u043d\u0430\u0447\u0430\u043b\u0430 \u0433\u043e\u0434\u0430",
+      "url": "https://runews24.ru/kursk/24/06/2026/bolee-45-mln-lgotnyix-poezdok-sovershili-pereselenczyi-v-kurskoj-oblasti-s-nachala-goda"
+    },
+    {
+      "language": "Azerbaijani",
+      "published_at": "2026-06-24T21:45:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "Az\u0259rbaycan Avrasiyada n\u0259qliyyat , ticar\u0259t v\u0259 kooperasiya g\u00fcnd\u0259liyinin m\u00fch\u00fcm i\u015ftirak\u00e7\u0131s\u0131na \u00e7evrilir - ( Foto ) ",
+      "url": "https://news.milli.az/country/1334353.html"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "Nike Shares Ease After Evercore Cuts Rating and Lowers Price Target ( NKE ) ",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nike-shares-ease-evercore-cuts-130555731.html"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "Methode Electronics , Inc . Reports Fiscal 2026 Fourth Quarter and Full Year Financial Results",
+      "url": "https://www.manilatimes.net/2026/06/25/tmt-newswire/globenewswire/methode-electronics-inc-reports-fiscal-2026-fourth-quarter-and-full-year-financial-results/2372358"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "A Strategic Rethink : Congress Versus the President on US Trade Policy",
+      "url": "https://www.aei.org/events/a-strategic-rethink-congress-versus-the-president-on-us-trade-policy/"
+    },
+    {
+      "language": "French",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": " Cest inaccessible  : le tarif de leur \u00e9cole de musique va tripler , des parents en",
+      "url": "https://saint-brieuc.maville.com/actu/actudet_--c-est-inaccessible-le-tarif-de-leur-ecole-de-musique-va-tripler-des-parents-en-colere-pres-de-saint-brieuc-_fil-7376393_actu.Htm"
+    },
+    {
+      "language": "Chinese",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "MWC\u4e0a\u6d77\u89c1\u8bc1\u5e7f\u548c\u901a\u8fdb\u5316 \uff1a \u4ee5\u901a\u4fe1\u7b97\u529b\u751f\u6001\u4e3a\u57fa \uff0c \u94fa\u5c31AI\u4e07\u7269\u667a\u8054\u4e4b\u8def - \u4eba\u5de5\u667a\u80fd - ITBear\u79d1\u6280\u8d44\u8baf",
+      "url": "https://www.itbear.com.cn/html/2026-06/1411299.html"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "Trump visits Mack Truck facility in Lehigh Valley \u2013 Times News Online",
+      "url": "https://www.tnonline.com/20260624/trump-visits-mack-trucks-facility-in-lehigh-valley/"
+    },
+    {
+      "language": "Portuguese",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "Ap\u00f3s quase perder o nariz , rep\u00f3rter da Globo enfrenta nova piora :  Um passo para tr\u00e1s  ",
+      "url": "https://jornaldebrasilia.com.br/entretenimento/katia-flavia/apos-quase-perder-o-nariz-reporter-da-globo-enfrenta-nova-piora-um-passo-para-tras/"
+    },
+    {
+      "language": "Portuguese",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "Mato Grosso do Sul mostra potencial para ampliar processamento de soja",
+      "url": "https://globorural.globo.com/agricultura/soja/noticia/2026/06/mato-grosso-do-sul-mostra-potencial-para-ampliar-processamento-de-soja.ghtml"
+    },
+    {
+      "language": "English",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "CPI | Tariffs Are Reshaping How Companies Buy and Sell Each Other",
+      "url": "https://www.pymnts.com/cpi-posts/tariffs-are-reshaping-how-companies-buy-and-sell-each-other/"
+    },
+    {
+      "language": "Portuguese",
+      "published_at": "2026-06-24T21:30:00Z",
+      "query": "tariff",
+      "source": "gdelt",
+      "title": "EBC celebra contagem regressiva para a Copa do Mundo Feminina no Brasil com programao especial",
+      "url": "https://www.ebc.com.br/imprensa/2026/ebc-celebra-contagem-regressiva-para-a-copa-do-mundo-feminina-no-brasil-com-programacao-especial"
+    }
+  ],
+  "overall_bullish_score": 0.039090909090909086,
+  "overall_fear_score": 0.07545454545454545,
   "regime_hint": "risk_on",
   "sector_sentiment": {
     "SMH": {
@@ -302,20 +838,24 @@
       "top_headlines": []
     },
     "XLF": {
-      "articles": 0,
-      "confidence": 0.0,
+      "articles": 1,
+      "confidence": 0.17,
       "name": "Financials",
-      "score": 0.0,
+      "score": -1.0,
       "symbol": "XLF",
-      "top_headlines": []
+      "top_headlines": [
+        "The Illusions of Western Virtue : Ursula von der Leyen and Europe Moral Bankruptcy \u2013 Middle East Monitor"
+      ]
     },
     "XLI": {
-      "articles": 0,
-      "confidence": 0.0,
+      "articles": 1,
+      "confidence": 0.11,
       "name": "Industrials",
       "score": 0.0,
       "symbol": "XLI",
-      "top_headlines": []
+      "top_headlines": [
+        "Doar o treime din laptele crud produs \u00een Rom\u00e2nia ajunge \u00een procesare industrial\u0103"
+      ]
     },
     "XLK": {
       "articles": 0,

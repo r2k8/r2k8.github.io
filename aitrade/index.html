@@ -85,6 +85,21 @@
 
                 <div class="connector"></div>
 
+                <!-- Layer 2 -->
+                <div class="stage">
+                    <div class="stage-icon">L2</div>
+                    <div class="glass-card layer-card">
+                        <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
+                            Market Interpretation (Layer 2) <span style="font-size:0.8rem; color:#94a3b8">▼</span>
+                        </div>
+                        <div class="card-body" id="layer2-body">
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="connector"></div>
+
                 <!-- Layer 3 / Target -->
                 <div class="stage">
                     <div class="stage-icon">L3</div>

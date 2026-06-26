@@ -1,5 +1,5 @@
 const GIST_ID = "64ba99affebb937a1534d8cb4b1c60ce";
-let currentTimeframe = '5d';
+let currentTimeframe = '3mo';
 
 document.addEventListener('DOMContentLoaded', initDashboard);
 
@@ -111,21 +111,20 @@ function renderEChartsSankey(sankeyData) {
                     return `<div style="font-weight:600;margin-bottom:4px;">${params.data.name}</div>`;
                 } else {
                     const val = params.data.net_flow_dollars;
+                    const mcDelta = params.data.market_cap_delta;
                     const sign = val > 0 ? '+' : '';
                     const color = val >= 0 ? '#10b981' : '#ef4444';
-                    const dollars = val ? 
-                        new Intl.NumberFormat('en-US', { 
-                            style: 'currency', 
-                            currency: 'USD', 
-                            notation: 'compact',
-                            compactDisplay: 'short',
-                            maximumFractionDigits: 2 
-                        }).format(val) 
-                        : 'N/A';
+                    const formatUSD = (v) => v ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact', compactDisplay: 'short', maximumFractionDigits: 2 }).format(v) : 'N/A';
+                    const dollars = formatUSD(val);
                         
-                    return `<div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">Net Money Flow</div>
+                    return `<div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">Trading Flow Velocity</div>
                             <div style="font-weight:600;margin-bottom:4px;">${params.data.source} → ${params.data.target}</div>
-                            <span style="color:${color};font-size:14px;font-weight:700">${sign}${dollars}</span>`;
+                            <span style="color:${color};font-size:14px;font-weight:700">${sign}${dollars}</span>
+                            <div style="font-size:10px;color:#64748b;margin-top:4px;">(Price %Δ × Traded Volume)</div>
+                            <div style="margin-top:8px; border-top:1px solid rgba(255,255,255,0.1); padding-top:4px;">
+                                <div style="font-size:12px;color:#94a3b8;">Valuation Growth (Market Cap)</div>
+                                <span style="color:${mcDelta >= 0 ? '#10b981' : '#ef4444'};font-size:13px;font-weight:600">${mcDelta > 0 ? '+' : ''}${formatUSD(mcDelta)}</span>
+                            </div>`;
                 }
             }
         },
@@ -196,11 +195,16 @@ function renderEarningsRadar(earningsData) {
         const dayIndex = dateObj.getUTCDay() - 1; // 0=Sunday, 1=Monday
         if (dayIndex >= 0 && dayIndex < 5) {
             const dayName = days[dayIndex];
-            scheduleMap[dayName].before.push({
+            const dataObj = {
                 t: item.Symbol,
                 n: item.Company || item.Symbol,
                 dom: item.Domain || (item.Symbol.toLowerCase() + '.com')
-            });
+            };
+            if (item.Timing === 'After Close') {
+                scheduleMap[dayName].after.push(dataObj);
+            } else {
+                scheduleMap[dayName].before.push(dataObj);
+            }
         }
     });
 

@@ -150,6 +150,92 @@ function updateLayer1(data) {
             </div>
         `;
     }
+
+    if (data.discovery_radar) {
+        renderDiscoverySankey(data.discovery_radar);
+    }
+}
+
+function renderDiscoverySankey(radarData) {
+    const container = document.getElementById('discovery-flow-container');
+    if (!container || !radarData || radarData.length === 0) return;
+    
+    let myChart = echarts.getInstanceByDom(container);
+    if (!myChart) {
+        container.innerHTML = '';
+        myChart = echarts.init(container);
+        window.addEventListener('resize', () => {
+            if (myChart) myChart.resize();
+        });
+    }
+
+    const nodes = [{ name: "S&P 500 Screen", itemStyle: { color: "#f8fafc" } }];
+    const links = [];
+    
+    radarData.forEach(bar => {
+        const symbol = bar.symbol;
+        const color = "#10b981"; // Breakouts are positive momentum
+        const dollarVolume = bar.volume * bar.close;
+        const weight = dollarVolume / 1e7 > 1 ? dollarVolume / 1e7 : 1;
+        
+        nodes.push({ name: symbol, itemStyle: { color: color } });
+        links.push({
+            source: "S&P 500 Screen",
+            target: symbol,
+            value: weight,
+            raw_volume: dollarVolume,
+            price: bar.close,
+            lineStyle: { color: color, opacity: 0.4 }
+        });
+    });
+    
+    const option = {
+        tooltip: {
+            trigger: 'item',
+            triggerOn: 'mousemove',
+            backgroundColor: 'rgba(20, 25, 40, 0.9)',
+            borderColor: 'rgba(255, 255, 255, 0.1)',
+            textStyle: { color: '#f8fafc' },
+            formatter: function (params) {
+                if (params.dataType === 'node') {
+                    return `<div style="font-weight:600;">${params.data.name}</div>`;
+                } else {
+                    const formatUSD = (v) => v ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' }).format(v) : 'N/A';
+                    return `<div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">Breakout Flow</div>
+                            <div style="font-weight:600;margin-bottom:4px;">${params.data.target}</div>
+                            <span style="color:#10b981;font-size:14px;font-weight:700">$${params.data.price.toFixed(2)}</span>
+                            <div style="margin-top:8px; border-top:1px solid rgba(255,255,255,0.1); padding-top:4px;">
+                                <div style="font-size:12px;color:#94a3b8;">Dollar Volume</div>
+                                <span style="color:#f8fafc;font-size:13px;font-weight:600">${formatUSD(params.data.raw_volume)}</span>
+                            </div>`;
+                }
+            }
+        },
+        series: [{
+            type: 'sankey',
+            nodeAlign: 'right',
+            layoutIterations: 32,
+            data: nodes,
+            links: links,
+            nodeWidth: 16,
+            nodeGap: 16,
+            top: '10%',
+            bottom: '10%',
+            left: '5%',
+            right: '20%',
+            itemStyle: { borderWidth: 0, borderRadius: 3 },
+            label: {
+                position: 'right',
+                color: '#f8fafc',
+                fontFamily: 'Outfit',
+                fontSize: 13,
+                fontWeight: 600
+            },
+            lineStyle: { curveness: 0.5 }
+        }]
+    };
+    
+    myChart.setOption(option);
 }
 
 function renderEChartsSankey(sankeyData) {

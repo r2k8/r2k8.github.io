@@ -64,6 +64,8 @@ h1 span { background: var(--accent-gradient); -webkit-background-clip: text; -we
 .target-row { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
 .tag { padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
 .tag-buy { background: rgba(16, 185, 129, 0.15); color: var(--bull); }
+.tag-trim { background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
+.tag-liquidate { background: rgba(225, 29, 72, 0.2); color: #e11d48; border: 1px solid rgba(225, 29, 72, 0.4); box-shadow: 0 0 10px rgba(225, 29, 72, 0.2); font-weight: 700; text-transform: uppercase; }
 .tag-stop { background: rgba(239, 68, 68, 0.15); color: var(--bear); }
 
 .terminal { padding: 0; overflow: hidden; }

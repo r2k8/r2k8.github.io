@@ -283,6 +283,8 @@ function renderLayer2(data) {
         let badgeClass = 'tag-stop';
         if (sig.signal_type === 'buy') badgeClass = 'tag-buy';
         else if (sig.signal_type === 'hold') badgeClass = '';
+        else if (sig.signal_type === 'trim') badgeClass = 'tag-trim';
+        else if (sig.signal_type === 'liquidate') badgeClass = 'tag-liquidate';
         
         let reasonsHtml = sig.reasons ? sig.reasons.map(r => `<li style="font-size:0.85rem; color:#94a3b8; margin-top:0.25rem;">${r}</li>`).join('') : '';
         
@@ -300,3 +302,6 @@ function renderLayer2(data) {
     html += '</div>';
     container.innerHTML = html;
 }
+
+// Auto-refresh the dashboard data every 15 minutes without reloading the page
+setInterval(init, 15 * 60 * 1000);

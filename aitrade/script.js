@@ -108,6 +108,48 @@ function updateLayer1(data) {
             </div>
         `;
     }
+
+    // Render Sentiment
+    const sentimentBody = document.getElementById('sentiment-body');
+    if (sentimentBody && data.sentiment) {
+        const s = data.sentiment;
+        
+        let eventsHtml = '';
+        for (const [event, isActive] of Object.entries(s.events)) {
+            if (isActive) {
+                eventsHtml += `<span class="tag tag-stop" style="margin-right: 0.5rem; margin-bottom: 0.5rem; display: inline-block;">⚠️ ${event.toUpperCase()} DETECTED</span>`;
+            } else {
+                eventsHtml += `<span class="tag" style="background: rgba(255,255,255,0.05); color: #64748b; margin-right: 0.5rem; margin-bottom: 0.5rem; display: inline-block;">NO ${event.toUpperCase()}</span>`;
+            }
+        }
+
+        sentimentBody.innerHTML = `
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="background: rgba(15, 23, 42, 0.4); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Global Panic / Fear Score</div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: ${s.fear_score > 0.6 ? 'var(--bear)' : 'var(--text-muted)'}">${(s.fear_score * 100).toFixed(1)}%</div>
+                        <div style="flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                            <div style="width: ${s.fear_score * 100}%; height: 100%; background: ${s.fear_score > 0.6 ? 'var(--bear)' : 'var(--text-muted)'};"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.4); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                    <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Global Euphoria / Bullish Score</div>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: ${s.bullish_score > 0.6 ? 'var(--bull)' : 'var(--text-muted)'}">${(s.bullish_score * 100).toFixed(1)}%</div>
+                        <div style="flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden;">
+                            <div style="width: ${s.bullish_score * 100}%; height: 100%; background: ${s.bullish_score > 0.6 ? 'var(--bull)' : 'var(--text-muted)'};"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <div style="font-size: 0.9rem; color: #f8fafc; margin-bottom: 0.5rem;">Active Event Monitors</div>
+                <div>${eventsHtml}</div>
+            </div>
+        `;
+    }
 }
 
 function renderEChartsSankey(sankeyData) {

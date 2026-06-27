@@ -9,7 +9,7 @@
     <title>Decision Pipeline</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
     <div class="ambient-glow glow-1"></div>
@@ -84,10 +84,10 @@
                         </div>
                     </div>
                     <div class="glass-card layer-card" style="margin-top: 1rem;">
-                        <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
-                            Macro Regime Metrics <span style="font-size:0.8rem; color:#94a3b8">▼</span>
+                        <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'grid' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
+                            Macro Regime Metrics <span style="font-size:0.8rem; color:#94a3b8">▶</span>
                         </div>
-                        <div class="card-body" id="regime-metrics-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="card-body" id="regime-metrics-body" style="display: none; grid-template-columns: 1fr 1fr; gap: 1rem;">
                             <!-- Injected by script.js -->
                             <div style="color: #94a3b8; font-size: 0.9rem;">Waiting for regime data...</div>
                         </div>
@@ -101,9 +101,9 @@
                     <div class="stage-icon">L2</div>
                     <div class="glass-card layer-card">
                         <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
-                            Market Interpretation (Layer 2) <span style="font-size:0.8rem; color:#94a3b8">▼</span>
+                            Market Interpretation (Layer 2) <span style="font-size:0.8rem; color:#94a3b8">▶</span>
                         </div>
-                        <div class="card-body" id="layer2-body">
+                        <div class="card-body" id="layer2-body" style="display: none;">
                             <div class="loader"></div>
                         </div>
                     </div>
@@ -116,9 +116,9 @@
                     <div class="stage-icon">L3</div>
                     <div class="glass-card highlight-card">
                         <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
-                            Actionable Target <span style="font-size:0.8rem; color:#94a3b8">▼</span>
+                            Actionable Target <span style="font-size:0.8rem; color:#94a3b8">▶</span>
                         </div>
-                        <div class="card-body" id="target-body">
+                        <div class="card-body" id="target-body" style="display: none;">
                             <div class="loader"></div>
                         </div>
                     </div>
@@ -141,6 +141,6 @@
         </main>
     </div>
     
-    <script src="script.js?v=18"></script>
+    <script src="script.js?v=19"></script>
 </body>
 </html>

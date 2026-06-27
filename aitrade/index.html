@@ -83,6 +83,15 @@
                             </div>
                         </div>
                     </div>
+                    <div class="glass-card layer-card" style="margin-top: 1rem;">
+                        <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
+                            Macro Regime Metrics <span style="font-size:0.8rem; color:#94a3b8">▼</span>
+                        </div>
+                        <div class="card-body" id="regime-metrics-body" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <!-- Injected by script.js -->
+                            <div style="color: #94a3b8; font-size: 0.9rem;">Waiting for regime data...</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="connector"></div>

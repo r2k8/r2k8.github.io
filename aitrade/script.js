@@ -166,6 +166,30 @@ function renderEChartsSankey(sankeyData) {
     };
     
     myChart.setOption(option);
+    
+    // Render Regime Metrics
+    const regimeBody = document.getElementById('regime-metrics-body');
+    if (regimeBody && data.regime_metrics) {
+        const rm = data.regime_metrics;
+        regimeBody.innerHTML = `
+            <div style="background: rgba(15, 23, 42, 0.4); padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.25rem;">Breadth Ratio (RSP/SPY)</div>
+                <div style="font-size: 1.2rem; font-weight: 700; color: ${rm.breadth_ratio < 0.95 ? 'var(--bear)' : 'var(--bull)'}">${rm.breadth_ratio.toFixed(2)}</div>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.4); padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.25rem;">Risk Ratio (SPHB/SPLV)</div>
+                <div style="font-size: 1.2rem; font-weight: 700; color: ${rm.risk_ratio > 1.0 ? 'var(--bull)' : 'var(--bear)'}">${rm.risk_ratio.toFixed(2)}</div>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.4); padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.25rem;">Growth vs Defensive (XLY/XLP)</div>
+                <div style="font-size: 1.2rem; font-weight: 700; color: ${rm.growth_defensive_ratio > 1.0 ? 'var(--bull)' : 'var(--bear)'}">${rm.growth_defensive_ratio.toFixed(2)}</div>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.4); padding: 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.25rem;">VIX Term Structure (^VIX/^VIX3M)</div>
+                <div style="font-size: 1.2rem; font-weight: 700; color: ${rm.vix_term_structure > 1.0 ? 'var(--bear)' : 'var(--bull)'}">${rm.vix_term_structure.toFixed(2)}</div>
+            </div>
+        `;
+    }
 }
 
 function renderEarningsRadar(earningsData) {

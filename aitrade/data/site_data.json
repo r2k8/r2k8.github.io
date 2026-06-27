@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-27T07:40:39.871472+00:00",
+  "updated_at": "2026-06-27T08:18:25.743690+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -251,13 +251,6 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-06-23",
-      "Symbol": "NKE",
-      "Company": "Nike, Inc.",
-      "Domain": "nike.com",
-      "Timing": "After Close"
-    },
-    {
       "Date": "2026-06-24",
       "Symbol": "MU",
       "Company": "Micron Technology",
@@ -270,9 +263,62 @@
       "Company": "FedEx",
       "Domain": "fedex.com",
       "Timing": "After Close"
+    },
+    {
+      "Date": "2026-06-30",
+      "Symbol": "NKE",
+      "Company": "Nike, Inc.",
+      "Domain": "nike.com",
+      "Timing": "Before Open"
     }
   ],
-  "discovery_radar": [],
+  "discovery_radar": [
+    {
+      "symbol": "ABBV",
+      "as_of": "2026-06-25",
+      "close": 243.13999938964844,
+      "ema20": 224.9769068072552,
+      "ema50": 217.91212900321204,
+      "avg20_volume": 8644244.3,
+      "latest_volume": 52526686.0
+    },
+    {
+      "symbol": "CAT",
+      "as_of": "2026-06-25",
+      "close": 1057.010009765625,
+      "ema20": 948.1410431239419,
+      "ema50": 890.8216815004248,
+      "avg20_volume": 3918091.3,
+      "latest_volume": 13879126.0
+    },
+    {
+      "symbol": "CMI",
+      "as_of": "2026-06-25",
+      "close": 727.5900268554688,
+      "ema20": 687.7262122988839,
+      "ema50": 660.0031393658917,
+      "avg20_volume": 1238125.0,
+      "latest_volume": 4242900.0
+    },
+    {
+      "symbol": "AMAT",
+      "as_of": "2026-06-25",
+      "close": 668.0,
+      "ema20": 551.3416690570712,
+      "ema50": 482.9157797457776,
+      "avg20_volume": 11723181.85,
+      "latest_volume": 27518637.0
+    },
+    {
+      "symbol": "GLW",
+      "as_of": "2026-06-25",
+      "close": 228.00999450683594,
+      "ema20": 192.13773242262525,
+      "ema50": 181.31887537316067,
+      "avg20_volume": 16355490.1,
+      "latest_volume": 45211402.0
+    }
+  ],
   "regime_metrics": {
     "breadth_ratio": 0.28836988086632187,
     "risk_ratio": 2.060747703058267,
@@ -363,5 +409,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

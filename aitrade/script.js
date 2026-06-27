@@ -175,7 +175,7 @@ function renderDiscoverySankey(radarData) {
     radarData.forEach(bar => {
         const symbol = bar.symbol;
         const color = "#10b981"; // Breakouts are positive momentum
-        const dollarVolume = bar.volume * bar.close;
+        const dollarVolume = bar.latest_volume * bar.close;
         const weight = dollarVolume / 1e7 > 1 ? dollarVolume / 1e7 : 1;
         
         nodes.push({ name: symbol, itemStyle: { color: color } });

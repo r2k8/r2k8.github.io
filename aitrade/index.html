@@ -62,10 +62,36 @@
                                 </div>
                                 <div id="sankey-timestamp" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
                                     <div class="pulse-dot"></div> Data Refreshing...
+                                <!-- Capital Flows -->
+                            <div class="flow-section" style="margin-top: 2rem;">
+                                <div class="flow-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
+                                    <div>
+                                        <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">Capital Flow Mechanics</div>
+                                        <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.2rem;">Sankey visualization of global sector rotation</div>
+                                    </div>
+                                    <div class="timeframe-selector" id="timeframe-pills">
+                                        <div class="timeframe-pill active" data-tf="1d">1D</div>
+                                        <div class="timeframe-pill" data-tf="5d">5D</div>
+                                        <div class="timeframe-pill" data-tf="1mo">1M</div>
+                                        <div class="timeframe-pill" data-tf="3mo">3M</div>
+                                        <div class="timeframe-pill" data-tf="ytd">YTD</div>
+                                    </div>
                                 </div>
-                                
-                                <div id="capital-flow-container" style="width: 100%; height: 500px; margin-top: 2rem;">
-                                    <div class="loader"></div>
+                                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; margin-top: 1rem;">
+                                    <!-- Discovery Sankey -->
+                                    <div style="background: rgba(15,23,42,0.4); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); padding: 1rem;">
+                                        <div style="font-size: 1.1rem; color: #f8fafc; font-weight: 500; margin-bottom: 0.5rem;">Emerging Breakout Flow</div>
+                                        <div id="discovery-flow-container" style="width: 100%; height: 500px;">
+                                            <div style="padding: 2rem; display: flex; justify-content: center;"><div class="loader"></div></div>
+                                        </div>
+                                    </div>
+                                    <!-- Global Sankey -->
+                                    <div style="background: rgba(15,23,42,0.4); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); padding: 1rem;">
+                                        <div style="font-size: 1.1rem; color: #f8fafc; font-weight: 500; margin-bottom: 0.5rem;">Global Sector Liquidity</div>
+                                        <div id="capital-flow-container" style="width: 100%; height: 500px;">
+                                            <div style="padding: 2rem; display: flex; justify-content: center;"><div class="loader"></div></div>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- Earnings Calendar -->

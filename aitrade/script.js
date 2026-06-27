@@ -328,4 +328,4 @@ function renderLayer2(data) {
 }
 
 // Auto-refresh the dashboard data every 15 minutes without reloading the page
-setInterval(init, 15 * 60 * 1000);
+setInterval(fetchData, 15 * 60 * 1000);

@@ -1,4 +1,3 @@
-const GIST_ID = "64ba99affebb937a1534d8cb4b1c60ce";
 let currentTimeframe = '1d';
 
 document.addEventListener('DOMContentLoaded', initDashboard);

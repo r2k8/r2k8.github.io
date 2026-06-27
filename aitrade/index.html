@@ -33,63 +33,56 @@
                 <!-- Layer 1 -->
                 <div class="stage">
                     <div class="stage-icon">L1</div>
-                    <div class="glass-card layer-card">
-                        <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
-                            Macro & Capital Flows <span style="font-size:0.8rem; color:#94a3b8">▼</span>
-                        </div>
-                        <div class="card-body">
-                            <!-- Regime Summary -->
-                            <div id="regime-summary" style="margin-bottom: 2rem;">
-                                <div class="metric-large" id="regime-title">Loading Regime...</div>
-                                <div class="regime-details" style="font-size: 1.1rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.6;">
-                                    <div>Global Liquidity: <span id="gl-status" class="text-white">-</span></div>
-                                    <div>Inflow Leadership: <span id="gl-inflow" class="text-white">-</span></div>
-                                    <div>Outflow Pressure: <span id="gl-outflow" class="text-white">-</span></div>
-                                    <div style="font-size: 0.9rem; margin-top: 0.5rem; color: #f59e0b;" id="gl-health"></div>
-                                </div>
+                    <div class="stage-content" style="display: flex; flex-direction: column; flex: 1; width: 100%; gap: 1rem;">
+                        <div class="glass-card layer-card">
+                            <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
+                                Macro & Capital Flows <span style="font-size:0.8rem; color:#94a3b8">▼</span>
                             </div>
-                            
-                            <!-- Capital Flow Sankey -->
-                            <div class="flow-section">
-                                <div class="flow-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
-                                    <div style="display: flex; align-items: center; gap: 1rem;">
-                                        <div>Global Capital Flow Sankey <span style="font-size: 0.8rem; color: #60a5fa; font-weight: 400; margin-left: 10px;">(Scroll down to view all 70+ assets)</span></div>
-                                        <div class="timeframe-toggles" id="timeframe-toggles">
-                                            <button class="tf-btn active" data-tf="1d">Today</button>
-                                            <button class="tf-btn" data-tf="5d">This Week</button>
-                                            <button class="tf-btn" data-tf="1mo">This Month</button>
-                                            <button class="tf-btn" data-tf="3mo">3 Months</button>
-                                            <button class="tf-btn" data-tf="ytd">YTD</button>
-                                        </div>
+                            <div class="card-body">
+                                <!-- Regime Summary -->
+                                <div id="regime-summary" style="margin-bottom: 2rem;">
+                                    <div class="metric-large" id="regime-title">Loading Regime...</div>
+                                    <div class="regime-details" style="font-size: 1.1rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.6;">
+                                        <div>Global Liquidity: <span id="gl-status" class="text-white">-</span></div>
+                                        <div>Inflow Leadership: <span id="gl-inflow" class="text-bull">-</span></div>
+                                        <div>Outflow Pressure: <span id="gl-outflow" class="text-bear">-</span></div>
                                     </div>
-                                    <div id="sankey-timestamp" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 400;">Data Refreshing...</div>
+                                    <div id="gl-health" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; opacity: 0.7;"></div>
                                 </div>
-                                <div id="capital-flow-container" style="width: 100%; height: 85vh; margin-top: 1rem;">
-                                    <div class="loader" style="margin: 2rem auto;"></div>
-                                </div>
-                            </div>
-                            
-                            <!-- Earnings Calendar -->
-                            <div class="flow-section" style="margin-top: 2rem;">
-                                <div class="flow-header" style="display: flex; justify-content: space-between; align-items: flex-end;">
-                                    <div>
-                                        <div style="font-size: 1.5rem; font-weight: 700; color: #fff;">Most Anticipated Earnings Releases</div>
-                                        <div style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.2rem;" id="earnings-week-label">For the week beginning June 01, 2026</div>
+
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div>Global Capital Flow Sankey <span style="font-size: 0.8rem; color: #60a5fa; font-weight: 400; margin-left: 10px;">(Scroll down to view all 70+ assets)</span></div>
+                                    <div class="timeframe-toggles" id="timeframe-toggles">
+                                        <button class="tf-btn active" data-tf="1d">Today</button>
+                                        <button class="tf-btn" data-tf="5d">This Week</button>
+                                        <button class="tf-btn" data-tf="1mo">This Month</button>
+                                        <button class="tf-btn" data-tf="3mo">3 Months</button>
+                                        <button class="tf-btn" data-tf="ytd">YTD</button>
                                     </div>
                                 </div>
-                                <div class="earnings-calendar" id="earnings-calendar">
-                                    <div style="padding: 2rem; display: flex; justify-content: center;"><div class="loader"></div></div>
+                                <div id="sankey-timestamp" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                                    <div class="pulse-dot"></div> Data Refreshing...
+                                </div>
+                                
+                                <div id="capital-flow-container" style="width: 100%; height: 500px; margin-top: 2rem;">
+                                    <div class="loader"></div>
+                                </div>
+
+                                <div style="margin-top: 3rem;">
+                                    <div style="font-size: 1.1rem; font-weight: 500; color: #f8fafc; margin-bottom: 0.5rem;">Most Anticipated Earnings Releases</div>
+                                    <div id="earnings-week-label" style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 1.5rem;"></div>
+                                    <div id="earnings-calendar" class="earnings-grid"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="glass-card layer-card" style="margin-top: 1rem;">
-                        <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'grid' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
-                            Macro Regime Metrics <span style="font-size:0.8rem; color:#94a3b8">▶</span>
-                        </div>
-                        <div class="card-body" id="regime-metrics-body" style="display: none; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <!-- Injected by script.js -->
-                            <div style="color: #94a3b8; font-size: 0.9rem;">Waiting for regime data...</div>
+                        <div class="glass-card layer-card">
+                            <div class="card-header" style="cursor:pointer; display:flex; justify-content:space-between; align-items:center;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'grid' : 'none'; this.querySelector('span').textContent = this.nextElementSibling.style.display === 'none' ? '▶' : '▼';">
+                                Macro Regime Metrics <span style="font-size:0.8rem; color:#94a3b8">▶</span>
+                            </div>
+                            <div class="card-body" id="regime-metrics-body" style="display: none; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <!-- Injected by script.js -->
+                                <div style="color: #94a3b8; font-size: 0.9rem;">Waiting for regime data...</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,6 +134,6 @@
         </main>
     </div>
     
-    <script src="script.js?v=20"></script>
+    <script src="script.js?v=22"></script>
 </body>
 </html>

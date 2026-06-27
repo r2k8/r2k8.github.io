@@ -24,7 +24,7 @@ async function fetchData() {
         const timestamp = new Date().getTime();
         
         // 1. Fetch our newly generated Static Pre-compute data from Gist!
-        const sankeyRes = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/sankey_data_${currentTimeframe}.json?t=${timestamp}`);
+        const sankeyRes = await fetch(`data/sankey_data_${currentTimeframe}.json?t=${timestamp}`);
         if (sankeyRes.ok) {
             const sankeyData = await sankeyRes.json();
             renderEChartsSankey(sankeyData);
@@ -53,14 +53,14 @@ async function fetchData() {
         }
 
         // 2. Fetch legacy Site Data for Earnings Radar (until we move it to the python pipeline)
-        const siteDataRes = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/site_data.json?t=${timestamp}`);
+        const siteDataRes = await fetch(`data/site_data.json?t=${timestamp}`);
         if (siteDataRes.ok) {
             const data = await siteDataRes.json();
             updateLayer1(data);
         }
 
         // 3. Fetch Layer 3 Orders (which contain Layer 2 signals)
-        const l3Res = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/layer3_orders.json?t=${timestamp}`);
+        const l3Res = await fetch(`data/layer3_orders.json?t=${timestamp}`);
         if (l3Res.ok) {
             const data = await l3Res.json();
             renderLayer2(data);
@@ -68,7 +68,7 @@ async function fetchData() {
         }
 
         // 4. Fetch Cron Logs
-        const logRes = await fetch(`https://gist.githubusercontent.com/r2k8/${GIST_ID}/raw/cron_output.log?t=${timestamp}`);
+        const logRes = await fetch(`data/cron_output.log?t=${timestamp}`);
         if (logRes.ok) {
             const text = await logRes.text();
             const logEl = document.getElementById('cron-logs');

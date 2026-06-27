@@ -37,12 +37,12 @@ async function fetchData() {
                 const rs = sankeyData.regime_summary;
                 const titleEl = document.getElementById('regime-title');
                 titleEl.textContent = rs.title;
-                titleEl.className = `metric-large ${rs.title === 'Risk On' ? 'text-bull' : 'text-bear'}`;
-                titleEl.style.color = rs.title === 'Risk On' ? '#10b981' : '#ef4444';
+                titleEl.className = `metric-large ${rs.title === 'Bull Market (Buying)' ? 'text-bull' : 'text-bear'}`;
+                titleEl.style.color = rs.title === 'Bull Market (Buying)' ? '#10b981' : '#ef4444';
                 
                 const liqEl = document.getElementById('gl-status');
                 liqEl.textContent = rs.liquidity;
-                liqEl.style.color = rs.liquidity === 'Positive' ? '#10b981' : '#ef4444';
+                liqEl.style.color = rs.liquidity.includes('Positive') ? '#10b981' : '#ef4444';
                 
                 document.getElementById('gl-inflow').textContent = rs.inflow;
                 document.getElementById('gl-outflow').textContent = rs.outflow;

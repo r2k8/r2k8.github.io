@@ -22,13 +22,13 @@ async function fetchData() {
     try {
         const timestamp = new Date().getTime();
         
-        // 1. Fetch our newly generated Static Pre-compute data from Gist!
+        // 1. Fetch our newly generated static pre-compute data.
         const sankeyRes = await fetch(`data/sankey_data_${currentTimeframe}.json?t=${timestamp}`);
         if (sankeyRes.ok) {
             const sankeyData = await sankeyRes.json();
             renderEChartsSankey(sankeyData);
             if (sankeyData.last_updated) {
-                document.getElementById('sankey-timestamp').innerHTML = `Live Engine Data &bull; Last Updated: ${sankeyData.last_updated}`;
+                renderDataFreshness(sankeyData.last_updated);
             }
             
             // Hydrate dynamic regime
@@ -77,6 +77,35 @@ async function fetchData() {
     } catch (e) {
         console.error("Dashboard Fetch Error:", e);
     }
+}
+
+function parseEngineTimestamp(value) {
+    if (!value) return null;
+    const normalized = value.includes('T') ? value : value.replace(' UTC', 'Z').replace(' ', 'T');
+    const parsed = new Date(normalized);
+    return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
+function renderDataFreshness(lastUpdated) {
+    const tsEl = document.getElementById('sankey-timestamp');
+    if (!tsEl) return;
+
+    const parsed = parseEngineTimestamp(lastUpdated);
+    if (!parsed) {
+        tsEl.innerHTML = `<span style="color:#f59e0b;">Data timestamp unavailable</span>`;
+        return;
+    }
+
+    const ageMinutes = Math.max(0, Math.round((Date.now() - parsed.getTime()) / 60000));
+    const ageLabel = ageMinutes < 60 ? `${ageMinutes}m ago` : `${Math.floor(ageMinutes / 60)}h ${ageMinutes % 60}m ago`;
+    const now = new Date();
+    const day = now.getDay();
+    const isWeekend = day === 0 || day === 6;
+    const stale = !isWeekend && ageMinutes > 90;
+    const color = stale ? '#ef4444' : '#10b981';
+    const status = stale ? 'STALE DATA' : (isWeekend ? 'Market Closed' : 'Live Engine Data');
+
+    tsEl.innerHTML = `<div class="pulse-dot"></div><span style="color:${color}; font-weight:700;">${status}</span> &bull; Last Updated: ${lastUpdated} &bull; ${ageLabel}`;
 }
 
 function updateLayer1(data) {

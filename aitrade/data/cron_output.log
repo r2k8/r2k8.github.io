@@ -1,127 +1,66 @@
 [SYSTEM INIT] Layer 1 pipeline started.
-[INFO] Started at 2026-06-28 19:34:33 UTC
+[INFO] Started at 2026-06-28 20:36:19 UTC
 [INFO] Project root: /Users/r2k8/CODE/trading-system
 WARNING:root:GDELT rate limit reached after retries. Returning partial results.
-ERROR:yfinance:Failed to get ticker 'GO' reason: Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'WSFS' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'HGV' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$HGV: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$ADMA: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$MIR: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$MSEX: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'ACM' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$ACM: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$KGS: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$PI: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'KMX' reason: Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$KMX: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'EYE' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$EYE: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'CTKB' reason: Failed to perform, curl: (77) error setting certificate verify locations:  CAfile: /opt/homebrew/etc/openssl@3/cert.pem CApath: none. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'VAC' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$CTKB: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$VAC: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'AHR' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$AHR: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'GNW' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$GNW: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'NFG' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$NFG: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'BROS' reason: Failed to perform, curl: (77) error setting certificate verify locations:  CAfile: /opt/homebrew/etc/openssl@3/cert.pem CApath: none. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$BROS: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'CASH' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$CASH: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'PRG' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'FFBC' reason: Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$FFBC: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$PRG: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'STEP' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$STEP: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'SCI' reason: Failed to perform, curl: (77) error setting certificate verify locations:  CAfile: /opt/homebrew/etc/openssl@3/cert.pem CApath: none. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'PRGS' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$PRGS: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'UCTT' reason: Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$UCTT: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'WEX' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$WEX: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'PARR' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'CDP' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$PARR: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$CDP: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'GNL' reason: Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'GTES' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$GTES: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'DOCU' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$GNL: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'WH' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$DOCU: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$WH: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'CWEN' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'NABL' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'BAH' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$BAH: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$CWEN: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$NABL: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'CVBF' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$CVBF: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'NBHC' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:Failed to get ticker 'MATW' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$MATW: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$NBHC: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$AIT: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'SXI' reason: Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$SAIA: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$SXI: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'UFCS' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$UFCS: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'IPAR' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$IPAR: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$RXO: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'PPLI' reason: Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$PPLI: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:Failed to get ticker 'IPGP' reason: Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-ERROR:yfinance:$IPGP: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:
-166 Failed downloads:
-ERROR:yfinance:['GO']: DNSError('Failed to perform, curl: (6) Could not resolve host: query2.finance.yahoo.com. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')
-ERROR:yfinance:['RAMP', 'GEO', 'GOGO', 'VFC', 'ATR', 'LAUR', 'BTU', 'ICHR', 'CPK', 'MLI', 'HSTM', 'SLVM', 'WOR', 'MBIN', 'MBC', 'MSGS', 'SIG', 'PTGX', 'WHD', 'BKE', 'CNS', 'VRRM', 'PK', 'NJR', 'AWR', 'MTX', 'VSTS', 'ESE', 'GTLS', 'ALK', 'VITL', 'STBA', 'FOXF', 'SUPN', 'PDFS', 'XPEL', 'FCPT', 'NPK', 'SHEN', 'OHI', 'TDW', 'CRGY', 'ABG', 'ALV', 'DFIN', 'MTUS', 'WRLD', 'ABCB', 'AA', 'ORI', 'DOCS', 'SBRA', 'CE', 'OLED', 'SCHL', 'TMDX', 'AYI', 'EZPW', 'MYRG', 'MMSI', 'AUB', 'RH', 'HNI', 'PRIM', 'NWBI', 'GGG', 'RDNT', 'PAG', 'MZTI', 'FSS', 'VTOL', 'LBRT', 'SHAK', 'UHT', 'PII', 'NPO', 'TGTX', 'LKFN', 'AFG', 'CBT', 'JBSS', 'EEFT', 'EMBC', 'AN', 'ANF', 'INVA', 'OSK', 'LFUS', 'TEX', 'JHG', 'APLE', 'GME', 'ECPG', 'KSS', 'EWBC', 'NX', 'AVT', 'CLH', 'STEL', 'BBWI', 'AMR', 'BIO', 'CATY', 'WINA', 'HTO', 'MATX', 'APOG', 'BYD', 'MDU', 'FLG', 'UNF', 'ACT', 'ETD', 'SSD', 'BHF', 'PSN', 'REYN', 'AZTA', 'MTG', 'CHE', 'MHK', 'NWN']: OperationalError('unable to open database file')
-ERROR:yfinance:['WSFS']: DNSError('Failed to perform, curl: (6) getaddrinfo() thread failed to start. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')
-ERROR:yfinance:['HGV', 'ADMA', 'MIR', 'MSEX', 'ACM', 'KGS', 'PI', 'KMX', 'EYE', 'CTKB', 'VAC', 'AHR', 'GNW', 'NFG', 'BROS', 'CASH', 'FFBC', 'PRG', 'STEP', 'PRGS', 'UCTT', 'WEX', 'PARR', 'CDP', 'GTES', 'GNL', 'DOCU', 'WH', 'BAH', 'CWEN', 'NABL', 'CVBF', 'MATW', 'NBHC', 'AIT', 'SAIA', 'SXI', 'UFCS', 'IPAR', 'RXO', 'PPLI', 'IPGP']: possibly delisted; no price data found  (period=3mo)
-ERROR:yfinance:$HYG: possibly delisted; no price data found  (period=1mo)
-ERROR:yfinance:
-1 Failed download:
-ERROR:yfinance:['HYG']: possibly delisted; no price data found  (period=1mo)
-ERROR:yfinance:$LQD: possibly delisted; no price data found  (period=1mo)
-ERROR:yfinance:
-1 Failed download:
-ERROR:yfinance:['LQD']: possibly delisted; no price data found  (period=1mo)
-ERROR:yfinance:$VGK: possibly delisted; no price data found  (period=1mo)
-ERROR:yfinance:
-1 Failed download:
-ERROR:yfinance:['VGK']: possibly delisted; no price data found  (period=1mo)
-ERROR:yfinance:
-1 Failed download:
-ERROR:yfinance:['^VIX']: OperationalError('unable to open database file')
-ERROR:yfinance:
-1 Failed download:
-ERROR:yfinance:['UUP']: OperationalError('unable to open database file')
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TLT"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLY"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VGK"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VPL"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VWO"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SLV"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: CPER"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLI"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IBIT"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IGV"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLK"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SPY"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VNQ"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLF"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ETHA"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: DBC"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: GLD"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLV"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: USO"}}}
 Fetching News...
 Running VCP & Momentum Screener on 250 Small/Mid-Cap candidates...
 Validating Earnings/Revenue Acceleration for top 15 technical breakouts...
-  [-] ARWR failed fundamentals. Rev: -0.864, Earn: 0
+  [+] MXL passed! RevGrowth: 43.0%, EarnGrowth: 0.0%, Sector: Technology
+  [-] HIW failed fundamentals. Rev: 0.076, Earn: -0.685
+  [-] NWL failed fundamentals. Rev: -0.011, Earn: 0
+  [+] DY passed! RevGrowth: 56.1%, EarnGrowth: 43.5%, Sector: Industrials
+  [-] MAN failed fundamentals. Rev: 0.103, Earn: -0.582
+  [+] MTRN passed! RevGrowth: 30.8%, EarnGrowth: 8.2%, Sector: Basic Materials
+  [-] ASH failed fundamentals. Rev: 0.006, Earn: -0.475
   [+] TDC passed! RevGrowth: 6.2%, EarnGrowth: 671.1%, Sector: Technology
-  [+] ASTH passed! RevGrowth: 55.6%, EarnGrowth: 110.1%, Sector: Healthcare
-  [+] VCEL passed! RevGrowth: 30.1%, EarnGrowth: 0.0%, Sector: Healthcare
-  [-] LXP failed fundamentals. Rev: -0.033, Earn: 0
-  [+] ALGT passed! RevGrowth: 4.8%, EarnGrowth: 32.6%, Sector: Industrials
-  [+] VCYT passed! RevGrowth: 21.5%, EarnGrowth: 288.9%, Sector: Healthcare
+  [+] BLFS passed! RevGrowth: 24.7%, EarnGrowth: 0.0%, Sector: Healthcare
 Discovery Screener completed. Yielded 5 high-conviction candidates.
 Fetching Original Capital Flows...
-Traceback (most recent call last):
-  File "/Users/r2k8/CODE/trading-system/.venv/bin/trading-data", line 6, in <module>
-  File "/Users/r2k8/CODE/trading-system/src/trading_system/cli.py", line 26, in main
-  File "/Users/r2k8/CODE/trading-system/src/trading_system/data/layer1.py", line 78, in run_layer1
-  File "/Users/r2k8/CODE/trading-system/src/trading_system/data/layer1.py", line 166, in _write_artifacts
-  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 809, in write_text
-  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
-OSError: [Errno 24] Too many open files: '/Users/r2k8/CODE/trading-system/data/processed/layer1_snapshot.json'
+Fetching upcoming earnings...
+Generated earnings radar at /Users/r2k8/CODE/trading-system/data/processed/earnings_radar.csv with 1 upcoming earnings.
+Layer 1 complete: regime=risk_on, news=0, sectors=9, capital_flows=21
+Wrote /Users/r2k8/CODE/trading-system/data/processed/layer1_snapshot.json
+Wrote /Users/r2k8/CODE/trading-system/data/processed/sector_sentiment.csv
+Wrote /Users/r2k8/CODE/trading-system/data/processed/capital_flows.csv
+Wrote /Users/r2k8/CODE/trading-system/data/processed/site_data.json
+Running Layer 2: Strategy (generate_signals)...
+Running Layer 3: Risk (evaluate_risk)...
+
+[Notice]: Layer 4 Python execution stripped due to robin_stocks API breakage. Execution is delegated to Codex via Robinhood Native MCP.
+Running Layer 1.5: Global Liquidity Funnel (Sankey)...
+Extracting tickers...
+Fetching data for 72 tickers...
+Fetching shares outstanding...
+--- Processing Timeframe: 1d ---
+✅ Generated 1d timeframe at /Users/r2k8/CODE/trading-system/data/sankey_data_1d.json
+--- Processing Timeframe: 5d ---
+✅ Generated 5d timeframe at /Users/r2k8/CODE/trading-system/data/sankey_data_5d.json
+--- Processing Timeframe: 1mo ---
+✅ Generated 1mo timeframe at /Users/r2k8/CODE/trading-system/data/sankey_data_1mo.json
+--- Processing Timeframe: 3mo ---
+✅ Generated 3mo timeframe at /Users/r2k8/CODE/trading-system/data/sankey_data_3mo.json
+--- Processing Timeframe: ytd ---
+✅ Generated ytd timeframe at /Users/r2k8/CODE/trading-system/data/sankey_data_ytd.json
+[INFO] Data generation complete. Publishing refreshed dashboard payloads...
+Cloning public repository...
+Cloning into '/tmp/r2k8.github.io_publish'...
+Surgically copying safe frontend files...

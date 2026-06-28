@@ -354,13 +354,14 @@ function renderEChartsSankey(sankeyData) {
 function renderEarningsRadar(earningsData) {
     const container = document.getElementById('earnings-calendar');
     
+    // Calculate the target Monday for this week (or next if weekend)
+    const d = new Date();
+    const day = d.getDay();
+    const daysToAdd = day === 0 ? 1 : (day === 6 ? 2 : 1 - day);
+    const monday = new Date(d.setDate(d.getDate() + daysToAdd));
+    
     const label = document.getElementById('earnings-week-label');
     if (label) {
-        const d = new Date();
-        const day = d.getDay();
-        // If it's Saturday (6) or Sunday (0), advance to the upcoming Monday
-        const daysToAdd = day === 0 ? 1 : (day === 6 ? 2 : 1 - day);
-        const monday = new Date(d.setDate(d.getDate() + daysToAdd));
         label.innerHTML = `For the week beginning ${monday.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' })}`;
     }
     

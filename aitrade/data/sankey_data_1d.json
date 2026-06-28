@@ -232,13 +232,6 @@
       "depth": 4
     },
     {
-      "name": "AVGO",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
       "name": "AMD",
       "itemStyle": {
         "color": "#ef4444"
@@ -261,6 +254,13 @@
     },
     {
       "name": "META",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "AVGO",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -505,14 +505,14 @@
       "depth": 2
     },
     {
-      "name": "Silver",
+      "name": "Copper",
       "itemStyle": {
         "color": "#10b981"
       },
       "depth": 2
     },
     {
-      "name": "Copper",
+      "name": "Silver",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -881,17 +881,6 @@
     },
     {
       "source": "Mega-Cap Tech",
-      "target": "AVGO",
-      "value": 28.48,
-      "net_flow_dollars": -284759351.57901895,
-      "market_cap_delta": -66082841218.55726,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
       "target": "AMD",
       "value": 27.4,
       "net_flow_dollars": -274007457.0754839,
@@ -929,6 +918,17 @@
       "value": 8.83,
       "net_flow_dollars": 88307627.58875719,
       "market_cap_delta": 16206816439.43999,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
+      "target": "AVGO",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1310,10 +1310,10 @@
     },
     {
       "source": "Commodities",
-      "target": "Silver",
-      "value": 1.39,
-      "net_flow_dollars": 13879380.315603318,
-      "market_cap_delta": 314133568.4709377,
+      "target": "Copper",
+      "value": 1,
+      "net_flow_dollars": 184899.52977361705,
+      "market_cap_delta": 350001831.05469066,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1321,10 +1321,10 @@
     },
     {
       "source": "Commodities",
-      "target": "Copper",
+      "target": "Silver",
       "value": 1,
-      "net_flow_dollars": 184899.52977361705,
-      "market_cap_delta": 350001831.05469066,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1346,8 +1346,8 @@
     "title": "Bear Market (Selling)",
     "liquidity": "Flowing OUT (Negative)",
     "inflow": "MSFT / AAPL / LLY / AMZN / PLTR",
-    "outflow": "MU / NVDA / INTC / QCOM / AVGO",
+    "outflow": "MU / NVDA / INTC / QCOM / AMD",
     "health": "Optimal"
   },
-  "last_updated": "2026-06-28 08:29:35 UTC"
+  "last_updated": "2026-06-28 09:31:00 UTC"
 }

@@ -374,9 +374,19 @@ function renderEarningsRadar(earningsData) {
         'Friday': {before: [], after: []}
     };
     
+    // Calculate the end of the target week (Sunday)
+    const targetWeekEnd = new Date(monday);
+    targetWeekEnd.setDate(monday.getDate() + 6);
+    
     earningsData.forEach(item => {
         if (!item.Date) return;
         const dateObj = new Date(item.Date);
+        
+        // Strictly ignore earnings that are not in this target week
+        if (dateObj < monday || dateObj > targetWeekEnd) {
+            return;
+        }
+        
         const dayIndex = dateObj.getUTCDay() - 1; // 0=Sunday, 1=Monday
         if (dayIndex >= 0 && dayIndex < 5) {
             const dayName = days[dayIndex];

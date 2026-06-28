@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-28T22:45:45.414905+00:00",
+  "updated_at": "2026-06-28T23:47:52.815708+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -264,6 +264,15 @@
   ],
   "discovery_radar": [
     {
+      "symbol": "VICR",
+      "as_of": "2026-06-26",
+      "close": 326.92999267578125,
+      "ema20": 316.1385993361636,
+      "ema50": 284.1558430240579,
+      "avg20_volume": 875925.0,
+      "latest_volume": 4158400.0
+    },
+    {
       "symbol": "DY",
       "as_of": "2026-06-26",
       "close": 488.25,
@@ -273,40 +282,31 @@
       "latest_volume": 4271900.0
     },
     {
-      "symbol": "MTRN",
+      "symbol": "DGII",
       "as_of": "2026-06-26",
-      "close": 287.0199890136719,
-      "ema20": 251.95501829129762,
-      "ema50": 221.85041256643316,
-      "avg20_volume": 450855.0,
-      "latest_volume": 1602500.0
+      "close": 70.55000305175781,
+      "ema20": 67.67967978366816,
+      "ema50": 63.592851011662326,
+      "avg20_volume": 382755.0,
+      "latest_volume": 1637200.0
     },
     {
-      "symbol": "SHOO",
+      "symbol": "TDC",
       "as_of": "2026-06-26",
-      "close": 43.220001220703125,
-      "ema20": 43.10860586343006,
-      "ema50": 41.24387525274826,
-      "avg20_volume": 1223345.0,
-      "latest_volume": 5194900.0
+      "close": 32.849998474121094,
+      "ema20": 32.25897699410039,
+      "ema50": 31.165906911758828,
+      "avg20_volume": 3414310.0,
+      "latest_volume": 16261500.0
     },
     {
-      "symbol": "PRK",
+      "symbol": "AIR",
       "as_of": "2026-06-26",
-      "close": 184.11000061035156,
-      "ema20": 176.65269164349763,
-      "ema50": 172.81748383164089,
-      "avg20_volume": 124545.0,
-      "latest_volume": 552300.0
-    },
-    {
-      "symbol": "KRYS",
-      "as_of": "2026-06-26",
-      "close": 372.25,
-      "ema20": 330.44536130591644,
-      "ema50": 307.23071180914127,
-      "avg20_volume": 389290.0,
-      "latest_volume": 1307700.0
+      "close": 143.13999938964844,
+      "ema20": 127.39993984958535,
+      "ema50": 119.84594828215054,
+      "avg20_volume": 490040.0,
+      "latest_volume": 2143000.0
     }
   ],
   "regime_metrics": {
@@ -316,11 +316,11 @@
     "vix_term_structure": 0.9145554205135401
   },
   "sentiment": {
-    "fear_score": 0.03931623931623932,
-    "bullish_score": 0.04786324786324787,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -345,26 +345,17 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.13,
-        "articles": 2,
-        "top_headlines": [
-          "Texas data center to use Cummins natural gas generators | News , Sports , Jobs",
-          "Poilievre asks Parliament to probe B . C .  condo bailout  blocking  a price correction  "
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.4247,
-        "articles": 17,
-        "top_headlines": [
-          "Hitzewelle im Liveticker : +++ 21 : 22 Berliner Feuerwehr muss 1500 Mal ausr\u00fccken steht vor Einsatzrekord +++",
-          "\u041c\u0443\u0437\u0435\u0439 \u041c\u0438\u0440\u043e\u0432\u043e\u0433\u043e \u043e\u043a\u0435\u0430\u043d\u0430 \u043f\u0440\u0438\u0437\u043d\u0430\u043d \u043e\u0441\u043e\u0431\u043e \u0446\u0435\u043d\u043d\u044b\u043c \u043e\u0431\u044a\u0435\u043a\u0442\u043e\u043c \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u043d\u043e\u0433\u043e \u043d\u0430\u0441\u043b\u0435\u0434\u0438\u044f",
-          "Hitzewelle im Liveticker : +++ 19 : 26 In Wien ist es so hei\u00df , wie noch nie zuvor +++",
-          "2+2 ya no son 22 . 222 . 222 : el regreso de las matem\u00e1ticas",
-          "Mortgage rates edge higher amid Iran tensions , inflation uncertainty"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",

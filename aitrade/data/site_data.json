@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-28T05:14:13.073597+00:00",
+  "updated_at": "2026-06-28T06:15:35.796298+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -57,12 +57,12 @@
     {
       "symbol": "SPY",
       "name": "U.S. Large Cap",
-      "as_of": "2026-06-25",
-      "price_change_pct": -0.02153350439269143,
-      "dollar_volume": 45609910329.65851,
-      "relative_flow_score": -982141204.4339637,
+      "as_of": "2026-06-26",
+      "price_change_pct": -0.028609161194016984,
+      "dollar_volume": 46627218541.35895,
+      "relative_flow_score": -1333965611.2783957,
       "direction": "outflow",
-      "rank": 2
+      "rank": 1
     },
     {
       "symbol": "QQQ",
@@ -72,7 +72,7 @@
       "dollar_volume": 37851520540.46478,
       "relative_flow_score": -1189848617.7743804,
       "direction": "outflow",
-      "rank": 1
+      "rank": 2
     },
     {
       "symbol": "EWY",
@@ -110,7 +110,17 @@
       {
         "source": "Global Liquidity",
         "target": "US Equities",
-        "value": 102666.26312772522
+        "value": 103683.57133942566
+      },
+      {
+        "source": "US Equities",
+        "target": "Broad Market",
+        "value": 46627.21854135895
+      },
+      {
+        "source": "Broad Market",
+        "target": "SPY (-0.0%)",
+        "value": 46627.21854135895
       },
       {
         "source": "US Equities",
@@ -121,16 +131,6 @@
         "source": "Growth",
         "target": "QQQ (-0.0%)",
         "value": 37851.520540464786
-      },
-      {
-        "source": "US Equities",
-        "target": "Broad Market",
-        "value": 45609.91032965851
-      },
-      {
-        "source": "Broad Market",
-        "target": "SPY (-0.0%)",
-        "value": 45609.91032965851
       },
       {
         "source": "Global Liquidity",
@@ -320,16 +320,16 @@
     }
   ],
   "regime_metrics": {
-    "breadth_ratio": 0.28836988086632187,
+    "breadth_ratio": 0.2904703807138984,
     "risk_ratio": 2.060747703058267,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.96525292203476
+    "vix_term_structure": 0.9407256072814911
   },
   "sentiment": {
-    "fear_score": 0.027777777777777776,
-    "bullish_score": 0.027777777777777776,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false

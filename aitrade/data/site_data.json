@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-28T06:15:35.796298+00:00",
+  "updated_at": "2026-06-28T07:17:15.910856+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -30,17 +30,7 @@
       "dollar_volume": 2926256661.9480515,
       "relative_flow_score": 15312268.42573022,
       "direction": "inflow",
-      "rank": 13
-    },
-    {
-      "symbol": "XLK",
-      "name": "Technology",
-      "as_of": "2026-06-25",
-      "price_change_pct": 0.0007591750474318935,
-      "dollar_volume": 2852391085.2186584,
-      "relative_flow_score": 2165464.137415185,
-      "direction": "inflow",
-      "rank": 19
+      "rank": 15
     },
     {
       "symbol": "TLT",
@@ -51,6 +41,16 @@
       "relative_flow_score": 53300177.47621605,
       "direction": "inflow",
       "rank": 10
+    },
+    {
+      "symbol": "XLF",
+      "name": "Financials",
+      "as_of": "2026-06-26",
+      "price_change_pct": 0.04181255547335632,
+      "dollar_volume": 2008935394.825592,
+      "relative_flow_score": 83998722.63853405,
+      "direction": "inflow",
+      "rank": 8
     }
   ],
   "top_outflows": [
@@ -82,7 +82,7 @@
       "dollar_volume": 4382924223.06488,
       "relative_flow_score": -22324522.361478522,
       "direction": "outflow",
-      "rank": 11
+      "rank": 13
     },
     {
       "symbol": "GLD",
@@ -95,14 +95,14 @@
       "rank": 3
     },
     {
-      "symbol": "HYG",
-      "name": "High Yield Bonds",
-      "as_of": "2026-06-25",
-      "price_change_pct": -0.0031199302205059815,
-      "dollar_volume": 2676927200.5106354,
-      "relative_flow_score": -8351826.070967606,
+      "symbol": "XLK",
+      "name": "Technology",
+      "as_of": "2026-06-26",
+      "price_change_pct": -0.018001367441715776,
+      "dollar_volume": 2869635111.1203003,
+      "relative_flow_score": -51657356.058925405,
       "direction": "outflow",
-      "rank": 15
+      "rank": 11
     }
   ],
   "sankey": {
@@ -110,7 +110,7 @@
       {
         "source": "Global Liquidity",
         "target": "US Equities",
-        "value": 103683.57133942566
+        "value": 103700.8153653273
       },
       {
         "source": "US Equities",
@@ -125,7 +125,7 @@
       {
         "source": "US Equities",
         "target": "Growth",
-        "value": 40703.911625683446
+        "value": 40721.15565158508
       },
       {
         "source": "Growth",
@@ -135,7 +135,7 @@
       {
         "source": "Global Liquidity",
         "target": "Defensives",
-        "value": 8268.59048630268
+        "value": 8324.619320640277
       },
       {
         "source": "Defensives",
@@ -168,49 +168,49 @@
         "value": 7498.878169701538
       },
       {
+        "source": "Defensives",
+        "target": "Healthcare",
+        "value": 1787.2159622907257
+      },
+      {
+        "source": "Healthcare",
+        "target": "XLV (+0.1%)",
+        "value": 1787.2159622907257
+      },
+      {
         "source": "Global Liquidity",
         "target": "Cyclicals",
-        "value": 6704.654386308746
+        "value": 6616.511547550526
       },
       {
         "source": "Cyclicals",
         "target": "Energy",
-        "value": 2094.0397998499298
+        "value": 2012.5738504688454
       },
       {
         "source": "Energy",
         "target": "XLE (-0.1%)",
-        "value": 2094.0397998499298
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Industrials",
-        "value": 1480.8842379568482
-      },
-      {
-        "source": "Industrials",
-        "target": "XLI (+0.1%)",
-        "value": 1480.8842379568482
+        "value": 2012.5738504688454
       },
       {
         "source": "Cyclicals",
         "target": "Financials",
-        "value": 2041.5800972104644
+        "value": 2008.935394825592
       },
       {
         "source": "Financials",
         "target": "XLF (+0.0%)",
-        "value": 2041.5800972104644
+        "value": 2008.935394825592
       },
       {
-        "source": "Defensives",
-        "target": "Healthcare",
-        "value": 1732.9172861608124
+        "source": "Cyclicals",
+        "target": "Industrials",
+        "value": 1485.7787372828675
       },
       {
-        "source": "Healthcare",
-        "target": "XLV (+0.0%)",
-        "value": 1732.9172861608124
+        "source": "Industrials",
+        "target": "XLI (+0.0%)",
+        "value": 1485.7787372828675
       },
       {
         "source": "Defensives",
@@ -223,29 +223,29 @@
         "value": 2207.044024112396
       },
       {
+        "source": "Growth",
+        "target": "XLK (-0.0%)",
+        "value": 2869.6351111203003
+      },
+      {
         "source": "Defensives",
         "target": "Utilities",
-        "value": 964.8832898366928
+        "value": 966.6134480443764
       },
       {
         "source": "Utilities",
         "target": "XLU (+0.0%)",
-        "value": 964.8832898366928
+        "value": 966.6134480443764
       },
       {
         "source": "Cyclicals",
         "target": "Consumer Staples",
-        "value": 1088.150251291504
+        "value": 1109.2235649732208
       },
       {
         "source": "Consumer Staples",
-        "target": "XLP (-0.0%)",
-        "value": 1088.150251291504
-      },
-      {
-        "source": "Growth",
-        "target": "XLK (+0.0%)",
-        "value": 2852.3910852186586
+        "target": "XLP (+0.0%)",
+        "value": 1109.2235649732208
       }
     ]
   },
@@ -284,21 +284,12 @@
     },
     {
       "symbol": "CAT",
-      "as_of": "2026-06-25",
-      "close": 1057.010009765625,
-      "ema20": 948.1410431239419,
-      "ema50": 890.8216815004248,
-      "avg20_volume": 3918091.3,
-      "latest_volume": 13879126.0
-    },
-    {
-      "symbol": "CMI",
-      "as_of": "2026-06-25",
-      "close": 727.5900268554688,
-      "ema20": 687.7262122988839,
-      "ema50": 660.0031393658917,
-      "avg20_volume": 1238125.0,
-      "latest_volume": 4242900.0
+      "as_of": "2026-06-26",
+      "close": 997.469970703125,
+      "ema20": 952.8390362267213,
+      "ema50": 895.003967351511,
+      "avg20_volume": 3919335.0,
+      "latest_volume": 13904000.0
     },
     {
       "symbol": "AMAT",
@@ -310,20 +301,29 @@
       "latest_volume": 27518637.0
     },
     {
+      "symbol": "BNY",
+      "as_of": "2026-06-26",
+      "close": 143.55999755859375,
+      "ema20": 142.8970222253434,
+      "ema50": 137.76736047746238,
+      "avg20_volume": 4379880.0,
+      "latest_volume": 15860500.0
+    },
+    {
       "symbol": "GLW",
-      "as_of": "2026-06-25",
-      "close": 228.00999450683594,
-      "ema20": 192.13773242262525,
-      "ema50": 181.31887537316067,
-      "avg20_volume": 16351140.1,
-      "latest_volume": 45211402.0
+      "as_of": "2026-06-26",
+      "close": 221.0500030517578,
+      "ema20": 194.89128200635216,
+      "ema50": 182.87695881153704,
+      "avg20_volume": 16359305.0,
+      "latest_volume": 45374700.0
     }
   ],
   "regime_metrics": {
-    "breadth_ratio": 0.2904703807138984,
+    "breadth_ratio": 0.2884950415999234,
     "risk_ratio": 2.060747703058267,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.9407256072814911
+    "vix_term_structure": 0.9145554205135401
   },
   "sentiment": {
     "fear_score": 0.0,

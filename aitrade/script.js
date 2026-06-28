@@ -383,7 +383,11 @@ function renderEarningsRadar(earningsData) {
             const dataObj = {
                 t: item.Symbol,
                 n: item.Company || item.Symbol,
-                dom: item.Domain || (item.Symbol.toLowerCase() + '.com')
+                dom: item.Domain || (item.Symbol.toLowerCase() + '.com'),
+                p: item.Price ? parseFloat(item.Price).toFixed(2) : 'N/A',
+                rg: item.RevGrowth ? (parseFloat(item.RevGrowth) * 100).toFixed(1) + '%' : '0%',
+                eg: item.EarnGrowth ? (parseFloat(item.EarnGrowth) * 100).toFixed(1) + '%' : '0%',
+                sig: item.Signal || 'Neutral'
             };
             if (item.Timing === 'After Close') {
                 scheduleMap[dayName].after.push(dataObj);
@@ -410,6 +414,11 @@ function renderEarningsRadar(earningsData) {
                             <img class="company-logo" src="https://logo.clearbit.com/${c.dom}" onerror="this.style.display='none'">
                             <div class="company-ticker" style="color: #60a5fa">${c.t}</div>
                             <div class="company-name">${c.n}</div>
+                            <div style="font-size: 0.8rem; margin-top: 0.5rem; color: #cbd5e1;">Price: $${c.p}</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Rev: ${c.rg} | EPS: ${c.eg}</div>
+                            <div style="margin-top: 0.4rem;">
+                                <span class="tag" style="background: ${c.sig === 'Strong Buy' ? 'rgba(34,197,94,0.2)' : c.sig === 'Buy' ? 'rgba(59,130,246,0.2)' : c.sig === 'Avoid' ? 'rgba(239,68,68,0.2)' : 'rgba(255,255,255,0.1)'}; color: ${c.sig === 'Strong Buy' ? '#4ade80' : c.sig === 'Buy' ? '#60a5fa' : c.sig === 'Avoid' ? '#f87171' : '#94a3b8'}; padding: 2px 6px; font-size: 0.7rem; border-radius: 4px;">${c.sig}</span>
+                            </div>
                         </div>
                     `).join('')}
                 </div>
@@ -420,6 +429,11 @@ function renderEarningsRadar(earningsData) {
                             <img class="company-logo" src="https://logo.clearbit.com/${c.dom}" onerror="this.style.display='none'">
                             <div class="company-ticker" style="color: #f472b6">${c.t}</div>
                             <div class="company-name">${c.n}</div>
+                            <div style="font-size: 0.8rem; margin-top: 0.5rem; color: #cbd5e1;">Price: $${c.p}</div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Rev: ${c.rg} | EPS: ${c.eg}</div>
+                            <div style="margin-top: 0.4rem;">
+                                <span class="tag" style="background: ${c.sig === 'Strong Buy' ? 'rgba(34,197,94,0.2)' : c.sig === 'Buy' ? 'rgba(59,130,246,0.2)' : c.sig === 'Avoid' ? 'rgba(239,68,68,0.2)' : 'rgba(255,255,255,0.1)'}; color: ${c.sig === 'Strong Buy' ? '#4ade80' : c.sig === 'Buy' ? '#60a5fa' : c.sig === 'Avoid' ? '#f87171' : '#94a3b8'}; padding: 2px 6px; font-size: 0.7rem; border-radius: 4px;">${c.sig}</span>
+                            </div>
                         </div>
                     `).join('')}
                 </div>

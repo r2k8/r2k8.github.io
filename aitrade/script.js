@@ -311,6 +311,7 @@ function renderEChartsSankey(sankeyData) {
         series: [
             {
                 type: 'sankey',
+                roam: true, // Enables zoom and pan functionality
                 nodeAlign: 'left', // Packs the funnel naturally instead of stretching it to the edges
                 layoutIterations: 32, // Allows ECharts to automatically untangle overlapping lines
                 data: sankeyData.nodes,

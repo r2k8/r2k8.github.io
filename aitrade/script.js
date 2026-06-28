@@ -357,8 +357,10 @@ function renderEarningsRadar(earningsData) {
     const label = document.getElementById('earnings-week-label');
     if (label) {
         const d = new Date();
-        const diff = d.getDate() - d.getDay() + (d.getDay() === 0 ? -6 : 1);
-        const monday = new Date(d.setDate(diff));
+        const day = d.getDay();
+        // If it's Saturday (6) or Sunday (0), advance to the upcoming Monday
+        const daysToAdd = day === 0 ? 1 : (day === 6 ? 2 : 1 - day);
+        const monday = new Date(d.setDate(d.getDate() + daysToAdd));
         label.innerHTML = `For the week beginning ${monday.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' })}`;
     }
     

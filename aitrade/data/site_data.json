@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-29T09:11:48.197464+00:00",
+  "updated_at": "2026-06-29T10:16:25.809866+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -264,40 +264,13 @@
   ],
   "discovery_radar": [
     {
-      "symbol": "MXL",
+      "symbol": "OPLN",
       "as_of": "2026-06-26",
-      "close": 96.5999984741211,
-      "ema20": 87.6619573234387,
-      "ema50": 75.92529687770032,
-      "avg20_volume": 4285680.0,
-      "latest_volume": 8184900.0
-    },
-    {
-      "symbol": "ALGM",
-      "as_of": "2026-06-26",
-      "close": 57.88999938964844,
-      "ema20": 53.33287865807176,
-      "ema50": 48.07167571129177,
-      "avg20_volume": 3198280.0,
-      "latest_volume": 12164000.0
-    },
-    {
-      "symbol": "KALU",
-      "as_of": "2026-06-26",
-      "close": 187.1699981689453,
-      "ema20": 181.10927415699672,
-      "ema50": 171.4536032451827,
-      "avg20_volume": 302895.0,
-      "latest_volume": 1274700.0
-    },
-    {
-      "symbol": "LFST",
-      "as_of": "2026-06-26",
-      "close": 10.279999732971191,
-      "ema20": 8.740847441457253,
-      "ema50": 7.997951853412666,
-      "avg20_volume": 3531725.0,
-      "latest_volume": 14419400.0
+      "close": 42.900001525878906,
+      "ema20": 38.231775005466666,
+      "ema50": 35.78758984970186,
+      "avg20_volume": 1286765.0,
+      "latest_volume": 6639300.0
     },
     {
       "symbol": "BLFS",
@@ -307,22 +280,49 @@
       "ema50": 24.199785412296976,
       "avg20_volume": 1001005.0,
       "latest_volume": 3960500.0
+    },
+    {
+      "symbol": "DCOM",
+      "as_of": "2026-06-26",
+      "close": 40.59000015258789,
+      "ema20": 38.912228053235935,
+      "ema50": 37.51880394104203,
+      "avg20_volume": 364730.0,
+      "latest_volume": 1680400.0
+    },
+    {
+      "symbol": "SFBS",
+      "as_of": "2026-06-26",
+      "close": 88.5199966430664,
+      "ema20": 81.70350125128212,
+      "ema50": 79.22838431981374,
+      "avg20_volume": 357855.0,
+      "latest_volume": 1560200.0
+    },
+    {
+      "symbol": "CRS",
+      "as_of": "2026-06-26",
+      "close": 591.780029296875,
+      "ema20": 544.7082515825982,
+      "ema50": 491.6952801580466,
+      "avg20_volume": 938040.0,
+      "latest_volume": 3133100.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.2884950415999234,
     "risk_ratio": 1.986404451554202,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.9165425500314244
+    "vix_term_structure": 0.9150522028930111
   },
   "sentiment": {
-    "fear_score": 0.03804347826086957,
-    "bullish_score": 0.03804347826086957,
+    "fear_score": 0.05229885057471264,
+    "bullish_score": 0.04080459770114943,
     "events": {
       "war": true,
       "policy_shock": true,
       "banking_stress": false,
-      "oil_shock": false
+      "oil_shock": true
     },
     "sectors": {
       "XLK": {
@@ -337,32 +337,36 @@
         "symbol": "SMH",
         "name": "Semiconductors",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "NVIDIA ( NVDA ) CEO Says National Security Takes Priority Over Commercial Opportunity"
+        ]
       },
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
+        "score": -0.3333,
+        "confidence": 0.17,
+        "articles": 3,
         "top_headlines": [
-          "Oil climbs following renewed US , Iran strikes in Middle East"
+          "India protected its consumers from oil shock as West Asia crisis rattled world economies",
+          "Texas data center to use Cummins natural gas generators | News , Sports , Jobs",
+          "Asuntomarkkinoille povataan piristysruisketta \u2013  Kuluttaja hy\u00f6tyy  "
         ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.4416,
-        "articles": 19,
+        "confidence": 0.46,
+        "articles": 21,
         "top_headlines": [
-          "\u0627\u0644\u0630\u0647\u0628 \u064a\u062a\u0631\u0627\u062c\u0639 .. \u0648\u0647\u0630\u0647 \u0623\u0633\u0639\u0627\u0631\u0647 \u0627\u0644\u062c\u062f\u064a\u062f\u0629 - Lebanon News",
-          "America split from monarchy 250 years ago . Trump presidency is testing how far it come",
-          "\u0420\u0443\u0441\u043d\u0430\u0446\u0438\u0442\u0435 \u043c\u0430\u0441\u043e\u0432\u043e \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u0442 \u043f\u0430\u0440\u0438\u0442\u0435 \u0441\u0438 \u043e\u0442 \u0431\u0430\u043d\u043a\u0438\u0442\u0435",
-          "T\u00f6dliche Badeunf\u00e4lle : Drei Menschen sterben in Berliner Gew\u00e4ssern",
-          "Gi\u00e1 v\u00e0ng h\u00f4m nay m\u1edbi nh\u1ea5t ( 29 / 6 ) gi\u1ea3m m\u1ea1nh : Ng\u01b0\u1eddi mua ti\u1ebfp t\u1ee5c v\u1eafng , nh\u00e0 v\u00e0ng b\u00e1n v\u1eabn b\u00e1n tr\u00ean gi\u1ea5y"
+          "  Im not trying to be a troublemaker : Bank of England Huw Pill on rates split",
+          "\u0627\u0646\u062e\u0641\u0627\u0636 \u0623\u0633\u0639\u0627\u0631 \u0627\u0644\u0630\u0647\u0628 \u0648\u0627\u0631\u062a\u0641\u0627\u0639 \u0627\u0644\u0646\u0641\u0637 \u0639\u0627\u0644\u0645\u064a\u0627",
+          "Stock market today : S & P 500 , Nasdaq , Dow futures rise as US and Iran reportedly call a halt to attacks",
+          "Funky Taurus Media - Music Photo Agency & Products",
+          "CAC 40 : La Bourse de Paris attendue \u00e0 l  \u00e9quilibre avec lapaisement des tensions"
         ]
       },
       "XLV": {
@@ -377,11 +381,9 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Nigeria cannot ban its way to industrialisation"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLY": {
         "symbol": "XLY",
@@ -395,9 +397,11 @@
         "symbol": "XLP",
         "name": "Consumer Staples",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Fancy Food , Lollobrigida  Governo sostiene imprese , export negli united states positivo  "
+        ]
       },
       "XLU": {
         "symbol": "XLU",

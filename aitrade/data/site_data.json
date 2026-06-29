@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-28T23:47:52.815708+00:00",
+  "updated_at": "2026-06-29T00:51:24.283182+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -264,6 +264,15 @@
   ],
   "discovery_radar": [
     {
+      "symbol": "MXL",
+      "as_of": "2026-06-26",
+      "close": 96.5999984741211,
+      "ema20": 87.6619573234387,
+      "ema50": 75.92529687770032,
+      "avg20_volume": 4285680.0,
+      "latest_volume": 8184900.0
+    },
+    {
       "symbol": "VICR",
       "as_of": "2026-06-26",
       "close": 326.92999267578125,
@@ -273,40 +282,31 @@
       "latest_volume": 4158400.0
     },
     {
-      "symbol": "DY",
+      "symbol": "OPLN",
       "as_of": "2026-06-26",
-      "close": 488.25,
-      "ema20": 469.2765398808661,
-      "ema50": 445.046516456065,
-      "avg20_volume": 735095.0,
-      "latest_volume": 4271900.0
+      "close": 42.900001525878906,
+      "ema20": 38.231775005466666,
+      "ema50": 35.78758984970186,
+      "avg20_volume": 1286765.0,
+      "latest_volume": 6639300.0
     },
     {
-      "symbol": "DGII",
+      "symbol": "DCOM",
       "as_of": "2026-06-26",
-      "close": 70.55000305175781,
-      "ema20": 67.67967978366816,
-      "ema50": 63.592851011662326,
-      "avg20_volume": 382755.0,
-      "latest_volume": 1637200.0
+      "close": 40.59000015258789,
+      "ema20": 38.912228053235935,
+      "ema50": 37.51880394104203,
+      "avg20_volume": 364730.0,
+      "latest_volume": 1680400.0
     },
     {
-      "symbol": "TDC",
+      "symbol": "ASTH",
       "as_of": "2026-06-26",
-      "close": 32.849998474121094,
-      "ema20": 32.25897699410039,
-      "ema50": 31.165906911758828,
-      "avg20_volume": 3414310.0,
-      "latest_volume": 16261500.0
-    },
-    {
-      "symbol": "AIR",
-      "as_of": "2026-06-26",
-      "close": 143.13999938964844,
-      "ema20": 127.39993984958535,
-      "ema50": 119.84594828215054,
-      "avg20_volume": 490040.0,
-      "latest_volume": 2143000.0
+      "close": 44.5099983215332,
+      "ema20": 39.82063425819311,
+      "ema50": 36.80517854524827,
+      "avg20_volume": 652355.0,
+      "latest_volume": 1964200.0
     }
   ],
   "regime_metrics": {
@@ -316,10 +316,10 @@
     "vix_term_structure": 0.9145554205135401
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.034722222222222224,
+    "bullish_score": 0.034722222222222224,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -353,9 +353,11 @@
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Former Israeli Hostage Calls Out Smotrich for Taking Credit for Freeing Hostages"
+        ]
       },
       "XLV": {
         "symbol": "XLV",

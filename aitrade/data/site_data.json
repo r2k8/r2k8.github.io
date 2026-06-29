@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-29T08:07:21.232266+00:00",
+  "updated_at": "2026-06-29T09:11:48.197464+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -264,22 +264,40 @@
   ],
   "discovery_radar": [
     {
-      "symbol": "DY",
+      "symbol": "MXL",
       "as_of": "2026-06-26",
-      "close": 488.25,
-      "ema20": 469.2765398808661,
-      "ema50": 445.046516456065,
-      "avg20_volume": 735095.0,
-      "latest_volume": 4271900.0
+      "close": 96.5999984741211,
+      "ema20": 87.6619573234387,
+      "ema50": 75.92529687770032,
+      "avg20_volume": 4285680.0,
+      "latest_volume": 8184900.0
     },
     {
-      "symbol": "DGII",
+      "symbol": "ALGM",
       "as_of": "2026-06-26",
-      "close": 70.55000305175781,
-      "ema20": 67.67967978366816,
-      "ema50": 63.592851011662326,
-      "avg20_volume": 382755.0,
-      "latest_volume": 1637200.0
+      "close": 57.88999938964844,
+      "ema20": 53.33287865807176,
+      "ema50": 48.07167571129177,
+      "avg20_volume": 3198280.0,
+      "latest_volume": 12164000.0
+    },
+    {
+      "symbol": "KALU",
+      "as_of": "2026-06-26",
+      "close": 187.1699981689453,
+      "ema20": 181.10927415699672,
+      "ema50": 171.4536032451827,
+      "avg20_volume": 302895.0,
+      "latest_volume": 1274700.0
+    },
+    {
+      "symbol": "LFST",
+      "as_of": "2026-06-26",
+      "close": 10.279999732971191,
+      "ema20": 8.740847441457253,
+      "ema50": 7.997951853412666,
+      "avg20_volume": 3531725.0,
+      "latest_volume": 14419400.0
     },
     {
       "symbol": "BLFS",
@@ -289,38 +307,20 @@
       "ema50": 24.199785412296976,
       "avg20_volume": 1001005.0,
       "latest_volume": 3960500.0
-    },
-    {
-      "symbol": "SBCF",
-      "as_of": "2026-06-26",
-      "close": 33.45000076293945,
-      "ema20": 31.358611847677086,
-      "ema50": 30.94029731734064,
-      "avg20_volume": 1061760.0,
-      "latest_volume": 5510100.0
-    },
-    {
-      "symbol": "AIR",
-      "as_of": "2026-06-26",
-      "close": 143.13999938964844,
-      "ema20": 127.39993984958535,
-      "ema50": 119.84594828215054,
-      "avg20_volume": 490040.0,
-      "latest_volume": 2143000.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.2884950415999234,
     "risk_ratio": 1.986404451554202,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.9190263671772291
+    "vix_term_structure": 0.9165425500314244
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.03804347826086957,
+    "bullish_score": 0.03804347826086957,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -345,17 +345,25 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Oil climbs following renewed US , Iran strikes in Middle East"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.4416,
+        "articles": 19,
+        "top_headlines": [
+          "\u0627\u0644\u0630\u0647\u0628 \u064a\u062a\u0631\u0627\u062c\u0639 .. \u0648\u0647\u0630\u0647 \u0623\u0633\u0639\u0627\u0631\u0647 \u0627\u0644\u062c\u062f\u064a\u062f\u0629 - Lebanon News",
+          "America split from monarchy 250 years ago . Trump presidency is testing how far it come",
+          "\u0420\u0443\u0441\u043d\u0430\u0446\u0438\u0442\u0435 \u043c\u0430\u0441\u043e\u0432\u043e \u0438\u0437\u0442\u0435\u0433\u043b\u044f\u0442 \u043f\u0430\u0440\u0438\u0442\u0435 \u0441\u0438 \u043e\u0442 \u0431\u0430\u043d\u043a\u0438\u0442\u0435",
+          "T\u00f6dliche Badeunf\u00e4lle : Drei Menschen sterben in Berliner Gew\u00e4ssern",
+          "Gi\u00e1 v\u00e0ng h\u00f4m nay m\u1edbi nh\u1ea5t ( 29 / 6 ) gi\u1ea3m m\u1ea1nh : Ng\u01b0\u1eddi mua ti\u1ebfp t\u1ee5c v\u1eafng , nh\u00e0 v\u00e0ng b\u00e1n v\u1eabn b\u00e1n tr\u00ean gi\u1ea5y"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
@@ -369,9 +377,11 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Nigeria cannot ban its way to industrialisation"
+        ]
       },
       "XLY": {
         "symbol": "XLY",

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-29T10:16:25.809866+00:00",
+  "updated_at": "2026-06-29T11:18:26.478619+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -264,22 +264,13 @@
   ],
   "discovery_radar": [
     {
-      "symbol": "OPLN",
+      "symbol": "DY",
       "as_of": "2026-06-26",
-      "close": 42.900001525878906,
-      "ema20": 38.231775005466666,
-      "ema50": 35.78758984970186,
-      "avg20_volume": 1286765.0,
-      "latest_volume": 6639300.0
-    },
-    {
-      "symbol": "BLFS",
-      "as_of": "2026-06-26",
-      "close": 28.670000076293945,
-      "ema20": 25.968155807605218,
-      "ema50": 24.199785412296976,
-      "avg20_volume": 1001005.0,
-      "latest_volume": 3960500.0
+      "close": 488.25,
+      "ema20": 469.2765398808661,
+      "ema50": 445.046516456065,
+      "avg20_volume": 735095.0,
+      "latest_volume": 4271900.0
     },
     {
       "symbol": "DCOM",
@@ -291,13 +282,22 @@
       "latest_volume": 1680400.0
     },
     {
-      "symbol": "SFBS",
+      "symbol": "SHO",
       "as_of": "2026-06-26",
-      "close": 88.5199966430664,
-      "ema20": 81.70350125128212,
-      "ema50": 79.22838431981374,
-      "avg20_volume": 357855.0,
-      "latest_volume": 1560200.0
+      "close": 11.920000076293945,
+      "ema20": 11.497408264564339,
+      "ema50": 10.841716171071173,
+      "avg20_volume": 3046195.0,
+      "latest_volume": 12726700.0
+    },
+    {
+      "symbol": "ULS",
+      "as_of": "2026-06-26",
+      "close": 99.05000305175781,
+      "ema20": 95.66868265509125,
+      "ema50": 94.7874616692657,
+      "avg20_volume": 1152125.0,
+      "latest_volume": 5399900.0
     },
     {
       "symbol": "CRS",
@@ -313,16 +313,16 @@
     "breadth_ratio": 0.2884950415999234,
     "risk_ratio": 1.986404451554202,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.9150522028930111
+    "vix_term_structure": 0.9056135271861623
   },
   "sentiment": {
-    "fear_score": 0.05229885057471264,
-    "bullish_score": 0.04080459770114943,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
-      "oil_shock": true
+      "oil_shock": false
     },
     "sectors": {
       "XLK": {
@@ -337,37 +337,25 @@
         "symbol": "SMH",
         "name": "Semiconductors",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "NVIDIA ( NVDA ) CEO Says National Security Takes Priority Over Commercial Opportunity"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": -0.3333,
-        "confidence": 0.17,
-        "articles": 3,
-        "top_headlines": [
-          "India protected its consumers from oil shock as West Asia crisis rattled world economies",
-          "Texas data center to use Cummins natural gas generators | News , Sports , Jobs",
-          "Asuntomarkkinoille povataan piristysruisketta \u2013  Kuluttaja hy\u00f6tyy  "
-        ]
+        "score": 0.0,
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.46,
-        "articles": 21,
-        "top_headlines": [
-          "  Im not trying to be a troublemaker : Bank of England Huw Pill on rates split",
-          "\u0627\u0646\u062e\u0641\u0627\u0636 \u0623\u0633\u0639\u0627\u0631 \u0627\u0644\u0630\u0647\u0628 \u0648\u0627\u0631\u062a\u0641\u0627\u0639 \u0627\u0644\u0646\u0641\u0637 \u0639\u0627\u0644\u0645\u064a\u0627",
-          "Stock market today : S & P 500 , Nasdaq , Dow futures rise as US and Iran reportedly call a halt to attacks",
-          "Funky Taurus Media - Music Photo Agency & Products",
-          "CAC 40 : La Bourse de Paris attendue \u00e0 l  \u00e9quilibre avec lapaisement des tensions"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -397,11 +385,9 @@
         "symbol": "XLP",
         "name": "Consumer Staples",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Fancy Food , Lollobrigida  Governo sostiene imprese , export negli united states positivo  "
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLU": {
         "symbol": "XLU",

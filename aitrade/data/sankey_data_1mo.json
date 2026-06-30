@@ -106,13 +106,6 @@
       "depth": 4
     },
     {
-      "name": "AI",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
       "name": "ZS",
       "itemStyle": {
         "color": "#ef4444"
@@ -144,6 +137,13 @@
       "name": "SOFI",
       "itemStyle": {
         "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "AI",
+      "itemStyle": {
+        "color": "#10b981"
       },
       "depth": 4
     },
@@ -218,21 +218,7 @@
       "depth": 4
     },
     {
-      "name": "AVGO",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
       "name": "AAPL",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "META",
       "itemStyle": {
         "color": "#ef4444"
       },
@@ -263,6 +249,20 @@
       "name": "CRM",
       "itemStyle": {
         "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "META",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "AVGO",
+      "itemStyle": {
+        "color": "#10b981"
       },
       "depth": 4
     },
@@ -358,13 +358,6 @@
       "depth": 4
     },
     {
-      "name": "GS",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
       "name": "BX",
       "itemStyle": {
         "color": "#ef4444"
@@ -372,9 +365,16 @@
       "depth": 4
     },
     {
+      "name": "GS",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "Consumer",
       "itemStyle": {
-        "color": "#ef4444"
+        "color": "#10b981"
       },
       "depth": 3
     },
@@ -437,7 +437,7 @@
     {
       "name": "Asia-Pacific",
       "itemStyle": {
-        "color": "#ef4444"
+        "color": "#10b981"
       },
       "depth": 2
     },
@@ -683,17 +683,6 @@
     },
     {
       "source": "AI & Cloud Growth",
-      "target": "AI",
-      "value": 26.61,
-      "net_flow_dollars": -266074553.4005691,
-      "market_cap_delta": -288703658.8892156,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
       "target": "ZS",
       "value": 15.35,
       "net_flow_dollars": -153517806.72930852,
@@ -744,6 +733,17 @@
       "market_cap_delta": -38481550.9422898,
       "lineStyle": {
         "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
+      "target": "AI",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -859,32 +859,10 @@
     },
     {
       "source": "Mega-Cap Tech",
-      "target": "AVGO",
-      "value": 3599.39,
-      "net_flow_dollars": -35993875644.3364,
-      "market_cap_delta": -353583302239.42975,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
       "target": "AAPL",
       "value": 2618.29,
       "net_flow_dollars": -26182937559.617416,
       "market_cap_delta": -445320777351.21094,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
-      "target": "META",
-      "value": 1885.52,
-      "net_flow_dollars": -18855243491.594414,
-      "market_cap_delta": -153525600671.4742,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -931,6 +909,28 @@
       "market_cap_delta": -27166235998.53515,
       "lineStyle": {
         "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
+      "target": "META",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
+      "target": "AVGO",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1079,17 +1079,6 @@
     },
     {
       "source": "Financials",
-      "target": "GS",
-      "value": 19.23,
-      "net_flow_dollars": -192313772.52808946,
-      "market_cap_delta": -1578283220.2533314,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Financials",
       "target": "BX",
       "value": 18.24,
       "net_flow_dollars": -182448691.60964125,
@@ -1100,13 +1089,24 @@
       }
     },
     {
+      "source": "Financials",
+      "target": "GS",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
       "source": "USA",
       "target": "Consumer",
-      "value": 53.39,
-      "net_flow_dollars": -533861386.7787552,
-      "market_cap_delta": -450948419.71527153,
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
-        "color": "#ef4444",
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1201,11 +1201,11 @@
     {
       "source": "Equities",
       "target": "Asia-Pacific",
-      "value": 1.06,
-      "net_flow_dollars": -10590051.58919633,
-      "market_cap_delta": -22442665.683349617,
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
-        "color": "#ef4444",
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1346,8 +1346,8 @@
     "title": "Bear Market (Selling)",
     "liquidity": "Flowing OUT (Negative)",
     "inflow": "MU / INTC / AMD / ASML / TSM",
-    "outflow": "MSFT / NVDA / AVGO / AAPL / PLTR",
+    "outflow": "MSFT / NVDA / AAPL / PLTR / AMZN",
     "health": "Optimal"
   },
-  "last_updated": "2026-06-30 05:22:31 UTC"
+  "last_updated": "2026-06-30 06:25:33 UTC"
 }

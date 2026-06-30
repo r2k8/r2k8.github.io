@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-30T11:18:59.731658+00:00",
+  "updated_at": "2026-06-30T12:22:07.208160+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -273,31 +273,31 @@
       "latest_volume": 3427200.0
     },
     {
-      "symbol": "MKSI",
+      "symbol": "PRSU",
       "as_of": "2026-06-29",
-      "close": 416.0,
-      "ema20": 368.08016464265916,
-      "ema50": 328.44272448337364,
-      "avg20_volume": 1347165.0,
-      "latest_volume": 2105700.0
+      "close": 54.599998474121094,
+      "ema20": 49.57380451391316,
+      "ema50": 45.66705356187698,
+      "avg20_volume": 336405.0,
+      "latest_volume": 514700.0
     },
     {
-      "symbol": "LIF",
+      "symbol": "REYN",
       "as_of": "2026-06-29",
-      "close": 57.58000183105469,
-      "ema20": 48.12833092617607,
-      "ema50": 45.236755948348204,
-      "avg20_volume": 794940.0,
-      "latest_volume": 1484500.0
+      "close": 27.1200008392334,
+      "ema20": 24.156300260520936,
+      "ema50": 22.856645593410555,
+      "avg20_volume": 1206725.0,
+      "latest_volume": 1861000.0
     },
     {
-      "symbol": "HAYW",
+      "symbol": "RNST",
       "as_of": "2026-06-29",
-      "close": 16.989999771118164,
-      "ema20": 15.11350089955344,
-      "ema50": 14.586363248668412,
-      "avg20_volume": 2463490.0,
-      "latest_volume": 4095300.0
+      "close": 42.68000030517578,
+      "ema20": 41.98647015707729,
+      "ema50": 40.6877265685626,
+      "avg20_volume": 814990.0,
+      "latest_volume": 1259100.0
     },
     {
       "symbol": "EGBN",
@@ -313,14 +313,14 @@
     "breadth_ratio": 0.28751687321424807,
     "risk_ratio": 2.0263263075747306,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8668654491029255
+    "vix_term_structure": 0.8718330833945349
   },
   "sentiment": {
-    "fear_score": 0.04,
-    "bullish_score": 0.04,
+    "fear_score": 0.037500000000000006,
+    "bullish_score": 0.06527777777777778,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -345,9 +345,12 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.13,
+        "articles": 2,
+        "top_headlines": [
+          "Abu Dhabi proposes new oil - pricing system to mirror wider market",
+          "Household energy prices set to remain high this winter as \u00a3221 rise takes effect"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
@@ -369,11 +372,9 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Britain sets out a plan for future defense with a focus on drones and a fight over money"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLY": {
         "symbol": "XLY",

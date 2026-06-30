@@ -32,7 +32,7 @@ async function fetchData() {
             }
             
             if (sankeyData.discovery_radar) {
-                renderDiscoverySankey(sankeyData.discovery_radar);
+                renderDiscoveryQuadrant(sankeyData.discovery_radar);
             }
             
             // Hydrate dynamic regime
@@ -185,7 +185,7 @@ function updateLayer1(data) {
 
 }
 
-function renderDiscoverySankey(radarData) {
+function renderDiscoveryQuadrant(radarData) {
     const container = document.getElementById('discovery-flow-container');
     if (!container || !radarData || radarData.length === 0) return;
     
@@ -198,91 +198,92 @@ function renderDiscoverySankey(radarData) {
         });
     }
 
-    const nodes = [{ name: "S&P Screen", itemStyle: { color: "#f8fafc" } }];
-    const links = [];
-    
-    radarData.forEach(bar => {
-        const symbol = bar.symbol;
-        const sector = bar.sector || "Unknown";
-        const color = bar.price_change >= 0 ? "#10b981" : "#ef4444";
-        const dollarVolume = bar.dollar_volume || 0;
-        const weight = dollarVolume / 1e7 > 1 ? dollarVolume / 1e7 : 1;
+    // Color map for sectors
+    const sectorColors = {
+        "Technology": "#3b82f6",
+        "Healthcare": "#ec4899",
+        "Financial Services": "#eab308",
+        "Consumer Cyclical": "#8b5cf6",
+        "Industrials": "#f97316",
+        "Energy": "#14b8a6",
+        "Unknown": "#94a3b8"
+    };
+
+    const seriesData = radarData.map(item => {
+        // X = Fundamental Growth (Rev + Earn)
+        const fundamentalGrowth = ((item.rev_growth || 0) + (item.earn_growth || 0)) * 100;
+        // Y = Price Momentum
+        const momentum = (item.price_change || 0) * 100;
         
-        // Add sector node if not exists
-        if (!nodes.find(n => n.name === sector)) {
-            nodes.push({ name: sector, itemStyle: { color: "#e2e8f0" } });
-            links.push({
-                source: "S&P Screen",
-                target: sector,
-                value: 0
-            });
-        }
-        
-        nodes.push({ name: symbol, itemStyle: { color: color } });
-        links.push({
-            source: sector,
-            target: symbol,
-            value: weight,
-            raw_volume: dollarVolume,
-            price_change: bar.price_change,
-            lineStyle: { color: color, opacity: 0.4 }
-        });
-        
-        // Accumulate sector link value
-        const sectorLink = links.find(l => l.source === "S&P Screen" && l.target === sector);
-        if (sectorLink) {
-            sectorLink.value += weight;
-            // Also style the sector link
-            sectorLink.lineStyle = { color: "#94a3b8", opacity: 0.2 };
-        }
+        return {
+            name: item.symbol,
+            value: [fundamentalGrowth, momentum, item.dollar_volume, item.sector],
+            itemStyle: {
+                color: sectorColors[item.sector] || sectorColors["Unknown"]
+            }
+        };
     });
-    
+
     const option = {
+        title: {
+            text: 'Super Gainer Quadrant',
+            subtext: 'X: Fundamental Growth | Y: Price Momentum | Size: Volume',
+            left: 'center',
+            textStyle: { color: '#f8fafc', fontSize: 14, fontFamily: 'Outfit' },
+            subtextStyle: { color: '#94a3b8' }
+        },
+        grid: { left: '10%', right: '10%', bottom: '15%', top: '15%' },
         tooltip: {
-            trigger: 'item',
-            triggerOn: 'mousemove',
             backgroundColor: 'rgba(20, 25, 40, 0.9)',
-            borderColor: 'rgba(255, 255, 255, 0.1)',
+            borderColor: 'rgba(255,255,255,0.1)',
             textStyle: { color: '#f8fafc' },
             formatter: function (params) {
-                if (params.dataType === 'node') {
-                    return `<div style="font-weight:600;">${params.data.name}</div>`;
-                } else if (params.data.source === "S&P Screen") {
-                     return `<div style="font-weight:600;">Sector Flow: ${params.data.target}</div>`;
-                } else {
-                    const formatUSD = (v) => v ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' }).format(v) : 'N/A';
-                    const sign = params.data.price_change >= 0 ? '+' : '';
-                    return `<div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">Breakout Flow</div>
-                            <div style="font-weight:600;margin-bottom:4px;">${params.data.target}</div>
-                            <span style="color:${params.data.price_change >= 0 ? '#10b981' : '#ef4444'};font-size:14px;font-weight:700">${sign}${(params.data.price_change * 100).toFixed(1)}%</span>
-                            <div style="margin-top:8px; border-top:1px solid rgba(255,255,255,0.1); padding-top:4px;">
-                                <div style="font-size:12px;color:#94a3b8;">Dollar Volume</div>
-                                <span style="color:#f8fafc;font-size:13px;font-weight:600">${formatUSD(params.data.raw_volume)}</span>
-                            </div>`;
-                }
+                const data = params.data;
+                const formatUSD = (v) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' }).format(v);
+                return `<div style="font-weight:600; font-size:14px; margin-bottom:4px; color:${data.itemStyle.color}">${data.name} <span style="font-size:11px; color:#94a3b8;">(${data.value[3]})</span></div>
+                        <div style="font-size:12px; color:#94a3b8;">Fundamental Growth (Rev+EPS): <span style="color:#f8fafc; font-weight:600;">${data.value[0].toFixed(1)}%</span></div>
+                        <div style="font-size:12px; color:#94a3b8;">Price Momentum: <span style="color:#f8fafc; font-weight:600;">${data.value[1].toFixed(1)}%</span></div>
+                        <div style="font-size:12px; color:#94a3b8;">Dollar Volume: <span style="color:#f8fafc; font-weight:600;">${formatUSD(data.value[2])}</span></div>`;
             }
         },
+        xAxis: {
+            type: 'value',
+            name: 'Fundamental Growth %',
+            nameLocation: 'middle',
+            nameGap: 30,
+            splitLine: { lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } },
+            axisLabel: { color: '#94a3b8', formatter: '{value}%' }
+        },
+        yAxis: {
+            type: 'value',
+            name: 'Price Momentum %',
+            nameLocation: 'middle',
+            nameGap: 40,
+            splitLine: { lineStyle: { type: 'dashed', color: 'rgba(255,255,255,0.1)' } },
+            axisLabel: { color: '#94a3b8', formatter: '{value}%' }
+        },
         series: [{
-            type: 'sankey',
-            nodeAlign: 'right',
-            layoutIterations: 32,
-            data: nodes,
-            links: links,
-            nodeWidth: 16,
-            nodeGap: 16,
-            top: '10%',
-            bottom: '10%',
-            left: '5%',
-            right: '20%',
-            itemStyle: { borderWidth: 0, borderRadius: 3 },
-            label: {
-                position: 'right',
-                color: '#f8fafc',
-                fontFamily: 'Outfit',
-                fontSize: 13,
-                fontWeight: 600
+            type: 'scatter',
+            data: seriesData,
+            symbolSize: function (data) {
+                return Math.max(Math.min(data[2] / 1e7, 40), 10);
             },
-            lineStyle: { curveness: 0.5 }
+            label: {
+                show: true,
+                formatter: '{b}',
+                position: 'top',
+                color: '#f8fafc',
+                fontSize: 11
+            },
+            itemStyle: { opacity: 0.8, shadowBlur: 10, shadowColor: 'rgba(0,0,0,0.5)' },
+            markLine: {
+                lineStyle: { type: 'solid', color: 'rgba(255,255,255,0.2)' },
+                symbol: ['none', 'none'],
+                data: [
+                    { xAxis: 0 },
+                    { yAxis: 0 }
+                ]
+            }
         }]
     };
     

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-30T21:04:18.566960+00:00",
+  "updated_at": "2026-06-30T21:12:50.448351+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -264,31 +264,40 @@
   ],
   "discovery_radar": [
     {
-      "symbol": "ASTH",
+      "symbol": "CURB",
       "as_of": "2026-06-30",
-      "close": 46.40999984741211,
-      "ema20": 40.89762888558249,
-      "ema50": 37.51696390545322,
-      "avg20_volume": 705555.05,
-      "latest_volume": 1151201.0
+      "close": 30.399999618530273,
+      "ema20": 30.26461641950568,
+      "ema50": 29.133339974030275,
+      "avg20_volume": 1362035.8,
+      "latest_volume": 5448916.0
     },
     {
-      "symbol": "MKSI",
+      "symbol": "DGII",
       "as_of": "2026-06-30",
-      "close": 444.79998779296875,
-      "ema20": 375.43455895649663,
-      "ema50": 335.07617132447285,
-      "avg20_volume": 1405422.25,
-      "latest_volume": 2202245.0
+      "close": 74.94999694824219,
+      "ema20": 68.85357335236894,
+      "ema50": 64.53577188299276,
+      "avg20_volume": 403087.05,
+      "latest_volume": 714241.0
     },
     {
-      "symbol": "ENVA",
+      "symbol": "CGNX",
       "as_of": "2026-06-30",
-      "close": 240.72999572753906,
-      "ema20": 202.61022335047033,
-      "ema50": 181.7165672995314,
-      "avg20_volume": 442754.5,
-      "latest_volume": 670390.0
+      "close": 72.41999816894531,
+      "ema20": 65.60024752731374,
+      "ema50": 62.41212507081661,
+      "avg20_volume": 2381220.3,
+      "latest_volume": 4130106.0
+    },
+    {
+      "symbol": "PRGS",
+      "as_of": "2026-06-30",
+      "close": 33.58000183105469,
+      "ema20": 31.105130534784486,
+      "ema50": 29.98517888639909,
+      "avg20_volume": 835264.05,
+      "latest_volume": 1510381.0
     }
   ],
   "regime_metrics": {
@@ -381,5 +390,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

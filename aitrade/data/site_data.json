@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-30T09:13:24.140581+00:00",
+  "updated_at": "2026-06-30T10:16:16.466454+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -264,45 +264,36 @@
   ],
   "discovery_radar": [
     {
-      "symbol": "HOPE",
+      "symbol": "RGEN",
       "as_of": "2026-06-29",
-      "close": 13.569999694824219,
-      "ema20": 13.022774888711597,
-      "ema50": 12.593274223483435,
-      "avg20_volume": 1179910.0,
-      "latest_volume": 1930700.0
+      "close": 137.0,
+      "ema20": 131.37593696642134,
+      "ema50": 124.8609043141089,
+      "avg20_volume": 1107430.0,
+      "latest_volume": 1802300.0
     },
     {
-      "symbol": "REYN",
+      "symbol": "EFC",
       "as_of": "2026-06-29",
-      "close": 27.1200008392334,
-      "ema20": 24.156300260520936,
-      "ema50": 22.856645593410555,
-      "avg20_volume": 1206725.0,
-      "latest_volume": 1861000.0
-    },
-    {
-      "symbol": "EGBN",
-      "as_of": "2026-06-29",
-      "close": 28.540000915527344,
-      "ema20": 27.791485503582898,
-      "ema50": 26.976119440484727,
-      "avg20_volume": 330045.0,
-      "latest_volume": 510900.0
+      "close": 13.670000076293945,
+      "ema20": 13.535399813137227,
+      "ema50": 13.289468714798346,
+      "avg20_volume": 1387945.0,
+      "latest_volume": 2116600.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.28751687321424807,
     "risk_ratio": 2.0263263075747306,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.877297594817166
+    "vix_term_structure": 0.8743169952918902
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.05588235294117647,
+    "bullish_score": 0.026470588235294117,
     "events": {
       "war": false,
-      "policy_shock": false,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -327,9 +318,11 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Household energy prices set to remain high this winter as \u00a3221 rise takes effect"
+        ]
       },
       "XLF": {
         "symbol": "XLF",

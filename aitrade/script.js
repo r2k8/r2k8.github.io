@@ -64,10 +64,10 @@ async function fetchData() {
         let modeColor = "#f59e0b";
         let buyCount = 0, sellCount = 0, holdCount = 0;
         
-        if (l3Data && l3Data.decisions) {
-            l3Data.decisions.forEach(d => {
-                if (d.action === "BUY") buyCount++;
-                else if (d.action === "SELL") sellCount++;
+        if (l3Data && Array.isArray(l3Data)) {
+            l3Data.forEach(order => {
+                if (order.signal && order.signal.signal_type === "buy") buyCount++;
+                else if (order.signal && order.signal.signal_type === "sell") sellCount++;
                 else holdCount++;
             });
             if (sellCount > buyCount) { tradeMode = "CAUTION"; modeColor = "#ef4444"; }
@@ -84,35 +84,33 @@ async function fetchData() {
             }
         }
         
-        let primarySector = "Mixed";
-        if (sankeyData && sankeyData.discovery_radar) {
-            const sectorVolumes = {};
-            sankeyData.discovery_radar.forEach(r => {
-                sectorVolumes[r.sector] = (sectorVolumes[r.sector] || 0) + r.dollar_volume;
-            });
-            const sortedSectors = Object.keys(sectorVolumes).sort((a,b) => sectorVolumes[b] - sectorVolumes[a]);
-            if (sortedSectors.length > 0) primarySector = `Money flowing into ${sortedSectors[0]}`;
-        }
-
+        let primarySector = sankeyData && sankeyData.regime_summary ? sankeyData.regime_summary.inflow + " inflow" : "Mixed";
+        
         let confidence = 50;
-        if (tradeMode === "AGGRESSIVE" && primarySector !== "Mixed") confidence += 20;
+        if (tradeMode === "AGGRESSIVE") confidence += 30;
         if (dataHealth === "Degraded") confidence -= 15;
         if (sellCount > 0) confidence -= (sellCount * 5);
         confidence = Math.max(0, Math.min(100, Math.round(confidence)));
         
-        let etfBias = "SPY watch, QQQ mixed";
-        if (tradeMode === "AGGRESSIVE") etfBias = "SPY long, QQQ long";
-        else if (tradeMode === "CAUTION") etfBias = "SPY avoid chase, QQQ caution";
+        let spyAction = "mixed", qqqAction = "mixed", smhAction = "watch";
+        if (l3Data && Array.isArray(l3Data)) {
+            l3Data.forEach(order => {
+                if (order.signal && order.signal.symbol === "SPY") spyAction = order.signal.signal_type;
+                if (order.signal && order.signal.symbol === "QQQ") qqqAction = order.signal.signal_type;
+                if (order.signal && order.signal.symbol === "SMH") smhAction = order.signal.signal_type;
+            });
+        }
+        const mapAction = (a) => a === "sell" ? "avoid" : a;
+        let etfBias = `SMH ${mapAction(smhAction)}, QQQ ${mapAction(qqqAction)}, SPY ${mapAction(spyAction)}`;
         
-        let mainRisk = "Global breadth risk active";
-        if (sankeyData && sankeyData.regime_summary && sankeyData.regime_summary.title.includes("Bear")) {
-            mainRisk = "Elevated global fear regime";
-        } else if (sellCount > buyCount) {
-            mainRisk = "Heavy sell-side pressure";
-        } else if (dataHealth === "Degraded") {
-            mainRisk = "Data pipeline fragmentation";
-        } else {
-            mainRisk = "Standard market volatility";
+        let mainRisk = "Standard market volatility";
+        let riskFactors = [];
+        if (sellCount > buyCount) riskFactors.push("Layer 3 sell pressure");
+        if (sankeyData && sankeyData.regime_summary && sankeyData.regime_summary.title.includes("Bear")) riskFactors.push("elevated global fear");
+        if (dataHealth === "Degraded") riskFactors.push("degraded pipeline feeds");
+        
+        if (riskFactors.length > 0) {
+            mainRisk = riskFactors.join(" + ");
         }
 
         const modeEl = document.getElementById('ds-mode');

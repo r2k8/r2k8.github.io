@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-06-30T06:03:37.282347+00:00",
+  "updated_at": "2026-06-30T07:07:57.088122+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -264,15 +264,6 @@
   ],
   "discovery_radar": [
     {
-      "symbol": "CGNX",
-      "as_of": "2026-06-29",
-      "close": 68.36000061035156,
-      "ema20": 64.8754402008773,
-      "ema50": 61.71781158559713,
-      "avg20_volume": 2249015.0,
-      "latest_volume": 3629700.0
-    },
-    {
       "symbol": "EFC",
       "as_of": "2026-06-29",
       "close": 13.670000076293945,
@@ -289,11 +280,11 @@
     "vix_term_structure": 0.8768008124376949
   },
   "sentiment": {
-    "fear_score": 0.03970588235294118,
-    "bullish_score": 0.03970588235294118,
+    "fear_score": 0.035227272727272725,
+    "bullish_score": 0.0465909090909091,
     "events": {
       "war": true,
-      "policy_shock": false,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -318,19 +309,23 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Asian shares mostly higher tracking Wall Street gains and oil stabilizes"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.4463,
+        "articles": 19,
+        "top_headlines": [
+          "\u0412 \u041e\u0410\u041a \u0441\u0442\u0430\u0440\u0442\u043e\u0432\u0430\u043b\u0430 \u043c\u0435\u0436\u0440\u0435\u0433\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u0430\u044f \u043f\u0440\u0430\u043a\u0442\u0438\u043a\u0430",
+          "T\u1ec9 gi\u00e1 yen Nh\u1eadt r\u01a1i xu\u1ed1ng m\u1ee9c th\u1ea5p nh\u1ea5t k\u1ec3 t\u1eeb n\u0103m 1986",
+          "Supreme Court takes sledgehammer to much of federal government regulatory structure",
+          " \u00ab \u0411\u0430\u0448\u043a\u0438\u0440\u044d\u043d\u0435\u0440\u0433\u043e \u00bb \u0442\u0435\u0441\u0442\u0438\u0440\u0443\u0435\u0442 \u043d\u043e\u0432\u0443\u044e \u0441\u0438\u0441\u0442\u0435\u043c\u0443 \u043f\u043e\u0438\u0441\u043a\u0430 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0439",
+          "\u041c\u043e\u0449\u043d\u043e\u0441\u0442\u044c \u043a\u043b\u044e\u0447\u0435\u0432\u043e\u0439 \u043f\u043e\u0434\u0441\u0442\u0430\u043d\u0446\u0438\u0438 \u0432 \u041b\u044e\u0431\u0435\u0440\u0446\u0430\u0445 \u0432\u044b\u0440\u043e\u0441\u043b\u0430 \u043f\u043e\u0447\u0442\u0438 \u0432\u0442\u0440\u043e\u0435"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
@@ -352,9 +347,11 @@
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Shipping firms say US retailers are frontloading China orders for holiday season"
+        ]
       },
       "XLP": {
         "symbol": "XLP",

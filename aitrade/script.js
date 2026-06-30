@@ -92,16 +92,25 @@ async function fetchData() {
         if (sellCount > 0) confidence -= (sellCount * 5);
         confidence = Math.max(0, Math.min(100, Math.round(confidence)));
         
-        let spyAction = "mixed", qqqAction = "mixed", smhAction = "watch";
+        let spyAction = "mixed", qqqAction = "mixed", smhAction = "watch", tltAction = null, iwmAction = null;
         if (l3Data && Array.isArray(l3Data)) {
             l3Data.forEach(order => {
                 if (order.signal && order.signal.symbol === "SPY") spyAction = order.signal.signal_type;
                 if (order.signal && order.signal.symbol === "QQQ") qqqAction = order.signal.signal_type;
                 if (order.signal && order.signal.symbol === "SMH") smhAction = order.signal.signal_type;
+                if (order.signal && order.signal.symbol === "TLT") tltAction = order.signal.signal_type;
+                if (order.signal && order.signal.symbol === "IWM") iwmAction = order.signal.signal_type;
             });
         }
-        const mapAction = (a) => a === "sell" ? "avoid" : a;
+        const mapAction = (a) => a === "sell" ? "avoid" : (a === "buy" ? "buy" : "watch");
         let etfBias = `SMH ${mapAction(smhAction)}, QQQ ${mapAction(qqqAction)}, SPY ${mapAction(spyAction)}`;
+        
+        let extensions = [];
+        if (tltAction) extensions.push(`TLT ${mapAction(tltAction)}`);
+        if (iwmAction) extensions.push(`IWM ${mapAction(iwmAction)}`);
+        if (extensions.length > 0) {
+            etfBias += `; ${extensions.join(", ")}`;
+        }
         
         let mainRisk = "Standard market volatility";
         let riskFactors = [];

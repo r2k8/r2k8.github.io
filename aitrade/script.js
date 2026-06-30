@@ -22,61 +22,109 @@ async function fetchData() {
     try {
         const timestamp = new Date().getTime();
         
+        let sankeyData = null, siteData = null, l3Data = null, logText = null;
+
         // 1. Fetch our newly generated static pre-compute data.
         const sankeyRes = await fetch(`data/sankey_data_${currentTimeframe}.json?t=${timestamp}`);
         if (sankeyRes.ok) {
-            const sankeyData = await sankeyRes.json();
+            sankeyData = await sankeyRes.json();
             renderEChartsSankey(sankeyData);
-            if (sankeyData.last_updated) {
-                renderDataFreshness(sankeyData.last_updated);
-            }
-            
-            if (sankeyData.discovery_radar) {
-                renderDiscoveryQuadrant(sankeyData.discovery_radar);
-            }
-            
-            // Hydrate dynamic regime
-            if (sankeyData.regime_summary) {
-                const rs = sankeyData.regime_summary;
-                const titleEl = document.getElementById('regime-title');
-                titleEl.textContent = rs.title;
-                titleEl.className = `metric-large ${rs.title === 'Bull Market (Buying)' ? 'text-bull' : 'text-bear'}`;
-                titleEl.style.color = rs.title === 'Bull Market (Buying)' ? '#10b981' : '#ef4444';
-                
-                const liqEl = document.getElementById('gl-status');
-                liqEl.textContent = rs.liquidity;
-                liqEl.style.color = rs.liquidity.includes('Positive') ? '#10b981' : '#ef4444';
-                
-                document.getElementById('gl-inflow').textContent = rs.inflow;
-                document.getElementById('gl-outflow').textContent = rs.outflow;
-                document.getElementById('gl-health').textContent = `Data Health: ${rs.health}`;
-            }
+            if (sankeyData.last_updated) renderDataFreshness(sankeyData.last_updated);
+            if (sankeyData.discovery_radar) renderDiscoveryQuadrant(sankeyData.discovery_radar);
         } else {
             document.getElementById('capital-flow-container').innerHTML = '<div style="text-align:center; padding: 2rem; color: var(--text-muted);">Awaiting GitHub Actions Data Pipeline...</div>';
         }
 
-        // 2. Fetch legacy Site Data for Earnings Radar (until we move it to the python pipeline)
+        // 2. Fetch legacy Site Data for Earnings Radar
         const siteDataRes = await fetch(`data/site_data.json?t=${timestamp}`);
         if (siteDataRes.ok) {
-            const data = await siteDataRes.json();
-            updateLayer1(data);
+            siteData = await siteDataRes.json();
+            updateLayer1(siteData);
         }
 
-        // 3. Fetch Layer 3 Orders (which contain Layer 2 signals)
+        // 3. Fetch Layer 3 Orders
         const l3Res = await fetch(`data/layer3_orders.json?t=${timestamp}`);
         if (l3Res.ok) {
-            const data = await l3Res.json();
-            renderLayer2(data);
-            updateLayer3(data);
+            l3Data = await l3Res.json();
+            renderLayer2(l3Data);
+            updateLayer3(l3Data);
         }
 
         // 4. Fetch Cron Logs
         const logRes = await fetch(`data/cron_output.log?t=${timestamp}`);
         if (logRes.ok) {
-            const text = await logRes.text();
+            logText = await logRes.text();
             const logEl = document.getElementById('cron-logs');
-            logEl.textContent = text;
+            logEl.textContent = logText;
             logEl.scrollTop = logEl.scrollHeight;
+        }
+
+        // --- Build Decision Strip ---
+        let tradeMode = "NEUTRAL";
+        let modeColor = "#f59e0b";
+        let buyCount = 0, sellCount = 0, holdCount = 0;
+        
+        if (l3Data && l3Data.decisions) {
+            l3Data.decisions.forEach(d => {
+                if (d.action === "BUY") buyCount++;
+                else if (d.action === "SELL") sellCount++;
+                else holdCount++;
+            });
+            if (sellCount > buyCount) { tradeMode = "CAUTION"; modeColor = "#ef4444"; }
+            else if (buyCount > sellCount + holdCount) { tradeMode = "AGGRESSIVE"; modeColor = "#10b981"; }
+            else { tradeMode = "SELECTIVE"; modeColor = "#3b82f6"; }
+        }
+        
+        let dataHealth = "Optimal";
+        let healthColor = "#10b981";
+        if (logText) {
+            if (logText.includes("ERROR") || logText.includes("WARNING")) {
+                dataHealth = "Degraded";
+                healthColor = "#f59e0b";
+            }
+        }
+        
+        let primarySector = "Mixed";
+        if (sankeyData && sankeyData.discovery_radar) {
+            const sectorVolumes = {};
+            sankeyData.discovery_radar.forEach(r => {
+                sectorVolumes[r.sector] = (sectorVolumes[r.sector] || 0) + r.dollar_volume;
+            });
+            const sortedSectors = Object.keys(sectorVolumes).sort((a,b) => sectorVolumes[b] - sectorVolumes[a]);
+            if (sortedSectors.length > 0) primarySector = `Money flowing into ${sortedSectors[0]}`;
+        }
+
+        let confidence = 50;
+        if (tradeMode === "AGGRESSIVE" && primarySector !== "Mixed") confidence += 20;
+        if (dataHealth === "Degraded") confidence -= 15;
+        if (sellCount > 0) confidence -= (sellCount * 5);
+        confidence = Math.max(0, Math.min(100, Math.round(confidence)));
+        
+        let etfBias = "SPY watch, QQQ mixed";
+        if (tradeMode === "AGGRESSIVE") etfBias = "SPY long, QQQ long";
+        else if (tradeMode === "CAUTION") etfBias = "SPY avoid chase, QQQ caution";
+        
+        let mainRisk = "Global breadth risk active";
+        if (sankeyData && sankeyData.regime_summary && sankeyData.regime_summary.title.includes("Bear")) {
+            mainRisk = "Elevated global fear regime";
+        } else if (sellCount > buyCount) {
+            mainRisk = "Heavy sell-side pressure";
+        } else if (dataHealth === "Degraded") {
+            mainRisk = "Data pipeline fragmentation";
+        } else {
+            mainRisk = "Standard market volatility";
+        }
+
+        const modeEl = document.getElementById('ds-mode');
+        if (modeEl) {
+            modeEl.textContent = tradeMode;
+            modeEl.style.color = modeColor;
+            document.getElementById('ds-confidence').textContent = `${confidence}%`;
+            document.getElementById('ds-flow').textContent = primarySector;
+            document.getElementById('ds-risk').textContent = mainRisk;
+            document.getElementById('ds-etf').textContent = etfBias;
+            document.getElementById('ds-health').textContent = dataHealth;
+            document.getElementById('ds-health').style.color = healthColor;
         }
     } catch (e) {
         console.error("Dashboard Fetch Error:", e);

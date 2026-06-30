@@ -31,6 +31,10 @@ async function fetchData() {
                 renderDataFreshness(sankeyData.last_updated);
             }
             
+            if (sankeyData.discovery_radar) {
+                renderDiscoverySankey(sankeyData.discovery_radar);
+            }
+            
             // Hydrate dynamic regime
             if (sankeyData.regime_summary) {
                 const rs = sankeyData.regime_summary;
@@ -179,9 +183,6 @@ function updateLayer1(data) {
         `;
     }
 
-    if (data.discovery_radar) {
-        renderDiscoverySankey(data.discovery_radar);
-    }
 }
 
 function renderDiscoverySankey(radarData) {
@@ -197,24 +198,43 @@ function renderDiscoverySankey(radarData) {
         });
     }
 
-    const nodes = [{ name: "S&P 500 Screen", itemStyle: { color: "#f8fafc" } }];
+    const nodes = [{ name: "S&P Screen", itemStyle: { color: "#f8fafc" } }];
     const links = [];
     
     radarData.forEach(bar => {
         const symbol = bar.symbol;
-        const color = "#10b981"; // Breakouts are positive momentum
-        const dollarVolume = bar.latest_volume * bar.close;
+        const sector = bar.sector || "Unknown";
+        const color = bar.price_change >= 0 ? "#10b981" : "#ef4444";
+        const dollarVolume = bar.dollar_volume || 0;
         const weight = dollarVolume / 1e7 > 1 ? dollarVolume / 1e7 : 1;
+        
+        // Add sector node if not exists
+        if (!nodes.find(n => n.name === sector)) {
+            nodes.push({ name: sector, itemStyle: { color: "#e2e8f0" } });
+            links.push({
+                source: "S&P Screen",
+                target: sector,
+                value: 0
+            });
+        }
         
         nodes.push({ name: symbol, itemStyle: { color: color } });
         links.push({
-            source: "S&P 500 Screen",
+            source: sector,
             target: symbol,
             value: weight,
             raw_volume: dollarVolume,
-            price: bar.close,
+            price_change: bar.price_change,
             lineStyle: { color: color, opacity: 0.4 }
         });
+        
+        // Accumulate sector link value
+        const sectorLink = links.find(l => l.source === "S&P Screen" && l.target === sector);
+        if (sectorLink) {
+            sectorLink.value += weight;
+            // Also style the sector link
+            sectorLink.lineStyle = { color: "#94a3b8", opacity: 0.2 };
+        }
     });
     
     const option = {
@@ -227,11 +247,14 @@ function renderDiscoverySankey(radarData) {
             formatter: function (params) {
                 if (params.dataType === 'node') {
                     return `<div style="font-weight:600;">${params.data.name}</div>`;
+                } else if (params.data.source === "S&P Screen") {
+                     return `<div style="font-weight:600;">Sector Flow: ${params.data.target}</div>`;
                 } else {
                     const formatUSD = (v) => v ? new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' }).format(v) : 'N/A';
+                    const sign = params.data.price_change >= 0 ? '+' : '';
                     return `<div style="font-size:12px;color:#94a3b8;margin-bottom:4px;">Breakout Flow</div>
                             <div style="font-weight:600;margin-bottom:4px;">${params.data.target}</div>
-                            <span style="color:#10b981;font-size:14px;font-weight:700">$${params.data.price.toFixed(2)}</span>
+                            <span style="color:${params.data.price_change >= 0 ? '#10b981' : '#ef4444'};font-size:14px;font-weight:700">${sign}${(params.data.price_change * 100).toFixed(1)}%</span>
                             <div style="margin-top:8px; border-top:1px solid rgba(255,255,255,0.1); padding-top:4px;">
                                 <div style="font-size:12px;color:#94a3b8;">Dollar Volume</div>
                                 <span style="color:#f8fafc;font-size:13px;font-weight:600">${formatUSD(params.data.raw_volume)}</span>

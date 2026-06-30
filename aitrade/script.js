@@ -535,7 +535,34 @@ function renderEarningsRadar(earningsData) {
 
 function updateLayer3(data) {
     const container = document.getElementById('target-body');
+    if (!container) return;
+
+    if (!Array.isArray(data) || data.length === 0) {
+        container.innerHTML = `
+            <div class="target-symbol" style="color: var(--text-muted); font-size: 2rem;">NO SIGNALS</div>
+            <div class="target-row">
+                <span class="tag" style="background: rgba(255,255,255,0.1);">Layer 3 has not produced risk evaluations.</span>
+            </div>
+        `;
+        return;
+    }
+
     const target = data.find(order => order.approved && order.target_position_size_usd > 0);
+    const riskActions = data.filter(order => {
+        const signalType = order.signal && order.signal.signal_type;
+        return order.approved && ["sell", "liquidate", "trim", "avoid"].includes(signalType);
+    });
+
+    const riskHtml = riskActions.length
+        ? `<div style="margin-top: 1rem; display:flex; flex-wrap:wrap; gap:0.5rem;">
+            ${riskActions.slice(0, 6).map(order => {
+                const signalType = order.signal.signal_type;
+                const label = signalType === "liquidate" ? "LIQUIDATE" : signalType.toUpperCase();
+                const badgeClass = signalType === "trim" ? "tag-trim" : signalType === "liquidate" ? "tag-liquidate" : "tag-stop";
+                return `<span class="tag ${badgeClass}">${label} ${order.symbol}</span>`;
+            }).join('')}
+        </div>`
+        : `<div style="margin-top: 1rem;"><span class="tag" style="background: rgba(255,255,255,0.1);">No active sell/trim/avoid actions.</span></div>`;
     
     if (target) {
         container.innerHTML = `
@@ -544,6 +571,7 @@ function updateLayer3(data) {
                 <span class="tag tag-buy">Buy $${target.target_position_size_usd.toFixed(2)}</span>
                 ${target.stop_loss_price ? `<span class="tag tag-stop">Stop-Loss $${target.stop_loss_price.toFixed(2)}</span>` : ''}
             </div>
+            ${riskHtml}
         `;
     } else {
         container.innerHTML = `
@@ -551,12 +579,14 @@ function updateLayer3(data) {
             <div class="target-row">
                 <span class="tag" style="background: rgba(255,255,255,0.1);">No actionable buys today.</span>
             </div>
+            ${riskHtml}
         `;
     }
 }
 
 function renderLayer2(data) {
     const container = document.getElementById('layer2-body');
+    if (!container) return;
     if (!data || data.length === 0) {
         container.innerHTML = `<div style="color:var(--text-muted);">No signals generated.</div>`;
         return;
@@ -566,10 +596,11 @@ function renderLayer2(data) {
     let html = '<div style="display:flex; flex-direction:column; gap:1rem;">';
     
     // Sort by confidence
-    const sorted = data.sort((a, b) => (b.signal.confidence || 0) - (a.signal.confidence || 0)).slice(0, 5);
+    const sorted = [...data].sort((a, b) => ((b.signal && b.signal.confidence) || 0) - ((a.signal && a.signal.confidence) || 0)).slice(0, 5);
     
     sorted.forEach(item => {
         const sig = item.signal;
+        if (!sig) return;
         let badgeClass = 'tag-stop';
         if (sig.signal_type === 'buy') badgeClass = 'tag-buy';
         else if (sig.signal_type === 'hold') badgeClass = '';

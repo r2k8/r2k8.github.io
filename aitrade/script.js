@@ -217,6 +217,7 @@ function renderDiscoveryQuadrant(radarData) {
         
         return {
             name: item.symbol,
+            companyName: item.name || item.symbol,
             value: [fundamentalGrowth, momentum, item.dollar_volume, item.sector],
             itemStyle: {
                 color: sectorColors[item.sector] || sectorColors["Unknown"]
@@ -240,7 +241,7 @@ function renderDiscoveryQuadrant(radarData) {
             formatter: function (params) {
                 const data = params.data;
                 const formatUSD = (v) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' }).format(v);
-                return `<div style="font-weight:600; font-size:14px; margin-bottom:4px; color:${data.itemStyle.color}">${data.name} <span style="font-size:11px; color:#94a3b8;">(${data.value[3]})</span></div>
+                return `<div style="font-weight:600; font-size:14px; margin-bottom:4px; color:${data.itemStyle.color}">${data.name} - ${data.companyName} <span style="font-size:11px; color:#94a3b8;">(${data.value[3]})</span></div>
                         <div style="font-size:12px; color:#94a3b8;">Fundamental Growth (Rev+EPS): <span style="color:#f8fafc; font-weight:600;">${data.value[0].toFixed(1)}%</span></div>
                         <div style="font-size:12px; color:#94a3b8;">Price Momentum: <span style="color:#f8fafc; font-weight:600;">${data.value[1].toFixed(1)}%</span></div>
                         <div style="font-size:12px; color:#94a3b8;">Dollar Volume: <span style="color:#f8fafc; font-weight:600;">${formatUSD(data.value[2])}</span></div>`;

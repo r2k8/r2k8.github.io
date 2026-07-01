@@ -1,39 +1,43 @@
 [SYSTEM INIT] Layer 1 pipeline started.
-[INFO] Started at 2026-07-01 02:00:49 UTC
+[INFO] Started at 2026-07-01 03:03:56 UTC
 [INFO] Project root: /Users/r2k8/CODE/trading-system
 WARNING:root:GDELT rate limit reached after retries. Returning partial results.
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SPY"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SLV"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: USO"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLK"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IBIT"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IGV"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: GLD"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CWEN.A"}}}
+ERROR:yfinance:$CWEN.A: possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")
+ERROR:yfinance:
+1 Failed download:
+ERROR:yfinance:['CWEN.A']: possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VGK"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VPL"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: DBC"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VWO"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLF"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: CPER"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TLT"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VNQ"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ETHA"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLI"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLK"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VNQ"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLF"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SPY"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLV"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLY"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VGK"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VWO"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SLV"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IGV"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: GLD"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: USO"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TLT"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLI"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: CPER"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: DBC"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IBIT"}}}
 Fetching News...
 Running VCP & Momentum Screener on 250 Small/Mid-Cap candidates...
-Validating Earnings/Revenue Acceleration for top 5 technical breakouts...
-  [+] ASTH passed! RevGrowth: 55.6%, EarnGrowth: 110.1%, Sector: Healthcare
+Validating Earnings/Revenue Acceleration for top 4 technical breakouts...
+  [+] CURB passed! RevGrowth: 49.9%, EarnGrowth: -69.8%, Sector: Real Estate
+  [-] CPRX failed fundamentals. Rev: 0.056, Earn: 0.111
   [+] MKSI passed! RevGrowth: 15.2%, EarnGrowth: 53.2%, Sector: Technology
-  [-] KRG failed fundamentals. Rev: -0.092, Earn: -0.487
-  [-] RRX failed fundamentals. Rev: 0.043, Earn: 0.116
-  [-] XNCR failed fundamentals. Rev: -0.862, Earn: 0
-Discovery Screener completed. Yielded 2 high-conviction candidates.
+  [+] ENVA passed! RevGrowth: 25.8%, EarnGrowth: 28.6%, Sector: Financial Services
+Discovery Screener completed. Yielded 3 high-conviction candidates.
 Fetching Original Capital Flows...
 Fetching upcoming earnings...
 Generated earnings radar at /Users/r2k8/CODE/trading-system/data/processed/earnings_radar.csv with 1 upcoming earnings.
-Layer 1 complete: regime=risk_on, news=20, sectors=9, capital_flows=21
+Layer 1 complete: regime=risk_on, news=0, sectors=9, capital_flows=21
 Wrote /Users/r2k8/CODE/trading-system/data/processed/layer1_snapshot.json
 Wrote /Users/r2k8/CODE/trading-system/data/processed/sector_sentiment.csv
 Wrote /Users/r2k8/CODE/trading-system/data/processed/capital_flows.csv
@@ -44,7 +48,7 @@ Running Layer 3: Risk (evaluate_risk)...
 [Notice]: Layer 4 Python execution stripped due to robin_stocks API breakage. Execution is delegated to Codex via Robinhood Native MCP.
 Running Layer 1.5: Global Liquidity Funnel (Sankey)...
 Extracting tickers...
-Fetching data for 84 tickers...
+Fetching data for 85 tickers...
 Fetching shares outstanding...
 --- Processing Timeframe: 1d ---
 ✅ Generated 1d timeframe at /Users/r2k8/CODE/trading-system/data/sankey_data_1d.json

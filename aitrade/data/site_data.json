@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-01T09:17:23.309575+00:00",
+  "updated_at": "2026-07-01T10:19:18.590492+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -251,17 +251,6 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-06-30",
-      "Symbol": "NKE",
-      "Company": "Nike, Inc.",
-      "Domain": "nike.com",
-      "Timing": "After Close",
-      "Price": "41.05",
-      "RevGrowth": "0.001",
-      "EarnGrowth": "-0.348",
-      "Signal": "Neutral"
-    },
-    {
       "Date": "2026-07-01",
       "Symbol": "GIS",
       "Company": "General Mills, Inc.",
@@ -423,13 +412,22 @@
       "ema50": 29.133339974030275,
       "avg20_volume": 1420425.0,
       "latest_volume": 6616700.0
+    },
+    {
+      "symbol": "CNO",
+      "as_of": "2026-06-30",
+      "close": 50.97999954223633,
+      "ema20": 50.33504511534061,
+      "ema50": 47.884284738565135,
+      "avg20_volume": 928495.0,
+      "latest_volume": 1870800.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.2849203887510339,
     "risk_ratio": 2.0773029795484357,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8405365515002629
+    "vix_term_structure": 0.8375559519749871
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -515,7 +513,5 @@
       }
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

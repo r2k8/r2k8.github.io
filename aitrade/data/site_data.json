@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-02T21:28:12.780717+00:00",
+  "updated_at": "2026-07-02T22:30:13.862164+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -280,6 +280,15 @@
       "ema50": 80.99853541648496,
       "avg20_volume": 342182.1,
       "latest_volume": 566642.0
+    },
+    {
+      "symbol": "HAYW",
+      "as_of": "2026-07-02",
+      "close": 16.969999313354492,
+      "ema20": 15.622336450085939,
+      "ema50": 14.905620628325103,
+      "avg20_volume": 2728227.0,
+      "latest_volume": 4238240.0
     },
     {
       "symbol": "MSM",
@@ -624,7 +633,5 @@
       }
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260701212711 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
-  ]
+  "warnings": []
 }

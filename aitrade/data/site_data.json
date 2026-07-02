@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-01T23:45:04.508140+00:00",
+  "updated_at": "2026-07-02T00:46:17.241567+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -251,48 +251,15 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-07-01",
-      "Symbol": "GIS",
-      "Company": "General Mills, Inc.",
-      "Domain": "generalmills.com",
-      "Timing": "Before Open",
-      "Price": "37.77",
-      "RevGrowth": "0.022",
-      "EarnGrowth": "-0.145",
-      "Signal": "Neutral"
-    },
-    {
-      "Date": "2026-07-01",
-      "Symbol": "FDS",
-      "Company": "FactSet Research Systems Inc.",
-      "Domain": "factset.com",
-      "Timing": "Before Open",
-      "Price": "245.55",
-      "RevGrowth": "0.071",
-      "EarnGrowth": "-0.045",
+      "Date": "2026-07-02",
+      "Symbol": "BMNR",
+      "Company": "BitMine Immersion Technologies,",
+      "Domain": "bitminetech.io",
+      "Timing": "After Close",
+      "Price": "14.15",
+      "RevGrowth": "6.278",
+      "EarnGrowth": "0.0",
       "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-01",
-      "Symbol": "MSM",
-      "Company": "MSC Industrial Direct Company, ",
-      "Domain": "mscdirect.com",
-      "Timing": "Before Open",
-      "Price": "123.34",
-      "RevGrowth": "0.029",
-      "EarnGrowth": "0.086",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-01",
-      "Symbol": "UNF",
-      "Company": "Unifirst Corporation",
-      "Domain": "unifirst.com",
-      "Timing": "Before Open",
-      "Price": "266.54",
-      "RevGrowth": "0.034",
-      "EarnGrowth": "-0.137",
-      "Signal": "Neutral"
     }
   ],
   "discovery_radar": [
@@ -340,6 +307,15 @@
       "ema50": 11.282801592326933,
       "avg20_volume": 2353401.6,
       "latest_volume": 3624232.0
+    },
+    {
+      "symbol": "CON",
+      "as_of": "2026-07-01",
+      "close": 30.770000457763672,
+      "ema20": 28.291659710727583,
+      "ema50": 26.219956899838934,
+      "avg20_volume": 1070498.05,
+      "latest_volume": 1926361.0
     },
     {
       "symbol": "ENVA",
@@ -567,5 +543,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

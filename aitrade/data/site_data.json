@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-02T05:55:16.688407+00:00",
+  "updated_at": "2026-07-02T06:56:26.993126+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -266,11 +266,11 @@
     {
       "symbol": "MSM",
       "as_of": "2026-07-01",
-      "close": 123.9000015258789,
-      "ema20": 116.40658709931284,
-      "ema50": 110.48672776483004,
-      "avg20_volume": 812790.25,
-      "latest_volume": 1773005.0
+      "close": 123.33999633789062,
+      "ema20": 116.35076994847714,
+      "ema50": 110.36179639114803,
+      "avg20_volume": 842960.0,
+      "latest_volume": 2376400.0
     },
     {
       "symbol": "EGBN",
@@ -354,6 +354,42 @@
       "latest_volume": 533100.0
     },
     {
+      "symbol": "VSAT",
+      "as_of": "2026-07-01",
+      "close": 83.0199966430664,
+      "ema20": 70.48785972602144,
+      "ema50": 67.88468215889128,
+      "avg20_volume": 3521100.0,
+      "latest_volume": 7081600.0
+    },
+    {
+      "symbol": "ICHR",
+      "as_of": "2026-07-01",
+      "close": 111.7699966430664,
+      "ema20": 91.29026120073117,
+      "ema50": 78.94164732544102,
+      "avg20_volume": 1287570.0,
+      "latest_volume": 2507400.0
+    },
+    {
+      "symbol": "FBIN",
+      "as_of": "2026-07-01",
+      "close": 54.11000061035156,
+      "ema20": 44.86242158444005,
+      "ema50": 41.635442846634575,
+      "avg20_volume": 3018405.0,
+      "latest_volume": 4764900.0
+    },
+    {
+      "symbol": "CWK",
+      "as_of": "2026-07-01",
+      "close": 13.84000015258789,
+      "ema20": 13.276067526089438,
+      "ema50": 13.232651636363109,
+      "avg20_volume": 2404630.0,
+      "latest_volume": 3752500.0
+    },
+    {
       "symbol": "ENVA",
       "as_of": "2026-06-30",
       "close": 240.72999572753906,
@@ -388,15 +424,6 @@
       "ema50": 55.919681691136724,
       "avg20_volume": 2768285.0,
       "latest_volume": 4292000.0
-    },
-    {
-      "symbol": "VSAT",
-      "as_of": "2026-06-30",
-      "close": 89.80999755859375,
-      "ema20": 69.1498091140913,
-      "ema50": 66.52977341027398,
-      "avg20_volume": 3287083.7,
-      "latest_volume": 6065774.0
     },
     {
       "symbol": "QLYS",
@@ -570,5 +597,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

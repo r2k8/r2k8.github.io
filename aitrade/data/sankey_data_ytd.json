@@ -155,6 +155,13 @@
       "depth": 4
     },
     {
+      "name": "CRWD",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "ARM",
       "itemStyle": {
         "color": "#10b981"
@@ -184,13 +191,6 @@
     },
     {
       "name": "PANW",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "CRWD",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -760,6 +760,17 @@
     },
     {
       "source": "AI & Cloud Growth",
+      "target": "CRWD",
+      "value": 97020.29,
+      "net_flow_dollars": 970202862112.1776,
+      "market_cap_delta": 166879965265.0154,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
       "target": "ARM",
       "value": 37857.31,
       "net_flow_dollars": 378573071144.6852,
@@ -808,17 +819,6 @@
       "value": 14602.08,
       "net_flow_dollars": 146020806897.67044,
       "market_cap_delta": 136789606964.11136,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "CRWD",
-      "value": 11247.13,
-      "net_flow_dollars": 112471306896.35913,
-      "market_cap_delta": 77382611497.61543,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1212,8 +1212,8 @@
     {
       "source": "Global Liquidity",
       "target": "Crypto",
-      "value": 7137.09,
-      "net_flow_dollars": -71370891997.93445,
+      "value": 7137.03,
+      "net_flow_dollars": -71370288242.03725,
       "market_cap_delta": -15649999999.999998,
       "lineStyle": {
         "color": "#ef4444",
@@ -1234,8 +1234,8 @@
     {
       "source": "Crypto",
       "target": "Bitcoin",
-      "value": 7137.09,
-      "net_flow_dollars": -71370891997.93445,
+      "value": 7137.03,
+      "net_flow_dollars": -71370288242.03725,
       "market_cap_delta": -15649999999.999998,
       "lineStyle": {
         "color": "#ef4444",
@@ -1345,7 +1345,7 @@
   "regime_summary": {
     "title": "Bull Market (Buying)",
     "liquidity": "Flowing IN (Positive)",
-    "inflow": "MU / INTC / AMD / SPY / ARM",
+    "inflow": "MU / INTC / AMD / CRWD / SPY",
     "outflow": "MSFT / PLTR / TSLA / MSTR / CRM",
     "health": "Optimal"
   },
@@ -1365,7 +1365,7 @@
       "sector": "Financial Services",
       "rev_growth": 0.353,
       "earn_growth": 7.676,
-      "dollar_volume": 710919462.0900671,
+      "dollar_volume": 710986359.4939455,
       "price_change": 0.33380017249412774
     },
     {
@@ -1446,7 +1446,7 @@
       "sector": "Technology",
       "rev_growth": 0.415,
       "earn_growth": 0,
-      "dollar_volume": 16858435130.358124,
+      "dollar_volume": 16856453327.40944,
       "price_change": 0.9410745233968804
     },
     {
@@ -1540,5 +1540,5 @@
       "price_change": 0.035639137296159834
     }
   ],
-  "last_updated": "2026-07-02 00:46:31 UTC"
+  "last_updated": "2026-07-02 01:47:43 UTC"
 }

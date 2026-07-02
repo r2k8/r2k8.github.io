@@ -29,6 +29,13 @@
       "depth": 3
     },
     {
+      "name": "CRWD",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "MU",
       "itemStyle": {
         "color": "#ef4444"
@@ -53,13 +60,6 @@
       "name": "INTC",
       "itemStyle": {
         "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "CRWD",
-      "itemStyle": {
-        "color": "#10b981"
       },
       "depth": 4
     },
@@ -562,6 +562,17 @@
     },
     {
       "source": "AI & Cloud Growth",
+      "target": "CRWD",
+      "value": 3235.05,
+      "net_flow_dollars": 32350493960.9299,
+      "market_cap_delta": 153880612731.71542,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
       "target": "MU",
       "value": 462.51,
       "net_flow_dollars": -4625128471.325306,
@@ -601,17 +612,6 @@
       "market_cap_delta": -23270396871.948273,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "CRWD",
-      "value": 133.42,
-      "net_flow_dollars": 1334189845.065605,
-      "market_cap_delta": 25385201364.415436,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1224,7 +1224,7 @@
       "source": "Global Liquidity",
       "target": "Crypto",
       "value": 3.57,
-      "net_flow_dollars": 35709322.412704274,
+      "net_flow_dollars": 35703403.943608955,
       "market_cap_delta": 130000000.00000255,
       "lineStyle": {
         "color": "#10b981",
@@ -1268,7 +1268,7 @@
       "source": "Crypto",
       "target": "Bitcoin",
       "value": 3.57,
-      "net_flow_dollars": 35709322.412704274,
+      "net_flow_dollars": 35703403.943608955,
       "market_cap_delta": 130000000.00000255,
       "lineStyle": {
         "color": "#10b981",
@@ -1345,7 +1345,7 @@
   "regime_summary": {
     "title": "Bull Market (Buying)",
     "liquidity": "Flowing IN (Positive)",
-    "inflow": "TSLA / META / MSFT / PLTR / SPY",
+    "inflow": "CRWD / TSLA / META / MSFT / PLTR",
     "outflow": "MU / INTC / QCOM / AVGO / SMCI",
     "health": "Optimal"
   },
@@ -1365,7 +1365,7 @@
       "sector": "Financial Services",
       "rev_growth": 0.353,
       "earn_growth": 7.676,
-      "dollar_volume": 51829754.161068596,
+      "dollar_volume": 51903464.01263062,
       "price_change": 0.010969557495549086
     },
     {
@@ -1446,7 +1446,7 @@
       "sector": "Technology",
       "rev_growth": 0.415,
       "earn_growth": 0,
-      "dollar_volume": 627589356.8031808,
+      "dollar_volume": 625187247.8956095,
       "price_change": 0.12585444310414148
     },
     {
@@ -1540,5 +1540,5 @@
       "price_change": 0.22017353579175694
     }
   ],
-  "last_updated": "2026-07-02 00:46:28 UTC"
+  "last_updated": "2026-07-02 01:47:39 UTC"
 }

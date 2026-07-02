@@ -29,6 +29,13 @@
       "depth": 3
     },
     {
+      "name": "CRWD",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "INTC",
       "itemStyle": {
         "color": "#10b981"
@@ -114,13 +121,6 @@
     },
     {
       "name": "ZS",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "CRWD",
       "itemStyle": {
         "color": "#ef4444"
       },
@@ -562,6 +562,17 @@
     },
     {
       "source": "AI & Cloud Growth",
+      "target": "CRWD",
+      "value": 12001.61,
+      "net_flow_dollars": 120016055084.2295,
+      "market_cap_delta": 146934302488.37543,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
       "target": "INTC",
       "value": 4642.8,
       "net_flow_dollars": 46428000213.75039,
@@ -698,17 +709,6 @@
       "value": 56.82,
       "net_flow_dollars": -568161127.1913849,
       "market_cap_delta": -1497430694.9983075,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "CRWD",
-      "value": 49.02,
-      "net_flow_dollars": -490191276.10690475,
-      "market_cap_delta": -2400548738.58456,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -1212,8 +1212,8 @@
     {
       "source": "Global Liquidity",
       "target": "Crypto",
-      "value": 612.65,
-      "net_flow_dollars": -6126480458.803655,
+      "value": 612.62,
+      "net_flow_dollars": -6126220271.23943,
       "market_cap_delta": -6490000000.000002,
       "lineStyle": {
         "color": "#ef4444",
@@ -1234,8 +1234,8 @@
     {
       "source": "Crypto",
       "target": "Bitcoin",
-      "value": 612.65,
-      "net_flow_dollars": -6126480458.803655,
+      "value": 612.62,
+      "net_flow_dollars": -6126220271.23943,
       "market_cap_delta": -6490000000.000002,
       "lineStyle": {
         "color": "#ef4444",
@@ -1345,7 +1345,7 @@
   "regime_summary": {
     "title": "Bear Market (Selling)",
     "liquidity": "Flowing OUT (Negative)",
-    "inflow": "INTC / AMD / ASML / TSLA / CAT",
+    "inflow": "CRWD / INTC / AMD / ASML / TSLA",
     "outflow": "NVDA / MSFT / AVGO / MSTR / PLTR",
     "health": "Optimal"
   },
@@ -1365,7 +1365,7 @@
       "sector": "Financial Services",
       "rev_growth": 0.353,
       "earn_growth": 7.676,
-      "dollar_volume": 135764318.3683196,
+      "dollar_volume": 135836290.5567886,
       "price_change": 0.07164289928072838
     },
     {
@@ -1446,7 +1446,7 @@
       "sector": "Technology",
       "rev_growth": 0.415,
       "earn_growth": 0,
-      "dollar_volume": 3058263150.72404,
+      "dollar_volume": 3055644165.9870872,
       "price_change": -0.26121372031662266
     },
     {
@@ -1540,5 +1540,5 @@
       "price_change": 0.4722378014582164
     }
   ],
-  "last_updated": "2026-07-02 00:46:29 UTC"
+  "last_updated": "2026-07-02 01:47:40 UTC"
 }

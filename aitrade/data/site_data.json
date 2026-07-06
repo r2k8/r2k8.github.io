@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-06T08:35:15.207760+00:00",
+  "updated_at": "2026-07-06T09:39:04.269222+00:00",
   "top_inflows": [
     {
       "symbol": "IWM",
@@ -583,7 +583,7 @@
     "breadth_ratio": 0.288555003099371,
     "risk_ratio": 1.9268864803217212,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8592436882190373
+    "vix_term_structure": 0.8587184661391539
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -669,5 +669,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

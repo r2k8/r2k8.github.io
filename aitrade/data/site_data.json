@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-06T23:38:03.037771+00:00",
+  "updated_at": "2026-07-07T00:43:59.019436+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -251,14 +251,14 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-07-06",
-      "Symbol": "BMNR",
-      "Company": "BitMine Immersion Technologies,",
-      "Domain": "bitminetech.io",
+      "Date": "2026-07-07",
+      "Symbol": "PENG",
+      "Company": "Penguin Solutions, Inc.",
+      "Domain": "penguinsolutions.com",
       "Timing": "After Close",
-      "Price": "15.55",
-      "RevGrowth": "6.278",
-      "EarnGrowth": "0.0",
+      "Price": "67.71",
+      "RevGrowth": "-0.062",
+      "EarnGrowth": "5.444",
       "Signal": "Buy"
     }
   ],
@@ -271,6 +271,15 @@
       "ema50": 25.243545149521704,
       "avg20_volume": 1600389.95,
       "latest_volume": 2426399.0
+    },
+    {
+      "symbol": "ECPG",
+      "as_of": "2026-07-06",
+      "close": 89.51000213623047,
+      "ema20": 86.89864826375363,
+      "ema50": 83.4215559793578,
+      "avg20_volume": 374835.05,
+      "latest_volume": 665501.0
     },
     {
       "symbol": "RDNT",
@@ -595,10 +604,10 @@
     "vix_term_structure": 0.8290734358649983
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.0475,
+    "bullish_score": 0.0475,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -678,7 +687,5 @@
       }
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

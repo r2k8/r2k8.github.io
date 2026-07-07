@@ -1,34 +1,34 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-07T13:36:59.347397+00:00",
+  "updated_at": "2026-07-07T14:43:07.723127+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
       "name": "U.S. Large Cap",
       "as_of": "2026-07-07",
-      "price_change_pct": 0.014001294650155474,
-      "dollar_volume": 44506369044.271805,
-      "relative_flow_score": 623146786.797408,
+      "price_change_pct": 0.008874298387136726,
+      "dollar_volume": 44823497643.433716,
+      "relative_flow_score": 397777092.8429507,
       "direction": "inflow",
-      "rank": 1
+      "rank": 2
     },
     {
       "symbol": "IWM",
       "name": "U.S. Small Cap",
       "as_of": "2026-07-07",
-      "price_change_pct": 0.05202220991488892,
-      "dollar_volume": 8207668262.613904,
-      "relative_flow_score": 426981041.2694722,
+      "price_change_pct": 0.04054774603220979,
+      "dollar_volume": 8275501642.747559,
+      "relative_flow_score": 335552938.89926296,
       "direction": "inflow",
-      "rank": 2
+      "rank": 4
     },
     {
       "symbol": "LQD",
       "name": "Investment Grade Corporate",
       "as_of": "2026-07-07",
-      "price_change_pct": 0.0016194989423622742,
-      "dollar_volume": 2964455921.687042,
-      "relative_flow_score": 4800933.229851746,
+      "price_change_pct": 0.0004164889816459611,
+      "dollar_volume": 3005255754.8474693,
+      "relative_flow_score": 1251655.9089220867,
       "direction": "inflow",
       "rank": 19
     },
@@ -36,21 +36,21 @@
       "symbol": "HYG",
       "name": "High Yield Bonds",
       "as_of": "2026-07-07",
-      "price_change_pct": 0.0038345524473867693,
-      "dollar_volume": 2544124850.482768,
-      "relative_flow_score": 9755580.171876198,
+      "price_change_pct": 0.0027029964221267017,
+      "dollar_volume": 2571786992.727485,
+      "relative_flow_score": 6951531.039814382,
       "direction": "inflow",
-      "rank": 16
+      "rank": 17
     },
     {
       "symbol": "TLT",
       "name": "Long Treasury Bonds",
       "as_of": "2026-07-07",
-      "price_change_pct": 0.006329458018180535,
-      "dollar_volume": 2128195045.6854267,
-      "relative_flow_score": 13470321.196165714,
+      "price_change_pct": 0.0035452069561106065,
+      "dollar_volume": 2147135847.5340629,
+      "relative_flow_score": 7612040.942392202,
       "direction": "inflow",
-      "rank": 14
+      "rank": 15
     }
   ],
   "top_outflows": [
@@ -58,19 +58,19 @@
       "symbol": "QQQ",
       "name": "Nasdaq Growth",
       "as_of": "2026-07-07",
-      "price_change_pct": -0.004566619880462912,
-      "dollar_volume": 35268275858.15042,
-      "relative_flow_score": -161056809.68347988,
+      "price_change_pct": -0.014467838682805989,
+      "dollar_volume": 35632274860.943825,
+      "relative_flow_score": -515522004.58953846,
       "direction": "outflow",
-      "rank": 5
+      "rank": 1
     },
     {
       "symbol": "SMH",
       "name": "Semiconductors",
       "as_of": "2026-07-07",
-      "price_change_pct": -0.030635535633620887,
-      "dollar_volume": 7481236045.897089,
-      "relative_flow_score": -229191673.4676093,
+      "price_change_pct": -0.050939501255732884,
+      "dollar_volume": 7584703724.5300045,
+      "relative_flow_score": -386361024.90005803,
       "direction": "outflow",
       "rank": 3
     },
@@ -78,19 +78,19 @@
       "symbol": "EWY",
       "name": "South Korea",
       "as_of": "2026-07-07",
-      "price_change_pct": -0.02294761107973523,
-      "dollar_volume": 4152437853.482666,
-      "relative_flow_score": -95288528.8944908,
+      "price_change_pct": -0.04174746835531476,
+      "dollar_volume": 4188047861.030379,
+      "relative_flow_score": -174840395.5489094,
       "direction": "outflow",
-      "rank": 9
+      "rank": 5
     },
     {
       "symbol": "GLD",
       "name": "Gold",
       "as_of": "2026-07-07",
-      "price_change_pct": -0.03519012473974943,
-      "dollar_volume": 3115183911.189209,
-      "relative_flow_score": -109623710.42200878,
+      "price_change_pct": -0.0417851235809464,
+      "dollar_volume": 3129883361.1067047,
+      "relative_flow_score": -130782563.03779155,
       "direction": "outflow",
       "rank": 8
     },
@@ -98,11 +98,11 @@
       "symbol": "XLK",
       "name": "Technology",
       "as_of": "2026-07-07",
-      "price_change_pct": -0.026305712642973485,
-      "dollar_volume": 2476031736.16331,
-      "relative_flow_score": -65133779.34639478,
+      "price_change_pct": -0.04104679041822903,
+      "dollar_volume": 2499552020.840323,
+      "relative_flow_score": -102598587.93889357,
       "direction": "outflow",
-      "rank": 11
+      "rank": 10
     }
   ],
   "sankey": {
@@ -110,142 +110,142 @@
       {
         "source": "Global Liquidity",
         "target": "US Equities",
-        "value": 97939.58094709653
-      },
-      {
-        "source": "US Equities",
-        "target": "Broad Market",
-        "value": 44506.36904427181
-      },
-      {
-        "source": "Broad Market",
-        "target": "SPY (+0.0%)",
-        "value": 44506.36904427181
-      },
-      {
-        "source": "US Equities",
-        "target": "Small Caps",
-        "value": 8207.668262613905
-      },
-      {
-        "source": "Small Caps",
-        "target": "IWM (+0.1%)",
-        "value": 8207.668262613905
-      },
-      {
-        "source": "US Equities",
-        "target": "Semiconductors",
-        "value": 7481.236045897089
-      },
-      {
-        "source": "Semiconductors",
-        "target": "SMH (-0.0%)",
-        "value": 7481.236045897089
-      },
-      {
-        "source": "Global Liquidity",
-        "target": "Cyclicals",
-        "value": 6095.176520184889
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Financials",
-        "value": 1892.262398803946
-      },
-      {
-        "source": "Financials",
-        "target": "XLF (+0.1%)",
-        "value": 1892.262398803946
+        "value": 98815.52989249543
       },
       {
         "source": "US Equities",
         "target": "Growth",
-        "value": 37744.30759431374
+        "value": 38131.82688178415
       },
       {
         "source": "Growth",
         "target": "QQQ (-0.0%)",
-        "value": 35268.275858150424
+        "value": 35632.27486094383
+      },
+      {
+        "source": "US Equities",
+        "target": "Broad Market",
+        "value": 44823.497643433715
+      },
+      {
+        "source": "Broad Market",
+        "target": "SPY (+0.0%)",
+        "value": 44823.497643433715
+      },
+      {
+        "source": "US Equities",
+        "target": "Semiconductors",
+        "value": 7584.703724530004
+      },
+      {
+        "source": "Semiconductors",
+        "target": "SMH (-0.1%)",
+        "value": 7584.703724530004
+      },
+      {
+        "source": "US Equities",
+        "target": "Small Caps",
+        "value": 8275.501642747558
+      },
+      {
+        "source": "Small Caps",
+        "target": "IWM (+0.0%)",
+        "value": 8275.501642747558
+      },
+      {
+        "source": "Global Liquidity",
+        "target": "Cyclicals",
+        "value": 6179.018809311236
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Financials",
+        "value": 1914.4723930498258
+      },
+      {
+        "source": "Financials",
+        "target": "XLF (+0.1%)",
+        "value": 1914.4723930498258
       },
       {
         "source": "Global Liquidity",
         "target": "Defensives",
-        "value": 7853.921840062738
+        "value": 7919.503355619594
       },
       {
         "source": "Defensives",
         "target": "Healthcare",
-        "value": 1706.589741171544
+        "value": 1728.432321460469
       },
       {
         "source": "Healthcare",
         "target": "XLV (+0.1%)",
-        "value": 1706.589741171544
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Energy",
-        "value": 1786.173290704642
-      },
-      {
-        "source": "Energy",
-        "target": "XLE (-0.1%)",
-        "value": 1786.173290704642
+        "value": 1728.432321460469
       },
       {
         "source": "Defensives",
         "target": "Precious Metals",
-        "value": 3115.183911189209
+        "value": 3129.883361106705
       },
       {
         "source": "Precious Metals",
         "target": "GLD (-0.0%)",
-        "value": 3115.183911189209
+        "value": 3129.883361106705
       },
       {
         "source": "Cyclicals",
-        "target": "Industrials",
-        "value": 1413.6007162589417
+        "target": "Energy",
+        "value": 1814.789177965992
       },
       {
-        "source": "Industrials",
-        "target": "XLI (+0.1%)",
-        "value": 1413.6007162589417
+        "source": "Energy",
+        "target": "XLE (-0.1%)",
+        "value": 1814.789177965992
       },
       {
         "source": "Growth",
         "target": "XLK (-0.0%)",
-        "value": 2476.03173616331
+        "value": 2499.552020840323
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Industrials",
+        "value": 1430.9420827004562
+      },
+      {
+        "source": "Industrials",
+        "target": "XLI (+0.0%)",
+        "value": 1430.9420827004562
       },
       {
         "source": "Defensives",
         "target": "Utilities",
-        "value": 903.9531420165589
+        "value": 914.0518255183571
       },
       {
         "source": "Utilities",
         "target": "XLU (+0.1%)",
-        "value": 903.9531420165589
+        "value": 914.0518255183571
       },
       {
         "source": "Cyclicals",
         "target": "Consumer Staples",
-        "value": 1003.1401144173584
+        "value": 1018.8151555949612
       },
       {
         "source": "Consumer Staples",
         "target": "XLP (+0.0%)",
-        "value": 1003.1401144173584
+        "value": 1018.8151555949612
       },
       {
         "source": "Defensives",
         "target": "Treasuries",
-        "value": 2128.1950456854265
+        "value": 2147.135847534063
       },
       {
         "source": "Treasuries",
         "target": "TLT (+0.0%)",
-        "value": 2128.1950456854265
+        "value": 2147.135847534063
       }
     ]
   },
@@ -256,7 +256,7 @@
       "Company": "BitMine Immersion Technologies,",
       "Domain": "bitminetech.io",
       "Timing": "After Close",
-      "Price": "15.43",
+      "Price": "14.98",
       "RevGrowth": "6.278",
       "EarnGrowth": "0.0",
       "Signal": "Buy"
@@ -267,7 +267,7 @@
       "Company": "Penguin Solutions, Inc.",
       "Domain": "penguinsolutions.com",
       "Timing": "After Close",
-      "Price": "62.5",
+      "Price": "60.29",
       "RevGrowth": "-0.062",
       "EarnGrowth": "5.444",
       "Signal": "Buy"
@@ -627,10 +627,10 @@
     }
   ],
   "regime_metrics": {
-    "breadth_ratio": 0.2884689800465528,
-    "risk_ratio": 1.9054158716909428,
+    "breadth_ratio": 0.28843987602786714,
+    "risk_ratio": 1.8511143913395425,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8335083572720268
+    "vix_term_structure": 0.8555843799145191
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -716,5 +716,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=inflation&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260706143825 (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.gdeltproject.org', port=443) at 0x10e173ed0>, 'Connection to api.gdeltproject.org timed out. (connect timeout=20)'))"
+  ]
 }

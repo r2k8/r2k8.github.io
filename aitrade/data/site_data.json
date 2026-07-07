@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-07T09:20:50.330798+00:00",
+  "updated_at": "2026-07-07T10:24:11.808259+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -98,7 +98,7 @@
       "symbol": "^VIX",
       "name": "Volatility Index",
       "as_of": "2026-07-07",
-      "price_change_pct": -0.16173363674827707,
+      "price_change_pct": -0.16279069298552382,
       "dollar_volume": 0.0,
       "relative_flow_score": -0.0,
       "direction": "flat",
@@ -252,6 +252,17 @@
   "earnings_radar": [
     {
       "Date": "2026-07-07",
+      "Symbol": "BMNR",
+      "Company": "BitMine Immersion Technologies,",
+      "Domain": "bitminetech.io",
+      "Timing": "After Close",
+      "Price": "15.55",
+      "RevGrowth": "6.278",
+      "EarnGrowth": "0.0",
+      "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-07",
       "Symbol": "PENG",
       "Company": "Penguin Solutions, Inc.",
       "Domain": "penguinsolutions.com",
@@ -278,8 +289,8 @@
       "close": 89.51000213623047,
       "ema20": 86.89864826375363,
       "ema50": 83.4215559793578,
-      "avg20_volume": 374835.05,
-      "latest_volume": 665501.0
+      "avg20_volume": 375085.0,
+      "latest_volume": 670500.0
     },
     {
       "symbol": "UNM",
@@ -619,7 +630,7 @@
     "breadth_ratio": 0.28617824461701596,
     "risk_ratio": 1.9730864762893798,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8335083572720268
+    "vix_term_structure": 0.8314075190404274
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -705,5 +716,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260706102208 (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.gdeltproject.org', port=443) at 0x10c2f8d70>, 'Connection to api.gdeltproject.org timed out. (connect timeout=20)'))"
+  ]
 }

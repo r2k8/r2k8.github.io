@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-08T00:22:52.026665+00:00",
+  "updated_at": "2026-07-08T01:28:08.880674+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -251,25 +251,36 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-07-07",
-      "Symbol": "BMNR",
-      "Company": "BitMine Immersion Technologies,",
-      "Domain": "bitminetech.io",
+      "Date": "2026-07-08",
+      "Symbol": "LEVI",
+      "Company": "Levi Strauss & Co",
+      "Domain": "levistrauss.com",
       "Timing": "After Close",
-      "Price": "14.8",
-      "RevGrowth": "6.278",
-      "EarnGrowth": "0.0",
+      "Price": "24.66",
+      "RevGrowth": "0.141",
+      "EarnGrowth": "0.326",
       "Signal": "Buy"
     },
     {
-      "Date": "2026-07-07",
-      "Symbol": "PENG",
-      "Company": "Penguin Solutions, Inc.",
-      "Domain": "penguinsolutions.com",
+      "Date": "2026-07-08",
+      "Symbol": "PSMT",
+      "Company": "PriceSmart, Inc.",
+      "Domain": "pricesmart.com",
       "Timing": "After Close",
-      "Price": "62.71",
-      "RevGrowth": "-0.062",
-      "EarnGrowth": "5.444",
+      "Price": "191.95",
+      "RevGrowth": "0.097",
+      "EarnGrowth": "0.116",
+      "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-08",
+      "Symbol": "AZZ",
+      "Company": "AZZ Inc.",
+      "Domain": "azz.com",
+      "Timing": "After Close",
+      "Price": "144.05",
+      "RevGrowth": "0.094",
+      "EarnGrowth": "-0.218",
       "Signal": "Buy"
     }
   ],
@@ -642,10 +653,10 @@
     "vix_term_structure": 0.8485007346954337
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.036111111111111115,
+    "bullish_score": 0.036111111111111115,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -671,9 +682,12 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.13,
+        "articles": 2,
+        "top_headlines": [
+          "Three tankers hit in Strait of Hormuz as US revokes licence on Iranian oil sales",
+          "Three tankers hit in Strait of Hormuz as US revokes licence on Iranian oil sales"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
@@ -695,9 +709,11 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Trump praises Erdo\u011fan , pressures Europe on NATO and defense"
+        ]
       },
       "XLY": {
         "symbol": "XLY",
@@ -725,7 +741,5 @@
       }
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260707001952 (Caused by ConnectTimeoutError(<HTTPSConnection(host='api.gdeltproject.org', port=443) at 0x10bf7ae90>, 'Connection to api.gdeltproject.org timed out. (connect timeout=20)'))"
-  ]
+  "warnings": []
 }

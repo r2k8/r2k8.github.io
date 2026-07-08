@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-08T11:10:04.336016+00:00",
+  "updated_at": "2026-07-08T12:16:35.965161+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -650,14 +650,14 @@
     "breadth_ratio": 0.2871835195695581,
     "risk_ratio": 1.8958659035684977,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.9495797822657458
+    "vix_term_structure": 0.9311974101733003
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.042857142857142864,
+    "bullish_score": 0.042857142857142864,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -682,17 +682,24 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.13,
+        "articles": 2,
+        "top_headlines": [
+          "Oil jitters again as Hormuz choke imminent with Trump saying  ceasefire over  ",
+          "GRA donates seized cooking oil to School Feeding Programme \u2022 Interdicts 4 officers"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.15,
+        "articles": 3,
+        "top_headlines": [
+          "Thales : Bank of America et Bernstein se penchent sur Thales",
+          "Who is Silvana Tenreyro ? IMF appoints former Bank of England policymaker as chief economist",
+          "Jak z\u00edskat s kartou Air Bank bezplatn\u00e9 vstupy do leti\u0161tn\u00edch salonk\u016f ? Podrobn\u00fd n\u00e1vod"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
@@ -714,9 +721,11 @@
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Mercedes verkauft weniger Autos \u2013 doch E - Auto - Absatz steigt deutlich"
+        ]
       },
       "XLP": {
         "symbol": "XLP",
@@ -736,7 +745,5 @@
       }
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

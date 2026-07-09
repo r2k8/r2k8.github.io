@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-09T07:32:34.865305+00:00",
+  "updated_at": "2026-07-09T08:36:33.196350+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -358,6 +358,15 @@
       "latest_volume": 1050400.0
     },
     {
+      "symbol": "IPAR",
+      "as_of": "2026-07-08",
+      "close": 115.62000274658203,
+      "ema20": 107.94493953345783,
+      "ema50": 100.59972614681485,
+      "avg20_volume": 360495.0,
+      "latest_volume": 683800.0
+    },
+    {
       "symbol": "PTGX",
       "as_of": "2026-07-07",
       "close": 140.85000610351562,
@@ -455,15 +464,6 @@
       "ema50": 174.17759006587497,
       "avg20_volume": 123710.0,
       "latest_volume": 204900.0
-    },
-    {
-      "symbol": "IPAR",
-      "as_of": "2026-07-02",
-      "close": 119.38999938964844,
-      "ema20": 103.90925395711699,
-      "ema50": 98.08335834025569,
-      "avg20_volume": 324650.0,
-      "latest_volume": 527000.0
     },
     {
       "symbol": "EGBN",
@@ -650,13 +650,13 @@
     "breadth_ratio": 0.2846793533647205,
     "risk_ratio": 1.918534037900772,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8718487176086337
+    "vix_term_structure": 0.8739495057522987
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.035937500000000004,
+    "bullish_score": 0.035937500000000004,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -736,7 +736,5 @@
       }
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

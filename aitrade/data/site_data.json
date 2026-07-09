@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-09T04:23:03.901494+00:00",
+  "updated_at": "2026-07-09T05:29:08.818638+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -331,6 +331,15 @@
       "latest_volume": 4282368.0
     },
     {
+      "symbol": "OGN",
+      "as_of": "2026-07-08",
+      "close": 13.470000267028809,
+      "ema20": 13.444535492452466,
+      "ema50": 12.669473267978812,
+      "avg20_volume": 2583500.0,
+      "latest_volume": 4065700.0
+    },
+    {
       "symbol": "PTGX",
       "as_of": "2026-07-07",
       "close": 140.85000610351562,
@@ -365,15 +374,6 @@
       "ema50": 85.91728648791832,
       "avg20_volume": 1683330.0,
       "latest_volume": 2744400.0
-    },
-    {
-      "symbol": "OGN",
-      "as_of": "2026-07-06",
-      "close": 13.5600004196167,
-      "ema20": 13.43267230197821,
-      "ema50": 12.528588902942465,
-      "avg20_volume": 2482820.0,
-      "latest_volume": 4285700.0
     },
     {
       "symbol": "RDNT",
@@ -653,10 +653,10 @@
     "vix_term_structure": 0.887604979301662
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.04754901960784314,
+    "bullish_score": 0.0769607843137255,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -681,34 +681,49 @@
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "score": 0.75,
+        "confidence": 0.215,
+        "articles": 4,
+        "top_headlines": [
+          "Asian shares climb on chip rally , oil jumps",
+          "Commodity Corner : Oil surges on renewed Middle East tensions ; gold slips as dollar strengthens",
+          "Asian shares climb on chip rally , oil jumps",
+          "Asian shares climb on chip rally , oil jumps"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
-        "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "score": 0.1111,
+        "confidence": 0.4467,
+        "articles": 18,
+        "top_headlines": [
+          "India Gold ETFs defy global trend with $388 million inflows in June",
+          "Nifty IT falls ; Infosys , HCLTech , TCS among top losers as Q1 results loom , US Fed minutes revive rate worries",
+          "Gi\u00e1 v\u00e0ng gi\u1ea3m m\u1ea1nh trong b\u1ed1i c\u1ea3nh d\u1ea7u th\u00f4 t\u0103ng gi\u00e1",
+          "\u041f\u043e\u0447\u0435\u043c\u0443 \u043f\u043e\u0441\u043b\u0435 \u043a\u0430\u043f\u0440\u0435\u043c\u043e\u043d\u0442\u0430 \u0442\u0435\u043a\u0443\u0442 \u0442\u0440\u0443\u0431\u044b : \u043a\u0442\u043e \u0432\u0438\u043d\u043e\u0432\u0430\u0442 \u0438 \u043a\u0430\u043a \u0441\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0442\u044c \u043d\u0430 \u0432\u0437\u043d\u043e\u0441\u0430\u0445",
+          "Gold and Silver Bears Need One More Trigger : Brent Above $80"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
         "name": "Healthcare",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "South African pharmaceutical firm develops potential Ebola treatment"
+        ]
       },
       "XLI": {
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Govt waives customs duty on key electronic components to boost local manufacturing"
+        ]
       },
       "XLY": {
         "symbol": "XLY",
@@ -730,13 +745,13 @@
         "symbol": "XLU",
         "name": "Utilities",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Belco unveils new electricity rate structure"
+        ]
       }
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

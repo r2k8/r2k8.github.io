@@ -36,6 +36,13 @@
       "depth": 4
     },
     {
+      "name": "BAC",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "JPM",
       "itemStyle": {
         "color": "#10b981"
@@ -74,13 +81,6 @@
       "name": "BLK",
       "itemStyle": {
         "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "BAC",
-      "itemStyle": {
-        "color": "#10b981"
       },
       "depth": 4
     },
@@ -573,6 +573,17 @@
     },
     {
       "source": "Financials",
+      "target": "BAC",
+      "value": 252.88,
+      "net_flow_dollars": 2528836529.946801,
+      "market_cap_delta": 33141072925.90099,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Financials",
       "target": "JPM",
       "value": 251.92,
       "net_flow_dollars": 2519150979.2751217,
@@ -634,17 +645,6 @@
       "market_cap_delta": -686625410.7961714,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Financials",
-      "target": "BAC",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1396,6 +1396,15 @@
       "price_change": 0.2485249357063703
     },
     {
+      "symbol": "OGN",
+      "name": "Organon & Co.",
+      "sector": "Healthcare",
+      "rev_growth": -0.035,
+      "earn_growth": 0.667,
+      "dollar_volume": 501844639.55316705,
+      "price_change": 0.005974627858760868
+    },
+    {
       "symbol": "PTGX",
       "name": "Protagonist Therapeutics, Inc.",
       "sector": "Healthcare",
@@ -1430,15 +1439,6 @@
       "earn_growth": 0.33,
       "dollar_volume": 2121055830.0971637,
       "price_change": 0.008273935460463518
-    },
-    {
-      "symbol": "OGN",
-      "name": "Organon & Co.",
-      "sector": "Healthcare",
-      "rev_growth": -0.035,
-      "earn_growth": 0.667,
-      "dollar_volume": 501844639.55316705,
-      "price_change": 0.005974627858760868
     },
     {
       "symbol": "RDNT",
@@ -1711,5 +1711,5 @@
       "price_change": 0.027977039003303818
     }
   ],
-  "last_updated": "2026-07-09 04:23:23 UTC"
+  "last_updated": "2026-07-09 05:29:22 UTC"
 }

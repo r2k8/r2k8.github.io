@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-08T23:06:14.062145+00:00",
+  "updated_at": "2026-07-09T00:12:32.517269+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -251,26 +251,37 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-07-08",
-      "Symbol": "PSMT",
-      "Company": "PriceSmart, Inc.",
-      "Domain": "pricesmart.com",
+      "Date": "2026-07-09",
+      "Symbol": "PEP",
+      "Company": "Pepsico, Inc.",
+      "Domain": "pepsico.com",
       "Timing": "Before Open",
-      "Price": "189.11",
-      "RevGrowth": "0.097",
-      "EarnGrowth": "0.116",
+      "Price": "142.51",
+      "RevGrowth": "0.085",
+      "EarnGrowth": "0.278",
       "Signal": "Buy"
     },
     {
-      "Date": "2026-07-08",
-      "Symbol": "AZZ",
-      "Company": "AZZ Inc.",
-      "Domain": "azz.com",
-      "Timing": "Before Open",
-      "Price": "143.6",
-      "RevGrowth": "0.094",
-      "EarnGrowth": "-0.218",
+      "Date": "2026-07-09",
+      "Symbol": "WDFC",
+      "Company": "WD-40 Company",
+      "Domain": "wd40company.com",
+      "Timing": "After Close",
+      "Price": "246.59",
+      "RevGrowth": "0.107",
+      "EarnGrowth": "-0.315",
       "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-09",
+      "Symbol": "NRIX",
+      "Company": "Nurix Therapeutics, Inc.",
+      "Domain": "nurixtx.com",
+      "Timing": "Before Open",
+      "Price": "24.31",
+      "RevGrowth": "-0.661",
+      "EarnGrowth": "0.0",
+      "Signal": "Neutral"
     }
   ],
   "discovery_radar": [
@@ -725,5 +736,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

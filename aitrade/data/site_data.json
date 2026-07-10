@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-09T23:08:10.140355+00:00",
+  "updated_at": "2026-07-10T00:11:29.557693+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -251,14 +251,25 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-07-09",
-      "Symbol": "PEP",
-      "Company": "Pepsico, Inc.",
-      "Domain": "pepsico.com",
+      "Date": "2026-07-10",
+      "Symbol": "DAL",
+      "Company": "Delta Air Lines, Inc.",
+      "Domain": "delta.com",
       "Timing": "Before Open",
-      "Price": "137.86",
-      "RevGrowth": "0.085",
-      "EarnGrowth": "0.278",
+      "Price": "89.0",
+      "RevGrowth": "0.129",
+      "EarnGrowth": "0.0",
+      "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-10",
+      "Symbol": "BMNR",
+      "Company": "BitMine Immersion Technologies,",
+      "Domain": "bitminetech.io",
+      "Timing": "After Close",
+      "Price": "14.69",
+      "RevGrowth": "6.278",
+      "EarnGrowth": "0.0",
       "Signal": "Buy"
     }
   ],
@@ -301,12 +312,12 @@
     },
     {
       "symbol": "PENG",
-      "as_of": "2026-07-08",
-      "close": 78.47000122070312,
-      "ema20": 65.47079863350585,
-      "ema50": 55.97789124621244,
-      "avg20_volume": 3860520.0,
-      "latest_volume": 13752400.0
+      "as_of": "2026-07-09",
+      "close": 81.38999938964844,
+      "ema20": 66.98725621401151,
+      "ema50": 56.98867615363961,
+      "avg20_volume": 4146922.15,
+      "latest_volume": 8881243.0
     },
     {
       "symbol": "GSHD",
@@ -714,5 +725,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=inflation&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260709000830 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+  ]
 }

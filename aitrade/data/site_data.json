@@ -1,14 +1,14 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-10T20:45:44.953033+00:00",
+  "updated_at": "2026-07-10T21:47:07.514095+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
       "name": "U.S. Large Cap",
       "as_of": "2026-07-10",
       "price_change_pct": 0.023300263248027295,
-      "dollar_volume": 43533037643.23024,
-      "relative_flow_score": 1014331237.0735463,
+      "dollar_volume": 43563265841.71901,
+      "relative_flow_score": 1015035562.0558482,
       "direction": "inflow",
       "rank": 1
     },
@@ -27,8 +27,8 @@
       "name": "U.S. Small Cap",
       "as_of": "2026-07-10",
       "price_change_pct": 0.019214167907101135,
-      "dollar_volume": 7744208321.253052,
-      "relative_flow_score": 148798518.99212593,
+      "dollar_volume": 7756470342.97699,
+      "relative_flow_score": 149034123.5364102,
       "direction": "inflow",
       "rank": 4
     },
@@ -37,8 +37,8 @@
       "name": "Semiconductors",
       "as_of": "2026-07-10",
       "price_change_pct": 0.0025925294252139835,
-      "dollar_volume": 7261306604.074206,
-      "relative_flow_score": 18825151.036563005,
+      "dollar_volume": 7262227426.328357,
+      "relative_flow_score": 18827538.29535228,
       "direction": "inflow",
       "rank": 14
     },
@@ -47,8 +47,8 @@
       "name": "Technology",
       "as_of": "2026-07-10",
       "price_change_pct": 0.014027574757111586,
-      "dollar_volume": 2223150058.3273225,
-      "relative_flow_score": 31185403.6394635,
+      "dollar_volume": 2223541023.0457535,
+      "relative_flow_score": 31190887.926278684,
       "direction": "inflow",
       "rank": 12
     }
@@ -59,8 +59,8 @@
       "name": "South Korea",
       "as_of": "2026-07-10",
       "price_change_pct": -0.07751079712330335,
-      "dollar_volume": 4165729814.6682954,
-      "relative_flow_score": -322889038.5352503,
+      "dollar_volume": 4169250636.7742624,
+      "relative_flow_score": -323161940.26321316,
       "direction": "outflow",
       "rank": 3
     },
@@ -110,22 +110,22 @@
       {
         "source": "Global Liquidity",
         "target": "US Equities",
-        "value": 93587.66516908404
+        "value": 93631.46717626933
       },
       {
         "source": "US Equities",
         "target": "Broad Market",
-        "value": 43533.03764323024
+        "value": 43563.26584171901
       },
       {
         "source": "Broad Market",
         "target": "SPY (+0.0%)",
-        "value": 43533.03764323024
+        "value": 43563.26584171901
       },
       {
         "source": "US Equities",
         "target": "Growth",
-        "value": 35049.11260052654
+        "value": 35049.50356524497
       },
       {
         "source": "Growth",
@@ -135,12 +135,12 @@
       {
         "source": "US Equities",
         "target": "Small Caps",
-        "value": 7744.2083212530515
+        "value": 7756.47034297699
       },
       {
         "source": "Small Caps",
         "target": "IWM (+0.0%)",
-        "value": 7744.2083212530515
+        "value": 7756.47034297699
       },
       {
         "source": "Global Liquidity",
@@ -215,7 +215,7 @@
       {
         "source": "Growth",
         "target": "XLK (+0.0%)",
-        "value": 2223.1500583273223
+        "value": 2223.5410230457533
       },
       {
         "source": "Defensives",
@@ -230,12 +230,12 @@
       {
         "source": "US Equities",
         "target": "Semiconductors",
-        "value": 7261.306604074206
+        "value": 7262.227426328357
       },
       {
         "source": "Semiconductors",
         "target": "SMH (+0.0%)",
-        "value": 7261.306604074206
+        "value": 7262.227426328357
       },
       {
         "source": "Cyclicals",
@@ -280,8 +280,8 @@
       "close": 82.76000213623047,
       "ema20": 76.51713402264281,
       "ema50": 70.95370292038643,
-      "avg20_volume": 1453405.5,
-      "latest_volume": 2293210.0
+      "avg20_volume": 1453416.5,
+      "latest_volume": 2293430.0
     },
     {
       "symbol": "TFIN",
@@ -726,6 +726,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260709214613 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

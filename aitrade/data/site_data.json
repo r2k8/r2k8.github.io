@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-11T13:14:26.508494+00:00",
+  "updated_at": "2026-07-11T14:16:43.529716+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -311,6 +311,15 @@
       "latest_volume": 1414900.0
     },
     {
+      "symbol": "WDFC",
+      "as_of": "2026-07-10",
+      "close": 264.9100036621094,
+      "ema20": 238.50815100666887,
+      "ema50": 225.50433046849992,
+      "avg20_volume": 222615.0,
+      "latest_volume": 1172100.0
+    },
+    {
       "symbol": "TFIN",
       "as_of": "2026-07-09",
       "close": 77.55999755859375,
@@ -399,15 +408,6 @@
       "ema50": 10.798122515867174,
       "avg20_volume": 58008795.0,
       "latest_volume": 98149300.0
-    },
-    {
-      "symbol": "WDFC",
-      "as_of": "2026-07-09",
-      "close": 239.4199981689453,
-      "ema20": 235.74456202877073,
-      "ema50": 224.5032492264154,
-      "avg20_volume": 176045.0,
-      "latest_volume": 308800.0
     },
     {
       "symbol": "LZ",
@@ -725,5 +725,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

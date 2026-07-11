@@ -242,6 +242,7 @@ function updateLayer1(data) {
 
 function renderDiscoveryQuadrant(radarData) {
     const container = document.getElementById('discovery-flow-container');
+    const summary = document.getElementById('discovery-summary');
     if (!container || !radarData || radarData.length === 0) return;
     
     let myChart = echarts.getInstanceByDom(container);
@@ -279,11 +280,39 @@ function renderDiscoveryQuadrant(radarData) {
         })
         .filter(item => Number.isFinite(item.fundamentalGrowth) && Number.isFinite(item.momentum))
         .sort((a, b) => b.score - a.score)
-        .slice(0, 18);
+        .slice(0, 12);
 
     if (cleanRows.length === 0) {
+        if (summary) summary.innerHTML = '';
         container.innerHTML = '<div style="color: var(--text-muted); padding: 2rem; text-align:center;">No high-conviction breakout candidates passed the current filters.</div>';
         return;
+    }
+
+    if (summary) {
+        const formatUSD = (v) => new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            notation: 'compact',
+            maximumFractionDigits: 1
+        }).format(v || 0);
+        summary.innerHTML = cleanRows.slice(0, 5).map((item, index) => {
+            const color = sectorColors[item.sector] || sectorColors["Unknown"];
+            const momentumTone = item.momentum >= 0 ? 'text-bull' : 'text-bear';
+            return `
+                <div class="discovery-pick">
+                    <div class="discovery-rank" style="border-color:${color}; color:${color};">#${index + 1}</div>
+                    <div class="discovery-main">
+                        <div class="discovery-symbol">${item.symbol}</div>
+                        <div class="discovery-sector">${item.sector || 'Unknown'}</div>
+                    </div>
+                    <div class="discovery-metrics">
+                        <span>Growth ${item.fundamentalGrowth.toFixed(0)}%</span>
+                        <span class="${momentumTone}">Mom ${item.momentum.toFixed(1)}%</span>
+                        <span>${formatUSD(item.dollarVolume)}</span>
+                    </div>
+                </div>
+            `;
+        }).join('');
     }
 
     const quantile = (values, q) => {
@@ -298,7 +327,7 @@ function renderDiscoveryQuadrant(radarData) {
     const xValues = cleanRows.map(item => item.fundamentalGrowth);
     const yValues = cleanRows.map(item => item.momentum);
     const xMin = Math.floor(Math.min(-20, quantile(xValues, 0.05) - 10));
-    const xMax = Math.ceil(Math.max(40, Math.min(250, quantile(xValues, 0.90) + 25)));
+    const xMax = Math.ceil(Math.max(40, Math.min(180, quantile(xValues, 0.85) + 18)));
     const yMin = Math.floor(Math.min(-10, quantile(yValues, 0.05) - 2));
     const yMax = Math.ceil(Math.max(12, quantile(yValues, 0.90) + 4));
 
@@ -330,12 +359,12 @@ function renderDiscoveryQuadrant(radarData) {
     const option = {
         title: {
             text: 'Breakout Quality Map',
-            subtext: 'Top 18 only | X: Fundamental Growth | Y: Price Momentum | Size: Volume',
+            subtext: 'Top 12 only | X: Fundamental Growth | Y: Price Momentum | Size: Volume',
             left: 'center',
             textStyle: { color: '#f8fafc', fontSize: 14, fontFamily: 'Outfit' },
             subtextStyle: { color: '#94a3b8' }
         },
-        grid: { left: '10%', right: '10%', bottom: '15%', top: '15%' },
+        grid: { left: '8%', right: '6%', bottom: '18%', top: '18%' },
         tooltip: {
             backgroundColor: 'rgba(20, 25, 40, 0.9)',
             borderColor: 'rgba(255,255,255,0.1)',
@@ -378,7 +407,7 @@ function renderDiscoveryQuadrant(radarData) {
             label: {
                 show: true,
                 formatter: function (params) {
-                    return params.data.rank <= 8 ? params.name : '';
+                    return params.data.rank <= 6 ? `${params.data.rank}. ${params.name}` : '';
                 },
                 position: 'top',
                 color: '#f8fafc',
@@ -393,24 +422,6 @@ function renderDiscoveryQuadrant(radarData) {
                     { yAxis: 0 }
                 ]
             }
-        }, {
-            type: 'scatter',
-            data: seriesData.slice(0, 5),
-            symbolSize: 0,
-            label: {
-                show: true,
-                formatter: function (params) {
-                    return `#${params.data.rank}`;
-                },
-                position: 'inside',
-                color: '#0b0f19',
-                fontWeight: 800,
-                fontSize: 10,
-                backgroundColor: 'rgba(248,250,252,0.86)',
-                borderRadius: 8,
-                padding: [2, 5]
-            },
-            silent: true
         }]
     };
     

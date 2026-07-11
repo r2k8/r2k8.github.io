@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-11T18:25:38.002121+00:00",
+  "updated_at": "2026-07-11T19:26:53.873271+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -251,26 +251,114 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-07-10",
-      "Symbol": "DAL",
-      "Company": "Delta Air Lines, Inc.",
-      "Domain": "delta.com",
-      "Timing": "Before Open",
-      "Price": "87.39",
-      "RevGrowth": "0.129",
-      "EarnGrowth": "0.0",
+      "Date": "2026-07-16",
+      "Symbol": "TSM",
+      "Company": "Taiwan Semiconductor Manufactur",
+      "Domain": "tsmc.com",
+      "Timing": "After Close",
+      "Price": "434.11",
+      "RevGrowth": "0.351",
+      "EarnGrowth": "0.584",
+      "Signal": "Strong Buy"
+    },
+    {
+      "Date": "2026-07-14",
+      "Symbol": "JPM",
+      "Company": "JP Morgan Chase & Co.",
+      "Domain": "jpmorganchase.com",
+      "Timing": "After Close",
+      "Price": "336.47",
+      "RevGrowth": "0.127",
+      "EarnGrowth": "0.172",
       "Signal": "Buy"
     },
     {
-      "Date": "2026-07-10",
-      "Symbol": "BMNR",
-      "Company": "BitMine Immersion Technologies,",
-      "Domain": "bitminetech.io",
+      "Date": "2026-07-15",
+      "Symbol": "ASML",
+      "Company": "ASML Holding N.V. - New York Re",
+      "Domain": "asml.com",
       "Timing": "After Close",
-      "Price": "14.98",
-      "RevGrowth": "6.278",
-      "EarnGrowth": "0.0",
+      "Price": "1797.32",
+      "RevGrowth": "0.132",
+      "EarnGrowth": "0.192",
       "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-15",
+      "Symbol": "JNJ",
+      "Company": "Johnson & Johnson",
+      "Domain": "jnj.com",
+      "Timing": "After Close",
+      "Price": "256.98",
+      "RevGrowth": "0.099",
+      "EarnGrowth": "-0.529",
+      "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-14",
+      "Symbol": "BAC",
+      "Company": "Bank of America Corporation",
+      "Domain": "bankofamerica.com",
+      "Timing": "After Close",
+      "Price": "59.67",
+      "RevGrowth": "0.081",
+      "EarnGrowth": "0.244",
+      "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-16",
+      "Symbol": "UNH",
+      "Company": "UnitedHealth Group Incorporated",
+      "Domain": "unitedhealthgroup.com",
+      "Timing": "After Close",
+      "Price": "424.62",
+      "RevGrowth": "0.02",
+      "EarnGrowth": "0.007",
+      "Signal": "Neutral"
+    },
+    {
+      "Date": "2026-07-16",
+      "Symbol": "GE",
+      "Company": "GE Aerospace",
+      "Domain": "geaerospace.com",
+      "Timing": "After Close",
+      "Price": "359.27",
+      "RevGrowth": "0.247",
+      "EarnGrowth": "-0.018",
+      "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-14",
+      "Symbol": "GS",
+      "Company": "Goldman Sachs Group, Inc. (The)",
+      "Domain": "goldmansachs.com",
+      "Timing": "After Close",
+      "Price": "1055.18",
+      "RevGrowth": "0.145",
+      "EarnGrowth": "0.242",
+      "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-14",
+      "Symbol": "WFC",
+      "Company": "Wells Fargo & Company",
+      "Domain": "wellsfargo.com",
+      "Timing": "After Close",
+      "Price": "87.16",
+      "RevGrowth": "0.057",
+      "EarnGrowth": "0.151",
+      "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-15",
+      "Symbol": "BLK",
+      "Company": "BlackRock, Inc.",
+      "Domain": "blackrock.com",
+      "Timing": "After Close",
+      "Price": "1036.11",
+      "RevGrowth": "0.27",
+      "EarnGrowth": "0.459",
+      "Signal": "Strong Buy"
     }
   ],
   "discovery_radar": [
@@ -642,8 +730,8 @@
     "vix_term_structure": 0.7893907043205051
   },
   "sentiment": {
-    "fear_score": 0.035,
-    "bullish_score": 0.035,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -725,5 +813,7 @@
       }
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

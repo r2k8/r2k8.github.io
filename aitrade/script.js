@@ -264,16 +264,63 @@ function renderDiscoveryQuadrant(radarData) {
         "Unknown": "#94a3b8"
     };
 
-    const seriesData = radarData.map(item => {
+    const cleanRows = radarData
+        .map(item => {
+            const fundamentalGrowth = ((item.rev_growth || 0) + (item.earn_growth || 0)) * 100;
+            const momentum = (item.price_change || 0) * 100;
+            const dollarVolume = item.dollar_volume || 0;
+            return {
+                ...item,
+                fundamentalGrowth,
+                momentum,
+                dollarVolume,
+                score: Math.max(0, fundamentalGrowth) * 0.55 + Math.max(0, momentum) * 2.5 + Math.log10(Math.max(dollarVolume, 1)) * 3
+            };
+        })
+        .filter(item => Number.isFinite(item.fundamentalGrowth) && Number.isFinite(item.momentum))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 18);
+
+    if (cleanRows.length === 0) {
+        container.innerHTML = '<div style="color: var(--text-muted); padding: 2rem; text-align:center;">No high-conviction breakout candidates passed the current filters.</div>';
+        return;
+    }
+
+    const quantile = (values, q) => {
+        const sorted = values.filter(Number.isFinite).sort((a, b) => a - b);
+        if (!sorted.length) return 0;
+        const pos = (sorted.length - 1) * q;
+        const base = Math.floor(pos);
+        const rest = pos - base;
+        return sorted[base + 1] === undefined ? sorted[base] : sorted[base] + rest * (sorted[base + 1] - sorted[base]);
+    };
+
+    const xValues = cleanRows.map(item => item.fundamentalGrowth);
+    const yValues = cleanRows.map(item => item.momentum);
+    const xMin = Math.floor(Math.min(-20, quantile(xValues, 0.05) - 10));
+    const xMax = Math.ceil(Math.max(40, Math.min(250, quantile(xValues, 0.90) + 25)));
+    const yMin = Math.floor(Math.min(-10, quantile(yValues, 0.05) - 2));
+    const yMax = Math.ceil(Math.max(12, quantile(yValues, 0.90) + 4));
+
+    const seriesData = cleanRows.map((item, index) => {
         // X = Fundamental Growth (Rev + Earn)
-        const fundamentalGrowth = ((item.rev_growth || 0) + (item.earn_growth || 0)) * 100;
+        const fundamentalGrowth = item.fundamentalGrowth;
         // Y = Price Momentum
-        const momentum = (item.price_change || 0) * 100;
+        const momentum = item.momentum;
         
         return {
             name: item.symbol,
             companyName: item.name || item.symbol,
-            value: [fundamentalGrowth, momentum, item.dollar_volume, item.sector],
+            rank: index + 1,
+            clipped: item.fundamentalGrowth > xMax || item.fundamentalGrowth < xMin || item.momentum > yMax || item.momentum < yMin,
+            value: [
+                Math.max(xMin, Math.min(xMax, fundamentalGrowth)),
+                Math.max(yMin, Math.min(yMax, momentum)),
+                item.dollarVolume,
+                item.sector,
+                fundamentalGrowth,
+                momentum
+            ],
             itemStyle: {
                 color: sectorColors[item.sector] || sectorColors["Unknown"]
             }
@@ -282,8 +329,8 @@ function renderDiscoveryQuadrant(radarData) {
 
     const option = {
         title: {
-            text: 'Super Gainer Quadrant',
-            subtext: 'X: Fundamental Growth | Y: Price Momentum | Size: Volume',
+            text: 'Breakout Quality Map',
+            subtext: 'Top 18 only | X: Fundamental Growth | Y: Price Momentum | Size: Volume',
             left: 'center',
             textStyle: { color: '#f8fafc', fontSize: 14, fontFamily: 'Outfit' },
             subtextStyle: { color: '#94a3b8' }
@@ -296,14 +343,16 @@ function renderDiscoveryQuadrant(radarData) {
             formatter: function (params) {
                 const data = params.data;
                 const formatUSD = (v) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', notation: 'compact' }).format(v);
-                return `<div style="font-weight:600; font-size:14px; margin-bottom:4px; color:${data.itemStyle.color}">${data.name} - ${data.companyName} <span style="font-size:11px; color:#94a3b8;">(${data.value[3]})</span></div>
-                        <div style="font-size:12px; color:#94a3b8;">Fundamental Growth (Rev+EPS): <span style="color:#f8fafc; font-weight:600;">${data.value[0].toFixed(1)}%</span></div>
-                        <div style="font-size:12px; color:#94a3b8;">Price Momentum: <span style="color:#f8fafc; font-weight:600;">${data.value[1].toFixed(1)}%</span></div>
+                return `<div style="font-weight:600; font-size:14px; margin-bottom:4px; color:${data.itemStyle.color}">#${data.rank} ${data.name} - ${data.companyName} <span style="font-size:11px; color:#94a3b8;">(${data.value[3]})</span></div>
+                        <div style="font-size:12px; color:#94a3b8;">Fundamental Growth (Rev+EPS): <span style="color:#f8fafc; font-weight:600;">${data.value[4].toFixed(1)}%</span>${data.clipped ? ' <span style="color:#f59e0b;">clipped on chart</span>' : ''}</div>
+                        <div style="font-size:12px; color:#94a3b8;">Price Momentum: <span style="color:#f8fafc; font-weight:600;">${data.value[5].toFixed(1)}%</span></div>
                         <div style="font-size:12px; color:#94a3b8;">Dollar Volume: <span style="color:#f8fafc; font-weight:600;">${formatUSD(data.value[2])}</span></div>`;
             }
         },
         xAxis: {
             type: 'value',
+            min: xMin,
+            max: xMax,
             name: 'Fundamental Growth %',
             nameLocation: 'middle',
             nameGap: 30,
@@ -312,6 +361,8 @@ function renderDiscoveryQuadrant(radarData) {
         },
         yAxis: {
             type: 'value',
+            min: yMin,
+            max: yMax,
             name: 'Price Momentum %',
             nameLocation: 'middle',
             nameGap: 40,
@@ -326,7 +377,9 @@ function renderDiscoveryQuadrant(radarData) {
             },
             label: {
                 show: true,
-                formatter: '{b}',
+                formatter: function (params) {
+                    return params.data.rank <= 8 ? params.name : '';
+                },
                 position: 'top',
                 color: '#f8fafc',
                 fontSize: 11
@@ -340,6 +393,24 @@ function renderDiscoveryQuadrant(radarData) {
                     { yAxis: 0 }
                 ]
             }
+        }, {
+            type: 'scatter',
+            data: seriesData.slice(0, 5),
+            symbolSize: 0,
+            label: {
+                show: true,
+                formatter: function (params) {
+                    return `#${params.data.rank}`;
+                },
+                position: 'inside',
+                color: '#0b0f19',
+                fontWeight: 800,
+                fontSize: 10,
+                backgroundColor: 'rgba(248,250,252,0.86)',
+                borderRadius: 8,
+                padding: [2, 5]
+            },
+            silent: true
         }]
     };
     
@@ -433,16 +504,59 @@ function renderEChartsSankey(sankeyData) {
 
 function renderEarningsRadar(earningsData) {
     const container = document.getElementById('earnings-calendar');
+    if (!container) return;
     
-    // Calculate the target Monday for this week (or next if weekend)
-    const d = new Date();
-    const day = d.getDay();
-    const daysToAdd = day === 0 ? 1 : (day === 6 ? 2 : 1 - day);
-    const monday = new Date(d.setDate(d.getDate() + daysToAdd));
+    const parseDate = (value) => {
+        if (!value) return null;
+        const [year, month, day] = value.split('-').map(Number);
+        if (!year || !month || !day) return null;
+        return new Date(Date.UTC(year, month - 1, day));
+    };
+
+    const validEarnings = (earningsData || [])
+        .map(item => ({ ...item, _date: parseDate(item.Date) }))
+        .filter(item => item._date);
+
+    if (validEarnings.length === 0) {
+        const label = document.getElementById('earnings-week-label');
+        if (label) label.textContent = 'No qualified earnings passed the current filters';
+        container.innerHTML = `
+            <div style="grid-column: 1 / -1; min-height: 120px; display:flex; align-items:center; justify-content:center; color: var(--text-muted); border:1px dashed rgba(255,255,255,0.12); border-radius:12px;">
+                No upcoming large-cap earnings candidates passed the revenue, earnings, and market-cap filters.
+            </div>
+        `;
+        return;
+    }
+
+    const today = new Date();
+    const todayUtc = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()));
+    const upcomingEarnings = validEarnings
+        .filter(item => item._date >= todayUtc)
+        .sort((a, b) => a._date - b._date);
+
+    if (upcomingEarnings.length === 0) {
+        const newestDate = validEarnings
+            .map(item => item._date)
+            .sort((a, b) => b - a)[0];
+        const label = document.getElementById('earnings-week-label');
+        if (label) {
+            label.textContent = `Earnings radar stale; newest candidate was ${newestDate.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric', timeZone: 'UTC' })}`;
+        }
+        container.innerHTML = `
+            <div style="grid-column: 1 / -1; min-height: 120px; display:flex; align-items:center; justify-content:center; color: var(--text-muted); border:1px dashed rgba(255,255,255,0.12); border-radius:12px; text-align:center; padding:1.25rem;">
+                Earnings data is stale. The next scheduled Layer 1 run should overwrite the CSV with the upcoming earnings week or an explicit empty result.
+            </div>
+        `;
+        return;
+    }
+
+    const monday = new Date(upcomingEarnings[0]._date);
+    const mondayOffset = (monday.getUTCDay() + 6) % 7;
+    monday.setUTCDate(monday.getUTCDate() - mondayOffset);
     
     const label = document.getElementById('earnings-week-label');
     if (label) {
-        label.innerHTML = `For the week beginning ${monday.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' })}`;
+        label.innerHTML = `Upcoming qualified earnings week beginning ${monday.toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric', timeZone: 'UTC' })}`;
     }
     
     // Group by day of the week
@@ -459,16 +573,15 @@ function renderEarningsRadar(earningsData) {
     const targetWeekEnd = new Date(monday);
     targetWeekEnd.setDate(monday.getDate() + 6);
     
-    earningsData.forEach(item => {
-        if (!item.Date) return;
-        const dateObj = new Date(item.Date);
+    upcomingEarnings.forEach(item => {
+        const dateObj = item._date;
         
         // Strictly ignore earnings that are not in this target week
         if (dateObj < monday || dateObj > targetWeekEnd) {
             return;
         }
         
-        const dayIndex = dateObj.getUTCDay() - 1; // 0=Sunday, 1=Monday
+        const dayIndex = dateObj.getUTCDay() - 1;
         if (dayIndex >= 0 && dayIndex < 5) {
             const dayName = days[dayIndex];
             const dataObj = {
@@ -493,6 +606,16 @@ function renderEarningsRadar(earningsData) {
         before: scheduleMap[day].before,
         after: scheduleMap[day].after
     }));
+
+    const hasVisibleEarnings = schedule.some(day => day.before.length || day.after.length);
+    if (!hasVisibleEarnings) {
+        container.innerHTML = `
+            <div style="grid-column: 1 / -1; min-height: 120px; display:flex; align-items:center; justify-content:center; color: var(--text-muted); border:1px dashed rgba(255,255,255,0.12); border-radius:12px;">
+                Earnings data is available, but no candidates fall inside the displayed Monday-Friday window.
+            </div>
+        `;
+        return;
+    }
 
     container.innerHTML = schedule.map(day => `
         <div class="earnings-day">

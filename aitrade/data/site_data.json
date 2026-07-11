@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-11T06:00:58.196224+00:00",
+  "updated_at": "2026-07-11T07:04:25.480594+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -282,6 +282,15 @@
       "ema50": 70.95370292038643,
       "avg20_volume": 1453420.0,
       "latest_volume": 2293500.0
+    },
+    {
+      "symbol": "NTNX",
+      "as_of": "2026-07-10",
+      "close": 54.790000915527344,
+      "ema20": 51.27804440747524,
+      "ema50": 48.39841743589414,
+      "avg20_volume": 4169520.0,
+      "latest_volume": 6403800.0
     },
     {
       "symbol": "TFIN",
@@ -624,15 +633,6 @@
       "ema50": 67.88468215889128,
       "avg20_volume": 3521100.0,
       "latest_volume": 7081600.0
-    },
-    {
-      "symbol": "ICHR",
-      "as_of": "2026-07-01",
-      "close": 111.7699966430664,
-      "ema20": 91.29026120073117,
-      "ema50": 78.94164732544102,
-      "avg20_volume": 1287570.0,
-      "latest_volume": 2507400.0
     }
   ],
   "regime_metrics": {
@@ -642,11 +642,11 @@
     "vix_term_structure": 0.7893907043205051
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.05545454545454546,
+    "bullish_score": 0.03727272727272728,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },

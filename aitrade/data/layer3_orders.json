@@ -4,7 +4,9 @@
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
-    "warnings": [],
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
     "signal": {
       "symbol": "SPY",
       "signal_type": "sell",
@@ -14,9 +16,9 @@
         "Severe sell-off in EWY (-7.8% intra-day).",
         "Severe sell-off in MCHI (-2.2% intra-day).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. Liquidating standard risk exposure."
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-07-12 18:09:53.592538+00:00"
+      "generated_at": "2026-07-12 19:12:08.773002+00:00"
     }
   },
   {
@@ -24,7 +26,9 @@
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
-    "warnings": [],
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
     "signal": {
       "symbol": "QQQ",
       "signal_type": "sell",
@@ -34,9 +38,9 @@
         "Severe sell-off in EWY (-7.8% intra-day).",
         "Severe sell-off in MCHI (-2.2% intra-day).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. Liquidating standard risk exposure."
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-07-12 18:09:53.592538+00:00"
+      "generated_at": "2026-07-12 19:12:08.773002+00:00"
     }
   },
   {
@@ -44,7 +48,9 @@
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
-    "warnings": [],
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
     "signal": {
       "symbol": "IWM",
       "signal_type": "sell",
@@ -54,9 +60,9 @@
         "Severe sell-off in EWY (-7.8% intra-day).",
         "Severe sell-off in MCHI (-2.2% intra-day).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. Liquidating standard risk exposure."
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-07-12 18:09:53.592538+00:00"
+      "generated_at": "2026-07-12 19:12:08.773002+00:00"
     }
   },
   {
@@ -64,7 +70,9 @@
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
-    "warnings": [],
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
     "signal": {
       "symbol": "SMH",
       "signal_type": "sell",
@@ -74,73 +82,31 @@
         "Severe sell-off in EWY (-7.8% intra-day).",
         "Severe sell-off in MCHI (-2.2% intra-day).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. Liquidating standard risk exposure."
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-07-12 18:09:53.592538+00:00"
-    }
-  },
-  {
-    "symbol": "TLT",
-    "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 80.25,
-    "warnings": [],
-    "signal": {
-      "symbol": "TLT",
-      "signal_type": "buy",
-      "confidence": 0.85,
-      "current_price": 84.47000122070312,
-      "reasons": [
-        "Severe sell-off in EWY (-7.8% intra-day).",
-        "Severe sell-off in MCHI (-2.2% intra-day).",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. Rotating to Safe Havens."
-      ],
-      "generated_at": "2026-07-12 18:09:53.592538+00:00"
-    }
-  },
-  {
-    "symbol": "GLD",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction ETF is bought per day."
-    ],
-    "signal": {
-      "symbol": "GLD",
-      "signal_type": "buy",
-      "confidence": 0.85,
-      "current_price": 377.010009765625,
-      "reasons": [
-        "Severe sell-off in EWY (-7.8% intra-day).",
-        "Severe sell-off in MCHI (-2.2% intra-day).",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. Rotating to Safe Havens."
-      ],
-      "generated_at": "2026-07-12 18:09:53.592538+00:00"
+      "generated_at": "2026-07-12 19:12:08.773002+00:00"
     }
   },
   {
     "symbol": "UUP",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
+    "approved": true,
+    "target_position_size_usd": 100.0,
+    "stop_loss_price": 26.4,
     "warnings": [
-      "Skipping: Only the top 1 highest-conviction ETF is bought per day."
+      "Sized by risk: max loss about $7.00 at 7% hard stop."
     ],
     "signal": {
       "symbol": "UUP",
       "signal_type": "buy",
-      "confidence": 0.85,
+      "confidence": 0.82,
       "current_price": 28.389999389648438,
       "reasons": [
         "Severe sell-off in EWY (-7.8% intra-day).",
         "Severe sell-off in MCHI (-2.2% intra-day).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. Rotating to Safe Havens."
+        "Macro Regime: Panic. Safe haven is above its 20-day trend."
       ],
-      "generated_at": "2026-07-12 18:09:53.592538+00:00"
+      "generated_at": "2026-07-12 19:12:08.773002+00:00"
     }
   }
 ]

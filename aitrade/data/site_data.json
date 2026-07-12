@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-12T06:47:55.278687+00:00",
+  "updated_at": "2026-07-12T07:50:34.452641+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -730,11 +730,11 @@
     "vix_term_structure": 0.7893907043205051
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.0825,
+    "bullish_score": 0.0325,
     "events": {
       "war": false,
-      "policy_shock": false,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -813,7 +813,5 @@
       }
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

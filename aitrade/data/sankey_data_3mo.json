@@ -29,13 +29,6 @@
       "depth": 3
     },
     {
-      "name": "AMD",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
       "name": "NVDA",
       "itemStyle": {
         "color": "#10b981"
@@ -78,6 +71,13 @@
       "depth": 4
     },
     {
+      "name": "CRM",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
       "name": "MSFT",
       "itemStyle": {
         "color": "#10b981"
@@ -85,9 +85,9 @@
       "depth": 4
     },
     {
-      "name": "CRM",
+      "name": "AMD",
       "itemStyle": {
-        "color": "#ef4444"
+        "color": "#10b981"
       },
       "depth": 4
     },
@@ -97,13 +97,6 @@
         "color": "#10b981"
       },
       "depth": 3
-    },
-    {
-      "name": "MU",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
     },
     {
       "name": "INTC",
@@ -183,13 +176,6 @@
       "depth": 4
     },
     {
-      "name": "SMCI",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
       "name": "U",
       "itemStyle": {
         "color": "#10b981"
@@ -218,6 +204,20 @@
       "depth": 4
     },
     {
+      "name": "SMCI",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "MU",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "Financials",
       "itemStyle": {
         "color": "#10b981"
@@ -233,13 +233,6 @@
     },
     {
       "name": "GS",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "BAC",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -275,6 +268,13 @@
     },
     {
       "name": "WFC",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "BAC",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -562,17 +562,6 @@
     },
     {
       "source": "Mega-Cap Tech",
-      "target": "AMD",
-      "value": 110303.61,
-      "net_flow_dollars": 1103036124721.7864,
-      "market_cap_delta": 510133433796.9016,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
       "target": "NVDA",
       "value": 19619.11,
       "net_flow_dollars": 196191131324.30655,
@@ -639,17 +628,6 @@
     },
     {
       "source": "Mega-Cap Tech",
-      "target": "MSFT",
-      "value": 2856.3,
-      "net_flow_dollars": 28563004602.473053,
-      "market_cap_delta": 105706671177.48724,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
       "target": "CRM",
       "value": 121.66,
       "net_flow_dollars": -1216633375.264622,
@@ -660,22 +638,33 @@
       }
     },
     {
-      "source": "USA",
-      "target": "AI & Cloud Growth",
-      "value": 2617.54,
-      "net_flow_dollars": 26175384009.542633,
-      "market_cap_delta": 221750045.77636716,
+      "source": "Mega-Cap Tech",
+      "target": "MSFT",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
       }
     },
     {
-      "source": "AI & Cloud Growth",
-      "target": "MU",
-      "value": 306102.1,
-      "net_flow_dollars": 3061020988081.821,
-      "market_cap_delta": 631003233608.6726,
+      "source": "Mega-Cap Tech",
+      "target": "AMD",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "USA",
+      "target": "AI & Cloud Growth",
+      "value": 2617.54,
+      "net_flow_dollars": 26175384009.542633,
+      "market_cap_delta": 221750045.77636716,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -804,17 +793,6 @@
     },
     {
       "source": "AI & Cloud Growth",
-      "target": "SMCI",
-      "value": 1094.15,
-      "net_flow_dollars": 10941516356.734589,
-      "market_cap_delta": 1972962386.8825314,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
       "target": "U",
       "value": 609.34,
       "net_flow_dollars": 6093431273.285913,
@@ -858,6 +836,28 @@
       }
     },
     {
+      "source": "AI & Cloud Growth",
+      "target": "SMCI",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
+      "target": "MU",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
       "source": "USA",
       "target": "Financials",
       "value": 1022.53,
@@ -885,17 +885,6 @@
       "value": 1566.48,
       "net_flow_dollars": 15664833136.72368,
       "market_cap_delta": 43478209552.10516,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Financials",
-      "target": "BAC",
-      "value": 1153.16,
-      "net_flow_dollars": 11531600048.216894,
-      "market_cap_delta": 50598678347.38443,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -951,6 +940,17 @@
       "value": 121.13,
       "net_flow_dollars": 1211264129.580876,
       "market_cap_delta": 5385944716.188618,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Financials",
+      "target": "BAC",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1345,7 +1345,7 @@
   "regime_summary": {
     "title": "Bull Market (Buying)",
     "liquidity": "Flowing IN (Positive)",
-    "inflow": "MU / AMD / INTC / SPY / ARM",
+    "inflow": "INTC / SPY / ARM / TSLA / NVDA",
     "outflow": "MSTR / GLD / SLV / IBIT / USO",
     "health": "Optimal"
   },
@@ -1383,8 +1383,8 @@
       "sector": "Financial Services",
       "rev_growth": -0.226,
       "earn_growth": 0,
-      "dollar_volume": 2832023168.7624326,
-      "price_change": 0.14898644101781602
+      "dollar_volume": 1000000.0,
+      "price_change": 0.0
     },
     {
       "symbol": "WDFC",
@@ -1572,8 +1572,8 @@
       "sector": "Financial Services",
       "rev_growth": 0.085,
       "earn_growth": 0.33,
-      "dollar_volume": 5341220781.418551,
-      "price_change": 0.14125472805530193
+      "dollar_volume": 1000000.0,
+      "price_change": 0.0
     },
     {
       "symbol": "RDNT",
@@ -1711,5 +1711,5 @@
       "price_change": 0.30647901365173236
     }
   ],
-  "last_updated": "2026-07-12 17:08:06 UTC"
+  "last_updated": "2026-07-12 18:10:14 UTC"
 }

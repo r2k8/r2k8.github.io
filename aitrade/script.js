@@ -22,7 +22,7 @@ async function fetchData() {
     try {
         const timestamp = new Date().getTime();
         
-        let sankeyData = null, siteData = null, l3Data = null, logText = null;
+        let sankeyData = null, siteData = null, l3Data = null, logText = null, dataQuality = null;
 
         // 1. Fetch our newly generated static pre-compute data.
         const sankeyRes = await fetch(`data/sankey_data_${currentTimeframe}.json?t=${timestamp}`);
@@ -50,7 +50,13 @@ async function fetchData() {
             updateLayer3(l3Data);
         }
 
-        // 4. Fetch Cron Logs
+        // 4. Fetch explicit Layer 1 data-quality manifest.
+        const qualityRes = await fetch(`data/data_quality.json?t=${timestamp}`);
+        if (qualityRes.ok) {
+            dataQuality = await qualityRes.json();
+        }
+
+        // 5. Fetch Cron Logs
         const logRes = await fetch(`data/cron_output.log?t=${timestamp}`);
         if (logRes.ok) {
             logText = await logRes.text();
@@ -77,7 +83,18 @@ async function fetchData() {
         
         let dataHealth = "Optimal";
         let healthColor = "#10b981";
-        if (logText) {
+        if (dataQuality) {
+            if (dataQuality.status === "unsafe" || dataQuality.safe_for_layer2 === false) {
+                dataHealth = "Unsafe";
+                healthColor = "#ef4444";
+            } else if (dataQuality.status === "degraded") {
+                dataHealth = "Degraded";
+                healthColor = "#f59e0b";
+            } else {
+                dataHealth = "Optimal";
+                healthColor = "#10b981";
+            }
+        } else if (logText) {
             if (logText.includes("ERROR") || logText.includes("WARNING")) {
                 dataHealth = "Degraded";
                 healthColor = "#f59e0b";
@@ -89,6 +106,7 @@ async function fetchData() {
         let confidence = 50;
         if (tradeMode === "AGGRESSIVE") confidence += 30;
         if (dataHealth === "Degraded") confidence -= 15;
+        if (dataHealth === "Unsafe") confidence = Math.min(confidence, 15);
         if (sellCount > 0) confidence -= (sellCount * 5);
         confidence = Math.max(0, Math.min(100, Math.round(confidence)));
         
@@ -117,6 +135,7 @@ async function fetchData() {
         if (sellCount > buyCount) riskFactors.push("Layer 3 sell pressure");
         if (sankeyData && sankeyData.regime_summary && sankeyData.regime_summary.title.includes("Bear")) riskFactors.push("elevated global fear");
         if (dataHealth === "Degraded") riskFactors.push("degraded pipeline feeds");
+        if (dataHealth === "Unsafe") riskFactors.push("unsafe data quality blocks new trades");
         
         if (riskFactors.length > 0) {
             mainRisk = riskFactors.join(" + ");

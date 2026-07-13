@@ -1,0 +1,35 @@
+{
+  "capital_flow": {
+    "coverage": 1.0,
+    "expected": 21,
+    "missing_symbols": [],
+    "observed": 21
+  },
+  "generated_at": "2026-07-13T02:28:09.425906+00:00",
+  "market": {
+    "coverage": 1.0,
+    "expected": 22,
+    "missing_symbols": [],
+    "observed": 22,
+    "stale_symbols": []
+  },
+  "news": {
+    "event_flags": {
+      "banking_stress": false,
+      "oil_shock": false,
+      "policy_shock": false,
+      "war": false
+    },
+    "items": 0,
+    "sector_article_count": 0
+  },
+  "notes": [
+    "Layer 2 should block new buys when safe_for_layer2 is false.",
+    "Zero news can be degraded without being unsafe because price/flow data may still be usable."
+  ],
+  "safe_for_layer2": true,
+  "status": "degraded",
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
+}

@@ -5,7 +5,7 @@
     "missing_symbols": [],
     "observed": 21
   },
-  "generated_at": "2026-07-14T13:17:16.444485+00:00",
+  "generated_at": "2026-07-14T14:20:44.283636+00:00",
   "market": {
     "coverage": 1.0,
     "expected": 22,
@@ -17,10 +17,10 @@
     "event_flags": {
       "banking_stress": false,
       "oil_shock": false,
-      "policy_shock": false,
-      "war": false
+      "policy_shock": true,
+      "war": true
     },
-    "items": 0,
+    "items": 33,
     "sector_article_count": 0
   },
   "notes": [
@@ -29,7 +29,5 @@
   ],
   "safe_for_layer2": true,
   "status": "degraded",
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

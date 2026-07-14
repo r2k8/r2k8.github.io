@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-14T00:14:26.011379+00:00",
+  "updated_at": "2026-07-14T01:16:30.739310+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -266,7 +266,7 @@
       "Symbol": "JPM",
       "Company": "JP Morgan Chase & Co.",
       "Domain": "jpmorganchase.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "334.53",
       "RevGrowth": "0.127",
       "EarnGrowth": "0.172",
@@ -299,7 +299,7 @@
       "Symbol": "BAC",
       "Company": "Bank of America Corporation",
       "Domain": "bankofamerica.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "59.5",
       "RevGrowth": "0.081",
       "EarnGrowth": "0.244",
@@ -332,7 +332,7 @@
       "Symbol": "GS",
       "Company": "Goldman Sachs Group, Inc. (The)",
       "Domain": "goldmansachs.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "1045.91",
       "RevGrowth": "0.145",
       "EarnGrowth": "0.242",
@@ -343,11 +343,22 @@
       "Symbol": "WFC",
       "Company": "Wells Fargo & Company",
       "Domain": "wellsfargo.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "87.67",
       "RevGrowth": "0.057",
       "EarnGrowth": "0.151",
       "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-14",
+      "Symbol": "C",
+      "Company": "Citigroup, Inc.",
+      "Domain": "citigroup.com",
+      "Timing": "Before Open",
+      "Price": "140.71",
+      "RevGrowth": "0.159",
+      "EarnGrowth": "0.561",
+      "Signal": "Strong Buy"
     },
     {
       "Date": "2026-07-15",
@@ -361,15 +372,37 @@
       "Signal": "Strong Buy"
     },
     {
-      "Date": "2026-07-13",
-      "Symbol": "BMNR",
-      "Company": "BitMine Immersion Technologies,",
-      "Domain": "bitminetech.io",
-      "Timing": "After Close",
-      "Price": "14.61",
-      "RevGrowth": "6.278",
-      "EarnGrowth": "0.0",
+      "Date": "2026-07-14",
+      "Symbol": "FAST",
+      "Company": "Fastenal Company",
+      "Domain": "fastenal.com",
+      "Timing": "Before Open",
+      "Price": "47.05",
+      "RevGrowth": "0.124",
+      "EarnGrowth": "0.138",
       "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-14",
+      "Symbol": "ERIC",
+      "Company": "Ericsson",
+      "Domain": "ericsson.com",
+      "Timing": "Before Open",
+      "Price": "11.72",
+      "RevGrowth": "-0.103",
+      "EarnGrowth": "-0.785",
+      "Signal": "Avoid"
+    },
+    {
+      "Date": "2026-07-14",
+      "Symbol": "AEHR",
+      "Company": "Aehr Test Systems",
+      "Domain": "aehr.com",
+      "Timing": "After Close",
+      "Price": "68.02",
+      "RevGrowth": "-0.437",
+      "EarnGrowth": "0.0",
+      "Signal": "Neutral"
     }
   ],
   "discovery_radar": [
@@ -741,10 +774,10 @@
     "vix_term_structure": 0.8737271069599193
   },
   "sentiment": {
-    "fear_score": 0.04264705882352942,
-    "bullish_score": 0.04264705882352942,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -770,13 +803,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.15,
-        "articles": 3,
-        "top_headlines": [
-          "Occidental reports sharp rise in oil prices during second quarter",
-          "Occidental sees higher oil prices as Iran conflict lifts crude",
-          "Dow Jones , S & P 500 y Nasdaq caen al cierre ante el recrudecimiento del conflicto en Medio Oriente"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",

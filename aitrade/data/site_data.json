@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-14T10:08:07.645978+00:00",
+  "updated_at": "2026-07-14T11:11:49.041853+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -329,6 +329,17 @@
     },
     {
       "Date": "2026-07-14",
+      "Symbol": "GS",
+      "Company": "Goldman Sachs Group, Inc. (The)",
+      "Domain": "goldmansachs.com",
+      "Timing": "Before Open",
+      "Price": "1045.91",
+      "RevGrowth": "0.145",
+      "EarnGrowth": "0.242",
+      "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-14",
       "Symbol": "WFC",
       "Company": "Wells Fargo & Company",
       "Domain": "wellsfargo.com",
@@ -421,6 +432,15 @@
       "ema50": 37.40780559232662,
       "avg20_volume": 785325.0,
       "latest_volume": 1255000.0
+    },
+    {
+      "symbol": "LAD",
+      "as_of": "2026-07-13",
+      "close": 317.9599914550781,
+      "ema20": 303.06055418608645,
+      "ema50": 295.469864614442,
+      "avg20_volume": 310525.0,
+      "latest_volume": 465900.0
     },
     {
       "symbol": "CAKE",
@@ -745,29 +765,20 @@
       "ema50": 26.219956899838934,
       "avg20_volume": 1083885.0,
       "latest_volume": 2194100.0
-    },
-    {
-      "symbol": "PRGS",
-      "as_of": "2026-07-01",
-      "close": 39.15999984741211,
-      "ema20": 31.873613646593917,
-      "ema50": 30.40106519994682,
-      "avg20_volume": 993100.0,
-      "latest_volume": 3364400.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.28595645930094676,
     "risk_ratio": 1.9066875469036502,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.9299946549044436
+    "vix_term_structure": 0.9343026745609195
   },
   "sentiment": {
-    "fear_score": 0.04141414141414142,
-    "bullish_score": 0.05151515151515152,
+    "fear_score": 0.0325,
+    "bullish_score": 0.0325,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -776,11 +787,9 @@
         "symbol": "XLK",
         "name": "Technology",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Canada government warns country largest financial institutions and banks on Anthropic Claude Mythos and other AI models ; says : New technology can ... "
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "SMH": {
         "symbol": "SMH",
@@ -794,29 +803,17 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.21,
-        "articles": 6,
-        "top_headlines": [
-          "BP set for further boost from oil prices , but braces for \u00a3740m write - down",
-          "Oil Price Surges Amid US - Iran Strikes , Middle East Tensions",
-          " Cest un endroit \u00e9tonnant , un lieu un peu magique  : A Segonzac , le manoir de Mademoiselle , si\u00e8ge des cognacs Ferrand , se d\u00e9voile aux visiteurs tout l  \u00e9t",
-          "Sensex falls over 500 points , Nifty slips as geopolitical tension and rising oil prices weigh on markets",
-          "Oil prices extend run higher as fighting flares in the Middle East"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.37,
-        "articles": 14,
-        "top_headlines": [
-          "Today in History : July 14 ,  Billy the Kid  shot and killed",
-          "LEurope vue dans le rouge , les frappes au Moyen - Orient se poursuivent - 14 / 07 / 2026 \u00e0 08 : 09",
-          "La Bourse de Paris en recul pour le 14 juillet - 14 / 07 / 2026 \u00e0 09 : 57",
-          "Les march\u00e9s boursiers mondiaux reculent alors que le prix du p\u00e9trole remonte apr\u00e8s la menace de Trump dimposer des droits de douane dans le d\u00e9troit dOrmuz - 14 / 07 / 2026 \u00e0 10 : 51",
-          "Today in History : July 14 ,  Billy the Kid  shot and killed"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -854,11 +851,9 @@
         "symbol": "XLU",
         "name": "Utilities",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Minister forecasts electricity stability due to interventions"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       }
     }
   },

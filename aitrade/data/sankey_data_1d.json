@@ -106,13 +106,6 @@
       "depth": 4
     },
     {
-      "name": "META",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
       "name": "MSFT",
       "itemStyle": {
         "color": "#10b981"
@@ -121,13 +114,6 @@
     },
     {
       "name": "GOOGL",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "NVDA",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -151,6 +137,20 @@
       "name": "QCOM",
       "itemStyle": {
         "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "NVDA",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "META",
+      "itemStyle": {
+        "color": "#10b981"
       },
       "depth": 4
     },
@@ -323,6 +323,13 @@
       "depth": 4
     },
     {
+      "name": "TSM",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
       "name": "MDB",
       "itemStyle": {
         "color": "#ef4444"
@@ -361,13 +368,6 @@
       "name": "AI",
       "itemStyle": {
         "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "TSM",
-      "itemStyle": {
-        "color": "#10b981"
       },
       "depth": 4
     },
@@ -683,17 +683,6 @@
     },
     {
       "source": "Mega-Cap Tech",
-      "target": "META",
-      "value": 33.14,
-      "net_flow_dollars": 331425895.064245,
-      "market_cap_delta": 44513838707.320656,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
       "target": "MSFT",
       "value": 31.2,
       "net_flow_dollars": 312045438.39713764,
@@ -709,17 +698,6 @@
       "value": 26.57,
       "net_flow_dollars": 265704388.79728264,
       "market_cap_delta": 66944326346.50954,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
-      "target": "NVDA",
-      "value": 7.32,
-      "net_flow_dollars": 73156566.59828755,
-      "market_cap_delta": 16954699999.999723,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -755,6 +733,28 @@
       "market_cap_delta": -126484503.17382213,
       "lineStyle": {
         "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
+      "target": "NVDA",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
+      "target": "META",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1024,6 +1024,17 @@
     },
     {
       "source": "AI & Cloud Growth",
+      "target": "TSM",
+      "value": 1.36,
+      "net_flow_dollars": -13554644.60789507,
+      "market_cap_delta": -4719634371.5246105,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
       "target": "MDB",
       "value": 1.04,
       "net_flow_dollars": -10391889.238053964,
@@ -1085,17 +1096,6 @@
       "market_cap_delta": -1519440.6823530737,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "TSM",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1345,7 +1345,7 @@
   "regime_summary": {
     "title": "Bull Market (Buying)",
     "liquidity": "Flowing IN (Positive)",
-    "inflow": "AAPL / META / MSFT / AMZN / GOOGL",
+    "inflow": "AAPL / MSFT / AMZN / GOOGL / ASML",
     "outflow": "MU / INTC / AMD / JNJ / TSLA",
     "health": "Optimal"
   },
@@ -1376,6 +1376,24 @@
       "earn_growth": 0.5,
       "dollar_volume": 35047918.90482868,
       "price_change": 0.07341348655191215
+    },
+    {
+      "symbol": "BTSG",
+      "name": "BrightSpring Health Services, I",
+      "sector": "Healthcare",
+      "rev_growth": 0.256,
+      "earn_growth": 3.598,
+      "dollar_volume": 361289990.84973145,
+      "price_change": -0.020238235449541165
+    },
+    {
+      "symbol": "HUBG",
+      "name": "Hub Group, Inc.",
+      "sector": "Industrials",
+      "rev_growth": -0.053,
+      "earn_growth": 0.205,
+      "dollar_volume": 53584563.658339635,
+      "price_change": 0.01099829181600139
     },
     {
       "symbol": "AVTR",
@@ -1691,25 +1709,7 @@
       "earn_growth": 0.411,
       "dollar_volume": 84196832.39509003,
       "price_change": -0.0033035456591556838
-    },
-    {
-      "symbol": "PTCT",
-      "name": "PTC Therapeutics, Inc.",
-      "sector": "Healthcare",
-      "rev_growth": -0.768,
-      "earn_growth": 0,
-      "dollar_volume": 66895801.86134532,
-      "price_change": 0.009992266690886788
-    },
-    {
-      "symbol": "WRLD",
-      "name": "World Acceptance Corporation",
-      "sector": "Financial Services",
-      "rev_growth": 0.073,
-      "earn_growth": -0.054,
-      "dollar_volume": 16596647.070800783,
-      "price_change": -0.006790252278895145
     }
   ],
-  "last_updated": "2026-07-15 20:51:01 UTC"
+  "last_updated": "2026-07-15 21:54:26 UTC"
 }

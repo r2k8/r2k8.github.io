@@ -400,6 +400,13 @@
       "depth": 4
     },
     {
+      "name": "SBUX",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "MCD",
       "itemStyle": {
         "color": "#ef4444"
@@ -410,13 +417,6 @@
       "name": "HD",
       "itemStyle": {
         "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "SBUX",
-      "itemStyle": {
-        "color": "#10b981"
       },
       "depth": 4
     },
@@ -1145,6 +1145,17 @@
     },
     {
       "source": "Consumer",
+      "target": "SBUX",
+      "value": 1851.94,
+      "net_flow_dollars": 18519417119.230667,
+      "market_cap_delta": 23819730695.617683,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Consumer",
       "target": "MCD",
       "value": 1501.84,
       "net_flow_dollars": -15018415919.782341,
@@ -1162,17 +1173,6 @@
       "market_cap_delta": -2652327939.7531233,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Consumer",
-      "target": "SBUX",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1376,6 +1376,24 @@
       "earn_growth": 0.5,
       "dollar_volume": 1768846969.9509015,
       "price_change": 0.20991113421068727
+    },
+    {
+      "symbol": "BTSG",
+      "name": "BrightSpring Health Services, I",
+      "sector": "Healthcare",
+      "rev_growth": 0.256,
+      "earn_growth": 3.598,
+      "dollar_volume": 13360276215.078583,
+      "price_change": 0.8226969862811873
+    },
+    {
+      "symbol": "HUBG",
+      "name": "Hub Group, Inc.",
+      "sector": "Industrials",
+      "rev_growth": -0.053,
+      "earn_growth": 0.205,
+      "dollar_volume": 3413227765.858584,
+      "price_change": 0.12180237589909756
     },
     {
       "symbol": "AVTR",
@@ -1691,25 +1709,7 @@
       "earn_growth": 0.411,
       "dollar_volume": 7598257076.935317,
       "price_change": 0.4708679779814768
-    },
-    {
-      "symbol": "PTCT",
-      "name": "PTC Therapeutics, Inc.",
-      "sector": "Healthcare",
-      "rev_growth": -0.768,
-      "earn_growth": 0,
-      "dollar_volume": 9375784620.609018,
-      "price_change": 0.03791464373210415
-    },
-    {
-      "symbol": "WRLD",
-      "name": "World Acceptance Corporation",
-      "sector": "Financial Services",
-      "rev_growth": 0.073,
-      "earn_growth": -0.054,
-      "dollar_volume": 2153791414.967169,
-      "price_change": 0.38571118517083003
     }
   ],
-  "last_updated": "2026-07-15 20:51:09 UTC"
+  "last_updated": "2026-07-15 21:54:36 UTC"
 }

@@ -106,6 +106,13 @@
       "depth": 4
     },
     {
+      "name": "META",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "MSFT",
       "itemStyle": {
         "color": "#10b981"
@@ -114,6 +121,13 @@
     },
     {
       "name": "GOOGL",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "NVDA",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -137,20 +151,6 @@
       "name": "QCOM",
       "itemStyle": {
         "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "NVDA",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "META",
-      "itemStyle": {
-        "color": "#10b981"
       },
       "depth": 4
     },
@@ -683,6 +683,17 @@
     },
     {
       "source": "Mega-Cap Tech",
+      "target": "META",
+      "value": 33.14,
+      "net_flow_dollars": 331425895.064245,
+      "market_cap_delta": 44513838707.320656,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
       "target": "MSFT",
       "value": 31.2,
       "net_flow_dollars": 312045438.39713764,
@@ -698,6 +709,17 @@
       "value": 26.57,
       "net_flow_dollars": 265704388.79728264,
       "market_cap_delta": 66944326346.50954,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
+      "target": "NVDA",
+      "value": 7.32,
+      "net_flow_dollars": 73156566.59828755,
+      "market_cap_delta": 16954699999.999723,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -733,28 +755,6 @@
       "market_cap_delta": -126484503.17382213,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
-      "target": "NVDA",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
-      "target": "META",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1345,7 +1345,7 @@
   "regime_summary": {
     "title": "Bull Market (Buying)",
     "liquidity": "Flowing IN (Positive)",
-    "inflow": "AAPL / MSFT / AMZN / GOOGL / ASML",
+    "inflow": "AAPL / META / MSFT / AMZN / GOOGL",
     "outflow": "MU / INTC / AMD / JNJ / TSLA",
     "health": "Optimal"
   },
@@ -1396,6 +1396,15 @@
       "price_change": 0.01099829181600139
     },
     {
+      "symbol": "VCTR",
+      "name": "Victory Capital Holdings, Inc. ",
+      "sector": "Financial Services",
+      "rev_growth": 0.767,
+      "earn_growth": 0.385,
+      "dollar_volume": 79677146.69490398,
+      "price_change": 0.013817840857295902
+    },
+    {
       "symbol": "AVTR",
       "name": "Avantor, Inc.",
       "sector": "Healthcare",
@@ -1412,15 +1421,6 @@
       "earn_growth": 0,
       "dollar_volume": 12729083.631312381,
       "price_change": 0.028089907810692694
-    },
-    {
-      "symbol": "VCTR",
-      "name": "Victory Capital Holdings, Inc. ",
-      "sector": "Financial Services",
-      "rev_growth": 0.767,
-      "earn_growth": 0.385,
-      "dollar_volume": 79677146.69490398,
-      "price_change": 0.013817840857295902
     },
     {
       "symbol": "CPRX",
@@ -1711,5 +1711,5 @@
       "price_change": -0.0033035456591556838
     }
   ],
-  "last_updated": "2026-07-15 21:54:26 UTC"
+  "last_updated": "2026-07-15 22:56:56 UTC"
 }

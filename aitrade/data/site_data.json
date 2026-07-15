@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-15T21:54:05.698374+00:00",
+  "updated_at": "2026-07-15T22:56:43.742714+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -384,17 +384,6 @@
     },
     {
       "Date": "2026-07-15",
-      "Symbol": "UAL",
-      "Company": "United Airlines Holdings, Inc.",
-      "Domain": "united.com",
-      "Timing": "After Close",
-      "Price": "120.97",
-      "RevGrowth": "0.106",
-      "EarnGrowth": "0.845",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-15",
       "Symbol": "MTB",
       "Company": "M&T Bank Corporation",
       "Domain": "mtb.com",
@@ -409,7 +398,7 @@
       "Symbol": "JBHT",
       "Company": "J.B. Hunt Transport Services, I",
       "Domain": "jbhunt.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "276.28",
       "RevGrowth": "0.046",
       "EarnGrowth": "0.274",
@@ -507,6 +496,15 @@
       "latest_volume": 1235313.0
     },
     {
+      "symbol": "VCTR",
+      "as_of": "2026-07-15",
+      "close": 99.05000305175781,
+      "ema20": 89.60196816653398,
+      "ema50": 85.86663726244946,
+      "avg20_volume": 513551.05,
+      "latest_volume": 945621.0
+    },
+    {
       "symbol": "AVTR",
       "as_of": "2026-07-14",
       "close": 11.289999961853027,
@@ -523,15 +521,6 @@
       "ema50": 27.922975909352445,
       "avg20_volume": 729125.0,
       "latest_volume": 1713200.0
-    },
-    {
-      "symbol": "VCTR",
-      "as_of": "2026-07-14",
-      "close": 97.69999694824219,
-      "ema20": 88.60989280140545,
-      "ema50": 85.4243863088993,
-      "avg20_volume": 495255.0,
-      "latest_volume": 798800.0
     },
     {
       "symbol": "CPRX",
@@ -829,11 +818,11 @@
     "vix_term_structure": 0.8286620942748676
   },
   "sentiment": {
-    "fear_score": 0.04142857142857143,
-    "bullish_score": 0.04142857142857143,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -858,21 +847,17 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "US reimposes blockade and steps up strikes as Iran threatens to halt Mideast energy exports"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Looted gold and gum arabic are bankrolling Sudan war , UN warns"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -886,11 +871,9 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Johnson unveils $95B plan for defense spending , election overhaul"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLY": {
         "symbol": "XLY",

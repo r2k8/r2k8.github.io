@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-15T04:02:16.233500+00:00",
+  "updated_at": "2026-07-15T05:04:53.781118+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -517,22 +517,13 @@
   ],
   "discovery_radar": [
     {
-      "symbol": "CPRX",
-      "as_of": "2026-07-14",
-      "close": 31.489999771118164,
-      "ema20": 31.402480221728215,
-      "ema50": 30.67491337848982,
-      "avg20_volume": 2557153.8,
-      "latest_volume": 9695876.0
-    },
-    {
       "symbol": "AVTR",
       "as_of": "2026-07-14",
       "close": 11.289999961853027,
       "ema20": 10.080824649552799,
       "ema50": 9.44397899473872,
-      "avg20_volume": 8370071.9,
-      "latest_volume": 13326938.0
+      "avg20_volume": 8370100.0,
+      "latest_volume": 13327500.0
     },
     {
       "symbol": "FG",
@@ -542,6 +533,15 @@
       "ema50": 27.922975909352445,
       "avg20_volume": 729125.0,
       "latest_volume": 1713200.0
+    },
+    {
+      "symbol": "CPRX",
+      "as_of": "2026-07-13",
+      "close": 31.479999542236328,
+      "ema20": 31.393267637581904,
+      "ema50": 30.64164454613764,
+      "avg20_volume": 2848053.2,
+      "latest_volume": 15513864.0
     },
     {
       "symbol": "CALM",
@@ -881,7 +881,7 @@
     "breadth_ratio": 0.28595645930094676,
     "risk_ratio": 1.9066875469036502,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8885299015163063
+    "vix_term_structure": 0.9240710893600552
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -967,7 +967,5 @@
       }
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

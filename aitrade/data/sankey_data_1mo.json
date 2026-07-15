@@ -85,6 +85,55 @@
       "depth": 4
     },
     {
+      "name": "Healthcare",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 3
+    },
+    {
+      "name": "ABBV",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "JNJ",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "UNH",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "PFE",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "LLY",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "MRK",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "AI & Cloud Growth",
       "itemStyle": {
         "color": "#10b981"
@@ -120,7 +169,21 @@
       "depth": 4
     },
     {
+      "name": "SNOW",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "SOFI",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "CRWD",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -191,20 +254,6 @@
     },
     {
       "name": "MDB",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "SNOW",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "CRWD",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -366,55 +415,6 @@
     },
     {
       "name": "SBUX",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "Healthcare",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 3
-    },
-    {
-      "name": "ABBV",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "JNJ",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "UNH",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "PFE",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "LLY",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "MRK",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -650,6 +650,83 @@
     },
     {
       "source": "USA",
+      "target": "Healthcare",
+      "value": 94.48,
+      "net_flow_dollars": 944846629.5439469,
+      "market_cap_delta": 884417910.421855,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Healthcare",
+      "target": "ABBV",
+      "value": 176.6,
+      "net_flow_dollars": 1766006985.8244169,
+      "market_cap_delta": 30123815441.3205,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Healthcare",
+      "target": "JNJ",
+      "value": 158.05,
+      "net_flow_dollars": 1580464763.8672812,
+      "market_cap_delta": 31245690976.066383,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Healthcare",
+      "target": "UNH",
+      "value": 143.16,
+      "net_flow_dollars": 1431613236.5550706,
+      "market_cap_delta": 15138769431.82944,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Healthcare",
+      "target": "PFE",
+      "value": 141.63,
+      "net_flow_dollars": -1416256467.3724577,
+      "market_cap_delta": -11170910571.240005,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Healthcare",
+      "target": "LLY",
+      "value": 91.15,
+      "net_flow_dollars": 911534821.4083655,
+      "market_cap_delta": 17424661906.88867,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Healthcare",
+      "target": "MRK",
+      "value": 26.51,
+      "net_flow_dollars": 265145559.91789487,
+      "market_cap_delta": 4272793223.0276256,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "USA",
       "target": "AI & Cloud Growth",
       "value": 89.52,
       "net_flow_dollars": 895223344.9415781,
@@ -705,10 +782,32 @@
     },
     {
       "source": "AI & Cloud Growth",
+      "target": "SNOW",
+      "value": 435.8,
+      "net_flow_dollars": 4358016264.833994,
+      "market_cap_delta": 14959256846.191406,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
       "target": "SOFI",
       "value": 357.75,
       "net_flow_dollars": 3577499436.932618,
       "market_cap_delta": 2526999185.3461323,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
+      "target": "CRWD",
+      "value": 354.35,
+      "net_flow_dollars": 3543514871.9271293,
+      "market_cap_delta": 40760914627.92702,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -819,28 +918,6 @@
       "value": 4.82,
       "net_flow_dollars": 48230169.989485115,
       "market_cap_delta": 150408783.5085501,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "SNOW",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "CRWD",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1094,83 +1171,6 @@
       "value": 31.03,
       "net_flow_dollars": 310287454.5832189,
       "market_cap_delta": 3567258913.146965,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "USA",
-      "target": "Healthcare",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Healthcare",
-      "target": "ABBV",
-      "value": 176.6,
-      "net_flow_dollars": 1766006985.8244169,
-      "market_cap_delta": 30123815441.3205,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Healthcare",
-      "target": "JNJ",
-      "value": 158.05,
-      "net_flow_dollars": 1580464763.8672812,
-      "market_cap_delta": 31245690976.066383,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Healthcare",
-      "target": "UNH",
-      "value": 143.16,
-      "net_flow_dollars": 1431613236.5550706,
-      "market_cap_delta": 15138769431.82944,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Healthcare",
-      "target": "PFE",
-      "value": 141.63,
-      "net_flow_dollars": -1416256467.3724577,
-      "market_cap_delta": -11170910571.240005,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Healthcare",
-      "target": "LLY",
-      "value": 91.15,
-      "net_flow_dollars": 911534821.4083655,
-      "market_cap_delta": 17424661906.88867,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Healthcare",
-      "target": "MRK",
-      "value": 26.51,
-      "net_flow_dollars": 265145559.91789487,
-      "market_cap_delta": 4272793223.0276256,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1711,5 +1711,5 @@
       "price_change": -0.05886472984051986
     }
   ],
-  "last_updated": "2026-07-15 11:23:00 UTC"
+  "last_updated": "2026-07-15 12:25:55 UTC"
 }

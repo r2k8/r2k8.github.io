@@ -11,14 +11,57 @@
       "symbol": "GLD",
       "signal_type": "liquidate",
       "confidence": 0.8010416666666667,
-      "current_price": 372.2699890136719,
+      "current_price": 373.3399963378906,
       "reasons": [
         "PORTFOLIO MATCH: You own 1.0 shares.",
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 4).",
         "Cutting losses (-$36.25)."
       ],
-      "generated_at": "2026-07-15 17:41:56.446194+00:00"
+      "generated_at": "2026-07-15 18:45:23.483030+00:00"
+    }
+  },
+  {
+    "symbol": "PATH",
+    "approved": true,
+    "target_position_size_usd": 100.0,
+    "stop_loss_price": 11.13,
+    "warnings": [
+      "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "PATH",
+      "signal_type": "buy",
+      "confidence": 0.8,
+      "current_price": 11.96500015258789,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 17.3%; earnings growth 0.0%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Technology."
+      ],
+      "generated_at": "2026-07-15 18:45:23.483030+00:00"
+    }
+  },
+  {
+    "symbol": "XLF",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Buy confidence 0.78 is below threshold 0.78; no action."
+    ],
+    "signal": {
+      "symbol": "XLF",
+      "signal_type": "buy",
+      "confidence": 0.7766666666666666,
+      "current_price": 56.53499984741211,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 6).",
+        "Volume confirms institutional participation (latest volume >= 20-day average)."
+      ],
+      "generated_at": "2026-07-15 18:45:23.483030+00:00"
     }
   },
   {
@@ -33,12 +76,12 @@
       "symbol": "MCHI",
       "signal_type": "sell",
       "confidence": 0.7012195121951219,
-      "current_price": 54.32500076293945,
+      "current_price": 54.31999969482422,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 18)."
       ],
-      "generated_at": "2026-07-15 17:41:56.446194+00:00"
+      "generated_at": "2026-07-15 18:45:23.483030+00:00"
     }
   },
   {
@@ -53,12 +96,12 @@
       "symbol": "HYG",
       "signal_type": "sell",
       "confidence": 0.7011764705882353,
-      "current_price": 79.8042984008789,
+      "current_price": 79.79499816894531,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 15)."
       ],
-      "generated_at": "2026-07-15 17:41:56.446194+00:00"
+      "generated_at": "2026-07-15 18:45:23.483030+00:00"
     }
   }
 ]

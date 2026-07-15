@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-15T09:17:01.348471+00:00",
+  "updated_at": "2026-07-15T10:19:30.666457+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -262,17 +262,6 @@
       "Signal": "Strong Buy"
     },
     {
-      "Date": "2026-07-14",
-      "Symbol": "JPM",
-      "Company": "JP Morgan Chase & Co.",
-      "Domain": "jpmorganchase.com",
-      "Timing": "After Close",
-      "Price": "342.89",
-      "RevGrowth": "0.127",
-      "EarnGrowth": "0.172",
-      "Signal": "Buy"
-    },
-    {
       "Date": "2026-07-15",
       "Symbol": "ASML",
       "Company": "ASML Holding N.V. - New York Re",
@@ -292,17 +281,6 @@
       "Price": "253.85",
       "RevGrowth": "0.099",
       "EarnGrowth": "-0.529",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-14",
-      "Symbol": "BAC",
-      "Company": "Bank of America Corporation",
-      "Domain": "bankofamerica.com",
-      "Timing": "After Close",
-      "Price": "60.62",
-      "RevGrowth": "0.081",
-      "EarnGrowth": "0.244",
       "Signal": "Buy"
     },
     {
@@ -337,28 +315,6 @@
       "RevGrowth": "0.163",
       "EarnGrowth": "0.319",
       "Signal": "Strong Buy"
-    },
-    {
-      "Date": "2026-07-14",
-      "Symbol": "GS",
-      "Company": "Goldman Sachs Group, Inc. (The)",
-      "Domain": "goldmansachs.com",
-      "Timing": "After Close",
-      "Price": "1140.0",
-      "RevGrowth": "0.145",
-      "EarnGrowth": "0.242",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-14",
-      "Symbol": "WFC",
-      "Company": "Wells Fargo & Company",
-      "Domain": "wellsfargo.com",
-      "Timing": "After Close",
-      "Price": "85.29",
-      "RevGrowth": "0.057",
-      "EarnGrowth": "0.151",
-      "Signal": "Buy"
     },
     {
       "Date": "2026-07-15",
@@ -578,6 +534,15 @@
       "ema50": 295.469864614442,
       "avg20_volume": 310525.0,
       "latest_volume": 465900.0
+    },
+    {
+      "symbol": "RDN",
+      "as_of": "2026-07-13",
+      "close": 38.0099983215332,
+      "ema20": 36.972575694019724,
+      "ema50": 36.177479872274816,
+      "avg20_volume": 1539436.9,
+      "latest_volume": 6349938.0
     },
     {
       "symbol": "CAKE",
@@ -866,29 +831,20 @@
       "ema50": 27.17358608975443,
       "avg20_volume": 344775.35,
       "latest_volume": 522607.0
-    },
-    {
-      "symbol": "DAVE",
-      "as_of": "2026-07-01",
-      "close": 383.1300048828125,
-      "ema20": 317.0399203299825,
-      "ema50": 279.11834007247137,
-      "avg20_volume": 658455.0,
-      "latest_volume": 1067900.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.28595645930094676,
     "risk_ratio": 1.9066875469036502,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8734517813629953
+    "vix_term_structure": 0.8777598010194712
   },
   "sentiment": {
-    "fear_score": 0.03545454545454546,
-    "bullish_score": 0.03545454545454546,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
-      "policy_shock": true,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -913,11 +869,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "India , Baker Hughes explore strengthening cooperation on geothermal energy"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",

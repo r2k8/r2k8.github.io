@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-15T12:25:38.977125+00:00",
+  "updated_at": "2026-07-15T13:29:26.469273+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -266,7 +266,7 @@
       "Symbol": "ASML",
       "Company": "ASML Holding N.V. - New York Re",
       "Domain": "asml.com",
-      "Timing": "Before Open",
+      "Timing": "After Close",
       "Price": "1775.64",
       "RevGrowth": "0.132",
       "EarnGrowth": "0.192",
@@ -307,17 +307,6 @@
     },
     {
       "Date": "2026-07-15",
-      "Symbol": "MS",
-      "Company": "Morgan Stanley",
-      "Domain": "morganstanley.com",
-      "Timing": "Before Open",
-      "Price": "227.67",
-      "RevGrowth": "0.163",
-      "EarnGrowth": "0.319",
-      "Signal": "Strong Buy"
-    },
-    {
-      "Date": "2026-07-15",
       "Symbol": "BLK",
       "Company": "BlackRock, Inc.",
       "Domain": "blackrock.com",
@@ -336,28 +325,6 @@
       "Price": "226.58",
       "RevGrowth": "0.087",
       "EarnGrowth": "0.098",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-15",
-      "Symbol": "PNC",
-      "Company": "PNC Financial Services Group, I",
-      "Domain": "pnc.com",
-      "Timing": "Before Open",
-      "Price": "251.88",
-      "RevGrowth": "0.138",
-      "EarnGrowth": "0.177",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-15",
-      "Symbol": "BK",
-      "Company": "The Bank of New York Mellon Cor",
-      "Domain": "bny.com",
-      "Timing": "Before Open",
-      "Price": "137.16",
-      "RevGrowth": "0.134",
-      "EarnGrowth": "0.418",
       "Signal": "Buy"
     },
     {
@@ -446,17 +413,6 @@
       "Price": "16.29",
       "RevGrowth": "6.278",
       "EarnGrowth": "0.0",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-15",
-      "Symbol": "CAG",
-      "Company": "ConAgra Brands, Inc.",
-      "Domain": "conagrabrands.com",
-      "Timing": "Before Open",
-      "Price": "14.15",
-      "RevGrowth": "-0.019",
-      "EarnGrowth": "0.39",
       "Signal": "Buy"
     },
     {
@@ -837,11 +793,11 @@
     "breadth_ratio": 0.28595645930094676,
     "risk_ratio": 1.9066875469036502,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8836833665638595
+    "vix_term_structure": 0.8707593075944318
   },
   "sentiment": {
-    "fear_score": 0.0425,
-    "bullish_score": 0.0425,
+    "fear_score": 0.030555555555555558,
+    "bullish_score": 0.08611111111111111,
     "events": {
       "war": true,
       "policy_shock": true,
@@ -868,22 +824,22 @@
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
+        "score": 0.3333,
+        "confidence": 0.17,
+        "articles": 3,
         "top_headlines": [
-          "Oil Prices Climb for Fourth Day as Iran Threatens New Energy Chokepoints"
+          "Africa Oil Producers Are Investing More in Critical Minerals",
+          "Tehran threatens to halt all Mideast energy exports after US reimposes its blockade on Iran",
+          "Aker BP Profit Surges on Higher Oil Prices"
         ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Ali Ahmeti d\u00ebnon deklarat\u00ebn e ministres serbe : Ideologjit\u00eb e urrejtjes p\u00ebrfundojn\u00eb n\u00eb bank\u00ebn e historis\u00eb"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -900,7 +856,7 @@
         "confidence": 0.11,
         "articles": 1,
         "top_headlines": [
-          "Senate Blocks Defense Budget Amid Iran War Protests"
+          "Commentary : Industrial accidents in poor neighborhoods are so L . A . And it nothing new"
         ]
       },
       "XLY": {

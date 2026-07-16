@@ -614,14 +614,18 @@ function renderEarningsRadar(earningsData) {
         const dayIndex = dateObj.getUTCDay() - 1;
         if (dayIndex >= 0 && dayIndex < 5) {
             const dayName = days[dayIndex];
+            const revGrowth = item.RevGrowth ? parseFloat(item.RevGrowth) : 0;
+            const earnGrowth = item.EarnGrowth ? parseFloat(item.EarnGrowth) : 0;
+            const signal = item.Signal || 'Neutral';
             const dataObj = {
                 t: item.Symbol,
                 n: item.Company || item.Symbol,
                 dom: item.Domain || (item.Symbol.toLowerCase() + '.com'),
                 p: item.Price ? parseFloat(item.Price).toFixed(2) : 'N/A',
-                rg: item.RevGrowth ? (parseFloat(item.RevGrowth) * 100).toFixed(1) + '%' : '0%',
-                eg: item.EarnGrowth ? (parseFloat(item.EarnGrowth) * 100).toFixed(1) + '%' : '0%',
-                sig: item.Signal || 'Neutral'
+                rg: `${(revGrowth * 100).toFixed(1)}%`,
+                eg: `${(earnGrowth * 100).toFixed(1)}%`,
+                sig: signal,
+                score: (signal === 'Strong Buy' ? 3 : signal === 'Buy' ? 2 : signal === 'Avoid' ? 0 : 1) + Math.max(0, revGrowth) + Math.max(0, earnGrowth)
             };
             if (item.Timing === 'After Close') {
                 scheduleMap[dayName].after.push(dataObj);
@@ -647,39 +651,39 @@ function renderEarningsRadar(earningsData) {
         return;
     }
 
+    const escapeAttr = (value) => String(value || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const renderTickerTile = (c) => {
+        const signalClass = c.sig === 'Strong Buy' ? 'earnings-strong' : c.sig === 'Buy' ? 'earnings-buy' : c.sig === 'Avoid' ? 'earnings-avoid' : 'earnings-neutral';
+        const title = `${c.t} - ${c.n}\nPrice: $${c.p}\nRevenue Growth: ${c.rg}\nEPS Growth: ${c.eg}\nSignal: ${c.sig}`;
+        return `
+            <div class="earnings-tile ${signalClass}" title="${escapeAttr(title)}">
+                <img class="earnings-logo" src="https://logo.clearbit.com/${escapeAttr(c.dom)}" alt="" onerror="this.style.display='none'">
+                <span class="earnings-symbol">${c.t}</span>
+            </div>
+        `;
+    };
+    const renderLane = (items, emptyLabel) => {
+        const sorted = [...items].sort((a, b) => b.score - a.score || a.t.localeCompare(b.t));
+        if (!sorted.length) {
+            return `<div class="earnings-empty">${emptyLabel}</div>`;
+        }
+        return `<div class="earnings-tile-grid">${sorted.map(renderTickerTile).join('')}</div>`;
+    };
+
     container.innerHTML = schedule.map(day => `
         <div class="earnings-day">
-            <div class="day-header">${day.day}</div>
-            <div class="day-body">
-                <div class="day-half">
-                    <div class="half-header">Before Open ☀️</div>
-                    ${day.before.map(c => `
-                        <div class="company-card">
-                            <img class="company-logo" src="https://logo.clearbit.com/${c.dom}" onerror="this.style.display='none'">
-                            <div class="company-ticker" style="color: #60a5fa">${c.t}</div>
-                            <div class="company-name">${c.n}</div>
-                            <div style="font-size: 0.8rem; margin-top: 0.5rem; color: #cbd5e1;">Price: $${c.p}</div>
-                            <div style="font-size: 0.75rem; color: #94a3b8;">Rev: ${c.rg} | EPS: ${c.eg}</div>
-                            <div style="margin-top: 0.4rem;">
-                                <span class="tag" style="background: ${c.sig === 'Strong Buy' ? 'rgba(34,197,94,0.2)' : c.sig === 'Buy' ? 'rgba(59,130,246,0.2)' : c.sig === 'Avoid' ? 'rgba(239,68,68,0.2)' : 'rgba(255,255,255,0.1)'}; color: ${c.sig === 'Strong Buy' ? '#4ade80' : c.sig === 'Buy' ? '#60a5fa' : c.sig === 'Avoid' ? '#f87171' : '#94a3b8'}; padding: 2px 6px; font-size: 0.7rem; border-radius: 4px;">${c.sig}</span>
-                            </div>
-                        </div>
-                    `).join('')}
+            <div class="day-header">
+                <span>${day.day}</span>
+                <small>${day.before.length + day.after.length} reports</small>
+            </div>
+            <div class="earnings-lanes">
+                <div class="earnings-lane">
+                    <div class="half-header">Before Open</div>
+                    ${renderLane(day.before, 'No reports')}
                 </div>
-                <div class="day-half">
-                    <div class="half-header">After Close 🌙</div>
-                    ${day.after.map(c => `
-                        <div class="company-card">
-                            <img class="company-logo" src="https://logo.clearbit.com/${c.dom}" onerror="this.style.display='none'">
-                            <div class="company-ticker" style="color: #f472b6">${c.t}</div>
-                            <div class="company-name">${c.n}</div>
-                            <div style="font-size: 0.8rem; margin-top: 0.5rem; color: #cbd5e1;">Price: $${c.p}</div>
-                            <div style="font-size: 0.75rem; color: #94a3b8;">Rev: ${c.rg} | EPS: ${c.eg}</div>
-                            <div style="margin-top: 0.4rem;">
-                                <span class="tag" style="background: ${c.sig === 'Strong Buy' ? 'rgba(34,197,94,0.2)' : c.sig === 'Buy' ? 'rgba(59,130,246,0.2)' : c.sig === 'Avoid' ? 'rgba(239,68,68,0.2)' : 'rgba(255,255,255,0.1)'}; color: ${c.sig === 'Strong Buy' ? '#4ade80' : c.sig === 'Buy' ? '#60a5fa' : c.sig === 'Avoid' ? '#f87171' : '#94a3b8'}; padding: 2px 6px; font-size: 0.7rem; border-radius: 4px;">${c.sig}</span>
-                            </div>
-                        </div>
-                    `).join('')}
+                <div class="earnings-lane">
+                    <div class="half-header">After Close</div>
+                    ${renderLane(day.after, 'No reports')}
                 </div>
             </div>
         </div>

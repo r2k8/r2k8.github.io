@@ -145,18 +145,118 @@ pre { padding: 1.5rem; font-family: 'Menlo', 'Monaco', monospace; font-size: 0.8
 .loader { width: 30px; height: 30px; border: 3px solid rgba(255,255,255,0.1); border-top-color: var(--accent); border-radius: 50%; animation: spin 1s infinite linear; }
 @keyframes spin { to { transform: rotate(360deg); } }
 /* Earnings Calendar */
-.earnings-calendar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1.5rem; }
-.earnings-day { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s ease, background 0.2s ease; }
-.earnings-day:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.04); }
-.day-header { text-align: center; padding: 0.8rem; background: rgba(0, 0, 0, 0.2); font-weight: 600; font-size: 1.1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-.day-body { display: flex; flex: 1; }
-.day-half { flex: 1; padding: 0.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
-.day-half:first-child { border-right: 1px solid rgba(255, 255, 255, 0.05); }
-.half-header { text-align: center; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 0.5rem; }
-.company-card { display: flex; flex-direction: column; align-items: center; padding: 0.5rem; border-radius: 8px; transition: background 0.2s; cursor: pointer; }
-.company-card:hover { background: rgba(255, 255, 255, 0.08); }
-.company-ticker { font-weight: 700; font-size: 1rem; letter-spacing: 0.5px; margin-bottom: 0.2rem; }
-.company-name { font-size: 0.8rem; color: var(--text-muted); text-overflow: ellipsis; overflow: hidden; white-space: nowrap; max-width: 100%; display: block; }
+.earnings-calendar {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(170px, 1fr));
+    gap: 0.35rem;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow-x: auto;
+    background: rgba(15, 23, 42, 0.35);
+}
+.earnings-day {
+    min-height: 360px;
+    background: rgba(255, 255, 255, 0.025);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+.earnings-day:last-child { border-right: 0; }
+.day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.7rem 0.85rem;
+    background: rgba(0, 0, 0, 0.24);
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.day-header small {
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.earnings-lanes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+    min-height: 0;
+}
+.earnings-lane {
+    padding: 0.6rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    min-width: 0;
+}
+.earnings-lane:last-child { border-right: 0; }
+.half-header {
+    text-align: center;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    font-weight: 800;
+    margin-bottom: 0.55rem;
+}
+.earnings-tile-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.38rem;
+}
+.earnings-tile {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    align-items: center;
+    gap: 0.42rem;
+    min-height: 32px;
+    padding: 0.28rem 0.36rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.045);
+    cursor: help;
+}
+.earnings-tile:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(96, 165, 250, 0.45);
+}
+.earnings-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 2px;
+}
+.earnings-symbol {
+    min-width: 0;
+    color: var(--text-main);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.earnings-strong { border-left: 3px solid #22c55e; }
+.earnings-buy { border-left: 3px solid #60a5fa; }
+.earnings-neutral { border-left: 3px solid rgba(148, 163, 184, 0.7); }
+.earnings-avoid { border-left: 3px solid #ef4444; opacity: 0.78; }
+.earnings-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    color: rgba(148, 163, 184, 0.45);
+    font-size: 0.76rem;
+    text-align: center;
+    border: 1px dashed rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+}
 
 .timeframe-toggles { display: flex; gap: 4px; background: rgba(0,0,0,0.3); padding: 4px; border-radius: 8px; border: 1px solid var(--glass-border); }
 .tf-btn { background: transparent; border: none; color: var(--text-muted); padding: 4px 12px; font-size: 0.85rem; border-radius: 4px; cursor: pointer; transition: all 0.2s ease; font-family: 'Outfit'; }
@@ -165,8 +265,8 @@ pre { padding: 1.5rem; font-family: 'Menlo', 'Monaco', monospace; font-size: 0.8
 .company-logo { width: 32px; height: 32px; border-radius: 6px; object-fit: contain; margin-bottom: 0.4rem; background: rgba(255,255,255,0.1); padding: 2px; }
 
 @media (max-width: 1024px) {
-    .earnings-calendar { grid-template-columns: repeat(3, 1fr); }
+    .earnings-calendar { grid-template-columns: repeat(5, minmax(160px, 1fr)); }
     .discovery-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (max-width: 768px) { .stage { flex-direction: column; gap: 1rem; } .connector { display: none; } .earnings-calendar { grid-template-columns: 1fr; } .discovery-summary { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .stage { flex-direction: column; gap: 1rem; } .connector { display: none; } .earnings-calendar { grid-template-columns: repeat(5, minmax(150px, 1fr)); } .discovery-summary { grid-template-columns: 1fr; } }

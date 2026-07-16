@@ -1,6 +1,6 @@
 [
   {
-    "symbol": "GLD",
+    "symbol": "SPY",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
@@ -8,84 +8,22 @@
       "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "GLD",
-      "signal_type": "liquidate",
-      "confidence": 0.8010526315789473,
-      "current_price": 372.3500061035156,
-      "reasons": [
-        "PORTFOLIO MATCH: You own 1.0 shares.",
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 5).",
-        "Cutting losses (-$36.25)."
-      ],
-      "generated_at": "2026-07-16 12:32:12.574049+00:00"
-    }
-  },
-  {
-    "symbol": "HUBG",
-    "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 44.45,
-    "warnings": [
-      "Sized by risk: max loss about $7.00 at 7% hard stop."
-    ],
-    "signal": {
-      "symbol": "HUBG",
-      "signal_type": "buy",
-      "confidence": 0.8,
-      "current_price": 47.79999923706055,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth -5.3%; earnings growth 20.5%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Industrials."
-      ],
-      "generated_at": "2026-07-16 12:32:12.574049+00:00"
-    }
-  },
-  {
-    "symbol": "XLF",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Buy confidence 0.77 is below threshold 0.78; no action."
-    ],
-    "signal": {
-      "symbol": "XLF",
-      "signal_type": "buy",
-      "confidence": 0.7728571428571429,
-      "current_price": 56.560001373291016,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 7).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-07-16 12:32:12.574049+00:00"
-    }
-  },
-  {
-    "symbol": "HYG",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "HYG",
+      "symbol": "SPY",
       "signal_type": "sell",
-      "confidence": 0.7011627906976744,
-      "current_price": 79.80999755859375,
+      "confidence": 0.9,
+      "current_price": 752.2150268554688,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 14)."
+        "Severe sell-off in EWY (-19.5% intra-day).",
+        "Severe sell-off in EWJ (-2.2% intra-day).",
+        "Severe sell-off in VGK (-1.7% intra-day).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-07-16 12:32:12.574049+00:00"
+      "generated_at": "2026-07-16 13:36:13.206700+00:00"
     }
   },
   {
-    "symbol": "LQD",
+    "symbol": "QQQ",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
@@ -93,15 +31,64 @@
       "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "LQD",
+      "symbol": "QQQ",
       "signal_type": "sell",
-      "confidence": 0.701123595505618,
-      "current_price": 107.58000183105469,
+      "confidence": 0.9,
+      "current_price": 711.4199829101562,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 11)."
+        "Severe sell-off in EWY (-19.5% intra-day).",
+        "Severe sell-off in EWJ (-2.2% intra-day).",
+        "Severe sell-off in VGK (-1.7% intra-day).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-07-16 12:32:12.574049+00:00"
+      "generated_at": "2026-07-16 13:36:13.206700+00:00"
+    }
+  },
+  {
+    "symbol": "IWM",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "IWM",
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 295.6199951171875,
+      "reasons": [
+        "Severe sell-off in EWY (-19.5% intra-day).",
+        "Severe sell-off in EWJ (-2.2% intra-day).",
+        "Severe sell-off in VGK (-1.7% intra-day).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
+      ],
+      "generated_at": "2026-07-16 13:36:13.206700+00:00"
+    }
+  },
+  {
+    "symbol": "SMH",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "SMH",
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 577.7550048828125,
+      "reasons": [
+        "Severe sell-off in EWY (-19.5% intra-day).",
+        "Severe sell-off in EWJ (-2.2% intra-day).",
+        "Severe sell-off in VGK (-1.7% intra-day).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
+      ],
+      "generated_at": "2026-07-16 13:36:13.206700+00:00"
     }
   }
 ]

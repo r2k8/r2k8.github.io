@@ -219,6 +219,11 @@ function updateLayer1(data) {
     const sentimentBody = document.getElementById('sentiment-body');
     if (sentimentBody && data.sentiment) {
         const s = data.sentiment;
+        const narrative = data.narrative || {};
+        const forecast = narrative.forecast || {};
+        const buyZone = forecast.buy_zone || 'wait';
+        const zoneColor = buyZone === 're-entry' ? 'var(--bull)' : buyZone === 'starter' ? '#60a5fa' : buyZone === 'avoid' ? 'var(--bear)' : '#f59e0b';
+        const pct = (value) => `${Math.round((value || 0) * 100)}%`;
         
         let eventsHtml = '';
         for (const [event, isActive] of Object.entries(s.events)) {
@@ -230,6 +235,35 @@ function updateLayer1(data) {
         }
 
         sentimentBody.innerHTML = `
+            <div class="narrative-card">
+                <div class="narrative-topline">
+                    <div>
+                        <div class="narrative-label">Market Story</div>
+                        <div class="narrative-state">${(narrative.state || 'calm').replaceAll('_', ' ')}</div>
+                    </div>
+                    <div class="narrative-zone" style="color:${zoneColor}; border-color:${zoneColor};">${buyZone.replaceAll('_', ' ')}</div>
+                </div>
+                <div class="forecast-grid">
+                    <div>
+                        <span>Next Day Bounce</span>
+                        <strong>${pct(forecast.next_day_rebound_probability)}</strong>
+                    </div>
+                    <div>
+                        <span>Next Week Rebound</span>
+                        <strong>${pct(forecast.next_week_rebound_probability)}</strong>
+                    </div>
+                    <div>
+                        <span>Next Month Base</span>
+                        <strong>${pct(forecast.next_month_base_probability)}</strong>
+                    </div>
+                </div>
+                <div class="narrative-interpretation">${forecast.interpretation || 'No major narrative stress detected.'}</div>
+                ${(forecast.reasons || narrative.reasons || []).length ? `
+                    <ul class="narrative-reasons">
+                        ${(forecast.reasons || narrative.reasons || []).slice(0, 4).map(reason => `<li>${reason}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
                 <div style="background: rgba(15, 23, 42, 0.4); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
                     <div style="font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.5rem;">Global Panic / Fear Score</div>

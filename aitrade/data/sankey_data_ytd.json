@@ -267,13 +267,6 @@
       "depth": 3
     },
     {
-      "name": "GS",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
       "name": "BAC",
       "itemStyle": {
         "color": "#10b981"
@@ -317,6 +310,13 @@
     },
     {
       "name": "BLK",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "GS",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -407,16 +407,16 @@
       "depth": 4
     },
     {
-      "name": "MCD",
+      "name": "HD",
       "itemStyle": {
         "color": "#ef4444"
       },
       "depth": 4
     },
     {
-      "name": "HD",
+      "name": "MCD",
       "itemStyle": {
-        "color": "#ef4444"
+        "color": "#10b981"
       },
       "depth": 4
     },
@@ -512,14 +512,14 @@
       "depth": 2
     },
     {
-      "name": "Gold",
+      "name": "Copper",
       "itemStyle": {
-        "color": "#ef4444"
+        "color": "#10b981"
       },
       "depth": 2
     },
     {
-      "name": "Copper",
+      "name": "Gold",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -936,17 +936,6 @@
     },
     {
       "source": "Financials",
-      "target": "GS",
-      "value": 6938.94,
-      "net_flow_dollars": 69389423537.83939,
-      "market_cap_delta": 80557660607.34485,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Financials",
       "target": "BAC",
       "value": 2411.74,
       "net_flow_dollars": 24117403667.30115,
@@ -1017,6 +1006,17 @@
       "value": 184.69,
       "net_flow_dollars": 1846909552.2063863,
       "market_cap_delta": 3574197454.4071264,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Financials",
+      "target": "GS",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1156,10 +1156,10 @@
     },
     {
       "source": "Consumer",
-      "target": "MCD",
-      "value": 1501.84,
-      "net_flow_dollars": -15018415919.782341,
-      "market_cap_delta": -28903369670.952774,
+      "target": "HD",
+      "value": 115.03,
+      "net_flow_dollars": -1150278261.0447562,
+      "market_cap_delta": -2652327939.7531233,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -1167,12 +1167,12 @@
     },
     {
       "source": "Consumer",
-      "target": "HD",
-      "value": 115.03,
-      "net_flow_dollars": -1150278261.0447562,
-      "market_cap_delta": -2652327939.7531233,
+      "target": "MCD",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
-        "color": "#ef4444",
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1321,21 +1321,21 @@
     },
     {
       "source": "Commodities",
-      "target": "Gold",
-      "value": 3918.51,
-      "net_flow_dollars": -39185065909.18763,
-      "market_cap_delta": -6236786411.254884,
+      "target": "Copper",
+      "value": 46.11,
+      "net_flow_dollars": 461111252.0465318,
+      "market_cap_delta": 3670001068.1152334,
       "lineStyle": {
-        "color": "#ef4444",
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
     {
       "source": "Commodities",
-      "target": "Copper",
-      "value": 46.11,
-      "net_flow_dollars": 461111252.0465318,
-      "market_cap_delta": 3670001068.1152334,
+      "target": "Gold",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1374,8 +1374,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.039,
       "earn_growth": 0.5,
-      "dollar_volume": 1768846969.9509015,
-      "price_change": 0.20991113421068727
+      "dollar_volume": 1000000.0,
+      "price_change": 0.0
     },
     {
       "symbol": "BTSG",
@@ -1414,6 +1414,15 @@
       "price_change": 0.1930558652065957
     },
     {
+      "symbol": "CRBG",
+      "name": "Corebridge Financial Inc.",
+      "sector": "Financial Services",
+      "rev_growth": 0.021,
+      "earn_growth": 0,
+      "dollar_volume": 1000000.0,
+      "price_change": 0.0
+    },
+    {
       "symbol": "AVTR",
       "name": "Avantor, Inc.",
       "sector": "Healthcare",
@@ -1437,8 +1446,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.056,
       "earn_growth": 0.111,
-      "dollar_volume": 4747823430.386177,
-      "price_change": 0.3489717485154911
+      "dollar_volume": 1000000.0,
+      "price_change": 0.0
     },
     {
       "symbol": "CALM",
@@ -1700,16 +1709,7 @@
       "earn_growth": 0.791,
       "dollar_volume": 3709215833.2913785,
       "price_change": -0.04530744336569575
-    },
-    {
-      "symbol": "LNN",
-      "name": "Lindsay Corporation",
-      "sector": "Industrials",
-      "rev_growth": -0.051,
-      "earn_growth": -0.14,
-      "dollar_volume": 1980220487.1558597,
-      "price_change": -0.018834296039035362
     }
   ],
-  "last_updated": "2026-07-16 05:13:29 UTC"
+  "last_updated": "2026-07-16 06:16:10 UTC"
 }

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-16T09:24:33.834771+00:00",
+  "updated_at": "2026-07-16T10:27:02.639111+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -262,28 +262,6 @@
       "Signal": "Strong Buy"
     },
     {
-      "Date": "2026-07-15",
-      "Symbol": "ASML",
-      "Company": "ASML Holding N.V. - New York Re",
-      "Domain": "asml.com",
-      "Timing": "After Close",
-      "Price": "1815.27",
-      "RevGrowth": "0.132",
-      "EarnGrowth": "0.192",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-15",
-      "Symbol": "JNJ",
-      "Company": "Johnson & Johnson",
-      "Domain": "jnj.com",
-      "Timing": "After Close",
-      "Price": "247.02",
-      "RevGrowth": "0.099",
-      "EarnGrowth": "-0.529",
-      "Signal": "Buy"
-    },
-    {
       "Date": "2026-07-16",
       "Symbol": "UNH",
       "Company": "UnitedHealth Group Incorporated",
@@ -314,17 +292,6 @@
       "Price": "73.68",
       "RevGrowth": "0.162",
       "EarnGrowth": "0.864",
-      "Signal": "Strong Buy"
-    },
-    {
-      "Date": "2026-07-15",
-      "Symbol": "BLK",
-      "Company": "BlackRock, Inc.",
-      "Domain": "blackrock.com",
-      "Timing": "After Close",
-      "Price": "1093.4",
-      "RevGrowth": "0.27",
-      "EarnGrowth": "0.459",
       "Signal": "Strong Buy"
     },
     {
@@ -881,14 +848,14 @@
     "breadth_ratio": 0.28215047748379996,
     "risk_ratio": 1.9436862338510983,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8524501983765864
+    "vix_term_structure": 0.8572967333290331
   },
   "sentiment": {
-    "fear_score": 0.0425,
-    "bullish_score": 0.0425,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -913,11 +880,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Asian shares mostly decline with South Korea Kospi down 6 . 6 %, while oil prices slip"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",

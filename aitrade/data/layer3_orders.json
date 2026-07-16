@@ -1,49 +1,5 @@
 [
   {
-    "symbol": "PENG",
-    "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 67.75,
-    "warnings": [
-      "Sized by risk: max loss about $7.00 at 7% hard stop."
-    ],
-    "signal": {
-      "symbol": "PENG",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 72.8499984741211,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 47.6%; earnings growth 0.0%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology."
-      ],
-      "generated_at": "2026-07-16 09:24:37.370484+00:00"
-    }
-  },
-  {
-    "symbol": "BTSG",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "BTSG",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 68.26000213623047,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 25.6%; earnings growth 359.8%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Healthcare."
-      ],
-      "generated_at": "2026-07-16 09:24:37.370484+00:00"
-    }
-  },
-  {
     "symbol": "GLD",
     "approved": true,
     "target_position_size_usd": 0.0,
@@ -62,29 +18,28 @@
         "Capital Outflows (Rank 5).",
         "Cutting losses (-$36.25)."
       ],
-      "generated_at": "2026-07-16 09:24:37.370484+00:00"
+      "generated_at": "2026-07-16 10:27:06.174873+00:00"
     }
   },
   {
-    "symbol": "HUBG",
+    "symbol": "XLF",
     "approved": false,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+      "Buy confidence 0.77 is below threshold 0.78; no action."
     ],
     "signal": {
-      "symbol": "HUBG",
+      "symbol": "XLF",
       "signal_type": "buy",
-      "confidence": 0.8,
-      "current_price": 47.79999923706055,
+      "confidence": 0.7728571428571429,
+      "current_price": 56.560001373291016,
       "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth -5.3%; earnings growth 20.5%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Industrials."
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 7).",
+        "Volume confirms institutional participation (latest volume >= 20-day average)."
       ],
-      "generated_at": "2026-07-16 09:24:37.370484+00:00"
+      "generated_at": "2026-07-16 10:27:06.174873+00:00"
     }
   },
   {
@@ -104,7 +59,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 14)."
       ],
-      "generated_at": "2026-07-16 09:24:37.370484+00:00"
+      "generated_at": "2026-07-16 10:27:06.174873+00:00"
     }
   },
   {
@@ -124,7 +79,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 11)."
       ],
-      "generated_at": "2026-07-16 09:24:37.370484+00:00"
+      "generated_at": "2026-07-16 10:27:06.174873+00:00"
     }
   }
 ]

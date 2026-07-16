@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-16T22:01:39.628962+00:00",
+  "updated_at": "2026-07-16T23:06:05.125637+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -285,17 +285,6 @@
     },
     {
       "Date": "2026-07-16",
-      "Symbol": "NFLX",
-      "Company": "Netflix, Inc.",
-      "Domain": "netflix.com",
-      "Timing": "After Close",
-      "Price": "74.35",
-      "RevGrowth": "0.162",
-      "EarnGrowth": "0.864",
-      "Signal": "Strong Buy"
-    },
-    {
-      "Date": "2026-07-16",
       "Symbol": "ABT",
       "Company": "Abbott Laboratories",
       "Domain": "abbott.com",
@@ -318,17 +307,6 @@
     },
     {
       "Date": "2026-07-16",
-      "Symbol": "ISRG",
-      "Company": "Intuitive Surgical, Inc.",
-      "Domain": "intuitive.com",
-      "Timing": "After Close",
-      "Price": "402.33",
-      "RevGrowth": "0.23",
-      "EarnGrowth": "0.188",
-      "Signal": "Strong Buy"
-    },
-    {
-      "Date": "2026-07-16",
       "Symbol": "USB",
       "Company": "U.S. Bancorp",
       "Domain": "usbank.com",
@@ -337,6 +315,17 @@
       "RevGrowth": "0.046",
       "EarnGrowth": "0.148",
       "Signal": "Buy"
+    },
+    {
+      "Date": "2026-07-16",
+      "Symbol": "DDOG",
+      "Company": "Datadog, Inc.",
+      "Domain": "datadoghq.com",
+      "Timing": "Before Open",
+      "Price": "262.32",
+      "RevGrowth": "0.322",
+      "EarnGrowth": "1.04",
+      "Signal": "Strong Buy"
     },
     {
       "Date": "2026-07-16",
@@ -373,17 +362,6 @@
     },
     {
       "Date": "2026-07-16",
-      "Symbol": "AA",
-      "Company": "Alcoa Corporation",
-      "Domain": "alcoa.com",
-      "Timing": "After Close",
-      "Price": "46.85",
-      "RevGrowth": "-0.052",
-      "EarnGrowth": "-0.227",
-      "Signal": "Avoid"
-    },
-    {
-      "Date": "2026-07-16",
       "Symbol": "CBSH",
       "Company": "Commerce Bancshares, Inc.",
       "Domain": "commercebank.com",
@@ -406,46 +384,13 @@
     },
     {
       "Date": "2026-07-16",
-      "Symbol": "FNB",
-      "Company": "F.N.B. Corporation",
-      "Domain": "fnb-online.com",
-      "Timing": "After Close",
-      "Price": "19.49",
-      "RevGrowth": "0.096",
-      "EarnGrowth": "0.188",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-16",
       "Symbol": "FFIN",
       "Company": "First Financial Bankshares, Inc",
       "Domain": "ffin.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "36.5",
       "RevGrowth": "0.131",
       "EarnGrowth": "0.164",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-16",
-      "Symbol": "INDB",
-      "Company": "Independent Bank Corp.",
-      "Domain": "rocklandtrust.com",
-      "Timing": "After Close",
-      "Price": "87.17",
-      "RevGrowth": "0.516",
-      "EarnGrowth": "0.567",
-      "Signal": "Strong Buy"
-    },
-    {
-      "Date": "2026-07-16",
-      "Symbol": "CNS",
-      "Company": "Cohen & Steers Inc",
-      "Domain": "cohenandsteers.com",
-      "Timing": "After Close",
-      "Price": "81.07",
-      "RevGrowth": "0.083",
-      "EarnGrowth": "0.065",
       "Signal": "Buy"
     },
     {
@@ -457,28 +402,6 @@
       "Price": "120.04",
       "RevGrowth": "0.083",
       "EarnGrowth": "0.114",
-      "Signal": "Buy"
-    },
-    {
-      "Date": "2026-07-16",
-      "Symbol": "SFNC",
-      "Company": "Simmons First National Corporat",
-      "Domain": "simmonsbank.com",
-      "Timing": "After Close",
-      "Price": "23.25",
-      "RevGrowth": "0.241",
-      "EarnGrowth": "0.826",
-      "Signal": "Strong Buy"
-    },
-    {
-      "Date": "2026-07-16",
-      "Symbol": "WAFD",
-      "Company": "WaFd, Inc.",
-      "Domain": "wafdbank.com",
-      "Timing": "After Close",
-      "Price": "39.32",
-      "RevGrowth": "0.092",
-      "EarnGrowth": "0.264",
       "Signal": "Buy"
     },
     {
@@ -862,10 +785,10 @@
     "vix_term_structure": 0.8579486944736578
   },
   "sentiment": {
-    "fear_score": 0.08717948717948718,
-    "bullish_score": 0.0358974358974359,
+    "fear_score": 0.039090909090909086,
+    "bullish_score": 0.039090909090909086,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
@@ -923,9 +846,11 @@
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Weaponizing the Travel Warnings : Choking Economic Sanctions Against Israel"
+        ]
       },
       "XLP": {
         "symbol": "XLP",

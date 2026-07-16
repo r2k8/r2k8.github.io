@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-16T08:20:54.936797+00:00",
+  "updated_at": "2026-07-16T09:24:33.834771+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -531,8 +531,8 @@
       "close": 72.8499984741211,
       "ema20": 70.08063481351358,
       "ema50": 60.10273564147582,
-      "avg20_volume": 5022851.15,
-      "latest_volume": 9684023.0
+      "avg20_volume": 5023290.0,
+      "latest_volume": 9692800.0
     },
     {
       "symbol": "MD",
@@ -881,14 +881,14 @@
     "breadth_ratio": 0.28215047748379996,
     "risk_ratio": 1.9436862338510983,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8605277223935675
+    "vix_term_structure": 0.8524501983765864
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.0425,
+    "bullish_score": 0.0425,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -913,9 +913,11 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Asian shares mostly decline with South Korea Kospi down 6 . 6 %, while oil prices slip"
+        ]
       },
       "XLF": {
         "symbol": "XLF",

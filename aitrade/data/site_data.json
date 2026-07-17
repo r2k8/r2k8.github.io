@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-17T07:35:18.557717+00:00",
+  "updated_at": "2026-07-17T08:38:40.771160+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -458,8 +458,8 @@
       "close": 41.02000045776367,
       "ema20": 38.63087384341836,
       "ema50": 37.3699580610275,
-      "avg20_volume": 243389.4,
-      "latest_volume": 487988.0
+      "avg20_volume": 243995.0,
+      "latest_volume": 500100.0
     },
     {
       "symbol": "WKC",
@@ -487,6 +487,24 @@
       "ema50": 104.21207168260712,
       "avg20_volume": 1695615.0,
       "latest_volume": 2566100.0
+    },
+    {
+      "symbol": "RHI",
+      "as_of": "2026-07-16",
+      "close": 41.33000183105469,
+      "ema20": 33.76672161069268,
+      "ema50": 31.349063402902633,
+      "avg20_volume": 2474260.0,
+      "latest_volume": 3831400.0
+    },
+    {
+      "symbol": "BOX",
+      "as_of": "2026-07-16",
+      "close": 31.40999984741211,
+      "ema20": 28.20952731089417,
+      "ema50": 26.748133993645798,
+      "avg20_volume": 2616470.0,
+      "latest_volume": 4459000.0
     },
     {
       "symbol": "PATH",
@@ -703,38 +721,20 @@
       "ema50": 43.269696651358906,
       "avg20_volume": 650735.0,
       "latest_volume": 1026100.0
-    },
-    {
-      "symbol": "ADUS",
-      "as_of": "2026-07-09",
-      "close": 109.72000122070312,
-      "ema20": 100.26007003289061,
-      "ema50": 96.86188514566523,
-      "avg20_volume": 277475.0,
-      "latest_volume": 420200.0
-    },
-    {
-      "symbol": "LZ",
-      "as_of": "2026-07-08",
-      "close": 7.28000020980835,
-      "ema20": 6.3748724586486345,
-      "ema50": 6.1889316171435675,
-      "avg20_volume": 2757365.0,
-      "latest_volume": 5330400.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.28647166180642347,
     "risk_ratio": 1.8575512559644927,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.9676898012207853
+    "vix_term_structure": 0.9978460415274073
   },
   "sentiment": {
-    "fear_score": 0.04,
-    "bullish_score": 0.05428571428571429,
+    "fear_score": 0.0375,
+    "bullish_score": 0.0375,
     "events": {
       "war": false,
-      "policy_shock": true,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -759,15 +759,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.21,
-        "articles": 6,
-        "top_headlines": [
-          "US Senate unveils revised Russia sanctions bill to cement Lindsey Graham legacy , targets top buyers of Russian energy",
-          "US Senate unveils revised Russia sanctions bill to cement Lindsey Graham legacy , targets top buyers of Russian energy",
-          "US Senate unveils revised Russia sanctions bill to cement Lindsey Graham legacy , targets top buyers of Russian energy",
-          "\u092d\u093e\u0930\u0924 \u092a\u0930 100 % \u091f\u0948\u0930\u093f\u092b \u0915\u0940 \u0924\u0948\u092f\u093e\u0930\u0940 ? \u0930\u0942\u0938 \u0938\u0947 \u0924\u0947\u0932 \u0916\u0930\u0940\u0926\u0928\u0947 \u0935\u093e\u0932\u0947 \u0926\u0947\u0936\u094b\u0902 \u092a\u0930 \u0905\u092e\u0947\u0930\u093f\u0915\u093e \u0915\u093e \u092c\u0921\u093c\u093e \u090f\u0915\u094d\u0936\u0928 | Us Sanctioning Russia Act 2026 Proposes 100 Percent Tariff On India And Other Oil Buying Countries",
-          "US Senate unveils revised Russia sanctions bill to cement Lindsey Graham legacy , targets top buyers of Russian energy"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",

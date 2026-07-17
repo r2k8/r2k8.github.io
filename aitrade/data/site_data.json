@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-17T21:17:41.118621+00:00",
+  "updated_at": "2026-07-17T22:20:58.790670+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -357,6 +357,24 @@
       "latest_volume": 671476.0
     },
     {
+      "symbol": "NEO",
+      "as_of": "2026-07-17",
+      "close": 14.609999656677246,
+      "ema20": 13.771451548138764,
+      "ema50": 12.082869733683893,
+      "avg20_volume": 3747552.75,
+      "latest_volume": 10572255.0
+    },
+    {
+      "symbol": "BJRI",
+      "as_of": "2026-07-17",
+      "close": 67.48999786376953,
+      "ema20": 59.13205887042761,
+      "ema50": 52.843266789457424,
+      "avg20_volume": 599391.1,
+      "latest_volume": 1119522.0
+    },
+    {
       "symbol": "CHEF",
       "as_of": "2026-07-16",
       "close": 102.36000061035156,
@@ -670,24 +688,6 @@
       "ema50": 81.0821175119155,
       "avg20_volume": 266830.0,
       "latest_volume": 459500.0
-    },
-    {
-      "symbol": "PSMT",
-      "as_of": "2026-07-09",
-      "close": 188.2550048828125,
-      "ema20": 187.36009680401912,
-      "ema50": 177.48598123317464,
-      "avg20_volume": 369223.1,
-      "latest_volume": 595162.0
-    },
-    {
-      "symbol": "TBBK",
-      "as_of": "2026-07-09",
-      "close": 66.54000091552734,
-      "ema20": 61.25440503368636,
-      "ema50": 59.01942631822751,
-      "avg20_volume": 475120.0,
-      "latest_volume": 807800.0
     }
   ],
   "regime_metrics": {
@@ -697,10 +697,10 @@
     "vix_term_structure": 0.9138266612040106
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.0375,
+    "bullish_score": 0.0375,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -783,8 +783,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-25.8%).",
       "Semiconductor proxy is below its 20-day trend.",
@@ -809,7 +810,5 @@
       "interpretation": "Do not add. Forced selling/crowded-trade unwind still dominates."
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

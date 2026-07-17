@@ -1,45 +1,47 @@
 [SYSTEM INIT] Layer 1 pipeline started.
-[INFO] Started at 2026-07-17 10:42:26 UTC
+[INFO] Started at 2026-07-17 11:44:54 UTC
 [INFO] Project root: /Users/r2k8/CODE/trading-system
 WARNING:root:GDELT rate limit reached after retries. Returning partial results.
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: CWEN.A"}}}
-ERROR:yfinance:$CWEN.A: possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")
+ERROR:yfinance:$MOG.A: possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")
 ERROR:yfinance:
 1 Failed download:
-ERROR:yfinance:['CWEN.A']: possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VGK"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: CPER"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: GLD"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLV"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IBIT"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VPL"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SLV"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLY"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: DBC"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ETHA"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SPY"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: USO"}}}
+ERROR:yfinance:['MOG.A']: possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")
+ERROR:yfinance:HTTP Error 401: {"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IGV"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLF"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IBIT"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLK"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLI"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TLT"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VWO"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: CPER"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: DBC"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VNQ"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLI"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VWO"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SPY"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLV"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TLT"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ETHA"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLY"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SLV"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: USO"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: GLD"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLF"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VGK"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VPL"}}}
 Fetching News...
 Running VCP & Momentum Screener on 250 Small/Mid-Cap candidates...
-Validating Earnings/Revenue Acceleration for top 5 technical breakouts...
-  [-] WKC failed fundamentals. Rev: 0.025, Earn: 0
-  [-] SMG failed fundamentals. Rev: 0.05, Earn: 0.085
-  [+] HUBG passed! RevGrowth: -5.3%, EarnGrowth: 20.5%, Sector: Industrials
-  [-] MATX failed fundamentals. Rev: -0.031, Earn: -0.151
-  [-] PAG failed fundamentals. Rev: -0.011, Earn: -0.078
-Discovery Screener completed. Yielded 1 high-conviction candidates.
+Validating Earnings/Revenue Acceleration for top 7 technical breakouts...
+  [+] BTSG passed! RevGrowth: 25.6%, EarnGrowth: 359.8%, Sector: Healthcare
+  [-] VSTS failed fundamentals. Rev: -0.009, Earn: 0
+  [-] SEIC failed fundamentals. Rev: 0.128, Earn: 0.197
+  [-] LQDT failed fundamentals. Rev: 0.037, Earn: 0.045
+  [+] LFST passed! RevGrowth: 21.2%, EarnGrowth: 1927.5%, Sector: Healthcare
+  [+] PRVA passed! RevGrowth: 25.8%, EarnGrowth: -33.3%, Sector: Healthcare
+  [-] HOMB failed fundamentals. Rev: 0.087, Earn: -0.016
+Discovery Screener completed. Yielded 3 high-conviction candidates.
 Fetching Original Capital Flows...
 Fetching upcoming earnings...
 Scraping global earnings calendar...
 Found 87 unique earnings this week. Enriching Fundamentals...
-Generated earnings radar at /Users/r2k8/CODE/trading-system/data/processed/earnings_radar.csv with 9 upcoming earnings.
+Generated earnings radar at /Users/r2k8/CODE/trading-system/data/processed/earnings_radar.csv with 8 upcoming earnings.
 Layer 1 complete: regime=risk_on, news=0, sectors=9, capital_flows=21
 Wrote /Users/r2k8/CODE/trading-system/data/processed/layer1_snapshot.json
 Wrote /Users/r2k8/CODE/trading-system/data/processed/sector_sentiment.csv

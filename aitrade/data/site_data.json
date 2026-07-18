@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-18T20:29:01.818058+00:00",
+  "updated_at": "2026-07-18T21:32:41.179916+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -472,6 +472,15 @@
       "latest_volume": 4194400.0
     },
     {
+      "symbol": "ACIW",
+      "as_of": "2026-07-17",
+      "close": 58.06999969482422,
+      "ema20": 53.2532255680099,
+      "ema50": 49.07711110008724,
+      "avg20_volume": 1258700.0,
+      "latest_volume": 1892600.0
+    },
+    {
       "symbol": "CHEF",
       "as_of": "2026-07-16",
       "close": 102.36000061035156,
@@ -643,15 +652,6 @@
       "latest_volume": 945621.0
     },
     {
-      "symbol": "ACIW",
-      "as_of": "2026-07-15",
-      "close": 57.040000915527344,
-      "ema20": 52.11723495832036,
-      "ema50": 48.09634617642594,
-      "avg20_volume": 1194170.0,
-      "latest_volume": 2287600.0
-    },
-    {
       "symbol": "CRBG",
       "as_of": "2026-07-15",
       "close": 31.8700008392334,
@@ -686,11 +686,11 @@
     "vix_term_structure": 1.010770100496835
   },
   "sentiment": {
-    "fear_score": 0.035,
-    "bullish_score": 0.035,
+    "fear_score": 0.0393939393939394,
+    "bullish_score": 0.0696969696969697,
     "events": {
       "war": true,
-      "policy_shock": false,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -746,10 +746,13 @@
       "XLY": {
         "symbol": "XLY",
         "name": "Consumer Discretionary",
-        "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "score": 0.5,
+        "confidence": 0.16,
+        "articles": 2,
+        "top_headlines": [
+          "Lebanon Aoun to meet Trump in Washington to discuss Israel talks - Dominican Republic Post \u2013 Caribbean News , Business , Travel & Culture",
+          "Thousands rally in London in support of Gaza , demand new PM take action - Dominican Republic Post \u2013 Caribbean News , Business , Travel & Culture"
+        ]
       },
       "XLP": {
         "symbol": "XLP",

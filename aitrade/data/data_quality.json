@@ -5,7 +5,7 @@
     "missing_symbols": [],
     "observed": 21
   },
-  "generated_at": "2026-07-18T14:10:13.347917+00:00",
+  "generated_at": "2026-07-18T15:15:02.461655+00:00",
   "market": {
     "coverage": 1.0,
     "expected": 22,
@@ -18,16 +18,16 @@
       "banking_stress": false,
       "oil_shock": false,
       "policy_shock": true,
-      "war": false
+      "war": true
     },
-    "items": 20,
-    "sector_article_count": 0
+    "items": 56,
+    "sector_article_count": 2
   },
   "notes": [
     "Layer 2 should block new buys when safe_for_layer2 is false.",
     "Zero news can be degraded without being unsafe because price/flow data may still be usable."
   ],
   "safe_for_layer2": true,
-  "status": "degraded",
+  "status": "ok",
   "warnings": []
 }

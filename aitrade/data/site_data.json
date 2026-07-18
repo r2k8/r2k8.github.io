@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-18T14:10:13.347917+00:00",
+  "updated_at": "2026-07-18T15:15:02.461655+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -686,10 +686,10 @@
     "vix_term_structure": 1.010770100496835
   },
   "sentiment": {
-    "fear_score": 0.045,
-    "bullish_score": 0.045,
+    "fear_score": 0.043750000000000004,
+    "bullish_score": 0.043750000000000004,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
@@ -715,9 +715,12 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.13,
+        "articles": 2,
+        "top_headlines": [
+          "Andy Burnham could be set to announce \u00a3130 cut in energy bills",
+          "Andy Burnham could be set to announce \u00a3130 cut in energy bills"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
@@ -772,8 +775,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-25.8%).",
       "Semiconductor proxy is below its 20-day trend.",

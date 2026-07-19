@@ -685,14 +685,19 @@ function renderEarningsRadar(earningsData) {
         return;
     }
 
-    const escapeAttr = (value) => String(value || '').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const escapeHtml = (value) => String(value || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    const escapeAttr = escapeHtml;
     const renderTickerTile = (c) => {
         const signalClass = c.sig === 'Strong Buy' ? 'earnings-strong' : c.sig === 'Buy' ? 'earnings-buy' : c.sig === 'Avoid' ? 'earnings-avoid' : 'earnings-neutral';
         const title = `${c.t} - ${c.n}\nPrice: $${c.p}\nRevenue Growth: ${c.rg}\nEPS Growth: ${c.eg}\nSignal: ${c.sig}`;
+        const company = c.n && c.n !== c.t ? c.n : c.sig;
         return `
             <div class="earnings-tile ${signalClass}" title="${escapeAttr(title)}">
-                <img class="earnings-logo" src="https://logo.clearbit.com/${escapeAttr(c.dom)}" alt="" onerror="this.style.display='none'">
-                <span class="earnings-symbol">${c.t}</span>
+                <div class="earnings-tile-main">
+                    <span class="earnings-symbol">${escapeHtml(c.t)}</span>
+                    <span class="earnings-signal">${escapeHtml(c.sig)}</span>
+                </div>
+                <div class="earnings-company">${escapeHtml(company)}</div>
             </div>
         `;
     };

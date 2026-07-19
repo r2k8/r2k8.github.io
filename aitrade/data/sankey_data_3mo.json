@@ -29,13 +29,6 @@
       "depth": 3
     },
     {
-      "name": "AMD",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
       "name": "AAPL",
       "itemStyle": {
         "color": "#10b981"
@@ -88,6 +81,13 @@
       "name": "CRM",
       "itemStyle": {
         "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "AMD",
+      "itemStyle": {
+        "color": "#10b981"
       },
       "depth": 4
     },
@@ -562,17 +562,6 @@
     },
     {
       "source": "Mega-Cap Tech",
-      "target": "AMD",
-      "value": 69108.01,
-      "net_flow_dollars": 691080135023.3234,
-      "market_cap_delta": 354443676823.26434,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
       "target": "AAPL",
       "value": 16775.3,
       "net_flow_dollars": 167753029951.55127,
@@ -656,6 +645,17 @@
       "market_cap_delta": -9312026500.854483,
       "lineStyle": {
         "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
+      "target": "AMD",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1345,7 +1345,7 @@
   "regime_summary": {
     "title": "Bull Market (Buying)",
     "liquidity": "Flowing IN (Positive)",
-    "inflow": "MU / AMD / INTC / AAPL / PANW",
+    "inflow": "MU / INTC / AAPL / PANW / ARM",
     "outflow": "MSTR / TSLA / MSFT / AVGO / META",
     "health": "Optimal"
   },
@@ -1711,5 +1711,5 @@
       "price_change": 0.29929573882913374
     }
   ],
-  "last_updated": "2026-07-19 10:09:08 UTC"
+  "last_updated": "2026-07-19 11:12:00 UTC"
 }

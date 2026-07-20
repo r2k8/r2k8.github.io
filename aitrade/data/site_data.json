@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-20T11:29:31.158696+00:00",
+  "updated_at": "2026-07-20T12:32:12.928229+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -911,14 +911,14 @@
     "breadth_ratio": 0.2870615794974948,
     "risk_ratio": 1.8406687084123516,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8846153488999223
+    "vix_term_structure": 0.8865627201947538
   },
   "sentiment": {
-    "fear_score": 0.03571428571428571,
-    "bullish_score": 0.03571428571428571,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -943,21 +943,17 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Oil prices surpass 90 dollars a barrel after fresh attacks in US - Iran war"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Top Gainers & Losers on 20 July : Axis Bank , HDFC Bank , Ceat , India Cements , OLA , HFCL among top losers"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -971,12 +967,9 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.13,
-        "articles": 2,
-        "top_headlines": [
-          "The Trump administration is scrambling for more defense money . Here why it may not get it",
-          "Global supply chain risks still threaten South African businesses"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLY": {
         "symbol": "XLY",
@@ -1007,9 +1000,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-25.8%).",
       "Semiconductor proxy is below its 20-day trend.",

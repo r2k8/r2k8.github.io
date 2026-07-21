@@ -302,6 +302,13 @@
       "depth": 4
     },
     {
+      "name": "ZS",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "U",
       "itemStyle": {
         "color": "#10b981"
@@ -319,13 +326,6 @@
       "name": "AI",
       "itemStyle": {
         "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "ZS",
-      "itemStyle": {
-        "color": "#10b981"
       },
       "depth": 4
     },
@@ -428,16 +428,16 @@
       "depth": 2
     },
     {
-      "name": "Europe",
+      "name": "Asia-Pacific",
       "itemStyle": {
         "color": "#ef4444"
       },
       "depth": 2
     },
     {
-      "name": "Asia-Pacific",
+      "name": "Europe",
       "itemStyle": {
-        "color": "#10b981"
+        "color": "#ef4444"
       },
       "depth": 2
     },
@@ -991,6 +991,17 @@
     },
     {
       "source": "AI & Cloud Growth",
+      "target": "ZS",
+      "value": 129.23,
+      "net_flow_dollars": 1292335367.5811718,
+      "market_cap_delta": 4037888023.645936,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
       "target": "U",
       "value": 27.79,
       "net_flow_dollars": 277898283.5157904,
@@ -1019,17 +1030,6 @@
       "market_cap_delta": -256794343.81764707,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "ZS",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1189,10 +1189,10 @@
     },
     {
       "source": "Equities",
-      "target": "Europe",
-      "value": 2.07,
-      "net_flow_dollars": -20686769.21794378,
-      "market_cap_delta": -163613246.65640512,
+      "target": "Asia-Pacific",
+      "value": 10.4,
+      "net_flow_dollars": -103976008.85476074,
+      "market_cap_delta": -227185659.9999999,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -1200,12 +1200,12 @@
     },
     {
       "source": "Equities",
-      "target": "Asia-Pacific",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
+      "target": "Europe",
+      "value": 2.07,
+      "net_flow_dollars": -20686769.21794378,
+      "market_cap_delta": -163613246.65640512,
       "lineStyle": {
-        "color": "#10b981",
+        "color": "#ef4444",
         "opacity": 0.35
       }
     },
@@ -1401,8 +1401,8 @@
       "sector": "Industrials",
       "rev_growth": 0.086,
       "earn_growth": 0,
-      "dollar_volume": 1000000.0,
-      "price_change": 0.0
+      "dollar_volume": 604422966.9559768,
+      "price_change": 0.3876788573155287
     },
     {
       "symbol": "WERN",
@@ -1711,5 +1711,5 @@
       "price_change": 0.3241532710052133
     }
   ],
-  "last_updated": "2026-07-21 11:51:41 UTC"
+  "last_updated": "2026-07-21 12:54:08 UTC"
 }

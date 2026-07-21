@@ -372,7 +372,21 @@
       "depth": 4
     },
     {
+      "name": "AMD",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "GOOGL",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "AVGO",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -403,20 +417,6 @@
       "name": "META",
       "itemStyle": {
         "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "AMD",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "AVGO",
-      "itemStyle": {
-        "color": "#10b981"
       },
       "depth": 4
     },
@@ -484,6 +484,13 @@
       "depth": 1
     },
     {
+      "name": "Real Estate",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 1
+    },
+    {
       "name": "Commodities",
       "itemStyle": {
         "color": "#10b981"
@@ -517,13 +524,6 @@
         "color": "#10b981"
       },
       "depth": 2
-    },
-    {
-      "name": "Real Estate",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 1
     }
   ],
   "links": [
@@ -1101,10 +1101,32 @@
     },
     {
       "source": "Mega-Cap Tech",
+      "target": "AMD",
+      "value": 17.14,
+      "net_flow_dollars": 171430713.66281873,
+      "market_cap_delta": 12735002933.46579,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
       "target": "GOOGL",
       "value": 10.2,
       "net_flow_dollars": 102005441.42302051,
       "market_cap_delta": 30626495927.356846,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
+      "target": "AVGO",
+      "value": 7.71,
+      "net_flow_dollars": 77149051.7269318,
+      "market_cap_delta": 34896868175.10909,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1151,28 +1173,6 @@
       "market_cap_delta": -351420908.47421825,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
-      "target": "AMD",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
-      "target": "AVGO",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1277,6 +1277,17 @@
     },
     {
       "source": "Global Liquidity",
+      "target": "Real Estate",
+      "value": 1,
+      "net_flow_dollars": -1154972.0926044567,
+      "market_cap_delta": -199896493.0069907,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Global Liquidity",
       "target": "Commodities",
       "value": 1,
       "net_flow_dollars": 120260.760696382,
@@ -1329,23 +1340,12 @@
         "color": "#10b981",
         "opacity": 0.35
       }
-    },
-    {
-      "source": "Global Liquidity",
-      "target": "Real Estate",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
     }
   ],
   "regime_summary": {
     "title": "Bear Market (Selling)",
     "liquidity": "Flowing OUT (Negative)",
-    "inflow": "MU / MSFT / INTC / GOOGL / AMZN",
+    "inflow": "MU / MSFT / AMD / INTC / GOOGL",
     "outflow": "TSLA / AAPL / LLY / SPY / PANW",
     "health": "Optimal"
   },
@@ -1491,8 +1491,8 @@
       "sector": "Industrials",
       "rev_growth": 0.044,
       "earn_growth": 0.578,
-      "dollar_volume": 1000000.0,
-      "price_change": 0.0
+      "dollar_volume": 63720648.150914066,
+      "price_change": -0.0018619026745460895
     },
     {
       "symbol": "TFIN",
@@ -1711,5 +1711,5 @@
       "price_change": 0.0007177471544184292
     }
   ],
-  "last_updated": "2026-07-21 11:51:38 UTC"
+  "last_updated": "2026-07-21 12:54:04 UTC"
 }

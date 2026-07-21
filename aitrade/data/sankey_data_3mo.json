@@ -295,6 +295,13 @@
       "depth": 4
     },
     {
+      "name": "JPM",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "MA",
       "itemStyle": {
         "color": "#10b981"
@@ -317,13 +324,6 @@
     },
     {
       "name": "BLK",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "JPM",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -980,6 +980,17 @@
     },
     {
       "source": "Financials",
+      "target": "JPM",
+      "value": 791.11,
+      "net_flow_dollars": 7911050722.345786,
+      "market_cap_delta": 58161403020.50778,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Financials",
       "target": "MA",
       "value": 507.56,
       "net_flow_dollars": 5075594250.440193,
@@ -1017,17 +1028,6 @@
       "value": 18.76,
       "net_flow_dollars": 187557845.2236715,
       "market_cap_delta": 881921492.9697201,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Financials",
-      "target": "JPM",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1711,5 +1711,5 @@
       "price_change": 0.4928623066043786
     }
   ],
-  "last_updated": "2026-07-21 10:47:52 UTC"
+  "last_updated": "2026-07-21 11:51:43 UTC"
 }

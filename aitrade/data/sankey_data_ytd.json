@@ -106,13 +106,6 @@
       "depth": 4
     },
     {
-      "name": "UNP",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
       "name": "GE",
       "itemStyle": {
         "color": "#10b981"
@@ -128,6 +121,13 @@
     },
     {
       "name": "LMT",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "UNP",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -295,13 +295,6 @@
       "depth": 4
     },
     {
-      "name": "WFC",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
       "name": "MA",
       "itemStyle": {
         "color": "#ef4444"
@@ -319,6 +312,13 @@
       "name": "BLK",
       "itemStyle": {
         "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "WFC",
+      "itemStyle": {
+        "color": "#10b981"
       },
       "depth": 4
     },
@@ -505,13 +505,6 @@
       "depth": 2
     },
     {
-      "name": "Silver",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 2
-    },
-    {
       "name": "Gold",
       "itemStyle": {
         "color": "#ef4444"
@@ -520,6 +513,13 @@
     },
     {
       "name": "Copper",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Silver",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -683,17 +683,6 @@
     },
     {
       "source": "Industrials",
-      "target": "UNP",
-      "value": 2342.34,
-      "net_flow_dollars": 23423384981.53568,
-      "market_cap_delta": 38549798920.090004,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Industrials",
       "target": "GE",
       "value": 1961.34,
       "net_flow_dollars": 19613394244.668125,
@@ -720,6 +709,17 @@
       "value": 502.78,
       "net_flow_dollars": 5027798227.8082,
       "market_cap_delta": 5964682509.108013,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Industrials",
+      "target": "UNP",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -980,17 +980,6 @@
     },
     {
       "source": "Financials",
-      "target": "WFC",
-      "value": 1059.81,
-      "net_flow_dollars": -10598137297.739454,
-      "market_cap_delta": -20805894812.942806,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Financials",
       "target": "MA",
       "value": 814.23,
       "net_flow_dollars": -8142276682.878487,
@@ -1019,6 +1008,17 @@
       "market_cap_delta": -2515577433.910256,
       "lineStyle": {
         "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Financials",
+      "target": "WFC",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1310,17 +1310,6 @@
     },
     {
       "source": "Commodities",
-      "target": "Silver",
-      "value": 10270.32,
-      "net_flow_dollars": -102703220387.60599,
-      "market_cap_delta": -4589087941.263398,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Commodities",
       "target": "Gold",
       "value": 4736.02,
       "net_flow_dollars": -47360246693.55606,
@@ -1340,13 +1329,24 @@
         "color": "#10b981",
         "opacity": 0.35
       }
+    },
+    {
+      "source": "Commodities",
+      "target": "Silver",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
     }
   ],
   "regime_summary": {
     "title": "Bull Market (Buying)",
     "liquidity": "Flowing IN (Positive)",
     "inflow": "MU / AMD / INTC / SPY / NVDA",
-    "outflow": "TSLA / MSFT / PLTR / MSTR / SLV",
+    "outflow": "TSLA / MSFT / PLTR / MSTR / CRM",
     "health": "Optimal"
   },
   "discovery_radar": [
@@ -1662,8 +1662,8 @@
       "sector": "Financial Services",
       "rev_growth": 0.139,
       "earn_growth": 0.28,
-      "dollar_volume": 1335868074.485908,
-      "price_change": 0.261075074852487
+      "dollar_volume": 1000000.0,
+      "price_change": 0.0
     },
     {
       "symbol": "LQDT",
@@ -1711,5 +1711,5 @@
       "price_change": 0.5401326152818368
     }
   ],
-  "last_updated": "2026-07-21 10:47:54 UTC"
+  "last_updated": "2026-07-21 11:51:46 UTC"
 }

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-21T09:45:01.804806+00:00",
+  "updated_at": "2026-07-21T10:47:33.104420+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -723,8 +723,8 @@
       "close": 22.299999237060547,
       "ema20": 19.790527002613423,
       "ema50": 17.679231530170846,
-      "avg20_volume": 1954131.55,
-      "latest_volume": 4080331.0
+      "avg20_volume": 1956535.0,
+      "latest_volume": 4128400.0
     },
     {
       "symbol": "WERN",
@@ -752,6 +752,15 @@
       "ema50": 149.72493760378174,
       "avg20_volume": 558120.0,
       "latest_volume": 1033700.0
+    },
+    {
+      "symbol": "VSXY",
+      "as_of": "2026-07-20",
+      "close": 87.41000366210938,
+      "ema20": 79.9233475627115,
+      "ema50": 72.7608496070704,
+      "avg20_volume": 1850605.0,
+      "latest_volume": 3134300.0
     },
     {
       "symbol": "MAN",
@@ -1022,29 +1031,20 @@
       "ema50": 31.349063402902633,
       "avg20_volume": 2474260.0,
       "latest_volume": 3831400.0
-    },
-    {
-      "symbol": "BOX",
-      "as_of": "2026-07-16",
-      "close": 31.40999984741211,
-      "ema20": 28.20952731089417,
-      "ema50": 26.748133993645798,
-      "avg20_volume": 2616470.0,
-      "latest_volume": 4459000.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.28624559080662154,
     "risk_ratio": 1.8479433220886072,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.853943531339761
+    "vix_term_structure": 0.8554040365958342
   },
   "sentiment": {
-    "fear_score": 0.0368421052631579,
-    "bullish_score": 0.0368421052631579,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
-      "policy_shock": true,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1069,22 +1069,17 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.13,
-        "articles": 2,
-        "top_headlines": [
-          "Oil prices ease as mediators propose US - Iran ceasefire",
-          "Andy Burnham announces \u00a3850m VAT cut on energy bills to ease cost - of - living"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "European Banks Q2 Profits Rise on Rates & Deals"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -1131,9 +1126,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-25.6%).",
       "Semiconductor proxy is below its 20-day trend.",

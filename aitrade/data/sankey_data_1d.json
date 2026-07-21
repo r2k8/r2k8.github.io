@@ -253,6 +253,13 @@
       "depth": 4
     },
     {
+      "name": "PANW",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
       "name": "TSM",
       "itemStyle": {
         "color": "#10b981"
@@ -340,13 +347,6 @@
       "name": "ZS",
       "itemStyle": {
         "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "PANW",
-      "itemStyle": {
-        "color": "#10b981"
       },
       "depth": 4
     },
@@ -914,6 +914,17 @@
     },
     {
       "source": "AI & Cloud Growth",
+      "target": "PANW",
+      "value": 4.6,
+      "net_flow_dollars": -46042170.25086246,
+      "market_cap_delta": -8166297015.380865,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
       "target": "TSM",
       "value": 4.28,
       "net_flow_dollars": 42831508.94387996,
@@ -1052,17 +1063,6 @@
       "market_cap_delta": -19403958.604064573,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "PANW",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1346,7 +1346,7 @@
     "title": "Bear Market (Selling)",
     "liquidity": "Flowing OUT (Negative)",
     "inflow": "MU / MSFT / AMD / INTC / GOOGL",
-    "outflow": "TSLA / AAPL / LLY / SPY / CAT",
+    "outflow": "TSLA / AAPL / LLY / SPY / PANW",
     "health": "Optimal"
   },
   "discovery_radar": [
@@ -1430,6 +1430,15 @@
       "earn_growth": 0.152,
       "dollar_volume": 130628092.66171674,
       "price_change": 0.0025982513097355044
+    },
+    {
+      "symbol": "VSXY",
+      "name": "Victorias Secret & Co.",
+      "sector": "Consumer Cyclical",
+      "rev_growth": 0.153,
+      "earn_growth": 0,
+      "dollar_volume": 187296728.5554709,
+      "price_change": 0.07317377117384127
     },
     {
       "symbol": "MAN",
@@ -1700,16 +1709,7 @@
       "earn_growth": -0.186,
       "dollar_volume": 57205360.0752237,
       "price_change": 0.0007177471544184292
-    },
-    {
-      "symbol": "BOX",
-      "name": "Box, Inc.",
-      "sector": "Technology",
-      "rev_growth": 0.136,
-      "earn_growth": 0,
-      "dollar_volume": 69040821.41223618,
-      "price_change": 0.012139120126959519
     }
   ],
-  "last_updated": "2026-07-21 09:45:15 UTC"
+  "last_updated": "2026-07-21 10:47:46 UTC"
 }

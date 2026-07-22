@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-22T12:09:33.987229+00:00",
+  "updated_at": "2026-07-22T13:12:54.540146+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -758,6 +758,15 @@
       "latest_volume": 1020400.0
     },
     {
+      "symbol": "SBRA",
+      "as_of": "2026-07-21",
+      "close": 22.040000915527344,
+      "ema20": 19.8967280132008,
+      "ema50": 19.68916228075746,
+      "avg20_volume": 3543375.0,
+      "latest_volume": 6840600.0
+    },
+    {
       "symbol": "LXP",
       "as_of": "2026-07-20",
       "close": 60.849998474121094,
@@ -1008,29 +1017,20 @@
       "ema50": 55.356412504119135,
       "avg20_volume": 1381077.9,
       "latest_volume": 2215258.0
-    },
-    {
-      "symbol": "SEIC",
-      "as_of": "2026-07-16",
-      "close": 100.26000213623047,
-      "ema20": 93.50566238878174,
-      "ema50": 90.6342176327864,
-      "avg20_volume": 768550.0,
-      "latest_volume": 1542400.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.28433204973645615,
     "risk_ratio": 1.914696864815658,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8568646347121093
+    "vix_term_structure": 0.8481012317348626
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.04,
+    "bullish_score": 0.09,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1055,9 +1055,11 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Ce ministre de Trump d\u00e9voile le co\u00fbt ahurissant de la guerre en Iran ( et ce nest pas fini ) "
+        ]
       },
       "XLF": {
         "symbol": "XLF",
@@ -1112,8 +1114,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-21.1%).",
       "Semiconductor proxy is below its 20-day trend.",

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-23T22:03:02.087183+00:00",
+  "updated_at": "2026-07-23T23:07:39.493423+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -266,20 +266,6 @@
     },
     {
       "Date": "2026-07-23",
-      "Symbol": "INTC",
-      "Company": "Intel Corporation",
-      "Domain": "intel.com",
-      "Timing": "After Close",
-      "Price": "100.23",
-      "RevGrowth": "0.072",
-      "EarnGrowth": "0.0",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-23",
       "Symbol": "RTX",
       "Company": "RTX Corporation",
       "Domain": "rtx.com",
@@ -343,20 +329,6 @@
       "Price": "304.33",
       "RevGrowth": "0.032",
       "EarnGrowth": "0.062",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-23",
-      "Symbol": "SAP",
-      "Company": "SAP  SE",
-      "Domain": "sap.com",
-      "Timing": "After Close",
-      "Price": "146.38",
-      "RevGrowth": "0.06",
-      "EarnGrowth": "0.093",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -588,20 +560,6 @@
     },
     {
       "Date": "2026-07-23",
-      "Symbol": "HIG",
-      "Company": "The Hartford Insurance Group, I",
-      "Domain": "thehartford.com",
-      "Timing": "After Close",
-      "Price": "142.18",
-      "RevGrowth": "0.061",
-      "EarnGrowth": "0.414",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-23",
       "Symbol": "PCG",
       "Company": "Pacific Gas & Electric Co.",
       "Domain": "pgecorp.com",
@@ -609,6 +567,34 @@
       "Price": "17.54",
       "RevGrowth": "0.15",
       "EarnGrowth": "0.398",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-07-23",
+      "Symbol": "ROP",
+      "Company": "Roper Technologies, Inc.",
+      "Domain": "ropertech.com",
+      "Timing": "Before Open",
+      "Price": "355.12",
+      "RevGrowth": "0.113",
+      "EarnGrowth": "0.592",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-07-23",
+      "Symbol": "HBAN",
+      "Company": "Huntington Bancshares Incorpora",
+      "Domain": "huntington.com",
+      "Timing": "Before Open",
+      "Price": "17.4",
+      "RevGrowth": "0.336",
+      "EarnGrowth": "-0.265",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -631,8 +617,8 @@
       "close": 605.8200073242188,
       "ema20": 531.6560475191932,
       "ema50": 496.6188022195609,
-      "avg20_volume": 365388.7,
-      "latest_volume": 1172374.0
+      "avg20_volume": 365626.3,
+      "latest_volume": 1177126.0
     },
     {
       "symbol": "SLG",
@@ -658,8 +644,8 @@
       "close": 32.2599983215332,
       "ema20": 32.1866821657815,
       "ema50": 31.254234688842924,
-      "avg20_volume": 2937573.6,
-      "latest_volume": 4870272.0
+      "avg20_volume": 2938515.7,
+      "latest_volume": 4889114.0
     },
     {
       "symbol": "OGN",
@@ -669,6 +655,15 @@
       "ema50": 13.274333820868437,
       "avg20_volume": 2480454.75,
       "latest_volume": 6563595.0
+    },
+    {
+      "symbol": "HFWA",
+      "as_of": "2026-07-23",
+      "close": 30.290000915527344,
+      "ema20": 29.78649727015566,
+      "ema50": 28.840922869175994,
+      "avg20_volume": 433405.6,
+      "latest_volume": 1100712.0
     },
     {
       "symbol": "PAG",
@@ -966,15 +961,6 @@
       "ema50": 12.082869733683893,
       "avg20_volume": 3757265.0,
       "latest_volume": 10766500.0
-    },
-    {
-      "symbol": "BJRI",
-      "as_of": "2026-07-17",
-      "close": 67.48999786376953,
-      "ema20": 59.13205887042761,
-      "ema50": 52.843266789457424,
-      "avg20_volume": 599760.0,
-      "latest_volume": 1126900.0
     }
   ],
   "regime_metrics": {
@@ -984,11 +970,11 @@
     "vix_term_structure": 0.9077670105171757
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.044642857142857144,
+    "bullish_score": 0.044642857142857144,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1013,25 +999,36 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.13,
+        "articles": 2,
+        "top_headlines": [
+          "Oil tops $100 : Trump warmongering punishes Americans , not Iran",
+          "Port of Long Beach , MARAD Sign First - of - its - Kind Partnership Agreement on Nuclear Energy in Maritime"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.31,
+        "articles": 11,
+        "top_headlines": [
+          "Why First Nations want an inquiry into Ontario wildfire response | Cornwall Standard - Freeholder",
+          "Government withdraws subpoenas of 3 reporters for The New York Times after admitting legal errors",
+          "Why First Nations want an inquiry into Ontario wildfire response",
+          "Nafta tejkalon 100 dollar\u00ebt p\u00ebr fu\u00e7i p\u00ebr her\u00eb t\u00eb par\u00eb q\u00eb nga maji , mes tensioneve n\u00eb Hormuz dhe Detin e Kuq",
+          "Oil tops $100 : Trump warmongering punishes Americans , not Iran"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
         "name": "Healthcare",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Bill To Make Healthcare Costs Transparent Advances , But Hospitals Dont Seem Too Happy"
+        ]
       },
       "XLI": {
         "symbol": "XLI",
@@ -1045,9 +1042,11 @@
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Gulf Travel Warnings Back at Level 3 : Five Countries Warn Against Non - Essential Travel"
+        ]
       },
       "XLP": {
         "symbol": "XLP",
@@ -1070,8 +1069,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-11.9%).",
       "Semiconductor proxy is below its 20-day trend.",

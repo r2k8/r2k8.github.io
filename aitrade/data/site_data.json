@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-23T10:22:02.930578+00:00",
+  "updated_at": "2026-07-23T11:25:07.806729+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -257,8 +257,8 @@
       "Domain": "abc.xyz",
       "Timing": "After Close",
       "Price": "342.09",
-      "RevGrowth": "0.218",
-      "EarnGrowth": "0.82",
+      "RevGrowth": "0.242",
+      "EarnGrowth": "2.941",
       "Signal": "Strong Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -589,8 +589,8 @@
       "close": 75.5999984741211,
       "ema20": 74.16820520632334,
       "ema50": 72.16660103640754,
-      "avg20_volume": 728837.15,
-      "latest_volume": 1638243.0
+      "avg20_volume": 737840.0,
+      "latest_volume": 1818300.0
     },
     {
       "symbol": "CALM",
@@ -681,6 +681,15 @@
       "ema50": 490.6699023208169,
       "avg20_volume": 331835.0,
       "latest_volume": 521000.0
+    },
+    {
+      "symbol": "SLGN",
+      "as_of": "2026-07-22",
+      "close": 45.529998779296875,
+      "ema20": 44.9148347394295,
+      "ema50": 42.806060878163194,
+      "avg20_volume": 1133210.0,
+      "latest_volume": 1878500.0
     },
     {
       "symbol": "BANC",
@@ -924,28 +933,19 @@
       "ema50": 156.77556375067473,
       "avg20_volume": 652790.0,
       "latest_volume": 1390000.0
-    },
-    {
-      "symbol": "OC",
-      "as_of": "2026-07-17",
-      "close": 143.91000366210938,
-      "ema20": 139.94492097636933,
-      "ema50": 132.77984026031754,
-      "avg20_volume": 1445770.0,
-      "latest_volume": 2278100.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.28458276527052856,
     "risk_ratio": 1.8990815289948042,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8597857380844575
+    "vix_term_structure": 0.8636805735343225
   },
   "sentiment": {
-    "fear_score": 0.038461538461538464,
-    "bullish_score": 0.038461538461538464,
+    "fear_score": 0.0375,
+    "bullish_score": 0.0375,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
@@ -971,12 +971,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.13,
-        "articles": 2,
-        "top_headlines": [
-          "Houthis say they attacked Saudi oil tankers in the Red Sea \u2013 NBC4 Washington",
-          "A Renewed Flare - Up of the Iran Conflict Fuels the Oil Industry : BP , Zefiro Methane , and Shell | 2026 - 07 - 23 | Investing News"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
@@ -1031,9 +1028,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-11.3%).",
       "Semiconductor proxy is below its 20-day trend.",

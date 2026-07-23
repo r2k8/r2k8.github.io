@@ -232,16 +232,16 @@
       "depth": 4
     },
     {
-      "name": "LMT",
+      "name": "UNP",
       "itemStyle": {
-        "color": "#ef4444"
+        "color": "#10b981"
       },
       "depth": 4
     },
     {
-      "name": "UNP",
+      "name": "LMT",
       "itemStyle": {
-        "color": "#10b981"
+        "color": "#ef4444"
       },
       "depth": 4
     },
@@ -505,6 +505,13 @@
       "depth": 2
     },
     {
+      "name": "Silver",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 2
+    },
+    {
       "name": "Crude Oil",
       "itemStyle": {
         "color": "#10b981"
@@ -513,13 +520,6 @@
     },
     {
       "name": "Copper",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Silver",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -881,23 +881,23 @@
     },
     {
       "source": "Industrials",
+      "target": "UNP",
+      "value": 634.64,
+      "net_flow_dollars": 6346402082.953459,
+      "market_cap_delta": 25624660823.584846,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Industrials",
       "target": "LMT",
       "value": 237.06,
       "net_flow_dollars": -2370621519.4608827,
       "market_cap_delta": -9469250757.95659,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Industrials",
-      "target": "UNP",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1310,6 +1310,17 @@
     },
     {
       "source": "Commodities",
+      "target": "Silver",
+      "value": 1828.21,
+      "net_flow_dollars": -18282052800.735477,
+      "market_cap_delta": -5616852862.013596,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Commodities",
       "target": "Crude Oil",
       "value": 104.04,
       "net_flow_dollars": 1040350640.8691686,
@@ -1325,17 +1336,6 @@
       "value": 6.51,
       "net_flow_dollars": 65109610.312161855,
       "market_cap_delta": 1649999999.9999986,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Commodities",
-      "target": "Silver",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1363,8 +1363,8 @@
       "symbol": "TNL",
       "name": "Travel   Leisure Co.",
       "sector": "Consumer Cyclical",
-      "rev_growth": 0.029,
-      "earn_growth": 0.14,
+      "rev_growth": 0.044,
+      "earn_growth": 0.062,
       "dollar_volume": 2848253118.2592487,
       "price_change": 0.14928547391488434
     },
@@ -1428,8 +1428,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.247,
       "earn_growth": 0,
-      "dollar_volume": 1000000.0,
-      "price_change": 0.0
+      "dollar_volume": 1235777764.1698375,
+      "price_change": 0.3662280534443102
     },
     {
       "symbol": "FBP",
@@ -1453,10 +1453,19 @@
       "symbol": "MEDP",
       "name": "Medpace Holdings, Inc.",
       "sector": "Healthcare",
-      "rev_growth": 0.265,
-      "earn_growth": 0.166,
+      "rev_growth": 0.172,
+      "earn_growth": 0.371,
       "dollar_volume": 8835078764.013601,
       "price_change": 0.03866576548241262
+    },
+    {
+      "symbol": "SLGN",
+      "name": "Silgan Holdings Inc.",
+      "sector": "Consumer Cyclical",
+      "rev_growth": 0.065,
+      "earn_growth": -0.052,
+      "dollar_volume": 1840207550.620577,
+      "price_change": 0.1549974322500475
     },
     {
       "symbol": "BANC",
@@ -1489,8 +1498,8 @@
       "symbol": "MOH",
       "name": "Molina Healthcare Inc",
       "sector": "Healthcare",
-      "rev_growth": -0.043,
-      "earn_growth": -0.95,
+      "rev_growth": -0.011,
+      "earn_growth": -0.754,
       "dollar_volume": 11124718417.211384,
       "price_change": 0.44928108165466707
     },
@@ -1635,8 +1644,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.319,
       "earn_growth": 0.525,
-      "dollar_volume": 1000000.0,
-      "price_change": 0.0
+      "dollar_volume": 5092603219.399859,
+      "price_change": 0.22055514891994185
     },
     {
       "symbol": "NEO",
@@ -1700,16 +1709,7 @@
       "earn_growth": 0.187,
       "dollar_volume": 3673168692.205555,
       "price_change": 0.07194535654403197
-    },
-    {
-      "symbol": "OC",
-      "name": "Owens Corning Inc",
-      "sector": "Industrials",
-      "rev_growth": -0.105,
-      "earn_growth": 0,
-      "dollar_volume": 7602667446.318179,
-      "price_change": 0.13818359871705377
     }
   ],
-  "last_updated": "2026-07-23 10:22:22 UTC"
+  "last_updated": "2026-07-23 11:25:25 UTC"
 }

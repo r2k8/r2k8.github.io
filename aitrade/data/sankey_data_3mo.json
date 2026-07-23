@@ -232,16 +232,16 @@
       "depth": 4
     },
     {
-      "name": "UNP",
+      "name": "LMT",
       "itemStyle": {
-        "color": "#10b981"
+        "color": "#ef4444"
       },
       "depth": 4
     },
     {
-      "name": "LMT",
+      "name": "UNP",
       "itemStyle": {
-        "color": "#ef4444"
+        "color": "#10b981"
       },
       "depth": 4
     },
@@ -505,13 +505,6 @@
       "depth": 2
     },
     {
-      "name": "Silver",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 2
-    },
-    {
       "name": "Crude Oil",
       "itemStyle": {
         "color": "#10b981"
@@ -520,6 +513,13 @@
     },
     {
       "name": "Copper",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Silver",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -881,23 +881,23 @@
     },
     {
       "source": "Industrials",
-      "target": "UNP",
-      "value": 634.64,
-      "net_flow_dollars": 6346402082.953459,
-      "market_cap_delta": 25624660823.584846,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Industrials",
       "target": "LMT",
       "value": 237.06,
       "net_flow_dollars": -2370621519.4608827,
       "market_cap_delta": -9469250757.95659,
       "lineStyle": {
         "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Industrials",
+      "target": "UNP",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1310,17 +1310,6 @@
     },
     {
       "source": "Commodities",
-      "target": "Silver",
-      "value": 1828.21,
-      "net_flow_dollars": -18282052800.735477,
-      "market_cap_delta": -5616852862.013596,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Commodities",
       "target": "Crude Oil",
       "value": 104.04,
       "net_flow_dollars": 1040350640.8691686,
@@ -1336,6 +1325,17 @@
       "value": 6.51,
       "net_flow_dollars": 65109610.312161855,
       "market_cap_delta": 1649999999.9999986,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Commodities",
+      "target": "Silver",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1372,8 +1372,8 @@
       "symbol": "CALM",
       "name": "Cal-Maine Foods, Inc.",
       "sector": "Consumer Defensive",
-      "rev_growth": -0.53,
-      "earn_growth": -0.898,
+      "rev_growth": -0.499,
+      "earn_growth": 0,
       "dollar_volume": 3059988104.0327907,
       "price_change": 0.14163202456278026
     },
@@ -1428,15 +1428,15 @@
       "sector": "Healthcare",
       "rev_growth": 0.247,
       "earn_growth": 0,
-      "dollar_volume": 1235777764.1698375,
-      "price_change": 0.3662280534443102
+      "dollar_volume": 1000000.0,
+      "price_change": 0.0
     },
     {
       "symbol": "FBP",
       "name": "First BanCorp. New",
       "sector": "Financial Services",
-      "rev_growth": 0.081,
-      "earn_growth": 0.213,
+      "rev_growth": 0.094,
+      "earn_growth": 0.244,
       "dollar_volume": 1660251145.700988,
       "price_change": 0.2192649180545653
     },
@@ -1448,6 +1448,15 @@
       "earn_growth": 0,
       "dollar_volume": 5877858977.284721,
       "price_change": 1.3486238779149309
+    },
+    {
+      "symbol": "MEDP",
+      "name": "Medpace Holdings, Inc.",
+      "sector": "Healthcare",
+      "rev_growth": 0.265,
+      "earn_growth": 0.166,
+      "dollar_volume": 8835078764.013601,
+      "price_change": 0.03866576548241262
     },
     {
       "symbol": "BANC",
@@ -1626,8 +1635,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.319,
       "earn_growth": 0.525,
-      "dollar_volume": 5092603219.399859,
-      "price_change": 0.22055514891994185
+      "dollar_volume": 1000000.0,
+      "price_change": 0.0
     },
     {
       "symbol": "NEO",
@@ -1651,8 +1660,8 @@
       "symbol": "FFBC",
       "name": "First Financial Bancorp.",
       "sector": "Financial Services",
-      "rev_growth": 0.323,
-      "earn_growth": 0.315,
+      "rev_growth": 0.168,
+      "earn_growth": 0,
       "dollar_volume": 1457910130.1792574,
       "price_change": 0.1690189013587833
     },
@@ -1687,7 +1696,7 @@
       "symbol": "WTFC",
       "name": "Wintrust Financial Corporation",
       "sector": "Financial Services",
-      "rev_growth": 0.104,
+      "rev_growth": 0.102,
       "earn_growth": 0.187,
       "dollar_volume": 3673168692.205555,
       "price_change": 0.07194535654403197
@@ -1700,16 +1709,7 @@
       "earn_growth": 0,
       "dollar_volume": 7602667446.318179,
       "price_change": 0.13818359871705377
-    },
-    {
-      "symbol": "AIT",
-      "name": "Applied Industrial Technologies",
-      "sector": "Industrials",
-      "rev_growth": 0.073,
-      "earn_growth": 0.031,
-      "dollar_volume": 4130629217.985013,
-      "price_change": 0.17811055980058746
     }
   ],
-  "last_updated": "2026-07-23 09:18:11 UTC"
+  "last_updated": "2026-07-23 10:22:22 UTC"
 }

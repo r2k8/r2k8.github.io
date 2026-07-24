@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-24T01:19:21.077689+00:00",
+  "updated_at": "2026-07-24T02:21:40.716108+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -448,20 +448,6 @@
     },
     {
       "Date": "2026-07-24",
-      "Symbol": "FLG",
-      "Company": "Flagstar Bank, N.A.",
-      "Domain": "flagstar.com",
-      "Timing": "Before Open",
-      "Price": "14.71",
-      "RevGrowth": "0.212",
-      "EarnGrowth": "0.0",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-24",
       "Symbol": "GNTX",
       "Company": "Gentex Corporation",
       "Domain": "gentex.com",
@@ -483,20 +469,6 @@
       "Price": "117.03",
       "RevGrowth": "0.111",
       "EarnGrowth": "0.284",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-24",
-      "Symbol": "BANF",
-      "Company": "BancFirst Corporation",
-      "Domain": "bancfirst.bank",
-      "Timing": "After Close",
-      "Price": "114.92",
-      "RevGrowth": "0.083",
-      "EarnGrowth": "0.114",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -607,8 +579,8 @@
       "close": 91.23999786376953,
       "ema20": 87.89177590497003,
       "ema50": 86.46987480413952,
-      "avg20_volume": 4125748.9,
-      "latest_volume": 6354178.0
+      "avg20_volume": 4157394.35,
+      "latest_volume": 6987087.0
     },
     {
       "symbol": "COLB",
@@ -654,6 +626,33 @@
       "ema50": 56.65275761231448,
       "avg20_volume": 932834.9,
       "latest_volume": 1504198.0
+    },
+    {
+      "symbol": "BLFS",
+      "as_of": "2026-07-23",
+      "close": 30.770000457763672,
+      "ema20": 28.674739289755834,
+      "ema50": 26.778759883433032,
+      "avg20_volume": 1738380.9,
+      "latest_volume": 5128318.0
+    },
+    {
+      "symbol": "CATY",
+      "as_of": "2026-07-23",
+      "close": 62.529998779296875,
+      "ema20": 61.667758437253624,
+      "ema50": 60.046678132278025,
+      "avg20_volume": 596082.95,
+      "latest_volume": 1103659.0
+    },
+    {
+      "symbol": "RS",
+      "as_of": "2026-07-23",
+      "close": 395.3699951171875,
+      "ema20": 387.42273657423243,
+      "ema50": 383.12183047105157,
+      "avg20_volume": 375657.75,
+      "latest_volume": 642055.0
     },
     {
       "symbol": "PAG",
@@ -726,15 +725,6 @@
       "ema50": 74.72123554969839,
       "avg20_volume": 1413508.8,
       "latest_volume": 2180976.0
-    },
-    {
-      "symbol": "BLFS",
-      "as_of": "2026-07-22",
-      "close": 31.149999618530273,
-      "ema20": 28.454944185579617,
-      "ema50": 26.64547716578338,
-      "avg20_volume": 1534320.0,
-      "latest_volume": 9738200.0
     },
     {
       "symbol": "FBP",
@@ -915,24 +905,6 @@
       "ema50": 149.72493760378174,
       "avg20_volume": 558120.0,
       "latest_volume": 1033700.0
-    },
-    {
-      "symbol": "VSXY",
-      "as_of": "2026-07-20",
-      "close": 87.41000366210938,
-      "ema20": 79.9233475627115,
-      "ema50": 72.7608496070704,
-      "avg20_volume": 1850605.0,
-      "latest_volume": 3134300.0
-    },
-    {
-      "symbol": "MAN",
-      "as_of": "2026-07-17",
-      "close": 52.34000015258789,
-      "ema20": 39.47920020227337,
-      "ema50": 35.52924263979951,
-      "avg20_volume": 1764325.0,
-      "latest_volume": 3346200.0
     }
   ],
   "regime_metrics": {
@@ -942,10 +914,10 @@
     "vix_term_structure": 0.9077670105171757
   },
   "sentiment": {
-    "fear_score": 0.0411764705882353,
-    "bullish_score": 0.0411764705882353,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -955,11 +927,9 @@
         "symbol": "XLK",
         "name": "Technology",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Knox Systems , Microsoft Partner to Accelerate Secure Government Cloud Innovation on Azure"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "SMH": {
         "symbol": "SMH",
@@ -973,11 +943,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Casca \u0219i povestea ei din cel de - al Doilea R\u0103zboi Mondial - Micii detectivi ai istoriei"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
@@ -1032,9 +1000,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-11.9%).",
       "Semiconductor proxy is below its 20-day trend.",

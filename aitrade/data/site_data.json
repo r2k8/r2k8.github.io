@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-24T21:18:23.791954+00:00",
+  "updated_at": "2026-07-24T22:20:12.250605+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -497,18 +497,18 @@
     {
       "symbol": "WKC",
       "as_of": "2026-07-24",
-      "close": 38.93000030517578,
-      "ema20": 35.253297614748945,
-      "ema50": 32.67672226536102,
-      "avg20_volume": 1210211.25,
-      "latest_volume": 2598925.0
+      "close": 38.13999938964844,
+      "ema20": 35.17834208501095,
+      "ema50": 32.65746196074557,
+      "avg20_volume": 1299201.7,
+      "latest_volume": 4378234.0
     },
     {
       "symbol": "KN",
       "as_of": "2026-07-24",
-      "close": 37.599998474121094,
-      "ema20": 37.25089546955022,
-      "ema50": 36.94546811232777,
+      "close": 37.58000183105469,
+      "ema20": 37.248991027353426,
+      "ema50": 36.94468393024673,
       "avg20_volume": 1159956.35,
       "latest_volume": 2468227.0
     },
@@ -844,11 +844,11 @@
     "vix_term_structure": 0.9058995473604146
   },
   "sentiment": {
-    "fear_score": 0.05634920634920635,
-    "bullish_score": 0.06428571428571428,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -873,26 +873,17 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.19,
-        "articles": 2,
-        "top_headlines": [
-          "Global Markets Under Pressure as Oil Prices Surge , Inflation Fears Rise and Geopolitical Tensions Escalate",
-          "Asian Markets Wrap | Nikkei , KOSPI Lead Selloff as Middle - EastTensions Push Oil Above $100"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
-        "score": 0.0455,
-        "confidence": 0.4886,
-        "articles": 22,
-        "top_headlines": [
-          "Trump diz que n\u00e3o acredita que China e R\u00fassia estejam participando do conflito com o Ir\u00e3",
-          "City plans up to $2M in flood relief funds for property owners",
-          " \u00bf Qu\u00e9 tendr\u00eda que pasar para que el d\u00f3lar llegue a $2 . 900 ? ",
-          "Capitol Fax . com - Your Illinois News Radar \u00bb AG Raoul still staying busy",
-          "Diddy in Solitary Confinement After Being Involved in Prison Fight"
-        ]
+        "score": 0.0,
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -922,11 +913,9 @@
         "symbol": "XLP",
         "name": "Consumer Staples",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Potsdam food drive bolsters local pantries amid growing demand"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLU": {
         "symbol": "XLU",
@@ -941,10 +930,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-20.5%).",
       "Semiconductor proxy is below its 20-day trend.",

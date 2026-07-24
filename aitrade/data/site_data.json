@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-24T00:15:26.877372+00:00",
+  "updated_at": "2026-07-24T01:19:21.077689+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -647,6 +647,15 @@
       "latest_volume": 990302.0
     },
     {
+      "symbol": "RLI",
+      "as_of": "2026-07-23",
+      "close": 61.15999984741211,
+      "ema20": 59.31555237351478,
+      "ema50": 56.65275761231448,
+      "avg20_volume": 932834.9,
+      "latest_volume": 1504198.0
+    },
+    {
       "symbol": "PAG",
       "as_of": "2026-07-22",
       "close": 215.22999572753906,
@@ -924,15 +933,6 @@
       "ema50": 35.52924263979951,
       "avg20_volume": 1764325.0,
       "latest_volume": 3346200.0
-    },
-    {
-      "symbol": "KRYS",
-      "as_of": "2026-07-17",
-      "close": 354.8599853515625,
-      "ema20": 352.9887563822427,
-      "ema50": 333.0062500504578,
-      "avg20_volume": 408085.0,
-      "latest_volume": 683100.0
     }
   ],
   "regime_metrics": {
@@ -942,11 +942,11 @@
     "vix_term_structure": 0.9077670105171757
   },
   "sentiment": {
-    "fear_score": 0.055102040816326525,
-    "bullish_score": 0.04829931972789116,
+    "fear_score": 0.0411764705882353,
+    "bullish_score": 0.0411764705882353,
     "events": {
       "war": true,
-      "policy_shock": true,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -955,9 +955,11 @@
         "symbol": "XLK",
         "name": "Technology",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Knox Systems , Microsoft Partner to Accelerate Secure Government Cloud Innovation on Azure"
+        ]
       },
       "SMH": {
         "symbol": "SMH",
@@ -970,28 +972,20 @@
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": 0.3333,
-        "confidence": 0.17,
-        "articles": 3,
+        "score": 0.0,
+        "confidence": 0.11,
+        "articles": 1,
         "top_headlines": [
-          "US stocks declined with heavy selling in the Nasdaq following Alphabet and Tesla earnings , while oil prices and yields were higher amid the geopolitical backdrop - Newsquawk Daily Asia - Pac Market Open",
-          "Three Levers China Is Pulling To Weather Gulf Energy Shock ; How Long Can Beijing Hold Out ? ",
-          "Mixed Alphabet ( NASDAQ : GOOG ) And Tesla ( NASDAQ : TSLA ) Earnings Push Wall Street Futures Lower As Oil Surge Reignites Inflation Fears"
+          "Casca \u0219i povestea ei din cel de - al Doilea R\u0103zboi Mondial - Micii detectivi ai istoriei"
         ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.47,
-        "articles": 19,
-        "top_headlines": [
-          "Arranca el Torneo Clausura : la Primera A se pone en marcha y la B no da tregua",
-          "Freddie Mac says 30 - year fixed mortgage rate reaches 11 - month high",
-          "U . S . stocks tumble on dramatic escalation of Iran war",
-          "MPF e MPAC recomendam instalao de unidade do Ibama em Feij\u00f3 ( AC ) para combater desmatamento e queimadas",
-          "Monk Launches Voice Collections , Bringing AI Phone Calls and Callbacks to Accounts Receivable"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -1005,21 +999,17 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Offense & Defense : The Infrastructure ETF Playbook"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLY": {
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Trump warns of largest strikes on Iran yet as Tehran lashes out across Gulf - Dominican Republic Post \u2013 Caribbean News , Business , Travel & Culture"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLP": {
         "symbol": "XLP",

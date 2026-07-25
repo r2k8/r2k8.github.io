@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-25T08:45:12.233894+00:00",
+  "updated_at": "2026-07-25T09:47:19.005668+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -656,6 +656,24 @@
       "latest_volume": 2493600.0
     },
     {
+      "symbol": "OII",
+      "as_of": "2026-07-23",
+      "close": 48.02000045776367,
+      "ema20": 42.187764798872024,
+      "ema50": 40.24111470031279,
+      "avg20_volume": 1375747.5,
+      "latest_volume": 3951050.0
+    },
+    {
+      "symbol": "RHI",
+      "as_of": "2026-07-23",
+      "close": 37.849998474121094,
+      "ema20": 36.40773825035006,
+      "ema50": 32.90734598443855,
+      "avg20_volume": 2482420.05,
+      "latest_volume": 4301001.0
+    },
+    {
       "symbol": "PAG",
       "as_of": "2026-07-22",
       "close": 215.22999572753906,
@@ -789,24 +807,6 @@
       "ema50": 60.603295507504384,
       "avg20_volume": 371858.15,
       "latest_volume": 704563.0
-    },
-    {
-      "symbol": "AUB",
-      "as_of": "2026-07-21",
-      "close": 42.810001373291016,
-      "ema20": 41.694162330638974,
-      "ema50": 40.23008373866984,
-      "avg20_volume": 1439645.0,
-      "latest_volume": 2646800.0
-    },
-    {
-      "symbol": "XNCR",
-      "as_of": "2026-07-21",
-      "close": 20.450000762939453,
-      "ema20": 15.845739605621688,
-      "ema50": 14.330317017872297,
-      "avg20_volume": 1104246.5,
-      "latest_volume": 1745830.0
     }
   ],
   "regime_metrics": {
@@ -816,10 +816,10 @@
     "vix_term_structure": 0.9104186917929039
   },
   "sentiment": {
-    "fear_score": 0.0375,
-    "bullish_score": 0.0375,
+    "fear_score": 0.035,
+    "bullish_score": 0.035,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false

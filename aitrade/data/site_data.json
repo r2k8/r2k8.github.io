@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-25T04:37:42.767126+00:00",
+  "updated_at": "2026-07-25T05:39:26.927812+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -631,14 +631,14 @@
     "breadth_ratio": 0.28708445131487526,
     "risk_ratio": 1.8778155872645463,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.9045763921880056
+    "vix_term_structure": 0.9104186917929039
   },
   "sentiment": {
-    "fear_score": 0.04411764705882353,
-    "bullish_score": 0.04411764705882353,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -655,11 +655,9 @@
         "symbol": "SMH",
         "name": "Semiconductors",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Nvidia , SK Group unveil $500 billion - plus AI data centres initiative , memory partnership"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLE": {
         "symbol": "XLE",
@@ -722,9 +720,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-15.2%).",
       "Semiconductor proxy is below its 20-day trend.",

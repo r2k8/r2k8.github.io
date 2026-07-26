@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-26T21:09:42.331451+00:00",
+  "updated_at": "2026-07-26T22:12:46.714756+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -562,8 +562,8 @@
       "close": 30.290000915527344,
       "ema20": 29.788438658200583,
       "ema50": 28.916728211157004,
-      "avg20_volume": 457558.85,
-      "latest_volume": 733077.0
+      "avg20_volume": 458502.9,
+      "latest_volume": 751958.0
     },
     {
       "symbol": "MEDP",
@@ -816,10 +816,10 @@
     "vix_term_structure": 0.9104186917929039
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.035,
+    "bullish_score": 0.035,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -902,8 +902,10 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-15.2%).",
       "Semiconductor proxy is below its 20-day trend.",

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-26T18:04:12.942990+00:00",
+  "updated_at": "2026-07-26T19:06:05.927004+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -816,11 +816,11 @@
     "vix_term_structure": 0.9104186917929039
   },
   "sentiment": {
-    "fear_score": 0.03482142857142857,
-    "bullish_score": 0.03482142857142857,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -845,25 +845,17 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.19,
-        "articles": 5,
-        "top_headlines": [
-          "Gas facility fire worsens Bangladesh energy crunch | The Peninsula Qatar",
-          "Inside Philippine\u00e2\u20ac\u2122s energy transition",
-          "Energy corridors to Europe : Former colonies are taking the valve",
-          "Energy corridors to Europe : Former colonies are taking the valve",
-          "Energy corridors to Europe : Former colonies are taking the valve"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Why are Israeli settlers on a rampage in the occupied West Bank ? - Dominican Republic Post \u2013 Caribbean News , Business , Travel & Culture"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -885,12 +877,9 @@
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.13,
-        "articles": 2,
-        "top_headlines": [
-          "Why are Israeli settlers on a rampage in the occupied West Bank ? - Dominican Republic Post \u2013 Caribbean News , Business , Travel & Culture",
-          "Canadians spent $3 . 3 billion less on travel to the U . S . last year : StatCan"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLP": {
         "symbol": "XLP",
@@ -913,9 +902,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-15.2%).",
       "Semiconductor proxy is below its 20-day trend.",

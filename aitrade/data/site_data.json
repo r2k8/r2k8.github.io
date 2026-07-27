@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-27T09:40:16.651363+00:00",
+  "updated_at": "2026-07-27T10:42:10.320850+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -1163,14 +1163,14 @@
     "breadth_ratio": 0.28708445131487526,
     "risk_ratio": 1.8778155872645463,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8583251399681824
+    "vix_term_structure": 0.8568646347121093
   },
   "sentiment": {
-    "fear_score": 0.027500000000000004,
-    "bullish_score": 0.027500000000000004,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1195,11 +1195,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Oil Prices Plunge 4 % as US and Iran Halt Military Strikes : Diplomatic Hope Emerges , ETAuto"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
@@ -1254,9 +1252,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-15.2%).",
       "Semiconductor proxy is below its 20-day trend.",

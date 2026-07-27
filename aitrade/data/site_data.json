@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-27T01:18:38.345145+00:00",
+  "updated_at": "2026-07-27T02:23:59.549849+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -496,6 +496,20 @@
       "Timing": "After Close",
       "Price": "91.67",
       "RevGrowth": "0.119",
+      "EarnGrowth": "0.0",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-07-27",
+      "Symbol": "CINF",
+      "Company": "Cincinnati Financial Corporatio",
+      "Domain": "cinfin.com",
+      "Timing": "After Close",
+      "Price": "182.81",
+      "RevGrowth": "0.116",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
       "EPS_Estimate": "",
@@ -1152,11 +1166,11 @@
     "vix_term_structure": 0.9104186917929039
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.04418604651162791,
+    "bullish_score": 0.05581395348837209,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1181,17 +1195,27 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.15,
+        "articles": 3,
+        "top_headlines": [
+          "Oil prices ease after US and Iran pause their attacks",
+          "Oil prices ease after US and Iran pause their attacks",
+          "Oil prices ease after US and Iran pause their attacks"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
-        "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "score": 0.0667,
+        "confidence": 0.394,
+        "articles": 15,
+        "top_headlines": [
+          "Here What Markets Are Now Saying About Fed Rate Hikes This Year",
+          "2 Industrials Stocks That Can Make You Richer Than You Think",
+          "PYMNTS | EU New MiCA Rules Could Mean More Crypto Mergers",
+          "Pauza SUA - Iran : Wall Street cre\u0219te , petrolul scade . Ormuz , risc cheie",
+          "Gi\u00e1 v\u00e0ng h\u00f4m nay 27 / 7 / 2026 ch\u00ecm s\u00e2u \u1edf v\u00f9ng \u0111\u00e1y , v\u00e0ng SJC c\u00f3 b\u1ee9t ph\u00e1 tr\u1edf l\u1ea1i ? "
+        ]
       },
       "XLV": {
         "symbol": "XLV",
@@ -1205,17 +1229,21 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "2 Industrials Stocks That Can Make You Richer Than You Think"
+        ]
       },
       "XLY": {
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Retail News and Trends | Retail Dive"
+        ]
       },
       "XLP": {
         "symbol": "XLP",
@@ -1238,8 +1266,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-15.2%).",
       "Semiconductor proxy is below its 20-day trend.",

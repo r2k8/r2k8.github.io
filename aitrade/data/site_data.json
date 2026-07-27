@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-27T00:16:49.119964+00:00",
+  "updated_at": "2026-07-27T01:18:38.345145+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -496,20 +496,6 @@
       "Timing": "After Close",
       "Price": "91.67",
       "RevGrowth": "0.119",
-      "EarnGrowth": "0.0",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-27",
-      "Symbol": "CINF",
-      "Company": "Cincinnati Financial Corporatio",
-      "Domain": "cinfin.com",
-      "Timing": "After Close",
-      "Price": "182.81",
-      "RevGrowth": "0.116",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
       "EPS_Estimate": "",
@@ -1166,11 +1152,11 @@
     "vix_term_structure": 0.9104186917929039
   },
   "sentiment": {
-    "fear_score": 0.0375,
-    "bullish_score": 0.0375,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1195,11 +1181,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Rising oil prices could force up united kingdom interest rates , say economists"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
@@ -1221,11 +1205,9 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Lai Expands Taiwan Collective Defense Strategy With Drones and Allied Cooperation"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLY": {
         "symbol": "XLY",
@@ -1256,9 +1238,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-15.2%).",
       "Semiconductor proxy is below its 20-day trend.",

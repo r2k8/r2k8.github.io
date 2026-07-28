@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-28T05:29:50.684759+00:00",
+  "updated_at": "2026-07-28T06:32:04.472724+00:00",
   "top_inflows": [
     {
       "symbol": "GLD",
@@ -1124,13 +1124,13 @@
     "vix_term_structure": 0.9089580936766288
   },
   "sentiment": {
-    "fear_score": 0.0925,
-    "bullish_score": 0.0425,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
-      "oil_shock": true
+      "oil_shock": false
     },
     "sectors": {
       "XLK": {
@@ -1152,12 +1152,10 @@
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": -1.0,
-        "confidence": 0.17,
-        "articles": 1,
-        "top_headlines": [
-          "Asia  scraping the bottom of the barrel  as Red Sea oil blockade worsens energy crisis \u00a0| Peak Oil News and Message Boards"
-        ]
+        "score": 0.0,
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
@@ -1212,9 +1210,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-18.4%).",
       "Semiconductor proxy is below its 20-day trend.",

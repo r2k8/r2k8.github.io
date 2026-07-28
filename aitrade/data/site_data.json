@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-28T21:07:54.430123+00:00",
+  "updated_at": "2026-07-28T22:10:10.397754+00:00",
   "top_inflows": [
     {
       "symbol": "GLD",
@@ -451,7 +451,7 @@
       "Symbol": "STX",
       "Company": "Seagate Technology Holdings PLC",
       "Domain": "seagate.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "747.3",
       "RevGrowth": "0.441",
       "EarnGrowth": "1.083",
@@ -870,6 +870,33 @@
       "latest_volume": 1070517.0
     },
     {
+      "symbol": "WKC",
+      "as_of": "2026-07-28",
+      "close": 40.04999923706055,
+      "ema20": 35.786059096520695,
+      "ema50": 33.07377271535115,
+      "avg20_volume": 1173114.8,
+      "latest_volume": 2265696.0
+    },
+    {
+      "symbol": "GSHD",
+      "as_of": "2026-07-28",
+      "close": 68.81999969482422,
+      "ema20": 53.79184679594115,
+      "ema50": 48.54938529349008,
+      "avg20_volume": 622408.85,
+      "latest_volume": 971377.0
+    },
+    {
+      "symbol": "PRK",
+      "as_of": "2026-07-28",
+      "close": 206.97000122070312,
+      "ema20": 187.14075231490287,
+      "ema50": 181.17219265652898,
+      "avg20_volume": 112065.0,
+      "latest_volume": 391200.0
+    },
+    {
       "symbol": "SAFT",
       "as_of": "2026-07-27",
       "close": 103.0199966430664,
@@ -940,15 +967,6 @@
       "ema50": 97.4683572087376,
       "avg20_volume": 712600.0,
       "latest_volume": 1160300.0
-    },
-    {
-      "symbol": "WKC",
-      "as_of": "2026-07-27",
-      "close": 39.790000915527344,
-      "ema20": 35.33677934475349,
-      "ema50": 32.77270474219357,
-      "avg20_volume": 1174050.0,
-      "latest_volume": 1875200.0
     },
     {
       "symbol": "KN",
@@ -1041,15 +1059,6 @@
       "latest_volume": 6563600.0
     },
     {
-      "symbol": "GSHD",
-      "as_of": "2026-07-23",
-      "close": 53.900001525878906,
-      "ema20": 51.18241212033239,
-      "ema50": 47.23988568848908,
-      "avg20_volume": 621155.0,
-      "latest_volume": 990300.0
-    },
-    {
       "symbol": "RLI",
       "as_of": "2026-07-23",
       "close": 61.15999984741211,
@@ -1120,15 +1129,6 @@
       "ema50": 19.90767817728949,
       "avg20_volume": 780166.9,
       "latest_volume": 1288338.0
-    },
-    {
-      "symbol": "LW",
-      "as_of": "2026-07-23",
-      "close": 49.18000030517578,
-      "ema20": 46.35704286273147,
-      "ema50": 45.067069134628106,
-      "avg20_volume": 1966010.5,
-      "latest_volume": 5039810.0
     }
   ],
   "regime_metrics": {
@@ -1138,10 +1138,10 @@
     "vix_term_structure": 0.9169183547245773
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.14250000000000002,
+    "bullish_score": 0.0425,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -1199,9 +1199,11 @@
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "\u00cen Polonia , r\u0103zboiul pentru clien\u0163i dintre retaileri a \u00eempins pre\u0163urile unor ... "
+        ]
       },
       "XLP": {
         "symbol": "XLP",
@@ -1224,8 +1226,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-23.3%).",
       "Semiconductor proxy is below its 20-day trend.",

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-28T22:10:10.397754+00:00",
+  "updated_at": "2026-07-28T23:12:13.259167+00:00",
   "top_inflows": [
     {
       "symbol": "GLD",
@@ -451,7 +451,7 @@
       "Symbol": "STX",
       "Company": "Seagate Technology Holdings PLC",
       "Domain": "seagate.com",
-      "Timing": "Before Open",
+      "Timing": "After Close",
       "Price": "747.3",
       "RevGrowth": "0.441",
       "EarnGrowth": "1.083",
@@ -897,6 +897,15 @@
       "latest_volume": 391200.0
     },
     {
+      "symbol": "CHEF",
+      "as_of": "2026-07-28",
+      "close": 100.18000030517578,
+      "ema20": 95.72677877422694,
+      "ema50": 90.86143922968478,
+      "avg20_volume": 547017.4,
+      "latest_volume": 1014448.0
+    },
+    {
       "symbol": "SAFT",
       "as_of": "2026-07-27",
       "close": 103.0199966430664,
@@ -1120,15 +1129,6 @@
       "ema50": 42.85592700410609,
       "avg20_volume": 1250625.25,
       "latest_volume": 3441905.0
-    },
-    {
-      "symbol": "FCF",
-      "as_of": "2026-07-23",
-      "close": 20.760000228881836,
-      "ema20": 20.517760217679083,
-      "ema50": 19.90767817728949,
-      "avg20_volume": 780166.9,
-      "latest_volume": 1288338.0
     }
   ],
   "regime_metrics": {
@@ -1138,10 +1138,10 @@
     "vix_term_structure": 0.9169183547245773
   },
   "sentiment": {
-    "fear_score": 0.14250000000000002,
-    "bullish_score": 0.0425,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -1199,11 +1199,9 @@
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "\u00cen Polonia , r\u0103zboiul pentru clien\u0163i dintre retaileri a \u00eempins pre\u0163urile unor ... "
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLP": {
         "symbol": "XLP",
@@ -1226,9 +1224,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-23.3%).",
       "Semiconductor proxy is below its 20-day trend.",

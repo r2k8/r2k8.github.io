@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-29T10:07:43.292914+00:00",
+  "updated_at": "2026-07-29T11:09:34.356985+00:00",
   "top_inflows": [
     {
       "symbol": "GLD",
@@ -307,20 +307,6 @@
       "Source": "yahoo"
     },
     {
-      "Date": "2026-07-28",
-      "Symbol": "V",
-      "Company": "Visa Inc.",
-      "Domain": "visa.com",
-      "Timing": "After Close",
-      "Price": "366.59",
-      "RevGrowth": "0.171",
-      "EarnGrowth": "0.355",
-      "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
       "Date": "2026-07-30",
       "Symbol": "MA",
       "Company": "Mastercard Incorporated",
@@ -400,20 +386,6 @@
       "RevGrowth": "0.584",
       "EarnGrowth": "0.241",
       "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-28",
-      "Symbol": "BA",
-      "Company": "Boeing Company (The)",
-      "Domain": "boeing.com",
-      "Timing": "After Close",
-      "Price": "221.56",
-      "RevGrowth": "0.08",
-      "EarnGrowth": "0.0",
-      "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -756,15 +728,6 @@
       "latest_volume": 6006838.0
     },
     {
-      "symbol": "AGYS",
-      "as_of": "2026-07-28",
-      "close": 110.69999694824219,
-      "ema20": 102.92327628743196,
-      "ema50": 94.81638683048303,
-      "avg20_volume": 298503.5,
-      "latest_volume": 599570.0
-    },
-    {
       "symbol": "BANC",
       "as_of": "2026-07-28",
       "close": 21.18000030517578,
@@ -808,6 +771,15 @@
       "ema50": 90.86143922968478,
       "avg20_volume": 547017.4,
       "latest_volume": 1014448.0
+    },
+    {
+      "symbol": "AGYS",
+      "as_of": "2026-07-27",
+      "close": 103.23999786376953,
+      "ema20": 102.10467411260983,
+      "ema50": 94.16807621343163,
+      "avg20_volume": 298503.5,
+      "latest_volume": 599570.0
     },
     {
       "symbol": "EBC",
@@ -1093,13 +1065,13 @@
     "breadth_ratio": 0.2911417890338552,
     "risk_ratio": 1.8291893002732829,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8797467813725407
+    "vix_term_structure": 0.893378751877169
   },
   "sentiment": {
-    "fear_score": 0.035,
-    "bullish_score": 0.035,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -1182,9 +1154,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-18.4%).",
       "Semiconductor proxy is below its 20-day trend.",

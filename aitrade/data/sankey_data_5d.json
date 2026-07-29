@@ -449,6 +449,13 @@
       "depth": 1
     },
     {
+      "name": "MicroStrategy",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 2
+    },
+    {
       "name": "Bitcoin",
       "itemStyle": {
         "color": "#ef4444"
@@ -466,13 +473,6 @@
       "name": "Ethereum",
       "itemStyle": {
         "color": "#ef4444"
-      },
-      "depth": 2
-    },
-    {
-      "name": "MicroStrategy",
-      "itemStyle": {
-        "color": "#10b981"
       },
       "depth": 2
     },
@@ -1222,6 +1222,17 @@
     },
     {
       "source": "Crypto",
+      "target": "MicroStrategy",
+      "value": 34.92,
+      "net_flow_dollars": -349228059.09067994,
+      "market_cap_delta": -2001482315.334321,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Crypto",
       "target": "Bitcoin",
       "value": 20.38,
       "net_flow_dollars": -203753571.10660326,
@@ -1250,17 +1261,6 @@
       "market_cap_delta": -40000228.881835304,
       "lineStyle": {
         "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Crypto",
-      "target": "MicroStrategy",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1711,5 +1711,5 @@
       "price_change": -0.04057333142694849
     }
   ],
-  "last_updated": "2026-07-29 02:26:59 UTC"
+  "last_updated": "2026-07-29 03:29:35 UTC"
 }

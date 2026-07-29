@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-29T09:04:34.409887+00:00",
+  "updated_at": "2026-07-29T10:07:43.292914+00:00",
   "top_inflows": [
     {
       "symbol": "GLD",
@@ -411,8 +411,22 @@
       "Domain": "boeing.com",
       "Timing": "After Close",
       "Price": "221.56",
-      "RevGrowth": "0.14",
+      "RevGrowth": "0.08",
       "EarnGrowth": "0.0",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-07-29",
+      "Symbol": "QCOM",
+      "Company": "QUALCOMM Incorporated",
+      "Domain": "qualcomm.com",
+      "Timing": "After Close",
+      "Price": "162.88",
+      "RevGrowth": "-0.035",
+      "EarnGrowth": "1.73",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -797,10 +811,10 @@
     },
     {
       "symbol": "EBC",
-      "as_of": "2026-07-28",
-      "close": 23.549999237060547,
-      "ema20": 22.487511063164487,
-      "ema50": 21.59356247775719,
+      "as_of": "2026-07-27",
+      "close": 23.100000381469727,
+      "ema20": 22.375670202754375,
+      "ema50": 21.51370791615297,
       "avg20_volume": 2600556.7,
       "latest_volume": 5773434.0
     },
@@ -1079,13 +1093,13 @@
     "breadth_ratio": 0.2911417890338552,
     "risk_ratio": 1.8291893002732829,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.885589080977439
+    "vix_term_structure": 0.8797467813725407
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.035,
+    "bullish_score": 0.035,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -1168,8 +1182,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-18.4%).",
       "Semiconductor proxy is below its 20-day trend.",

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-30T22:51:48.603651+00:00",
+  "updated_at": "2026-07-30T23:54:21.799150+00:00",
   "top_inflows": [
     {
       "symbol": "GLD",
@@ -808,6 +808,24 @@
       "latest_volume": 2168102.0
     },
     {
+      "symbol": "THRM",
+      "as_of": "2026-07-30",
+      "close": 42.31999969482422,
+      "ema20": 38.899555191235706,
+      "ema50": 36.37258293753111,
+      "avg20_volume": 504934.35,
+      "latest_volume": 879587.0
+    },
+    {
+      "symbol": "CNXN",
+      "as_of": "2026-07-30",
+      "close": 82.48999786376953,
+      "ema20": 78.90684908686622,
+      "ema50": 74.54110143212742,
+      "avg20_volume": 139766.0,
+      "latest_volume": 274820.0
+    },
+    {
       "symbol": "ITRI",
       "as_of": "2026-07-29",
       "close": 100.58000183105469,
@@ -943,15 +961,6 @@
       "latest_volume": 734196.0
     },
     {
-      "symbol": "THRM",
-      "as_of": "2026-07-29",
-      "close": 42.88999938964844,
-      "ema20": 38.53950840138428,
-      "ema50": 36.1298312331518,
-      "avg20_volume": 473855.0,
-      "latest_volume": 825200.0
-    },
-    {
       "symbol": "MORN",
       "as_of": "2026-07-29",
       "close": 198.66000366210938,
@@ -1022,15 +1031,6 @@
       "ema50": 133.55797990210004,
       "avg20_volume": 1224094.45,
       "latest_volume": 2437089.0
-    },
-    {
-      "symbol": "MEDP",
-      "as_of": "2026-07-28",
-      "close": 570.969970703125,
-      "ema20": 545.8135328175292,
-      "ema50": 507.0456720404371,
-      "avg20_volume": 387887.25,
-      "latest_volume": 729145.0
     }
   ],
   "regime_metrics": {
@@ -1040,8 +1040,8 @@
     "vix_term_structure": 0.8764102642352765
   },
   "sentiment": {
-    "fear_score": 0.04,
-    "bullish_score": 0.04,
+    "fear_score": 0.034375,
+    "bullish_score": 0.034375,
     "events": {
       "war": true,
       "policy_shock": false,
@@ -1069,14 +1069,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.17,
-        "articles": 4,
-        "top_headlines": [
-          "US Mortgage Rates Hit 6 . 66 %, the Highest in a Year , as Oil Prices and Stubborn Inflation Squeeze Buyers",
-          "FP Live : Daniel Yergin on Why Energy Prices Didnt Soar Higher This Year",
-          "Energy Down on Hopes for Iran De - escalation - Energy Roundup",
-          "Brent tops $90 as renewed strikes rattle oil markets"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",

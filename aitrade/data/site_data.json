@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-30T07:00:13.422905+00:00",
+  "updated_at": "2026-07-30T08:02:45.737533+00:00",
   "top_inflows": [
     {
       "symbol": "GLD",
@@ -783,8 +783,8 @@
       "close": 161.66000366210938,
       "ema20": 150.93280115231116,
       "ema50": 143.9114033991259,
-      "avg20_volume": 789520.45,
-      "latest_volume": 3105009.0
+      "avg20_volume": 791115.0,
+      "latest_volume": 3136900.0
     },
     {
       "symbol": "AAMI",
@@ -801,8 +801,8 @@
       "close": 105.62999725341797,
       "ema20": 96.64883684881408,
       "ema50": 91.75933978059089,
-      "avg20_volume": 593168.85,
-      "latest_volume": 1514477.0
+      "avg20_volume": 595430.0,
+      "latest_volume": 1559700.0
     },
     {
       "symbol": "CAKE",
@@ -1079,14 +1079,14 @@
     "breadth_ratio": 0.2957392992478835,
     "risk_ratio": 1.7363940907909745,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 1.0058422067446964
+    "vix_term_structure": 0.9620252847186651
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.04,
+    "bullish_score": 0.04,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1111,9 +1111,11 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "US launches strikes on Iranian targets a day after it foiled missile attack on American forces"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
@@ -1168,8 +1170,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-28.6%).",
       "Semiconductor proxy is below its 20-day trend.",
@@ -1183,11 +1186,12 @@
     ],
     "forecast": {
       "next_day_rebound_probability": 0.05,
-      "next_week_rebound_probability": 0.05,
-      "next_month_base_probability": 0.25,
-      "rebound_score": 0,
+      "next_week_rebound_probability": 0.1,
+      "next_month_base_probability": 0.33,
+      "rebound_score": 1,
       "buy_zone": "avoid",
       "reasons": [
+        "VIX/fear proxy is below elevated-stress levels.",
         "Semiconductor outflows are still active."
       ],
       "interpretation": "Do not add. Forced selling/crowded-trade unwind still dominates."

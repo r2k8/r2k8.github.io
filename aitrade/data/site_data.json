@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-30T21:47:03.131872+00:00",
+  "updated_at": "2026-07-30T22:51:48.603651+00:00",
   "top_inflows": [
     {
       "symbol": "GLD",
@@ -353,7 +353,7 @@
       "Symbol": "SYK",
       "Company": "Stryker Corporation",
       "Domain": "stryker.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "348.04",
       "RevGrowth": "0.026",
       "EarnGrowth": "0.142",
@@ -602,14 +602,42 @@
     },
     {
       "Date": "2026-07-30",
-      "Symbol": "AJG",
-      "Company": "Arthur J. Gallagher & Co.",
-      "Domain": "ajg.com",
-      "Timing": "After Close",
-      "Price": "256.46",
-      "RevGrowth": "0.346",
-      "EarnGrowth": "0.162",
+      "Symbol": "MPWR",
+      "Company": "Monolithic Power Systems, Inc.",
+      "Domain": "monolithicpower.com",
+      "Timing": "Before Open",
+      "Price": "1316.18",
+      "RevGrowth": "0.261",
+      "EarnGrowth": "0.395",
       "Signal": "Strong Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-07-30",
+      "Symbol": "CRH",
+      "Company": "CRH PLC",
+      "Domain": "crh.com",
+      "Timing": "Before Open",
+      "Price": "96.0",
+      "RevGrowth": "0.091",
+      "EarnGrowth": "0.0",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-07-30",
+      "Symbol": "VALE",
+      "Company": "VALE S.A.",
+      "Domain": "vale.com",
+      "Timing": "After Close",
+      "Price": "14.99",
+      "RevGrowth": "0.027",
+      "EarnGrowth": "0.22",
+      "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -753,6 +781,33 @@
       "latest_volume": 3293586.0
     },
     {
+      "symbol": "CHEF",
+      "as_of": "2026-07-30",
+      "close": 112.22000122070312,
+      "ema20": 98.13180488423208,
+      "ema50": 92.56171866059529,
+      "avg20_volume": 630912.8,
+      "latest_volume": 1041256.0
+    },
+    {
+      "symbol": "GEF",
+      "as_of": "2026-07-30",
+      "close": 87.30999755859375,
+      "ema20": 77.72932072514288,
+      "ema50": 73.04377361840795,
+      "avg20_volume": 236416.75,
+      "latest_volume": 400735.0
+    },
+    {
+      "symbol": "NBIX",
+      "as_of": "2026-07-30",
+      "close": 185.5,
+      "ema20": 175.3258193279481,
+      "ema50": 166.9419729758694,
+      "avg20_volume": 1162685.1,
+      "latest_volume": 2168102.0
+    },
+    {
       "symbol": "ITRI",
       "as_of": "2026-07-29",
       "close": 100.58000183105469,
@@ -823,15 +878,6 @@
       "ema50": 77.00361923284963,
       "avg20_volume": 417545.0,
       "latest_volume": 980000.0
-    },
-    {
-      "symbol": "CHEF",
-      "as_of": "2026-07-29",
-      "close": 105.62999725341797,
-      "ema20": 96.64883684881408,
-      "ema50": 91.75933978059089,
-      "avg20_volume": 595430.0,
-      "latest_volume": 1559700.0
     },
     {
       "symbol": "CAKE",
@@ -942,15 +988,6 @@
       "latest_volume": 989000.0
     },
     {
-      "symbol": "GEF",
-      "as_of": "2026-07-29",
-      "close": 87.20999908447266,
-      "ema20": 76.72082842688489,
-      "ema50": 72.4614787637065,
-      "avg20_volume": 227520.0,
-      "latest_volume": 566600.0
-    },
-    {
       "symbol": "JBLU",
       "as_of": "2026-07-28",
       "close": 6.052499771118164,
@@ -994,15 +1031,6 @@
       "ema50": 507.0456720404371,
       "avg20_volume": 387887.25,
       "latest_volume": 729145.0
-    },
-    {
-      "symbol": "EBC",
-      "as_of": "2026-07-27",
-      "close": 23.100000381469727,
-      "ema20": 22.375670202754375,
-      "ema50": 21.51370791615297,
-      "avg20_volume": 2600556.7,
-      "latest_volume": 5773434.0
     }
   ],
   "regime_metrics": {
@@ -1041,10 +1069,13 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
+        "confidence": 0.17,
+        "articles": 4,
         "top_headlines": [
-          "Four decades after Chernobyl , Italy prepares return to nuclear energy"
+          "US Mortgage Rates Hit 6 . 66 %, the Highest in a Year , as Oil Prices and Stubborn Inflation Squeeze Buyers",
+          "FP Live : Daniel Yergin on Why Energy Prices Didnt Soar Higher This Year",
+          "Energy Down on Hopes for Iran De - escalation - Energy Roundup",
+          "Brent tops $90 as renewed strikes rattle oil markets"
         ]
       },
       "XLF": {

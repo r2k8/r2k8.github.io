@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-07-30T09:06:53.716437+00:00",
+  "updated_at": "2026-07-30T10:08:47.086865+00:00",
   "top_inflows": [
     {
       "symbol": "GLD",
@@ -265,20 +265,6 @@
       "Source": "yahoo"
     },
     {
-      "Date": "2026-07-29",
-      "Symbol": "MSFT",
-      "Company": "Microsoft Corporation",
-      "Domain": "microsoft.com",
-      "Timing": "After Close",
-      "Price": "390.54",
-      "RevGrowth": "0.183",
-      "EarnGrowth": "0.234",
-      "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
       "Date": "2026-07-30",
       "Symbol": "AMZN",
       "Company": "Amazon.com, Inc.",
@@ -287,20 +273,6 @@
       "Price": "226.65",
       "RevGrowth": "0.166",
       "EarnGrowth": "0.748",
-      "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-29",
-      "Symbol": "META",
-      "Company": "Meta Platforms, Inc.",
-      "Domain": "meta.com",
-      "Timing": "After Close",
-      "Price": "585.61",
-      "RevGrowth": "0.331",
-      "EarnGrowth": "0.624",
       "Signal": "Strong Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -456,20 +428,6 @@
       "RevGrowth": "0.449",
       "EarnGrowth": "6.798",
       "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-29",
-      "Symbol": "SBUX",
-      "Company": "Starbucks Corporation",
-      "Domain": "starbucks.com",
-      "Timing": "After Close",
-      "Price": "104.14",
-      "RevGrowth": "0.088",
-      "EarnGrowth": "0.326",
-      "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -694,20 +652,6 @@
       "RevGrowth": "0.119",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-07-29",
-      "Symbol": "SOFI",
-      "Company": "SoFi Technologies, Inc.",
-      "Domain": "sofi.com",
-      "Timing": "After Close",
-      "Price": "15.25",
-      "RevGrowth": "0.425",
-      "EarnGrowth": "1.012",
-      "Signal": "Strong Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -940,6 +884,15 @@
       "latest_volume": 1098400.0
     },
     {
+      "symbol": "XHR",
+      "as_of": "2026-07-29",
+      "close": 21.81999969482422,
+      "ema20": 20.872897014734285,
+      "ema50": 19.697049777529234,
+      "avg20_volume": 631800.0,
+      "latest_volume": 989000.0
+    },
+    {
       "symbol": "JBLU",
       "as_of": "2026-07-28",
       "close": 6.052499771118164,
@@ -1064,28 +1017,19 @@
       "ema50": 40.90909960932945,
       "avg20_volume": 2292600.0,
       "latest_volume": 5488400.0
-    },
-    {
-      "symbol": "WEX",
-      "as_of": "2026-07-27",
-      "close": 177.97999572753906,
-      "ema20": 157.0187202522742,
-      "ema50": 150.42371778669224,
-      "avg20_volume": 711010.0,
-      "latest_volume": 1601600.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.2957392992478835,
     "risk_ratio": 1.7363940907909745,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.9620252847186651
+    "vix_term_structure": 0.9508276444078286
   },
   "sentiment": {
-    "fear_score": 0.036111111111111115,
-    "bullish_score": 0.036111111111111115,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -1168,9 +1112,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-28.6%).",
       "Semiconductor proxy is below its 20-day trend.",

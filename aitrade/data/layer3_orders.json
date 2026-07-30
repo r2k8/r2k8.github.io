@@ -1,6 +1,6 @@
 [
   {
-    "symbol": "SPY",
+    "symbol": "SOXX",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
@@ -8,22 +8,22 @@
       "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SPY",
-      "signal_type": "sell",
-      "confidence": 0.9,
-      "current_price": 729.4600219726562,
+      "symbol": "SOXX",
+      "signal_type": "liquidate",
+      "confidence": 0.88,
+      "current_price": 502.5799865722656,
       "reasons": [
-        "Severe sell-off in EWY (-28.6% intra-day).",
-        "Severe sell-off in EWJ (-4.2% intra-day).",
-        "News narrative includes geopolitical/oil-shock language.",
+        "PORTFOLIO MATCH: You own 2.0 shares.",
         "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
-        "Korea proxy EWY is under acute pressure (-28.6%).",
+        "Korea proxy EWY is under acute pressure (-23.0%).",
         "Semiconductor proxy is below its 20-day trend.",
         "Nasdaq/growth proxy is below its 20-day trend.",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-07-30 13:19:21.572429+00:00"
+      "generated_at": "2026-07-30 14:21:18.431804+00:00"
     }
   },
   {
@@ -32,52 +32,24 @@
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Avoid signal: blocks new long exposure."
     ],
     "signal": {
       "symbol": "QQQ",
-      "signal_type": "sell",
-      "confidence": 0.9,
-      "current_price": 661.72998046875,
+      "signal_type": "avoid",
+      "confidence": 0.84,
+      "current_price": 680.64501953125,
       "reasons": [
-        "Severe sell-off in EWY (-28.6% intra-day).",
-        "Severe sell-off in EWJ (-4.2% intra-day).",
-        "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
-        "Korea proxy EWY is under acute pressure (-28.6%).",
+        "Korea proxy EWY is under acute pressure (-23.0%).",
         "Semiconductor proxy is below its 20-day trend.",
         "Nasdaq/growth proxy is below its 20-day trend.",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-07-30 13:19:21.572429+00:00"
-    }
-  },
-  {
-    "symbol": "IWM",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "IWM",
-      "signal_type": "sell",
-      "confidence": 0.9,
-      "current_price": 288.57000732421875,
-      "reasons": [
-        "Severe sell-off in EWY (-28.6% intra-day).",
-        "Severe sell-off in EWJ (-4.2% intra-day).",
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
-        "Korea proxy EWY is under acute pressure (-28.6%).",
-        "Semiconductor proxy is below its 20-day trend.",
-        "Nasdaq/growth proxy is below its 20-day trend.",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
-      ],
-      "generated_at": "2026-07-30 13:19:21.572429+00:00"
+      "generated_at": "2026-07-30 14:21:18.431804+00:00"
     }
   },
   {
@@ -86,25 +58,24 @@
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Avoid signal: blocks new long exposure."
     ],
     "signal": {
       "symbol": "SMH",
-      "signal_type": "sell",
-      "confidence": 0.9,
-      "current_price": 504.2200012207031,
+      "signal_type": "avoid",
+      "confidence": 0.84,
+      "current_price": 538.0194702148438,
       "reasons": [
-        "Severe sell-off in EWY (-28.6% intra-day).",
-        "Severe sell-off in EWJ (-4.2% intra-day).",
-        "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
-        "Korea proxy EWY is under acute pressure (-28.6%).",
+        "Korea proxy EWY is under acute pressure (-23.0%).",
         "Semiconductor proxy is below its 20-day trend.",
         "Nasdaq/growth proxy is below its 20-day trend.",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-07-30 13:19:21.572429+00:00"
+      "generated_at": "2026-07-30 14:21:18.431804+00:00"
     }
   }
 ]

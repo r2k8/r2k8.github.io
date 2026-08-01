@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-01T12:34:15.215222+00:00",
+  "updated_at": "2026-08-01T13:37:30.469362+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -564,6 +564,15 @@
       "latest_volume": 44333500.0
     },
     {
+      "symbol": "PRG",
+      "as_of": "2026-07-31",
+      "close": 44.02000045776367,
+      "ema20": 43.8532423208177,
+      "ema50": 41.74122223253287,
+      "avg20_volume": 505275.0,
+      "latest_volume": 909700.0
+    },
+    {
       "symbol": "GKOS",
       "as_of": "2026-07-30",
       "close": 168.52000427246094,
@@ -742,15 +751,6 @@
       "ema50": 30.00944422154842,
       "avg20_volume": 1551511.3,
       "latest_volume": 2562026.0
-    },
-    {
-      "symbol": "ABG",
-      "as_of": "2026-07-29",
-      "close": 248.25999450683594,
-      "ema20": 220.15155987228172,
-      "ema50": 209.77279191065966,
-      "avg20_volume": 265713.8,
-      "latest_volume": 594776.0
     }
   ],
   "regime_metrics": {
@@ -760,10 +760,10 @@
     "vix_term_structure": 0.7784809668158497
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.0375,
+    "bullish_score": 0.0375,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -789,9 +789,13 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.15,
+        "articles": 3,
+        "top_headlines": [
+          "Trump considering attacks on Iran energy infrastructure , report says",
+          "Iran war drives oil profits to highest levels in years - Hawaii Tribune - Herald",
+          "Turkey counters Greater Israel strategy : Why Ankara is dumping US Treasuries and building energy alliance with Russia"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
@@ -813,9 +817,11 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Ukrainian ex - Defense Minister Fedorov says reform push led to removal"
+        ]
       },
       "XLY": {
         "symbol": "XLY",
@@ -846,8 +852,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-15.3%).",
       "Semiconductor proxy is below its 20-day trend.",

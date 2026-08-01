@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-01T07:18:28.462217+00:00",
+  "updated_at": "2026-08-01T08:20:50.913305+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -501,6 +501,51 @@
       "latest_volume": 1227100.0
     },
     {
+      "symbol": "BJRI",
+      "as_of": "2026-07-31",
+      "close": 67.61000061035156,
+      "ema20": 65.3171369074739,
+      "ema50": 57.95920060212447,
+      "avg20_volume": 500555.0,
+      "latest_volume": 964800.0
+    },
+    {
+      "symbol": "ILMN",
+      "as_of": "2026-07-31",
+      "close": 205.10000610351562,
+      "ema20": 191.119266165987,
+      "ema50": 177.62594669101523,
+      "avg20_volume": 1842470.0,
+      "latest_volume": 4099500.0
+    },
+    {
+      "symbol": "GTES",
+      "as_of": "2026-07-31",
+      "close": 27.979999542236328,
+      "ema20": 26.619962523605142,
+      "ema50": 26.373258867444793,
+      "avg20_volume": 1930950.0,
+      "latest_volume": 4235100.0
+    },
+    {
+      "symbol": "PAYO",
+      "as_of": "2026-07-31",
+      "close": 7.170000076293945,
+      "ema20": 7.066149347730239,
+      "ema50": 6.619901454514015,
+      "avg20_volume": 3743715.0,
+      "latest_volume": 6668200.0
+    },
+    {
+      "symbol": "KWR",
+      "as_of": "2026-07-31",
+      "close": 160.52000427246094,
+      "ema20": 152.30655337379054,
+      "ema50": 149.75600669375828,
+      "avg20_volume": 146435.0,
+      "latest_volume": 279200.0
+    },
+    {
       "symbol": "GKOS",
       "as_of": "2026-07-30",
       "close": 168.52000427246094,
@@ -706,51 +751,6 @@
       "ema50": 138.75271200633452,
       "avg20_volume": 499825.0,
       "latest_volume": 1003800.0
-    },
-    {
-      "symbol": "AAMI",
-      "as_of": "2026-07-29",
-      "close": 80.83000183105469,
-      "ema20": 80.26113235613357,
-      "ema50": 77.00361923284963,
-      "avg20_volume": 417545.0,
-      "latest_volume": 980000.0
-    },
-    {
-      "symbol": "CAKE",
-      "as_of": "2026-07-29",
-      "close": 101.13999938964844,
-      "ema20": 84.45076312470815,
-      "ema50": 77.49073401816959,
-      "avg20_volume": 1674790.0,
-      "latest_volume": 5378500.0
-    },
-    {
-      "symbol": "BLKB",
-      "as_of": "2026-07-29",
-      "close": 42.18000030517578,
-      "ema20": 32.60405608685822,
-      "ema50": 31.696131913471902,
-      "avg20_volume": 705315.0,
-      "latest_volume": 1782300.0
-    },
-    {
-      "symbol": "PRK",
-      "as_of": "2026-07-29",
-      "close": 212.55999755859375,
-      "ema20": 189.84971349529647,
-      "ema50": 183.0185363281323,
-      "avg20_volume": 113435.0,
-      "latest_volume": 189000.0
-    },
-    {
-      "symbol": "NSIT",
-      "as_of": "2026-07-29",
-      "close": 127.41999816894531,
-      "ema20": 117.96186002622473,
-      "ema50": 109.94552311178825,
-      "avg20_volume": 357630.0,
-      "latest_volume": 538300.0
     }
   ],
   "regime_metrics": {
@@ -760,8 +760,8 @@
     "vix_term_structure": 0.7784809668158497
   },
   "sentiment": {
-    "fear_score": 0.037500000000000006,
-    "bullish_score": 0.037500000000000006,
+    "fear_score": 0.035,
+    "bullish_score": 0.035,
     "events": {
       "war": true,
       "policy_shock": false,
@@ -789,12 +789,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.13,
-        "articles": 2,
-        "top_headlines": [
-          "Exxon made US$160 million per day in last quarter as oil prices surged",
-          "Oil price rises after Iran says it stops ships in Hormuz"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
@@ -827,7 +824,7 @@
         "confidence": 0.11,
         "articles": 1,
         "top_headlines": [
-          "Historic military convoy travels expedition route of Lewis & Clark"
+          "Alabama TSA finds Civil War - era cannonballs in traveler luggage \u2013 NBC 7 San Diego"
         ]
       },
       "XLP": {

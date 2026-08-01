@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-01T00:49:27.144068+00:00",
+  "updated_at": "2026-08-01T01:52:37.555726+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -344,6 +344,24 @@
       "latest_volume": 4034132.0
     },
     {
+      "symbol": "MHK",
+      "as_of": "2026-07-31",
+      "close": 123.0999984741211,
+      "ema20": 113.98306213312642,
+      "ema50": 110.71618681860485,
+      "avg20_volume": 832021.95,
+      "latest_volume": 1831239.0
+    },
+    {
+      "symbol": "CNXN",
+      "as_of": "2026-07-31",
+      "close": 83.72000122070312,
+      "ema20": 79.36626746870849,
+      "ema50": 74.94610063644873,
+      "avg20_volume": 145249.35,
+      "latest_volume": 259187.0
+    },
+    {
       "symbol": "GKOS",
       "as_of": "2026-07-30",
       "close": 168.52000427246094,
@@ -369,15 +387,6 @@
       "ema50": 9.479805589342266,
       "avg20_volume": 1672513.35,
       "latest_volume": 2759667.0
-    },
-    {
-      "symbol": "MHK",
-      "as_of": "2026-07-30",
-      "close": 119.55999755859375,
-      "ema20": 113.03475134371922,
-      "ema50": 110.68204333603532,
-      "avg20_volume": 779280.0,
-      "latest_volume": 2439400.0
     },
     {
       "symbol": "SHOO",
@@ -477,15 +486,6 @@
       "ema50": 36.37258293753111,
       "avg20_volume": 504934.35,
       "latest_volume": 879587.0
-    },
-    {
-      "symbol": "CNXN",
-      "as_of": "2026-07-30",
-      "close": 82.48999786376953,
-      "ema20": 78.90684908686622,
-      "ema50": 74.54110143212742,
-      "avg20_volume": 139850.0,
-      "latest_volume": 276500.0
     },
     {
       "symbol": "FBP",
@@ -648,10 +648,10 @@
     "vix_term_structure": 0.8406939740420086
   },
   "sentiment": {
-    "fear_score": 0.0375,
-    "bullish_score": 0.0375,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -734,9 +734,8 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-15.3%).",
       "Semiconductor proxy is below its 20-day trend.",

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-01T01:52:37.555726+00:00",
+  "updated_at": "2026-08-01T03:00:06.211980+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -648,11 +648,11 @@
     "vix_term_structure": 0.8406939740420086
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.052976190476190475,
+    "bullish_score": 0.04107142857142857,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -677,17 +677,27 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.15,
+        "articles": 3,
+        "top_headlines": [
+          "US and Israel prepare to bomb Irans energy infrastructure media",
+          "US , Israel planning to bombard energy - related targets in Iran : Report",
+          "  Closely monitoring : India on US bill seeking upto 100 % tariffs on Russian oil buyers"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.445,
+        "articles": 18,
+        "top_headlines": [
+          "Bodily Injury Adjuster - UM / UIM Litigation Moderate / Severe / Complex \u2013 Remote at Allstate / Insurance Journal Jobs",
+          "Funky Taurus Media - Music Photo Agency & Products",
+          "Peso mexicano cierra el mes con n\u00fameros verdes ante el d\u00f3lar ; tipo de cambio al cierre HOY viernes 31 de julio",
+          "Cheers and Jeers : Rum and Coke FRIDAY ! ",
+          "Funky Taurus Media - Music Photo Agency & Products"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
@@ -734,8 +744,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-15.3%).",
       "Semiconductor proxy is below its 20-day trend.",

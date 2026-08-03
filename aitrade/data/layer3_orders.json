@@ -1,6 +1,6 @@
 [
   {
-    "symbol": "SOXX",
+    "symbol": "SPY",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
@@ -8,89 +8,22 @@
       "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SOXX",
-      "signal_type": "liquidate",
-      "confidence": 0.88,
-      "current_price": 504.8900146484375,
+      "symbol": "SPY",
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 754.3900146484375,
       "reasons": [
-        "PORTFOLIO MATCH: You own 2.0 shares.",
+        "Severe sell-off in EWY (-17.9% intra-day).",
+        "Severe sell-off in EWJ (-2.9% intra-day).",
         "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
-        "Korea proxy EWY is under acute pressure (-15.3%).",
+        "Korea proxy EWY is under acute pressure (-17.9%).",
         "Semiconductor proxy is below its 20-day trend.",
         "Nasdaq/growth proxy is below its 20-day trend.",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-08-03 13:17:31.009450+00:00"
-    }
-  },
-  {
-    "symbol": "GTES",
-    "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 26.02,
-    "warnings": [
-      "Sized by risk: max loss about $7.00 at 7% hard stop."
-    ],
-    "signal": {
-      "symbol": "GTES",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 27.979999542236328,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 6.6%; earnings growth 205.8%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Industrials."
-      ],
-      "generated_at": "2026-08-03 13:17:31.009450+00:00"
-    }
-  },
-  {
-    "symbol": "CHEF",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "CHEF",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 115.3499984741211,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 12.9%; earnings growth 55.5%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Consumer Defensive."
-      ],
-      "generated_at": "2026-08-03 13:17:31.009450+00:00"
-    }
-  },
-  {
-    "symbol": "CNO",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "CNO",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 55.09000015258789,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 2.5%; earnings growth 85.7%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Financial Services."
-      ],
-      "generated_at": "2026-08-03 13:17:31.009450+00:00"
+      "generated_at": "2026-08-03 14:20:15.807836+00:00"
     }
   },
   {
@@ -99,25 +32,52 @@
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
       "symbol": "QQQ",
-      "signal_type": "avoid",
-      "confidence": 0.84,
-      "current_price": 687.989990234375,
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 693.469970703125,
       "reasons": [
+        "Severe sell-off in EWY (-17.9% intra-day).",
+        "Severe sell-off in EWJ (-2.9% intra-day).",
         "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
-        "Korea proxy EWY is under acute pressure (-15.3%).",
+        "Korea proxy EWY is under acute pressure (-17.9%).",
         "Semiconductor proxy is below its 20-day trend.",
         "Nasdaq/growth proxy is below its 20-day trend.",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-08-03 13:17:31.009450+00:00"
+      "generated_at": "2026-08-03 14:20:15.807836+00:00"
+    }
+  },
+  {
+    "symbol": "IWM",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "IWM",
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 295.6600036621094,
+      "reasons": [
+        "Severe sell-off in EWY (-17.9% intra-day).",
+        "Severe sell-off in EWJ (-2.9% intra-day).",
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
+        "Korea proxy EWY is under acute pressure (-17.9%).",
+        "Semiconductor proxy is below its 20-day trend.",
+        "Nasdaq/growth proxy is below its 20-day trend.",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
+      ],
+      "generated_at": "2026-08-03 14:20:15.807836+00:00"
     }
   },
   {
@@ -126,25 +86,25 @@
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
       "symbol": "SMH",
-      "signal_type": "avoid",
-      "confidence": 0.84,
-      "current_price": 540.530029296875,
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 535.739990234375,
       "reasons": [
+        "Severe sell-off in EWY (-17.9% intra-day).",
+        "Severe sell-off in EWJ (-2.9% intra-day).",
         "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
-        "Korea proxy EWY is under acute pressure (-15.3%).",
+        "Korea proxy EWY is under acute pressure (-17.9%).",
         "Semiconductor proxy is below its 20-day trend.",
         "Nasdaq/growth proxy is below its 20-day trend.",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-08-03 13:17:31.009450+00:00"
+      "generated_at": "2026-08-03 14:20:15.807836+00:00"
     }
   }
 ]

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-03T22:50:38.944813+00:00",
+  "updated_at": "2026-08-03T23:55:52.264204+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -406,20 +406,6 @@
     },
     {
       "Date": "2026-08-03",
-      "Symbol": "EC",
-      "Company": "Ecopetrol S.A.",
-      "Domain": "ecopetrol.com.co",
-      "Timing": "After Close",
-      "Price": "16.6",
-      "RevGrowth": "-0.087",
-      "EarnGrowth": "-0.077",
-      "Signal": "Avoid",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-03",
       "Symbol": "ON",
       "Company": "ON Semiconductor Corporation",
       "Domain": "onsemi.com",
@@ -763,11 +749,11 @@
     {
       "symbol": "CRI",
       "as_of": "2026-08-03",
-      "close": 40.70500183105469,
-      "ema20": 39.05445639552587,
-      "ema50": 38.71161774763977,
-      "avg20_volume": 996514.35,
-      "latest_volume": 1791887.0
+      "close": 39.88999938964844,
+      "ema20": 38.976837115391945,
+      "ema50": 38.679656867584626,
+      "avg20_volume": 1031218.7,
+      "latest_volume": 2485974.0
     },
     {
       "symbol": "DRH",
@@ -842,6 +828,15 @@
       "latest_volume": 3118988.0
     },
     {
+      "symbol": "MHK",
+      "as_of": "2026-08-03",
+      "close": 132.99000549316406,
+      "ema20": 115.78411383989258,
+      "ema50": 111.18750705200664,
+      "avg20_volume": 888459.85,
+      "latest_volume": 1586797.0
+    },
+    {
       "symbol": "FND",
       "as_of": "2026-07-31",
       "close": 57.56999969482422,
@@ -894,15 +889,6 @@
       "ema50": 45.828784198193496,
       "avg20_volume": 2628300.0,
       "latest_volume": 4760800.0
-    },
-    {
-      "symbol": "MHK",
-      "as_of": "2026-07-31",
-      "close": 123.0999984741211,
-      "ema20": 113.98306213312642,
-      "ema50": 110.71618681860485,
-      "avg20_volume": 841290.0,
-      "latest_volume": 2016600.0
     },
     {
       "symbol": "CNO",
@@ -1110,11 +1096,11 @@
     "vix_term_structure": 0.8378235288427784
   },
   "sentiment": {
-    "fear_score": 0.02972972972972973,
-    "bullish_score": 0.05675675675675676,
+    "fear_score": 0.0375,
+    "bullish_score": 0.0375,
     "events": {
       "war": true,
-      "policy_shock": false,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1139,9 +1125,11 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "  Without Trump administration , Oil Industry would be dead !: Trump slams Chevron CEO , demands immediate retail energy price cuts"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
@@ -1171,9 +1159,11 @@
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "  Without Trump administration , Oil Industry would be dead !: Trump slams Chevron CEO , demands immediate retail energy price cuts"
+        ]
       },
       "XLP": {
         "symbol": "XLP",

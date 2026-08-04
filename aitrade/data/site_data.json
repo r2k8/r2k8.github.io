@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-04T09:29:01.651114+00:00",
+  "updated_at": "2026-08-04T10:32:37.713638+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -335,20 +335,6 @@
       "Source": "yahoo"
     },
     {
-      "Date": "2026-08-03",
-      "Symbol": "PLTR",
-      "Company": "Palantir Technologies Inc.",
-      "Domain": "palantir.com",
-      "Timing": "After Close",
-      "Price": "125.65",
-      "RevGrowth": "0.847",
-      "EarnGrowth": "3.25",
-      "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
       "Date": "2026-08-04",
       "Symbol": "ANET",
       "Company": "Arista Networks, Inc.",
@@ -358,20 +344,6 @@
       "RevGrowth": "0.351",
       "EarnGrowth": "0.25",
       "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-04",
-      "Symbol": "TM",
-      "Company": "Toyota Motor Corporation",
-      "Domain": "global.toyota",
-      "Timing": "Before Open",
-      "Price": "186.17",
-      "RevGrowth": "0.019",
-      "EarnGrowth": "0.232",
-      "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -657,6 +629,20 @@
       "Source": "yahoo"
     },
     {
+      "Date": "2026-08-04",
+      "Symbol": "MPLX",
+      "Company": "MPLX LP",
+      "Domain": "mplx.com",
+      "Timing": "Before Open",
+      "Price": "58.91",
+      "RevGrowth": "-0.028",
+      "EarnGrowth": "-0.184",
+      "Signal": "Avoid",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
       "Date": "2026-08-06",
       "Symbol": "U",
       "Company": "Unity Software Inc.",
@@ -698,24 +684,6 @@
       "ema50": 38.679656867584626,
       "avg20_volume": 1031218.7,
       "latest_volume": 2485974.0
-    },
-    {
-      "symbol": "DRH",
-      "as_of": "2026-08-03",
-      "close": 13.364999771118164,
-      "ema20": 12.697267811508183,
-      "ema50": 12.100061671259992,
-      "avg20_volume": 2525010.3,
-      "latest_volume": 3957006.0
-    },
-    {
-      "symbol": "GEF",
-      "as_of": "2026-08-03",
-      "close": 86.69999694824219,
-      "ema20": 79.34495089769779,
-      "ema50": 74.14913648199996,
-      "avg20_volume": 258009.05,
-      "latest_volume": 389381.0
     },
     {
       "symbol": "OPLN",
@@ -761,6 +729,24 @@
       "ema50": 8.379113245523229,
       "avg20_volume": 858823.0,
       "latest_volume": 1346760.0
+    },
+    {
+      "symbol": "DRH",
+      "as_of": "2026-07-31",
+      "close": 13.239999771118164,
+      "ema20": 12.626980236812395,
+      "ema50": 12.048431544735168,
+      "avg20_volume": 2622124.35,
+      "latest_volume": 5898387.0
+    },
+    {
+      "symbol": "GEF",
+      "as_of": "2026-07-31",
+      "close": 86.55000305175781,
+      "ema20": 78.57073552395627,
+      "ema50": 73.63685646296966,
+      "avg20_volume": 258009.05,
+      "latest_volume": 389381.0
     },
     {
       "symbol": "CNK",
@@ -1037,11 +1023,11 @@
     "breadth_ratio": 0.2878197476334508,
     "risk_ratio": 1.8345795611301832,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7706912959161197
+    "vix_term_structure": 0.7663095944274965
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.0325,
+    "bullish_score": 0.0325,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -1126,8 +1112,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-17.3%).",
       "Semiconductor proxy is below its 20-day trend.",

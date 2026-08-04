@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-04T06:17:23.249577+00:00",
+  "updated_at": "2026-08-04T07:22:34.550587+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -754,15 +754,6 @@
       "latest_volume": 3118988.0
     },
     {
-      "symbol": "CNK",
-      "as_of": "2026-08-03",
-      "close": 37.869998931884766,
-      "ema20": 33.338216257380715,
-      "ema50": 31.611613610193633,
-      "avg20_volume": 2822655.65,
-      "latest_volume": 4395913.0
-    },
-    {
       "symbol": "CFFN",
       "as_of": "2026-08-03",
       "close": 9.100000381469727,
@@ -770,6 +761,15 @@
       "ema50": 8.379113245523229,
       "avg20_volume": 858823.0,
       "latest_volume": 1346760.0
+    },
+    {
+      "symbol": "CNK",
+      "as_of": "2026-07-31",
+      "close": 36.59000015258789,
+      "ema20": 32.861186502169765,
+      "ema50": 31.356169311349095,
+      "avg20_volume": 2822655.65,
+      "latest_volume": 4395913.0
     },
     {
       "symbol": "WT",
@@ -1040,10 +1040,10 @@
     "vix_term_structure": 0.7784809668158497
   },
   "sentiment": {
-    "fear_score": 0.039361702127659576,
-    "bullish_score": 0.11382978723404256,
+    "fear_score": 0.036111111111111115,
+    "bullish_score": 0.036111111111111115,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
@@ -1072,22 +1072,16 @@
         "confidence": 0.11,
         "articles": 1,
         "top_headlines": [
-          "Stocks mixed as Seoul stabilizes , oil prices rise with eyes on Mideast - Markets"
+          "The Guardian : Donald Trump avertizeaz\u0103 c\u0103 noile tratative cu Iranul reprezint\u0103 \u201e ultima \u015fans\u0103  pentru a evita r\u0103zboiul - 04 . 08 . 2026"
         ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
-        "score": 0.2857,
-        "confidence": 0.4986,
-        "articles": 21,
-        "top_headlines": [
-          "CBN mops N7 . 2tr from banks in 31 days",
-          "Alt\u0131nda Yeni Hafta S\u00fcrprizi ! UBS ve Deutsche Banktan Rekor Tahmin",
-          "  \uc5d4\ud654 \uc57d\uc138\ub294 \u7f8e\uc5d0\ub3c4 \uc704\ud611  \u22ef28\ub144 \ub9cc\uc5d0 \u7f8e\u65e5 \uacf5\ub3d9 \uac1c\uc785 \ub098\uc120 \uc774\uc720",
-          "AI - driven profit growth may benefit industrials , infrastructure , emerging markets : Report",
-          "  Inflaci\u00f3n se moderar\u00e1 y si no es as\u00ed , la Fed tomar\u00e1 medidas  "
-        ]
+        "score": 0.0,
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -1096,32 +1090,24 @@
         "confidence": 0.11,
         "articles": 1,
         "top_headlines": [
-          "Markey , Moulton clash over leadership , healthcare and ethics in Massachusetts Senate"
+          "India pharma sector to miss 2030 sales target amid tariff and shipping woes , trade body says"
         ]
       },
       "XLI": {
         "symbol": "XLI",
         "name": "Industrials",
-        "score": 1.0,
-        "confidence": 0.27,
-        "articles": 6,
-        "top_headlines": [
-          "AI - driven profit growth may benefit industrials , infrastructure , emerging markets : Report",
-          "AI - driven profit growth may benefit industrials , infrastructure , emerging markets : Report",
-          "AI - driven profit growth may benefit industrials , infrastructure , emerging markets : Report",
-          "AI - driven profit growth may benefit industrials , infrastructure , emerging markets : Report",
-          "AI - driven profit growth may benefit industrials , infrastructure , emerging markets : Report"
-        ]
+        "score": 0.0,
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLY": {
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "EV sales , air travel drive rebound in consumer spending"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLP": {
         "symbol": "XLP",

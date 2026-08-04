@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-04T21:07:23.541036+00:00",
+  "updated_at": "2026-08-04T22:10:43.476147+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -330,6 +330,20 @@
       "RevGrowth": "0.351",
       "EarnGrowth": "0.25",
       "Signal": "Strong Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-04",
+      "Symbol": "AMGN",
+      "Company": "Amgen Inc.",
+      "Domain": "amgen.com",
+      "Timing": "After Close",
+      "Price": "390.02",
+      "RevGrowth": "0.058",
+      "EarnGrowth": "0.044",
+      "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -791,6 +805,42 @@
       "latest_volume": 2970866.0
     },
     {
+      "symbol": "VCTR",
+      "as_of": "2026-08-04",
+      "close": 102.62000274658203,
+      "ema20": 97.0953585624196,
+      "ema50": 92.21124389431058,
+      "avg20_volume": 494708.5,
+      "latest_volume": 1243270.0
+    },
+    {
+      "symbol": "DUOL",
+      "as_of": "2026-08-04",
+      "close": 137.75,
+      "ema20": 131.03316028431848,
+      "ema50": 124.68609021689714,
+      "avg20_volume": 1008221.8,
+      "latest_volume": 1939636.0
+    },
+    {
+      "symbol": "ELF",
+      "as_of": "2026-08-04",
+      "close": 87.83999633789062,
+      "ema20": 78.8797556622048,
+      "ema50": 71.82678514900473,
+      "avg20_volume": 2261737.4,
+      "latest_volume": 3808748.0
+    },
+    {
+      "symbol": "PRLB",
+      "as_of": "2026-08-04",
+      "close": 88.4000015258789,
+      "ema20": 77.96486794684976,
+      "ema50": 76.42300805115985,
+      "avg20_volume": 204771.55,
+      "latest_volume": 335631.0
+    },
+    {
       "symbol": "ITGR",
       "as_of": "2026-08-03",
       "close": 124.5,
@@ -1023,42 +1073,6 @@
       "ema50": 26.373258867444793,
       "avg20_volume": 1930950.0,
       "latest_volume": 4235100.0
-    },
-    {
-      "symbol": "KWR",
-      "as_of": "2026-07-31",
-      "close": 160.52000427246094,
-      "ema20": 152.30655337379054,
-      "ema50": 149.75600669375828,
-      "avg20_volume": 146435.0,
-      "latest_volume": 279200.0
-    },
-    {
-      "symbol": "QTWO",
-      "as_of": "2026-07-31",
-      "close": 60.869998931884766,
-      "ema20": 55.080512326209444,
-      "ema50": 51.79567823852669,
-      "avg20_volume": 925155.0,
-      "latest_volume": 1535300.0
-    },
-    {
-      "symbol": "PRG",
-      "as_of": "2026-07-31",
-      "close": 44.02000045776367,
-      "ema20": 43.8532423208177,
-      "ema50": 41.74122223253287,
-      "avg20_volume": 505275.0,
-      "latest_volume": 909700.0
-    },
-    {
-      "symbol": "GKOS",
-      "as_of": "2026-07-30",
-      "close": 168.52000427246094,
-      "ema20": 152.6077728780397,
-      "ema50": 144.87644657062924,
-      "avg20_volume": 883606.3,
-      "latest_volume": 2557526.0
     }
   ],
   "regime_metrics": {
@@ -1068,11 +1082,11 @@
     "vix_term_structure": 0.8531540780671675
   },
   "sentiment": {
-    "fear_score": 0.0375,
-    "bullish_score": 0.0375,
+    "fear_score": 0.038571428571428576,
+    "bullish_score": 0.038571428571428576,
     "events": {
       "war": true,
-      "policy_shock": false,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1097,25 +1111,34 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.17,
+        "articles": 4,
+        "top_headlines": [
+          "U . S . stock market rallies to records as oil prices ease",
+          "Trump says oil companies are  making too much money : Is he right ? ",
+          "U . S . Dollar Slides After Crude Oil Falls Amid Prospects Of A U . S .- Iran Deal",
+          "Oil prices drop after Qatar , Bessent raise hopes of a US - Iran deal"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Big Banks Signal Strong 2nd Half After Q2 Earnings Soar"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
         "name": "Healthcare",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "U . S . job openings fall as healthcare vacancies post largest drop in 11 months"
+        ]
       },
       "XLI": {
         "symbol": "XLI",

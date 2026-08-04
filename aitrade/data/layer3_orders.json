@@ -1,5 +1,48 @@
 [
   {
+    "symbol": "SPY",
+    "approved": true,
+    "target_position_size_usd": 100.0,
+    "stop_loss_price": 717.24,
+    "warnings": [
+      "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "SPY",
+      "signal_type": "buy",
+      "confidence": 0.88,
+      "current_price": 771.22998046875,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 1).",
+        "Volume confirms institutional participation (latest volume >= 20-day average)."
+      ],
+      "generated_at": "2026-08-04 20:04:59.472387+00:00"
+    }
+  },
+  {
+    "symbol": "WT",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "WT",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 22.385000228881836,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 57.3%; earnings growth 64.7%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Financial Services."
+      ],
+      "generated_at": "2026-08-04 20:04:59.472387+00:00"
+    }
+  },
+  {
     "symbol": "GLD",
     "approved": true,
     "target_position_size_usd": 0.0,
@@ -10,15 +53,37 @@
     "signal": {
       "symbol": "GLD",
       "signal_type": "liquidate",
-      "confidence": 0.801111111111111,
-      "current_price": 374.4200134277344,
+      "confidence": 0.801098901098901,
+      "current_price": 374.1499938964844,
       "reasons": [
         "PORTFOLIO MATCH: You own 1.0 shares.",
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 10).",
+        "Capital Outflows (Rank 9).",
         "Cutting losses (-$36.25)."
       ],
-      "generated_at": "2026-08-04 19:02:47.093606+00:00"
+      "generated_at": "2026-08-04 20:04:59.472387+00:00"
+    }
+  },
+  {
+    "symbol": "CNXN",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "CNXN",
+      "signal_type": "buy",
+      "confidence": 0.8,
+      "current_price": 86.79000091552734,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 12.4%; earnings growth 35.1%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Technology."
+      ],
+      "generated_at": "2026-08-04 20:04:59.472387+00:00"
     }
   },
   {
@@ -33,12 +98,12 @@
       "symbol": "HYG",
       "signal_type": "sell",
       "confidence": 0.7011764705882353,
-      "current_price": 79.55999755859375,
+      "current_price": 79.53500366210938,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 15)."
       ],
-      "generated_at": "2026-08-04 19:02:47.093606+00:00"
+      "generated_at": "2026-08-04 20:04:59.472387+00:00"
     }
   },
   {
@@ -52,13 +117,13 @@
     "signal": {
       "symbol": "LQD",
       "signal_type": "sell",
-      "confidence": 0.701098901098901,
-      "current_price": 106.7249984741211,
+      "confidence": 0.7010869565217391,
+      "current_price": 106.75,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 9)."
+        "Capital Outflows (Rank 8)."
       ],
-      "generated_at": "2026-08-04 19:02:47.093606+00:00"
+      "generated_at": "2026-08-04 20:04:59.472387+00:00"
     }
   }
 ]

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-04T04:07:55.158280+00:00",
+  "updated_at": "2026-08-04T05:10:54.450717+00:00",
   "top_inflows": [
     {
       "symbol": "XLF",
@@ -763,15 +763,6 @@
       "latest_volume": 5173003.0
     },
     {
-      "symbol": "CUZ",
-      "as_of": "2026-08-03",
-      "close": 31.399999618530273,
-      "ema20": 31.267783159333447,
-      "ema50": 29.870582337137936,
-      "avg20_volume": 1608592.6,
-      "latest_volume": 2475652.0
-    },
-    {
       "symbol": "CNK",
       "as_of": "2026-08-03",
       "close": 37.869998931884766,
@@ -788,6 +779,15 @@
       "ema50": 8.379113245523229,
       "avg20_volume": 858823.0,
       "latest_volume": 1346760.0
+    },
+    {
+      "symbol": "CUZ",
+      "as_of": "2026-07-31",
+      "close": 31.549999237060547,
+      "ema20": 31.253865637312728,
+      "ema50": 29.808157141979063,
+      "avg20_volume": 1608592.6,
+      "latest_volume": 2475652.0
     },
     {
       "symbol": "NSIT",
@@ -1037,11 +1037,11 @@
     "breadth_ratio": 0.2878197476334508,
     "risk_ratio": 1.8345795611301832,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7721518476022938
+    "vix_term_structure": 0.7784809668158497
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.0325,
+    "bullish_score": 0.0325,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -1126,8 +1126,9 @@
   "narrative": {
     "state": "ai_unwind",
     "ai_unwind_score": 1.0,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
       "Korea proxy EWY is under acute pressure (-17.3%).",
       "Semiconductor proxy is below its 20-day trend.",

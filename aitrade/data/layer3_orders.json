@@ -17,7 +17,29 @@
         "Positive capital flow (Rank 1).",
         "Volume confirms institutional participation (latest volume >= 20-day average)."
       ],
-      "generated_at": "2026-08-05 07:45:08.240004+00:00"
+      "generated_at": "2026-08-05 08:48:27.526213+00:00"
+    }
+  },
+  {
+    "symbol": "NSIT",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "NSIT",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 137.25999450683594,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 1.2%; earnings growth 340.9%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Technology."
+      ],
+      "generated_at": "2026-08-05 08:48:27.526213+00:00"
     }
   },
   {
@@ -39,29 +61,7 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Financial Services."
       ],
-      "generated_at": "2026-08-05 07:45:08.240004+00:00"
-    }
-  },
-  {
-    "symbol": "ELF",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "ELF",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 87.83999633789062,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 35.1%; earnings growth 0.0%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Consumer Defensive."
-      ],
-      "generated_at": "2026-08-05 07:45:08.240004+00:00"
+      "generated_at": "2026-08-05 08:48:27.526213+00:00"
     }
   },
   {
@@ -83,58 +83,47 @@
         "Capital Outflows (Rank 9).",
         "Cutting losses (-$36.25)."
       ],
-      "generated_at": "2026-08-05 07:45:08.240004+00:00"
+      "generated_at": "2026-08-05 08:48:27.526213+00:00"
     }
   },
   {
-    "symbol": "SOXX",
+    "symbol": "HYG",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SOXX",
-      "signal_type": "trim",
-      "confidence": 0.8,
-      "current_price": 542.2100219726562,
+      "symbol": "HYG",
+      "signal_type": "sell",
+      "confidence": 0.7011764705882353,
+      "current_price": 79.55000305175781,
       "reasons": [
-        "PORTFOLIO MATCH: You own 2.0 shares.",
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: SMH.",
-        "Korea proxy EWY is under acute pressure (-9.9%).",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 15)."
       ],
-      "generated_at": "2026-08-05 07:45:08.240004+00:00"
+      "generated_at": "2026-08-05 08:48:27.526213+00:00"
     }
   },
   {
-    "symbol": "QQQ",
+    "symbol": "LQD",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "QQQ",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 723.8499755859375,
+      "symbol": "LQD",
+      "signal_type": "sell",
+      "confidence": 0.7010869565217391,
+      "current_price": 106.76000213623047,
       "reasons": [
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: SMH.",
-        "Korea proxy EWY is under acute pressure (-9.9%).",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 8)."
       ],
-      "generated_at": "2026-08-05 07:45:08.240004+00:00"
+      "generated_at": "2026-08-05 08:48:27.526213+00:00"
     }
   }
 ]

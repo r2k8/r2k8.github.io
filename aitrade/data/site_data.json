@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-05T07:44:50.708045+00:00",
+  "updated_at": "2026-08-05T08:48:07.881398+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -774,8 +774,8 @@
       "close": 137.25999450683594,
       "ema20": 122.52549107921094,
       "ema50": 113.02495076879107,
-      "avg20_volume": 391795.6,
-      "latest_volume": 889612.0
+      "avg20_volume": 392410.0,
+      "latest_volume": 901900.0
     },
     {
       "symbol": "UFPT",
@@ -792,8 +792,8 @@
       "close": 21.559999465942383,
       "ema20": 20.097891881449655,
       "ema50": 19.684578826528348,
-      "avg20_volume": 406305.3,
-      "latest_volume": 904806.0
+      "avg20_volume": 406310.0,
+      "latest_volume": 904900.0
     },
     {
       "symbol": "CALY",
@@ -940,6 +940,15 @@
       "latest_volume": 2903200.0
     },
     {
+      "symbol": "GEF",
+      "as_of": "2026-08-04",
+      "close": 89.33999633789062,
+      "ema20": 80.29974613712965,
+      "ema50": 74.87194008481754,
+      "avg20_volume": 283045.0,
+      "latest_volume": 527000.0
+    },
+    {
       "symbol": "ITGR",
       "as_of": "2026-08-03",
       "close": 124.5,
@@ -1021,15 +1030,6 @@
       "latest_volume": 5898387.0
     },
     {
-      "symbol": "GEF",
-      "as_of": "2026-07-31",
-      "close": 86.55000305175781,
-      "ema20": 78.57073552395627,
-      "ema50": 73.63685646296966,
-      "avg20_volume": 258009.05,
-      "latest_volume": 389381.0
-    },
-    {
       "symbol": "CNK",
       "as_of": "2026-07-31",
       "close": 36.59000015258789,
@@ -1079,11 +1079,11 @@
     "breadth_ratio": 0.2855198045558324,
     "risk_ratio": 1.9503862636940092,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7848101324595065
+    "vix_term_structure": 0.7794546988933664
   },
   "sentiment": {
-    "fear_score": 0.08888888888888889,
-    "bullish_score": 0.03333333333333334,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -1151,11 +1151,9 @@
         "symbol": "XLP",
         "name": "Consumer Staples",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "HKFoodsin liikevaihto kasvoi yli viisi prosenttia , mutta kustannusnousut sy\u00f6v\u00e4t tulosta"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLU": {
         "symbol": "XLU",
@@ -1168,24 +1166,18 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.9%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

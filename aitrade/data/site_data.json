@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-05T09:52:38.036245+00:00",
+  "updated_at": "2026-08-05T10:54:40.110015+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -265,48 +265,6 @@
       "Source": "yahoo"
     },
     {
-      "Date": "2026-08-04",
-      "Symbol": "AMD",
-      "Company": "Advanced Micro Devices, Inc.",
-      "Domain": "amd.com",
-      "Timing": "After Close",
-      "Price": "518.58",
-      "RevGrowth": "0.378",
-      "EarnGrowth": "0.912",
-      "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-04",
-      "Symbol": "CAT",
-      "Company": "Caterpillar, Inc.",
-      "Domain": "caterpillar.com",
-      "Timing": "After Close",
-      "Price": "876.54",
-      "RevGrowth": "0.222",
-      "EarnGrowth": "0.302",
-      "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-04",
-      "Symbol": "MRK",
-      "Company": "Merck & Company, Inc.",
-      "Domain": "merck.com",
-      "Timing": "After Close",
-      "Price": "128.0",
-      "RevGrowth": "0.049",
-      "EarnGrowth": "0.0",
-      "Signal": "Neutral",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
       "Date": "2026-08-05",
       "Symbol": "SNDK",
       "Company": "Sandisk Corporation",
@@ -399,20 +357,6 @@
       "Price": "71.99",
       "RevGrowth": "0.145",
       "EarnGrowth": "-0.846",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-04",
-      "Symbol": "PFE",
-      "Company": "Pfizer, Inc.",
-      "Domain": "pfizer.com",
-      "Timing": "After Close",
-      "Price": "25.41",
-      "RevGrowth": "0.054",
-      "EarnGrowth": "-0.101",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -762,11 +706,11 @@
     {
       "symbol": "MATX",
       "as_of": "2026-08-04",
-      "close": 213.66000366210938,
-      "ema20": 207.43082890431458,
-      "ema50": 201.70294153802726,
-      "avg20_volume": 322761.45,
-      "latest_volume": 668929.0
+      "close": 213.44000244140625,
+      "ema20": 207.40987640710475,
+      "ema50": 201.69431403917616,
+      "avg20_volume": 328065.0,
+      "latest_volume": 775000.0
     },
     {
       "symbol": "NSIT",
@@ -882,8 +826,8 @@
       "close": 29.799999237060547,
       "ema20": 28.1138139489648,
       "ema50": 27.088932943712052,
-      "avg20_volume": 174965.75,
-      "latest_volume": 368515.0
+      "avg20_volume": 175080.0,
+      "latest_volume": 370800.0
     },
     {
       "symbol": "OPLN",
@@ -1079,14 +1023,14 @@
     "breadth_ratio": 0.2855198045558324,
     "risk_ratio": 1.9503862636940092,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.790652339204203
+    "vix_term_structure": 0.8028237115925562
   },
   "sentiment": {
-    "fear_score": 0.03918918918918919,
-    "bullish_score": 0.03918918918918919,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1166,24 +1110,18 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.9%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

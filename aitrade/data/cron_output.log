@@ -1,42 +1,45 @@
 [SYSTEM INIT] Layer 1 pipeline started.
-[INFO] Started at 2026-08-05 05:33:19 UTC
+[INFO] Started at 2026-08-05 06:37:39 UTC
 [INFO] Project root: /Users/r2k8/CODE/trading-system
 WARNING:root:GDELT rate limit reached after retries. Returning partial results.
-ERROR:yfinance:$MOG.A: possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")
-ERROR:yfinance:
-1 Failed download:
-ERROR:yfinance:['MOG.A']: possibly delisted; no price data found  (period=3mo) (Yahoo error = "No data found, symbol may be delisted")
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VGK"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLI"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLY"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ETHA"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: CPER"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IBIT"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SLV"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TLT"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VPL"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VWO"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLK"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: DBC"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VNQ"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IBIT"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: GLD"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SLV"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLF"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: USO"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLV"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: CPER"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: TLT"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IGV"}}}
-ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLI"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLF"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: XLK"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VGK"}}}
 ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: SPY"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: IGV"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: VNQ"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: GLD"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: DBC"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: USO"}}}
+ERROR:yfinance:HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"No fundamentals data found for symbol: ETHA"}}}
 Fetching News...
 Running VCP & Momentum Screener on 250 Small/Mid-Cap candidates...
-Validating Earnings/Revenue Acceleration for top 12 technical breakouts...
-  [-] INVX failed fundamentals. Rev: -0.006, Earn: 0
-  [+] VCTR passed! RevGrowth: 76.7%, EarnGrowth: 38.5%, Sector: Financial Services
+Validating Earnings/Revenue Acceleration for top 15 technical breakouts...
+  [-] INSP failed fundamentals. Rev: 0.016, Earn: 0
+  [-] SN failed fundamentals. Rev: 0.156, Earn: 0.024
+  [-] VGNT failed fundamentals. Rev: 0.093, Earn: 0
   [+] WT passed! RevGrowth: 57.3%, EarnGrowth: 64.7%, Sector: Financial Services
+  [-] ILMN failed fundamentals. Rev: 0.094, Earn: -0.094
+  [-] VSAT failed fundamentals. Rev: 0.021, Earn: 0
+  [-] SABR failed fundamentals. Rev: 0.083, Earn: -0.818
   [+] SBH passed! RevGrowth: 0.2%, EarnGrowth: 25.0%, Sector: Consumer Cyclical
-  [-] FBIN failed fundamentals. Rev: -0.021, Earn: -0.524
+  [-] PCRX failed fundamentals. Rev: 0.05, Earn: -0.3
   [-] PK failed fundamentals. Rev: -0.011, Earn: 0
-  [+] JEF passed! RevGrowth: 35.0%, EarnGrowth: 159.8%, Sector: Financial Services
-  [+] ARW passed! RevGrowth: 39.0%, EarnGrowth: 201.3%, Sector: Technology
-Discovery Screener completed. Yielded 5 high-conviction candidates.
+  [+] TOST passed! RevGrowth: 21.9%, EarnGrowth: 123.0%, Sector: Technology
+  [-] ADT failed fundamentals. Rev: 0.019, Earn: -0.001
+  [-] GPK failed fundamentals. Rev: 0.017, Earn: 0
+  [+] VVV passed! RevGrowth: 25.0%, EarnGrowth: 17.5%, Sector: Consumer Cyclical
+  [-] SKY failed fundamentals. Rev: 0.046, Earn: -0.153
+Discovery Screener completed. Yielded 4 high-conviction candidates.
 Fetching Original Capital Flows...
 Fetching upcoming earnings...
 [WARNING] FINNHUB_API_KEY is not configured; using Yahoo calendar fallback.

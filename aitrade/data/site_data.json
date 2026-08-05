@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-05T05:36:39.017030+00:00",
+  "updated_at": "2026-08-05T06:40:42.744160+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -922,6 +922,24 @@
       "latest_volume": 788000.0
     },
     {
+      "symbol": "TOST",
+      "as_of": "2026-08-04",
+      "close": 33.810001373291016,
+      "ema20": 30.766665242935716,
+      "ema50": 28.90100053888329,
+      "avg20_volume": 9962615.0,
+      "latest_volume": 16881200.0
+    },
+    {
+      "symbol": "VVV",
+      "as_of": "2026-08-04",
+      "close": 39.279998779296875,
+      "ema20": 38.94891563425035,
+      "ema50": 37.760743692600585,
+      "avg20_volume": 1893905.0,
+      "latest_volume": 2903200.0
+    },
+    {
       "symbol": "ITGR",
       "as_of": "2026-08-03",
       "close": 124.5,
@@ -1055,24 +1073,6 @@
       "ema50": 79.17437881811726,
       "avg20_volume": 785918.1,
       "latest_volume": 1868962.0
-    },
-    {
-      "symbol": "FND",
-      "as_of": "2026-07-31",
-      "close": 57.56999969482422,
-      "ema20": 55.45198392166285,
-      "ema50": 54.033511006712594,
-      "avg20_volume": 2480820.0,
-      "latest_volume": 6106600.0
-    },
-    {
-      "symbol": "LTH",
-      "as_of": "2026-07-31",
-      "close": 45.099998474121094,
-      "ema20": 42.546949946694816,
-      "ema50": 38.95183646944635,
-      "avg20_volume": 2635380.0,
-      "latest_volume": 4737900.0
     }
   ],
   "regime_metrics": {
@@ -1082,11 +1082,11 @@
     "vix_term_structure": 0.8033105776313145
   },
   "sentiment": {
-    "fear_score": 0.0375,
-    "bullish_score": 0.0375,
+    "fear_score": 0.035,
+    "bullish_score": 0.035,
     "events": {
       "war": false,
-      "policy_shock": true,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1111,21 +1111,17 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Gold extends gains on lower oil and softer greenback , markets await US jobs data"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "US Fed approves Santander acquisition of regional bank"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -1170,24 +1166,19 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
+    "state": "geopolitical_pressure",
+    "ai_unwind_score": 0.425,
     "geopolitical_score": 0.5,
     "reasons": [
       "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.9%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

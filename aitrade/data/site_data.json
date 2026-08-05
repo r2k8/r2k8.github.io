@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-05T11:58:59.245225+00:00",
+  "updated_at": "2026-08-05T13:02:34.944217+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -285,9 +285,9 @@
       "Domain": "novonordisk.com",
       "Timing": "Before Open",
       "Price": "44.28",
-      "RevGrowth": "0.24",
-      "EarnGrowth": "0.671",
-      "Signal": "Strong Buy",
+      "RevGrowth": "0.021",
+      "EarnGrowth": "-0.205",
+      "Signal": "Neutral",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -1023,11 +1023,11 @@
     "breadth_ratio": 0.2855198045558324,
     "risk_ratio": 1.9503862636940092,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8111002485310445
+    "vix_term_structure": 0.8203505175470495
   },
   "sentiment": {
-    "fear_score": 0.030000000000000006,
-    "bullish_score": 0.030000000000000006,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -1110,24 +1110,18 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.9%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [
@@ -1140,5 +1134,7 @@
       "interpretation": "Small risk-sized starter entries may be considered in strongest quality names."
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

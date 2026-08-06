@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-06T02:49:39.126225+00:00",
+  "updated_at": "2026-08-06T03:55:32.330622+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -811,6 +811,15 @@
       "latest_volume": 379222.0
     },
     {
+      "symbol": "MMSI",
+      "as_of": "2026-08-05",
+      "close": 87.18000030517578,
+      "ema20": 78.42924877945941,
+      "ema50": 72.80904851452394,
+      "avg20_volume": 1017856.65,
+      "latest_volume": 1900533.0
+    },
+    {
       "symbol": "DORM",
       "as_of": "2026-08-04",
       "close": 148.61000061035156,
@@ -980,15 +989,6 @@
       "ema50": 211.10758818800966,
       "avg20_volume": 523350.0,
       "latest_volume": 788000.0
-    },
-    {
-      "symbol": "VVV",
-      "as_of": "2026-08-04",
-      "close": 39.279998779296875,
-      "ema20": 38.94891563425035,
-      "ema50": 37.760743692600585,
-      "avg20_volume": 1893905.0,
-      "latest_volume": 2903200.0
     }
   ],
   "regime_metrics": {
@@ -998,11 +998,11 @@
     "vix_term_structure": 0.8343007801105919
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.043382352941176476,
+    "bullish_score": 0.043382352941176476,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1027,9 +1027,11 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Tenaz Energy Corp .: Tenaz Energy Corp . Announces Q2 2026 Results"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
@@ -1051,9 +1053,12 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.13,
+        "articles": 2,
+        "top_headlines": [
+          "Japan says defense spending can boost economy , prosperity",
+          "Japan says defense spending can boost economy , prosperity"
+        ]
       },
       "XLY": {
         "symbol": "XLY",
@@ -1082,10 +1087,11 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.6,
-    "geopolitical_score": 0.0,
+    "state": "ai_unwind",
+    "ai_unwind_score": 0.85,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: QQQ, SMH.",
       "Korea proxy EWY is under acute pressure (-10.9%)."
     ],
@@ -1096,9 +1102,9 @@
       "VIX/fear score cools while earnings revisions remain positive."
     ],
     "forecast": {
-      "next_day_rebound_probability": 0.27,
-      "next_week_rebound_probability": 0.48,
-      "next_month_base_probability": 0.61,
+      "next_day_rebound_probability": 0.21,
+      "next_week_rebound_probability": 0.43,
+      "next_month_base_probability": 0.58,
       "rebound_score": 4,
       "buy_zone": "starter",
       "reasons": [

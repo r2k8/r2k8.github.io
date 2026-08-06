@@ -1,20 +1,85 @@
 [
   {
+    "symbol": "ROCK",
+    "approved": true,
+    "target_position_size_usd": 100.0,
+    "stop_loss_price": 51.02,
+    "warnings": [
+      "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "ROCK",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 54.86000061035156,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 44.6%; earnings growth 0.0%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Industrials."
+      ],
+      "generated_at": "2026-08-06 04:59:39.929375+00:00"
+    }
+  },
+  {
+    "symbol": "ELF",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "ELF",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 86.37000274658203,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 35.1%; earnings growth 0.0%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Consumer Defensive."
+      ],
+      "generated_at": "2026-08-06 04:59:39.929375+00:00"
+    }
+  },
+  {
+    "symbol": "ATI",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "ATI",
+      "signal_type": "buy",
+      "confidence": 0.8,
+      "current_price": 205.11000061035156,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 0.6%; earnings growth 26.9%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Industrials."
+      ],
+      "generated_at": "2026-08-06 04:59:39.929375+00:00"
+    }
+  },
+  {
     "symbol": "SOXX",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
     ],
     "signal": {
       "symbol": "SOXX",
-      "signal_type": "liquidate",
-      "confidence": 0.88,
+      "signal_type": "trim",
+      "confidence": 0.8,
       "current_price": 530.7000122070312,
       "reasons": [
         "PORTFOLIO MATCH: You own 2.0 shares.",
-        "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH.",
         "Korea proxy EWY is under acute pressure (-10.9%).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
@@ -22,29 +87,7 @@
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-06 03:55:46.521436+00:00"
-    }
-  },
-  {
-    "symbol": "NSIT",
-    "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 130.46,
-    "warnings": [
-      "Sized by risk: max loss about $7.00 at 7% hard stop."
-    ],
-    "signal": {
-      "symbol": "NSIT",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 140.27999877929688,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 1.2%; earnings growth 340.9%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology."
-      ],
-      "generated_at": "2026-08-06 03:55:46.521436+00:00"
+      "generated_at": "2026-08-06 04:59:39.929375+00:00"
     }
   },
   {
@@ -58,10 +101,9 @@
     "signal": {
       "symbol": "QQQ",
       "signal_type": "avoid",
-      "confidence": 0.84,
+      "confidence": 0.76,
       "current_price": 717.2999877929688,
       "reasons": [
-        "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH.",
         "Korea proxy EWY is under acute pressure (-10.9%).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
@@ -69,7 +111,7 @@
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-06 03:55:46.521436+00:00"
+      "generated_at": "2026-08-06 04:59:39.929375+00:00"
     }
   },
   {
@@ -83,10 +125,9 @@
     "signal": {
       "symbol": "SMH",
       "signal_type": "avoid",
-      "confidence": 0.84,
+      "confidence": 0.76,
       "current_price": 569.7000122070312,
       "reasons": [
-        "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH.",
         "Korea proxy EWY is under acute pressure (-10.9%).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
@@ -94,50 +135,7 @@
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-06 03:55:46.521436+00:00"
-    }
-  },
-  {
-    "symbol": "PCTY",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "PCTY",
-      "signal_type": "buy",
-      "confidence": 0.8,
-      "current_price": 147.80999755859375,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 11.0%; earnings growth 27.4%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology."
-      ],
-      "generated_at": "2026-08-06 03:55:46.521436+00:00"
-    }
-  },
-  {
-    "symbol": "XLF",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Buy confidence 0.78 is below threshold 0.78; no action."
-    ],
-    "signal": {
-      "symbol": "XLF",
-      "signal_type": "buy",
-      "confidence": 0.7766666666666666,
-      "current_price": 58.0,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 6).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-08-06 03:55:46.521436+00:00"
+      "generated_at": "2026-08-06 04:59:39.929375+00:00"
     }
   }
 ]

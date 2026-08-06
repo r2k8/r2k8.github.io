@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-06T06:36:15.092403+00:00",
+  "updated_at": "2026-08-06T11:21:03.716895+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -251,20 +251,6 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-08-05",
-      "Symbol": "LLY",
-      "Company": "Eli Lilly and Company",
-      "Domain": "lilly.com",
-      "Timing": "After Close",
-      "Price": "1169.86",
-      "RevGrowth": "0.555",
-      "EarnGrowth": "1.699",
-      "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
       "Date": "2026-08-06",
       "Symbol": "COP",
       "Company": "ConocoPhillips",
@@ -358,20 +344,6 @@
       "RevGrowth": "0.638",
       "EarnGrowth": "10.91",
       "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-06",
-      "Symbol": "CNQ",
-      "Company": "Canadian Natural Resources Limi",
-      "Domain": "cnrl.com",
-      "Timing": "Before Open",
-      "Price": "44.75",
-      "RevGrowth": "-0.012",
-      "EarnGrowth": "-0.453",
-      "Signal": "Avoid",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -616,6 +588,20 @@
     },
     {
       "Date": "2026-08-06",
+      "Symbol": "ED",
+      "Company": "Consolidated Edison, Inc.",
+      "Domain": "conedison.com",
+      "Timing": "After Close",
+      "Price": "108.32",
+      "RevGrowth": "0.062",
+      "EarnGrowth": "0.129",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-06",
       "Symbol": "U",
       "Company": "Unity Software Inc.",
       "Domain": "unity.com",
@@ -726,8 +712,8 @@
       "close": 34.79999923706055,
       "ema20": 31.150372152090767,
       "ema50": 29.11383421338465,
-      "avg20_volume": 10387550.0,
-      "latest_volume": 20687400.0
+      "avg20_volume": 10387600.0,
+      "latest_volume": 20688400.0
     },
     {
       "symbol": "MD",
@@ -762,8 +748,8 @@
       "close": 31.420000076293945,
       "ema20": 30.525245754938442,
       "ema50": 28.780293898090648,
-      "avg20_volume": 1392353.35,
-      "latest_volume": 2477667.0
+      "avg20_volume": 1407160.0,
+      "latest_volume": 2773800.0
     },
     {
       "symbol": "ALGT",
@@ -836,6 +822,15 @@
       "ema50": 64.67195158005354,
       "avg20_volume": 1871215.0,
       "latest_volume": 2895900.0
+    },
+    {
+      "symbol": "CRBG",
+      "as_of": "2026-08-05",
+      "close": 33.59000015258789,
+      "ema20": 31.357670947805914,
+      "ema50": 30.1276857901264,
+      "avg20_volume": 4305350.0,
+      "latest_volume": 8541300.0
     },
     {
       "symbol": "DORM",
@@ -980,22 +975,13 @@
       "ema50": 14.389725217757269,
       "avg20_volume": 1448025.0,
       "latest_volume": 2715100.0
-    },
-    {
-      "symbol": "JEF",
-      "as_of": "2026-08-04",
-      "close": 55.709999084472656,
-      "ema20": 55.28404844108189,
-      "ema50": 54.69408086728397,
-      "avg20_volume": 1863050.0,
-      "latest_volume": 3305000.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.28544148663849456,
     "risk_ratio": 1.9444516521491944,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.769717610268704
+    "vix_term_structure": 0.7716650279936365
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -1110,7 +1096,5 @@
       "interpretation": "Small risk-sized starter entries may be considered in strongest quality names."
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-06T04:59:34.703186+00:00",
+  "updated_at": "2026-08-06T06:36:15.092403+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -681,8 +681,8 @@
       "close": 140.27999877929688,
       "ema20": 124.21214043223263,
       "ema50": 113.90636875836938,
-      "avg20_volume": 413825.15,
-      "latest_volume": 792603.0
+      "avg20_volume": 414510.0,
+      "latest_volume": 806300.0
     },
     {
       "symbol": "ELF",
@@ -699,8 +699,8 @@
       "close": 97.22000122070312,
       "ema20": 88.67177646878136,
       "ema50": 87.46697980897818,
-      "avg20_volume": 1105605.95,
-      "latest_volume": 2657819.0
+      "avg20_volume": 1108935.0,
+      "latest_volume": 2724400.0
     },
     {
       "symbol": "VOYA",
@@ -829,6 +829,15 @@
       "latest_volume": 648000.0
     },
     {
+      "symbol": "CGNX",
+      "as_of": "2026-08-05",
+      "close": 70.70999908447266,
+      "ema20": 65.03998575228064,
+      "ema50": 64.67195158005354,
+      "avg20_volume": 1871215.0,
+      "latest_volume": 2895900.0
+    },
+    {
       "symbol": "DORM",
       "as_of": "2026-08-04",
       "close": 148.61000061035156,
@@ -944,15 +953,6 @@
       "ema50": 43.52222323641533,
       "avg20_volume": 905462.55,
       "latest_volume": 2380851.0
-    },
-    {
-      "symbol": "CGNX",
-      "as_of": "2026-08-04",
-      "close": 71.5199966430664,
-      "ema20": 64.43621722954084,
-      "ema50": 64.13835667906848,
-      "avg20_volume": 1828204.55,
-      "latest_volume": 2785691.0
     },
     {
       "symbol": "HSTM",
@@ -1110,5 +1110,7 @@
       "interpretation": "Small risk-sized starter entries may be considered in strongest quality names."
     }
   },
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

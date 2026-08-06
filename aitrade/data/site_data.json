@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-06T22:04:17.948152+00:00",
+  "updated_at": "2026-08-06T23:07:18.010137+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -730,6 +730,33 @@
       "latest_volume": 887828.0
     },
     {
+      "symbol": "ROCK",
+      "as_of": "2026-08-06",
+      "close": 50.779998779296875,
+      "ema20": 45.719352944333764,
+      "ema50": 43.12432208371364,
+      "avg20_volume": 367209.5,
+      "latest_volume": 656490.0
+    },
+    {
+      "symbol": "NSIT",
+      "as_of": "2026-08-06",
+      "close": 149.19000244140625,
+      "ema20": 126.59346871225989,
+      "ema50": 115.39942901231026,
+      "avg20_volume": 442035.65,
+      "latest_volume": 899913.0
+    },
+    {
+      "symbol": "VCTR",
+      "as_of": "2026-08-06",
+      "close": 106.79000091552734,
+      "ema20": 98.27061910206538,
+      "ema50": 93.26749521800971,
+      "avg20_volume": 554546.5,
+      "latest_volume": 1066830.0
+    },
+    {
       "symbol": "FRPT",
       "as_of": "2026-08-05",
       "close": 70.13999938964844,
@@ -737,15 +764,6 @@
       "ema50": 57.20248586285074,
       "avg20_volume": 1145056.75,
       "latest_volume": 2300135.0
-    },
-    {
-      "symbol": "ROCK",
-      "as_of": "2026-08-05",
-      "close": 54.86000061035156,
-      "ema20": 45.18727926208054,
-      "ema50": 42.83779741391336,
-      "avg20_volume": 346850.0,
-      "latest_volume": 746800.0
     },
     {
       "symbol": "VYX",
@@ -773,15 +791,6 @@
       "ema50": 90.97402831431512,
       "avg20_volume": 302878.85,
       "latest_volume": 542077.0
-    },
-    {
-      "symbol": "NSIT",
-      "as_of": "2026-08-05",
-      "close": 140.27999877929688,
-      "ema20": 124.21214043223263,
-      "ema50": 113.90636875836938,
-      "avg20_volume": 414510.0,
-      "latest_volume": 806300.0
     },
     {
       "symbol": "AVT",
@@ -980,15 +989,6 @@
       "ema50": 245.77900983647285,
       "avg20_volume": 226262.1,
       "latest_volume": 635842.0
-    },
-    {
-      "symbol": "MTUS",
-      "as_of": "2026-08-04",
-      "close": 21.559999465942383,
-      "ema20": 20.097891881449655,
-      "ema50": 19.684578826528348,
-      "avg20_volume": 406310.0,
-      "latest_volume": 904900.0
     }
   ],
   "regime_metrics": {
@@ -998,11 +998,11 @@
     "vix_term_structure": 0.8105938569088523
   },
   "sentiment": {
-    "fear_score": 0.04,
-    "bullish_score": 0.04,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1082,24 +1082,18 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.5%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

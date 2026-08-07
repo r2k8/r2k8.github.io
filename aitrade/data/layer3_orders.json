@@ -1,22 +1,53 @@
 [
   {
-    "symbol": "HYG",
+    "symbol": "SOXX",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
     ],
     "signal": {
-      "symbol": "HYG",
-      "signal_type": "sell",
-      "confidence": 0.7012048192771084,
-      "current_price": 79.58499908447266,
+      "symbol": "SOXX",
+      "signal_type": "trim",
+      "confidence": 0.8,
+      "current_price": 541.4000244140625,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 17)."
+        "PORTFOLIO MATCH: You own 2.0 shares.",
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: SMH.",
+        "Korea proxy EWY is under acute pressure (-9.1%).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-07 16:36:31.963669+00:00"
+      "generated_at": "2026-08-07 17:39:35.442257+00:00"
+    }
+  },
+  {
+    "symbol": "QQQ",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Avoid signal: blocks new long exposure."
+    ],
+    "signal": {
+      "symbol": "QQQ",
+      "signal_type": "avoid",
+      "confidence": 0.76,
+      "current_price": 720.9099731445312,
+      "reasons": [
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: SMH.",
+        "Korea proxy EWY is under acute pressure (-9.1%).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+      ],
+      "generated_at": "2026-08-07 17:39:35.442257+00:00"
     }
   },
   {
@@ -25,38 +56,23 @@
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Avoid signal: blocks new long exposure."
     ],
     "signal": {
       "symbol": "SMH",
-      "signal_type": "sell",
-      "confidence": 0.7011363636363636,
-      "current_price": 578.8699951171875,
+      "signal_type": "avoid",
+      "confidence": 0.76,
+      "current_price": 580.510009765625,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 12)."
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: SMH.",
+        "Korea proxy EWY is under acute pressure (-9.1%).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-07 16:36:31.963669+00:00"
-    }
-  },
-  {
-    "symbol": "LQD",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "LQD",
-      "signal_type": "sell",
-      "confidence": 0.701111111111111,
-      "current_price": 106.4749984741211,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 10)."
-      ],
-      "generated_at": "2026-08-07 16:36:31.963669+00:00"
+      "generated_at": "2026-08-07 17:39:35.442257+00:00"
     }
   }
 ]

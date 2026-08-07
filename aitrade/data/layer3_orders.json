@@ -18,29 +18,7 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Consumer Defensive."
       ],
-      "generated_at": "2026-08-07 00:10:49.534756+00:00"
-    }
-  },
-  {
-    "symbol": "CXW",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "CXW",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 32.2400016784668,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 25.8%; earnings growth 65.7%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Industrials."
-      ],
-      "generated_at": "2026-08-07 00:10:49.534756+00:00"
+      "generated_at": "2026-08-07 01:21:01.855321+00:00"
     }
   },
   {
@@ -62,67 +40,105 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Industrials."
       ],
-      "generated_at": "2026-08-07 00:10:49.534756+00:00"
+      "generated_at": "2026-08-07 01:21:01.855321+00:00"
     }
   },
   {
-    "symbol": "HYG",
+    "symbol": "CENTA",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "CENTA",
+      "signal_type": "buy",
+      "confidence": 0.8,
+      "current_price": 40.599998474121094,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 8.7%; earnings growth 30.6%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Consumer Defensive."
+      ],
+      "generated_at": "2026-08-07 01:21:01.855321+00:00"
+    }
+  },
+  {
+    "symbol": "SOXX",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
     ],
     "signal": {
-      "symbol": "HYG",
-      "signal_type": "sell",
-      "confidence": 0.7011764705882353,
-      "current_price": 79.45999908447266,
+      "symbol": "SOXX",
+      "signal_type": "trim",
+      "confidence": 0.8,
+      "current_price": 532.52001953125,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 15)."
+        "PORTFOLIO MATCH: You own 2.0 shares.",
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: SMH.",
+        "Korea proxy EWY is under acute pressure (-9.5%).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-07 00:10:49.534756+00:00"
+      "generated_at": "2026-08-07 01:21:01.855321+00:00"
     }
   },
   {
-    "symbol": "LQD",
+    "symbol": "QQQ",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Avoid signal: blocks new long exposure."
     ],
     "signal": {
-      "symbol": "LQD",
-      "signal_type": "sell",
-      "confidence": 0.701111111111111,
-      "current_price": 106.36000061035156,
+      "symbol": "QQQ",
+      "signal_type": "avoid",
+      "confidence": 0.76,
+      "current_price": 714.6500244140625,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 10)."
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: SMH.",
+        "Korea proxy EWY is under acute pressure (-9.5%).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-07 00:10:49.534756+00:00"
+      "generated_at": "2026-08-07 01:21:01.855321+00:00"
     }
   },
   {
-    "symbol": "TLT",
+    "symbol": "SMH",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Avoid signal: blocks new long exposure."
     ],
     "signal": {
-      "symbol": "TLT",
-      "signal_type": "sell",
-      "confidence": 0.701098901098901,
-      "current_price": 82.5199966430664,
+      "symbol": "SMH",
+      "signal_type": "avoid",
+      "confidence": 0.76,
+      "current_price": 571.47998046875,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 9)."
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: SMH.",
+        "Korea proxy EWY is under acute pressure (-9.5%).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-07 00:10:49.534756+00:00"
+      "generated_at": "2026-08-07 01:21:01.855321+00:00"
     }
   }
 ]

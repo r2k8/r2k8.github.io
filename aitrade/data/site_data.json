@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-07T00:10:34.123651+00:00",
+  "updated_at": "2026-08-07T01:20:47.434550+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -364,20 +364,6 @@
     },
     {
       "Date": "2026-08-06",
-      "Symbol": "SLF",
-      "Company": "Sun Life Financial Inc.",
-      "Domain": "sunlife.com",
-      "Timing": "After Close",
-      "Price": "82.32",
-      "RevGrowth": "0.002",
-      "EarnGrowth": "-0.484",
-      "Signal": "Neutral",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-06",
       "Symbol": "AIG",
       "Company": "American International Group, I",
       "Domain": "aig.com",
@@ -660,11 +646,11 @@
     {
       "symbol": "CENTA",
       "as_of": "2026-08-06",
-      "close": 40.369998931884766,
-      "ema20": 38.39727586192468,
-      "ema50": 37.45809372156259,
-      "avg20_volume": 264868.15,
-      "latest_volume": 519763.0
+      "close": 40.599998474121094,
+      "ema20": 38.42115339260837,
+      "ema50": 37.55398063473565,
+      "avg20_volume": 272972.4,
+      "latest_volume": 681848.0
     },
     {
       "symbol": "ECPG",
@@ -773,6 +759,24 @@
       "ema50": 202.80665808359223,
       "avg20_volume": 415833.65,
       "latest_volume": 808873.0
+    },
+    {
+      "symbol": "PAYC",
+      "as_of": "2026-08-06",
+      "close": 215.97000122070312,
+      "ema20": 161.18592319225144,
+      "ema50": 148.72136684081858,
+      "avg20_volume": 909348.95,
+      "latest_volume": 3654979.0
+    },
+    {
+      "symbol": "DGII",
+      "as_of": "2026-08-06",
+      "close": 83.01000213623047,
+      "ema20": 69.98035218666969,
+      "ema50": 68.28527237814356,
+      "avg20_volume": 369998.5,
+      "latest_volume": 756870.0
     },
     {
       "symbol": "FRPT",
@@ -971,24 +975,6 @@
       "ema50": 38.6481807785776,
       "avg20_volume": 121779.35,
       "latest_volume": 189387.0
-    },
-    {
-      "symbol": "CNXN",
-      "as_of": "2026-08-04",
-      "close": 86.79000091552734,
-      "ema20": 80.62180875455749,
-      "ema50": 75.90108635575582,
-      "avg20_volume": 159612.35,
-      "latest_volume": 239847.0
-    },
-    {
-      "symbol": "WT",
-      "as_of": "2026-08-04",
-      "close": 22.389999389648438,
-      "ema20": 19.676677774986164,
-      "ema50": 19.101159877417487,
-      "avg20_volume": 2750250.0,
-      "latest_volume": 5861700.0
     }
   ],
   "regime_metrics": {
@@ -998,11 +984,11 @@
     "vix_term_structure": 0.8105938569088523
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.035483870967741936,
+    "bullish_score": 0.05698924731182795,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1019,25 +1005,35 @@
         "symbol": "SMH",
         "name": "Semiconductors",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Trump unveils trade actions to protect key solar and semiconductor material"
+        ]
       },
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "US stocks edge lower as oil prices rise and more earnings reports roll in"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
-        "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "score": 0.0588,
+        "confidence": 0.4229,
+        "articles": 17,
+        "top_headlines": [
+          "Louisiana AG presses for records from New Orleans prosecutor | News",
+          "Rising petrol prices spark surprising shift in Aussie driving",
+          "Almost 40 data centres approved in Selangor",
+          "\u65e5\u5713\u5287\u8b8a\u52d5\u6416\u6cd5\u5b9a\u8ca8\u5e63\u4fe1\u4efb \u6295\u8cc7\u4eba\u8f49\u5411\u9ec3\u91d1\u5c0b\u6c42\u5e87\u8b77",
+          "The year in review : Influential people who have died in 2026"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
@@ -1051,17 +1047,21 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Analysis : Hopes for greener steel face reality of South Africa deindustrialisation \u2013 by Triston Taylor ( Dialogue Earth \u2013 August 5 , 2026 ) \u2013 Republic of Mining"
+        ]
       },
       "XLY": {
         "symbol": "XLY",
         "name": "Consumer Discretionary",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "New York City offers travel discounts to Ontario tourists"
+        ]
       },
       "XLP": {
         "symbol": "XLP",
@@ -1082,18 +1082,24 @@
     }
   },
   "narrative": {
-    "state": "calm",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.0,
+    "state": "ai_pressure",
+    "ai_unwind_score": 0.675,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.5%)."
     ],
-    "rebound_watch": [],
+    "rebound_watch": [
+      "AI/semiconductor proxy closes back above its 20-day trend.",
+      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
+      "QQQ stops underperforming SPY.",
+      "VIX/fear score cools while earnings revisions remain positive."
+    ],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.33,
+      "next_week_rebound_probability": 0.56,
+      "next_month_base_probability": 0.68,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

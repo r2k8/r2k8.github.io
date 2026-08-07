@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-07T05:13:43.029812+00:00",
+  "updated_at": "2026-08-07T06:15:28.928918+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -663,8 +663,8 @@
       "close": 40.599998474121094,
       "ema20": 38.42115339260837,
       "ema50": 37.55398063473565,
-      "avg20_volume": 272972.4,
-      "latest_volume": 681848.0
+      "avg20_volume": 273340.0,
+      "latest_volume": 689200.0
     },
     {
       "symbol": "ECPG",
@@ -699,8 +699,8 @@
       "close": 85.76000213623047,
       "ema20": 80.91585480685447,
       "ema50": 76.67684912012857,
-      "avg20_volume": 1681178.0,
-      "latest_volume": 2540960.0
+      "avg20_volume": 1689265.0,
+      "latest_volume": 2702700.0
     },
     {
       "symbol": "ATI",
@@ -789,8 +789,8 @@
       "close": 83.01000213623047,
       "ema20": 69.98035218666969,
       "ema50": 68.28527237814356,
-      "avg20_volume": 369998.5,
-      "latest_volume": 756870.0
+      "avg20_volume": 371730.0,
+      "latest_volume": 791500.0
     },
     {
       "symbol": "PLMR",
@@ -809,6 +809,15 @@
       "ema50": 27.101932707018335,
       "avg20_volume": 183795.65,
       "latest_volume": 283713.0
+    },
+    {
+      "symbol": "MTRN",
+      "as_of": "2026-08-06",
+      "close": 278.260009765625,
+      "ema20": 242.7625369944847,
+      "ema50": 239.5529852450063,
+      "avg20_volume": 389380.0,
+      "latest_volume": 585800.0
     },
     {
       "symbol": "FRPT",
@@ -928,15 +937,6 @@
       "latest_volume": 3171851.0
     },
     {
-      "symbol": "MTRN",
-      "as_of": "2026-08-05",
-      "close": 297.0799865722656,
-      "ema20": 239.0376708678136,
-      "ema50": 238.45865703672442,
-      "avg20_volume": 365875.1,
-      "latest_volume": 832402.0
-    },
-    {
       "symbol": "IOSP",
       "as_of": "2026-08-05",
       "close": 91.95999908447266,
@@ -998,11 +998,11 @@
     "vix_term_structure": 0.7375851481621666
   },
   "sentiment": {
-    "fear_score": 0.045,
-    "bullish_score": 0.045,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1082,24 +1082,18 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.5%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

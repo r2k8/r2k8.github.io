@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-07T12:28:09.677805+00:00",
+  "updated_at": "2026-08-07T13:29:56.880138+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -266,76 +266,6 @@
     },
     {
       "Date": "2026-08-06",
-      "Symbol": "ABNB",
-      "Company": "Airbnb, Inc.",
-      "Domain": "airbnb.com",
-      "Timing": "After Close",
-      "Price": "151.64",
-      "RevGrowth": "0.179",
-      "EarnGrowth": "0.06",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-06",
-      "Symbol": "DDOG",
-      "Company": "Datadog, Inc.",
-      "Domain": "datadoghq.com",
-      "Timing": "After Close",
-      "Price": "229.29",
-      "RevGrowth": "0.356",
-      "EarnGrowth": "14.694",
-      "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-06",
-      "Symbol": "WPM",
-      "Company": "Wheaton Precious Metals Corp",
-      "Domain": "wheatonpm.com",
-      "Timing": "After Close",
-      "Price": "125.3",
-      "RevGrowth": "0.916",
-      "EarnGrowth": "1.288",
-      "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-06",
-      "Symbol": "SLF",
-      "Company": "Sun Life Financial Inc.",
-      "Domain": "sunlife.com",
-      "Timing": "After Close",
-      "Price": "82.32",
-      "RevGrowth": "0.002",
-      "EarnGrowth": "-0.484",
-      "Signal": "Neutral",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-06",
-      "Symbol": "AMRZ",
-      "Company": "Amrize Ltd",
-      "Domain": "amrize.com",
-      "Timing": "After Close",
-      "Price": "51.22",
-      "RevGrowth": "0.047",
-      "EarnGrowth": "0.0",
-      "Signal": "Neutral",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-06",
       "Symbol": "JHX",
       "Company": "James Hardie Industries plc.",
       "Domain": "jameshardie.com",
@@ -343,20 +273,6 @@
       "Price": "28.0",
       "RevGrowth": "0.445",
       "EarnGrowth": "-0.505",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-06",
-      "Symbol": "ONTO",
-      "Company": "Onto Innovation Inc.",
-      "Domain": "ontoinnovation.com",
-      "Timing": "After Close",
-      "Price": "268.7",
-      "RevGrowth": "0.095",
-      "EarnGrowth": "-0.485",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -729,14 +645,14 @@
     "breadth_ratio": 0.2844020018286087,
     "risk_ratio": 1.909126570411176,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7409931640033741
+    "vix_term_structure": 0.7444011334144808
   },
   "sentiment": {
-    "fear_score": 0.042857142857142864,
-    "bullish_score": 0.042857142857142864,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
-      "policy_shock": true,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -801,12 +717,9 @@
         "symbol": "XLP",
         "name": "Consumer Staples",
         "score": 0.0,
-        "confidence": 0.13,
-        "articles": 2,
-        "top_headlines": [
-          "Elephant deaths spark food safety fears in Kenya",
-          "Ministry of Agriculture , Food and Rural Affairs and aT Host  2026 K - Food Fair in New Delhi , India  "
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLU": {
         "symbol": "XLU",
@@ -819,24 +732,18 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.5%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

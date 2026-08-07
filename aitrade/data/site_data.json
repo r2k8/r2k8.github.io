@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-07T22:51:15.466463+00:00",
+  "updated_at": "2026-08-07T23:53:13.921284+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -323,11 +323,11 @@
     {
       "symbol": "TILE",
       "as_of": "2026-08-07",
-      "close": 38.5099983215332,
-      "ema20": 34.3402372153871,
-      "ema50": 32.895744869576184,
-      "avg20_volume": 385183.0,
-      "latest_volume": 893460.0
+      "close": 38.290000915527344,
+      "ema20": 34.32313936690668,
+      "ema50": 33.05683029290446,
+      "avg20_volume": 399012.35,
+      "latest_volume": 1170047.0
     },
     {
       "symbol": "FIVN",
@@ -634,11 +634,11 @@
     "vix_term_structure": 0.7959401797574264
   },
   "sentiment": {
-    "fear_score": 0.062037037037037036,
-    "bullish_score": 0.04351851851851852,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -718,24 +718,18 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.1%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

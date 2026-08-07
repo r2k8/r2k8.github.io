@@ -1,75 +1,44 @@
 [
   {
-    "symbol": "HALO",
+    "symbol": "TWLO",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 95.04,
+    "stop_loss_price": 224.86,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
     ],
     "signal": {
-      "symbol": "HALO",
+      "symbol": "TWLO",
       "signal_type": "buy",
       "confidence": 0.8600000000000001,
-      "current_price": 102.19000244140625,
+      "current_price": 241.7899932861328,
       "reasons": [
         "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 42.2%; earnings growth 31.2%.",
+        "Revenue growth 20.0%; earnings growth 375.0%.",
         "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Healthcare."
+        "Sector: Technology."
       ],
-      "generated_at": "2026-08-07 18:41:56.295696+00:00"
+      "generated_at": "2026-08-07 19:43:45.745316+00:00"
     }
   },
   {
-    "symbol": "SOXX",
+    "symbol": "HYG",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SOXX",
-      "signal_type": "trim",
-      "confidence": 0.8,
-      "current_price": 539.9500122070312,
+      "symbol": "HYG",
+      "signal_type": "sell",
+      "confidence": 0.7012195121951219,
+      "current_price": 79.58499908447266,
       "reasons": [
-        "PORTFOLIO MATCH: You own 2.0 shares.",
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: SMH.",
-        "Korea proxy EWY is under acute pressure (-9.4%).",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 18)."
       ],
-      "generated_at": "2026-08-07 18:41:56.295696+00:00"
-    }
-  },
-  {
-    "symbol": "QQQ",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Avoid signal: blocks new long exposure."
-    ],
-    "signal": {
-      "symbol": "QQQ",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 719.7249755859375,
-      "reasons": [
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: SMH.",
-        "Korea proxy EWY is under acute pressure (-9.4%).",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
-      ],
-      "generated_at": "2026-08-07 18:41:56.295696+00:00"
+      "generated_at": "2026-08-07 19:43:45.745316+00:00"
     }
   },
   {
@@ -78,23 +47,38 @@
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
       "symbol": "SMH",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 579.1099853515625,
+      "signal_type": "sell",
+      "confidence": 0.7011627906976744,
+      "current_price": 580.0399780273438,
       "reasons": [
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: SMH.",
-        "Korea proxy EWY is under acute pressure (-9.4%).",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 14)."
       ],
-      "generated_at": "2026-08-07 18:41:56.295696+00:00"
+      "generated_at": "2026-08-07 19:43:45.745316+00:00"
+    }
+  },
+  {
+    "symbol": "LQD",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "LQD",
+      "signal_type": "sell",
+      "confidence": 0.701111111111111,
+      "current_price": 106.54000091552734,
+      "reasons": [
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 10)."
+      ],
+      "generated_at": "2026-08-07 19:43:45.745316+00:00"
     }
   }
 ]

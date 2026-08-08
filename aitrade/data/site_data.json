@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-08T00:56:20.832911+00:00",
+  "updated_at": "2026-08-08T01:58:05.656585+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -332,11 +332,11 @@
     {
       "symbol": "FIVN",
       "as_of": "2026-08-07",
-      "close": 33.73500061035156,
-      "ema20": 27.094670131607387,
-      "ema50": 24.902562062397504,
-      "avg20_volume": 3545245.15,
-      "latest_volume": 6667603.0
+      "close": 33.9900016784668,
+      "ema20": 27.1187732794187,
+      "ema50": 24.904518816564288,
+      "avg20_volume": 3601871.55,
+      "latest_volume": 7800131.0
     },
     {
       "symbol": "VAC",
@@ -634,11 +634,11 @@
     "vix_term_structure": 0.7959401797574264
   },
   "sentiment": {
-    "fear_score": 0.035,
-    "bullish_score": 0.035,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
-      "policy_shock": true,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -718,24 +718,18 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.1%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

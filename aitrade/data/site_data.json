@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-08T20:41:35.022119+00:00",
+  "updated_at": "2026-08-08T21:43:38.571353+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -634,10 +634,10 @@
     "vix_term_structure": 0.7254137757738134
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.0475,
+    "bullish_score": 0.0475,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -718,18 +718,24 @@
     }
   },
   "narrative": {
-    "state": "calm",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.0,
+    "state": "ai_pressure",
+    "ai_unwind_score": 0.675,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.1%)."
     ],
-    "rebound_watch": [],
+    "rebound_watch": [
+      "AI/semiconductor proxy closes back above its 20-day trend.",
+      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
+      "QQQ stops underperforming SPY.",
+      "VIX/fear score cools while earnings revisions remain positive."
+    ],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.33,
+      "next_week_rebound_probability": 0.56,
+      "next_month_base_probability": 0.68,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-08T12:20:41.871065+00:00",
+  "updated_at": "2026-08-08T13:22:30.388833+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -407,8 +407,8 @@
       "close": 150.4199981689453,
       "ema20": 134.67450623676314,
       "ema50": 124.02157772600336,
-      "avg20_volume": 774181.35,
-      "latest_volume": 1300227.0
+      "avg20_volume": 774180.0,
+      "latest_volume": 1300200.0
     },
     {
       "symbol": "DNOW",
@@ -634,8 +634,8 @@
     "vix_term_structure": 0.7254137757738134
   },
   "sentiment": {
-    "fear_score": 0.04,
-    "bullish_score": 0.04,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -663,11 +663,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Dans une vall\u00e9e de Savoie dort depuis 1917 la pire catastrophe ferroviaire fran\u00e7aise : plus de 400 poilus tu\u00e9s et pas une ligne dans les journaux"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
@@ -720,24 +718,18 @@
     }
   },
   "narrative": {
-    "state": "ai_pressure",
-    "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.1%)."
     ],
-    "rebound_watch": [
-      "AI/semiconductor proxy closes back above its 20-day trend.",
-      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
-      "QQQ stops underperforming SPY.",
-      "VIX/fear score cools while earnings revisions remain positive."
-    ],
+    "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.33,
-      "next_week_rebound_probability": 0.56,
-      "next_month_base_probability": 0.68,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

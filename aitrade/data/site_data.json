@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-08T06:06:28.075835+00:00",
+  "updated_at": "2026-08-08T07:09:15.149362+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -251,15 +251,15 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-08-06",
-      "Symbol": "PBR",
-      "Company": "Petroleo Brasileiro S.A. Petrob",
-      "Domain": "petrobras.com.br",
+      "Date": "2026-08-11",
+      "Symbol": "SMCI",
+      "Company": "Super Micro Computer, Inc.",
+      "Domain": "supermicro.com",
       "Timing": "After Close",
-      "Price": "17.96",
-      "RevGrowth": "0.004",
-      "EarnGrowth": "-0.072",
-      "Signal": "Neutral",
+      "Price": "31.13",
+      "RevGrowth": "1.227",
+      "EarnGrowth": "3.26",
+      "Signal": "Strong Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -317,8 +317,8 @@
       "close": 21.079999923706055,
       "ema20": 16.16409999642191,
       "ema50": 15.150547852856057,
-      "avg20_volume": 880966.0,
-      "latest_volume": 4821820.0
+      "avg20_volume": 884980.0,
+      "latest_volume": 4902100.0
     },
     {
       "symbol": "TILE",
@@ -380,8 +380,8 @@
       "close": 36.0,
       "ema20": 33.41908068418033,
       "ema50": 32.41455090390221,
-      "avg20_volume": 778216.05,
-      "latest_volume": 1300821.0
+      "avg20_volume": 789030.0,
+      "latest_volume": 1517100.0
     },
     {
       "symbol": "SARO",
@@ -389,8 +389,8 @@
       "close": 29.190000534057617,
       "ema20": 29.064115694114147,
       "ema50": 28.089358616191102,
-      "avg20_volume": 3315497.3,
-      "latest_volume": 5335246.0
+      "avg20_volume": 3363620.0,
+      "latest_volume": 6297700.0
     },
     {
       "symbol": "DV",
@@ -634,10 +634,10 @@
     "vix_term_structure": 0.7254137757738134
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.034722222222222224,
+    "bullish_score": 0.034722222222222224,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -718,18 +718,24 @@
     }
   },
   "narrative": {
-    "state": "calm",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.0,
+    "state": "ai_pressure",
+    "ai_unwind_score": 0.675,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.1%)."
     ],
-    "rebound_watch": [],
+    "rebound_watch": [
+      "AI/semiconductor proxy closes back above its 20-day trend.",
+      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
+      "QQQ stops underperforming SPY.",
+      "VIX/fear score cools while earnings revisions remain positive."
+    ],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.33,
+      "next_week_rebound_probability": 0.56,
+      "next_month_base_probability": 0.68,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

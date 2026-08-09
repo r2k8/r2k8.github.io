@@ -5,7 +5,7 @@
     "missing_symbols": [],
     "observed": 21
   },
-  "generated_at": "2026-08-09T19:22:20.171601+00:00",
+  "generated_at": "2026-08-09T20:57:38.539551+00:00",
   "market": {
     "coverage": 1.0,
     "expected": 22,
@@ -29,5 +29,7 @@
   ],
   "safe_for_layer2": true,
   "status": "degraded",
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+  ]
 }

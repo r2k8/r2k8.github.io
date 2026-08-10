@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-10T09:51:01.970309+00:00",
+  "updated_at": "2026-08-10T10:53:07.878376+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -260,6 +260,20 @@
       "RevGrowth": "1.227",
       "EarnGrowth": "3.26",
       "Signal": "Strong Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-10",
+      "Symbol": "RDNT",
+      "Company": "RadNet, Inc.",
+      "Domain": "radnet.com",
+      "Timing": "After Close",
+      "Price": "72.385",
+      "RevGrowth": "0.221",
+      "EarnGrowth": "0.0",
+      "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -631,14 +645,14 @@
     "breadth_ratio": 0.28462612000923193,
     "risk_ratio": 1.9406901413625413,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7507302526280366
+    "vix_term_structure": 0.7526776703529691
   },
   "sentiment": {
     "fear_score": 0.04,
     "bullish_score": 0.04,
     "events": {
       "war": false,
-      "policy_shock": false,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -663,11 +677,9 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Oil Falls Despite Hormuz Shock ; Petrobras Drops 3 % "
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
@@ -722,9 +734,8 @@
   "narrative": {
     "state": "ai_pressure",
     "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.1%)."
     ],

@@ -5,12 +5,17 @@
     "missing_symbols": [],
     "observed": 21
   },
-  "generated_at": "2026-08-10T17:09:07.124075+00:00",
+  "generated_at": "2026-08-10T18:10:41.427734+00:00",
   "market": {
-    "coverage": 1.0,
+    "coverage": 0.8182,
     "expected": 22,
-    "missing_symbols": [],
-    "observed": 22,
+    "missing_symbols": [
+      "RSP",
+      "SPHB",
+      "SPLV",
+      "SPY"
+    ],
+    "observed": 18,
     "stale_symbols": []
   },
   "news": {
@@ -29,5 +34,7 @@
   ],
   "safe_for_layer2": true,
   "status": "degraded",
-  "warnings": []
+  "warnings": [
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=conflict&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260809180933 (Caused by NewConnectionError(\"HTTPSConnection(host='api.gdeltproject.org', port=443): Failed to establish a new connection: [Errno 65] No route to host\"))"
+  ]
 }

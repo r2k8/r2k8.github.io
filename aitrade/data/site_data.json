@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-10T10:53:07.878376+00:00",
+  "updated_at": "2026-08-10T11:56:02.417907+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -645,13 +645,13 @@
     "breadth_ratio": 0.28462612000923193,
     "risk_ratio": 1.9406901413625413,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7526776703529691
+    "vix_term_structure": 0.7521908043142107
   },
   "sentiment": {
-    "fear_score": 0.04,
-    "bullish_score": 0.04,
+    "fear_score": 0.035,
+    "bullish_score": 0.035,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
@@ -677,17 +677,21 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "World shares are mixed after Wall Street gains , while oil prices bounce higher"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Bank Holidays : \u0907\u0938 \u0939\u092b\u094d\u0924\u0947 2 \u0926\u093f\u0928 \u092c\u0902\u0926 \u0930\u0939\u0947\u0902\u0917\u0947 \u092c\u0948\u0902\u0915 ! \u092c\u094d\u0930\u093e\u0902\u091a \u091c\u093e\u0928\u0947 \u0938\u0947 \u092a\u0939\u0932\u0947 \u091a\u0947\u0915 \u0915\u0930 \u0932\u0947\u0902 RBI \u0915\u0940 \u091b\u0941\u091f\u094d\u091f\u093f\u092f\u094b\u0902 \u0915\u0940 \u092a\u0942\u0930\u0940 \u0932\u093f\u0938\u094d\u091f"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
@@ -734,8 +738,9 @@
   "narrative": {
     "state": "ai_pressure",
     "ai_unwind_score": 0.675,
-    "geopolitical_score": 0.0,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH.",
       "Korea proxy EWY is under acute pressure (-9.1%)."
     ],

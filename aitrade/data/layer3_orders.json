@@ -5,22 +5,24 @@
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
       "symbol": "SOXX",
-      "signal_type": "trim",
-      "confidence": 0.8,
-      "current_price": 535.510009765625,
+      "signal_type": "liquidate",
+      "confidence": 0.88,
+      "current_price": 535.864990234375,
       "reasons": [
         "PORTFOLIO MATCH: You own 2.0 shares.",
+        "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH.",
-        "Korea proxy EWY is under acute pressure (-10.8%).",
+        "Korea proxy EWY is under acute pressure (-10.7%).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
         "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-10 18:10:43.857625+00:00"
+      "generated_at": "2026-08-10 19:12:57.815320+00:00"
     }
   },
   {
@@ -34,16 +36,18 @@
     "signal": {
       "symbol": "QQQ",
       "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 721.4000244140625,
+      "confidence": 0.84,
+      "current_price": 721.9451293945312,
       "reasons": [
+        "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH.",
-        "Korea proxy EWY is under acute pressure (-10.8%).",
+        "Korea proxy EWY is under acute pressure (-10.7%).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
         "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-10 18:10:43.857625+00:00"
+      "generated_at": "2026-08-10 19:12:57.815320+00:00"
     }
   },
   {
@@ -57,16 +61,18 @@
     "signal": {
       "symbol": "SMH",
       "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 574.4450073242188,
+      "confidence": 0.84,
+      "current_price": 575.10498046875,
       "reasons": [
+        "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH.",
-        "Korea proxy EWY is under acute pressure (-10.8%).",
+        "Korea proxy EWY is under acute pressure (-10.7%).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
         "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-08-10 18:10:43.857625+00:00"
+      "generated_at": "2026-08-10 19:12:57.815320+00:00"
     }
   }
 ]

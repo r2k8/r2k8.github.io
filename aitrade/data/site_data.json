@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-11T21:13:57.922481+00:00",
+  "updated_at": "2026-08-11T22:15:51.971309+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -625,6 +625,24 @@
       "latest_volume": 4784603.0
     },
     {
+      "symbol": "LFST",
+      "as_of": "2026-08-11",
+      "close": 11.5,
+      "ema20": 10.852769871482625,
+      "ema50": 10.169501574118835,
+      "avg20_volume": 3841914.75,
+      "latest_volume": 5814795.0
+    },
+    {
+      "symbol": "HRB",
+      "as_of": "2026-08-11",
+      "close": 46.66999816894531,
+      "ema20": 43.891411818689015,
+      "ema50": 41.26646647777078,
+      "avg20_volume": 2092313.85,
+      "latest_volume": 3919477.0
+    },
+    {
       "symbol": "HZO",
       "as_of": "2026-08-10",
       "close": 52.09000015258789,
@@ -751,15 +769,6 @@
       "latest_volume": 4672800.0
     },
     {
-      "symbol": "LFST",
-      "as_of": "2026-08-10",
-      "close": 11.899999618530273,
-      "ema20": 10.784115456052183,
-      "ema50": 10.093429498245218,
-      "avg20_volume": 3705470.0,
-      "latest_volume": 10563600.0
-    },
-    {
       "symbol": "DOCS",
       "as_of": "2026-08-07",
       "close": 31.833900451660156,
@@ -821,15 +830,6 @@
       "ema50": 96.70504635553986,
       "avg20_volume": 500855.0,
       "latest_volume": 1107300.0
-    },
-    {
-      "symbol": "HRB",
-      "as_of": "2026-08-07",
-      "close": 46.189998626708984,
-      "ema20": 43.354008984531575,
-      "ema50": 40.86875695518558,
-      "avg20_volume": 1992285.0,
-      "latest_volume": 4757800.0
     },
     {
       "symbol": "AVNT",
@@ -1064,6 +1064,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=conflict&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260810221419 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

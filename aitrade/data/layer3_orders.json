@@ -1,11 +1,33 @@
 [
   {
-    "symbol": "DV",
+    "symbol": "FA",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 12.32,
+    "stop_loss_price": 19.69,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "FA",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 21.170000076293945,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 14.9%; earnings growth 5498.7%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Industrials."
+      ],
+      "generated_at": "2026-08-11 22:15:55.287395+00:00"
+    }
+  },
+  {
+    "symbol": "DV",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
       "symbol": "DV",
@@ -18,11 +40,11 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Communication Services."
       ],
-      "generated_at": "2026-08-11 21:14:01.171157+00:00"
+      "generated_at": "2026-08-11 22:15:55.287395+00:00"
     }
   },
   {
-    "symbol": "ARMK",
+    "symbol": "LFST",
     "approved": false,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
@@ -30,38 +52,17 @@
       "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
-      "symbol": "ARMK",
+      "symbol": "LFST",
       "signal_type": "buy",
       "confidence": 0.8600000000000001,
-      "current_price": 60.470001220703125,
+      "current_price": 11.5,
       "reasons": [
         "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 14.7%; earnings growth 65.2%.",
+        "Revenue growth 26.1%; earnings growth 0.0%.",
         "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Industrials."
+        "Sector: Healthcare."
       ],
-      "generated_at": "2026-08-11 21:14:01.171157+00:00"
-    }
-  },
-  {
-    "symbol": "MCHI",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Buy confidence 0.73 is below threshold 0.78; no action."
-    ],
-    "signal": {
-      "symbol": "MCHI",
-      "signal_type": "buy",
-      "confidence": 0.7294117647058823,
-      "current_price": 55.619998931884766,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 17).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-08-11 21:14:01.171157+00:00"
+      "generated_at": "2026-08-11 22:15:55.287395+00:00"
     }
   },
   {
@@ -81,7 +82,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 20)."
       ],
-      "generated_at": "2026-08-11 21:14:01.171157+00:00"
+      "generated_at": "2026-08-11 22:15:55.287395+00:00"
     }
   },
   {
@@ -101,7 +102,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 14)."
       ],
-      "generated_at": "2026-08-11 21:14:01.171157+00:00"
+      "generated_at": "2026-08-11 22:15:55.287395+00:00"
     }
   },
   {
@@ -121,7 +122,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 13)."
       ],
-      "generated_at": "2026-08-11 21:14:01.171157+00:00"
+      "generated_at": "2026-08-11 22:15:55.287395+00:00"
     }
   }
 ]

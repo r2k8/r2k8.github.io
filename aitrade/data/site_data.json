@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-11T04:33:51.211167+00:00",
+  "updated_at": "2026-08-11T05:37:32.223627+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -729,6 +729,15 @@
       "latest_volume": 992215.0
     },
     {
+      "symbol": "DNOW",
+      "as_of": "2026-08-10",
+      "close": 16.649999618530273,
+      "ema20": 14.490216233606642,
+      "ema50": 13.888527296025853,
+      "avg20_volume": 2625550.0,
+      "latest_volume": 4672800.0
+    },
+    {
       "symbol": "DOCS",
       "as_of": "2026-08-07",
       "close": 31.833900451660156,
@@ -826,15 +835,6 @@
       "ema50": 28.089358616191102,
       "avg20_volume": 3363620.0,
       "latest_volume": 6297700.0
-    },
-    {
-      "symbol": "DNOW",
-      "as_of": "2026-08-07",
-      "close": 16.520000457763672,
-      "ema20": 14.262749475897186,
-      "ema50": 13.770791172930958,
-      "avg20_volume": 2475605.0,
-      "latest_volume": 4134200.0
     },
     {
       "symbol": "CART",
@@ -970,11 +970,11 @@
     "vix_term_structure": 0.7526776703529691
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.05073529411764706,
+    "bullish_score": 0.06544117647058824,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -983,9 +983,11 @@
         "symbol": "XLK",
         "name": "Technology",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Little Blue Cloud Crosses Channel | Aero - News Network"
+        ]
       },
       "SMH": {
         "symbol": "SMH",
@@ -998,18 +1000,26 @@
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "score": 1.0,
+        "confidence": 0.19,
+        "articles": 2,
+        "top_headlines": [
+          "Middle East conflict fears weigh on wall street as energy prices surge",
+          "Middle East conflict fears weigh on wall street as energy prices surge"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.17,
+        "articles": 4,
+        "top_headlines": [
+          "Reserve Bank holds interest rates at 4 . 35 per cent as Australian borrowers await next RBA move",
+          "Sensex Today | Stock Market LIVE Updates : Nifty slips below 24 , 500 , Sensex down 320 pts ; banks under pressure",
+          "Reserve Bank of Australia : Cash rate holds at 4 . 35 per cent again | The Northern Daily Leader",
+          " [ Vantage Point ] The hidden losses inside Philippine banks"
+        ]
       },
       "XLV": {
         "symbol": "XLV",
@@ -1023,9 +1033,11 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Sidney residents reject ordinance to restrict industrial development"
+        ]
       },
       "XLY": {
         "symbol": "XLY",
@@ -1054,17 +1066,18 @@
     }
   },
   "narrative": {
-    "state": "calm",
-    "ai_unwind_score": 0.175,
-    "geopolitical_score": 0.0,
+    "state": "geopolitical_pressure",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.46,
-      "next_week_rebound_probability": 0.66,
-      "next_month_base_probability": 0.73,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [
@@ -1077,7 +1090,5 @@
       "interpretation": "Small risk-sized starter entries may be considered in strongest quality names."
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
-  ]
+  "warnings": []
 }

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-11T05:37:32.223627+00:00",
+  "updated_at": "2026-08-11T06:39:24.864543+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -970,11 +970,11 @@
     "vix_term_structure": 0.7526776703529691
   },
   "sentiment": {
-    "fear_score": 0.05073529411764706,
-    "bullish_score": 0.06544117647058824,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -983,11 +983,9 @@
         "symbol": "XLK",
         "name": "Technology",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Little Blue Cloud Crosses Channel | Aero - News Network"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "SMH": {
         "symbol": "SMH",
@@ -1000,26 +998,18 @@
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": 1.0,
-        "confidence": 0.19,
-        "articles": 2,
-        "top_headlines": [
-          "Middle East conflict fears weigh on wall street as energy prices surge",
-          "Middle East conflict fears weigh on wall street as energy prices surge"
-        ]
+        "score": 0.0,
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.17,
-        "articles": 4,
-        "top_headlines": [
-          "Reserve Bank holds interest rates at 4 . 35 per cent as Australian borrowers await next RBA move",
-          "Sensex Today | Stock Market LIVE Updates : Nifty slips below 24 , 500 , Sensex down 320 pts ; banks under pressure",
-          "Reserve Bank of Australia : Cash rate holds at 4 . 35 per cent again | The Northern Daily Leader",
-          " [ Vantage Point ] The hidden losses inside Philippine banks"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -1033,11 +1023,9 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Sidney residents reject ordinance to restrict industrial development"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLY": {
         "symbol": "XLY",
@@ -1066,18 +1054,17 @@
     }
   },
   "narrative": {
-    "state": "geopolitical_pressure",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.175,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.46,
+      "next_week_rebound_probability": 0.66,
+      "next_month_base_probability": 0.73,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

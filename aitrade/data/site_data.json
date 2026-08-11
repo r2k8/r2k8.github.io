@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-10T23:23:35.110560+00:00",
+  "updated_at": "2026-08-11T00:25:40.755666+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -353,7 +353,7 @@
       "Symbol": "CIB",
       "Company": "Grupo Cibest S.A.",
       "Domain": "grupocibest.com",
-      "Timing": "Before Open",
+      "Timing": "After Close",
       "Price": "91.47",
       "RevGrowth": "0.108",
       "EarnGrowth": "-0.15",
@@ -549,7 +549,7 @@
       "Symbol": "AMTM",
       "Company": "Amentum Holdings, Inc.",
       "Domain": "amentum.com",
-      "Timing": "Before Open",
+      "Timing": "After Close",
       "Price": "24.44",
       "RevGrowth": "-0.004",
       "EarnGrowth": "12.366",
@@ -666,6 +666,33 @@
       "latest_volume": 1784444.0
     },
     {
+      "symbol": "HALO",
+      "as_of": "2026-08-10",
+      "close": 102.62000274658203,
+      "ema20": 84.89861379690599,
+      "ema50": 78.79205082326601,
+      "avg20_volume": 2155765.85,
+      "latest_volume": 4934717.0
+    },
+    {
+      "symbol": "FOXF",
+      "as_of": "2026-08-10",
+      "close": 21.030000686645508,
+      "ema20": 18.996320125263082,
+      "ema50": 18.31487611290143,
+      "avg20_volume": 622603.35,
+      "latest_volume": 1202267.0
+    },
+    {
+      "symbol": "LQDT",
+      "as_of": "2026-08-10",
+      "close": 40.90999984741211,
+      "ema20": 39.319138727879,
+      "ema50": 38.25543016274158,
+      "avg20_volume": 231222.8,
+      "latest_volume": 358456.0
+    },
+    {
       "symbol": "DOCS",
       "as_of": "2026-08-07",
       "close": 31.833900451660156,
@@ -700,15 +727,6 @@
       "ema50": 47.12103379975967,
       "avg20_volume": 159628.2,
       "latest_volume": 241864.0
-    },
-    {
-      "symbol": "HALO",
-      "as_of": "2026-08-07",
-      "close": 103.12000274658203,
-      "ema20": 83.02858102129602,
-      "ema50": 77.62777271109705,
-      "avg20_volume": 2000160.0,
-      "latest_volume": 7690900.0
     },
     {
       "symbol": "TILE",
@@ -828,15 +846,6 @@
       "latest_volume": 471400.0
     },
     {
-      "symbol": "FOXF",
-      "as_of": "2026-08-07",
-      "close": 21.1299991607666,
-      "ema20": 18.783056069096812,
-      "ema50": 18.23754088276571,
-      "avg20_volume": 583450.0,
-      "latest_volume": 1982700.0
-    },
-    {
       "symbol": "CARG",
       "as_of": "2026-08-07",
       "close": 38.98500061035156,
@@ -952,15 +961,6 @@
       "ema50": 42.675170230961804,
       "avg20_volume": 91680.0,
       "latest_volume": 290200.0
-    },
-    {
-      "symbol": "VSEC",
-      "as_of": "2026-08-06",
-      "close": 225.4499969482422,
-      "ema20": 205.53869274995836,
-      "ema50": 202.80665808359223,
-      "avg20_volume": 415950.0,
-      "latest_volume": 811200.0
     }
   ],
   "regime_metrics": {
@@ -970,10 +970,10 @@
     "vix_term_structure": 0.8145416444159402
   },
   "sentiment": {
-    "fear_score": 0.045,
-    "bullish_score": 0.045,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -1054,18 +1054,17 @@
     }
   },
   "narrative": {
-    "state": "geopolitical_pressure",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.175,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.46,
+      "next_week_rebound_probability": 0.66,
+      "next_month_base_probability": 0.73,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

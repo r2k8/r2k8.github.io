@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-11T07:45:54.101175+00:00",
+  "updated_at": "2026-08-11T08:47:44.807527+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -635,8 +635,8 @@
       "close": 64.61000061035156,
       "ema20": 57.23971793647232,
       "ema50": 53.081875591922696,
-      "avg20_volume": 597574.55,
-      "latest_volume": 1117091.0
+      "avg20_volume": 601355.0,
+      "latest_volume": 1192700.0
     },
     {
       "symbol": "ZD",
@@ -736,6 +736,15 @@
       "ema50": 13.888527296025853,
       "avg20_volume": 2625550.0,
       "latest_volume": 4672800.0
+    },
+    {
+      "symbol": "LFST",
+      "as_of": "2026-08-10",
+      "close": 11.899999618530273,
+      "ema20": 10.784115456052183,
+      "ema50": 10.093429498245218,
+      "avg20_volume": 3705470.0,
+      "latest_volume": 10563600.0
     },
     {
       "symbol": "DOCS",
@@ -952,22 +961,13 @@
       "ema50": 22.895364683077734,
       "avg20_volume": 2958140.0,
       "latest_volume": 8330700.0
-    },
-    {
-      "symbol": "SEZL",
-      "as_of": "2026-08-06",
-      "close": 178.52999877929688,
-      "ema20": 166.31467167990147,
-      "ema50": 154.331840809421,
-      "avg20_volume": 588615.0,
-      "latest_volume": 1100100.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.2848789734869791,
     "risk_ratio": 1.9387054217079966,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.751217118666795
+    "vix_term_structure": 0.7541382220391432
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -1077,7 +1077,5 @@
       "interpretation": "Small risk-sized starter entries may be considered in strongest quality names."
     }
   },
-  "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=recession&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260810073944 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
-  ]
+  "warnings": []
 }

@@ -1,24 +1,44 @@
 [
   {
-    "symbol": "DV",
+    "symbol": "CRBG",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 12.31,
+    "stop_loss_price": 30.99,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
     ],
     "signal": {
-      "symbol": "DV",
+      "symbol": "CRBG",
       "signal_type": "buy",
       "confidence": 0.8600000000000001,
-      "current_price": 13.234999656677246,
+      "current_price": 33.31999969482422,
       "reasons": [
         "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 2.5%; earnings growth 60.0%.",
+        "Revenue growth 25.9%; earnings growth 0.0%.",
         "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Communication Services."
+        "Sector: Financial Services."
       ],
-      "generated_at": "2026-08-11 18:10:07.098497+00:00"
+      "generated_at": "2026-08-11 19:11:10.151351+00:00"
+    }
+  },
+  {
+    "symbol": "HYG",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "HYG",
+      "signal_type": "sell",
+      "confidence": 0.7012499999999999,
+      "current_price": 79.51499938964844,
+      "reasons": [
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 20)."
+      ],
+      "generated_at": "2026-08-11 19:11:10.151351+00:00"
     }
   },
   {
@@ -33,12 +53,12 @@
       "symbol": "LQD",
       "signal_type": "sell",
       "confidence": 0.7011627906976744,
-      "current_price": 106.05500030517578,
+      "current_price": 106.06500244140625,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 14)."
       ],
-      "generated_at": "2026-08-11 18:10:07.098497+00:00"
+      "generated_at": "2026-08-11 19:11:10.151351+00:00"
     }
   },
   {
@@ -52,33 +72,13 @@
     "signal": {
       "symbol": "EWY",
       "signal_type": "sell",
-      "confidence": 0.701123595505618,
-      "current_price": 166.39500427246094,
+      "confidence": 0.7011363636363636,
+      "current_price": 166.4499969482422,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 11)."
+        "Capital Outflows (Rank 12)."
       ],
-      "generated_at": "2026-08-11 18:10:07.098497+00:00"
-    }
-  },
-  {
-    "symbol": "TLT",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "TLT",
-      "signal_type": "sell",
-      "confidence": 0.701098901098901,
-      "current_price": 82.23500061035156,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 9)."
-      ],
-      "generated_at": "2026-08-11 18:10:07.098497+00:00"
+      "generated_at": "2026-08-11 19:11:10.151351+00:00"
     }
   }
 ]

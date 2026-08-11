@@ -1,11 +1,33 @@
 [
   {
-    "symbol": "LIF",
+    "symbol": "RDNT",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 60.09,
+    "stop_loss_price": 71.87,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "RDNT",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 77.27999877929688,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 22.1%; earnings growth 0.0%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Healthcare."
+      ],
+      "generated_at": "2026-08-11 09:49:37.945395+00:00"
+    }
+  },
+  {
+    "symbol": "LIF",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
       "symbol": "LIF",
@@ -18,29 +40,7 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Technology."
       ],
-      "generated_at": "2026-08-11 08:47:47.896271+00:00"
-    }
-  },
-  {
-    "symbol": "PCTY",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "PCTY",
-      "signal_type": "buy",
-      "confidence": 0.8,
-      "current_price": 145.64999389648438,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 11.0%; earnings growth 27.6%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology."
-      ],
-      "generated_at": "2026-08-11 08:47:47.896271+00:00"
+      "generated_at": "2026-08-11 09:49:37.945395+00:00"
     }
   },
   {
@@ -61,7 +61,7 @@
         "Positive capital flow (Rank 7).",
         "Volume confirms institutional participation (latest volume >= 20-day average)."
       ],
-      "generated_at": "2026-08-11 08:47:47.896271+00:00"
+      "generated_at": "2026-08-11 09:49:37.945395+00:00"
     }
   },
   {
@@ -81,7 +81,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 19)."
       ],
-      "generated_at": "2026-08-11 08:47:47.896271+00:00"
+      "generated_at": "2026-08-11 09:49:37.945395+00:00"
     }
   },
   {
@@ -101,7 +101,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 13)."
       ],
-      "generated_at": "2026-08-11 08:47:47.896271+00:00"
+      "generated_at": "2026-08-11 09:49:37.945395+00:00"
     }
   },
   {
@@ -121,7 +121,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 9)."
       ],
-      "generated_at": "2026-08-11 08:47:47.896271+00:00"
+      "generated_at": "2026-08-11 09:49:37.945395+00:00"
     }
   }
 ]

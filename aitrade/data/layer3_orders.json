@@ -1,88 +1,5 @@
 [
   {
-    "symbol": "LFST",
-    "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 11.07,
-    "warnings": [
-      "Sized by risk: max loss about $7.00 at 7% hard stop."
-    ],
-    "signal": {
-      "symbol": "LFST",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 11.899999618530273,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 26.1%; earnings growth 0.0%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Healthcare."
-      ],
-      "generated_at": "2026-08-12 06:35:57.625659+00:00"
-    }
-  },
-  {
-    "symbol": "MCHI",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Buy confidence 0.73 is below threshold 0.78; no action."
-    ],
-    "signal": {
-      "symbol": "MCHI",
-      "signal_type": "buy",
-      "confidence": 0.7294117647058823,
-      "current_price": 55.619998931884766,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 17).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-08-12 06:35:57.625659+00:00"
-    }
-  },
-  {
-    "symbol": "HYG",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "HYG",
-      "signal_type": "sell",
-      "confidence": 0.7012499999999999,
-      "current_price": 79.51000213623047,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 20)."
-      ],
-      "generated_at": "2026-08-12 06:35:57.625659+00:00"
-    }
-  },
-  {
-    "symbol": "EWY",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "EWY",
-      "signal_type": "sell",
-      "confidence": 0.7011627906976744,
-      "current_price": 167.24000549316406,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 14)."
-      ],
-      "generated_at": "2026-08-12 06:35:57.625659+00:00"
-    }
-  },
-  {
     "symbol": "LQD",
     "approved": true,
     "target_position_size_usd": 0.0,
@@ -93,13 +10,33 @@
     "signal": {
       "symbol": "LQD",
       "signal_type": "sell",
-      "confidence": 0.7011494252873562,
-      "current_price": 105.98999786376953,
+      "confidence": 0.7011764705882353,
+      "current_price": 106.23500061035156,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 13)."
+        "Capital Outflows (Rank 15)."
       ],
-      "generated_at": "2026-08-12 06:35:57.625659+00:00"
+      "generated_at": "2026-08-12 15:29:33.635154+00:00"
+    }
+  },
+  {
+    "symbol": "TLT",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "TLT",
+      "signal_type": "sell",
+      "confidence": 0.701111111111111,
+      "current_price": 82.31999969482422,
+      "reasons": [
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 10)."
+      ],
+      "generated_at": "2026-08-12 15:29:33.635154+00:00"
     }
   }
 ]

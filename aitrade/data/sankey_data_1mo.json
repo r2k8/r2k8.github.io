@@ -57,6 +57,13 @@
       "depth": 4
     },
     {
+      "name": "SMCI",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "PANW",
       "itemStyle": {
         "color": "#10b981"
@@ -78,20 +85,6 @@
       "depth": 4
     },
     {
-      "name": "TSM",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "U",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
       "name": "NET",
       "itemStyle": {
         "color": "#10b981"
@@ -99,7 +92,7 @@
       "depth": 4
     },
     {
-      "name": "SMCI",
+      "name": "U",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -134,14 +127,21 @@
       "depth": 4
     },
     {
-      "name": "AI",
+      "name": "TSM",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "ASML",
       "itemStyle": {
         "color": "#10b981"
       },
       "depth": 4
     },
     {
-      "name": "ASML",
+      "name": "AI",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -302,6 +302,76 @@
       "depth": 4
     },
     {
+      "name": "Mega-Cap Tech",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 3
+    },
+    {
+      "name": "MSFT",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "AMD",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "NVDA",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "META",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "AAPL",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "GOOGL",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
+      "name": "CRM",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "AVGO",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
+      "name": "QCOM",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 4
+    },
+    {
       "name": "Consumer",
       "itemStyle": {
         "color": "#10b981"
@@ -351,76 +421,6 @@
       "depth": 4
     },
     {
-      "name": "Mega-Cap Tech",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 3
-    },
-    {
-      "name": "MSFT",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "AMD",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "META",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "NVDA",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "AAPL",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "CRM",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
-      "name": "GOOGL",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "QCOM",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 4
-    },
-    {
-      "name": "AVGO",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
       "name": "Europe",
       "itemStyle": {
         "color": "#10b981"
@@ -437,7 +437,7 @@
     {
       "name": "Asia-Pacific",
       "itemStyle": {
-        "color": "#ef4444"
+        "color": "#10b981"
       },
       "depth": 2
     },
@@ -463,13 +463,6 @@
       "depth": 2
     },
     {
-      "name": "MicroStrategy",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 2
-    },
-    {
       "name": "Ethereum",
       "itemStyle": {
         "color": "#10b981"
@@ -484,11 +477,11 @@
       "depth": 2
     },
     {
-      "name": "Real Estate",
+      "name": "MicroStrategy",
       "itemStyle": {
-        "color": "#ef4444"
+        "color": "#10b981"
       },
-      "depth": 1
+      "depth": 2
     },
     {
       "name": "Commodities",
@@ -524,15 +517,22 @@
         "color": "#10b981"
       },
       "depth": 2
+    },
+    {
+      "name": "Real Estate",
+      "itemStyle": {
+        "color": "#ef4444"
+      },
+      "depth": 1
     }
   ],
   "links": [
     {
       "source": "Global Liquidity",
       "target": "Equities",
-      "value": 1410.88,
-      "net_flow_dollars": 14108839459.29038,
-      "market_cap_delta": 14326575029.08121,
+      "value": 1581.14,
+      "net_flow_dollars": 15811374390.545034,
+      "market_cap_delta": 15850068528.17496,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -541,9 +541,9 @@
     {
       "source": "Equities",
       "target": "USA",
-      "value": 1410.88,
-      "net_flow_dollars": 14108839459.29038,
-      "market_cap_delta": 14326575029.08121,
+      "value": 1581.14,
+      "net_flow_dollars": 15811374390.545034,
+      "market_cap_delta": 15850068528.17496,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -552,9 +552,9 @@
     {
       "source": "USA",
       "target": "AI & Cloud Growth",
-      "value": 314.97,
-      "net_flow_dollars": 3149703943.5668516,
-      "market_cap_delta": 143874977.11181647,
+      "value": 290.36,
+      "net_flow_dollars": 2903621632.0135207,
+      "market_cap_delta": 129062507.62939458,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -563,9 +563,9 @@
     {
       "source": "AI & Cloud Growth",
       "target": "MU",
-      "value": 8719.75,
-      "net_flow_dollars": -87197526417.09908,
-      "market_cap_delta": -125114151209.31998,
+      "value": 4458.87,
+      "net_flow_dollars": -44588747008.92973,
+      "market_cap_delta": -62624877796.02493,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -574,9 +574,9 @@
     {
       "source": "AI & Cloud Growth",
       "target": "PLTR",
-      "value": 4576.37,
-      "net_flow_dollars": 45763722534.11162,
-      "market_cap_delta": 110779352408.3259,
+      "value": 4172.85,
+      "net_flow_dollars": 41728475416.16493,
+      "market_cap_delta": 98907663205.22203,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -585,9 +585,9 @@
     {
       "source": "AI & Cloud Growth",
       "target": "INTC",
-      "value": 2353.69,
-      "net_flow_dollars": -23536920718.825115,
-      "market_cap_delta": -61183724617.91994,
+      "value": 1820.43,
+      "net_flow_dollars": -18204338895.066277,
+      "market_cap_delta": -45976067696.53322,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -596,75 +596,9 @@
     {
       "source": "AI & Cloud Growth",
       "target": "SNOW",
-      "value": 777.08,
-      "net_flow_dollars": 7770786263.629603,
-      "market_cap_delta": 25194359077.14844,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "PANW",
-      "value": 669.34,
-      "net_flow_dollars": 6693407494.68088,
-      "market_cap_delta": 47180340051.269516,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "ARM",
-      "value": 527.23,
-      "net_flow_dollars": -5272286298.076813,
-      "market_cap_delta": -58163209889.99513,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "CRWD",
-      "value": 518.33,
-      "net_flow_dollars": 5183338265.385103,
-      "market_cap_delta": 35353955986.638565,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "TSM",
-      "value": 326.55,
-      "net_flow_dollars": -3265472916.0677547,
-      "market_cap_delta": -62497024518.94015,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "U",
-      "value": 307.34,
-      "net_flow_dollars": 3073445948.872338,
-      "market_cap_delta": 5712353880.274305,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "AI & Cloud Growth",
-      "target": "NET",
-      "value": 298.4,
-      "net_flow_dollars": 2984020385.836746,
-      "market_cap_delta": 12443406545.571756,
+      "value": 831.69,
+      "net_flow_dollars": 8316891374.243619,
+      "market_cap_delta": 26576422346.19141,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -673,9 +607,64 @@
     {
       "source": "AI & Cloud Growth",
       "target": "SMCI",
-      "value": 292.99,
-      "net_flow_dollars": 2929920590.154914,
-      "market_cap_delta": 2128212505.5924773,
+      "value": 703.03,
+      "net_flow_dollars": 7030260445.271615,
+      "market_cap_delta": 4660719764.715037,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
+      "target": "PANW",
+      "value": 674.67,
+      "net_flow_dollars": 6746664746.77914,
+      "market_cap_delta": 46976590051.269516,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
+      "target": "ARM",
+      "value": 535.76,
+      "net_flow_dollars": -5357648984.36296,
+      "market_cap_delta": -58350096602.47822,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
+      "target": "CRWD",
+      "value": 527.64,
+      "net_flow_dollars": 5276441265.8537035,
+      "market_cap_delta": 35537250736.48842,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
+      "target": "NET",
+      "value": 376.23,
+      "net_flow_dollars": 3762263936.081855,
+      "market_cap_delta": 15413108037.407541,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
+      "target": "U",
+      "value": 309.41,
+      "net_flow_dollars": 3094068084.2110863,
+      "market_cap_delta": 5648540783.53258,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -684,9 +673,9 @@
     {
       "source": "AI & Cloud Growth",
       "target": "MDB",
-      "value": 269.58,
-      "net_flow_dollars": 2695767475.9999766,
-      "market_cap_delta": 7808331767.710516,
+      "value": 279.77,
+      "net_flow_dollars": 2797730567.861777,
+      "market_cap_delta": 7948282535.222479,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -695,9 +684,9 @@
     {
       "source": "AI & Cloud Growth",
       "target": "ZS",
-      "value": 182.16,
-      "net_flow_dollars": 1821609367.0024295,
-      "market_cap_delta": 6351950635.498304,
+      "value": 179.15,
+      "net_flow_dollars": 1791452412.0691345,
+      "market_cap_delta": 6149813729.248304,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -706,9 +695,9 @@
     {
       "source": "AI & Cloud Growth",
       "target": "SOFI",
-      "value": 120.45,
-      "net_flow_dollars": -1204530311.5682003,
-      "market_cap_delta": -1033256850.4339753,
+      "value": 157.36,
+      "net_flow_dollars": -1573593932.4079623,
+      "market_cap_delta": -1336774201.4110491,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -717,9 +706,9 @@
     {
       "source": "AI & Cloud Growth",
       "target": "DDOG",
-      "value": 96.72,
-      "net_flow_dollars": -967249581.5112249,
-      "market_cap_delta": -3603574055.459116,
+      "value": 121.13,
+      "net_flow_dollars": -1211314745.1360664,
+      "market_cap_delta": -4435812225.65867,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -727,10 +716,21 @@
     },
     {
       "source": "AI & Cloud Growth",
-      "target": "AI",
-      "value": 15.75,
-      "net_flow_dollars": 157490685.99944866,
-      "market_cap_delta": 255274816.18921578,
+      "target": "TSM",
+      "value": 115.74,
+      "net_flow_dollars": -1157434981.4662087,
+      "market_cap_delta": -21835087250.45525,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
+      "target": "ASML",
+      "value": 65.46,
+      "net_flow_dollars": 654590991.3982127,
+      "market_cap_delta": 6952226879.394556,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -738,10 +738,10 @@
     },
     {
       "source": "AI & Cloud Growth",
-      "target": "ASML",
-      "value": 7.32,
-      "net_flow_dollars": 73209972.36727141,
-      "market_cap_delta": 791247875.4883057,
+      "target": "AI",
+      "value": 12.21,
+      "net_flow_dollars": 122053841.27146073,
+      "market_cap_delta": 195254779.05735314,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -750,9 +750,9 @@
     {
       "source": "USA",
       "target": "Healthcare",
-      "value": 145.51,
-      "net_flow_dollars": 1455149178.7778728,
-      "market_cap_delta": 1415464522.926972,
+      "value": 150.01,
+      "net_flow_dollars": 1500107569.2847035,
+      "market_cap_delta": 1437180294.2995305,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -761,9 +761,9 @@
     {
       "source": "Healthcare",
       "target": "UNH",
-      "value": 198.13,
-      "net_flow_dollars": -1981341402.5753815,
-      "market_cap_delta": -20133050226.816334,
+      "value": 182.26,
+      "net_flow_dollars": -1822552616.965873,
+      "market_cap_delta": -18328875818.771656,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -772,9 +772,9 @@
     {
       "source": "Healthcare",
       "target": "PFE",
-      "value": 185.17,
-      "net_flow_dollars": 1851678970.835426,
-      "market_cap_delta": 13964205076.406425,
+      "value": 159.9,
+      "net_flow_dollars": 1598962355.1617298,
+      "market_cap_delta": 11883814649.708553,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -783,9 +783,9 @@
     {
       "source": "Healthcare",
       "target": "LLY",
-      "value": 118.16,
-      "net_flow_dollars": 1181623512.1279566,
-      "market_cap_delta": 23567498207.917744,
+      "value": 150.13,
+      "net_flow_dollars": 1501280288.9307091,
+      "market_cap_delta": 29575236121.358906,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -794,9 +794,9 @@
     {
       "source": "Healthcare",
       "target": "MRK",
-      "value": 94.39,
-      "net_flow_dollars": 943948873.1539426,
-      "market_cap_delta": 16974136351.913792,
+      "value": 132.06,
+      "net_flow_dollars": 1320579509.6729116,
+      "market_cap_delta": 23240773394.22269,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -805,9 +805,9 @@
     {
       "source": "Healthcare",
       "target": "JNJ",
-      "value": 34.93,
-      "net_flow_dollars": 349280422.1889927,
-      "market_cap_delta": 6795884625.832474,
+      "value": 45.94,
+      "net_flow_dollars": 459377656.1165036,
+      "market_cap_delta": 8844313142.136215,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -816,9 +816,9 @@
     {
       "source": "Healthcare",
       "target": "ABBV",
-      "value": 17.19,
-      "net_flow_dollars": 171872577.3357396,
-      "market_cap_delta": 3551899271.473202,
+      "value": 15.44,
+      "net_flow_dollars": 154411188.30394933,
+      "market_cap_delta": 3163131311.64761,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -827,9 +827,9 @@
     {
       "source": "USA",
       "target": "Financials",
-      "value": 143.05,
-      "net_flow_dollars": 1430458913.149228,
-      "market_cap_delta": 1846399359.26496,
+      "value": 142.6,
+      "net_flow_dollars": 1425959430.32814,
+      "market_cap_delta": 1819897087.9290226,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -838,9 +838,9 @@
     {
       "source": "Financials",
       "target": "JPM",
-      "value": 309.23,
-      "net_flow_dollars": 3092327191.2443504,
-      "market_cap_delta": 67969843720.143295,
+      "value": 343.16,
+      "net_flow_dollars": 3431607980.331993,
+      "market_cap_delta": 74628613118.04306,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -849,9 +849,9 @@
     {
       "source": "Financials",
       "target": "BAC",
-      "value": 242.24,
-      "net_flow_dollars": 2422379540.3766155,
-      "market_cap_delta": 30278600420.44999,
+      "value": 272.82,
+      "net_flow_dollars": 2728223010.781095,
+      "market_cap_delta": 33495258266.29765,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -860,9 +860,9 @@
     {
       "source": "Financials",
       "target": "BX",
-      "value": 226.01,
-      "net_flow_dollars": 2260085361.5897837,
-      "market_cap_delta": 18075051370.684364,
+      "value": 214.98,
+      "net_flow_dollars": 2149803260.872518,
+      "market_cap_delta": 16941611571.851267,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -871,9 +871,9 @@
     {
       "source": "Financials",
       "target": "MA",
-      "value": 185.78,
-      "net_flow_dollars": 1857845020.1439404,
-      "market_cap_delta": 30170406913.21512,
+      "value": 167.22,
+      "net_flow_dollars": 1672171496.9696326,
+      "market_cap_delta": 26857750757.780243,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -882,9 +882,9 @@
     {
       "source": "Financials",
       "target": "BLK",
-      "value": 153.85,
-      "net_flow_dollars": 1538493999.6881232,
-      "market_cap_delta": 17458406273.68714,
+      "value": 160.76,
+      "net_flow_dollars": 1607629036.6843917,
+      "market_cap_delta": 18102667684.510017,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -893,9 +893,9 @@
     {
       "source": "Financials",
       "target": "V",
-      "value": 152.87,
-      "net_flow_dollars": 1528659614.8206687,
-      "market_cap_delta": 23601973293.194096,
+      "value": 113.55,
+      "net_flow_dollars": 1135467186.645536,
+      "market_cap_delta": 17364914592.507027,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -904,9 +904,9 @@
     {
       "source": "Financials",
       "target": "GS",
-      "value": 73.11,
-      "net_flow_dollars": -731106755.4323615,
-      "market_cap_delta": -6047620192.012283,
+      "value": 45.86,
+      "net_flow_dollars": -458647162.3125912,
+      "market_cap_delta": -3744479945.9693155,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -915,9 +915,9 @@
     {
       "source": "Financials",
       "target": "WFC",
-      "value": 7.17,
-      "net_flow_dollars": 71675215.55798298,
-      "market_cap_delta": 876950578.9264116,
+      "value": 28.94,
+      "net_flow_dollars": 289415508.31854135,
+      "market_cap_delta": 3507838306.9086504,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -926,9 +926,9 @@
     {
       "source": "USA",
       "target": "Industrials",
-      "value": 51.5,
-      "net_flow_dollars": 515011068.1711819,
-      "market_cap_delta": 516445863.05053884,
+      "value": 56.68,
+      "net_flow_dollars": 566782875.7585654,
+      "market_cap_delta": 560263082.1057147,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -937,9 +937,9 @@
     {
       "source": "Industrials",
       "target": "CAT",
-      "value": 536.12,
-      "net_flow_dollars": -5361222793.835782,
-      "market_cap_delta": -50122952141.066284,
+      "value": 451.26,
+      "net_flow_dollars": -4512627797.410022,
+      "market_cap_delta": -41412051270.5932,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -948,9 +948,9 @@
     {
       "source": "Industrials",
       "target": "LMT",
-      "value": 171.25,
-      "net_flow_dollars": 1712512206.342807,
-      "market_cap_delta": 17205455143.781887,
+      "value": 177.02,
+      "net_flow_dollars": 1770248867.4084682,
+      "market_cap_delta": 17620875681.911953,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -959,9 +959,9 @@
     {
       "source": "Industrials",
       "target": "BA",
-      "value": 121.58,
-      "net_flow_dollars": 1215820816.4491682,
-      "market_cap_delta": 8656130511.099964,
+      "value": 94.83,
+      "net_flow_dollars": 948272424.6849498,
+      "market_cap_delta": 6677696357.021106,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -970,9 +970,9 @@
     {
       "source": "Industrials",
       "target": "GE",
-      "value": 54.06,
-      "net_flow_dollars": 540583803.4499314,
-      "market_cap_delta": 9120171956.158415,
+      "value": 44.2,
+      "net_flow_dollars": 442028018.62893856,
+      "market_cap_delta": 7382267412.441436,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -981,97 +981,20 @@
     {
       "source": "Industrials",
       "target": "UNP",
-      "value": 33.87,
-      "net_flow_dollars": 338651715.62440914,
-      "market_cap_delta": 3510983292.420745,
+      "value": 34.79,
+      "net_flow_dollars": 347883836.30603313,
+      "market_cap_delta": 3576341024.6683645,
       "lineStyle": {
         "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "USA",
-      "target": "Consumer",
-      "value": 30.67,
-      "net_flow_dollars": 306679535.1337009,
-      "market_cap_delta": 240505743.11187807,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Consumer",
-      "target": "TSLA",
-      "value": 4659.27,
-      "net_flow_dollars": -46592722877.08502,
-      "market_cap_delta": -296018586822.74963,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Consumer",
-      "target": "AMZN",
-      "value": 2366.39,
-      "net_flow_dollars": 23663863530.909107,
-      "market_cap_delta": 290475305991.9798,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Consumer",
-      "target": "NKE",
-      "value": 100.26,
-      "net_flow_dollars": -1002622578.4465225,
-      "market_cap_delta": -3666438767.4051456,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Consumer",
-      "target": "HD",
-      "value": 66.31,
-      "net_flow_dollars": 663132962.737224,
-      "market_cap_delta": 11147775459.411036,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Consumer",
-      "target": "SBUX",
-      "value": 8.27,
-      "net_flow_dollars": 82657072.85286804,
-      "market_cap_delta": 741004174.8046817,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Consumer",
-      "target": "MCD",
-      "value": 3.51,
-      "net_flow_dollars": -35116779.26654162,
-      "market_cap_delta": -318443008.0511574,
-      "lineStyle": {
-        "color": "#ef4444",
         "opacity": 0.35
       }
     },
     {
       "source": "USA",
       "target": "Mega-Cap Tech",
-      "value": 5.42,
-      "net_flow_dollars": 54189891.142350115,
-      "market_cap_delta": 84336363.70117156,
+      "value": 52.69,
+      "net_flow_dollars": 526941844.6450186,
+      "market_cap_delta": 808006319.9999996,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1080,9 +1003,9 @@
     {
       "source": "Mega-Cap Tech",
       "target": "MSFT",
-      "value": 9018.03,
-      "net_flow_dollars": 90180286575.67975,
-      "market_cap_delta": 881486487107.8367,
+      "value": 8345.97,
+      "net_flow_dollars": 83459677068.51434,
+      "market_cap_delta": 803073424680.6438,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1091,20 +1014,9 @@
     {
       "source": "Mega-Cap Tech",
       "target": "AMD",
-      "value": 4138.63,
-      "net_flow_dollars": -41386326472.09959,
-      "market_cap_delta": -136425927303.33566,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
-      "target": "META",
-      "value": 1944.38,
-      "net_flow_dollars": -19443846054.913437,
-      "market_cap_delta": -154557467963.03912,
+      "value": 3481.49,
+      "net_flow_dollars": -34814923947.05153,
+      "market_cap_delta": -112893835442.7186,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -1113,9 +1025,9 @@
     {
       "source": "Mega-Cap Tech",
       "target": "NVDA",
-      "value": 1464.26,
-      "net_flow_dollars": 14642579504.325449,
-      "market_cap_delta": 158405339999.9998,
+      "value": 2937.26,
+      "net_flow_dollars": 29372636644.03034,
+      "market_cap_delta": 310755267383.42267,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1123,10 +1035,32 @@
     },
     {
       "source": "Mega-Cap Tech",
+      "target": "META",
+      "value": 2396.45,
+      "net_flow_dollars": -23964544203.148144,
+      "market_cap_delta": -187634395598.03912,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
       "target": "AAPL",
-      "value": 983.71,
-      "net_flow_dollars": -9837083447.180902,
-      "market_cap_delta": -151925360354.5165,
+      "value": 1356.81,
+      "net_flow_dollars": -13568142554.870626,
+      "market_cap_delta": -206932342626.24503,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Mega-Cap Tech",
+      "target": "GOOGL",
+      "value": 838.35,
+      "net_flow_dollars": -8383451247.375031,
+      "market_cap_delta": -87978015395.16086,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -1135,53 +1069,119 @@
     {
       "source": "Mega-Cap Tech",
       "target": "CRM",
-      "value": 777.84,
-      "net_flow_dollars": 7778351778.416031,
-      "market_cap_delta": 27968850999.755867,
+      "value": 672.33,
+      "net_flow_dollars": 6723294951.034944,
+      "market_cap_delta": 23865665498.65723,
       "lineStyle": {
         "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
-      "target": "GOOGL",
-      "value": 736.5,
-      "net_flow_dollars": -7364951277.175595,
-      "market_cap_delta": -78502616090.7541,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Mega-Cap Tech",
-      "target": "QCOM",
-      "value": 487.21,
-      "net_flow_dollars": -4872110522.731473,
-      "market_cap_delta": -27804007690.429684,
-      "lineStyle": {
-        "color": "#ef4444",
         "opacity": 0.35
       }
     },
     {
       "source": "Mega-Cap Tech",
       "target": "AVGO",
-      "value": 457.42,
-      "net_flow_dollars": 4574190011.129545,
-      "market_cap_delta": 76644553106.2567,
+      "value": 553.97,
+      "net_flow_dollars": 5539714110.172314,
+      "market_cap_delta": 91393080758.02177,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
       }
     },
     {
+      "source": "Mega-Cap Tech",
+      "target": "QCOM",
+      "value": 494.81,
+      "net_flow_dollars": -4948139940.217979,
+      "market_cap_delta": -27945751922.607418,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "USA",
+      "target": "Consumer",
+      "value": 9.62,
+      "net_flow_dollars": 96161110.67960036,
+      "market_cap_delta": 74556933.39660706,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Consumer",
+      "target": "TSLA",
+      "value": 5276.38,
+      "net_flow_dollars": -52763812683.55957,
+      "market_cap_delta": -329549844036.1474,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Consumer",
+      "target": "AMZN",
+      "value": 2095.1,
+      "net_flow_dollars": 20951000666.295055,
+      "market_cap_delta": 253801905681.61322,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Consumer",
+      "target": "NKE",
+      "value": 127.92,
+      "net_flow_dollars": -1279168887.2370772,
+      "market_cap_delta": -4546744382.03515,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Consumer",
+      "target": "HD",
+      "value": 16.95,
+      "net_flow_dollars": 169451693.6197492,
+      "market_cap_delta": 2788250815.5818734,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Consumer",
+      "target": "SBUX",
+      "value": 16.26,
+      "net_flow_dollars": 162571306.91164267,
+      "market_cap_delta": 1447798608.3984315,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Consumer",
+      "target": "MCD",
+      "value": 8.47,
+      "net_flow_dollars": -84685490.68157253,
+      "market_cap_delta": -753635639.0543312,
+      "lineStyle": {
+        "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
       "source": "Equities",
       "target": "Europe",
-      "value": 16.33,
-      "net_flow_dollars": 163298074.08207396,
-      "market_cap_delta": 1052207721.039494,
+      "value": 15.78,
+      "net_flow_dollars": 157804444.4196116,
+      "market_cap_delta": 1007071809.2641034,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1190,9 +1190,9 @@
     {
       "source": "Equities",
       "target": "Emerging Markets",
-      "value": 3.4,
-      "net_flow_dollars": 33999418.35384632,
-      "market_cap_delta": 326166070.5644914,
+      "value": 7.96,
+      "net_flow_dollars": 79627611.80863309,
+      "market_cap_delta": 745931605.6670305,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1201,20 +1201,20 @@
     {
       "source": "Equities",
       "target": "Asia-Pacific",
-      "value": 1,
-      "net_flow_dollars": -2996151.84791133,
-      "market_cap_delta": -6990299.930542013,
+      "value": 1.6,
+      "net_flow_dollars": 16049302.736810273,
+      "market_cap_delta": 36975172.84167478,
       "lineStyle": {
-        "color": "#ef4444",
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
     {
       "source": "Global Liquidity",
       "target": "Fixed Income",
-      "value": 119.74,
-      "net_flow_dollars": -1197361891.8048277,
-      "market_cap_delta": -250115732.17773426,
+      "value": 114.68,
+      "net_flow_dollars": -1146792700.5004363,
+      "market_cap_delta": -236403232.17773426,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -1223,9 +1223,9 @@
     {
       "source": "Global Liquidity",
       "target": "Crypto",
-      "value": 21.24,
-      "net_flow_dollars": -212428916.78426778,
-      "market_cap_delta": -290001373.2910125,
+      "value": 23.99,
+      "net_flow_dollars": -239870940.2016945,
+      "market_cap_delta": -321899871.8261688,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -1234,9 +1234,9 @@
     {
       "source": "Crypto",
       "target": "Coinbase",
-      "value": 149.61,
-      "net_flow_dollars": -1496088908.7965715,
-      "market_cap_delta": -2337203397.715462,
+      "value": 158.02,
+      "net_flow_dollars": -1580161536.668173,
+      "market_cap_delta": -2432718094.737557,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
@@ -1244,21 +1244,10 @@
     },
     {
       "source": "Crypto",
-      "target": "MicroStrategy",
-      "value": 43.2,
-      "net_flow_dollars": 431999693.496032,
-      "market_cap_delta": 542563318.5025975,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Crypto",
       "target": "Ethereum",
-      "value": 40.99,
-      "net_flow_dollars": 409940691.77728957,
-      "market_cap_delta": 650000305.175782,
+      "value": 47.28,
+      "net_flow_dollars": 472767365.93496394,
+      "market_cap_delta": 740000457.7636726,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1267,31 +1256,31 @@
     {
       "source": "Crypto",
       "target": "Bitcoin",
-      "value": 21.24,
-      "net_flow_dollars": -212428916.78426778,
-      "market_cap_delta": -290001373.2910125,
+      "value": 23.99,
+      "net_flow_dollars": -239870940.2016945,
+      "market_cap_delta": -321899871.8261688,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
       }
     },
     {
-      "source": "Global Liquidity",
-      "target": "Real Estate",
-      "value": 5.94,
-      "net_flow_dollars": -59407957.12034043,
-      "market_cap_delta": -347971149.21245843,
+      "source": "Crypto",
+      "target": "MicroStrategy",
+      "value": 8.48,
+      "net_flow_dollars": 84758680.06988676,
+      "market_cap_delta": 104770427.17129862,
       "lineStyle": {
-        "color": "#ef4444",
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
     {
       "source": "Global Liquidity",
       "target": "Commodities",
-      "value": 5.72,
-      "net_flow_dollars": 57188587.46135952,
-      "market_cap_delta": 272929923.5076905,
+      "value": 6.1,
+      "net_flow_dollars": 60967438.59629831,
+      "market_cap_delta": 280962040.9698487,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1300,9 +1289,9 @@
     {
       "source": "Commodities",
       "target": "Gold",
-      "value": 370.19,
-      "net_flow_dollars": 3701889134.3050013,
-      "market_cap_delta": 6234182775.756838,
+      "value": 457.11,
+      "net_flow_dollars": 4571106465.544386,
+      "market_cap_delta": 7427298583.862308,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1311,9 +1300,9 @@
     {
       "source": "Commodities",
       "target": "Crude Oil",
-      "value": 324.79,
-      "net_flow_dollars": 3247871763.337421,
-      "market_cap_delta": 2252181072.6928706,
+      "value": 316.61,
+      "net_flow_dollars": 3166060840.259497,
+      "market_cap_delta": 2168811436.157226,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1322,9 +1311,9 @@
     {
       "source": "Commodities",
       "target": "Silver",
-      "value": 146.59,
-      "net_flow_dollars": 1465916812.8845706,
-      "market_cap_delta": 1570669665.8943348,
+      "value": 180.49,
+      "net_flow_dollars": 1804887635.5091753,
+      "market_cap_delta": 1881730361.6531239,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1333,11 +1322,22 @@
     {
       "source": "Commodities",
       "target": "Copper",
-      "value": 2.21,
-      "net_flow_dollars": 22058603.421160076,
-      "market_cap_delta": 2230001220.703123,
+      "value": 2.29,
+      "net_flow_dollars": 22946116.191394918,
+      "market_cap_delta": 2280000457.76367,
       "lineStyle": {
         "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Global Liquidity",
+      "target": "Real Estate",
+      "value": 1.09,
+      "net_flow_dollars": -10867283.49626313,
+      "market_cap_delta": -62930203.788630284,
+      "lineStyle": {
+        "color": "#ef4444",
         "opacity": 0.35
       }
     }
@@ -1345,19 +1345,28 @@
   "regime_summary": {
     "title": "Bull Market (Buying)",
     "liquidity": "Flowing IN (Positive)",
-    "inflow": "MSFT / PLTR / AMZN / NVDA / SPY",
-    "outflow": "MU / TSLA / AMD / INTC / META",
+    "inflow": "MSFT / PLTR / NVDA / AMZN / SPY",
+    "outflow": "TSLA / MU / AMD / META / INTC",
     "health": "Optimal"
   },
   "discovery_radar": [
+    {
+      "symbol": "WEN",
+      "name": "Wendy's Company (The)",
+      "sector": "Consumer Cyclical",
+      "rev_growth": 0.017,
+      "earn_growth": -0.408,
+      "dollar_volume": 1396292814.965204,
+      "price_change": 0.1556291895986393
+    },
     {
       "symbol": "DV",
       "name": "DoubleVerify Holdings, Inc.",
       "sector": "Communication Services",
       "rev_growth": 0.025,
       "earn_growth": 0.6,
-      "dollar_volume": 959923863.8376322,
-      "price_change": 0.1353898886032562
+      "dollar_volume": 980998959.6920143,
+      "price_change": 0.14053131273493566
     },
     {
       "symbol": "CRBG",
@@ -1365,17 +1374,17 @@
       "sector": "Financial Services",
       "rev_growth": 0.259,
       "earn_growth": 0,
-      "dollar_volume": 2808547370.087005,
-      "price_change": 0.09296233681336945
+      "dollar_volume": 2860873468.5821395,
+      "price_change": 0.09345331519793369
     },
     {
       "symbol": "ARMK",
       "name": "Aramark",
       "sector": "Industrials",
-      "rev_growth": 0.147,
-      "earn_growth": 0.652,
-      "dollar_volume": 2653316823.0857205,
-      "price_change": 0.044747775063979305
+      "rev_growth": 0.093,
+      "earn_growth": 0.333,
+      "dollar_volume": 2693016099.7260356,
+      "price_change": 0.05565307712093578
     },
     {
       "symbol": "HRB",
@@ -1383,8 +1392,8 @@
       "sector": "Consumer Cyclical",
       "rev_growth": 0.053,
       "earn_growth": 0.242,
-      "dollar_volume": 1584088338.0744712,
-      "price_change": 0.1788329923956885
+      "dollar_volume": 1736638434.5554576,
+      "price_change": 0.36852741361898905
     },
     {
       "symbol": "QNST",
@@ -1392,8 +1401,8 @@
       "sector": "Communication Services",
       "rev_growth": 0.427,
       "earn_growth": 5.595,
-      "dollar_volume": 299959571.750295,
-      "price_change": 0.24478854190174357
+      "dollar_volume": 305225724.76127034,
+      "price_change": 0.22721855522551096
     },
     {
       "symbol": "ADAM",
@@ -1401,8 +1410,8 @@
       "sector": "Real Estate",
       "rev_growth": 1.298,
       "earn_growth": 0,
-      "dollar_volume": 146999787.06763402,
-      "price_change": 0.11316643549905644
+      "dollar_volume": 150001891.0744732,
+      "price_change": 0.10446132954627574
     },
     {
       "symbol": "LFST",
@@ -1410,8 +1419,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.261,
       "earn_growth": 0,
-      "dollar_volume": 753029788.2911073,
-      "price_change": 0.07426436244745445
+      "dollar_volume": 759330212.526148,
+      "price_change": 0.0798692591888556
     },
     {
       "symbol": "FA",
@@ -1419,8 +1428,8 @@
       "sector": "Industrials",
       "rev_growth": 0.149,
       "earn_growth": 54.987,
-      "dollar_volume": 963179472.228416,
-      "price_change": 0.08341863235895323
+      "dollar_volume": 971188448.76042,
+      "price_change": 0.07650971583480605
     },
     {
       "symbol": "HZO",
@@ -1428,8 +1437,8 @@
       "sector": "Consumer Cyclical",
       "rev_growth": -0.07,
       "earn_growth": 0,
-      "dollar_volume": 523306289.9915504,
-      "price_change": 0.5267752934945477
+      "dollar_volume": 533236167.339614,
+      "price_change": 0.5202270259124436
     },
     {
       "symbol": "RDNT",
@@ -1437,8 +1446,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.25,
       "earn_growth": -0.491,
-      "dollar_volume": 829303798.0054876,
-      "price_change": 0.163719456370284
+      "dollar_volume": 839833766.0068299,
+      "price_change": 0.16478664119069178
     },
     {
       "symbol": "LIF",
@@ -1446,8 +1455,8 @@
       "sector": "Technology",
       "rev_growth": 0.378,
       "earn_growth": -0.251,
-      "dollar_volume": 793607523.1689312,
-      "price_change": -0.10921750759846871
+      "dollar_volume": 831190587.9562998,
+      "price_change": -0.10536925609631265
     },
     {
       "symbol": "ZD",
@@ -1455,8 +1464,8 @@
       "sector": "Communication Services",
       "rev_growth": -0.027,
       "earn_growth": 26.32,
-      "dollar_volume": 560919594.215915,
-      "price_change": 0.025201206053751743
+      "dollar_volume": 567815557.607654,
+      "price_change": 0.05289380273493646
     },
     {
       "symbol": "PCTY",
@@ -1464,8 +1473,8 @@
       "sector": "Technology",
       "rev_growth": 0.11,
       "earn_growth": 0.276,
-      "dollar_volume": 1670838144.4457085,
-      "price_change": 0.2240506586646229
+      "dollar_volume": 1693421133.971434,
+      "price_change": 0.2100421889421809
     },
     {
       "symbol": "HALO",
@@ -1473,8 +1482,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.477,
       "earn_growth": 0.429,
-      "dollar_volume": 3195748025.7374187,
-      "price_change": 0.3467191961493704
+      "dollar_volume": 3256587616.5804224,
+      "price_change": 0.3391076235633509
     },
     {
       "symbol": "FOXF",
@@ -1482,8 +1491,8 @@
       "sector": "Consumer Cyclical",
       "rev_growth": -0.045,
       "earn_growth": 0.469,
-      "dollar_volume": 212888313.78037888,
-      "price_change": 0.26780464482209215
+      "dollar_volume": 216147583.021399,
+      "price_change": 0.2407298365924695
     },
     {
       "symbol": "LQDT",
@@ -1491,8 +1500,8 @@
       "sector": "Consumer Cyclical",
       "rev_growth": 0.081,
       "earn_growth": 0.391,
-      "dollar_volume": 153073414.45085272,
-      "price_change": 0.07128201998197116
+      "dollar_volume": 154574989.18294543,
+      "price_change": 0.09076925424429086
     },
     {
       "symbol": "TRUP",
@@ -1500,8 +1509,8 @@
       "sector": "Financial Services",
       "rev_growth": 0.111,
       "earn_growth": -0.289,
-      "dollar_volume": 247232285.1760013,
-      "price_change": 0.18118467785063253
+      "dollar_volume": 250658398.74762252,
+      "price_change": 0.162988808189212
     },
     {
       "symbol": "ACAD",
@@ -1509,8 +1518,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.164,
       "earn_growth": 0.133,
-      "dollar_volume": 812923555.5868183,
-      "price_change": 0.1216628469646114
+      "dollar_volume": 821390122.0606649,
+      "price_change": 0.12528600918255542
     },
     {
       "symbol": "ROIV",
@@ -1518,8 +1527,8 @@
       "sector": "Healthcare",
       "rev_growth": -0.335,
       "earn_growth": 0,
-      "dollar_volume": 2869303590.961501,
-      "price_change": -0.02001668056713925
+      "dollar_volume": 2914850900.7347217,
+      "price_change": 0.011954448870695229
     },
     {
       "symbol": "BURL",
@@ -1527,8 +1536,8 @@
       "sector": "Consumer Cyclical",
       "rev_growth": 0.141,
       "earn_growth": 0.133,
-      "dollar_volume": 4225860102.311912,
-      "price_change": 0.09492855661011106
+      "dollar_volume": 4313817252.721291,
+      "price_change": 0.07567432263417505
     },
     {
       "symbol": "DNOW",
@@ -1536,8 +1545,8 @@
       "sector": "Industrials",
       "rev_growth": 1.081,
       "earn_growth": 0,
-      "dollar_volume": 614742150.141735,
-      "price_change": 0.2766283407978627
+      "dollar_volume": 619946695.7166654,
+      "price_change": 0.2785440203787266
     },
     {
       "symbol": "DOCS",
@@ -1545,8 +1554,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.073,
       "earn_growth": -0.519,
-      "dollar_volume": 2950460004.1420503,
-      "price_change": 0.19935694121964
+      "dollar_volume": 2985058457.3403873,
+      "price_change": 0.15043638384446237
     },
     {
       "symbol": "TWLO",
@@ -1554,8 +1563,8 @@
       "sector": "Technology",
       "rev_growth": 0.22,
       "earn_growth": 46.715,
-      "dollar_volume": 8912107894.262777,
-      "price_change": 0.1929063989012033
+      "dollar_volume": 9084281598.38815,
+      "price_change": 0.14895602289551144
     },
     {
       "symbol": "FLR",
@@ -1563,8 +1572,8 @@
       "sector": "Industrials",
       "rev_growth": 0.088,
       "earn_growth": -0.945,
-      "dollar_volume": 2548770947.8177543,
-      "price_change": 0.043555395406768845
+      "dollar_volume": 2571772209.131138,
+      "price_change": 0.039416666899227334
     },
     {
       "symbol": "KOP",
@@ -1572,8 +1581,8 @@
       "sector": "Basic Materials",
       "rev_growth": 0.03,
       "earn_growth": 0,
-      "dollar_volume": 148078652.13340223,
-      "price_change": -0.03259044740258198
+      "dollar_volume": 149877629.24817118,
+      "price_change": -0.05193439544600739
     },
     {
       "symbol": "TILE",
@@ -1581,8 +1590,8 @@
       "sector": "Consumer Cyclical",
       "rev_growth": 0.054,
       "earn_growth": 0.6,
-      "dollar_volume": 222647489.4075165,
-      "price_change": 0.1587492758727404
+      "dollar_volume": 226787449.68919814,
+      "price_change": 0.13890562441717488
     },
     {
       "symbol": "FIVN",
@@ -1590,8 +1599,8 @@
       "sector": "Technology",
       "rev_growth": 0.103,
       "earn_growth": 3.0,
-      "dollar_volume": 1602701443.2963452,
-      "price_change": 0.28363497514221997
+      "dollar_volume": 1629891537.179426,
+      "price_change": 0.22344612043547304
     },
     {
       "symbol": "VAC",
@@ -1599,8 +1608,8 @@
       "sector": "Consumer Cyclical",
       "rev_growth": 0.097,
       "earn_growth": 0.195,
-      "dollar_volume": 942142330.5553772,
-      "price_change": 0.16834503723274905
+      "dollar_volume": 951231439.907949,
+      "price_change": 0.1917404502299804
     },
     {
       "symbol": "AVNT",
@@ -1608,8 +1617,8 @@
       "sector": "Basic Materials",
       "rev_growth": 0.058,
       "earn_growth": 0.228,
-      "dollar_volume": 523820476.6302907,
-      "price_change": 0.26200391953103314
+      "dollar_volume": 531974416.1043444,
+      "price_change": 0.24868170076233126
     },
     {
       "symbol": "AMN",
@@ -1617,8 +1626,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.023,
       "earn_growth": 0,
-      "dollar_volume": 469612676.95668995,
-      "price_change": 0.02286069231855314
+      "dollar_volume": 477337181.44201756,
+      "price_change": -0.006950866303253802
     },
     {
       "symbol": "SARO",
@@ -1626,8 +1635,8 @@
       "sector": "Industrials",
       "rev_growth": 0.046,
       "earn_growth": 0.45,
-      "dollar_volume": 1658120422.83043,
-      "price_change": 0.00966705202074663
+      "dollar_volume": 1677408024.3631504,
+      "price_change": 0.0006265746108784899
     },
     {
       "symbol": "CART",
@@ -1635,8 +1644,8 @@
       "sector": "Consumer Cyclical",
       "rev_growth": 0.141,
       "earn_growth": 0.081,
-      "dollar_volume": 3266175237.6301665,
-      "price_change": 0.02066541412788669
+      "dollar_volume": 3303652827.022395,
+      "price_change": 0.0071295848388419495
     },
     {
       "symbol": "CON",
@@ -1644,8 +1653,8 @@
       "sector": "Healthcare",
       "rev_growth": 0.1,
       "earn_growth": 0.47,
-      "dollar_volume": 483359469.48318577,
-      "price_change": 0.04690962850386289
+      "dollar_volume": 487845704.2720606,
+      "price_change": 0.0643423718242373
     },
     {
       "symbol": "LYFT",
@@ -1653,8 +1662,8 @@
       "sector": "Technology",
       "rev_growth": 0.161,
       "earn_growth": 0.345,
-      "dollar_volume": 3709073005.5116563,
-      "price_change": 0.12363875179547369
+      "dollar_volume": 3756615598.7701945,
+      "price_change": 0.06470216779201787
     },
     {
       "symbol": "ELF",
@@ -1662,8 +1671,8 @@
       "sector": "Consumer Defensive",
       "rev_growth": 0.355,
       "earn_growth": 0.931,
-      "dollar_volume": 3997932364.410893,
-      "price_change": 0.2376546952934141
+      "dollar_volume": 4023974314.032701,
+      "price_change": 0.22133027614133755
     },
     {
       "symbol": "MSA",
@@ -1671,8 +1680,8 @@
       "sector": "Industrials",
       "rev_growth": 0.062,
       "earn_growth": 0.403,
-      "dollar_volume": 875725054.4849765,
-      "price_change": 0.13100056687103437
+      "dollar_volume": 882890366.9238349,
+      "price_change": 0.12209133369325499
     },
     {
       "symbol": "CARG",
@@ -1680,8 +1689,8 @@
       "sector": "Consumer Cyclical",
       "rev_growth": 0.131,
       "earn_growth": 1.41,
-      "dollar_volume": 673355704.6570513,
-      "price_change": 0.058513759659911686
+      "dollar_volume": 678564796.4718652,
+      "price_change": 0.059391430206923834
     },
     {
       "symbol": "CXW",
@@ -1689,8 +1698,8 @@
       "sector": "Industrials",
       "rev_growth": 0.273,
       "earn_growth": 0.057,
-      "dollar_volume": 501110653.48759323,
-      "price_change": 0.0636562611773381
+      "dollar_volume": 534615428.927804,
+      "price_change": 0.0526810816815371
     },
     {
       "symbol": "CENTA",
@@ -1698,18 +1707,9 @@
       "sector": "Consumer Defensive",
       "rev_growth": -0.082,
       "earn_growth": -0.046,
-      "dollar_volume": 182125395.78612286,
-      "price_change": 0.02344790427423683
-    },
-    {
-      "symbol": "ECPG",
-      "name": "Encore Capital Group Inc",
-      "sector": "Financial Services",
-      "rev_growth": 0.113,
-      "earn_growth": 0.129,
-      "dollar_volume": 574334852.3613358,
-      "price_change": 0.009829313715376247
+      "dollar_volume": 187194063.2504152,
+      "price_change": 0.03117508028082739
     }
   ],
-  "last_updated": "2026-08-12 06:36:07 UTC"
+  "last_updated": "2026-08-12 15:29:42 UTC"
 }

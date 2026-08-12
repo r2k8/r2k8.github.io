@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-12T05:33:33.658878+00:00",
+  "updated_at": "2026-08-12T06:35:54.392652+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -644,15 +644,6 @@
       "latest_volume": 4784603.0
     },
     {
-      "symbol": "LFST",
-      "as_of": "2026-08-11",
-      "close": 11.5,
-      "ema20": 10.852769871482625,
-      "ema50": 10.169501574118835,
-      "avg20_volume": 3841914.75,
-      "latest_volume": 5814795.0
-    },
-    {
       "symbol": "HRB",
       "as_of": "2026-08-11",
       "close": 46.66999816894531,
@@ -678,6 +669,15 @@
       "ema50": 9.163786261837238,
       "avg20_volume": 906225.0,
       "latest_volume": 1440300.0
+    },
+    {
+      "symbol": "LFST",
+      "as_of": "2026-08-10",
+      "close": 11.899999618530273,
+      "ema20": 10.78464038427027,
+      "ema50": 10.115195515919604,
+      "avg20_volume": 3841914.75,
+      "latest_volume": 5814795.0
     },
     {
       "symbol": "FA",
@@ -984,10 +984,10 @@
     "vix_term_structure": 0.7439142673757224
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.035,
+    "bullish_score": 0.035,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -1068,17 +1068,18 @@
     }
   },
   "narrative": {
-    "state": "calm",
-    "ai_unwind_score": 0.175,
-    "geopolitical_score": 0.0,
+    "state": "geopolitical_pressure",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.46,
-      "next_week_rebound_probability": 0.66,
-      "next_month_base_probability": 0.73,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

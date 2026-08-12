@@ -1,5 +1,47 @@
 [
   {
+    "symbol": "CXW",
+    "approved": true,
+    "target_position_size_usd": 100.0,
+    "stop_loss_price": 30.97,
+    "warnings": [
+      "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "CXW",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 33.29999923706055,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 27.3%; earnings growth 5.7%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Industrials."
+      ],
+      "generated_at": "2026-08-12 19:50:58.563480+00:00"
+    }
+  },
+  {
+    "symbol": "SMH",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "SMH",
+      "signal_type": "sell",
+      "confidence": 0.7011764705882353,
+      "current_price": 584.7000122070312,
+      "reasons": [
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 15)."
+      ],
+      "generated_at": "2026-08-12 19:50:58.563480+00:00"
+    }
+  },
+  {
     "symbol": "LQD",
     "approved": true,
     "target_position_size_usd": 0.0,
@@ -10,13 +52,13 @@
     "signal": {
       "symbol": "LQD",
       "signal_type": "sell",
-      "confidence": 0.7011627906976744,
-      "current_price": 106.22319793701172,
+      "confidence": 0.7011494252873562,
+      "current_price": 106.125,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 14)."
+        "Capital Outflows (Rank 13)."
       ],
-      "generated_at": "2026-08-12 17:35:35.412624+00:00"
+      "generated_at": "2026-08-12 19:50:58.563480+00:00"
     }
   },
   {
@@ -31,12 +73,12 @@
       "symbol": "TLT",
       "signal_type": "sell",
       "confidence": 0.701098901098901,
-      "current_price": 82.29000091552734,
+      "current_price": 82.09500122070312,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 9)."
       ],
-      "generated_at": "2026-08-12 17:35:35.412624+00:00"
+      "generated_at": "2026-08-12 19:50:58.563480+00:00"
     }
   }
 ]

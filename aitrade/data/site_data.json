@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-13T01:07:30.073802+00:00",
+  "updated_at": "2026-08-13T02:10:12.074303+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -434,20 +434,6 @@
     },
     {
       "Date": "2026-08-13",
-      "Symbol": "KT",
-      "Company": "KT Corporation",
-      "Domain": "corp.kt.com",
-      "Timing": "Before Open",
-      "Price": "18.53",
-      "RevGrowth": "-0.01",
-      "EarnGrowth": "-0.335",
-      "Signal": "Avoid",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-13",
       "Symbol": "BLTE",
       "Company": "Belite Bio, Inc",
       "Domain": "belitebio.com",
@@ -599,6 +585,20 @@
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-13",
+      "Symbol": "FRMI",
+      "Company": "Fermi Inc.",
+      "Domain": "fermiamerica.com",
+      "Timing": "Before Open",
+      "Price": "7.6",
+      "RevGrowth": "0.0",
+      "EarnGrowth": "0.0",
+      "Signal": "Neutral",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
     }
   ],
   "discovery_radar": [
@@ -639,6 +639,15 @@
       "latest_volume": 10317163.0
     },
     {
+      "symbol": "HRB",
+      "as_of": "2026-08-12",
+      "close": 54.18000030517578,
+      "ema20": 44.870126588579815,
+      "ema50": 41.72220727061997,
+      "avg20_volume": 2430641.85,
+      "latest_volume": 7520437.0
+    },
+    {
       "symbol": "DV",
       "as_of": "2026-08-11",
       "close": 13.25,
@@ -664,15 +673,6 @@
       "ema50": 55.576346417877716,
       "avg20_volume": 2675680.15,
       "latest_volume": 4784603.0
-    },
-    {
-      "symbol": "HRB",
-      "as_of": "2026-08-11",
-      "close": 46.66999816894531,
-      "ema20": 43.891411818689015,
-      "ema50": 41.26646647777078,
-      "avg20_volume": 2092313.85,
-      "latest_volume": 3919477.0
     },
     {
       "symbol": "QNST",
@@ -970,11 +970,11 @@
     "vix_term_structure": 0.7852131490324761
   },
   "sentiment": {
-    "fear_score": 0.0875,
-    "bullish_score": 0.0375,
+    "fear_score": 0.035,
+    "bullish_score": 0.035,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -1054,11 +1054,10 @@
     }
   },
   "narrative": {
-    "state": "geopolitical_pressure",
+    "state": "calm",
     "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.5,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH."
     ],
     "rebound_watch": [],

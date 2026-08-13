@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-13T04:15:11.929874+00:00",
+  "updated_at": "2026-08-13T05:17:15.086634+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -635,8 +635,8 @@
       "close": 7.119999885559082,
       "ema20": 7.0882496812239175,
       "ema50": 6.73067459966501,
-      "avg20_volume": 4928558.15,
-      "latest_volume": 10317163.0
+      "avg20_volume": 4965015.0,
+      "latest_volume": 11046300.0
     },
     {
       "symbol": "HRB",
@@ -673,6 +673,33 @@
       "ema50": 30.13729432483657,
       "avg20_volume": 4400340.0,
       "latest_volume": 7153400.0
+    },
+    {
+      "symbol": "XNCR",
+      "as_of": "2026-08-12",
+      "close": 23.18000030517578,
+      "ema20": 19.539821440832124,
+      "ema50": 17.040647159865877,
+      "avg20_volume": 1188000.0,
+      "latest_volume": 1967500.0
+    },
+    {
+      "symbol": "GO",
+      "as_of": "2026-08-12",
+      "close": 10.170000076293945,
+      "ema20": 9.64243458438652,
+      "ema50": 9.355111842495539,
+      "avg20_volume": 2480455.0,
+      "latest_volume": 4328500.0
+    },
+    {
+      "symbol": "P",
+      "as_of": "2026-08-12",
+      "close": 111.4000015258789,
+      "ema20": 85.89332097321339,
+      "ema50": 80.79403979124046,
+      "avg20_volume": 2677365.0,
+      "latest_volume": 4411000.0
     },
     {
       "symbol": "DV",
@@ -934,33 +961,6 @@
       "ema50": 28.089358616191102,
       "avg20_volume": 3363620.0,
       "latest_volume": 6297700.0
-    },
-    {
-      "symbol": "CART",
-      "as_of": "2026-08-07",
-      "close": 50.16999816894531,
-      "ema20": 45.74060826379488,
-      "ema50": 44.742476696760775,
-      "avg20_volume": 4083105.0,
-      "latest_volume": 14310800.0
-    },
-    {
-      "symbol": "CON",
-      "as_of": "2026-08-07",
-      "close": 34.060001373291016,
-      "ema20": 31.425806814214358,
-      "ema50": 29.885951188443453,
-      "avg20_volume": 918090.0,
-      "latest_volume": 2037700.0
-    },
-    {
-      "symbol": "LYFT",
-      "as_of": "2026-08-07",
-      "close": 17.459999084472656,
-      "ema20": 15.784246278931771,
-      "ema50": 15.158584486434195,
-      "avg20_volume": 12384320.0,
-      "latest_volume": 23940800.0
     }
   ],
   "regime_metrics": {
@@ -970,8 +970,8 @@
     "vix_term_structure": 0.7083738822881793
   },
   "sentiment": {
-    "fear_score": 0.075,
-    "bullish_score": 0.075,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -998,12 +998,10 @@
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": -1.0,
-        "confidence": 0.17,
-        "articles": 1,
-        "top_headlines": [
-          "World Insights : Hormuz Strait crisis prompts global energy rethink"
-        ]
+        "score": 0.0,
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
@@ -1056,18 +1054,17 @@
     }
   },
   "narrative": {
-    "state": "geopolitical_pressure",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.175,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.46,
+      "next_week_rebound_probability": 0.66,
+      "next_month_base_probability": 0.73,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

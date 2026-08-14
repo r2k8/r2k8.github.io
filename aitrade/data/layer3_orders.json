@@ -1,24 +1,22 @@
 [
   {
-    "symbol": "CHEF",
+    "symbol": "HYG",
     "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 103.07,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
     "warnings": [
-      "Sized by risk: max loss about $7.00 at 7% hard stop."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "CHEF",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 110.83000183105469,
+      "symbol": "HYG",
+      "signal_type": "sell",
+      "confidence": 0.7012345679012345,
+      "current_price": 79.66500091552734,
       "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 12.9%; earnings growth 55.5%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Consumer Defensive."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 19)."
       ],
-      "generated_at": "2026-08-14 17:33:03.916932+00:00"
+      "generated_at": "2026-08-14 18:38:09.583889+00:00"
     }
   },
   {
@@ -33,12 +31,12 @@
       "symbol": "LQD",
       "signal_type": "sell",
       "confidence": 0.7011494252873562,
-      "current_price": 106.03500366210938,
+      "current_price": 106.05500030517578,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 13)."
       ],
-      "generated_at": "2026-08-14 17:33:03.916932+00:00"
+      "generated_at": "2026-08-14 18:38:09.583889+00:00"
     }
   },
   {
@@ -53,32 +51,12 @@
       "symbol": "TLT",
       "signal_type": "sell",
       "confidence": 0.7010869565217391,
-      "current_price": 81.87999725341797,
+      "current_price": 81.92500305175781,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 8)."
       ],
-      "generated_at": "2026-08-14 17:33:03.916932+00:00"
-    }
-  },
-  {
-    "symbol": "SMH",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "SMH",
-      "signal_type": "sell",
-      "confidence": 0.7010526315789474,
-      "current_price": 583.8350219726562,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 5)."
-      ],
-      "generated_at": "2026-08-14 17:33:03.916932+00:00"
+      "generated_at": "2026-08-14 18:38:09.583889+00:00"
     }
   }
 ]

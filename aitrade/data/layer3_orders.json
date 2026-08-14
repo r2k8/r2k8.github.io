@@ -1,11 +1,33 @@
 [
   {
-    "symbol": "BL",
+    "symbol": "FA",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 29.16,
+    "stop_loss_price": 20.65,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "FA",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 22.200000762939453,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 14.9%; earnings growth 5498.7%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Industrials."
+      ],
+      "generated_at": "2026-08-14 05:01:13.601272+00:00"
+    }
+  },
+  {
+    "symbol": "BL",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
       "symbol": "BL",
@@ -18,58 +40,47 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Technology."
       ],
-      "generated_at": "2026-08-14 03:59:31.480809+00:00"
+      "generated_at": "2026-08-14 05:01:13.601272+00:00"
     }
   },
   {
-    "symbol": "SOXX",
+    "symbol": "LQD",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SOXX",
-      "signal_type": "trim",
-      "confidence": 0.8,
-      "current_price": 550.739990234375,
+      "symbol": "LQD",
+      "signal_type": "sell",
+      "confidence": 0.7011764705882353,
+      "current_price": 106.55000305175781,
       "reasons": [
-        "PORTFOLIO MATCH: You own 2.0 shares.",
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: SMH.",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 15)."
       ],
-      "generated_at": "2026-08-14 03:59:31.480809+00:00"
+      "generated_at": "2026-08-14 05:01:13.601272+00:00"
     }
   },
   {
-    "symbol": "QQQ",
+    "symbol": "TLT",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "QQQ",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 732.0700073242188,
+      "symbol": "TLT",
+      "signal_type": "sell",
+      "confidence": 0.701111111111111,
+      "current_price": 82.58999633789062,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: SMH.",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 10)."
       ],
-      "generated_at": "2026-08-14 03:59:31.480809+00:00"
+      "generated_at": "2026-08-14 05:01:13.601272+00:00"
     }
   },
   {
@@ -78,23 +89,18 @@
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
       "symbol": "SMH",
-      "signal_type": "avoid",
-      "confidence": 0.76,
+      "signal_type": "sell",
+      "confidence": 0.7010526315789474,
       "current_price": 589.1199951171875,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: SMH.",
-        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 5)."
       ],
-      "generated_at": "2026-08-14 03:59:31.480809+00:00"
+      "generated_at": "2026-08-14 05:01:13.601272+00:00"
     }
   }
 ]

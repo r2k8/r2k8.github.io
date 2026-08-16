@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-15T23:37:21.241817+00:00",
+  "updated_at": "2026-08-16T00:39:09.447805+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -299,8 +299,8 @@
       "close": 21.030000686645508,
       "ema20": 19.128747435908362,
       "ema50": 18.254917165179087,
-      "avg20_volume": 867166.5,
-      "latest_volume": 1304530.0
+      "avg20_volume": 867170.0,
+      "latest_volume": 1304600.0
     },
     {
       "symbol": "MSGS",
@@ -634,10 +634,10 @@
     "vix_term_structure": 0.6937682261361353
   },
   "sentiment": {
-    "fear_score": 0.03125,
-    "bullish_score": 0.03125,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -718,18 +718,17 @@
     }
   },
   "narrative": {
-    "state": "geopolitical_pressure",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.175,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.46,
+      "next_week_rebound_probability": 0.66,
+      "next_month_base_probability": 0.73,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

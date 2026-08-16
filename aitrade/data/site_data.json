@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-16T02:44:07.438035+00:00",
+  "updated_at": "2026-08-16T12:12:46.853247+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -92,17 +92,17 @@
       "dollar_volume": 2512841209.6237564,
       "relative_flow_score": -3148481.322612468,
       "direction": "outflow",
-      "rank": 18
+      "rank": 17
     },
     {
-      "symbol": "XLU",
-      "name": "Utilities",
+      "symbol": "UUP",
+      "name": "US Dollar",
       "as_of": "2026-08-14",
-      "price_change_pct": -0.020123835091704578,
-      "dollar_volume": 896479394.980259,
-      "relative_flow_score": -18040603.507693823,
+      "price_change_pct": -0.004955730607024336,
+      "dollar_volume": 53787815.17108917,
+      "relative_flow_score": -266557.9219283346,
       "direction": "outflow",
-      "rank": 15
+      "rank": 19
     }
   ],
   "sankey": {
@@ -135,7 +135,7 @@
       {
         "source": "Global Liquidity",
         "target": "Defensives",
-        "value": 8077.337336130848
+        "value": 7180.857941150589
       },
       {
         "source": "Defensives",
@@ -236,16 +236,6 @@
         "source": "Consumer Staples",
         "target": "XLP (+0.0%)",
         "value": 876.92918173069
-      },
-      {
-        "source": "Defensives",
-        "target": "Utilities",
-        "value": 896.4793949802589
-      },
-      {
-        "source": "Utilities",
-        "target": "XLU (-0.0%)",
-        "value": 896.4793949802589
       }
     ]
   },
@@ -634,8 +624,8 @@
     "vix_term_structure": 0.6937682261361353
   },
   "sentiment": {
-    "fear_score": 0.04,
-    "bullish_score": 0.04,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -718,18 +708,17 @@
     }
   },
   "narrative": {
-    "state": "geopolitical_pressure",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.175,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.46,
+      "next_week_rebound_probability": 0.66,
+      "next_month_base_probability": 0.73,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

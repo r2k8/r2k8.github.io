@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-17T21:15:45.794525+00:00",
+  "updated_at": "2026-08-17T22:18:34.881148+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -266,24 +266,10 @@
     },
     {
       "Date": "2026-08-17",
-      "Symbol": "BHP",
-      "Company": "BHP Group Limited",
-      "Domain": "bhp.com",
-      "Timing": "Before Open",
-      "Price": "88.37",
-      "RevGrowth": "0.108",
-      "EarnGrowth": "0.275",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-17",
       "Symbol": "FN",
       "Company": "Fabrinet",
       "Domain": "fabrinet.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "598.58",
       "RevGrowth": "0.393",
       "EarnGrowth": "0.533",
@@ -308,14 +294,14 @@
     },
     {
       "Date": "2026-08-17",
-      "Symbol": "XP",
-      "Company": "XP Inc.",
-      "Domain": "xpinc.com",
+      "Symbol": "PPTA",
+      "Company": "Perpetua Resources Corp.",
+      "Domain": "perpetuaresources.com",
       "Timing": "After Close",
-      "Price": "15.7",
-      "RevGrowth": "0.097",
-      "EarnGrowth": "0.089",
-      "Signal": "Buy",
+      "Price": "24.39",
+      "RevGrowth": "0.0",
+      "EarnGrowth": "0.0",
+      "Signal": "Neutral",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -690,10 +676,10 @@
     "vix_term_structure": 0.7977940572469027
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.04,
+    "bullish_score": 0.04,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -774,13 +760,15 @@
     }
   },
   "narrative": {
-    "state": "calm",
-    "ai_unwind_score": 0.0,
-    "geopolitical_score": 0.0,
-    "reasons": [],
+    "state": "geopolitical_pressure",
+    "ai_unwind_score": 0.25,
+    "geopolitical_score": 0.5,
+    "reasons": [
+      "News narrative includes geopolitical/oil-shock language."
+    ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.74,
+      "next_day_rebound_probability": 0.68,
       "next_week_rebound_probability": 0.85,
       "next_month_base_probability": 0.9,
       "rebound_score": 8,

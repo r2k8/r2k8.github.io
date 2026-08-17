@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-17T22:18:34.881148+00:00",
+  "updated_at": "2026-08-17T23:22:32.532857+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -266,6 +266,20 @@
     },
     {
       "Date": "2026-08-17",
+      "Symbol": "BHP",
+      "Company": "BHP Group Limited",
+      "Domain": "bhp.com",
+      "Timing": "Before Open",
+      "Price": "88.37",
+      "RevGrowth": "0.108",
+      "EarnGrowth": "0.275",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-17",
       "Symbol": "FN",
       "Company": "Fabrinet",
       "Domain": "fabrinet.com",
@@ -316,6 +330,15 @@
       "ema50": 105.9753758439351,
       "avg20_volume": 530212.6,
       "latest_volume": 798552.0
+    },
+    {
+      "symbol": "AIR",
+      "as_of": "2026-08-17",
+      "close": 153.7100067138672,
+      "ema20": 142.78284686071348,
+      "ema50": 135.14018536385834,
+      "avg20_volume": 472036.75,
+      "latest_volume": 1519335.0
     },
     {
       "symbol": "CHEF",
@@ -658,15 +681,6 @@
       "ema50": 25.05041567968925,
       "avg20_volume": 499296.6,
       "latest_volume": 1633632.0
-    },
-    {
-      "symbol": "ACAD",
-      "as_of": "2026-08-10",
-      "close": 29.389999389648438,
-      "ema20": 26.70054342502332,
-      "ema50": 25.062621122366608,
-      "avg20_volume": 1749458.75,
-      "latest_volume": 2691475.0
     }
   ],
   "regime_metrics": {
@@ -676,11 +690,11 @@
     "vix_term_structure": 0.7977940572469027
   },
   "sentiment": {
-    "fear_score": 0.04,
-    "bullish_score": 0.04,
+    "fear_score": 0.03875,
+    "bullish_score": 0.06375,
     "events": {
       "war": true,
-      "policy_shock": false,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -697,25 +711,32 @@
         "symbol": "SMH",
         "name": "Semiconductors",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "  \uc5f0\ubd09 1 . 8\uc5b5  TSMC \uc9c1\uc6d0\ub4e4 ,  \uc0bc\uc804\ub2c9\uc2a4 \uc131\uacfc\uae09  \ub4e3\uace0\ub3c4 \ud30c\uc5c5 \uc548 \ud558\ub294 \uc774\uc720 - \uc0ac\ud68c\u3163\ud55c\uad6d\uc77c\ubcf4"
+        ]
       },
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.13,
+        "articles": 2,
+        "top_headlines": [
+          "Oil prices climb again as Iran tensions fuel supply fears",
+          "Wall Street falls as oil prices fuel inflation fears"
+        ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Trump - linked crypto venture World Liberty Trust granted bank status in unprecedented move for president"
+        ]
       },
       "XLV": {
         "symbol": "XLV",

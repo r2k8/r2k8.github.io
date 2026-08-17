@@ -10,14 +10,37 @@
     "signal": {
       "symbol": "XLF",
       "signal_type": "buy",
-      "confidence": 0.7623076923076924,
-      "current_price": 57.73500061035156,
+      "confidence": 0.7633333333333333,
+      "current_price": 57.59000015258789,
       "reasons": [
         "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 13).",
+        "Positive capital flow (Rank 12).",
         "Volume confirms institutional participation (latest volume >= 20-day average)."
       ],
-      "generated_at": "2026-08-17 19:11:54.420901+00:00"
+      "generated_at": "2026-08-17 20:13:49.021799+00:00"
+    }
+  },
+  {
+    "symbol": "GLD",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+    ],
+    "signal": {
+      "symbol": "GLD",
+      "signal_type": "trim",
+      "confidence": 0.752,
+      "current_price": 405.4700012207031,
+      "reasons": [
+        "PORTFOLIO MATCH: You own 1.0 shares.",
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 5).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Breadth Collapse: Trimming risk despite positive trend."
+      ],
+      "generated_at": "2026-08-17 20:13:49.021799+00:00"
     }
   },
   {
@@ -31,13 +54,13 @@
     "signal": {
       "symbol": "HYG",
       "signal_type": "sell",
-      "confidence": 0.7012345679012345,
+      "confidence": 0.7012195121951219,
       "current_price": 79.61000061035156,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 19)."
+        "Capital Outflows (Rank 18)."
       ],
-      "generated_at": "2026-08-17 19:11:54.420901+00:00"
+      "generated_at": "2026-08-17 20:13:49.021799+00:00"
     }
   },
   {
@@ -51,13 +74,13 @@
     "signal": {
       "symbol": "LQD",
       "signal_type": "sell",
-      "confidence": 0.701123595505618,
-      "current_price": 105.68499755859375,
+      "confidence": 0.7011494252873562,
+      "current_price": 105.69000244140625,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 11)."
+        "Capital Outflows (Rank 13)."
       ],
-      "generated_at": "2026-08-17 19:11:54.420901+00:00"
+      "generated_at": "2026-08-17 20:13:49.021799+00:00"
     }
   },
   {
@@ -72,12 +95,12 @@
       "symbol": "TLT",
       "signal_type": "sell",
       "confidence": 0.701098901098901,
-      "current_price": 81.3949966430664,
+      "current_price": 81.3499984741211,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 9)."
       ],
-      "generated_at": "2026-08-17 19:11:54.420901+00:00"
+      "generated_at": "2026-08-17 20:13:49.021799+00:00"
     }
   }
 ]

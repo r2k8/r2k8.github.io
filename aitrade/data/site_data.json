@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-16T12:12:46.853247+00:00",
+  "updated_at": "2026-08-17T03:35:54.219207+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -92,17 +92,17 @@
       "dollar_volume": 2512841209.6237564,
       "relative_flow_score": -3148481.322612468,
       "direction": "outflow",
-      "rank": 17
+      "rank": 18
     },
     {
-      "symbol": "UUP",
-      "name": "US Dollar",
+      "symbol": "XLU",
+      "name": "Utilities",
       "as_of": "2026-08-14",
-      "price_change_pct": -0.004955730607024336,
-      "dollar_volume": 53787815.17108917,
-      "relative_flow_score": -266557.9219283346,
+      "price_change_pct": -0.020123835091704578,
+      "dollar_volume": 896479394.980259,
+      "relative_flow_score": -18040603.507693823,
       "direction": "outflow",
-      "rank": 19
+      "rank": 15
     }
   ],
   "sankey": {
@@ -135,7 +135,7 @@
       {
         "source": "Global Liquidity",
         "target": "Defensives",
-        "value": 7180.857941150589
+        "value": 8077.337336130848
       },
       {
         "source": "Defensives",
@@ -236,6 +236,16 @@
         "source": "Consumer Staples",
         "target": "XLP (+0.0%)",
         "value": 876.92918173069
+      },
+      {
+        "source": "Defensives",
+        "target": "Utilities",
+        "value": 896.4793949802589
+      },
+      {
+        "source": "Utilities",
+        "target": "XLU (-0.0%)",
+        "value": 896.4793949802589
       }
     ]
   },
@@ -249,6 +259,76 @@
       "Price": "338.86",
       "RevGrowth": "0.048",
       "EarnGrowth": "-0.043",
+      "Signal": "Neutral",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-17",
+      "Symbol": "BHP",
+      "Company": "BHP Group Limited",
+      "Domain": "bhp.com",
+      "Timing": "Before Open",
+      "Price": "86.78",
+      "RevGrowth": "0.108",
+      "EarnGrowth": "0.275",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-17",
+      "Symbol": "FN",
+      "Company": "Fabrinet",
+      "Domain": "fabrinet.com",
+      "Timing": "After Close",
+      "Price": "570.22",
+      "RevGrowth": "0.393",
+      "EarnGrowth": "0.533",
+      "Signal": "Strong Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-17",
+      "Symbol": "HTHT",
+      "Company": "H World Group Limited",
+      "Domain": "hworld.com",
+      "Timing": "Before Open",
+      "Price": "41.88",
+      "RevGrowth": "0.111",
+      "EarnGrowth": "-0.071",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-17",
+      "Symbol": "XP",
+      "Company": "XP Inc.",
+      "Domain": "xpinc.com",
+      "Timing": "After Close",
+      "Price": "15.82",
+      "RevGrowth": "0.097",
+      "EarnGrowth": "0.089",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-17",
+      "Symbol": "PPTA",
+      "Company": "Perpetua Resources Corp.",
+      "Domain": "perpetuaresources.com",
+      "Timing": "After Close",
+      "Price": "25.24",
+      "RevGrowth": "0.0",
+      "EarnGrowth": "0.0",
       "Signal": "Neutral",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -280,8 +360,8 @@
       "close": 223.58999633789062,
       "ema20": 219.86870053934888,
       "ema50": 213.458791963904,
-      "avg20_volume": 112514.15,
-      "latest_volume": 176883.0
+      "avg20_volume": 112585.0,
+      "latest_volume": 178300.0
     },
     {
       "symbol": "WWW",
@@ -624,10 +704,10 @@
     "vix_term_structure": 0.6937682261361353
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.04,
+    "bullish_score": 0.04,
     "events": {
-      "war": false,
+      "war": true,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -708,17 +788,18 @@
     }
   },
   "narrative": {
-    "state": "calm",
-    "ai_unwind_score": 0.175,
-    "geopolitical_score": 0.0,
+    "state": "geopolitical_pressure",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "AI/semiconductor assets showing outflows: SMH."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.46,
-      "next_week_rebound_probability": 0.66,
-      "next_month_base_probability": 0.73,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

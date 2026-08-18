@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-18T05:43:47.962515+00:00",
+  "updated_at": "2026-08-18T06:45:50.943902+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -482,10 +482,10 @@
     },
     {
       "symbol": "SHC",
-      "as_of": "2026-08-17",
-      "close": 18.799999237060547,
-      "ema20": 18.29365738505657,
-      "ema50": 17.548279141310594,
+      "as_of": "2026-08-14",
+      "close": 18.889999389648438,
+      "ema20": 18.24035824274036,
+      "ema50": 17.497188525157533,
       "avg20_volume": 3204269.85,
       "latest_volume": 7625897.0
     },
@@ -830,11 +830,11 @@
     "vix_term_structure": 0.6937682261361353
   },
   "sentiment": {
-    "fear_score": 0.039552238805970155,
-    "bullish_score": 0.039552238805970155,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
-      "policy_shock": true,
+      "war": false,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -859,21 +859,17 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Nigeria power gaps persist despite N358 . 32bn subsidies in Q1 2026 ZKJ Energy"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Nigeria partial crop losses triple to 20 percent as climate , insecurity hit farms World Bank report"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
@@ -918,15 +914,13 @@
     }
   },
   "narrative": {
-    "state": "geopolitical_pressure",
-    "ai_unwind_score": 0.25,
-    "geopolitical_score": 0.5,
-    "reasons": [
-      "News narrative includes geopolitical/oil-shock language."
-    ],
+    "state": "calm",
+    "ai_unwind_score": 0.0,
+    "geopolitical_score": 0.0,
+    "reasons": [],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.68,
+      "next_day_rebound_probability": 0.74,
       "next_week_rebound_probability": 0.85,
       "next_month_base_probability": 0.9,
       "rebound_score": 8,

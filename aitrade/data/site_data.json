@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-18T07:49:08.312053+00:00",
+  "updated_at": "2026-08-18T08:52:09.145834+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -98,7 +98,7 @@
       "symbol": "^VIX",
       "name": "Volatility Index",
       "as_of": "2026-08-18",
-      "price_change_pct": -0.1485254456164781,
+      "price_change_pct": -0.14584447018711755,
       "dollar_volume": 0.0,
       "relative_flow_score": -0.0,
       "direction": "flat",
@@ -302,6 +302,20 @@
       "RevGrowth": "0.296",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-18",
+      "Symbol": "SQM",
+      "Company": "Sociedad Quimica y Minera S.A.",
+      "Domain": "sqm.com",
+      "Timing": "After Close",
+      "Price": "75.1",
+      "RevGrowth": "0.698",
+      "EarnGrowth": "1.652",
+      "Signal": "Strong Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -813,11 +827,11 @@
     "breadth_ratio": 0.28694901276027346,
     "risk_ratio": 1.985201612443946,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7726387136410522
+    "vix_term_structure": 0.7755598634435015
   },
   "sentiment": {
-    "fear_score": 0.0325,
-    "bullish_score": 0.0325,
+    "fear_score": 0.03867924528301887,
+    "bullish_score": 0.03867924528301887,
     "events": {
       "war": true,
       "policy_shock": true,
@@ -885,9 +899,11 @@
         "symbol": "XLP",
         "name": "Consumer Staples",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "FinancialContent - 5 Insightful Analyst Questions From B & G Foods Q2 Earnings Call"
+        ]
       },
       "XLU": {
         "symbol": "XLU",

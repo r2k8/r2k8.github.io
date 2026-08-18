@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-18T21:26:10.211688+00:00",
+  "updated_at": "2026-08-18T22:28:48.457122+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -269,7 +269,7 @@
       "Symbol": "KEYS",
       "Company": "Keysight Technologies Inc.",
       "Domain": "keysight.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "341.0",
       "RevGrowth": "0.315",
       "EarnGrowth": "0.356",
@@ -353,7 +353,7 @@
       "Symbol": "TOL",
       "Company": "Toll Brothers, Inc.",
       "Domain": "tollbrothers.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "142.86",
       "RevGrowth": "-0.076",
       "EarnGrowth": "-0.223",
@@ -802,10 +802,10 @@
     "vix_term_structure": 0.8220031020396851
   },
   "sentiment": {
-    "fear_score": 0.04,
-    "bullish_score": 0.04,
+    "fear_score": 0.045,
+    "bullish_score": 0.045,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
@@ -839,11 +839,9 @@
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Cashmere Valley Bank Board Selects Len Devaisher as Next President and Chief Executive Officer"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",

@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-19T06:47:50.561597+00:00",
+  "updated_at": "2026-08-19T09:29:35.087688+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -386,6 +386,20 @@
       "RevGrowth": "0.135",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-19",
+      "Symbol": "BMA",
+      "Company": "Banco Macro S.A.",
+      "Domain": "macro.com.ar",
+      "Timing": "After Close",
+      "Price": "76.08",
+      "RevGrowth": "-0.996",
+      "EarnGrowth": "0.0",
+      "Signal": "Neutral",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -844,10 +858,10 @@
     "vix_term_structure": 0.7711781619548781
   },
   "sentiment": {
-    "fear_score": 0.03970588235294118,
-    "bullish_score": 0.03970588235294118,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
-      "war": true,
+      "war": false,
       "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
@@ -928,18 +942,17 @@
     }
   },
   "narrative": {
-    "state": "geopolitical_pressure",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.175,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "Semiconductor proxy is below its 20-day trend."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.46,
+      "next_week_rebound_probability": 0.66,
+      "next_month_base_probability": 0.73,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

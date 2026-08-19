@@ -1,14 +1,14 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-19T16:45:00.409683+00:00",
+  "updated_at": "2026-08-19T17:47:01.495114+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
       "name": "U.S. Large Cap",
       "as_of": "2026-08-19",
-      "price_change_pct": 0.03816241327088763,
-      "dollar_volume": 34633422723.84615,
-      "relative_flow_score": 1321694990.9727676,
+      "price_change_pct": 0.037205708677364946,
+      "dollar_volume": 34748140357.2796,
+      "relative_flow_score": 1292829187.2131329,
       "direction": "inflow",
       "rank": 1
     },
@@ -16,9 +16,9 @@
       "symbol": "QQQ",
       "name": "Nasdaq Growth",
       "as_of": "2026-08-19",
-      "price_change_pct": 0.03191539081887651,
-      "dollar_volume": 27851119953.782906,
-      "relative_flow_score": 888879378.0683913,
+      "price_change_pct": 0.029537680129165914,
+      "dollar_volume": 27958369251.056892,
+      "relative_flow_score": 825825367.8708265,
       "direction": "inflow",
       "rank": 2
     },
@@ -26,19 +26,19 @@
       "symbol": "SMH",
       "name": "Semiconductors",
       "as_of": "2026-08-19",
-      "price_change_pct": 0.009850947004386584,
-      "dollar_volume": 6216393170.223465,
-      "relative_flow_score": 61237359.67830206,
+      "price_change_pct": 0.006012535563246796,
+      "dollar_volume": 6233858623.412277,
+      "relative_flow_score": 37481296.66951903,
       "direction": "inflow",
-      "rank": 9
+      "rank": 11
     },
     {
       "symbol": "IWM",
       "name": "U.S. Small Cap",
       "as_of": "2026-08-19",
-      "price_change_pct": 0.03426162201800841,
-      "dollar_volume": 5700542390.515945,
-      "relative_flow_score": 195309828.68149143,
+      "price_change_pct": 0.03265373578548599,
+      "dollar_volume": 5716184580.179512,
+      "relative_flow_score": 186654780.98225096,
       "direction": "inflow",
       "rank": 5
     },
@@ -46,9 +46,9 @@
       "symbol": "EWY",
       "name": "South Korea",
       "as_of": "2026-08-19",
-      "price_change_pct": 0.07024439640508702,
-      "dollar_volume": 3761344645.650139,
-      "relative_flow_score": 264213384.30519992,
+      "price_change_pct": 0.06493305236774037,
+      "dollar_volume": 3770275389.010156,
+      "relative_flow_score": 244815489.27539918,
       "direction": "inflow",
       "rank": 4
     }
@@ -58,9 +58,9 @@
       "symbol": "LQD",
       "name": "Investment Grade Corporate",
       "as_of": "2026-08-19",
-      "price_change_pct": -0.0069995332647649075,
-      "dollar_volume": 3090479830.143994,
-      "relative_flow_score": -21631916.375177886,
+      "price_change_pct": -0.007512835218965044,
+      "dollar_volume": 3124769004.087973,
+      "relative_flow_score": -23475874.62504245,
       "direction": "outflow",
       "rank": 13
     },
@@ -68,41 +68,41 @@
       "symbol": "TLT",
       "name": "Long Treasury Bonds",
       "as_of": "2026-08-19",
-      "price_change_pct": -0.013171960133252938,
-      "dollar_volume": 2776311161.8682966,
-      "relative_flow_score": -36569459.94163435,
+      "price_change_pct": -0.014423639209395005,
+      "dollar_volume": 2792368762.081397,
+      "relative_flow_score": -40276119.56384703,
       "direction": "outflow",
-      "rank": 11
+      "rank": 10
+    },
+    {
+      "symbol": "HYG",
+      "name": "High Yield Bonds",
+      "as_of": "2026-08-19",
+      "price_change_pct": -0.0001882453512925399,
+      "dollar_volume": 2496977530.547605,
+      "relative_flow_score": -470044.41240751266,
+      "direction": "outflow",
+      "rank": 20
     },
     {
       "symbol": "XLU",
       "name": "Utilities",
       "as_of": "2026-08-19",
-      "price_change_pct": -0.021361796034904734,
-      "dollar_volume": 878044475.4836581,
-      "relative_flow_score": -18756606.994856816,
+      "price_change_pct": -0.020360416751020374,
+      "dollar_volume": 881444037.3821602,
+      "relative_flow_score": -17946567.943802763,
       "direction": "outflow",
-      "rank": 14
+      "rank": 15
     },
     {
       "symbol": "UUP",
       "name": "US Dollar",
       "as_of": "2026-08-19",
-      "price_change_pct": -0.017062339061157162,
-      "dollar_volume": 50894002.72206716,
-      "relative_flow_score": -868370.7306233655,
+      "price_change_pct": -0.016379012419332387,
+      "dollar_volume": 51007667.462435916,
+      "relative_flow_score": -835455.2188484144,
       "direction": "outflow",
-      "rank": 20
-    },
-    {
-      "symbol": "^VIX",
-      "name": "Volatility Index",
-      "as_of": "2026-08-19",
-      "price_change_pct": -0.1876675641602946,
-      "dollar_volume": 0.0,
-      "relative_flow_score": -0.0,
-      "direction": "flat",
-      "rank": 21
+      "rank": 19
     }
   ],
   "sankey": {
@@ -110,142 +110,142 @@
       {
         "source": "Global Liquidity",
         "target": "US Equities",
-        "value": 75851.8800652718
+        "value": 76115.69035096976
       },
       {
         "source": "US Equities",
         "target": "Broad Market",
-        "value": 34633.42272384615
+        "value": 34748.140357279604
       },
       {
         "source": "Broad Market",
         "target": "SPY (+0.0%)",
-        "value": 34633.42272384615
+        "value": 34748.140357279604
       },
       {
         "source": "US Equities",
         "target": "Growth",
-        "value": 29301.521780686246
+        "value": 29417.506790098367
       },
       {
         "source": "Growth",
         "target": "QQQ (+0.0%)",
-        "value": 27851.119953782905
+        "value": 27958.36925105689
       },
       {
         "source": "Global Liquidity",
         "target": "Defensives",
-        "value": 8535.257848595324
+        "value": 8603.12586400053
       },
       {
         "source": "Defensives",
         "target": "Precious Metals",
-        "value": 3345.3046937592744
+        "value": 3383.7015753570313
       },
       {
         "source": "Precious Metals",
         "target": "GLD (+0.1%)",
-        "value": 3345.3046937592744
+        "value": 3383.7015753570313
       },
       {
         "source": "US Equities",
         "target": "Small Caps",
-        "value": 5700.542390515945
+        "value": 5716.184580179512
       },
       {
         "source": "Small Caps",
         "target": "IWM (+0.0%)",
-        "value": 5700.542390515945
+        "value": 5716.184580179512
       },
       {
         "source": "Global Liquidity",
         "target": "Cyclicals",
-        "value": 5315.167276589913
+        "value": 5338.778405608314
       },
       {
         "source": "Cyclicals",
         "target": "Energy",
-        "value": 1619.7397406469918
+        "value": 1625.7985042515563
       },
       {
         "source": "Energy",
         "target": "XLE (+0.1%)",
-        "value": 1619.7397406469918
+        "value": 1625.7985042515563
       },
       {
         "source": "Defensives",
         "target": "Healthcare",
-        "value": 1535.5975174840942
+        "value": 1545.6114891799416
       },
       {
         "source": "Healthcare",
         "target": "XLV (+0.1%)",
-        "value": 1535.5975174840942
+        "value": 1545.6114891799416
       },
       {
         "source": "Growth",
-        "target": "XLK (+0.1%)",
-        "value": 1450.4018269033402
-      },
-      {
-        "source": "US Equities",
-        "target": "Semiconductors",
-        "value": 6216.393170223465
-      },
-      {
-        "source": "Semiconductors",
-        "target": "SMH (+0.0%)",
-        "value": 6216.393170223465
+        "target": "XLK (+0.0%)",
+        "value": 1459.137539041477
       },
       {
         "source": "Cyclicals",
         "target": "Financials",
-        "value": 1681.1031855515694
+        "value": 1690.0750182518807
       },
       {
         "source": "Financials",
         "target": "XLF (+0.0%)",
-        "value": 1681.1031855515694
+        "value": 1690.0750182518807
       },
       {
         "source": "Defensives",
         "target": "Treasuries",
-        "value": 2776.3111618682965
+        "value": 2792.368762081397
       },
       {
         "source": "Treasuries",
         "target": "TLT (-0.0%)",
-        "value": 2776.3111618682965
+        "value": 2792.368762081397
+      },
+      {
+        "source": "US Equities",
+        "target": "Semiconductors",
+        "value": 6233.858623412278
+      },
+      {
+        "source": "Semiconductors",
+        "target": "SMH (+0.0%)",
+        "value": 6233.858623412278
       },
       {
         "source": "Cyclicals",
         "target": "Industrials",
-        "value": 1119.2095014296938
+        "value": 1124.689974298382
       },
       {
         "source": "Industrials",
         "target": "XLI (+0.0%)",
-        "value": 1119.2095014296938
-      },
-      {
-        "source": "Defensives",
-        "target": "Utilities",
-        "value": 878.0444754836581
-      },
-      {
-        "source": "Utilities",
-        "target": "XLU (-0.0%)",
-        "value": 878.0444754836581
+        "value": 1124.689974298382
       },
       {
         "source": "Cyclicals",
         "target": "Consumer Staples",
-        "value": 895.1148489616578
+        "value": 898.2149088064949
       },
       {
         "source": "Consumer Staples",
         "target": "XLP (+0.0%)",
-        "value": 895.1148489616578
+        "value": 898.2149088064949
+      },
+      {
+        "source": "Defensives",
+        "target": "Utilities",
+        "value": 881.4440373821602
+      },
+      {
+        "source": "Utilities",
+        "target": "XLU (-0.0%)",
+        "value": 881.4440373821602
       }
     ]
   },
@@ -256,7 +256,7 @@
       "Company": "Analog Devices, Inc.",
       "Domain": "analog.com",
       "Timing": "Before Open",
-      "Price": "379.64",
+      "Price": "377.36",
       "RevGrowth": "0.372",
       "EarnGrowth": "1.105",
       "Signal": "Strong Buy",
@@ -270,7 +270,7 @@
       "Company": "TJX Companies, Inc. (The)",
       "Domain": "tjx.com",
       "Timing": "Before Open",
-      "Price": "146.415",
+      "Price": "145.81",
       "RevGrowth": "0.092",
       "EarnGrowth": "0.293",
       "Signal": "Buy",
@@ -284,7 +284,7 @@
       "Company": "Lowe's Companies, Inc.",
       "Domain": "corporate.lowes.com",
       "Timing": "Before Open",
-      "Price": "220.92",
+      "Price": "221.24",
       "RevGrowth": "0.103",
       "EarnGrowth": "-0.007",
       "Signal": "Buy",
@@ -298,7 +298,7 @@
       "Company": "Target Corporation",
       "Domain": "corporate.target.com",
       "Timing": "Before Open",
-      "Price": "160.41",
+      "Price": "161.565",
       "RevGrowth": "0.067",
       "EarnGrowth": "-0.247",
       "Signal": "Buy",
@@ -312,7 +312,7 @@
       "Company": "Viking Holdings Ltd",
       "Domain": "viking.com",
       "Timing": "Before Open",
-      "Price": "95.01",
+      "Price": "93.8825",
       "RevGrowth": "0.175",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
@@ -326,7 +326,7 @@
       "Company": "Estee Lauder Companies, Inc. (T",
       "Domain": "elcompanies.com",
       "Timing": "Before Open",
-      "Price": "98.635",
+      "Price": "98.64",
       "RevGrowth": "0.046",
       "EarnGrowth": "-0.455",
       "Signal": "Neutral",
@@ -340,7 +340,7 @@
       "Company": "Sociedad Quimica y Minera S.A.",
       "Domain": "sqm.com",
       "Timing": "Before Open",
-      "Price": "76.555",
+      "Price": "76.465",
       "RevGrowth": "0.698",
       "EarnGrowth": "1.652",
       "Signal": "Strong Buy",
@@ -354,7 +354,7 @@
       "Company": "Nordson Corporation",
       "Domain": "nordson.com",
       "Timing": "After Close",
-      "Price": "303.83",
+      "Price": "306.79",
       "RevGrowth": "0.085",
       "EarnGrowth": "0.061",
       "Signal": "Buy",
@@ -382,7 +382,7 @@
       "Company": "BILL Holdings, Inc.",
       "Domain": "bill.com",
       "Timing": "After Close",
-      "Price": "49.495",
+      "Price": "48.695",
       "RevGrowth": "0.135",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
@@ -396,7 +396,7 @@
       "Company": "Banco Macro S.A.",
       "Domain": "macro.com.ar",
       "Timing": "After Close",
-      "Price": "74.535",
+      "Price": "74.16",
       "RevGrowth": "-0.996",
       "EarnGrowth": "0.0",
       "Signal": "Neutral",
@@ -410,7 +410,7 @@
       "Company": "Webull Corporation",
       "Domain": "webullcorp.com",
       "Timing": "After Close",
-      "Price": "8.44",
+      "Price": "8.465",
       "RevGrowth": "0.363",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
@@ -424,7 +424,7 @@
       "Company": "Kingsoft Cloud Holdings Limited",
       "Domain": "ksyun.com",
       "Timing": "Before Open",
-      "Price": "12.05",
+      "Price": "12.175",
       "RevGrowth": "0.372",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
@@ -438,7 +438,7 @@
       "Company": "ZIM Integrated Shipping Service",
       "Domain": "zim.com",
       "Timing": "Before Open",
-      "Price": "26.7139",
+      "Price": "26.85",
       "RevGrowth": "-0.304",
       "EarnGrowth": "0.0",
       "Signal": "Neutral",
@@ -452,7 +452,7 @@
       "Company": "Ionic Digital Inc.",
       "Domain": "ionicdigital.com",
       "Timing": "After Close",
-      "Price": "67.14",
+      "Price": "67.55",
       "RevGrowth": "0.252",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
@@ -466,7 +466,7 @@
       "Company": "Coty Inc.",
       "Domain": "coty.com",
       "Timing": "After Close",
-      "Price": "2.995",
+      "Price": "3.015",
       "RevGrowth": "-0.013",
       "EarnGrowth": "0.0",
       "Signal": "Neutral",
@@ -838,14 +838,14 @@
     }
   ],
   "regime_metrics": {
-    "breadth_ratio": 0.28872939109742785,
-    "risk_ratio": 1.9568676591718779,
+    "breadth_ratio": 0.28898241202444164,
+    "risk_ratio": 1.9513923794859902,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8054226501154904
+    "vix_term_structure": 0.8097768341255283
   },
   "sentiment": {
-    "fear_score": 0.0375,
-    "bullish_score": 0.0375,
+    "fear_score": 0.0,
+    "bullish_score": 0.0,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -928,18 +928,17 @@
     }
   },
   "narrative": {
-    "state": "geopolitical_pressure",
-    "ai_unwind_score": 0.425,
-    "geopolitical_score": 0.5,
+    "state": "calm",
+    "ai_unwind_score": 0.175,
+    "geopolitical_score": 0.0,
     "reasons": [
-      "News narrative includes geopolitical/oil-shock language.",
       "Semiconductor proxy is below its 20-day trend."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.39,
-      "next_week_rebound_probability": 0.61,
-      "next_month_base_probability": 0.71,
+      "next_day_rebound_probability": 0.46,
+      "next_week_rebound_probability": 0.66,
+      "next_month_base_probability": 0.73,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

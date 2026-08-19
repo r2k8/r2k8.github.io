@@ -11,7 +11,7 @@
       "symbol": "GLD",
       "signal_type": "trim",
       "confidence": 0.7733333333333333,
-      "current_price": 412.3699951171875,
+      "current_price": 411.7550048828125,
       "reasons": [
         "PORTFOLIO MATCH: You own 1.0 shares.",
         "Price is in a clean uptrend (Close > EMA20 > EMA50).",
@@ -19,7 +19,27 @@
         "Volume confirms institutional participation (latest volume >= 20-day average).",
         "Breadth Collapse: Trimming risk despite positive trend."
       ],
-      "generated_at": "2026-08-19 16:45:04.765992+00:00"
+      "generated_at": "2026-08-19 17:47:06.706564+00:00"
+    }
+  },
+  {
+    "symbol": "HYG",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "HYG",
+      "signal_type": "sell",
+      "confidence": 0.7012499999999999,
+      "current_price": 79.66500091552734,
+      "reasons": [
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 20)."
+      ],
+      "generated_at": "2026-08-19 17:47:06.706564+00:00"
     }
   },
   {
@@ -34,12 +54,12 @@
       "symbol": "LQD",
       "signal_type": "sell",
       "confidence": 0.7011494252873562,
-      "current_price": 106.41500091552734,
+      "current_price": 106.34500122070312,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 13)."
       ],
-      "generated_at": "2026-08-19 16:45:04.765992+00:00"
+      "generated_at": "2026-08-19 17:47:06.706564+00:00"
     }
   },
   {
@@ -53,13 +73,13 @@
     "signal": {
       "symbol": "TLT",
       "signal_type": "sell",
-      "confidence": 0.701123595505618,
-      "current_price": 82.79499816894531,
+      "confidence": 0.701111111111111,
+      "current_price": 82.67500305175781,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 11)."
+        "Capital Outflows (Rank 10)."
       ],
-      "generated_at": "2026-08-19 16:45:04.765992+00:00"
+      "generated_at": "2026-08-19 17:47:06.706564+00:00"
     }
   }
 ]

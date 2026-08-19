@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-19T02:37:00.414784+00:00",
+  "updated_at": "2026-08-19T03:39:33.165571+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -858,11 +858,11 @@
     "vix_term_structure": 0.8220031020396851
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.0425,
+    "bullish_score": 0.0425,
     "events": {
-      "war": false,
-      "policy_shock": false,
+      "war": true,
+      "policy_shock": true,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -942,17 +942,18 @@
     }
   },
   "narrative": {
-    "state": "calm",
-    "ai_unwind_score": 0.175,
-    "geopolitical_score": 0.0,
+    "state": "geopolitical_pressure",
+    "ai_unwind_score": 0.425,
+    "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes geopolitical/oil-shock language.",
       "Semiconductor proxy is below its 20-day trend."
     ],
     "rebound_watch": [],
     "forecast": {
-      "next_day_rebound_probability": 0.46,
-      "next_week_rebound_probability": 0.66,
-      "next_month_base_probability": 0.73,
+      "next_day_rebound_probability": 0.39,
+      "next_week_rebound_probability": 0.61,
+      "next_month_base_probability": 0.71,
       "rebound_score": 5,
       "buy_zone": "starter",
       "reasons": [

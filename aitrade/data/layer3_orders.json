@@ -1,11 +1,55 @@
 [
   {
-    "symbol": "QQQ",
+    "symbol": "VIRT",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 667.28,
+    "stop_loss_price": 56.78,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "VIRT",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 61.04999923706055,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 29.1%; earnings growth -1.2%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Financial Services."
+      ],
+      "generated_at": "2026-08-19 05:44:01.138272+00:00"
+    }
+  },
+  {
+    "symbol": "BBWI",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "BBWI",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 20.040000915527344,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth -3.2%; earnings growth 83.7%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Consumer Cyclical."
+      ],
+      "generated_at": "2026-08-19 05:44:01.138272+00:00"
+    }
+  },
+  {
+    "symbol": "QQQ",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
       "symbol": "QQQ",
@@ -17,51 +61,7 @@
         "Positive capital flow (Rank 2).",
         "Volume confirms institutional participation (latest volume >= 20-day average)."
       ],
-      "generated_at": "2026-08-19 04:41:36.094776+00:00"
-    }
-  },
-  {
-    "symbol": "GLD",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
-    ],
-    "signal": {
-      "symbol": "GLD",
-      "signal_type": "trim",
-      "confidence": 0.7733333333333333,
-      "current_price": 398.54998779296875,
-      "reasons": [
-        "PORTFOLIO MATCH: You own 1.0 shares.",
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 3).",
-        "Volume confirms institutional participation (latest volume >= 20-day average).",
-        "Breadth Collapse: Trimming risk despite positive trend."
-      ],
-      "generated_at": "2026-08-19 04:41:36.094776+00:00"
-    }
-  },
-  {
-    "symbol": "EWJ",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Buy confidence 0.73 is below threshold 0.78; no action."
-    ],
-    "signal": {
-      "symbol": "EWJ",
-      "signal_type": "buy",
-      "confidence": 0.7314285714285714,
-      "current_price": 95.37000274658203,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 14).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-08-19 04:41:36.094776+00:00"
+      "generated_at": "2026-08-19 05:44:01.138272+00:00"
     }
   },
   {
@@ -81,7 +81,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 18)."
       ],
-      "generated_at": "2026-08-19 04:41:36.094776+00:00"
+      "generated_at": "2026-08-19 05:44:01.138272+00:00"
     }
   },
   {
@@ -101,7 +101,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 12)."
       ],
-      "generated_at": "2026-08-19 04:41:36.094776+00:00"
+      "generated_at": "2026-08-19 05:44:01.138272+00:00"
     }
   },
   {
@@ -121,7 +121,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 10)."
       ],
-      "generated_at": "2026-08-19 04:41:36.094776+00:00"
+      "generated_at": "2026-08-19 05:44:01.138272+00:00"
     }
   }
 ]

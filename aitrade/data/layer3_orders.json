@@ -1,5 +1,28 @@
 [
   {
+    "symbol": "GLD",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+    ],
+    "signal": {
+      "symbol": "GLD",
+      "signal_type": "trim",
+      "confidence": 0.7733333333333333,
+      "current_price": 412.3699951171875,
+      "reasons": [
+        "PORTFOLIO MATCH: You own 1.0 shares.",
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 3).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Breadth Collapse: Trimming risk despite positive trend."
+      ],
+      "generated_at": "2026-08-19 16:45:04.765992+00:00"
+    }
+  },
+  {
     "symbol": "LQD",
     "approved": true,
     "target_position_size_usd": 0.0,
@@ -10,13 +33,13 @@
     "signal": {
       "symbol": "LQD",
       "signal_type": "sell",
-      "confidence": 0.7011627906976744,
-      "current_price": 106.46499633789062,
+      "confidence": 0.7011494252873562,
+      "current_price": 106.41500091552734,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 14)."
+        "Capital Outflows (Rank 13)."
       ],
-      "generated_at": "2026-08-19 15:41:53.250866+00:00"
+      "generated_at": "2026-08-19 16:45:04.765992+00:00"
     }
   },
   {
@@ -30,13 +53,13 @@
     "signal": {
       "symbol": "TLT",
       "signal_type": "sell",
-      "confidence": 0.701111111111111,
-      "current_price": 82.81500244140625,
+      "confidence": 0.701123595505618,
+      "current_price": 82.79499816894531,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 10)."
+        "Capital Outflows (Rank 11)."
       ],
-      "generated_at": "2026-08-19 15:41:53.250866+00:00"
+      "generated_at": "2026-08-19 16:45:04.765992+00:00"
     }
   }
 ]

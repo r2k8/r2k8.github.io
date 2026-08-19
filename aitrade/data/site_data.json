@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-19T05:43:58.175411+00:00",
+  "updated_at": "2026-08-19T06:47:50.561597+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -350,6 +350,20 @@
     },
     {
       "Date": "2026-08-19",
+      "Symbol": "NDSN",
+      "Company": "Nordson Corporation",
+      "Domain": "nordson.com",
+      "Timing": "After Close",
+      "Price": "304.21",
+      "RevGrowth": "0.085",
+      "EarnGrowth": "0.061",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-19",
       "Symbol": "YMM",
       "Company": "Full Truck Alliance Co. Ltd.",
       "Domain": "fulltruckalliance.com",
@@ -372,20 +386,6 @@
       "RevGrowth": "0.135",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-19",
-      "Symbol": "BMA",
-      "Company": "Banco Macro S.A.",
-      "Domain": "macro.com.ar",
-      "Timing": "After Close",
-      "Price": "76.08",
-      "RevGrowth": "-0.996",
-      "EarnGrowth": "0.0",
-      "Signal": "Neutral",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -515,11 +515,11 @@
     {
       "symbol": "MSEX",
       "as_of": "2026-08-18",
-      "close": 58.814998626708984,
-      "ema20": 57.566413797382324,
-      "ema50": 56.01228609717674,
-      "avg20_volume": 136663.3,
-      "latest_volume": 220866.0
+      "close": 58.81999969482422,
+      "ema20": 57.56689008958378,
+      "ema50": 56.01248221749499,
+      "avg20_volume": 136680.0,
+      "latest_volume": 221200.0
     },
     {
       "symbol": "VIRT",
@@ -844,8 +844,8 @@
     "vix_term_structure": 0.7711781619548781
   },
   "sentiment": {
-    "fear_score": 0.045,
-    "bullish_score": 0.045,
+    "fear_score": 0.03970588235294118,
+    "bullish_score": 0.03970588235294118,
     "events": {
       "war": true,
       "policy_shock": false,
@@ -897,11 +897,9 @@
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Iran Announces Switch from Defense to Offense in Strait of Hormuz"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLY": {
         "symbol": "XLY",

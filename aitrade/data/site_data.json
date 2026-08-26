@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-26T08:31:05.720123+00:00",
+  "updated_at": "2026-08-26T09:32:22.090246+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -98,7 +98,7 @@
       "symbol": "^VIX",
       "name": "Volatility Index",
       "as_of": "2026-08-26",
-      "price_change_pct": -0.15854311869582713,
+      "price_change_pct": -0.15907874959250473,
       "dollar_volume": 0.0,
       "relative_flow_score": -0.0,
       "direction": "flat",
@@ -602,6 +602,15 @@
       "latest_volume": 5287500.0
     },
     {
+      "symbol": "VIR",
+      "as_of": "2026-08-25",
+      "close": 10.710000038146973,
+      "ema20": 9.448976402638277,
+      "ema50": 9.356879589211909,
+      "avg20_volume": 1544370.0,
+      "latest_volume": 2961200.0
+    },
+    {
       "symbol": "MRCY",
       "as_of": "2026-08-18",
       "close": 108.08000183105469,
@@ -924,15 +933,6 @@
       "ema50": 23.550626762189975,
       "avg20_volume": 2321840.8,
       "latest_volume": 3570400.0
-    },
-    {
-      "symbol": "DV",
-      "as_of": "2026-08-11",
-      "close": 13.25,
-      "ema20": 11.853885919914356,
-      "ema50": 11.230219804233323,
-      "avg20_volume": 4637976.1,
-      "latest_volume": 9245322.0
     }
   ],
   "regime_metrics": {
@@ -1050,6 +1050,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260825093126 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

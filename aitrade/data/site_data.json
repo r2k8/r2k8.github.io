@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-26T09:32:22.090246+00:00",
+  "updated_at": "2026-08-26T10:33:46.356545+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -98,7 +98,7 @@
       "symbol": "^VIX",
       "name": "Volatility Index",
       "as_of": "2026-08-26",
-      "price_change_pct": -0.15907874959250473,
+      "price_change_pct": -0.15854311869582713,
       "dollar_volume": 0.0,
       "relative_flow_score": -0.0,
       "direction": "flat",
@@ -939,7 +939,7 @@
     "breadth_ratio": 0.2895510073618166,
     "risk_ratio": 1.9566367159470688,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8621636792201846
+    "vix_term_structure": 0.8627128406361432
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -1050,6 +1050,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260825093126 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
   ]
 }

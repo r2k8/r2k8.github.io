@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-26T21:50:30.717305+00:00",
+  "updated_at": "2026-08-26T22:51:59.417796+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -283,7 +283,7 @@
       "Symbol": "CRM",
       "Company": "Salesforce, Inc.",
       "Domain": "salesforce.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "205.62",
       "RevGrowth": "0.133",
       "EarnGrowth": "0.522",
@@ -294,56 +294,14 @@
     },
     {
       "Date": "2026-08-26",
-      "Symbol": "SNPS",
-      "Company": "Synopsys, Inc.",
-      "Domain": "synopsys.com",
-      "Timing": "After Close",
-      "Price": "410.0",
-      "RevGrowth": "0.419",
-      "EarnGrowth": "-0.96",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-26",
       "Symbol": "A",
       "Company": "Agilent Technologies, Inc.",
       "Domain": "agilent.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "155.08",
       "RevGrowth": "0.1",
       "EarnGrowth": "0.6",
       "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-26",
-      "Symbol": "VEEV",
-      "Company": "Veeva Systems Inc.",
-      "Domain": "veeva.com",
-      "Timing": "After Close",
-      "Price": "244.91",
-      "RevGrowth": "0.163",
-      "EarnGrowth": "0.146",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-26",
-      "Symbol": "P",
-      "Company": "Everpure, Inc.",
-      "Domain": "everpuredata.com",
-      "Timing": "After Close",
-      "Price": "108.9",
-      "RevGrowth": "0.0",
-      "EarnGrowth": "0.0",
-      "Signal": "Neutral",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -371,34 +329,6 @@
       "Price": "30.52",
       "RevGrowth": "0.09",
       "EarnGrowth": "0.162",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-26",
-      "Symbol": "OKTA",
-      "Company": "Okta, Inc.",
-      "Domain": "okta.com",
-      "Timing": "After Close",
-      "Price": "134.42",
-      "RevGrowth": "0.112",
-      "EarnGrowth": "0.212",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-26",
-      "Symbol": "NTNX",
-      "Company": "Nutanix, Inc.",
-      "Domain": "nutanix.com",
-      "Timing": "After Close",
-      "Price": "65.39",
-      "RevGrowth": "0.1",
-      "EarnGrowth": "0.172",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -456,20 +386,6 @@
       "RevGrowth": "0.561",
       "EarnGrowth": "0.435",
       "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-26",
-      "Symbol": "URBN",
-      "Company": "Urban Outfitters, Inc.",
-      "Domain": "urbn.com",
-      "Timing": "After Close",
-      "Price": "82.95",
-      "RevGrowth": "0.114",
-      "EarnGrowth": "0.121",
-      "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -595,6 +511,15 @@
       "ema50": 30.50562760962167,
       "avg20_volume": 2904576.75,
       "latest_volume": 5962835.0
+    },
+    {
+      "symbol": "WT",
+      "as_of": "2026-08-26",
+      "close": 24.760000228881836,
+      "ema20": 22.46782329517573,
+      "ema50": 20.936901421521245,
+      "avg20_volume": 2528856.4,
+      "latest_volume": 3979728.0
     },
     {
       "symbol": "WAY",
@@ -910,15 +835,6 @@
       "ema50": 41.72220727061997,
       "avg20_volume": 2475310.0,
       "latest_volume": 8413800.0
-    },
-    {
-      "symbol": "HALO",
-      "as_of": "2026-08-12",
-      "close": 101.79000091552734,
-      "ema20": 88.04015665394775,
-      "ema50": 80.86862486784715,
-      "avg20_volume": 2324430.0,
-      "latest_volume": 3650500.0
     }
   ],
   "regime_metrics": {
@@ -1036,6 +952,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260825225055 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

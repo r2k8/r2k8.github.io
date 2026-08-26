@@ -1,70 +1,5 @@
 [
   {
-    "symbol": "GLD",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
-    ],
-    "signal": {
-      "symbol": "GLD",
-      "signal_type": "trim",
-      "confidence": 0.7733333333333333,
-      "current_price": 428.07000732421875,
-      "reasons": [
-        "PORTFOLIO MATCH: You own 1.0 shares.",
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 3).",
-        "Volume confirms institutional participation (latest volume >= 20-day average).",
-        "Breadth Collapse: Trimming risk despite positive trend."
-      ],
-      "generated_at": "2026-08-26 12:36:39.362506+00:00"
-    }
-  },
-  {
-    "symbol": "XLE",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Buy confidence 0.77 is below threshold 0.78; no action."
-    ],
-    "signal": {
-      "symbol": "XLE",
-      "signal_type": "buy",
-      "confidence": 0.7728571428571429,
-      "current_price": 62.060001373291016,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 7).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-08-26 12:36:39.362506+00:00"
-    }
-  },
-  {
-    "symbol": "VGK",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Buy confidence 0.73 is below threshold 0.78; no action."
-    ],
-    "signal": {
-      "symbol": "VGK",
-      "signal_type": "buy",
-      "confidence": 0.7288888888888888,
-      "current_price": 93.19000244140625,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 18).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-08-26 12:36:39.362506+00:00"
-    }
-  },
-  {
     "symbol": "TLT",
     "approved": true,
     "target_position_size_usd": 0.0,
@@ -75,13 +10,13 @@
     "signal": {
       "symbol": "TLT",
       "signal_type": "sell",
-      "confidence": 0.7012048192771084,
-      "current_price": 83.47000122070312,
+      "confidence": 0.7011494252873562,
+      "current_price": 83.21499633789062,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 17)."
+        "Capital Outflows (Rank 13)."
       ],
-      "generated_at": "2026-08-26 12:36:39.362506+00:00"
+      "generated_at": "2026-08-26 13:38:33.174565+00:00"
     }
   }
 ]

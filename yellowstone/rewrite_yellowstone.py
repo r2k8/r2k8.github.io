@@ -1,0 +1,382 @@
+import os
+
+file_path = "/Users/r2k8/Library/CloudStorage/OneDrive-Personal/_Personal Docs/_Family/Travel or Trips/Yellowstone Road Trip - Aug 2026/site/yellowstone/index.html"
+
+html_content = """<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#182220">
+  <title>Yellowstone Friends Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <style>
+    :root {
+      --ink: #182220;
+      --muted: #5e6a67;
+      --paper: #f6f7f3;
+      --surface: #ffffff;
+      --line: #d9ded8;
+      --forest: #1f5a4c;
+      --forest-soft: #dfece7;
+      --sun: #e7a62c;
+      --sun-soft: #fff0cf;
+      --clay: #a84d38;
+      --clay-soft: #f7e5df;
+      --lake: #276b83;
+      --lake-soft: #deedf2;
+      --shadow: 0 8px 28px rgba(24, 34, 32, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    a { color: inherit; }
+    .shell { width: min(100%, 760px); margin: 0 auto; background: var(--paper); min-height: 100vh; }
+
+    .hero {
+      min-height: min(480px, 60vh);
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      isolation: isolate;
+      background: url("assets/yellowstone-hero.png") 58% center / cover no-repeat;
+      background-color: var(--forest);
+      color: #fff;
+      padding: max(22px, env(safe-area-inset-top)) 20px 26px;
+    }
+    .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: rgba(10, 20, 18, .6); }
+    .hero-copy { max-width: 600px; }
+    .eyebrow { margin: 0 0 8px; font-size: .82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .hero .eyebrow { color: rgba(255,255,255,.85); }
+    h1, h2 { font-family: "Newsreader", Georgia, serif; letter-spacing: 0; }
+    h1 { margin: 0; max-width: 100%; font-size: 3.2rem; line-height: .95; font-weight: 600; }
+    .hero-sub { margin: 12px 0 0; max-width: 500px; font-size: 1.1rem; color: rgba(255,255,255,.9); line-height: 1.4; }
+    .hero-facts { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; }
+    .hero-fact { display: inline-flex; align-items: center; gap: 7px; background: rgba(10,20,18,.72); border: 1px solid rgba(255,255,255,.24); border-radius: 6px; padding: 8px 10px; font-size: .84rem; font-weight: 600; }
+    .hero-fact svg { width: 16px; height: 16px; }
+
+    .quick-nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 12px; background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+    .quick-nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 52px; color: var(--muted); text-decoration: none; font-size: .75rem; font-weight: 600; border-radius: 6px; }
+    .quick-nav a:active, .quick-nav a:focus-visible { background: var(--forest-soft); color: var(--forest); outline: 2px solid var(--forest); }
+    .quick-nav svg { width: 19px; height: 19px; }
+
+    main { padding-bottom: calc(36px + env(safe-area-inset-bottom)); }
+    section { padding: 35px 18px 0; scroll-margin-top: 78px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 14px; margin-bottom: 16px; }
+    h2 { margin: 0; font-size: 2.1rem; font-weight: 600; line-height: 1; }
+    .section-note { margin: 0; color: var(--muted); font-size: .85rem; text-align: right; }
+
+    .info-card { background: var(--surface); padding: 22px; border-radius: 8px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .info-card p { margin: 0 0 14px; color: var(--ink); line-height: 1.55; font-size: .95rem; }
+    .info-card p:last-child { margin: 0; }
+    .info-card strong { color: var(--forest); font-weight: 600; }
+    .info-card h3 { margin: 0 0 8px; font-size: 1.1rem; font-weight: 600; color: var(--forest); }
+
+    .split-grid { display: grid; gap: 14px; margin-top: 18px; margin-bottom: 14px; }
+    .split-item { border-left: 3px solid var(--line); padding-left: 14px; }
+    .split-item strong { display: block; margin-bottom: 4px; }
+    .split-item span { font-size: .85rem; color: var(--muted); line-height: 1.4; display: block; }
+    .border-west { border-color: var(--forest); }
+    .border-north { border-color: var(--sun); }
+
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: .88rem; font-weight: 600; margin-bottom: 6px; color: var(--muted); }
+    .form-control { width: 100%; padding: 12px; border: 1px solid var(--line); border-radius: 6px; font-family: inherit; font-size: 1rem; background: var(--paper); }
+    .btn-primary { width: 100%; background: var(--forest); color: white; border: none; padding: 14px; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: opacity 0.2s; }
+    .btn-primary:active { opacity: 0.8; }
+
+    .route-line { display: grid; gap: 0; margin-top: 24px; }
+    .route-stop { display: grid; grid-template-columns: 55px 28px 1fr; gap: 12px; align-items: start; position: relative; padding: 0 0 20px; }
+    .route-stop:not(:last-child)::after { content: ""; position: absolute; left: 69px; top: 29px; bottom: -1px; width: 2px; background: var(--line); }
+    .route-time { color: var(--muted); font-size: .82rem; font-weight: 600; text-align: right; padding-top: 4px; }
+    .route-icon { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--forest-soft); color: var(--forest); z-index: 1; }
+    .route-icon svg { width: 15px; height: 15px; }
+    .route-copy strong { display: block; font-size: .98rem; font-weight: 600; }
+    .route-copy p { margin: 4px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.45; }
+
+    .day-tabs { display: flex; gap: 7px; overflow-x: auto; scrollbar-width: none; padding: 2px 0 10px; }
+    .day-tabs::-webkit-scrollbar { display: none; }
+    .day-tab { flex: 0 0 70px; min-height: 60px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--muted); cursor: pointer; }
+    .day-tab span { display: block; text-align: center; }
+    .day-tab .weekday { font-size: .78rem; font-weight: 600; margin-top: 8px; }
+    .day-tab .date { margin-top: 2px; font-size: .95rem; }
+    .day-tab[aria-selected="true"] { color: #fff; background: var(--forest); border-color: var(--forest); }
+    .day-tab:focus-visible { outline: 3px solid rgba(31,90,76,.28); }
+    .day-panel { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
+    .day-banner { padding: 18px; background: var(--lake-soft); border-bottom: 1px solid var(--line); }
+    .day-banner .eyebrow { color: var(--lake); }
+    .day-banner h3 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+    .day-banner p { margin: 6px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.4; }
+    .agenda { list-style: none; margin: 0; padding: 8px 18px; }
+    .agenda li { display: grid; grid-template-columns: 75px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .agenda li:last-child { border-bottom: 0; }
+    .agenda time { color: var(--clay); font-size: .82rem; font-weight: 600; }
+    .agenda strong { display: block; font-size: .95rem; font-weight: 600; }
+    .agenda span { display: block; margin-top: 3px; color: var(--muted); font-size: .85rem; line-height: 1.45; }
+
+    .safety-band { background: var(--ink); color: #fff; padding: 26px 20px; margin-top: 35px; border-radius: 8px; }
+    .safety-band h2 { font-size: 1.8rem; margin: 0; }
+    .safety-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 18px; }
+    .safety-item { border-top: 2px solid var(--sun); padding-top: 12px; }
+    .safety-item strong { display: block; color: #fff; font-size: .95rem; }
+    .safety-item span { display: block; margin-top: 4px; color: rgba(255,255,255,.75); font-size: .82rem; line-height: 1.45; }
+
+    footer { padding: 30px 18px 40px; color: var(--muted); font-size: .8rem; text-align: center; }
+
+    @media (min-width: 700px) {
+      body { padding: 25px 0; }
+      .shell { border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: 8px; overflow: hidden; }
+      .hero { min-height: 400px; }
+      h1 { font-size: 3.8rem; }
+      section { padding-left: 30px; padding-right: 30px; }
+      .quick-nav { padding-left: 28px; padding-right: 28px; }
+      .safety-band { margin-left: 30px; margin-right: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Sripathi Family Guide</p>
+        <h1>Yellowstone Planner</h1>
+        <p class="hero-sub">We learned a lot planning our trip. We built this guide to help our friends plan the perfect Yellowstone adventure!</p>
+        <div class="hero-facts">
+          <span class="hero-fact"><i data-lucide="info"></i>The Basics</span>
+          <span class="hero-fact"><i data-lucide="bed-double"></i>Lodging Strategy</span>
+          <span class="hero-fact"><i data-lucide="calendar-days"></i>Sample Itineraries</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="quick-nav" aria-label="Trip sections">
+      <a href="#basics"><i data-lucide="info"></i><span>Basics</span></a>
+      <a href="#lodging"><i data-lucide="bed-double"></i><span>Lodging</span></a>
+      <a href="#getting-there"><i data-lucide="plane"></i><span>Travel</span></a>
+      <a href="#itinerary"><i data-lucide="calendar-days"></i><span>Itinerary</span></a>
+    </nav>
+
+    <main>
+      <section id="basics">
+        <div class="section-head">
+          <h2>1. The Big Picture</h2>
+        </div>
+        <div class="info-card">
+          <p><strong>The Scale:</strong> Yellowstone is massive—larger than Rhode Island and Delaware combined. It’s laid out as a "Figure 8" road system. Driving from one side to the other takes hours, and traffic or bison jams can add huge delays.</p>
+          <p><strong>When to go:</strong> June through September are the best months. July and August are peak season (crowded but fully open). Spring and Fall are beautiful but you risk road closures due to snow.</p>
+          <p><strong>Don't Forget the Tetons:</strong> Grand Teton National Park is directly south of Yellowstone. They share a border! If you have the time, you should absolutely spend 1-2 days exploring the Tetons and the town of Jackson Hole.</p>
+        </div>
+      </section>
+
+      <section id="lodging">
+        <div class="section-head">
+          <h2>2. Where to Stay</h2>
+          <p class="section-note">The "Split Stay"</p>
+        </div>
+        <div class="info-card">
+          <p>Because the park is so huge, staying in one hotel the whole time means you will spend 3-5 hours a day just driving back and forth to see the sights. <strong>We highly recommend a "Split Stay" strategy.</strong></p>
+          
+          <div class="split-grid">
+            <div class="split-item border-west">
+              <strong>Leg 1: The West/South (2-3 nights)</strong>
+              <span>Stay near Old Faithful, Grant Village, or West Yellowstone. Focus on the famous geothermal features (Grand Prismatic, Old Faithful) and Yellowstone Lake.</span>
+            </div>
+            <div class="split-item border-north">
+              <strong>Leg 2: The North/East (1-2 nights)</strong>
+              <span>Stay near Mammoth Hot Springs or Canyon Village. Focus on the Grand Canyon of the Yellowstone, wildlife in Hayden/Lamar Valleys, and the Mammoth terraces.</span>
+            </div>
+          </div>
+          <p style="font-size: .85rem;"><em>Pro-tip: Park lodges (booked via Xanterra) open 13 months in advance and sell out quickly. Book early, or look for cancellations!</em></p>
+        </div>
+      </section>
+
+      <section id="getting-there">
+        <div class="section-head">
+          <h2>3. Getting There</h2>
+        </div>
+        <div class="info-card">
+          <div class="form-group">
+            <label>Where are you traveling from?</label>
+            <input type="text" id="originInput" class="form-control" placeholder="e.g., Seattle, WA">
+          </div>
+          <div class="form-group">
+            <label>How are you getting there?</label>
+            <select id="modeInput" class="form-control">
+              <option value="fly">Flying & Renting a Car</option>
+              <option value="drive">Driving (Road Trip)</option>
+            </select>
+          </div>
+          <button id="updateBtn" class="btn-primary">Generate Travel Route</button>
+        </div>
+
+        <div id="dynamic-route">
+          <div class="route-line">
+            <div class="route-stop">
+              <div class="route-time">Arrival</div><div class="route-icon"><i data-lucide="map"></i></div>
+              <div class="route-copy"><strong>Your Route</strong><p>Enter your travel details above to see your customized arrival plan.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="itinerary">
+        <div class="section-head">
+          <h2>4. Sample Itinerary</h2>
+          <p class="section-note">A classic 4-day loop</p>
+        </div>
+        <div class="day-tabs" role="tablist" aria-label="Trip days">
+          <button class="day-tab" role="tab" aria-selected="true" data-day="0"><span class="weekday">Day</span><span class="date">1</span></button>
+          <button class="day-tab" role="tab" aria-selected="false" data-day="1"><span class="weekday">Day</span><span class="date">2</span></button>
+          <button class="day-tab" role="tab" aria-selected="false" data-day="2"><span class="weekday">Day</span><span class="date">3</span></button>
+          <button class="day-tab" role="tab" aria-selected="false" data-day="3"><span class="weekday">Day</span><span class="date">4</span></button>
+        </div>
+        <article class="day-panel" id="day-panel" role="tabpanel" aria-live="polite"></article>
+      </section>
+
+      <aside class="safety-band">
+        <h2>Park Rules That Matter</h2>
+        <div class="safety-grid">
+          <div class="safety-item"><strong>100 yards</strong><span>Keep distance from bears, wolves and cougars. Bring bear spray!</span></div>
+          <div class="safety-item"><strong>25 yards</strong><span>Keep distance from bison, elk and other wildlife. They are fast.</span></div>
+          <div class="safety-item"><strong>Stay on boardwalks</strong><span>Thermal ground is incredibly fragile and can break without warning.</span></div>
+          <div class="safety-item"><strong>Use pullouts</strong><span>Never stop in the travel lane for wildlife. Always pull completely off the road.</span></div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <span>Built to help our friends plan the ultimate Yellowstone Trip.</span>
+    </footer>
+  </div>
+
+  <script>
+    // Itinerary Data
+    const days = [
+      { eyebrow: "Arrival & Geysers", title: "South/West Highlights", note: "Settle in and see the famous geysers.", items: [
+        ["Morning", "Enter the Park", "Arrive via the West, South, or North entrance.", null],
+        ["Midday", "Old Faithful", "Check the visitor center for eruption prediction times.", "walking"],
+        ["Afternoon", "Upper Geyser Basin", "Walk the beautiful boardwalks around Castle and Grand geysers.", "walking"],
+        ["Evening", "Check-in", "Head to your first hotel (e.g., West Yellowstone or Grant Village).", "driving"]
+      ]},
+      { eyebrow: "Iconic Springs", title: "Grand Prismatic & Valleys", note: "The most colorful spring in the world.", items: [
+        ["Early AM", "Beat the Crowds", "Grand Prismatic parking fills up by 9 AM. Go early!", "driving"],
+        ["Morning", "Fairy Falls Trail", "Hike to the overlook for the absolute best view of the spring.", "walking"],
+        ["Midday", "Picnic Lunch", "Grab lunch before driving to your next region.", null],
+        ["Afternoon", "Fountain Paint Pots", "Check out the bubbling mud pots and fumaroles.", "walking"]
+      ]},
+      { eyebrow: "Waterfalls & Wildlife", title: "Grand Canyon & Hayden", note: "Massive waterfalls and bison herds.", items: [
+        ["Morning", "Artist Point", "The iconic, must-see view of the Lower Falls.", "driving"],
+        ["Midday", "North/South Rim", "Hike along the canyon rim for different waterfall angles.", "walking"],
+        ["Late Aft", "Hayden Valley", "Prime time for bison and grizzly spotting. Bring binoculars!", "driving"],
+        ["Evening", "Check-in", "Head to your second hotel (e.g., Canyon Village or Mammoth).", "driving"]
+      ]},
+      { eyebrow: "The Northern Range", title: "Mammoth & Lamar Valley", note: "The Serengeti of America.", items: [
+        ["Early AM", "Lamar Valley", "Get here at dawn for the absolute best wolf and bear spotting.", "driving"],
+        ["Late AM", "Mammoth Hot Springs", "Walk the surreal, cascading travertine terraces.", "walking"],
+        ["Afternoon", "Roosevelt Arch", "Take a classic photo at the historic North Entrance.", "driving"],
+        ["Evening", "Depart or Rest", "Start your journey home or relax for your final night.", null]
+      ]}
+    ];
+
+    // Render Itinerary Tabs
+    const panel = document.getElementById("day-panel");
+    const tabs = [...document.querySelectorAll(".day-tab")];
+
+    function renderDay(index) {
+      const day = days[index];
+      panel.innerHTML = `
+        <div class="day-banner">
+          <p class="eyebrow">${day.eyebrow}</p>
+          <h3>${day.title}</h3>
+          <p>${day.note}</p>
+        </div>
+        <ol class="agenda">
+          ${day.items.map(item => `
+            <li>
+              <time>${item[0]}</time>
+              <div>
+                <strong>${item[1]}</strong>
+                <span>${item[2]}</span>
+              </div>
+            </li>
+          `).join("")}
+        </ol>
+      `;
+      tabs.forEach((tab, tabIndex) => tab.setAttribute("aria-selected", tabIndex === index ? "true" : "false"));
+    }
+
+    tabs.forEach(tab => tab.addEventListener("click", () => renderDay(Number(tab.dataset.day))));
+    renderDay(0);
+
+    // Interactive Travel Route Generator
+    const updateBtn = document.getElementById('updateBtn');
+    if (updateBtn) {
+      updateBtn.addEventListener('click', () => {
+        const origin = document.getElementById('originInput').value || "Home";
+        const mode = document.getElementById('modeInput').value;
+        const routeContainer = document.querySelector('#dynamic-route');
+
+        if (mode === 'fly') {
+          routeContainer.innerHTML = `
+            <div class="route-line">
+              <div class="route-stop">
+                <div class="route-time">Step 1</div><div class="route-icon"><i data-lucide="plane"></i></div>
+                <div class="route-copy"><strong>Fly from ${origin}</strong><p>Book a flight into Bozeman (BZN) or Jackson Hole (JAC).</p></div>
+              </div>
+              <div class="route-stop">
+                <div class="route-time">Step 2</div><div class="route-icon"><i data-lucide="car-front"></i></div>
+                <div class="route-copy"><strong>Rental Car</strong><p>Pick up your rental car at the airport. Book early in the summer!</p></div>
+              </div>
+              <div class="route-stop">
+                <div class="route-time">Step 3</div><div class="route-icon"><i data-lucide="bed-double"></i></div>
+                <div class="route-copy"><strong>Park Lodging</strong><p>Drive into the park and settle into your first hotel.</p></div>
+              </div>
+            </div>
+          `;
+        } else {
+          routeContainer.innerHTML = `
+            <div class="route-line">
+              <div class="route-stop">
+                <div class="route-time">Step 1</div><div class="route-icon"><i data-lucide="car-front"></i></div>
+                <div class="route-copy"><strong>Drive from ${origin}</strong><p>Pack up the car and head out on your road trip.</p></div>
+              </div>
+              <div class="route-stop">
+                <div class="route-time">Step 2</div><div class="route-icon"><i data-lucide="map-pin"></i></div>
+                <div class="route-copy"><strong>Arrive at Yellowstone</strong><p>Enter through the closest gate (West, North, or South).</p></div>
+              </div>
+              <div class="route-stop">
+                <div class="route-time">Step 3</div><div class="route-icon"><i data-lucide="bed-double"></i></div>
+                <div class="route-copy"><strong>Park Lodging</strong><p>Settle into your first hotel and relax.</p></div>
+              </div>
+            </div>
+          `;
+        }
+        if (window.lucide) window.lucide.createIcons();
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.lucide) window.lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
+"""
+
+with open(file_path, "w") as f:
+    f.write(html_content)
+
+print("Rewrite completed.")

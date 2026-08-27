@@ -1,5 +1,49 @@
 [
   {
+    "symbol": "VCTR",
+    "approved": true,
+    "target_position_size_usd": 100.0,
+    "stop_loss_price": 112.2,
+    "warnings": [
+      "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "VCTR",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 120.63999938964844,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 24.0%; earnings growth 148.0%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Financial Services."
+      ],
+      "generated_at": "2026-08-27 02:59:21.365735+00:00"
+    }
+  },
+  {
+    "symbol": "DCI",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "DCI",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 95.23999786376953,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 5.8%; earnings growth 108.3%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Industrials."
+      ],
+      "generated_at": "2026-08-27 02:59:21.365735+00:00"
+    }
+  },
+  {
     "symbol": "TLT",
     "approved": true,
     "target_position_size_usd": 0.0,
@@ -16,7 +60,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 14)."
       ],
-      "generated_at": "2026-08-27 01:57:40.251134+00:00"
+      "generated_at": "2026-08-27 02:59:21.365735+00:00"
     }
   }
 ]

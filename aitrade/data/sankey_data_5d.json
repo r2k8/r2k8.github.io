@@ -43,16 +43,86 @@
       "depth": 2
     },
     {
-      "name": "Equities",
+      "name": "Fixed Income",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 1
+    },
+    {
+      "name": "Commodities",
       "itemStyle": {
         "color": "#ef4444"
       },
       "depth": 1
     },
     {
-      "name": "USA",
+      "name": "Gold",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Silver",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Crude Oil",
       "itemStyle": {
         "color": "#ef4444"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Copper",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Real Estate",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 1
+    },
+    {
+      "name": "Equities",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 1
+    },
+    {
+      "name": "Emerging Markets",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Europe",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "Asia-Pacific",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 2
+    },
+    {
+      "name": "USA",
+      "itemStyle": {
+        "color": "#10b981"
       },
       "depth": 2
     },
@@ -454,76 +524,6 @@
         "color": "#ef4444"
       },
       "depth": 4
-    },
-    {
-      "name": "Emerging Markets",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Europe",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Asia-Pacific",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Fixed Income",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 1
-    },
-    {
-      "name": "Commodities",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 1
-    },
-    {
-      "name": "Gold",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Silver",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Crude Oil",
-      "itemStyle": {
-        "color": "#ef4444"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Copper",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 2
-    },
-    {
-      "name": "Real Estate",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 1
     }
   ],
   "links": [
@@ -584,23 +584,133 @@
     },
     {
       "source": "Global Liquidity",
-      "target": "Equities",
-      "value": 44.51,
-      "net_flow_dollars": -445083054.2336856,
-      "market_cap_delta": -2734974722.9287,
+      "target": "Fixed Income",
+      "value": 3.68,
+      "net_flow_dollars": 36774867.0987345,
+      "market_cap_delta": 30716334.777832467,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Global Liquidity",
+      "target": "Commodities",
+      "value": 1,
+      "net_flow_dollars": -1298787.0172105243,
+      "market_cap_delta": -28964000.000000175,
       "lineStyle": {
         "color": "#ef4444",
         "opacity": 0.35
       }
     },
     {
-      "source": "Equities",
-      "target": "USA",
-      "value": 44.51,
-      "net_flow_dollars": -445083054.2336856,
-      "market_cap_delta": -2734974722.9287,
+      "source": "Commodities",
+      "target": "Gold",
+      "value": 50.75,
+      "net_flow_dollars": 507545395.948505,
+      "market_cap_delta": 1947045906.494147,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Commodities",
+      "target": "Silver",
+      "value": 14.65,
+      "net_flow_dollars": 146461276.35267243,
+      "market_cap_delta": 539491026.8211335,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Commodities",
+      "target": "Crude Oil",
+      "value": 6.78,
+      "net_flow_dollars": -67758874.72256303,
+      "market_cap_delta": -423996181.7321774,
       "lineStyle": {
         "color": "#ef4444",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Commodities",
+      "target": "Copper",
+      "value": 1,
+      "net_flow_dollars": 1735849.1151261358,
+      "market_cap_delta": 670001373.291015,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Global Liquidity",
+      "target": "Real Estate",
+      "value": 1,
+      "net_flow_dollars": 6.445688902880268,
+      "market_cap_delta": 225.94054708542356,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Global Liquidity",
+      "target": "Equities",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Equities",
+      "target": "Emerging Markets",
+      "value": 1.47,
+      "net_flow_dollars": 14722692.49205811,
+      "market_cap_delta": 879234143.9320716,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Equities",
+      "target": "Europe",
+      "value": 1,
+      "net_flow_dollars": 3334056.2579421885,
+      "market_cap_delta": 132582845.36050667,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Equities",
+      "target": "Asia-Pacific",
+      "value": 1,
+      "net_flow_dollars": 2177777.3238462987,
+      "market_cap_delta": 27041576.911132835,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "Equities",
+      "target": "USA",
+      "value": 1,
+      "net_flow_dollars": 0.0,
+      "market_cap_delta": 0.0,
+      "lineStyle": {
+        "color": "#10b981",
         "opacity": 0.35
       }
     },
@@ -1230,121 +1340,11 @@
         "color": "#ef4444",
         "opacity": 0.35
       }
-    },
-    {
-      "source": "Equities",
-      "target": "Emerging Markets",
-      "value": 1.47,
-      "net_flow_dollars": 14722692.49205811,
-      "market_cap_delta": 879234143.9320716,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Equities",
-      "target": "Europe",
-      "value": 1,
-      "net_flow_dollars": 3334056.2579421885,
-      "market_cap_delta": 132582845.36050667,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Equities",
-      "target": "Asia-Pacific",
-      "value": 1,
-      "net_flow_dollars": 2177777.3238462987,
-      "market_cap_delta": 27041576.911132835,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Global Liquidity",
-      "target": "Fixed Income",
-      "value": 3.68,
-      "net_flow_dollars": 36774867.0987345,
-      "market_cap_delta": 30716334.777832467,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Global Liquidity",
-      "target": "Commodities",
-      "value": 1,
-      "net_flow_dollars": -1298787.0172105243,
-      "market_cap_delta": -28964000.000000175,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Commodities",
-      "target": "Gold",
-      "value": 50.75,
-      "net_flow_dollars": 507545395.948505,
-      "market_cap_delta": 1947045906.494147,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Commodities",
-      "target": "Silver",
-      "value": 14.65,
-      "net_flow_dollars": 146461276.35267243,
-      "market_cap_delta": 539491026.8211335,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Commodities",
-      "target": "Crude Oil",
-      "value": 6.78,
-      "net_flow_dollars": -67758874.72256303,
-      "market_cap_delta": -423996181.7321774,
-      "lineStyle": {
-        "color": "#ef4444",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Commodities",
-      "target": "Copper",
-      "value": 1,
-      "net_flow_dollars": 1735849.1151261358,
-      "market_cap_delta": 670001373.291015,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
-      "source": "Global Liquidity",
-      "target": "Real Estate",
-      "value": 1,
-      "net_flow_dollars": 6.445688902880268,
-      "market_cap_delta": 225.94054708542356,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
     }
   ],
   "regime_summary": {
-    "title": "Bear Market (Selling)",
-    "liquidity": "Flowing OUT (Negative)",
+    "title": "Bull Market (Buying)",
+    "liquidity": "Flowing IN (Positive)",
     "inflow": "MSTR / IBIT / META / COIN / AMD",
     "outflow": "NVDA / INTC / TSLA / LLY / AMZN",
     "health": "Optimal"
@@ -1711,5 +1711,5 @@
       "price_change": 0.012318024843564125
     }
   ],
-  "last_updated": "2026-08-27 06:03:40 UTC"
+  "last_updated": "2026-08-27 07:04:52 UTC"
 }

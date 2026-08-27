@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-27T22:30:22.920263+00:00",
+  "updated_at": "2026-08-27T23:31:39.131233+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -339,7 +339,7 @@
       "Symbol": "ADSK",
       "Company": "Autodesk, Inc.",
       "Domain": "autodesk.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "270.58",
       "RevGrowth": "0.184",
       "EarnGrowth": "2.314",
@@ -353,39 +353,11 @@
       "Symbol": "WDAY",
       "Company": "Workday, Inc.",
       "Domain": "workday.com",
-      "Timing": "Before Open",
+      "Timing": "After Close",
       "Price": "193.57",
       "RevGrowth": "0.135",
       "EarnGrowth": "2.48",
       "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-27",
-      "Symbol": "DG",
-      "Company": "Dollar General Corporation",
-      "Domain": "dollargeneral.com",
-      "Timing": "Before Open",
-      "Price": "125.89",
-      "RevGrowth": "0.034",
-      "EarnGrowth": "0.124",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-27",
-      "Symbol": "AFRM",
-      "Company": "Affirm Holdings, Inc.",
-      "Domain": "affirm.com",
-      "Timing": "After Close",
-      "Price": "77.49",
-      "RevGrowth": "0.326",
-      "EarnGrowth": "35.293",
-      "Signal": "Strong Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -631,12 +603,12 @@
     },
     {
       "symbol": "ANF",
-      "as_of": "2026-08-26",
-      "close": 147.75,
-      "ema20": 110.56267074864223,
-      "ema50": 101.81786304482397,
-      "avg20_volume": 1864800.0,
-      "latest_volume": 17221300.0
+      "as_of": "2026-08-27",
+      "close": 145.75,
+      "ema20": 113.91510102313116,
+      "ema50": 103.59942365757732,
+      "avg20_volume": 2061145.85,
+      "latest_volume": 4538817.0
     },
     {
       "symbol": "VCTR",
@@ -1077,6 +1049,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260826222939 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=conflict&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260826233045 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

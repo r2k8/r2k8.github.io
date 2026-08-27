@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-27T21:29:19.413415+00:00",
+  "updated_at": "2026-08-27T22:30:22.920263+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -353,7 +353,7 @@
       "Symbol": "WDAY",
       "Company": "Workday, Inc.",
       "Domain": "workday.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "193.57",
       "RevGrowth": "0.135",
       "EarnGrowth": "2.48",
@@ -409,7 +409,7 @@
       "Symbol": "ULTA",
       "Company": "Ulta Beauty, Inc.",
       "Domain": "ulta.com",
-      "Timing": "After Close",
+      "Timing": "Before Open",
       "Price": "540.1",
       "RevGrowth": "0.111",
       "EarnGrowth": "0.155",
@@ -619,6 +619,15 @@
       "ema50": 137.16241514407508,
       "avg20_volume": 3478666.8,
       "latest_volume": 16326436.0
+    },
+    {
+      "symbol": "TOST",
+      "as_of": "2026-08-27",
+      "close": 35.16999816894531,
+      "ema20": 34.73565392528206,
+      "ema50": 32.01543539433565,
+      "avg20_volume": 9825007.4,
+      "latest_volume": 15348948.0
     },
     {
       "symbol": "ANF",
@@ -952,15 +961,6 @@
       "ema50": 337.7511805867629,
       "avg20_volume": 270370.0,
       "latest_volume": 479500.0
-    },
-    {
-      "symbol": "CON",
-      "as_of": "2026-08-13",
-      "close": 35.119998931884766,
-      "ema20": 32.25787382360238,
-      "ema50": 30.577284785123343,
-      "avg20_volume": 986970.0,
-      "latest_volume": 1658500.0
     }
   ],
   "regime_metrics": {
@@ -1077,6 +1077,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260826212839 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260826222939 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

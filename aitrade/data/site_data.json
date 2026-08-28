@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-28T11:43:36.431641+00:00",
+  "updated_at": "2026-08-28T12:44:42.667995+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -257,7 +257,7 @@
       "Domain": "crowdstrike.com",
       "Timing": "After Close",
       "Price": "227.96",
-      "RevGrowth": "0.256",
+      "RevGrowth": "0.258",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
       "EPS_Estimate": "",
@@ -302,20 +302,6 @@
       "RevGrowth": "0.225",
       "EarnGrowth": "1.841",
       "Signal": "Strong Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-08-28",
-      "Symbol": "BWLP",
-      "Company": "BW LPG Limited",
-      "Domain": "bwlpg.com",
-      "Timing": "Before Open",
-      "Price": "24.41",
-      "RevGrowth": "-0.027",
-      "EarnGrowth": "2.6",
-      "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -715,7 +701,7 @@
     "breadth_ratio": 0.2871871403963779,
     "risk_ratio": 1.9906814139851305,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7035053147607977
+    "vix_term_structure": 0.7020447630746236
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -825,6 +811,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260827114306 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
   ]
 }

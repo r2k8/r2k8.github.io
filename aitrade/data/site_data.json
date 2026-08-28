@@ -1,14 +1,14 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-28T19:51:56.104847+00:00",
+  "updated_at": "2026-08-28T20:52:47.442387+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
       "name": "U.S. Large Cap",
       "as_of": "2026-08-28",
-      "price_change_pct": 0.03822585628076535,
-      "dollar_volume": 30269311853.686047,
-      "relative_flow_score": 1157070364.6366699,
+      "price_change_pct": 0.05468422176914929,
+      "dollar_volume": 30512764464.133484,
+      "relative_flow_score": 1668566778.746493,
       "direction": "inflow",
       "rank": 2
     },
@@ -16,9 +16,9 @@
       "symbol": "QQQ",
       "name": "Nasdaq Growth",
       "as_of": "2026-08-28",
-      "price_change_pct": 0.060504220207625616,
-      "dollar_volume": 23625481716.98108,
-      "relative_flow_score": 1429441348.3154562,
+      "price_change_pct": 0.08266213383332485,
+      "dollar_volume": 23837827723.224686,
+      "relative_flow_score": 1970485705.5529404,
       "direction": "inflow",
       "rank": 1
     },
@@ -26,19 +26,19 @@
       "symbol": "IWM",
       "name": "U.S. Small Cap",
       "as_of": "2026-08-28",
-      "price_change_pct": 0.008317150635775086,
-      "dollar_volume": 4969124853.537115,
-      "relative_flow_score": 41328959.934842,
+      "price_change_pct": 0.024881285281024616,
+      "dollar_volume": 5011252236.785291,
+      "relative_flow_score": 124686396.51862754,
       "direction": "inflow",
-      "rank": 10
+      "rank": 7
     },
     {
       "symbol": "GLD",
       "name": "Gold",
       "as_of": "2026-08-28",
-      "price_change_pct": 0.10553156619944155,
-      "dollar_volume": 4715444662.851938,
-      "relative_flow_score": 497628260.5975627,
+      "price_change_pct": 0.10189185470612439,
+      "dollar_volume": 4746258731.699707,
+      "relative_flow_score": 483605105.08802074,
       "direction": "inflow",
       "rank": 4
     },
@@ -46,63 +46,53 @@
       "symbol": "SMH",
       "name": "Semiconductors",
       "as_of": "2026-08-28",
-      "price_change_pct": 0.04490187007762852,
-      "dollar_volume": 3990886825.8772035,
-      "relative_flow_score": 179198281.75005746,
+      "price_change_pct": 0.09696161201955106,
+      "dollar_volume": 4015061328.8361206,
+      "relative_flow_score": 389306818.801311,
       "direction": "inflow",
       "rank": 5
     }
   ],
   "top_outflows": [
     {
-      "symbol": "LQD",
-      "name": "Investment Grade Corporate",
-      "as_of": "2026-08-28",
-      "price_change_pct": -0.004633555537749112,
-      "dollar_volume": 2849044160.5739417,
-      "relative_flow_score": -13201204.347519157,
-      "direction": "outflow",
-      "rank": 15
-    },
-    {
-      "symbol": "TLT",
-      "name": "Long Treasury Bonds",
-      "as_of": "2026-08-28",
-      "price_change_pct": -0.01661920182076628,
-      "dollar_volume": 2740902180.276384,
-      "relative_flow_score": -45551606.504991546,
-      "direction": "outflow",
-      "rank": 9
-    },
-    {
-      "symbol": "XLI",
-      "name": "Industrials",
-      "as_of": "2026-08-28",
-      "price_change_pct": -0.029316707449581574,
-      "dollar_volume": 1095946232.0550766,
-      "relative_flow_score": -32129535.06562992,
-      "direction": "outflow",
-      "rank": 11
-    },
-    {
       "symbol": "XLU",
       "name": "Utilities",
       "as_of": "2026-08-28",
-      "price_change_pct": -0.06458696390912606,
-      "dollar_volume": 851239299.0090249,
-      "relative_flow_score": -54978961.883125655,
+      "price_change_pct": -0.04854153445964444,
+      "dollar_volume": 858363501.9960349,
+      "relative_flow_score": -41666281.511041604,
       "direction": "outflow",
-      "rank": 8
+      "rank": 10
     },
     {
       "symbol": "XLP",
       "name": "Consumer Staples",
       "as_of": "2026-08-28",
-      "price_change_pct": -0.019124752609908504,
-      "dollar_volume": 762616349.1781346,
-      "relative_flow_score": -14584849.014303423,
+      "price_change_pct": -0.021863594880550546,
+      "dollar_volume": 767858544.1097473,
+      "relative_flow_score": -16788148.133984867,
       "direction": "outflow",
-      "rank": 14
+      "rank": 13
+    },
+    {
+      "symbol": "UUP",
+      "name": "US Dollar",
+      "as_of": "2026-08-28",
+      "price_change_pct": -0.008444749137011993,
+      "dollar_volume": 38742036.04328728,
+      "relative_flow_score": -327166.7754426378,
+      "direction": "outflow",
+      "rank": 20
+    },
+    {
+      "symbol": "^VIX",
+      "name": "Volatility Index",
+      "as_of": "2026-08-28",
+      "price_change_pct": -0.20757819710820374,
+      "dollar_volume": 0.0,
+      "relative_flow_score": -0.0,
+      "direction": "flat",
+      "rank": 21
     }
   ],
   "sankey": {
@@ -110,142 +100,142 @@
       {
         "source": "Global Liquidity",
         "target": "US Equities",
-        "value": 64086.84194494944
+        "value": 64615.97602770457
       },
       {
         "source": "US Equities",
         "target": "Growth",
-        "value": 24857.518411849072
+        "value": 25076.89799794968
       },
       {
         "source": "Growth",
         "target": "QQQ (+0.1%)",
-        "value": 23625.481716981078
+        "value": 23837.827723224687
       },
       {
         "source": "US Equities",
         "target": "Broad Market",
-        "value": 30269.311853686046
+        "value": 30512.764464133485
       },
       {
         "source": "Broad Market",
-        "target": "SPY (+0.0%)",
-        "value": 30269.311853686046
+        "target": "SPY (+0.1%)",
+        "value": 30512.764464133485
       },
       {
         "source": "Global Liquidity",
         "target": "Defensives",
-        "value": 9747.317950197204
+        "value": 9824.617852462905
       },
       {
         "source": "Defensives",
         "target": "Precious Metals",
-        "value": 4715.444662851938
+        "value": 4746.258731699707
       },
       {
         "source": "Precious Metals",
         "target": "GLD (+0.1%)",
-        "value": 4715.444662851938
+        "value": 4746.258731699707
       },
       {
         "source": "US Equities",
         "target": "Semiconductors",
-        "value": 3990.8868258772036
+        "value": 4015.0613288361205
       },
       {
         "source": "Semiconductors",
-        "target": "SMH (+0.0%)",
-        "value": 3990.8868258772036
-      },
-      {
-        "source": "Global Liquidity",
-        "target": "Cyclicals",
-        "value": 5015.270949376498
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Energy",
-        "value": 1576.563774368575
-      },
-      {
-        "source": "Energy",
-        "target": "XLE (+0.1%)",
-        "value": 1576.563774368575
+        "target": "SMH (+0.1%)",
+        "value": 4015.0613288361205
       },
       {
         "source": "Growth",
         "target": "XLK (+0.1%)",
-        "value": 1232.036694867994
-      },
-      {
-        "source": "Defensives",
-        "target": "Utilities",
-        "value": 851.2392990090249
-      },
-      {
-        "source": "Utilities",
-        "target": "XLU (-0.1%)",
-        "value": 851.2392990090249
-      },
-      {
-        "source": "Defensives",
-        "target": "Treasuries",
-        "value": 2740.9021802763837
-      },
-      {
-        "source": "Treasuries",
-        "target": "TLT (-0.0%)",
-        "value": 2740.9021802763837
+        "value": 1239.070274724991
       },
       {
         "source": "US Equities",
         "target": "Small Caps",
-        "value": 4969.124853537115
+        "value": 5011.252236785291
       },
       {
         "source": "Small Caps",
         "target": "IWM (+0.0%)",
-        "value": 4969.124853537115
+        "value": 5011.252236785291
+      },
+      {
+        "source": "Global Liquidity",
+        "target": "Cyclicals",
+        "value": 5056.57964128055
       },
       {
         "source": "Cyclicals",
-        "target": "Industrials",
-        "value": 1095.9462320550765
+        "target": "Energy",
+        "value": 1585.0504527330245
       },
       {
-        "source": "Industrials",
-        "target": "XLI (-0.0%)",
-        "value": 1095.9462320550765
+        "source": "Energy",
+        "target": "XLE (+0.1%)",
+        "value": 1585.0504527330245
       },
       {
         "source": "Defensives",
         "target": "Healthcare",
-        "value": 1439.731808059857
+        "value": 1446.4241679317245
       },
       {
         "source": "Healthcare",
         "target": "XLV (+0.0%)",
-        "value": 1439.731808059857
+        "value": 1446.4241679317245
       },
       {
-        "source": "Cyclicals",
-        "target": "Consumer Staples",
-        "value": 762.6163491781346
+        "source": "Defensives",
+        "target": "Utilities",
+        "value": 858.3635019960349
       },
       {
-        "source": "Consumer Staples",
-        "target": "XLP (-0.0%)",
-        "value": 762.6163491781346
+        "source": "Utilities",
+        "target": "XLU (-0.0%)",
+        "value": 858.3635019960349
       },
       {
         "source": "Cyclicals",
         "target": "Financials",
-        "value": 1580.1445937747117
+        "value": 1593.6854828690746
       },
       {
         "source": "Financials",
         "target": "XLF (+0.0%)",
-        "value": 1580.1445937747117
+        "value": 1593.6854828690746
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Consumer Staples",
+        "value": 767.8585441097473
+      },
+      {
+        "source": "Consumer Staples",
+        "target": "XLP (-0.0%)",
+        "value": 767.8585441097473
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Industrials",
+        "value": 1109.9851615687041
+      },
+      {
+        "source": "Industrials",
+        "target": "XLI (+0.0%)",
+        "value": 1109.9851615687041
+      },
+      {
+        "source": "Defensives",
+        "target": "Treasuries",
+        "value": 2773.5714508354386
+      },
+      {
+        "source": "Treasuries",
+        "target": "TLT (+0.0%)",
+        "value": 2773.5714508354386
       }
     ]
   },
@@ -256,7 +246,7 @@
       "Company": "CrowdStrike Holdings, Inc.",
       "Domain": "crowdstrike.com",
       "Timing": "After Close",
-      "Price": "217.98",
+      "Price": "218.4",
       "RevGrowth": "0.258",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
@@ -270,7 +260,7 @@
       "Company": "Salesforce, Inc.",
       "Domain": "salesforce.com",
       "Timing": "After Close",
-      "Price": "256.57",
+      "Price": "256.0",
       "RevGrowth": "0.108",
       "EarnGrowth": "1.189",
       "Signal": "Buy",
@@ -284,7 +274,7 @@
       "Company": "Hafnia Limited",
       "Domain": "hafnia.com",
       "Timing": "Before Open",
-      "Price": "8.465",
+      "Price": "8.47",
       "RevGrowth": "0.225",
       "EarnGrowth": "1.841",
       "Signal": "Strong Buy",
@@ -298,7 +288,7 @@
       "Company": "MINISO Group Holding Limited",
       "Domain": "miniso.com",
       "Timing": "Before Open",
-      "Price": "10.305",
+      "Price": "10.33",
       "RevGrowth": "0.285",
       "EarnGrowth": "2.0",
       "Signal": "Strong Buy",
@@ -312,7 +302,7 @@
       "Company": "Chagee Holdings Limited",
       "Domain": "investor.chagee.com",
       "Timing": "Before Open",
-      "Price": "10.705",
+      "Price": "10.8",
       "RevGrowth": "0.045",
       "EarnGrowth": "-0.403",
       "Signal": "Neutral",
@@ -330,6 +320,33 @@
       "ema50": 46.52206630516619,
       "avg20_volume": 207800.05,
       "latest_volume": 312701.0
+    },
+    {
+      "symbol": "SAIC",
+      "as_of": "2026-08-28",
+      "close": 125.95999908447266,
+      "ema20": 124.99003493541912,
+      "ema50": 119.76162232006243,
+      "avg20_volume": 406636.75,
+      "latest_volume": 848335.0
+    },
+    {
+      "symbol": "WEX",
+      "as_of": "2026-08-28",
+      "close": 197.32000732421875,
+      "ema20": 191.95959178230058,
+      "ema50": 177.16127449708682,
+      "avg20_volume": 551393.75,
+      "latest_volume": 980275.0
+    },
+    {
+      "symbol": "WHD",
+      "as_of": "2026-08-28",
+      "close": 69.6500015258789,
+      "ema20": 67.69860669639704,
+      "ema50": 63.31674352406153,
+      "avg20_volume": 739473.55,
+      "latest_volume": 1257071.0
     },
     {
       "symbol": "BL",
@@ -654,40 +671,13 @@
       "ema50": 22.891694510040246,
       "avg20_volume": 1433655.0,
       "latest_volume": 2720000.0
-    },
-    {
-      "symbol": "NHC",
-      "as_of": "2026-08-14",
-      "close": 223.58999633789062,
-      "ema20": 219.86870053934888,
-      "ema50": 213.458791963904,
-      "avg20_volume": 112585.0,
-      "latest_volume": 178300.0
-    },
-    {
-      "symbol": "WWW",
-      "as_of": "2026-08-14",
-      "close": 21.030000686645508,
-      "ema20": 19.128747435908362,
-      "ema50": 18.254917165179087,
-      "avg20_volume": 867170.0,
-      "latest_volume": 1304600.0
-    },
-    {
-      "symbol": "MSGS",
-      "as_of": "2026-08-14",
-      "close": 407.1700134277344,
-      "ema20": 397.2588128189459,
-      "ema50": 388.45271032419964,
-      "avg20_volume": 200530.0,
-      "latest_volume": 374200.0
     }
   ],
   "regime_metrics": {
-    "breadth_ratio": 0.28681344074416854,
-    "risk_ratio": 1.9509530489717044,
+    "breadth_ratio": 0.28685255013276445,
+    "risk_ratio": 1.947522611277074,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8302751776847216
+    "vix_term_structure": 0.8255149132189085
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -798,6 +788,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260827195115 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260827205219 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1081)')))"
   ]
 }

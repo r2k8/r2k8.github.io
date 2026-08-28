@@ -1,33 +1,11 @@
 [
   {
-    "symbol": "SAIC",
+    "symbol": "PAHC",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 117.14,
+    "stop_loss_price": 35.03,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
-    ],
-    "signal": {
-      "symbol": "SAIC",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 125.95999908447266,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 1.5%; earnings growth 83.8%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology."
-      ],
-      "generated_at": "2026-08-28 21:53:45.566788+00:00"
-    }
-  },
-  {
-    "symbol": "PAHC",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
       "symbol": "PAHC",
@@ -40,7 +18,7 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Healthcare."
       ],
-      "generated_at": "2026-08-28 21:53:45.566788+00:00"
+      "generated_at": "2026-08-28 22:54:37.566190+00:00"
     }
   },
   {
@@ -63,7 +41,28 @@
         "Volume confirms institutional participation (latest volume >= 20-day average).",
         "Breadth Collapse: Trimming risk despite positive trend."
       ],
-      "generated_at": "2026-08-28 21:53:45.566788+00:00"
+      "generated_at": "2026-08-28 22:54:37.566190+00:00"
+    }
+  },
+  {
+    "symbol": "EWJ",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Buy confidence 0.73 is below threshold 0.78; no action."
+    ],
+    "signal": {
+      "symbol": "EWJ",
+      "signal_type": "buy",
+      "confidence": 0.7333333333333333,
+      "current_price": 95.87000274658203,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 12).",
+        "Volume confirms institutional participation (latest volume >= 20-day average)."
+      ],
+      "generated_at": "2026-08-28 22:54:37.566190+00:00"
     }
   }
 ]

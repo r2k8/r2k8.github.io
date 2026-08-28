@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-28T04:36:53.656691+00:00",
+  "updated_at": "2026-08-28T05:37:59.784132+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -392,8 +392,8 @@
       "close": 7.940000057220459,
       "ema20": 7.00504326162454,
       "ema50": 6.400681952317423,
-      "avg20_volume": 2764472.9,
-      "latest_volume": 4669458.0
+      "avg20_volume": 2775705.0,
+      "latest_volume": 4894100.0
     },
     {
       "symbol": "BLFS",
@@ -403,6 +403,42 @@
       "ema50": 32.1799293631643,
       "avg20_volume": 641010.0,
       "latest_volume": 1222500.0
+    },
+    {
+      "symbol": "NTNX",
+      "as_of": "2026-08-27",
+      "close": 69.83999633789062,
+      "ema20": 64.4080140511192,
+      "ema50": 59.613986767702244,
+      "avg20_volume": 2857030.0,
+      "latest_volume": 8004800.0
+    },
+    {
+      "symbol": "SRPT",
+      "as_of": "2026-08-27",
+      "close": 21.59000015258789,
+      "ema20": 18.40489003807852,
+      "ema50": 17.705079482013776,
+      "avg20_volume": 3005485.0,
+      "latest_volume": 7918700.0
+    },
+    {
+      "symbol": "VYX",
+      "as_of": "2026-08-27",
+      "close": 9.180000305175781,
+      "ema20": 8.227195652938162,
+      "ema50": 8.015319472606722,
+      "avg20_volume": 2348560.0,
+      "latest_volume": 3525200.0
+    },
+    {
+      "symbol": "DLB",
+      "as_of": "2026-08-27",
+      "close": 62.40999984741211,
+      "ema20": 61.55787287489282,
+      "ema50": 57.886883503953385,
+      "avg20_volume": 954195.0,
+      "latest_volume": 1641400.0
     },
     {
       "symbol": "VCTR",
@@ -673,42 +709,6 @@
       "ema50": 42.7115675566159,
       "avg20_volume": 2354539.2,
       "latest_volume": 3557284.0
-    },
-    {
-      "symbol": "FA",
-      "as_of": "2026-08-13",
-      "close": 22.200000762939453,
-      "ema20": 21.237696375735577,
-      "ema50": 19.623720928321973,
-      "avg20_volume": 2654100.0,
-      "latest_volume": 6795100.0
-    },
-    {
-      "symbol": "PJT",
-      "as_of": "2026-08-13",
-      "close": 178.86000061035156,
-      "ema20": 169.1786008941029,
-      "ema50": 164.55180292977792,
-      "avg20_volume": 440090.0,
-      "latest_volume": 813300.0
-    },
-    {
-      "symbol": "SPHR",
-      "as_of": "2026-08-13",
-      "close": 176.3800048828125,
-      "ema20": 154.83504538458777,
-      "ema50": 149.68101397383845,
-      "avg20_volume": 798200.0,
-      "latest_volume": 1581700.0
-    },
-    {
-      "symbol": "GO",
-      "as_of": "2026-08-13",
-      "close": 10.800000190734863,
-      "ema20": 9.752537601501679,
-      "ema50": 9.405914068939564,
-      "avg20_volume": 2709085.0,
-      "latest_volume": 6659300.0
     }
   ],
   "regime_metrics": {
@@ -825,6 +825,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260827043615 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
   ]
 }

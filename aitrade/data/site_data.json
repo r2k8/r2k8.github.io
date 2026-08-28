@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-28T06:38:59.762667+00:00",
+  "updated_at": "2026-08-28T07:39:57.203497+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -450,6 +450,15 @@
       "latest_volume": 432900.0
     },
     {
+      "symbol": "EPAC",
+      "as_of": "2026-08-27",
+      "close": 37.5,
+      "ema20": 36.89290872284256,
+      "ema50": 36.094467216960666,
+      "avg20_volume": 281995.0,
+      "latest_volume": 445100.0
+    },
+    {
       "symbol": "VCTR",
       "as_of": "2026-08-26",
       "close": 120.63999938964844,
@@ -700,22 +709,13 @@
       "ema50": 42.67087576396322,
       "avg20_volume": 580165.0,
       "latest_volume": 1014600.0
-    },
-    {
-      "symbol": "OII",
-      "as_of": "2026-08-14",
-      "close": 52.20000076293945,
-      "ema20": 48.519397023143696,
-      "ema50": 44.87156534308248,
-      "avg20_volume": 1186439.05,
-      "latest_volume": 2031081.0
     }
   ],
   "regime_metrics": {
     "breadth_ratio": 0.2871871403963779,
     "risk_ratio": 1.9906814139851305,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7064264645632469
+    "vix_term_structure": 0.7088607483269378
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -825,6 +825,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260827063822 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260827073919 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

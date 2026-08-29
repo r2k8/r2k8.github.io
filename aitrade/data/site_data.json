@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-29T19:15:28.751599+00:00",
+  "updated_at": "2026-08-29T20:16:12.900146+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -327,8 +327,8 @@
       "close": 23.479999542236328,
       "ema20": 20.64111167883261,
       "ema50": 20.45904975088817,
-      "avg20_volume": 7692461.95,
-      "latest_volume": 26351139.0
+      "avg20_volume": 7693170.0,
+      "latest_volume": 26365300.0
     },
     {
       "symbol": "KFY",
@@ -377,12 +377,12 @@
     },
     {
       "symbol": "PAHC",
-      "as_of": "2026-08-27",
-      "close": 36.349998474121094,
-      "ema20": 35.23866175334646,
-      "ema50": 34.215402335657444,
-      "avg20_volume": 205417.35,
-      "latest_volume": 362747.0
+      "as_of": "2026-08-28",
+      "close": 37.66999816894531,
+      "ema20": 35.470217602451115,
+      "ema50": 34.35087668206089,
+      "avg20_volume": 205415.0,
+      "latest_volume": 362700.0
     },
     {
       "symbol": "BL",
@@ -788,6 +788,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260828201546 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

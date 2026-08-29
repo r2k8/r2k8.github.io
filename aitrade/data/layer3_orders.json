@@ -1,65 +1,68 @@
 [
   {
-    "symbol": "SAIC",
+    "symbol": "BLFS",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 119.93,
+    "stop_loss_price": 33.83,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
     ],
     "signal": {
-      "symbol": "SAIC",
+      "symbol": "BLFS",
       "signal_type": "buy",
       "confidence": 0.8600000000000001,
-      "current_price": 128.9600067138672,
+      "current_price": 36.380001068115234,
       "reasons": [
         "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 1.5%; earnings growth 83.8%.",
+        "Revenue growth 21.5%; earnings growth 0.0%.",
         "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology."
+        "Sector: Healthcare."
       ],
-      "generated_at": "2026-08-29 13:07:18.653529+00:00"
+      "generated_at": "2026-08-29 14:08:25.193935+00:00"
     }
   },
   {
-    "symbol": "XLE",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Buy confidence 0.77 is below threshold 0.78; no action."
-    ],
-    "signal": {
-      "symbol": "XLE",
-      "signal_type": "buy",
-      "confidence": 0.77,
-      "current_price": 62.290000915527344,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 8).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-08-29 13:07:18.653529+00:00"
-    }
-  },
-  {
-    "symbol": "MCHI",
+    "symbol": "GLD",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
     ],
     "signal": {
-      "symbol": "MCHI",
-      "signal_type": "sell",
-      "confidence": 0.7012499999999999,
-      "current_price": 54.900001525878906,
+      "symbol": "GLD",
+      "signal_type": "trim",
+      "confidence": 0.76,
+      "current_price": 408.8900146484375,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 20)."
+        "PORTFOLIO MATCH: You own 1.0 shares.",
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 4).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Breadth Collapse: Trimming risk despite positive trend."
       ],
-      "generated_at": "2026-08-29 13:07:18.653529+00:00"
+      "generated_at": "2026-08-29 14:08:25.193935+00:00"
+    }
+  },
+  {
+    "symbol": "EWJ",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Buy confidence 0.73 is below threshold 0.78; no action."
+    ],
+    "signal": {
+      "symbol": "EWJ",
+      "signal_type": "buy",
+      "confidence": 0.7333333333333333,
+      "current_price": 95.87000274658203,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 12).",
+        "Volume confirms institutional participation (latest volume >= 20-day average)."
+      ],
+      "generated_at": "2026-08-29 14:08:25.193935+00:00"
     }
   }
 ]

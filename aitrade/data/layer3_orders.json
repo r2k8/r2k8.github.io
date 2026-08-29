@@ -18,51 +18,51 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Technology."
       ],
-      "generated_at": "2026-08-29 02:57:52.175130+00:00"
+      "generated_at": "2026-08-29 03:58:50.762000+00:00"
     }
   },
   {
-    "symbol": "GLD",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
-    ],
-    "signal": {
-      "symbol": "GLD",
-      "signal_type": "trim",
-      "confidence": 0.76,
-      "current_price": 408.8900146484375,
-      "reasons": [
-        "PORTFOLIO MATCH: You own 1.0 shares.",
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 4).",
-        "Volume confirms institutional participation (latest volume >= 20-day average).",
-        "Breadth Collapse: Trimming risk despite positive trend."
-      ],
-      "generated_at": "2026-08-29 02:57:52.175130+00:00"
-    }
-  },
-  {
-    "symbol": "EWJ",
+    "symbol": "BLFS",
     "approved": false,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Buy confidence 0.73 is below threshold 0.78; no action."
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
-      "symbol": "EWJ",
+      "symbol": "BLFS",
       "signal_type": "buy",
-      "confidence": 0.7333333333333333,
-      "current_price": 95.87000274658203,
+      "confidence": 0.8600000000000001,
+      "current_price": 36.380001068115234,
       "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 12).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 21.5%; earnings growth 0.0%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Healthcare."
       ],
-      "generated_at": "2026-08-29 02:57:52.175130+00:00"
+      "generated_at": "2026-08-29 03:58:50.762000+00:00"
+    }
+  },
+  {
+    "symbol": "WHD",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "WHD",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 69.6500015258789,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 64.3%; earnings growth 18.9%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Energy."
+      ],
+      "generated_at": "2026-08-29 03:58:50.762000+00:00"
     }
   }
 ]

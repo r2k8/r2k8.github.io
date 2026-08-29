@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-29T07:01:31.856890+00:00",
+  "updated_at": "2026-08-29T08:02:28.140305+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -341,15 +341,6 @@
       "latest_volume": 980275.0
     },
     {
-      "symbol": "WHD",
-      "as_of": "2026-08-28",
-      "close": 69.6500015258789,
-      "ema20": 67.69860669639704,
-      "ema50": 63.31674352406153,
-      "avg20_volume": 739473.55,
-      "latest_volume": 1257071.0
-    },
-    {
       "symbol": "PAHC",
       "as_of": "2026-08-28",
       "close": 37.66999816894531,
@@ -375,6 +366,15 @@
       "ema50": 79.92113252556082,
       "avg20_volume": 312339.9,
       "latest_volume": 532598.0
+    },
+    {
+      "symbol": "WHD",
+      "as_of": "2026-08-27",
+      "close": 68.52999877929688,
+      "ema20": 67.49319671434631,
+      "ema50": 63.05824319745674,
+      "avg20_volume": 739473.55,
+      "latest_volume": 1257071.0
     },
     {
       "symbol": "SAIC",
@@ -797,6 +797,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260828070054 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260828080149 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

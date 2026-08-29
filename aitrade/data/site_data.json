@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-29T06:00:36.835221+00:00",
+  "updated_at": "2026-08-29T07:01:31.856890+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -251,13 +251,27 @@
   },
   "earnings_radar": [
     {
-      "Date": "2026-08-26",
-      "Symbol": "CRWD",
-      "Company": "CrowdStrike Holdings, Inc.",
-      "Domain": "crowdstrike.com",
+      "Date": "2026-09-02",
+      "Symbol": "AVGO",
+      "Company": "Broadcom Inc.",
+      "Domain": "broadcom.com",
       "Timing": "After Close",
-      "Price": "218.4",
-      "RevGrowth": "0.258",
+      "Price": "368.79",
+      "RevGrowth": "0.479",
+      "EarnGrowth": "0.854",
+      "Signal": "Strong Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-01",
+      "Symbol": "PANW",
+      "Company": "Palo Alto Networks, Inc.",
+      "Domain": "paloaltonetworks.com",
+      "Timing": "After Close",
+      "Price": "371.59",
+      "RevGrowth": "0.311",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
       "EPS_Estimate": "",
@@ -265,14 +279,42 @@
       "Source": "yahoo"
     },
     {
-      "Date": "2026-08-26",
-      "Symbol": "CRM",
-      "Company": "Salesforce, Inc.",
-      "Domain": "salesforce.com",
+      "Date": "2026-09-02",
+      "Symbol": "SNOW",
+      "Company": "Snowflake Inc.",
+      "Domain": "snowflake.com",
       "Timing": "After Close",
-      "Price": "256.0",
-      "RevGrowth": "0.108",
-      "EarnGrowth": "1.189",
+      "Price": "328.0",
+      "RevGrowth": "0.335",
+      "EarnGrowth": "0.0",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-01",
+      "Symbol": "MDB",
+      "Company": "MongoDB, Inc.",
+      "Domain": "mongodb.com",
+      "Timing": "After Close",
+      "Price": "446.62",
+      "RevGrowth": "0.252",
+      "EarnGrowth": "0.0",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-03",
+      "Symbol": "ZS",
+      "Company": "Zscaler, Inc.",
+      "Domain": "zscaler.com",
+      "Timing": "After Close",
+      "Price": "184.23",
+      "RevGrowth": "0.254",
+      "EarnGrowth": "0.0",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
@@ -288,15 +330,6 @@
       "ema50": 46.52206630516619,
       "avg20_volume": 207800.05,
       "latest_volume": 312701.0
-    },
-    {
-      "symbol": "SAIC",
-      "as_of": "2026-08-28",
-      "close": 125.95999908447266,
-      "ema20": 124.99003493541912,
-      "ema50": 119.76162232006243,
-      "avg20_volume": 406644.1,
-      "latest_volume": 848482.0
     },
     {
       "symbol": "WEX",
@@ -342,6 +375,15 @@
       "ema50": 79.92113252556082,
       "avg20_volume": 312339.9,
       "latest_volume": 532598.0
+    },
+    {
+      "symbol": "SAIC",
+      "as_of": "2026-08-27",
+      "close": 128.9600067138672,
+      "ema20": 124.88793344604507,
+      "ema50": 119.5086273500865,
+      "avg20_volume": 406644.1,
+      "latest_volume": 848482.0
     },
     {
       "symbol": "BLFS",
@@ -755,6 +797,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260828055957 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260828070054 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

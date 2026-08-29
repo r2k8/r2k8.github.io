@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-29T00:56:07.539280+00:00",
+  "updated_at": "2026-08-29T01:56:51.560702+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -325,6 +325,15 @@
       "latest_volume": 26351139.0
     },
     {
+      "symbol": "KFY",
+      "as_of": "2026-08-28",
+      "close": 86.27999877929688,
+      "ema20": 83.53479209608282,
+      "ema50": 79.92113252556082,
+      "avg20_volume": 312339.9,
+      "latest_volume": 532598.0
+    },
+    {
       "symbol": "BL",
       "as_of": "2026-08-27",
       "close": 33.720001220703125,
@@ -620,15 +629,6 @@
       "ema50": 134.38223347202123,
       "avg20_volume": 472036.75,
       "latest_volume": 1519335.0
-    },
-    {
-      "symbol": "CHEF",
-      "as_of": "2026-08-14",
-      "close": 109.08000183105469,
-      "ema20": 106.24013778509548,
-      "ema50": 99.05314495132309,
-      "avg20_volume": 743095.0,
-      "latest_volume": 2760400.0
     }
   ],
   "regime_metrics": {
@@ -746,6 +746,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260828005539 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260828015625 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1081)')))"
   ]
 }

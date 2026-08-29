@@ -1,68 +1,43 @@
 [
   {
-    "symbol": "WEX",
+    "symbol": "XLE",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Buy confidence 0.77 is below threshold 0.78; no action."
+    ],
+    "signal": {
+      "symbol": "XLE",
+      "signal_type": "buy",
+      "confidence": 0.77,
+      "current_price": 62.290000915527344,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 8).",
+        "Volume confirms institutional participation (latest volume >= 20-day average)."
+      ],
+      "generated_at": "2026-08-29 04:59:41.448535+00:00"
+    }
+  },
+  {
+    "symbol": "MCHI",
     "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 183.51,
-    "warnings": [
-      "Sized by risk: max loss about $7.00 at 7% hard stop."
-    ],
-    "signal": {
-      "symbol": "WEX",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 197.32000732421875,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 14.2%; earnings growth 57.1%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology."
-      ],
-      "generated_at": "2026-08-29 03:58:50.762000+00:00"
-    }
-  },
-  {
-    "symbol": "BLFS",
-    "approved": false,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "BLFS",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 36.380001068115234,
+      "symbol": "MCHI",
+      "signal_type": "sell",
+      "confidence": 0.7012499999999999,
+      "current_price": 54.900001525878906,
       "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 21.5%; earnings growth 0.0%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Healthcare."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 20)."
       ],
-      "generated_at": "2026-08-29 03:58:50.762000+00:00"
-    }
-  },
-  {
-    "symbol": "WHD",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "WHD",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 69.6500015258789,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 64.3%; earnings growth 18.9%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Energy."
-      ],
-      "generated_at": "2026-08-29 03:58:50.762000+00:00"
+      "generated_at": "2026-08-29 04:59:41.448535+00:00"
     }
   }
 ]

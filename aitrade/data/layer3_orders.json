@@ -1,33 +1,11 @@
 [
   {
-    "symbol": "GAP",
+    "symbol": "BLFS",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 21.84,
+    "stop_loss_price": 33.83,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
-    ],
-    "signal": {
-      "symbol": "GAP",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 23.479999542236328,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth -2.0%; earnings growth 142.1%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Consumer Cyclical."
-      ],
-      "generated_at": "2026-08-30 09:30:47.237254+00:00"
-    }
-  },
-  {
-    "symbol": "BLFS",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
       "symbol": "BLFS",
@@ -40,7 +18,29 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Healthcare."
       ],
-      "generated_at": "2026-08-30 09:30:47.237254+00:00"
+      "generated_at": "2026-08-30 10:31:54.511609+00:00"
+    }
+  },
+  {
+    "symbol": "PAHC",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "PAHC",
+      "signal_type": "buy",
+      "confidence": 0.8,
+      "current_price": 37.66999816894531,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 4.8%; earnings growth 24.6%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Healthcare."
+      ],
+      "generated_at": "2026-08-30 10:31:54.511609+00:00"
     }
   },
   {
@@ -63,7 +63,7 @@
         "Volume confirms institutional participation (latest volume >= 20-day average).",
         "Breadth Collapse: Trimming risk despite positive trend."
       ],
-      "generated_at": "2026-08-30 09:30:47.237254+00:00"
+      "generated_at": "2026-08-30 10:31:54.511609+00:00"
     }
   }
 ]

@@ -1,46 +1,24 @@
 [
   {
-    "symbol": "DINO",
+    "symbol": "PRGS",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 94.5,
+    "stop_loss_price": 43.03,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
     ],
     "signal": {
-      "symbol": "DINO",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 101.61000061035156,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 53.2%; earnings growth 350.2%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Energy."
-      ],
-      "generated_at": "2026-08-31 22:34:37.410146+00:00"
-    }
-  },
-  {
-    "symbol": "PAHC",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "PAHC",
+      "symbol": "PRGS",
       "signal_type": "buy",
       "confidence": 0.8,
-      "current_price": 37.7400016784668,
+      "current_price": 46.27000045776367,
       "reasons": [
         "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 4.8%; earnings growth 24.6%.",
+        "Revenue growth 6.8%; earnings growth 28.2%.",
         "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Healthcare."
+        "Sector: Technology."
       ],
-      "generated_at": "2026-08-31 22:34:37.410146+00:00"
+      "generated_at": "2026-08-31 23:35:31.369619+00:00"
     }
   },
   {
@@ -61,7 +39,28 @@
         "Positive capital flow (Rank 5).",
         "Volume confirms institutional participation (latest volume >= 20-day average)."
       ],
-      "generated_at": "2026-08-31 22:34:37.410146+00:00"
+      "generated_at": "2026-08-31 23:35:31.369619+00:00"
+    }
+  },
+  {
+    "symbol": "HYG",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Buy confidence 0.73 is below threshold 0.78; no action."
+    ],
+    "signal": {
+      "symbol": "HYG",
+      "signal_type": "buy",
+      "confidence": 0.7333333333333333,
+      "current_price": 79.80999755859375,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 12).",
+        "Volume confirms institutional participation (latest volume >= 20-day average)."
+      ],
+      "generated_at": "2026-08-31 23:35:31.369619+00:00"
     }
   },
   {
@@ -81,7 +80,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 17)."
       ],
-      "generated_at": "2026-08-31 22:34:37.410146+00:00"
+      "generated_at": "2026-08-31 23:35:31.369619+00:00"
     }
   },
   {
@@ -101,7 +100,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 11)."
       ],
-      "generated_at": "2026-08-31 22:34:37.410146+00:00"
+      "generated_at": "2026-08-31 23:35:31.369619+00:00"
     }
   }
 ]

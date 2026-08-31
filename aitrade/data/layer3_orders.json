@@ -1,68 +1,62 @@
 [
   {
-    "symbol": "WHD",
-    "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 64.77,
-    "warnings": [
-      "Sized by risk: max loss about $7.00 at 7% hard stop."
-    ],
-    "signal": {
-      "symbol": "WHD",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 69.6500015258789,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 64.3%; earnings growth 18.9%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Energy."
-      ],
-      "generated_at": "2026-08-31 13:24:03.622211+00:00"
-    }
-  },
-  {
-    "symbol": "GLD",
+    "symbol": "TLT",
     "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "GLD",
-      "signal_type": "trim",
-      "confidence": 0.76,
-      "current_price": 408.8900146484375,
+      "symbol": "TLT",
+      "signal_type": "sell",
+      "confidence": 0.7012345679012345,
+      "current_price": 82.23500061035156,
       "reasons": [
-        "PORTFOLIO MATCH: You own 1.0 shares.",
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 4).",
-        "Volume confirms institutional participation (latest volume >= 20-day average).",
-        "Breadth Collapse: Trimming risk despite positive trend."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 19)."
       ],
-      "generated_at": "2026-08-31 13:24:03.622211+00:00"
+      "generated_at": "2026-08-31 14:25:16.255703+00:00"
     }
   },
   {
-    "symbol": "EWJ",
-    "approved": false,
+    "symbol": "MCHI",
+    "approved": true,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Buy confidence 0.73 is below threshold 0.78; no action."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "EWJ",
-      "signal_type": "buy",
-      "confidence": 0.7333333333333333,
-      "current_price": 95.87000274658203,
+      "symbol": "MCHI",
+      "signal_type": "sell",
+      "confidence": 0.7012048192771084,
+      "current_price": 54.970001220703125,
       "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 12).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 17)."
       ],
-      "generated_at": "2026-08-31 13:24:03.622211+00:00"
+      "generated_at": "2026-08-31 14:25:16.255703+00:00"
+    }
+  },
+  {
+    "symbol": "LQD",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "LQD",
+      "signal_type": "sell",
+      "confidence": 0.7011764705882353,
+      "current_price": 106.07499694824219,
+      "reasons": [
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 15)."
+      ],
+      "generated_at": "2026-08-31 14:25:16.255703+00:00"
     }
   }
 ]

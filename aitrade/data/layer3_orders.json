@@ -1,22 +1,67 @@
 [
   {
-    "symbol": "LQD",
+    "symbol": "BLFS",
     "approved": true,
+    "target_position_size_usd": 100.0,
+    "stop_loss_price": 34.48,
+    "warnings": [
+      "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "BLFS",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 37.06999969482422,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 21.5%; earnings growth 0.0%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Healthcare."
+      ],
+      "generated_at": "2026-08-31 20:32:45.540091+00:00"
+    }
+  },
+  {
+    "symbol": "VIR",
+    "approved": false,
     "target_position_size_usd": 0.0,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
-      "symbol": "LQD",
-      "signal_type": "sell",
-      "confidence": 0.7012345679012345,
-      "current_price": 106.20500183105469,
+      "symbol": "VIR",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 10.9399995803833,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 19)."
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 19582.5%; earnings growth 0.0%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Healthcare."
       ],
-      "generated_at": "2026-08-31 19:31:11.748553+00:00"
+      "generated_at": "2026-08-31 20:32:45.540091+00:00"
+    }
+  },
+  {
+    "symbol": "XLE",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "XLE",
+      "signal_type": "buy",
+      "confidence": 0.782,
+      "current_price": 63.959999084472656,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 5).",
+        "Volume confirms institutional participation (latest volume >= 20-day average)."
+      ],
+      "generated_at": "2026-08-31 20:32:45.540091+00:00"
     }
   },
   {
@@ -30,13 +75,33 @@
     "signal": {
       "symbol": "MCHI",
       "signal_type": "sell",
-      "confidence": 0.7011904761904761,
-      "current_price": 54.79999923706055,
+      "confidence": 0.7012048192771084,
+      "current_price": 54.720001220703125,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 16)."
+        "Capital Outflows (Rank 17)."
       ],
-      "generated_at": "2026-08-31 19:31:11.748553+00:00"
+      "generated_at": "2026-08-31 20:32:45.540091+00:00"
+    }
+  },
+  {
+    "symbol": "IWM",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "IWM",
+      "signal_type": "sell",
+      "confidence": 0.701123595505618,
+      "current_price": 293.92999267578125,
+      "reasons": [
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 11)."
+      ],
+      "generated_at": "2026-08-31 20:32:45.540091+00:00"
     }
   }
 ]

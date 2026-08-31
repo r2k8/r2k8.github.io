@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-31T07:17:40.933079+00:00",
+  "updated_at": "2026-08-31T08:18:46.412388+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -87,8 +87,8 @@
     {
       "symbol": "^VIX",
       "name": "Volatility Index",
-      "as_of": "2026-08-28",
-      "price_change_pct": -0.09756094360677366,
+      "as_of": "2026-08-31",
+      "price_change_pct": -0.0456535054837765,
       "dollar_volume": 0.0,
       "relative_flow_score": -0.0,
       "direction": "flat",
@@ -705,7 +705,7 @@
     "breadth_ratio": 0.28685255013276445,
     "risk_ratio": 1.947522611277074,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.702531629113382
+    "vix_term_structure": 0.7429405817283067
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -816,6 +816,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260830071659 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260830081803 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

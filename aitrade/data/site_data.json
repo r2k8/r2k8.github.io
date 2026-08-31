@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-08-30T23:08:50.979031+00:00",
+  "updated_at": "2026-08-31T00:09:55.128834+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -306,6 +306,34 @@
       "RevGrowth": "0.254",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-31",
+      "Symbol": "SAIC",
+      "Company": "Science Applications Internatio",
+      "Domain": "saic.com",
+      "Timing": "Before Open",
+      "Price": "125.96",
+      "RevGrowth": "0.015",
+      "EarnGrowth": "0.838",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-08-31",
+      "Symbol": "KEN",
+      "Company": "Kenon Holdings Ltd.",
+      "Domain": "kenon-holdings.com",
+      "Timing": "Before Open",
+      "Price": "67.23",
+      "RevGrowth": "0.732",
+      "EarnGrowth": "1.227",
+      "Signal": "Strong Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
@@ -788,6 +816,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260830000912 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

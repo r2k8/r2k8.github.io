@@ -1,24 +1,22 @@
 [
   {
-    "symbol": "SAIC",
+    "symbol": "LQD",
     "approved": true,
-    "target_position_size_usd": 100.0,
-    "stop_loss_price": 119.95,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
     "warnings": [
-      "Sized by risk: max loss about $7.00 at 7% hard stop."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SAIC",
-      "signal_type": "buy",
-      "confidence": 0.8600000000000001,
-      "current_price": 128.97500610351562,
+      "symbol": "LQD",
+      "signal_type": "sell",
+      "confidence": 0.7012345679012345,
+      "current_price": 106.20500183105469,
       "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 1.5%; earnings growth 83.8%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 19)."
       ],
-      "generated_at": "2026-08-31 18:30:14.804900+00:00"
+      "generated_at": "2026-08-31 19:31:11.748553+00:00"
     }
   },
   {
@@ -32,33 +30,13 @@
     "signal": {
       "symbol": "MCHI",
       "signal_type": "sell",
-      "confidence": 0.7012048192771084,
-      "current_price": 54.86000061035156,
+      "confidence": 0.7011904761904761,
+      "current_price": 54.79999923706055,
       "reasons": [
         "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 17)."
+        "Capital Outflows (Rank 16)."
       ],
-      "generated_at": "2026-08-31 18:30:14.804900+00:00"
-    }
-  },
-  {
-    "symbol": "LQD",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "LQD",
-      "signal_type": "sell",
-      "confidence": 0.7011764705882353,
-      "current_price": 106.13500213623047,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 15)."
-      ],
-      "generated_at": "2026-08-31 18:30:14.804900+00:00"
+      "generated_at": "2026-08-31 19:31:11.748553+00:00"
     }
   }
 ]

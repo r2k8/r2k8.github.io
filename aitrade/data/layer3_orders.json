@@ -1,89 +1,6 @@
 [
   {
-    "symbol": "CNO",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
-    "stop_loss_price": null,
-    "warnings": [
-      "Signal is hold; no action."
-    ],
-    "signal": {
-      "symbol": "CNO",
-      "signal_type": "hold",
-      "confidence": 0.8600000000000001,
-      "current_price": 54.790000915527344,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 11.6%; earnings growth 46.2%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Financial Services.",
-        "Data quality unsafe; blocking new buys.",
-        "Data quality status is 'degraded', not 'ok'.",
-        "Data quality reports feed warnings; new buys are blocked.",
-        "agentic_portfolio.json is missing."
-      ],
-      "generated_at": "2026-09-01 09:07:36.543528+00:00"
-    }
-  },
-  {
-    "symbol": "PRGS",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
-    "stop_loss_price": null,
-    "warnings": [
-      "Signal is hold; no action."
-    ],
-    "signal": {
-      "symbol": "PRGS",
-      "signal_type": "hold",
-      "confidence": 0.8,
-      "current_price": 46.27000045776367,
-      "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 6.8%; earnings growth 28.2%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology.",
-        "Data quality unsafe; blocking new buys.",
-        "Data quality status is 'degraded', not 'ok'.",
-        "Data quality reports feed warnings; new buys are blocked.",
-        "agentic_portfolio.json is missing."
-      ],
-      "generated_at": "2026-09-01 09:07:36.543528+00:00"
-    }
-  },
-  {
-    "symbol": "XLE",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
-    "stop_loss_price": null,
-    "warnings": [
-      "Signal is hold; no action."
-    ],
-    "signal": {
-      "symbol": "XLE",
-      "signal_type": "hold",
-      "confidence": 0.782,
-      "current_price": 63.959999084472656,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 5).",
-        "Volume confirms institutional participation (latest volume >= 20-day average).",
-        "Data quality unsafe; blocking new buys.",
-        "Data quality status is 'degraded', not 'ok'.",
-        "Data quality reports feed warnings; new buys are blocked.",
-        "agentic_portfolio.json is missing."
-      ],
-      "generated_at": "2026-09-01 09:07:36.543528+00:00"
-    }
-  },
-  {
-    "symbol": "MCHI",
+    "symbol": "QQQ",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
@@ -93,37 +10,81 @@
       "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "MCHI",
-      "signal_type": "sell",
-      "confidence": 0.7012048192771084,
-      "current_price": 54.720001220703125,
+      "symbol": "QQQ",
+      "signal_type": "liquidate",
+      "confidence": 0.88,
+      "current_price": 707.4299926757812,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 17)."
+        "PORTFOLIO MATCH: You own 0.135655 shares.",
+        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: SMH.",
+        "Semiconductor proxy is below its 20-day trend.",
+        "Nasdaq/growth proxy is below its 20-day trend.",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-01 09:07:36.543528+00:00"
+      "generated_at": "2026-09-01 13:56:17.132274+00:00"
     }
   },
   {
-    "symbol": "IWM",
+    "symbol": "SOXX",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Avoid signal: blocks new long exposure."
     ],
     "signal": {
-      "symbol": "IWM",
-      "signal_type": "sell",
-      "confidence": 0.701123595505618,
-      "current_price": 293.92999267578125,
+      "symbol": "SOXX",
+      "signal_type": "avoid",
+      "confidence": 0.84,
+      "current_price": 497.8500061035156,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 11)."
+        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: SMH.",
+        "Semiconductor proxy is below its 20-day trend.",
+        "Nasdaq/growth proxy is below its 20-day trend.",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-01 09:07:36.543528+00:00"
+      "generated_at": "2026-09-01 13:56:17.132274+00:00"
+    }
+  },
+  {
+    "symbol": "SMH",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "shares": null,
+    "actual_notional_usd": null,
+    "stop_loss_price": null,
+    "warnings": [
+      "Avoid signal: blocks new long exposure."
+    ],
+    "signal": {
+      "symbol": "SMH",
+      "signal_type": "avoid",
+      "confidence": 0.84,
+      "current_price": 543.75,
+      "reasons": [
+        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: SMH.",
+        "Semiconductor proxy is below its 20-day trend.",
+        "Nasdaq/growth proxy is below its 20-day trend.",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+      ],
+      "generated_at": "2026-09-01 13:56:17.132274+00:00"
     }
   }
 ]

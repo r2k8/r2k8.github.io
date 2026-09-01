@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-09-01T04:42:46.703774+00:00",
+  "updated_at": "2026-09-01T05:44:20.062532+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -364,6 +364,20 @@
     },
     {
       "Date": "2026-09-01",
+      "Symbol": "NIO",
+      "Company": "NIO Inc.",
+      "Domain": "nio.com",
+      "Timing": "Before Open",
+      "Price": "4.23",
+      "RevGrowth": "1.122",
+      "EarnGrowth": "0.0",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-01",
       "Symbol": "SBSW",
       "Company": "D/B/A Sibanye-Stillwater Limite",
       "Domain": "sibanyestillwater.com",
@@ -440,8 +454,8 @@
       "close": 128.22000122070312,
       "ema20": 125.22514746733644,
       "ema50": 120.7253566132338,
-      "avg20_volume": 456985.3,
-      "latest_volume": 1855306.0
+      "avg20_volume": 457100.0,
+      "latest_volume": 1857600.0
     },
     {
       "symbol": "BLFS",
@@ -458,17 +472,17 @@
       "close": 10.9399995803833,
       "ema20": 9.87784168546583,
       "ema50": 9.526573424465749,
-      "avg20_volume": 1709128.65,
-      "latest_volume": 3046473.0
+      "avg20_volume": 1709130.0,
+      "latest_volume": 3046500.0
     },
     {
       "symbol": "DINO",
       "as_of": "2026-08-31",
       "close": 101.61000061035156,
-      "ema20": 93.50077774562142,
-      "ema50": 87.01001661463482,
-      "avg20_volume": 2542922.7,
-      "latest_volume": 4071154.0
+      "ema20": 92.8281278650819,
+      "ema50": 86.48860876428388,
+      "avg20_volume": 2638170.0,
+      "latest_volume": 4071600.0
     },
     {
       "symbol": "CVI",
@@ -492,10 +506,10 @@
       "symbol": "CNO",
       "as_of": "2026-08-31",
       "close": 54.790000915527344,
-      "ema20": 54.4048926227653,
-      "ema50": 53.14511286122933,
-      "avg20_volume": 692015.25,
-      "latest_volume": 1543705.0
+      "ema20": 54.30911700141797,
+      "ema50": 53.055229553049486,
+      "avg20_volume": 705010.0,
+      "latest_volume": 1543700.0
     },
     {
       "symbol": "PRGS",
@@ -914,6 +928,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260831044137 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260831054313 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

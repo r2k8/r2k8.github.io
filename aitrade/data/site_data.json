@@ -1,6 +1,6 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-09-01T06:46:04.220397+00:00",
+  "updated_at": "2026-09-01T09:07:33.390619+00:00",
   "top_inflows": [
     {
       "symbol": "SPY",
@@ -420,20 +420,6 @@
     },
     {
       "Date": "2026-09-01",
-      "Symbol": "MMED",
-      "Company": "MiniMed Group, Inc.",
-      "Domain": "minimed.com",
-      "Timing": "Before Open",
-      "Price": "20.26",
-      "RevGrowth": "0.156",
-      "EarnGrowth": "0.0",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-09-01",
       "Symbol": "KEN",
       "Company": "Kenon Holdings Ltd.",
       "Domain": "kenon-holdings.com",
@@ -506,9 +492,9 @@
       "symbol": "CNO",
       "as_of": "2026-08-31",
       "close": 54.790000915527344,
-      "ema20": 54.30911700141797,
-      "ema50": 53.055229553049486,
-      "avg20_volume": 705010.0,
+      "ema20": 54.4048926227653,
+      "ema50": 53.14511286122933,
+      "avg20_volume": 692015.0,
       "latest_volume": 1543700.0
     },
     {
@@ -813,7 +799,7 @@
     "breadth_ratio": 0.286017864390949,
     "risk_ratio": 1.9587628634304715,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.7263875078513301
+    "vix_term_structure": 0.7648490427413223
   },
   "sentiment": {
     "fear_score": 0.0,
@@ -928,6 +914,6 @@
     }
   },
   "warnings": [
-    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)"
+    "GDELT fetch failed: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Max retries exceeded with url: /api/v2/doc/doc?query=war&mode=artlist&format=json&maxrecords=20&sort=datedesc&startdatetime=20260831090626 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
   ]
 }

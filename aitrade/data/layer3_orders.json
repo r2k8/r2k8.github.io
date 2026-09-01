@@ -13,7 +13,7 @@
       "symbol": "QQQ",
       "signal_type": "liquidate",
       "confidence": 0.88,
-      "current_price": 707.219970703125,
+      "current_price": 707.6400146484375,
       "reasons": [
         "PORTFOLIO MATCH: You own 0.135655 shares.",
         "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
@@ -26,7 +26,7 @@
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-01 14:00:08.736060+00:00"
+      "generated_at": "2026-09-01 20:15:54.923032+00:00"
     }
   },
   {
@@ -43,7 +43,7 @@
       "symbol": "SOXX",
       "signal_type": "avoid",
       "confidence": 0.84,
-      "current_price": 497.0849914550781,
+      "current_price": 500.30999755859375,
       "reasons": [
         "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
         "News narrative includes geopolitical/oil-shock language.",
@@ -55,7 +55,7 @@
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-01 14:00:08.736060+00:00"
+      "generated_at": "2026-09-01 20:15:54.923032+00:00"
     }
   },
   {
@@ -72,7 +72,7 @@
       "symbol": "SMH",
       "signal_type": "avoid",
       "confidence": 0.84,
-      "current_price": 543.0499877929688,
+      "current_price": 545.219970703125,
       "reasons": [
         "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
         "News narrative includes geopolitical/oil-shock language.",
@@ -84,7 +84,30 @@
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-01 14:00:08.736060+00:00"
+      "generated_at": "2026-09-01 20:15:54.923032+00:00"
+    }
+  },
+  {
+    "symbol": "XLE",
+    "approved": true,
+    "target_position_size_usd": 64.77,
+    "shares": 1,
+    "actual_notional_usd": 64.77,
+    "stop_loss_price": 60.24,
+    "warnings": [
+      "Sized by risk: 1 shares for $64.77 (max loss ~$4.53 at the hard stop)."
+    ],
+    "signal": {
+      "symbol": "XLE",
+      "signal_type": "buy",
+      "confidence": 0.79,
+      "current_price": 64.7699966430664,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 4).",
+        "Volume confirms institutional participation (latest volume >= 20-day average)."
+      ],
+      "generated_at": "2026-09-01 20:15:54.923032+00:00"
     }
   }
 ]

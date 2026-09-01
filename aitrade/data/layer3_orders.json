@@ -1,11 +1,55 @@
 [
   {
-    "symbol": "PRGS",
+    "symbol": "CNO",
     "approved": true,
     "target_position_size_usd": 100.0,
-    "stop_loss_price": 43.03,
+    "stop_loss_price": 50.95,
     "warnings": [
       "Sized by risk: max loss about $7.00 at 7% hard stop."
+    ],
+    "signal": {
+      "symbol": "CNO",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 54.790000915527344,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 11.6%; earnings growth 46.2%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Financial Services."
+      ],
+      "generated_at": "2026-09-01 00:36:33.821163+00:00"
+    }
+  },
+  {
+    "symbol": "VIR",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
+    ],
+    "signal": {
+      "symbol": "VIR",
+      "signal_type": "buy",
+      "confidence": 0.8600000000000001,
+      "current_price": 10.9399995803833,
+      "reasons": [
+        "Business-quality breakout: revenue or earnings growth indicates real demand.",
+        "Revenue growth 19582.5%; earnings growth 0.0%.",
+        "Price trend and volume confirm the market is recognizing the business strength.",
+        "Sector: Healthcare."
+      ],
+      "generated_at": "2026-09-01 00:36:33.821163+00:00"
+    }
+  },
+  {
+    "symbol": "PRGS",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "stop_loss_price": null,
+    "warnings": [
+      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
     ],
     "signal": {
       "symbol": "PRGS",
@@ -18,49 +62,7 @@
         "Price trend and volume confirm the market is recognizing the business strength.",
         "Sector: Technology."
       ],
-      "generated_at": "2026-08-31 23:35:31.369619+00:00"
-    }
-  },
-  {
-    "symbol": "XLE",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Skipping: Only the top 1 highest-conviction buy is allowed per run."
-    ],
-    "signal": {
-      "symbol": "XLE",
-      "signal_type": "buy",
-      "confidence": 0.782,
-      "current_price": 63.959999084472656,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 5).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-08-31 23:35:31.369619+00:00"
-    }
-  },
-  {
-    "symbol": "HYG",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "stop_loss_price": null,
-    "warnings": [
-      "Buy confidence 0.73 is below threshold 0.78; no action."
-    ],
-    "signal": {
-      "symbol": "HYG",
-      "signal_type": "buy",
-      "confidence": 0.7333333333333333,
-      "current_price": 79.80999755859375,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 12).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-08-31 23:35:31.369619+00:00"
+      "generated_at": "2026-09-01 00:36:33.821163+00:00"
     }
   },
   {
@@ -80,7 +82,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 17)."
       ],
-      "generated_at": "2026-08-31 23:35:31.369619+00:00"
+      "generated_at": "2026-09-01 00:36:33.821163+00:00"
     }
   },
   {
@@ -100,7 +102,7 @@
         "Price broke below moving averages (Downtrend).",
         "Capital Outflows (Rank 11)."
       ],
-      "generated_at": "2026-08-31 23:35:31.369619+00:00"
+      "generated_at": "2026-09-01 00:36:33.821163+00:00"
     }
   }
 ]

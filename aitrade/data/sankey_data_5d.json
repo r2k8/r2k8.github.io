@@ -71,6 +71,13 @@
       "depth": 4
     },
     {
+      "name": "NET",
+      "itemStyle": {
+        "color": "#10b981"
+      },
+      "depth": 4
+    },
+    {
       "name": "MDB",
       "itemStyle": {
         "color": "#10b981"
@@ -141,13 +148,6 @@
       "depth": 4
     },
     {
-      "name": "NET",
-      "itemStyle": {
-        "color": "#10b981"
-      },
-      "depth": 4
-    },
-    {
       "name": "Mega-Cap Tech",
       "itemStyle": {
         "color": "#10b981"
@@ -204,14 +204,14 @@
       "depth": 4
     },
     {
-      "name": "QCOM",
+      "name": "GOOGL",
       "itemStyle": {
-        "color": "#10b981"
+        "color": "#ef4444"
       },
       "depth": 4
     },
     {
-      "name": "GOOGL",
+      "name": "QCOM",
       "itemStyle": {
         "color": "#10b981"
       },
@@ -628,6 +628,17 @@
     },
     {
       "source": "AI & Cloud Growth",
+      "target": "NET",
+      "value": 32.94,
+      "net_flow_dollars": 329392844.45202893,
+      "market_cap_delta": 7988036143.1390295,
+      "lineStyle": {
+        "color": "#10b981",
+        "opacity": 0.35
+      }
+    },
+    {
+      "source": "AI & Cloud Growth",
       "target": "MDB",
       "value": 32.14,
       "net_flow_dollars": 321388524.45240426,
@@ -737,17 +748,6 @@
       }
     },
     {
-      "source": "AI & Cloud Growth",
-      "target": "NET",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
-      "lineStyle": {
-        "color": "#10b981",
-        "opacity": 0.35
-      }
-    },
-    {
       "source": "USA",
       "target": "Mega-Cap Tech",
       "value": 17.6,
@@ -837,21 +837,21 @@
     },
     {
       "source": "Mega-Cap Tech",
-      "target": "QCOM",
-      "value": 34.49,
-      "net_flow_dollars": 344852996.49603385,
-      "market_cap_delta": 12763318256.40329,
+      "target": "GOOGL",
+      "value": 65.17,
+      "net_flow_dollars": -651697190.5942596,
+      "market_cap_delta": -51102891120.62297,
       "lineStyle": {
-        "color": "#10b981",
+        "color": "#ef4444",
         "opacity": 0.35
       }
     },
     {
       "source": "Mega-Cap Tech",
-      "target": "GOOGL",
-      "value": 1,
-      "net_flow_dollars": 0.0,
-      "market_cap_delta": 0.0,
+      "target": "QCOM",
+      "value": 34.49,
+      "net_flow_dollars": 344852996.49603385,
+      "market_cap_delta": 12763318256.40329,
       "lineStyle": {
         "color": "#10b981",
         "opacity": 0.35
@@ -1346,7 +1346,7 @@
     "title": "Bull Market (Buying)",
     "liquidity": "Flowing IN (Positive)",
     "inflow": "NVDA / CRM / MU / TSLA / CRWD",
-    "outflow": "GLD / LLY / AMZN / NKE / ASML",
+    "outflow": "GLD / LLY / GOOGL / AMZN / NKE",
     "health": "Optimal"
   },
   "discovery_radar": [
@@ -1457,6 +1457,15 @@
       "earn_growth": 1.084,
       "dollar_volume": 78311120.39601643,
       "price_change": -0.01522557538254822
+    },
+    {
+      "symbol": "INSW",
+      "name": "International Seaways, Inc.",
+      "sector": "Energy",
+      "rev_growth": 1.401,
+      "earn_growth": 3.731,
+      "dollar_volume": 201640735.8158277,
+      "price_change": -0.013106559383207256
     },
     {
       "symbol": "DFIN",
@@ -1700,16 +1709,7 @@
       "earn_growth": -0.249,
       "dollar_volume": 1578403536.8883665,
       "price_change": 0.11294597660729651
-    },
-    {
-      "symbol": "UGI",
-      "name": "UGI Corporation",
-      "sector": "Utilities",
-      "rev_growth": -0.045,
-      "earn_growth": 0,
-      "dollar_volume": 222210110.40680757,
-      "price_change": 0.006808084915932323
     }
   ],
-  "last_updated": "2026-09-01 03:41:26 UTC"
+  "last_updated": "2026-09-01 04:43:02 UTC"
 }

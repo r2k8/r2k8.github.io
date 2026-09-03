@@ -13,19 +13,18 @@
       "symbol": "QQQ",
       "signal_type": "liquidate",
       "confidence": 0.88,
-      "current_price": 709.239990234375,
+      "current_price": 717.6699829101562,
       "reasons": [
         "PORTFOLIO MATCH: You own 0.135655 shares.",
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
         "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
         "Semiconductor proxy is below its 20-day trend.",
-        "Nasdaq/growth proxy is below its 20-day trend.",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
         "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-02 20:15:50.509139+00:00"
+      "generated_at": "2026-09-03 20:17:58.986605+00:00"
     }
   },
   {
@@ -42,18 +41,17 @@
       "symbol": "SOXX",
       "signal_type": "avoid",
       "confidence": 0.84,
-      "current_price": 501.44000244140625,
+      "current_price": 502.20001220703125,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
         "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
         "Semiconductor proxy is below its 20-day trend.",
-        "Nasdaq/growth proxy is below its 20-day trend.",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
         "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-02 20:15:50.509139+00:00"
+      "generated_at": "2026-09-03 20:17:58.986605+00:00"
     }
   },
   {
@@ -70,41 +68,17 @@
       "symbol": "SMH",
       "signal_type": "avoid",
       "confidence": 0.84,
-      "current_price": 550.47998046875,
+      "current_price": 552.5999755859375,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
         "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
         "Semiconductor proxy is below its 20-day trend.",
-        "Nasdaq/growth proxy is below its 20-day trend.",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
         "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-02 20:15:50.509139+00:00"
-    }
-  },
-  {
-    "symbol": "XLE",
-    "approved": true,
-    "target_position_size_usd": 65.1,
-    "shares": 1,
-    "actual_notional_usd": 65.1,
-    "stop_loss_price": 60.54,
-    "warnings": [
-      "Sized by risk: 1 shares for $65.10 (max loss ~$4.56 at the hard stop)."
-    ],
-    "signal": {
-      "symbol": "XLE",
-      "signal_type": "buy",
-      "confidence": 0.782,
-      "current_price": 65.0999984741211,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 5).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
-      ],
-      "generated_at": "2026-09-02 20:15:50.509139+00:00"
+      "generated_at": "2026-09-03 20:17:58.986605+00:00"
     }
   },
   {
@@ -115,19 +89,48 @@
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Buy confidence 0.76 is below threshold 0.78; no action."
+      "Signal is hold; no action."
     ],
     "signal": {
       "symbol": "XLF",
-      "signal_type": "buy",
-      "confidence": 0.7606666666666667,
-      "current_price": 57.65999984741211,
+      "signal_type": "hold",
+      "confidence": 0.7623076923076924,
+      "current_price": 58.54999923706055,
       "reasons": [
         "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 15).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
+        "Positive capital flow (Rank 13).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Data quality unsafe; blocking new buys.",
+        "Data quality status is 'degraded', not 'ok'.",
+        "agentic_portfolio.json is stale (older than 2:00:00)."
       ],
-      "generated_at": "2026-09-02 20:15:50.509139+00:00"
+      "generated_at": "2026-09-03 20:17:58.986605+00:00"
+    }
+  },
+  {
+    "symbol": "SPY",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "shares": null,
+    "actual_notional_usd": null,
+    "stop_loss_price": null,
+    "warnings": [
+      "Signal is hold; no action."
+    ],
+    "signal": {
+      "symbol": "SPY",
+      "signal_type": "hold",
+      "confidence": 0.7377777777777778,
+      "current_price": 773.1500244140625,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 9).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Data quality unsafe; blocking new buys.",
+        "Data quality status is 'degraded', not 'ok'.",
+        "agentic_portfolio.json is stale (older than 2:00:00)."
+      ],
+      "generated_at": "2026-09-03 20:17:58.986605+00:00"
     }
   },
   {
@@ -138,19 +141,22 @@
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Buy confidence 0.73 is below threshold 0.78; no action."
+      "Signal is hold; no action."
     ],
     "signal": {
       "symbol": "EWJ",
-      "signal_type": "buy",
-      "confidence": 0.7323076923076923,
-      "current_price": 96.04000091552734,
+      "signal_type": "hold",
+      "confidence": 0.7314285714285714,
+      "current_price": 97.9000015258789,
       "reasons": [
         "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 13).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
+        "Positive capital flow (Rank 14).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Data quality unsafe; blocking new buys.",
+        "Data quality status is 'degraded', not 'ok'.",
+        "agentic_portfolio.json is stale (older than 2:00:00)."
       ],
-      "generated_at": "2026-09-02 20:15:50.509139+00:00"
+      "generated_at": "2026-09-03 20:17:58.986605+00:00"
     }
   }
 ]

@@ -1,30 +1,5 @@
 [
   {
-    "symbol": "EWY",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
-    "stop_loss_price": null,
-    "warnings": [
-      "Signal is hold; no action."
-    ],
-    "signal": {
-      "symbol": "EWY",
-      "signal_type": "hold",
-      "confidence": 0.88,
-      "current_price": 188.8699951171875,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 1).",
-        "Volume confirms institutional participation (latest volume >= 20-day average).",
-        "Data quality unsafe; blocking new buys.",
-        "agentic_portfolio.json is stale (older than 2:00:00)."
-      ],
-      "generated_at": "2026-09-07 20:17:58.783916+00:00"
-    }
-  },
-  {
     "symbol": "XLE",
     "approved": false,
     "target_position_size_usd": 0.0,
@@ -38,7 +13,7 @@
       "symbol": "XLE",
       "signal_type": "hold",
       "confidence": 0.8033333333333333,
-      "current_price": 64.05999755859375,
+      "current_price": 64.7699966430664,
       "reasons": [
         "Price is in a clean uptrend (Close > EMA20 > EMA50).",
         "Positive capital flow (Rank 3).",
@@ -46,7 +21,7 @@
         "Data quality unsafe; blocking new buys.",
         "agentic_portfolio.json is stale (older than 2:00:00)."
       ],
-      "generated_at": "2026-09-07 20:17:58.783916+00:00"
+      "generated_at": "2026-09-08 20:17:11.585557+00:00"
     }
   },
   {
@@ -62,38 +37,46 @@
     "signal": {
       "symbol": "QQQ",
       "signal_type": "trim",
-      "confidence": 0.7428571428571429,
-      "current_price": 718.9600219726562,
+      "confidence": 0.8,
+      "current_price": 718.3599853515625,
       "reasons": [
         "PORTFOLIO MATCH: You own 0.135655 shares.",
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 7).",
-        "Volume confirms institutional participation (latest volume >= 20-day average).",
-        "Breadth Collapse: Trimming risk despite positive trend."
+        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: QQQ.",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-07 20:17:58.783916+00:00"
+      "generated_at": "2026-09-08 20:17:11.585557+00:00"
     }
   },
   {
-    "symbol": "HYG",
+    "symbol": "SOXX",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Avoid signal: blocks new long exposure."
     ],
     "signal": {
-      "symbol": "HYG",
-      "signal_type": "sell",
-      "confidence": 0.7011627906976744,
-      "current_price": 79.16000366210938,
+      "symbol": "SOXX",
+      "signal_type": "avoid",
+      "confidence": 0.76,
+      "current_price": 528.4000244140625,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 14)."
+        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: QQQ.",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-07 20:17:58.783916+00:00"
+      "generated_at": "2026-09-08 20:17:11.585557+00:00"
     }
   },
   {
@@ -104,40 +87,23 @@
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
+      "Avoid signal: blocks new long exposure."
     ],
     "signal": {
       "symbol": "SMH",
-      "signal_type": "sell",
-      "confidence": 0.701111111111111,
-      "current_price": 567.010009765625,
+      "signal_type": "avoid",
+      "confidence": 0.76,
+      "current_price": 573.72998046875,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 10)."
+        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
+        "News narrative includes geopolitical/oil-shock language.",
+        "AI/semiconductor assets showing outflows: QQQ.",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
+        "AI/semiconductor proxy closes back above its 20-day trend.",
+        "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-07 20:17:58.783916+00:00"
-    }
-  },
-  {
-    "symbol": "TLT",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "TLT",
-      "signal_type": "sell",
-      "confidence": 0.701098901098901,
-      "current_price": 82.20999908447266,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 9)."
-      ],
-      "generated_at": "2026-09-07 20:17:58.783916+00:00"
+      "generated_at": "2026-09-08 20:17:11.585557+00:00"
     }
   }
 ]

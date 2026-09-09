@@ -1,30 +1,5 @@
 [
   {
-    "symbol": "XLE",
-    "approved": false,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
-    "stop_loss_price": null,
-    "warnings": [
-      "Signal is hold; no action."
-    ],
-    "signal": {
-      "symbol": "XLE",
-      "signal_type": "hold",
-      "confidence": 0.8033333333333333,
-      "current_price": 64.7699966430664,
-      "reasons": [
-        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 3).",
-        "Volume confirms institutional participation (latest volume >= 20-day average).",
-        "Data quality unsafe; blocking new buys.",
-        "agentic_portfolio.json is stale (older than 2:00:00)."
-      ],
-      "generated_at": "2026-09-08 20:17:11.585557+00:00"
-    }
-  },
-  {
     "symbol": "QQQ",
     "approved": true,
     "target_position_size_usd": 0.0,
@@ -32,51 +7,69 @@
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
       "symbol": "QQQ",
-      "signal_type": "trim",
-      "confidence": 0.8,
-      "current_price": 718.3599853515625,
+      "signal_type": "liquidate",
+      "confidence": 0.95,
+      "current_price": 716.3099975585938,
       "reasons": [
-        "PORTFOLIO MATCH: You own 0.135655 shares.",
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: QQQ.",
+        "Severe sell-off in VGK (-2.2% intra-day).",
+        "Severe sell-off in MCHI (-6.3% intra-day).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Macro Regime: Panic. Liquidating owned risk exposure.",
+        "PORTFOLIO MATCH: You own 0.135655 shares."
       ],
-      "generated_at": "2026-09-08 20:17:11.585557+00:00"
+      "generated_at": "2026-09-09 20:17:25.704352+00:00"
     }
   },
   {
-    "symbol": "SOXX",
+    "symbol": "SPY",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SOXX",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 528.4000244140625,
+      "symbol": "SPY",
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 762.4000244140625,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: QQQ.",
+        "Severe sell-off in VGK (-2.2% intra-day).",
+        "Severe sell-off in MCHI (-6.3% intra-day).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-09-08 20:17:11.585557+00:00"
+      "generated_at": "2026-09-09 20:17:25.704352+00:00"
+    }
+  },
+  {
+    "symbol": "IWM",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "shares": null,
+    "actual_notional_usd": null,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "IWM",
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 290.6499938964844,
+      "reasons": [
+        "Severe sell-off in VGK (-2.2% intra-day).",
+        "Severe sell-off in MCHI (-6.3% intra-day).",
+        "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
+      ],
+      "generated_at": "2026-09-09 20:17:25.704352+00:00"
     }
   },
   {
@@ -87,23 +80,20 @@
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
       "symbol": "SMH",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 573.72998046875,
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 574.2899780273438,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "News narrative includes geopolitical/oil-shock language.",
-        "AI/semiconductor assets showing outflows: QQQ.",
+        "Severe sell-off in VGK (-2.2% intra-day).",
+        "Severe sell-off in MCHI (-6.3% intra-day).",
         "Market Breadth Collapse: Equal-weight S&P (RSP) is significantly underperforming Cap-weight (SPY). Rally is fragile.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "AI/semiconductor proxy closes back above its 20-day trend.",
-        "AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-09-08 20:17:11.585557+00:00"
+      "generated_at": "2026-09-09 20:17:25.704352+00:00"
     }
   }
 ]

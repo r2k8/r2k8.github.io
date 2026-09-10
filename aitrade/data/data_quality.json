@@ -3,11 +3,14 @@
     "coverage": 0.9524,
     "expected": 21,
     "missing_symbols": [
-      "LQD"
+      "XLF"
     ],
     "observed": 20
   },
-  "generated_at": "2026-09-09T20:17:18.149170+00:00",
+  "degradation_reasons": [
+    "Missing capital-flow data for: XLF."
+  ],
+  "generated_at": "2026-09-10T20:19:33.466610+00:00",
   "market": {
     "coverage": 1.0,
     "expected": 22,
@@ -22,14 +25,15 @@
       "policy_shock": false,
       "war": false
     },
-    "items": 0,
-    "sector_article_count": 0
+    "items": 34,
+    "sector_article_count": 2
   },
   "notes": [
     "Layer 2 should block new buys when safe_for_layer2 is false.",
-    "Zero news can be degraded without being unsafe because price/flow data may still be usable."
+    "New entries require market, capital-flow, and narrative/event-risk coverage."
   ],
   "safe_for_layer2": true,
+  "safe_for_new_entries": false,
   "status": "degraded",
   "warnings": []
 }

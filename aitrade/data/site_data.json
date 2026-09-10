@@ -1,108 +1,88 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-09-09T20:17:18.149170+00:00",
+  "updated_at": "2026-09-10T20:19:33.466610+00:00",
   "top_inflows": [
-    {
-      "symbol": "GLD",
-      "name": "Gold",
-      "as_of": "2026-09-09",
-      "price_change_pct": 0.0020122162801200355,
-      "dollar_volume": 4951967972.245207,
-      "relative_flow_score": 9964430.572384804,
-      "direction": "inflow",
-      "rank": 12
-    },
-    {
-      "symbol": "SMH",
-      "name": "Semiconductors",
-      "as_of": "2026-09-09",
-      "price_change_pct": 0.00857028347407225,
-      "dollar_volume": 3863373074.106372,
-      "relative_flow_score": 33110202.411189545,
-      "direction": "inflow",
-      "rank": 7
-    },
     {
       "symbol": "EWY",
       "name": "South Korea",
-      "as_of": "2026-09-09",
-      "price_change_pct": 0.16987498493952236,
-      "dollar_volume": 2548185894.916378,
-      "relative_flow_score": 432873040.522023,
+      "as_of": "2026-09-10",
+      "price_change_pct": 0.09292031078513693,
+      "dollar_volume": 2533610355.286194,
+      "relative_flow_score": 235423861.62163433,
       "direction": "inflow",
-      "rank": 1
+      "rank": 3
     },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "as_of": "2026-09-09",
-      "price_change_pct": 0.08524422112667825,
-      "dollar_volume": 1619457626.849839,
-      "relative_flow_score": 138049404.04847327,
+      "as_of": "2026-09-10",
+      "price_change_pct": 0.06564910520212511,
+      "dollar_volume": 1671548903.7852783,
+      "relative_flow_score": 109735689.83509664,
       "direction": "inflow",
       "rank": 5
     },
     {
-      "symbol": "XLK",
-      "name": "Technology",
-      "as_of": "2026-09-09",
-      "price_change_pct": 0.00831895519557161,
-      "dollar_volume": 1131925611.4307008,
-      "relative_flow_score": 9416438.446212,
+      "symbol": "EWJ",
+      "name": "Japan",
+      "as_of": "2026-09-10",
+      "price_change_pct": 0.0016618577496677394,
+      "dollar_volume": 351630746.0692841,
+      "relative_flow_score": 584360.2803766888,
       "direction": "inflow",
-      "rank": 13
+      "rank": 18
     }
   ],
   "top_outflows": [
     {
       "symbol": "SPY",
       "name": "U.S. Large Cap",
-      "as_of": "2026-09-09",
-      "price_change_pct": -0.013751089194401975,
-      "dollar_volume": 27917548756.633717,
-      "relative_flow_score": -383896703.0415362,
+      "as_of": "2026-09-10",
+      "price_change_pct": -0.016442565082925704,
+      "dollar_volume": 28254884972.659546,
+      "relative_flow_score": -464582785.073534,
       "direction": "outflow",
-      "rank": 2
+      "rank": 1
     },
     {
       "symbol": "QQQ",
       "name": "Nasdaq Growth",
-      "as_of": "2026-09-09",
-      "price_change_pct": -0.006325686447599277,
-      "dollar_volume": 22036418076.01656,
-      "relative_flow_score": -139395471.1770897,
+      "as_of": "2026-09-10",
+      "price_change_pct": -0.013584813974242816,
+      "dollar_volume": 22092239900.515022,
+      "relative_flow_score": -300118969.32284117,
       "direction": "outflow",
-      "rank": 4
+      "rank": 2
     },
     {
       "symbol": "IWM",
       "name": "U.S. Small Cap",
-      "as_of": "2026-09-09",
-      "price_change_pct": -0.03110212930243867,
-      "dollar_volume": 5049955158.079028,
-      "relative_flow_score": -157064358.29809105,
+      "as_of": "2026-09-10",
+      "price_change_pct": -0.04395488520547834,
+      "dollar_volume": 5203296538.562561,
+      "relative_flow_score": -228710302.0425802,
       "direction": "outflow",
-      "rank": 3
+      "rank": 4
     },
     {
-      "symbol": "HYG",
-      "name": "High Yield Bonds",
-      "as_of": "2026-09-09",
-      "price_change_pct": -0.006290890524432539,
-      "dollar_volume": 2441902340.527379,
-      "relative_flow_score": -15361740.29561333,
+      "symbol": "GLD",
+      "name": "Gold",
+      "as_of": "2026-09-10",
+      "price_change_pct": -0.011472481548152143,
+      "dollar_volume": 4940940585.499262,
+      "relative_flow_score": -56684849.697656326,
       "direction": "outflow",
-      "rank": 10
+      "rank": 8
     },
     {
-      "symbol": "TLT",
-      "name": "Long Treasury Bonds",
-      "as_of": "2026-09-09",
-      "price_change_pct": -0.0040213771810622915,
-      "dollar_volume": 2326906217.2431107,
-      "relative_flow_score": -9357367.56449342,
+      "symbol": "SMH",
+      "name": "Semiconductors",
+      "as_of": "2026-09-10",
+      "price_change_pct": -0.022079422513432305,
+      "dollar_volume": 3823323080.0094604,
+      "relative_flow_score": -84416765.68888623,
       "direction": "outflow",
-      "rank": 14
+      "rank": 7
     }
   ],
   "sankey": {
@@ -110,288 +90,310 @@
       {
         "source": "Global Liquidity",
         "target": "US Equities",
-        "value": 59999.22067626637
+        "value": 60501.47455173644
       },
       {
         "source": "US Equities",
         "target": "Broad Market",
-        "value": 27917.548756633718
+        "value": 28254.884972659547
       },
       {
         "source": "Broad Market",
         "target": "SPY (-0.0%)",
-        "value": 27917.548756633718
-      },
-      {
-        "source": "US Equities",
-        "target": "Small Caps",
-        "value": 5049.9551580790285
-      },
-      {
-        "source": "Small Caps",
-        "target": "IWM (-0.0%)",
-        "value": 5049.9551580790285
+        "value": 28254.884972659547
       },
       {
         "source": "US Equities",
         "target": "Growth",
-        "value": 23168.34368744726
+        "value": 23219.96996050487
       },
       {
         "source": "Growth",
         "target": "QQQ (-0.0%)",
-        "value": 22036.41807601656
+        "value": 22092.239900515022
+      },
+      {
+        "source": "US Equities",
+        "target": "Small Caps",
+        "value": 5203.296538562561
+      },
+      {
+        "source": "Small Caps",
+        "target": "IWM (-0.0%)",
+        "value": 5203.296538562561
       },
       {
         "source": "Global Liquidity",
         "target": "Cyclicals",
-        "value": 5245.854562846642
+        "value": 3682.9752163253625
       },
       {
         "source": "Cyclicals",
         "target": "Energy",
-        "value": 1619.457626849839
+        "value": 1671.5489037852783
       },
       {
         "source": "Energy",
         "target": "XLE (+0.1%)",
-        "value": 1619.457626849839
+        "value": 1671.5489037852783
       },
       {
         "source": "Cyclicals",
         "target": "Industrials",
-        "value": 1163.6614669425132
+        "value": 1191.9093868411142
       },
       {
         "source": "Industrials",
         "target": "XLI (-0.1%)",
-        "value": 1163.6614669425132
+        "value": 1191.9093868411142
       },
       {
         "source": "US Equities",
         "target": "Semiconductors",
-        "value": 3863.373074106372
+        "value": 3823.32308000946
       },
       {
         "source": "Semiconductors",
-        "target": "SMH (+0.0%)",
-        "value": 3863.373074106372
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Financials",
-        "value": 1658.9649244841341
-      },
-      {
-        "source": "Financials",
-        "target": "XLF (-0.0%)",
-        "value": 1658.9649244841341
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Consumer Staples",
-        "value": 803.7705445701561
-      },
-      {
-        "source": "Consumer Staples",
-        "target": "XLP (-0.0%)",
-        "value": 803.7705445701561
+        "target": "SMH (-0.0%)",
+        "value": 3823.32308000946
       },
       {
         "source": "Global Liquidity",
         "target": "Defensives",
-        "value": 9442.261708988151
-      },
-      {
-        "source": "Defensives",
-        "target": "Healthcare",
-        "value": 1311.2172056043808
-      },
-      {
-        "source": "Healthcare",
-        "target": "XLV (-0.0%)",
-        "value": 1311.2172056043808
+        "value": 9596.772578556285
       },
       {
         "source": "Defensives",
         "target": "Precious Metals",
-        "value": 4951.9679722452065
+        "value": 4940.940585499262
       },
       {
         "source": "Precious Metals",
-        "target": "GLD (+0.0%)",
-        "value": 4951.9679722452065
-      },
-      {
-        "source": "Growth",
-        "target": "XLK (+0.0%)",
-        "value": 1131.9256114307009
+        "target": "GLD (-0.0%)",
+        "value": 4940.940585499262
       },
       {
         "source": "Defensives",
         "target": "Treasuries",
-        "value": 2326.906217243111
+        "value": 2480.1487810135864
       },
       {
         "source": "Treasuries",
         "target": "TLT (-0.0%)",
-        "value": 2326.906217243111
+        "value": 2480.1487810135864
       },
       {
         "source": "Defensives",
         "target": "Utilities",
-        "value": 852.1703138954529
+        "value": 861.0707638205173
       },
       {
         "source": "Utilities",
         "target": "XLU (-0.0%)",
-        "value": 852.1703138954529
+        "value": 861.0707638205173
+      },
+      {
+        "source": "Defensives",
+        "target": "Healthcare",
+        "value": 1314.6124482229202
+      },
+      {
+        "source": "Healthcare",
+        "target": "XLV (-0.0%)",
+        "value": 1314.6124482229202
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Consumer Staples",
+        "value": 819.5169256989701
+      },
+      {
+        "source": "Consumer Staples",
+        "target": "XLP (-0.0%)",
+        "value": 819.5169256989701
+      },
+      {
+        "source": "Growth",
+        "target": "XLK (-0.0%)",
+        "value": 1127.7300599898483
       }
     ]
   },
   "earnings_radar": [
     {
-      "Date": "2026-09-09",
-      "Symbol": "COO",
-      "Company": "The Cooper Companies, Inc.",
-      "Domain": "coopercos.com",
+      "Date": "2026-09-10",
+      "Symbol": "ORCL",
+      "Company": "Oracle Corporation",
+      "Domain": "oracle.com",
       "Timing": "After Close",
-      "Price": "63.48",
-      "RevGrowth": "0.079",
-      "EarnGrowth": "0.0",
-      "Signal": "Buy",
+      "Price": "153.17",
+      "RevGrowth": "0.206",
+      "EarnGrowth": "0.219",
+      "Signal": "Strong Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
     },
     {
-      "Date": "2026-09-09",
-      "Symbol": "SAIL",
-      "Company": "SailPoint, Inc.",
-      "Domain": "sailpoint.com",
-      "Timing": "Before Open",
-      "Price": "17.58",
-      "RevGrowth": "0.216",
-      "EarnGrowth": "0.0",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-09-09",
-      "Symbol": "CHWY",
-      "Company": "Chewy, Inc.",
-      "Domain": "chewy.com",
-      "Timing": "Before Open",
-      "Price": "20.75",
-      "RevGrowth": "0.077",
-      "EarnGrowth": "0.527",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-09-09",
-      "Symbol": "CNM",
-      "Company": "Core & Main, Inc.",
-      "Domain": "coreandmain.com",
-      "Timing": "Before Open",
-      "Price": "41.6",
-      "RevGrowth": "-0.001",
-      "EarnGrowth": "0.094",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-09-09",
-      "Symbol": "AVAV",
-      "Company": "AeroVironment, Inc.",
-      "Domain": "avinc.com",
+      "Date": "2026-09-10",
+      "Symbol": "ADBE",
+      "Company": "Adobe Inc.",
+      "Domain": "adobe.com",
       "Timing": "After Close",
-      "Price": "140.8",
-      "RevGrowth": "1.333",
-      "EarnGrowth": "0.0",
+      "Price": "248.83",
+      "RevGrowth": "0.127",
+      "EarnGrowth": "0.079",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
     },
     {
-      "Date": "2026-09-09",
-      "Symbol": "NAVN",
-      "Company": "Navan, Inc.",
-      "Domain": "navan.com",
+      "Date": "2026-09-10",
+      "Symbol": "SUHJY",
+      "Company": "Sun Hung Kai Properties Ltd.",
+      "Domain": "shkp.com",
+      "Timing": "Before Open",
+      "Price": "15.3",
+      "RevGrowth": "0.32",
+      "EarnGrowth": "0.362",
+      "Signal": "Strong Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-10",
+      "Symbol": "SUHJF",
+      "Company": "Sun Hung Kai Properties Ltd.",
+      "Domain": "shkp.com",
+      "Timing": "Before Open",
+      "Price": "14.95",
+      "RevGrowth": "0.32",
+      "EarnGrowth": "0.362",
+      "Signal": "Strong Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-10",
+      "Symbol": "CPRT",
+      "Company": "Copart, Inc.",
+      "Domain": "copart.com",
       "Timing": "After Close",
-      "Price": "25.89",
-      "RevGrowth": "0.399",
-      "EarnGrowth": "0.0",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-09-09",
-      "Symbol": "KFY",
-      "Company": "Korn Ferry",
-      "Domain": "kornferry.com",
-      "Timing": "Before Open",
-      "Price": "81.13",
-      "RevGrowth": "0.067",
-      "EarnGrowth": "0.15",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    },
-    {
-      "Date": "2026-09-09",
-      "Symbol": "SIG",
-      "Company": "Signet Jewelers Limited",
-      "Domain": "signetjewelers.com",
-      "Timing": "Before Open",
-      "Price": "102.41",
-      "RevGrowth": "0.008",
-      "EarnGrowth": "0.0",
+      "Price": "30.75",
+      "RevGrowth": "0.021",
+      "EarnGrowth": "0.023",
       "Signal": "Neutral",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
     },
     {
-      "Date": "2026-09-09",
-      "Symbol": "ASO",
-      "Company": "Academy Sports and Outdoors, In",
-      "Domain": "academy.com",
+      "Date": "2026-09-10",
+      "Symbol": "SKHSF",
+      "Company": "SEKISUI HOUSE",
+      "Domain": "sekisuihouse.co.jp",
       "Timing": "Before Open",
-      "Price": "51.15",
-      "RevGrowth": "0.067",
-      "EarnGrowth": "0.176",
+      "Price": "20.748",
+      "RevGrowth": "0.017",
+      "EarnGrowth": "0.752",
       "Signal": "Buy",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
     },
     {
-      "Date": "2026-09-09",
-      "Symbol": "AEO",
-      "Company": "American Eagle Outfitters, Inc.",
-      "Domain": "aeo-inc.com",
-      "Timing": "After Close",
-      "Price": "16.92",
-      "RevGrowth": "0.097",
+      "Date": "2026-09-11",
+      "Symbol": "VFS",
+      "Company": "VinFast Auto Ltd.",
+      "Domain": "vinfastauto.us",
+      "Timing": "Before Open",
+      "Price": "3.01",
+      "RevGrowth": "0.417",
       "EarnGrowth": "0.0",
       "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-10",
+      "Symbol": "DSGX",
+      "Company": "The Descartes Systems Group Inc",
+      "Domain": "descartes.com",
+      "Timing": "After Close",
+      "Price": "71.32",
+      "RevGrowth": "0.147",
+      "EarnGrowth": "0.341",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-10",
+      "Symbol": "M",
+      "Company": "Macy's Inc",
+      "Domain": "macysinc.com",
+      "Timing": "Before Open",
+      "Price": "20.5",
+      "RevGrowth": "0.021",
+      "EarnGrowth": "0.769",
+      "Signal": "Buy",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-10",
+      "Symbol": "FIZZ",
+      "Company": "National Beverage Corp.",
+      "Domain": "nationalbeverage.com",
+      "Timing": "After Close",
+      "Price": "30.91",
+      "RevGrowth": "-0.053",
+      "EarnGrowth": "-0.085",
+      "Signal": "Avoid",
+      "EPS_Estimate": "",
+      "RevenueEstimate": "",
+      "Source": "yahoo"
+    },
+    {
+      "Date": "2026-09-10",
+      "Symbol": "RH",
+      "Company": "RH",
+      "Domain": "rh.com",
+      "Timing": "After Close",
+      "Price": "133.89",
+      "RevGrowth": "-0.017",
+      "EarnGrowth": "0.0",
+      "Signal": "Neutral",
       "EPS_Estimate": "",
       "RevenueEstimate": "",
       "Source": "yahoo"
     }
   ],
   "discovery_radar": [
+    {
+      "symbol": "CVI",
+      "as_of": "2026-09-10",
+      "close": 48.599998474121094,
+      "ema20": 41.48850014516543,
+      "ema50": 37.24674566101881,
+      "avg20_volume": 983464.35,
+      "latest_volume": 1655987.0
+    },
+    {
+      "symbol": "QRVO",
+      "as_of": "2026-09-10",
+      "close": 112.36000061035156,
+      "ema20": 99.55865151709615,
+      "ema50": 96.34602928277732,
+      "avg20_volume": 1017834.6,
+      "latest_volume": 2253792.0
+    },
     {
       "symbol": "HRMY",
       "as_of": "2026-09-09",
@@ -526,15 +528,6 @@
       "ema50": 86.48860876428388,
       "avg20_volume": 2638170.0,
       "latest_volume": 4071600.0
-    },
-    {
-      "symbol": "CVI",
-      "as_of": "2026-08-31",
-      "close": 41.86000061035156,
-      "ema20": 37.316987025626744,
-      "ema50": 35.06535437649976,
-      "avg20_volume": 913861.45,
-      "latest_volume": 1677829.0
     },
     {
       "symbol": "PAHC",
@@ -742,26 +735,17 @@
       "ema50": 36.094467216960666,
       "avg20_volume": 281995.0,
       "latest_volume": 445100.0
-    },
-    {
-      "symbol": "VCTR",
-      "as_of": "2026-08-26",
-      "close": 120.63999938964844,
-      "ema20": 111.80260585929618,
-      "ema50": 103.18376292051543,
-      "avg20_volume": 620510.0,
-      "latest_volume": 1138900.0
     }
   ],
   "regime_metrics": {
-    "breadth_ratio": 0.2815319943813074,
-    "risk_ratio": 2.002566906917363,
+    "breadth_ratio": 0.2812677222932255,
+    "risk_ratio": 1.9700014726482005,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8741369703220401
+    "vix_term_structure": 0.9105608703446335
   },
   "sentiment": {
-    "fear_score": 0.0,
-    "bullish_score": 0.0,
+    "fear_score": 0.03676470588235294,
+    "bullish_score": 0.03676470588235294,
     "events": {
       "war": false,
       "policy_shock": false,
@@ -789,9 +773,12 @@
         "symbol": "XLE",
         "name": "Energy",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.13,
+        "articles": 2,
+        "top_headlines": [
+          "Houthis take Yemeni port city , threaten Saudi oil exports",
+          "Lioness Episode 7 : Does This Picture Spoil How It Ends ? "
+        ]
       },
       "XLF": {
         "symbol": "XLF",
@@ -844,31 +831,37 @@
     }
   },
   "narrative": {
-    "state": "calm",
-    "ai_unwind_score": 0.175,
-    "geopolitical_score": 0.0,
+    "state": "ai_unwind",
+    "ai_unwind_score": 1.0,
+    "geopolitical_score": 0.5,
     "reasons": [
-      "AI/semiconductor assets showing outflows: QQQ."
+      "News narrative includes geopolitical/oil-shock language.",
+      "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
+      "Semiconductor proxy is below its 20-day trend.",
+      "Nasdaq/growth proxy is below its 20-day trend."
     ],
-    "rebound_watch": [],
+    "rebound_watch": [
+      "AI/semiconductor proxy closes back above its 20-day trend.",
+      "AI/semiconductor outflows stop or reverse for two consecutive runs.",
+      "QQQ stops underperforming SPY.",
+      "VIX/fear score cools while earnings revisions remain positive."
+    ],
     "forecast": {
-      "next_day_rebound_probability": 0.62,
-      "next_week_rebound_probability": 0.85,
-      "next_month_base_probability": 0.89,
-      "next_day_rebound_estimate": 0.62,
-      "next_week_rebound_estimate": 0.85,
-      "next_month_base_estimate": 0.89,
+      "next_day_rebound_probability": 0.05,
+      "next_week_rebound_probability": 0.2,
+      "next_month_base_probability": 0.41,
+      "next_day_rebound_estimate": 0.05,
+      "next_week_rebound_estimate": 0.2,
+      "next_month_base_estimate": 0.41,
       "calibrated": false,
-      "rebound_score": 7,
-      "buy_zone": "re-entry",
+      "rebound_score": 2,
+      "buy_zone": "avoid",
       "reasons": [
-        "Semiconductor proxy is back above its 20-day trend.",
-        "Semiconductor flow has turned positive.",
-        "QQQ is back above its 20-day trend.",
         "QQQ is stabilizing versus SPY.",
-        "VIX/fear proxy is below elevated-stress levels."
+        "VIX/fear proxy is below elevated-stress levels.",
+        "Semiconductor outflows are still active."
       ],
-      "interpretation": "Re-entry conditions are improving; normal risk process may resume."
+      "interpretation": "Do not add. Forced selling/crowded-trade unwind still dominates."
     }
   },
   "warnings": []

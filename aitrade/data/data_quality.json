@@ -1,17 +1,38 @@
 {
   "capital_flow": {
-    "coverage": 0.9524,
+    "coverage": 1.0,
     "expected": 21,
-    "missing_symbols": [
-      "XLF"
-    ],
-    "observed": 20
+    "missing_symbols": [],
+    "observed": 21,
+    "stale_symbols": []
   },
-  "degradation_reasons": [
-    "Missing capital-flow data for: XLF."
-  ],
-  "generated_at": "2026-09-10T20:19:33.466610+00:00",
+  "degradation_reasons": [],
+  "generated_at": "2026-09-11T20:19:02.063694+00:00",
   "market": {
+    "as_of_by_symbol": {
+      "CPER": "2026-09-11",
+      "EWJ": "2026-09-11",
+      "EWY": "2026-09-11",
+      "GLD": "2026-09-11",
+      "HYG": "2026-09-11",
+      "IWM": "2026-09-11",
+      "LQD": "2026-09-11",
+      "MCHI": "2026-09-11",
+      "QQQ": "2026-09-11",
+      "RSP": "2026-09-11",
+      "SMH": "2026-09-11",
+      "SOXX": "2026-09-11",
+      "SPHB": "2026-09-11",
+      "SPLV": "2026-09-11",
+      "SPY": "2026-09-11",
+      "TLT": "2026-09-11",
+      "UUP": "2026-09-11",
+      "VGK": "2026-09-11",
+      "XLE": "2026-09-11",
+      "XLF": "2026-09-11",
+      "^VIX": "2026-09-11",
+      "^VIX3M": "2026-09-11"
+    },
     "coverage": 1.0,
     "expected": 22,
     "missing_symbols": [],
@@ -22,18 +43,18 @@
     "event_flags": {
       "banking_stress": false,
       "oil_shock": false,
-      "policy_shock": false,
-      "war": false
+      "policy_shock": true,
+      "war": true
     },
-    "items": 34,
-    "sector_article_count": 2
+    "items": 79,
+    "sector_article_count": 5
   },
   "notes": [
     "Layer 2 should block new buys when safe_for_layer2 is false.",
     "New entries require market, capital-flow, and narrative/event-risk coverage."
   ],
   "safe_for_layer2": true,
-  "safe_for_new_entries": false,
-  "status": "degraded",
+  "safe_for_new_entries": true,
+  "status": "ok",
   "warnings": []
 }

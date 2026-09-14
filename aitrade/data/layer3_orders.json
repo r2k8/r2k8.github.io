@@ -13,16 +13,20 @@
       "symbol": "QQQ",
       "signal_type": "liquidate",
       "confidence": 0.88,
-      "current_price": 714.8800048828125,
+      "current_price": 709.1799926757812,
       "reasons": [
         "PORTFOLIO MATCH: You own 0.135655 shares.",
+        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
         "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
+        "Korea proxy EWY is under acute daily pressure (-6.6%, bar dated 2026-09-14).",
+        "Semiconductor proxy is below its 20-day trend.",
+        "Nasdaq/growth proxy is below its 20-day trend.",
         "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-11 20:19:06.973610+00:00"
+      "generated_at": "2026-09-14 20:17:23.989738+00:00"
     }
   },
   {
@@ -39,15 +43,19 @@
       "symbol": "SOXX",
       "signal_type": "avoid",
       "confidence": 0.84,
-      "current_price": 527.0700073242188,
+      "current_price": 497.3999938964844,
       "reasons": [
+        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
         "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
+        "Korea proxy EWY is under acute daily pressure (-6.6%, bar dated 2026-09-14).",
+        "Semiconductor proxy is below its 20-day trend.",
+        "Nasdaq/growth proxy is below its 20-day trend.",
         "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-11 20:19:06.973610+00:00"
+      "generated_at": "2026-09-14 20:17:23.989738+00:00"
     }
   },
   {
@@ -64,38 +72,43 @@
       "symbol": "SMH",
       "signal_type": "avoid",
       "confidence": 0.84,
-      "current_price": 568.530029296875,
+      "current_price": 541.5,
       "reasons": [
+        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
         "News narrative includes geopolitical/oil-shock language.",
         "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
+        "Korea proxy EWY is under acute daily pressure (-6.6%, bar dated 2026-09-14).",
+        "Semiconductor proxy is below its 20-day trend.",
+        "Nasdaq/growth proxy is below its 20-day trend.",
         "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
         "AI/semiconductor proxy closes back above its 20-day trend.",
         "AI/semiconductor outflows stop or reverse for two consecutive runs."
       ],
-      "generated_at": "2026-09-11 20:19:06.973610+00:00"
+      "generated_at": "2026-09-14 20:17:23.989738+00:00"
     }
   },
   {
     "symbol": "XLE",
-    "approved": true,
-    "target_position_size_usd": 65.13,
-    "shares": 1,
-    "actual_notional_usd": 65.13,
-    "stop_loss_price": 60.57,
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "shares": null,
+    "actual_notional_usd": null,
+    "stop_loss_price": null,
     "warnings": [
-      "Sized by risk: 1 shares for $65.13 (max loss ~$4.56 at the hard stop)."
+      "Signal is hold; no action."
     ],
     "signal": {
       "symbol": "XLE",
-      "signal_type": "buy",
-      "confidence": 0.782,
-      "current_price": 65.12999725341797,
+      "signal_type": "hold",
+      "confidence": 0.77,
+      "current_price": 64.52999877929688,
       "reasons": [
         "Price is in a clean uptrend (Close > EMA20 > EMA50).",
-        "Positive capital flow (Rank 5).",
-        "Volume confirms institutional participation (latest volume >= 20-day average)."
+        "Positive capital flow (Rank 8).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Narrative buy zone is avoid; new entries require starter or re-entry."
       ],
-      "generated_at": "2026-09-11 20:19:06.973610+00:00"
+      "generated_at": "2026-09-14 20:17:23.989738+00:00"
     }
   }
 ]

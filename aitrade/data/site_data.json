@@ -1,88 +1,88 @@
 {
   "regime": "risk_on",
-  "updated_at": "2026-09-11T20:19:02.063694+00:00",
+  "updated_at": "2026-09-14T20:17:18.244209+00:00",
   "top_inflows": [
-    {
-      "symbol": "EWY",
-      "name": "South Korea",
-      "as_of": "2026-09-11",
-      "price_change_pct": 0.07306536908102645,
-      "dollar_volume": 2480137087.4451113,
-      "relative_flow_score": 181212131.66571903,
-      "direction": "inflow",
-      "rank": 4
-    },
     {
       "symbol": "XLE",
       "name": "Energy",
-      "as_of": "2026-09-11",
-      "price_change_pct": 0.06718005171436986,
-      "dollar_volume": 1708482103.019321,
-      "relative_flow_score": 114775916.03391336,
+      "as_of": "2026-09-14",
+      "price_change_pct": 0.03116006537530207,
+      "dollar_volume": 1786615977.7673874,
+      "relative_flow_score": 55671070.667791024,
       "direction": "inflow",
-      "rank": 5
+      "rank": 8
     },
     {
-      "symbol": "EWJ",
-      "name": "Japan",
-      "as_of": "2026-09-11",
-      "price_change_pct": 0.007873981346329492,
-      "dollar_volume": 354784251.7312683,
-      "relative_flow_score": 2793564.5801034733,
+      "symbol": "XLV",
+      "name": "Healthcare",
+      "as_of": "2026-09-14",
+      "price_change_pct": 0.0041903438219351875,
+      "dollar_volume": 1349585892.4249177,
+      "relative_flow_score": 5655228.9064936405,
       "direction": "inflow",
-      "rank": 19
+      "rank": 15
+    },
+    {
+      "symbol": "UUP",
+      "name": "US Dollar",
+      "as_of": "2026-09-14",
+      "price_change_pct": 0.002491092308681226,
+      "dollar_volume": 33409628.185094357,
+      "relative_flow_score": 83226.46780778805,
+      "direction": "inflow",
+      "rank": 20
     }
   ],
   "top_outflows": [
     {
       "symbol": "SPY",
       "name": "U.S. Large Cap",
-      "as_of": "2026-09-11",
-      "price_change_pct": -0.010615040079086785,
-      "dollar_volume": 28623995859.531933,
-      "relative_flow_score": -303844863.27254564,
-      "direction": "outflow",
-      "rank": 1
-    },
-    {
-      "symbol": "QQQ",
-      "name": "Nasdaq Growth",
-      "as_of": "2026-09-11",
-      "price_change_pct": -0.012187380372318663,
-      "dollar_volume": 21894707564.015167,
-      "relative_flow_score": -266839129.22333542,
+      "as_of": "2026-09-14",
+      "price_change_pct": -0.015258749903727855,
+      "dollar_volume": 29056923441.00106,
+      "relative_flow_score": -443372327.7580026,
       "direction": "outflow",
       "rank": 2
     },
     {
+      "symbol": "QQQ",
+      "name": "Nasdaq Growth",
+      "as_of": "2026-09-14",
+      "price_change_pct": -0.028347517475470787,
+      "dollar_volume": 22265989932.374313,
+      "relative_flow_score": -631185538.7166375,
+      "direction": "outflow",
+      "rank": 1
+    },
+    {
       "symbol": "IWM",
       "name": "U.S. Small Cap",
-      "as_of": "2026-09-11",
-      "price_change_pct": -0.045720315577837366,
-      "dollar_volume": 5359114109.868884,
-      "relative_flow_score": -245020388.32084638,
+      "as_of": "2026-09-14",
+      "price_change_pct": -0.053213157948089805,
+      "dollar_volume": 5535357485.977819,
+      "relative_flow_score": -294553852.20047903,
       "direction": "outflow",
-      "rank": 3
+      "rank": 4
     },
     {
       "symbol": "GLD",
       "name": "Gold",
-      "as_of": "2026-09-11",
-      "price_change_pct": -0.015188245110438554,
-      "dollar_volume": 4987092747.128525,
-      "relative_flow_score": -75745187.0318784,
+      "as_of": "2026-09-14",
+      "price_change_pct": -0.03119680929527415,
+      "dollar_volume": 4999488491.899521,
+      "relative_flow_score": -155968089.05570713,
       "direction": "outflow",
-      "rank": 8
+      "rank": 5
     },
     {
       "symbol": "SMH",
       "name": "Semiconductors",
-      "as_of": "2026-09-11",
-      "price_change_pct": -0.027871325541870547,
-      "dollar_volume": 3771136173.2801757,
-      "relative_flow_score": -105106563.94821571,
+      "as_of": "2026-09-14",
+      "price_change_pct": -0.0884912664771649,
+      "dollar_volume": 3897108501.305078,
+      "relative_flow_score": -344860066.8794124,
       "direction": "outflow",
-      "rank": 6
+      "rank": 3
     }
   ],
   "sankey": {
@@ -90,162 +90,158 @@
       {
         "source": "Global Liquidity",
         "target": "US Equities",
-        "value": 60791.22574778515
-      },
-      {
-        "source": "US Equities",
-        "target": "Broad Market",
-        "value": 28623.995859531933
-      },
-      {
-        "source": "Broad Market",
-        "target": "SPY (-0.0%)",
-        "value": 28623.995859531933
+        "value": 61941.800913810745
       },
       {
         "source": "US Equities",
         "target": "Growth",
-        "value": 23036.97960510416
+        "value": 23452.411485526794
       },
       {
         "source": "Growth",
         "target": "QQQ (-0.0%)",
-        "value": 21894.707564015167
+        "value": 22265.989932374312
       },
       {
         "source": "US Equities",
-        "target": "Small Caps",
-        "value": 5359.114109868884
+        "target": "Broad Market",
+        "value": 29056.92344100106
       },
       {
-        "source": "Small Caps",
-        "target": "IWM (-0.0%)",
-        "value": 5359.114109868884
-      },
-      {
-        "source": "Global Liquidity",
-        "target": "Cyclicals",
-        "value": 5432.047590507192
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Energy",
-        "value": 1708.482103019321
-      },
-      {
-        "source": "Energy",
-        "target": "XLE (+0.1%)",
-        "value": 1708.482103019321
+        "source": "Broad Market",
+        "target": "SPY (-0.0%)",
+        "value": 29056.92344100106
       },
       {
         "source": "US Equities",
         "target": "Semiconductors",
-        "value": 3771.1361732801756
+        "value": 3897.108501305078
       },
       {
         "source": "Semiconductors",
-        "target": "SMH (-0.0%)",
-        "value": 3771.1361732801756
+        "target": "SMH (-0.1%)",
+        "value": 3897.108501305078
       },
       {
-        "source": "Cyclicals",
-        "target": "Industrials",
-        "value": 1195.123753225834
+        "source": "US Equities",
+        "target": "Small Caps",
+        "value": 5535.357485977819
       },
       {
-        "source": "Industrials",
-        "target": "XLI (-0.1%)",
-        "value": 1195.123753225834
+        "source": "Small Caps",
+        "target": "IWM (-0.1%)",
+        "value": 5535.357485977819
       },
       {
         "source": "Global Liquidity",
         "target": "Defensives",
-        "value": 9656.765654788942
+        "value": 9723.688098153456
       },
       {
         "source": "Defensives",
         "target": "Precious Metals",
-        "value": 4987.092747128525
+        "value": 4999.488491899521
       },
       {
         "source": "Precious Metals",
         "target": "GLD (-0.0%)",
-        "value": 4987.092747128525
+        "value": 4999.488491899521
       },
       {
-        "source": "Defensives",
-        "target": "Treasuries",
-        "value": 2503.3280029051525
+        "source": "Global Liquidity",
+        "target": "Cyclicals",
+        "value": 5579.782276797171
       },
       {
-        "source": "Treasuries",
-        "target": "TLT (-0.0%)",
-        "value": 2503.3280029051525
+        "source": "Cyclicals",
+        "target": "Industrials",
+        "value": 1223.8773301812407
+      },
+      {
+        "source": "Industrials",
+        "target": "XLI (-0.1%)",
+        "value": 1223.8773301812407
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Energy",
+        "value": 1786.6159777673874
+      },
+      {
+        "source": "Energy",
+        "target": "XLE (+0.0%)",
+        "value": 1786.6159777673874
       },
       {
         "source": "Defensives",
         "target": "Utilities",
-        "value": 853.9597952919887
+        "value": 865.0249517928719
       },
       {
         "source": "Utilities",
-        "target": "XLU (-0.0%)",
-        "value": 853.9597952919887
-      },
-      {
-        "source": "Defensives",
-        "target": "Healthcare",
-        "value": 1312.3851094632753
-      },
-      {
-        "source": "Healthcare",
-        "target": "XLV (-0.0%)",
-        "value": 1312.3851094632753
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Financials",
-        "value": 1708.4007477670964
-      },
-      {
-        "source": "Financials",
-        "target": "XLF (-0.0%)",
-        "value": 1708.4007477670964
-      },
-      {
-        "source": "Cyclicals",
-        "target": "Consumer Staples",
-        "value": 820.040986494941
-      },
-      {
-        "source": "Consumer Staples",
-        "target": "XLP (-0.0%)",
-        "value": 820.040986494941
+        "target": "XLU (-0.1%)",
+        "value": 865.0249517928719
       },
       {
         "source": "Growth",
         "target": "XLK (-0.0%)",
-        "value": 1142.272041088993
+        "value": 1186.421553152481
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Financials",
+        "value": 1735.6585368982956
+      },
+      {
+        "source": "Financials",
+        "target": "XLF (-0.0%)",
+        "value": 1735.6585368982956
+      },
+      {
+        "source": "Defensives",
+        "target": "Treasuries",
+        "value": 2509.588762036144
+      },
+      {
+        "source": "Treasuries",
+        "target": "TLT (-0.0%)",
+        "value": 2509.588762036144
+      },
+      {
+        "source": "Defensives",
+        "target": "Healthcare",
+        "value": 1349.5858924249178
+      },
+      {
+        "source": "Healthcare",
+        "target": "XLV (+0.0%)",
+        "value": 1349.5858924249178
+      },
+      {
+        "source": "Cyclicals",
+        "target": "Consumer Staples",
+        "value": 833.630431950248
+      },
+      {
+        "source": "Consumer Staples",
+        "target": "XLP (-0.0%)",
+        "value": 833.630431950248
       }
     ]
   },
-  "earnings_radar": [
-    {
-      "Date": "2026-09-11",
-      "Symbol": "KR",
-      "Company": "Kroger Company (The)",
-      "Domain": "thekrogerco.com",
-      "Timing": "Before Open",
-      "Price": "58.49",
-      "RevGrowth": "0.022",
-      "EarnGrowth": "0.132",
-      "Signal": "Buy",
-      "EPS_Estimate": "",
-      "RevenueEstimate": "",
-      "Source": "yahoo"
-    }
-  ],
+  "earnings_radar": [],
   "discovery_radar": [
+    {
+      "symbol": "MATX",
+      "as_of": "2026-09-14",
+      "close": 236.6199951171875,
+      "previous_close": null,
+      "daily_return_pct": null,
+      "ema20": 223.1689747191735,
+      "ema50": 215.66886696464104,
+      "avg20_volume": 241887.55,
+      "latest_volume": 370951.0
+    },
     {
       "symbol": "CVI",
       "as_of": "2026-09-10",
@@ -596,29 +592,20 @@
       "ema50": 57.93112166312035,
       "avg20_volume": 950125.85,
       "latest_volume": 1712217.0
-    },
-    {
-      "symbol": "EPAC",
-      "as_of": "2026-08-27",
-      "close": 37.5,
-      "ema20": 36.89290872284256,
-      "ema50": 36.094467216960666,
-      "avg20_volume": 281995.0,
-      "latest_volume": 445100.0
     }
   ],
   "regime_metrics": {
-    "breadth_ratio": 0.986212093817722,
-    "risk_ratio": 1.0228794995662331,
+    "breadth_ratio": 0.9921182625975479,
+    "risk_ratio": 0.9881883352662909,
     "growth_defensive_ratio": 1.0,
-    "vix_term_structure": 0.8537634295030117
+    "vix_term_structure": 0.887105107950898
   },
   "sentiment": {
-    "fear_score": 0.055696202531645575,
-    "bullish_score": 0.04303797468354431,
+    "fear_score": 0.07428571428571429,
+    "bullish_score": 0.10285714285714286,
     "events": {
       "war": true,
-      "policy_shock": true,
+      "policy_shock": false,
       "banking_stress": false,
       "oil_shock": false
     },
@@ -626,56 +613,75 @@
       "XLK": {
         "symbol": "XLK",
         "name": "Technology",
-        "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "score": -0.25,
+        "confidence": 0.215,
+        "articles": 4,
+        "top_headlines": [
+          "C3.ai Jumps 7% as Software Rally Lifts Beaten-Down AI Names; UiPath Climbs 8%, SoundHound AI Gains 5%",
+          "Cybersecurity Stocks Jump As Anthropic CEO\u2019s AI Slowdown Call Sharpens Focus On Cyber Risks \u2013 CRWD, PANW, FTNT Buck Market Selloff",
+          "ServiceNow Climbs 5% as Software Sidesteps AI Selloff; Adobe Gains 4%, Salesforce Ticks Up",
+          "Better Artificial Intelligence ETF: Roundhill's CHAT vs. State Street's XLK"
+        ]
       },
       "SMH": {
         "symbol": "SMH",
         "name": "Semiconductors",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.19,
+        "articles": 5,
+        "top_headlines": [
+          "Marvell Falls 7% as AI Pacing Debate Collides With Fed Week; Broadcom Drops 4%, NVIDIA Pulls Back",
+          "Meta, Alphabet and Microsoft Rise While Nvidia Falls After Three AI Chiefs Call For Slowing Down Frontier Models",
+          "Should You Invest in the VanEck Semiconductor ETF (SMH)?",
+          "Sell the Nvidia Shares That Made Your Retirement or Ride Them Into It? These 3 ETFs Are the Middle Path",
+          "Top Semiconductor ETFs That Investors May Buy in September"
+        ]
       },
       "XLE": {
         "symbol": "XLE",
         "name": "Energy",
-        "score": 0.0,
-        "confidence": 0.15,
-        "articles": 3,
+        "score": 0.0909,
+        "confidence": 0.3155,
+        "articles": 11,
         "top_headlines": [
-          "Energy group claims Alliant using data centers  as an excuse  to build power plants",
-          "Middle East crude supply may fall by nearly half through 2027 amid Hormuz disruption",
-          "US stocks jump after oil prices ease and inflation update comes in near expectations"
+          "AI, Oil, Bond Yield Concerns Damp Wall Street Pre-Bell; Asia, Europe Off",
+          "Easing Oil Bills, Tech Optimism Lift Wall Street Pre-Bell, Asia off, Europe Up",
+          "Oil, Bond Yields Cap Wall Street Pre-Bell; Asia, Europe Off",
+          "Sector Update: Energy Stocks Decline Monday Afternoon",
+          "Sector Update: Energy"
         ]
       },
       "XLF": {
         "symbol": "XLF",
         "name": "Financials",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "The BOJ held rates at zero , ran QE , and pinned bond yields longer than any central bank alive . The yen collapsed . Everything Japan imports now costs a fortune in yen . "
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLV": {
         "symbol": "XLV",
         "name": "Healthcare",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.19,
+        "articles": 5,
+        "top_headlines": [
+          "Sector Update: Healthcare Stocks Gain Late Afternoon",
+          "Sector Update: Healthcare Stocks Rise in Afternoon Trading",
+          "Sector Update: Healthcare Stocks Rise Premarket Monday",
+          "State Street XLV vs. iShares IXJ: Here's How These Healthcare ETFs Stack Up for Investors",
+          "Sector Update: Healthcare Stocks Softer Late Afternoon"
+        ]
       },
       "XLI": {
         "symbol": "XLI",
         "name": "Industrials",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Ferguson Stock: Is FERG Underperforming the Industrial Sector?"
+        ]
       },
       "XLY": {
         "symbol": "XLY",
@@ -689,29 +695,33 @@
         "symbol": "XLP",
         "name": "Consumer Staples",
         "score": 0.0,
-        "confidence": 0.11,
-        "articles": 1,
-        "top_headlines": [
-          "Farmer left in abandoned , freezing town without food and water for TV show"
-        ]
+        "confidence": 0.0,
+        "articles": 0,
+        "top_headlines": []
       },
       "XLU": {
         "symbol": "XLU",
         "name": "Utilities",
         "score": 0.0,
-        "confidence": 0.0,
-        "articles": 0,
-        "top_headlines": []
+        "confidence": 0.11,
+        "articles": 1,
+        "top_headlines": [
+          "Should You Invest in the State Street Utilities Select Sector SPDR ETF (XLU)?"
+        ]
       }
     }
   },
   "narrative": {
     "state": "ai_unwind",
-    "ai_unwind_score": 0.7749999999999999,
+    "ai_unwind_score": 1.0,
     "geopolitical_score": 0.5,
     "reasons": [
+      "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
       "News narrative includes geopolitical/oil-shock language.",
-      "AI/semiconductor assets showing outflows: QQQ, SMH, XLK."
+      "AI/semiconductor assets showing outflows: QQQ, SMH, XLK.",
+      "Korea proxy EWY is under acute daily pressure (-6.6%, bar dated 2026-09-14).",
+      "Semiconductor proxy is below its 20-day trend.",
+      "Nasdaq/growth proxy is below its 20-day trend."
     ],
     "rebound_watch": [
       "AI/semiconductor proxy closes back above its 20-day trend.",
@@ -720,22 +730,20 @@
       "VIX/fear score cools while earnings revisions remain positive."
     ],
     "forecast": {
-      "next_day_rebound_probability": 0.23,
-      "next_week_rebound_probability": 0.45,
-      "next_month_base_probability": 0.59,
-      "next_day_rebound_estimate": 0.23,
-      "next_week_rebound_estimate": 0.45,
-      "next_month_base_estimate": 0.59,
+      "next_day_rebound_probability": 0.05,
+      "next_week_rebound_probability": 0.1,
+      "next_month_base_probability": 0.33,
+      "next_day_rebound_estimate": 0.05,
+      "next_week_rebound_estimate": 0.1,
+      "next_month_base_estimate": 0.33,
       "calibrated": false,
-      "rebound_score": 4,
-      "buy_zone": "starter",
+      "rebound_score": 1,
+      "buy_zone": "avoid",
       "reasons": [
-        "Semiconductor proxy is back above its 20-day trend.",
-        "QQQ is back above its 20-day trend.",
         "VIX/fear proxy is below elevated-stress levels.",
         "Semiconductor outflows are still active."
       ],
-      "interpretation": "Small risk-sized starter entries may be considered in strongest quality names."
+      "interpretation": "Do not add. Forced selling/crowded-trade unwind still dominates."
     }
   },
   "warnings": []

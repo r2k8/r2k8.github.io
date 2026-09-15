@@ -6,38 +6,45 @@
     "observed": 21,
     "stale_symbols": []
   },
-  "degradation_reasons": [],
-  "generated_at": "2026-09-14T20:17:18.244209+00:00",
+  "degradation_reasons": [
+    "Missing market data for: ^VIX3M."
+  ],
+  "generated_at": "2026-09-15T20:18:32.393369+00:00",
   "market": {
     "as_of_by_symbol": {
-      "CPER": "2026-09-14",
-      "EWJ": "2026-09-14",
-      "EWY": "2026-09-14",
-      "GLD": "2026-09-14",
-      "HYG": "2026-09-14",
-      "IWM": "2026-09-14",
-      "LQD": "2026-09-14",
-      "MATX": "2026-09-14",
-      "MCHI": "2026-09-14",
-      "QQQ": "2026-09-14",
-      "RSP": "2026-09-14",
-      "SMH": "2026-09-14",
-      "SOXX": "2026-09-14",
-      "SPHB": "2026-09-14",
-      "SPLV": "2026-09-14",
-      "SPY": "2026-09-14",
-      "TLT": "2026-09-14",
-      "UUP": "2026-09-14",
-      "VGK": "2026-09-14",
-      "XLE": "2026-09-14",
-      "XLF": "2026-09-14",
-      "^VIX": "2026-09-14",
-      "^VIX3M": "2026-09-14"
+      "CPER": "2026-09-15",
+      "EWJ": "2026-09-15",
+      "EWY": "2026-09-15",
+      "GLD": "2026-09-15",
+      "HYG": "2026-09-15",
+      "IWM": "2026-09-15",
+      "LQD": "2026-09-15",
+      "MATX": "2026-09-15",
+      "MCHI": "2026-09-15",
+      "MTCH": "2026-09-15",
+      "QQQ": "2026-09-15",
+      "QRVO": "2026-09-15",
+      "RDNT": "2026-09-15",
+      "RSP": "2026-09-15",
+      "SMH": "2026-09-15",
+      "SOXX": "2026-09-15",
+      "SPHB": "2026-09-15",
+      "SPLV": "2026-09-15",
+      "SPY": "2026-09-15",
+      "TALO": "2026-09-15",
+      "TLT": "2026-09-15",
+      "UUP": "2026-09-15",
+      "VGK": "2026-09-15",
+      "XLE": "2026-09-15",
+      "XLF": "2026-09-15",
+      "^VIX": "2026-09-15"
     },
-    "coverage": 1.0,
+    "coverage": 0.9545,
     "expected": 22,
-    "missing_symbols": [],
-    "observed": 22,
+    "missing_symbols": [
+      "^VIX3M"
+    ],
+    "observed": 21,
     "stale_symbols": []
   },
   "news": {
@@ -45,17 +52,17 @@
       "banking_stress": false,
       "oil_shock": false,
       "policy_shock": false,
-      "war": true
+      "war": false
     },
-    "items": 70,
-    "sector_article_count": 27
+    "items": 68,
+    "sector_article_count": 22
   },
   "notes": [
     "Layer 2 should block new buys when safe_for_layer2 is false.",
     "New entries require market, capital-flow, and narrative/event-risk coverage."
   ],
   "safe_for_layer2": true,
-  "safe_for_new_entries": true,
-  "status": "ok",
+  "safe_for_new_entries": false,
+  "status": "degraded",
   "warnings": []
 }

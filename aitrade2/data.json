@@ -4,83 +4,83 @@
   "children": [
     {
       "name": "Stocks",
-      "flow": -0.5,
+      "flow": -0.38,
       "children": [
         {
           "name": "U.S. Equities",
-          "flow": -0.77,
+          "flow": -0.66,
           "children": [
             {
               "name": "Technology",
-              "flow": -0.7,
+              "flow": 0.08,
               "children": [
                 {
                   "name": "AAPL",
-                  "flow": 1.79
+                  "flow": 0.06
                 },
                 {
                   "name": "MSFT",
-                  "flow": -0.43
+                  "flow": 0.08
                 },
                 {
                   "name": "NVDA",
-                  "flow": -2.04
+                  "flow": 0.27
                 },
                 {
                   "name": "AVGO",
-                  "flow": -5.91
+                  "flow": -3.32
                 },
                 {
                   "name": "ORCL",
-                  "flow": -6.39
-                }
-              ]
-            },
-            {
-              "name": "Healthcare",
-              "flow": 1.27,
-              "children": [
-                {
-                  "name": "LLY",
-                  "flow": 1.32
-                },
-                {
-                  "name": "UNH",
-                  "flow": -3.35
-                },
-                {
-                  "name": "JNJ",
-                  "flow": 0.35
-                },
-                {
-                  "name": "ABBV",
-                  "flow": 2.95
-                },
-                {
-                  "name": "MRK",
                   "flow": 0.14
                 }
               ]
             },
             {
+              "name": "Healthcare",
+              "flow": 1.81,
+              "children": [
+                {
+                  "name": "LLY",
+                  "flow": 2.53
+                },
+                {
+                  "name": "UNH",
+                  "flow": -0.46
+                },
+                {
+                  "name": "JNJ",
+                  "flow": 1.44
+                },
+                {
+                  "name": "ABBV",
+                  "flow": 2.18
+                },
+                {
+                  "name": "MRK",
+                  "flow": 2.02
+                }
+              ]
+            },
+            {
               "name": "Energy",
-              "flow": -1.39,
+              "flow": -1.77,
               "children": [
                 {
                   "name": "XOM",
-                  "flow": -1.16
+                  "flow": -2.45
                 },
                 {
                   "name": "CVX",
-                  "flow": -0.57
+                  "flow": -1.69
                 },
                 {
                   "name": "COP",
-                  "flow": -3.28
+                  "flow": -4.08
                 },
                 {
                   "name": "SLB",
-                  "flow": -6.62
+                  "flow": -7.04
                 }
               ]
             }
@@ -88,53 +88,53 @@
         },
         {
           "name": "Asia",
-          "flow": -1.97,
+          "flow": -1.47,
           "children": [
             {
               "name": "TSM",
-              "flow": -2.41
+              "flow": -1.93
             },
             {
               "name": "TCEHY",
-              "flow": 1.25
+              "flow": -0.26
             },
             {
               "name": "BABA",
-              "flow": -1.19
+              "flow": -1.43
             },
             {
               "name": "HDB",
-              "flow": 2.47
+              "flow": -3.49
             },
             {
               "name": "SONY",
-              "flow": 0.89
+              "flow": -0.09
             }
           ]
         },
         {
           "name": "Europe",
-          "flow": -0.88,
+          "flow": -0.41,
           "children": [
             {
               "name": "NVO",
-              "flow": -5.23
+              "flow": -0.39
             },
             {
               "name": "ASML",
-              "flow": -5.05
+              "flow": -4.24
             },
             {
               "name": "MC.PA",
-              "flow": -0.96
+              "flow": -0.77
             },
             {
               "name": "OR.PA",
-              "flow": 0.58
+              "flow": 0.57
             },
             {
               "name": "SAP",
-              "flow": 3.52
+              "flow": 4.2
             }
           ]
         }
@@ -142,61 +142,61 @@
     },
     {
       "name": "Bonds",
-      "flow": -0.25,
+      "flow": 0.24,
       "children": [
         {
           "name": "TLT",
-          "flow": 0.12
+          "flow": 1.03
         },
         {
           "name": "LQD",
-          "flow": 0.09
+          "flow": 0.67
         },
         {
           "name": "HYG",
-          "flow": -0.25
+          "flow": 0.1
         },
         {
           "name": "BND",
-          "flow": -0.22
+          "flow": 0.25
         }
       ]
     },
     {
       "name": "Crypto",
-      "flow": -1.47,
+      "flow": -1.33,
       "children": [
         {
           "name": "Bitcoin",
-          "flow": -1.47,
+          "flow": -1.33,
           "children": [
             {
               "name": "BTC-USD",
-              "flow": -0.72
+              "flow": -0.7
             }
           ]
         },
         {
           "name": "Ethereum",
-          "flow": -2.21,
+          "flow": -3.55,
           "children": [
             {
               "name": "ETH-USD",
-              "flow": -1.83
+              "flow": -1.12
             }
           ]
         },
         {
           "name": "Alt-coins",
-          "flow": -3.87,
+          "flow": -4.05,
           "children": [
             {
               "name": "SOL-USD",
-              "flow": 0.46
+              "flow": 1.14
             },
             {
               "name": "XRP-USD",
-              "flow": -3.48
+              "flow": -3.25
             }
           ]
         }
@@ -204,22 +204,22 @@
     },
     {
       "name": "Gold",
-      "flow": -1.17,
+      "flow": 0.27,
       "children": [
         {
           "name": "NEM",
-          "flow": -3.47
+          "flow": -1.27
         },
         {
           "name": "GOLD",
-          "flow": 2.05
+          "flow": -1.47
         },
         {
           "name": "AEM",
-          "flow": -0.56
+          "flow": 0.86
         }
       ]
     }
   ],
-  "last_updated": "2026-09-17T10:29:03.030403"
+  "last_updated": "2026-09-17T15:20:12.498301"
 }

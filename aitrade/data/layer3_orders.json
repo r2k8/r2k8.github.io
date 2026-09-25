@@ -1,6 +1,6 @@
 [
   {
-    "symbol": "TWLO",
+    "symbol": "EWJ",
     "approved": false,
     "target_position_size_usd": 0.0,
     "shares": null,
@@ -10,92 +10,85 @@
       "Signal is hold; no action."
     ],
     "signal": {
-      "symbol": "TWLO",
+      "symbol": "EWJ",
       "signal_type": "hold",
-      "confidence": 0.8600000000000001,
-      "current_price": 299.6600036621094,
+      "confidence": 0.7294117647058823,
+      "current_price": 97.93000030517578,
       "reasons": [
-        "Business-quality breakout: revenue or earnings growth indicates real demand.",
-        "Revenue growth 22.0%; earnings growth 4671.5%.",
-        "Price trend and volume confirm the market is recognizing the business strength.",
-        "Sector: Technology.",
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 17).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Active event-risk block: war.",
         "Data quality unsafe; blocking new buys.",
         "agentic_portfolio.json is stale (older than 2:00:00)."
       ],
-      "generated_at": "2026-09-24 20:19:45.363014+00:00"
+      "generated_at": "2026-09-25 20:17:19.374113+00:00"
     }
   },
   {
-    "symbol": "QQQ",
+    "symbol": "MCHI",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "QQQ",
-      "signal_type": "trim",
-      "confidence": 0.8,
-      "current_price": 741.0999755859375,
+      "symbol": "MCHI",
+      "signal_type": "sell",
+      "confidence": 0.7012345679012345,
+      "current_price": 52.619998931884766,
       "reasons": [
-        "PORTFOLIO MATCH: You own 0.135655 shares.",
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor proxy closes back above its 20-day trend.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 19)."
       ],
-      "generated_at": "2026-09-24 20:19:45.363014+00:00"
+      "generated_at": "2026-09-25 20:17:19.374113+00:00"
     }
   },
   {
-    "symbol": "SOXX",
+    "symbol": "VGK",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SOXX",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 566.0700073242188,
+      "symbol": "VGK",
+      "signal_type": "sell",
+      "confidence": 0.7012195121951219,
+      "current_price": 88.62999725341797,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor proxy closes back above its 20-day trend.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 18)."
       ],
-      "generated_at": "2026-09-24 20:19:45.363014+00:00"
+      "generated_at": "2026-09-25 20:17:19.374113+00:00"
     }
   },
   {
-    "symbol": "SMH",
+    "symbol": "XLE",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SMH",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 600.52001953125,
+      "symbol": "XLE",
+      "signal_type": "sell",
+      "confidence": 0.7011904761904761,
+      "current_price": 62.060001373291016,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor proxy closes back above its 20-day trend.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 16)."
       ],
-      "generated_at": "2026-09-24 20:19:45.363014+00:00"
+      "generated_at": "2026-09-25 20:17:19.374113+00:00"
     }
   }
 ]

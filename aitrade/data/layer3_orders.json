@@ -1,75 +1,68 @@
 [
   {
-    "symbol": "QQQ",
+    "symbol": "MCHI",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Risk action only: trim sizing must be resolved against live portfolio shares before broker execution."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "QQQ",
-      "signal_type": "trim",
-      "confidence": 0.8,
-      "current_price": 736.530029296875,
+      "symbol": "MCHI",
+      "signal_type": "sell",
+      "confidence": 0.7012048192771084,
+      "current_price": 52.099998474121094,
       "reasons": [
-        "PORTFOLIO MATCH: You own 0.135655 shares.",
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor proxy closes back above its 20-day trend.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 17)."
       ],
-      "generated_at": "2026-09-28 20:16:54.615061+00:00"
+      "generated_at": "2026-09-29 20:16:47.949032+00:00"
     }
   },
   {
-    "symbol": "SOXX",
+    "symbol": "VGK",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SOXX",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 560.7899780273438,
+      "symbol": "VGK",
+      "signal_type": "sell",
+      "confidence": 0.7011904761904761,
+      "current_price": 87.8499984741211,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor proxy closes back above its 20-day trend.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 16)."
       ],
-      "generated_at": "2026-09-28 20:16:54.615061+00:00"
+      "generated_at": "2026-09-29 20:16:47.949032+00:00"
     }
   },
   {
-    "symbol": "SMH",
+    "symbol": "XLE",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
     "actual_notional_usd": null,
     "stop_loss_price": null,
     "warnings": [
-      "Avoid signal: blocks new long exposure."
+      "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "SMH",
-      "signal_type": "avoid",
-      "confidence": 0.76,
-      "current_price": 600.010009765625,
+      "symbol": "XLE",
+      "signal_type": "sell",
+      "confidence": 0.701111111111111,
+      "current_price": 61.540000915527344,
       "reasons": [
-        "News narrative includes AI-bubble, crowded-trade, or deleveraging language.",
-        "AI narrative stress is elevated. Avoid new AI/semiconductor exposure until rebound conditions confirm.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor proxy closes back above its 20-day trend.",
-        "Re-entry condition to watch (not confirmed): AI/semiconductor outflows stop or reverse for two consecutive runs."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 10)."
       ],
-      "generated_at": "2026-09-28 20:16:54.615061+00:00"
+      "generated_at": "2026-09-29 20:16:47.949032+00:00"
     }
   }
 ]

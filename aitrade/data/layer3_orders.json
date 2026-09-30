@@ -1,6 +1,6 @@
 [
   {
-    "symbol": "MCHI",
+    "symbol": "QQQ",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
@@ -10,19 +10,22 @@
       "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "MCHI",
-      "signal_type": "sell",
-      "confidence": 0.7012048192771084,
-      "current_price": 52.099998474121094,
+      "symbol": "QQQ",
+      "signal_type": "liquidate",
+      "confidence": 0.95,
+      "current_price": 739.77001953125,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 17)."
+        "Severe daily sell-off in EWY (-2.3%, bar dated 2026-09-30).",
+        "VGK has broken significantly below 20-EMA trend.",
+        "Layer 1 flags geopolitical or policy event risk; corroboration is required.",
+        "Macro Regime: Panic. Liquidating owned risk exposure.",
+        "PORTFOLIO MATCH: You own 0.135655 shares."
       ],
-      "generated_at": "2026-09-29 20:16:47.949032+00:00"
+      "generated_at": "2026-09-30 20:16:54.213294+00:00"
     }
   },
   {
-    "symbol": "VGK",
+    "symbol": "SPY",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
@@ -32,19 +35,21 @@
       "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "VGK",
+      "symbol": "SPY",
       "signal_type": "sell",
-      "confidence": 0.7011904761904761,
-      "current_price": 87.8499984741211,
+      "confidence": 0.9,
+      "current_price": 762.47998046875,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 16)."
+        "Severe daily sell-off in EWY (-2.3%, bar dated 2026-09-30).",
+        "VGK has broken significantly below 20-EMA trend.",
+        "Layer 1 flags geopolitical or policy event risk; corroboration is required.",
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-09-29 20:16:47.949032+00:00"
+      "generated_at": "2026-09-30 20:16:54.213294+00:00"
     }
   },
   {
-    "symbol": "XLE",
+    "symbol": "IWM",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
@@ -54,15 +59,41 @@
       "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "XLE",
+      "symbol": "IWM",
       "signal_type": "sell",
-      "confidence": 0.701111111111111,
-      "current_price": 61.540000915527344,
+      "confidence": 0.9,
+      "current_price": 277.8599853515625,
       "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 10)."
+        "Severe daily sell-off in EWY (-2.3%, bar dated 2026-09-30).",
+        "VGK has broken significantly below 20-EMA trend.",
+        "Layer 1 flags geopolitical or policy event risk; corroboration is required.",
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
       ],
-      "generated_at": "2026-09-29 20:16:47.949032+00:00"
+      "generated_at": "2026-09-30 20:16:54.213294+00:00"
+    }
+  },
+  {
+    "symbol": "SMH",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "shares": null,
+    "actual_notional_usd": null,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "SMH",
+      "signal_type": "sell",
+      "confidence": 0.9,
+      "current_price": 609.0,
+      "reasons": [
+        "Severe daily sell-off in EWY (-2.3%, bar dated 2026-09-30).",
+        "VGK has broken significantly below 20-EMA trend.",
+        "Layer 1 flags geopolitical or policy event risk; corroboration is required.",
+        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
+      ],
+      "generated_at": "2026-09-30 20:16:54.213294+00:00"
     }
   }
 ]

@@ -1,6 +1,58 @@
 [
   {
     "symbol": "QQQ",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "shares": null,
+    "actual_notional_usd": null,
+    "stop_loss_price": null,
+    "warnings": [
+      "Signal is hold; no action."
+    ],
+    "signal": {
+      "symbol": "QQQ",
+      "signal_type": "hold",
+      "confidence": 0.88,
+      "current_price": 742.030029296875,
+      "reasons": [
+        "PORTFOLIO MATCH: You own 0.135655 shares.",
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 1).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Position is active with $0.00 PnL. Continue holding."
+      ],
+      "generated_at": "2026-10-01 20:18:12.084022+00:00"
+    }
+  },
+  {
+    "symbol": "EWJ",
+    "approved": false,
+    "target_position_size_usd": 0.0,
+    "shares": null,
+    "actual_notional_usd": null,
+    "stop_loss_price": null,
+    "warnings": [
+      "Signal is hold; no action."
+    ],
+    "signal": {
+      "symbol": "EWJ",
+      "signal_type": "hold",
+      "confidence": 0.7288888888888888,
+      "current_price": 97.37999725341797,
+      "reasons": [
+        "Price is in a clean uptrend (Close > EMA20 > EMA50).",
+        "Positive capital flow (Rank 18).",
+        "Volume confirms institutional participation (latest volume >= 20-day average).",
+        "Data quality unsafe; blocking new buys.",
+        "Data quality degraded: News fetch failed: GDELT=GDELT coverage incomplete or empty; Yahoo Finance fallback returned no articles",
+        "Data quality degraded: No news items were collected; narrative and event-risk coverage is unavailable.",
+        "Data quality is not sufficient for new entries."
+      ],
+      "generated_at": "2026-10-01 20:18:12.084022+00:00"
+    }
+  },
+  {
+    "symbol": "MCHI",
     "approved": true,
     "target_position_size_usd": 0.0,
     "shares": null,
@@ -10,18 +62,37 @@
       "Risk action only: broker execution must verify currently held shares before order placement."
     ],
     "signal": {
-      "symbol": "QQQ",
-      "signal_type": "liquidate",
-      "confidence": 0.95,
-      "current_price": 739.77001953125,
+      "symbol": "MCHI",
+      "signal_type": "sell",
+      "confidence": 0.7012345679012345,
+      "current_price": 52.11000061035156,
       "reasons": [
-        "Severe daily sell-off in EWY (-2.3%, bar dated 2026-09-30).",
-        "VGK has broken significantly below 20-EMA trend.",
-        "Layer 1 flags geopolitical or policy event risk; corroboration is required.",
-        "Macro Regime: Panic. Liquidating owned risk exposure.",
-        "PORTFOLIO MATCH: You own 0.135655 shares."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 19)."
       ],
-      "generated_at": "2026-09-30 20:16:54.213294+00:00"
+      "generated_at": "2026-10-01 20:18:12.084022+00:00"
+    }
+  },
+  {
+    "symbol": "VGK",
+    "approved": true,
+    "target_position_size_usd": 0.0,
+    "shares": null,
+    "actual_notional_usd": null,
+    "stop_loss_price": null,
+    "warnings": [
+      "Risk action only: broker execution must verify currently held shares before order placement."
+    ],
+    "signal": {
+      "symbol": "VGK",
+      "signal_type": "sell",
+      "confidence": 0.7012048192771084,
+      "current_price": 85.48999786376953,
+      "reasons": [
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 17)."
+      ],
+      "generated_at": "2026-10-01 20:18:12.084022+00:00"
     }
   },
   {
@@ -37,63 +108,13 @@
     "signal": {
       "symbol": "SPY",
       "signal_type": "sell",
-      "confidence": 0.9,
-      "current_price": 762.47998046875,
+      "confidence": 0.7011627906976744,
+      "current_price": 763.989990234375,
       "reasons": [
-        "Severe daily sell-off in EWY (-2.3%, bar dated 2026-09-30).",
-        "VGK has broken significantly below 20-EMA trend.",
-        "Layer 1 flags geopolitical or policy event risk; corroboration is required.",
-        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
+        "Price broke below moving averages (Downtrend).",
+        "Capital Outflows (Rank 14)."
       ],
-      "generated_at": "2026-09-30 20:16:54.213294+00:00"
-    }
-  },
-  {
-    "symbol": "IWM",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "IWM",
-      "signal_type": "sell",
-      "confidence": 0.9,
-      "current_price": 277.8599853515625,
-      "reasons": [
-        "Severe daily sell-off in EWY (-2.3%, bar dated 2026-09-30).",
-        "VGK has broken significantly below 20-EMA trend.",
-        "Layer 1 flags geopolitical or policy event risk; corroboration is required.",
-        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
-      ],
-      "generated_at": "2026-09-30 20:16:54.213294+00:00"
-    }
-  },
-  {
-    "symbol": "SMH",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
-    "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
-    "signal": {
-      "symbol": "SMH",
-      "signal_type": "sell",
-      "confidence": 0.9,
-      "current_price": 609.0,
-      "reasons": [
-        "Severe daily sell-off in EWY (-2.3%, bar dated 2026-09-30).",
-        "VGK has broken significantly below 20-EMA trend.",
-        "Layer 1 flags geopolitical or policy event risk; corroboration is required.",
-        "Macro Regime: Panic. No dip-buying until fear and breadth recover."
-      ],
-      "generated_at": "2026-09-30 20:16:54.213294+00:00"
+      "generated_at": "2026-10-01 20:18:12.084022+00:00"
     }
   }
 ]

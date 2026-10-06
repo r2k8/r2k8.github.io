@@ -1,68 +1,62 @@
 [
   {
-    "symbol": "MCHI",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
+    "symbol": "QQQ",
+    "approved": false,
+    "target_position_size_usd": 0,
     "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
+    "warnings": [],
+    "signal": {
+      "symbol": "QQQ",
+      "signal_type": "hold",
+      "confidence": 0.75,
+      "current_price": 756.2000122070312,
+      "generated_at": "2026-10-06 19:21:55.346275+00:00",
+      "reasons": []
+    }
+  },
+  {
+    "symbol": "MCHI",
+    "approved": false,
+    "target_position_size_usd": 0,
+    "stop_loss_price": null,
+    "warnings": [],
     "signal": {
       "symbol": "MCHI",
       "signal_type": "sell",
       "confidence": 0.7012195121951219,
       "current_price": 52.279998779296875,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 18)."
-      ],
-      "generated_at": "2026-10-05 20:19:10.718343+00:00"
+      "generated_at": "2026-10-06 19:21:55.346275+00:00",
+      "reasons": []
     }
   },
   {
     "symbol": "VGK",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
+    "approved": false,
+    "target_position_size_usd": 0,
     "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
+    "warnings": [],
     "signal": {
       "symbol": "VGK",
       "signal_type": "sell",
       "confidence": 0.7011904761904761,
       "current_price": 86.27999877929688,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 16)."
-      ],
-      "generated_at": "2026-10-05 20:19:10.718343+00:00"
+      "generated_at": "2026-10-06 19:21:55.346275+00:00",
+      "reasons": []
     }
   },
   {
-    "symbol": "XLF",
-    "approved": true,
-    "target_position_size_usd": 0.0,
-    "shares": null,
-    "actual_notional_usd": null,
+    "symbol": "HYG",
+    "approved": false,
+    "target_position_size_usd": 0,
     "stop_loss_price": null,
-    "warnings": [
-      "Risk action only: broker execution must verify currently held shares before order placement."
-    ],
+    "warnings": [],
     "signal": {
-      "symbol": "XLF",
+      "symbol": "HYG",
       "signal_type": "sell",
       "confidence": 0.701098901098901,
-      "current_price": 53.880001068115234,
-      "reasons": [
-        "Price broke below moving averages (Downtrend).",
-        "Capital Outflows (Rank 9)."
-      ],
-      "generated_at": "2026-10-05 20:19:10.718343+00:00"
+      "current_price": 76.9800033569336,
+      "generated_at": "2026-10-06 19:21:55.346275+00:00",
+      "reasons": []
     }
   }
 ]
